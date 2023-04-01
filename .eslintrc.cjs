@@ -1,21 +1,26 @@
+'use strict'
+
+// eslint-disable-next-line no-undef
 module.exports = {
   env: {
     browser: true,
     es2021: true
   },
   extends: [
-    'plugin:vue/vue3-essential',
-    'standard-with-typescript'
+    'eslint:recommended',
+    'plugin:vue/vue3-recommended',
+    'plugin:@typescript-eslint/recommended'
   ],
   overrides: [
   ],
+  parser: 'vue-eslint-parser',
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    parser: "@typescript-eslint/parser"
   },
-  plugins: [
-    'vue'
-  ],
   rules: {
+    "indent": ["error", 2],
+    "semi": ["error", "never"],
+    "vue/multi-word-component-names": 0
   }
 }
