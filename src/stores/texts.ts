@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { type Texts, type Text_abilities, type Text_defense } from './textsInterfaces'
+import { type Texts, type Text_abilities, type Text_defense } from '../assets/textsInterfaces'
 
 export const useTextsStore = defineStore('text', {
   state: (): Texts => ({
