@@ -3,7 +3,7 @@
   import { useTextStore } from "../stores/textStore"
   import { useOpponentStore } from "../stores/opponentStore"
   import { storeToRefs } from "pinia"
-  import { EDefenseType } from "../assets/enums"
+  import { EAttackType, EDefenseType } from "../assets/enums"
 
   const opponentStore = useOpponentStore()
   const { playerAttackType, playerDamage } = storeToRefs(useOpponentStore())
@@ -18,7 +18,7 @@
       <h3>Hämnaren (du)</h3>
       <ul>
         <li>Kroppspoäng: {{ attributes.hp }}/{{ attributes.hpMax }}</li>
-        <li>
+        <li v-if="playerAttackType !== EAttackType.instant">
           Ditt försvar: 
           <span
             v-for="(o) in opponentStore.opponents"
@@ -34,21 +34,37 @@
         <li>Inre kraft: {{ attributes.innerStrength }}</li>
       </ul>
     </div>
-    <div
-      v-for="(o) in opponentStore.opponents"
-      :key="o.name"
-    >
-      <h3>{{ o.name }}</h3>
-      <ul>
-        <li>Kroppspoäng: {{ o.hp }}/{{ o.hpMax }}</li>
-        <li>
-          {{ textStore.defense[playerAttackType as unknown as EDefenseType] }}: {{ o.defense }}
-        </li>
+    <div class="opponents">
+      <div
+        v-for="(o) in opponentStore.opponents"
+        :key="o.name"
+      >
+        <h3>{{ o.name }}</h3>
+        <ul>
+          <li>Kroppspoäng: {{ o.hp }}/{{ o.hpMax }}</li>
+          <li v-if="playerAttackType !== EAttackType.instant">
+            {{ textStore.defense[playerAttackType as unknown as EDefenseType] }}: {{ o.defense }}
+          </li>
         
-        <li v-if="o.damage">
-          Skada: {{ o.damage }}
-        </li>
-      </ul>
+          <li v-if="o.damage">
+            Skada: {{ o.damage }}
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </template>
+
+<style lang="scss" scoped>
+  .player {
+    width: 35%;
+    padding-right: 3rem;
+    border-right: 2px #9eb890 dashed;
+  }
+  .opponents {
+    padding-left: 3rem;
+    > div + div {
+      margin-top: 1rem;
+    }
+  }
+</style>

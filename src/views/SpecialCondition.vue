@@ -8,10 +8,11 @@
   import { EPlayerModifiers } from "../assets/enums"
   import { EOpponents } from "../assets/enums"
 
+  const playerStore = usePlayerStore()
   const mainStore = useMainStore()
   const pageStore = usePageStore()
   const textStore = useTextStore()
-  const playerStore = usePlayerStore()
+  
   const dice = useDice()
 
   const isSuccess = ref()

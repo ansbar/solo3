@@ -33,7 +33,7 @@ export const useTextStore = defineStore("texts", {
       playerName: "",
       damage: "",
       defense: "",
-      captain: "",
+      piratecaptain: "",
       soldiers: "",
     },
     help: {

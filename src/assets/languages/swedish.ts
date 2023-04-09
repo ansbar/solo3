@@ -5,7 +5,7 @@ export const languageGeneral: ILanguageGeneral = {
     playerName: "Hämnaren",
     damage: "Skada",
     defense: "Försvar",    
-    captain: "Kaptenen",
+    piratecaptain: "Piratkaptenen",
     soldiers: "Soldater",
     magician: "Magikern",
     monk: "Munken"
@@ -226,7 +226,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   67: {
-    mainText: "lnnan morgonstjärnan når fram slår du upp med benet och driver upp foten i Kaptenens ansikte.",
+    mainText: "lnnan morgonstjärnan når fram slår du upp med benet och driver upp foten i Kaptenens ansikte.\n Du har totalt fyra rundor på dig att besegra honom.",
     choices: [
       "Du kan försöka Tigertandskastet",
       "Du kan använda Kobraslaget",
@@ -257,7 +257,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   77: {
-    mainText: "lnnan morgonstjärnan träffar dig driver du in fingrarna i den onda Kaptenens hals.",
+    mainText: "lnnan morgonstjärnan träffar dig driver du in fingrarna i den onda Kaptenens hals. \nDu har totalt fyra rundor på dig att besegra honom",
     choices: [
       "Du kan försöka använda Tigertandskastet",
       "eller Tigersprångets spark",
@@ -281,7 +281,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   87: {
-    mainText: "Du duckar under det svepande klotet och kedjan och hoppar upp i luften i ett försök att lägga fötterna runt hans hals och genom en smidig vridning kasta honom i havet.",
+    mainText: "Du duckar under det svepande klotet och kedjan och hoppar upp i luften i ett försök att lägga fötterna runt hans hals och genom en smidig vridning kasta honom i havet. \nDu har totalt fyra rundor på dig att besegra honom.",
     choices: [
       "Du kan försöka Tigertandskastet",
       "eller Kobraslaget",
@@ -550,6 +550,12 @@ export const languagePages: ILanguagePages = {
       "Om du artigt avböjer prästens erbjudande"
     ]
   },
+  201: {
+    mainText: "Du använder sidan av handen för att slå undan pilen innan den träffar dig och sedan rullar du ut ur fackelskenet. Du ligger stilla tills du hör ett rop från en sidogata. \"Stoppa tjuven\" ropar någon, när en man som håller i en kniv springer ut i fackelskenet. Han skriker till av skräck när vakterna vid stadsporten rusar efter honom och du smiter osedd ut genom stadsporten i det första gryningsljuset.",
+    choices: [
+      "Gå vidare",
+    ]
+  },
   202: {
     mainText: "Folkmassan drar efter andan när du glider in under den vitpälsade jättens grepp, lägger båda benen om den och vrider kroppen i ett försök att kasta den till marken. Trots att den har bättre fotfäste än de ﬂesta, finner Snöjätten att isen är hal, men den har ben som är tjocka som din bröstkorg. Om du träffar får du lägga 3 till din Spark- eller Slagmodiﬁkation i det här enda anfallet, när du hoppar upp på fötter, redo att måtta ett slag mot den när den försöker ta sig upp. ",
     choices: [
@@ -580,6 +586,12 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Lämnar du den lilla pojken åt hans öde",
       "eller springer du fram och sparkar till Kobramannen"
+    ]
+  },
+  214: {
+    mainText: "l din träning i att ta små doser gift ingår också stora mängder alkohol och du kan dricka nästan vem som helst under bordet. Den unge Kaptenen börjar sluddra och drickandet går långsammare. Du berättar för dem att du är en munk som dyrkar den Lede och de behandlar dig som en av de sina. Den unge Kaptenen frågar dig om resan som Honoric, ledaren för Domsvärdslegionen, gör tillsammans med Yaemon. Du säger åt dem att Yaemon färdas norrut i ett viktigt ärende. De skrattar åt det och börjar skämta med dig om att Honorics ärende är viktigare. Du förstår att han också känner till ett ord som kan binda en gud i Inferno och att de färdas mot Snöviddema. Efter ett tag låtsas du ha fått för mycket mjöd och hyr ett rum för natten på värdshuset. Det kostar 2 guldstycken. Du sover lätt med sinnena på spänn, men ingenting händer. Du vaknar på morgonen, lätt uppfriskad. Du får tillbaka 1 KROPPSPOANG om du vill. Du ger dig av och går ut ur staden på vägen mot Mortavalon.",
+    choices: [
+      "Gå vidare",
     ]
   },
   220: {
@@ -866,7 +878,7 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Människoätaren försöker slå in ditt huvud. Du har 8 i Försvar mot hans tunga slag"
   },
   334: {
-    mainText: "Till den trögtänkta Människoätarens förvåning, hukar du dig på däcket och försöker svepa undan benen på den. Men den har grova och kraftiga ben och den är stor och stark.",
+    mainText: "Till din bestörtning väljer månen det här ögonblicket att komma fram från bakom ett moln och munken får syn på din skugga. \"Vem är du?\" frågar han spänt.",
     choices: [
       "Ska du gå fram till honom och anfalla",
       "eller använda en Shuriken"
@@ -930,7 +942,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   359: {
-    mainText: "Du springer några steg längs Aquamarins däck innan du hoppar över relingen och landar mot piratskeppets sida, hängande i spygatterna med händerna. Du väntar ett ögonblick innan du börjar maka dig med en hand över den andra mot Havsgravens röda akter. Gör ett ödesslag och se om någon av Kaparna har lagt märke till när du hoppade över till deras skepp.",
+    mainText: "Du går fram mot honom och utdelar utan förvarning en Flygande hästens spark mot hans strupe.",
     choices: [
       "Om du använder INRE KRAFT",
       "Om du inte kan eller vill göra det"

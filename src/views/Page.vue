@@ -55,6 +55,7 @@
   })
 
   watch(battlestate, (state: EBattleStates) => {
+    // Handle history
     if (state === EBattleStates.innerStrength) {
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} startad`)
     } else if (state === EBattleStates.pending) {
@@ -79,9 +80,10 @@
   <section>
     <Image />
     <MainText />    
+    <SideEffects v-if="showSideEffects()" />
     <Opponent v-if="pageStore.opponent" />
     <Battle v-if="pageStore.opponent" />
-    <SideEffects v-if="showSideEffects()" />
+
     <SpecialCondition v-if="pageStore.specialCondition" />    
     <Choices v-if="showChoices" />
     <History v-if="showHistory" />

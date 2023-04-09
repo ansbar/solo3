@@ -69,7 +69,7 @@ const opponents: IOpponents = {
         damage: ["2T6"],
         blockable: false,
         defense: [8],
-      }
+      },
     }
   },
   piratecaptain: {
@@ -81,8 +81,8 @@ const opponents: IOpponents = {
       counter: 4,
       counterGoto: 45,
     },
-    win: 110,
-    loss: 95,
+    win: 58,
+    loss: 45,
     pages: {
       67: {
         playerAttackType: EAttackType.kick,

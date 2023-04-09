@@ -15,7 +15,7 @@ export enum EOpponents {
   gorobei = "gorobei",
   humanEater = "humanEater",
   soldiers = "soldiers",
-  captain = "captain",
+  piratecaptain = "piratecaptain",
   magician = "magician",
   monk = "monk"
 }

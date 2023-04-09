@@ -24,6 +24,12 @@
     playerStore.addPlayerAbility(EAbilities.escapeArtist)
     playerStore.addPlayerAbility(EAbilities.acrobat)
     playerStore.addPlayerAbility(EAbilities.immunity)
+    playerStore.addPlayerAbility(EAbilities.climb)
+    playerStore.addPlayerAbility(EAbilities.deflectArrows)
+    playerStore.addPlayerAbility(EAbilities.lockPicker)
+    playerStore.addPlayerAbility(EAbilities.playDead)
+    playerStore.addPlayerAbility(EAbilities.poisonArrows)
+    playerStore.addPlayerAbility(EAbilities.shuriken)
   //startGame()
   })
 

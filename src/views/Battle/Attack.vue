@@ -123,6 +123,7 @@
   <section>
     <!-- Attack text -->
     <div
+      v-if="rollText"
       class="text"
       v-html="rollText"
     />

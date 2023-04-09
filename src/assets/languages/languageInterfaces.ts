@@ -32,7 +32,7 @@ export interface ILanguageMisc {
   playerName: string
   damage: string
   defense: string
-  captain: string
+  piratecaptain: string
   soldiers: string
   [key: string]: string
 }

@@ -29,9 +29,9 @@ export const usePageStore = defineStore("page", {
       if (this.sideEffects?.modifiers) {
         const modifiers = this.sideEffects.modifiers        
         if (modifiers.fate) playerStore.setPlayerModifierFate(modifiers.fate)
-        if (modifiers.kick) playerStore.setPlayerModifierFate(modifiers.kick)
-        if (modifiers.punch) playerStore.setPlayerModifierFate(modifiers.punch)
-        if (modifiers.throw) playerStore.setPlayerModifierFate(modifiers.throw)
+        if (modifiers.kick) playerStore.setPlayerModifierKick(modifiers.kick)
+        if (modifiers.punch) playerStore.setPlayerModifierPunch(modifiers.punch)
+        if (modifiers.throw) playerStore.setPlayerModifierThrow(modifiers.throw)
       }
 
       if (this.sideEffects?.temporary) {

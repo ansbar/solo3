@@ -3,9 +3,11 @@
   import { usePlayerStore } from "../stores/playerStore"
   import { useTextStore } from "../stores/textStore"
   import { usePageStore } from "../stores/pageStore"
+  import { useOpponentStore } from "../stores/opponentStore"
   import { EAbilities, EBattleStates } from "../assets/enums"
 
   const playerStore = usePlayerStore()
+  const opponentStore = useOpponentStore()
   const pageStore = usePageStore()
   const textStore = useTextStore()
   const mainStore = useMainStore()
@@ -25,11 +27,29 @@
       mainStore.setCurrentPageId(pageId)
     }
   }
+
+  const handleCounterGoto = () => {
+    mainStore.battleRoundCounter = 1
+    gotoStory(opponentStore.counterGoto as number)
+  }
 </script>
 
 <template>
+  <!-- Special case for opponents that has to befeated before a certain count -->
+  <ul v-if="opponentStore.counter && opponentStore.counter < mainStore.battleRoundCounter">
+    <li>
+      <a
+        href="#"
+        :title="'Story ' + opponentStore.counterGoto"
+        @click="handleCounterGoto()"
+      >
+        Du lyckades inte besegra {{ opponentStore.opponents[0].name }} innan runda {{ opponentStore.counter }}
+      </a>
+    </li>
+  </ul>
+  <!-- Normal case-->
   <ul
-    v-if="textStore.page.choices"
+    v-else-if="textStore.page.choices"
     class="choices"
   >
     <li

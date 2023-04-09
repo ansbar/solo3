@@ -118,7 +118,7 @@ export const pageData: IPages = {
   26: {
     sideEffects: {
       attributes: {
-        "hp": 10,
+        hp: 10,
       },
       items: {
         "gold": 10
@@ -293,10 +293,7 @@ export const pageData: IPages = {
     ]
   },
   67: {
-    // "battle": {
-    //     "opponent": opponents.piratecaptain,     
-    //     "win": 58
-    // },
+    opponent: EOpponents.piratecaptain,
     choices: [
       {
         goto: 87
@@ -352,10 +349,7 @@ export const pageData: IPages = {
     ]
   },
   77: {
-    // "battle": {
-    //     "opponent": opponents.piratecaptain,   
-    //     "win": 58
-    // },
+    opponent: EOpponents.piratecaptain,
     choices: [
       {
         goto: 87
@@ -392,11 +386,7 @@ export const pageData: IPages = {
     ]
   },
   87: {
-    // "battle": {
-    //     "opponent": opponents.piratecaptain,   
-    //     "loss": 45,
-    //     "win": 34
-    // },
+    opponent: EOpponents.piratecaptain,
     choices: [
       {
         goto: 77
@@ -547,7 +537,7 @@ export const pageData: IPages = {
   136: {
     sideEffects: {
       attributes: {
-        "hp": -4
+        hp: -4
       },
     },
     choices: [
@@ -573,7 +563,7 @@ export const pageData: IPages = {
       modifier: "shuriken",
       attack: "2T6",
       defense: 5,
-      opponent: EOpponents.captain
+      opponent: EOpponents.piratecaptain
     },
     choices: [
       {
@@ -729,7 +719,7 @@ export const pageData: IPages = {
   191: {
     sideEffects: {
       attributes: {
-        "hp": 20
+        hp: 20
       },
     },
     choices: [
@@ -777,6 +767,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  201: {
+    choices: [
+      {
+        goto: 65,
+      }
+    ]
+  },  
   202: {
     // "battle": {
     //     "opponent": opponents.snowGiant
@@ -817,7 +814,7 @@ export const pageData: IPages = {
   212: {
     sideEffects: {
       attributes: {
-        "hp": 2
+        hp: 2
       },
     },
     "image": true,
@@ -826,6 +823,21 @@ export const pageData: IPages = {
         goto: 357,
       }, {
         goto: 315,
+      }
+    ]
+  },
+  214: {
+    sideEffects: {
+      items: {
+        gold: -2
+      },
+      attributes: {
+        hp: 1
+      },
+    },
+    choices: [
+      {
+        goto: 65
       }
     ]
   },
@@ -856,8 +868,11 @@ export const pageData: IPages = {
   225: {
     sideEffects: {
       attributes: {
-        "hp": 1
+        hp: 1
       },
+      items: {
+        gold: -2
+      }
     },
     choices: [
       {
@@ -897,7 +912,7 @@ export const pageData: IPages = {
   235: {
     sideEffects: {
       attributes: {
-        "hp": 2
+        hp: 2
       },
     },
     choices: [
@@ -1015,29 +1030,30 @@ export const pageData: IPages = {
     ]
   },
   256: {
-    battle: {
-      id: EOpponents.soldiers,
-      blockable: true,
-      attackType: EAttackType.kick,
-      attacks: [
-        {
-          player_defense: 8, // 9 om 1, 8 om 2, 7 om 3
-          player_damage: "1T6",
-          opponent_damage: "1T6",
-          opponent_defense: 5,
-        }, {
-          player_defense: 8,
-          player_damage: "1T6",
-          opponent_damage: "1T6",
-          opponent_defense: 4,
-        }, {
-          player_defense: 8,
-          player_damage: "1T6",
-          opponent_damage: "1T6",
-          opponent_defense: 4,
-        }
-      ]
-    },
+    opponent: EOpponents.soldiers,
+    // battle: {
+    //   id: EOpponents.soldiers,
+    //   blockable: true,
+    //   attackType: EAttackType.kick,
+    //   attacks: [
+    //     {
+    //       player_defense: 8, // 9 om 1, 8 om 2, 7 om 3
+    //       player_damage: "1T6",
+    //       opponent_damage: "1T6",
+    //       opponent_defense: 5,
+    //     }, {
+    //       player_defense: 8,
+    //       player_damage: "1T6",
+    //       opponent_damage: "1T6",
+    //       opponent_defense: 4,
+    //     }, {
+    //       player_defense: 8,
+    //       player_damage: "1T6",
+    //       opponent_damage: "1T6",
+    //       opponent_defense: 4,
+    //     }
+    //   ]
+    // },
     choices: [
       {
         goto: 237
@@ -1050,10 +1066,6 @@ export const pageData: IPages = {
   },
   257: {
     opponent: EOpponents.humanEater,
-    // "battle": {
-    //     "instantAttack": "1T6",
-    //     "opponent": opponents.humanEater,  
-    // },
     sideEffects: {
       items: {
         "shuriken": -1
@@ -1071,7 +1083,7 @@ export const pageData: IPages = {
   260: {
     sideEffects: {
       attributes: {
-        "hp": 6,
+        hp: 6,
       },
     },
     choices: [
@@ -1356,7 +1368,7 @@ export const pageData: IPages = {
   341: {
     sideEffects: {
       attributes: {
-        "hp": 20,
+        hp: 20,
       },
     },
     choices: [
@@ -1372,7 +1384,7 @@ export const pageData: IPages = {
   342: {
     sideEffects: {
       attributes: {
-        "hp": -4,
+        hp: -4,
       },
     },
     choices: [
@@ -1394,6 +1406,18 @@ export const pageData: IPages = {
         goto: 332
       }, {
         goto: 310
+      }
+    ]
+  },
+  347: {
+    sideEffects: {
+      items: {
+        "shuriken": -1
+      },
+    },
+    choices: [
+      {
+        goto: 254,
       }
     ]
   },
@@ -1452,7 +1476,7 @@ export const pageData: IPages = {
   363: {
     sideEffects: {
       attributes: {
-        "hp": -7,
+        hp: -7,
       },
     },
     choices: [
@@ -1496,7 +1520,7 @@ export const pageData: IPages = {
   375: {
     sideEffects: {
       modifiers: {
-        "kick": 1,
+        "throw": 1,
       },
     },
     choices: [
@@ -1579,7 +1603,7 @@ export const pageData: IPages = {
         "kick": -1,
       },
       attributes: {
-        "hp": -4,
+        hp: -4,
       }
     },
     choices: [
@@ -1611,7 +1635,7 @@ export const pageData: IPages = {
   412: {
     sideEffects: {
       attributes: {
-        "hp": -2,
+        hp: -2,
       },
     },
     choices: [

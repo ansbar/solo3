@@ -37,7 +37,6 @@ h1 {
 
 .card {
   display: flex;
-  justify-content: space-between;
   background-color: #EBF5E6;
   border-radius: 5px;
   padding: 2em 2.5em 2em 2em;
