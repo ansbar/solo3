@@ -34,6 +34,7 @@ export interface ILanguageMisc {
   defense: string
   captain: string
   soldiers: string
+  [key: string]: string
 }
 
 export interface ILanguageItems {

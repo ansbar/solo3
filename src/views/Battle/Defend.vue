@@ -71,7 +71,7 @@
             
     damageText.value += "Du tar " + damageRoll + " i skada (" + opponent.value.damage + ")"
     if(playerStore.attributes.hp < 1){
-      damageText.value += " och besegras!"
+      damageText.value += " <b>och besegras!</b>"
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
     }else{
       damageText.value += " och har " + playerStore.attributes.hp + " kroppspoäng kvar."
@@ -82,6 +82,10 @@
 
   const doLoss = () => {
     mainStore.currentPageId = opponentStore.loss
+    mainStore.battlestate = EBattleStates.none
+  }
+  const doStartOver = () => {
+    mainStore.currentPageId = 0
     mainStore.battlestate = EBattleStates.none
   }
 </script>
@@ -130,11 +134,17 @@
         Nästa runda
       </button>
       <button
-        v-else
+        v-else-if="playerStore.attributes.hp === 0 && opponentStore.loss"
         @click="doLoss"
       >
         Du är besegrad
       </button>     
+      <a 
+        v-else
+        @click="doStartOver"
+      >
+        Du är död. Börja om?
+      </a>     
     </template>
   </section>
 </template>

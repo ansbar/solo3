@@ -145,17 +145,15 @@ export const pageData: IPages = {
     ]
   },
   33: {
-    "choiceSpec": {
-      "type": "fate",
-      "attack": "2T6",
-      "defense": 7
+    specialCondition: {
+      type: "fate",
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 382,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 64,
       }
     ]
@@ -255,17 +253,15 @@ export const pageData: IPages = {
     ]
   },
   57: {
-    "choiceSpec": {
-      "type": "fate",
-      "attack": "2T6",
-      "defense": 7
+    specialCondition: {
+      type: "fate",
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 3,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 64,
       }
     ]
@@ -325,17 +321,15 @@ export const pageData: IPages = {
     ]
   },
   75: {
-    "choiceSpec": {
-      "type": "fate",
-      "attack": "2T6",
-      "defense": 7
+    specialCondition: {
+      type: "fate",
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 94,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 125,
       }
     ]
@@ -574,19 +568,19 @@ export const pageData: IPages = {
         shuriken: -1,
       }
     },
-    "choiceSpec": {
-      "type": "attack",
-      "modifier": "shuriken",
-      "attack": "2T6",
-      "defense": 5,
-      // "name": txt.misc.captain
+    specialCondition: {
+      type: "attack",
+      modifier: "shuriken",
+      attack: "2T6",
+      defense: 5,
+      opponent: EOpponents.captain
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 164,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 175,
       }
     ]
@@ -694,17 +688,15 @@ export const pageData: IPages = {
   },
   // Special fate roll, divided into two stories (184 and this)
   1840: {
-    "choiceSpec": {
-      "type": "fate",
-      "attack": "2T6",
-      "defense": 7
+    specialCondition: {
+      type: "fate",
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 184,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 146,
       }
     ]
@@ -1286,19 +1278,19 @@ export const pageData: IPages = {
     ]
   },
   326: {
-    "choiceSpec": {
-      "type": "attack",
-      "modifier": "punch",
-      "attack": "2T6",
-      "defense": 6,
-      "name": "Magikern"
+    specialCondition: {
+      type: "attack",
+      modifier: "punch",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.magician
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 253,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 311,
       }
     ]
@@ -1416,17 +1408,15 @@ export const pageData: IPages = {
     ]
   },
   352: {
-    "choiceSpec": {
-      "type": "fate",
-      "attack": "2T6",
-      "defense": 7
+    specialCondition: {
+      type: "fate",
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 107,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 97,
       }
     ]
@@ -1541,19 +1531,19 @@ export const pageData: IPages = {
     ]
   },
   389: {
-    "choiceSpec": {
-      "type": "attack",
-      "modifier": "poisonArrow",
-      "attack": "2T6",
-      "defense": 4,
-      "name": "Magikern"
+    specialCondition: {
+      type: "attack",
+      modifier: "poisonArrow",
+      attack: "2T6",
+      defense: 4,
+      opponent: EOpponents.magician
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 338,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 311,
       }
     ]
@@ -1566,19 +1556,19 @@ export const pageData: IPages = {
     ]
   },
   395: {
-    "choiceSpec": {
-      "type": "attack",
-      "modifier": "kick",
-      "attack": "2T6",
-      "defense": 6,
-      "name": "Munken"
+    specialCondition: {
+      type: "attack",
+      modifier: "kick",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.monk
     },
     choices: [
       {
-        "criteria": true,
+        criteria: true,
         goto: 384,
       }, {
-        "criteria": false,
+        criteria: false,
         goto: 403,
       }
     ]

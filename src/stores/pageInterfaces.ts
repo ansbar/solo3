@@ -10,12 +10,12 @@ export interface IPage {
   image?: boolean
   choices?: Array<IChoice>
   opponent?: EOpponents
-  choiceSpec?: {
+  specialCondition?: {
     type: string
     modifier?: string
     attack?: string
     defense?: number
-    name?: string
+    opponent?: EOpponents
   }, 
 }
 

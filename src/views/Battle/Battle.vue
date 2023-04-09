@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { useMainStore } from "../../stores/mainStore"
   import Start from "./Start.vue"
-  import History from "./History.vue"
   import Attack from "./Attack.vue"
   import Defend from "./Defend.vue"
   import { storeToRefs } from "pinia"
@@ -14,8 +13,7 @@
   <div
     class="battle"
     :class="battlestate === EBattleStates.pending ? 'hide' : ''"
-  >
-    <History />
+  >    
     <Start v-if="battlestate === EBattleStates.innerStrength" />
     <Attack v-if="battlestate === EBattleStates.attack" />
     <Defend v-if="battlestate === EBattleStates.defend" />
@@ -62,6 +60,7 @@
 
   .battle {
     border: 2px dashed #9eb890;
+    margin-bottom: 2rem;
     border-radius: 10px;
     padding: 2em 2.5em 2em 2em;
 

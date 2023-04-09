@@ -40,6 +40,8 @@ export const useOpponentStore = defineStore("opponent", {
   actions: {
     setOpponentStaticData(payload: IOpponent, page: number) {
       // This is set once per battle (static data)
+      this.$reset() // Reset opponent state when new opponent     
+
       this.$patch({
         counter: payload.attributes.counter,
         counterGoto: payload.attributes.counterGoto,

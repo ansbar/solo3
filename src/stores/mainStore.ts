@@ -28,6 +28,10 @@ export const useMainStore = defineStore("main", {
     addToHistory (payload: string) {
       this.history.unshift(payload)
     },
+    clearHistory () {
+      this.history = []
+      this.battleRoundCounter = 1
+    },
     addToCounter (payload: boolean) {
       this.battleRoundCounter = payload? this.battleRoundCounter + 1 : 1 
     }

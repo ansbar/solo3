@@ -30,15 +30,14 @@ const opponents: IOpponents = {
       }
     }
   },
-  "humanEater": {
+  humanEater: {
     opponents: 1,
     attributes: {
       name: ["Människoätaren"],
       hpMax: [16],
       hp: [16],
     },
-    win: 110,
-    loss: 95,
+    win: 360,
     pages: {
       257: {
         playerAttackType: EAttackType.instant,
@@ -53,14 +52,14 @@ const opponents: IOpponents = {
         playerDefense: [8],
         damage: ["2T6"],
         defense: [4],
-        blockable: true,
+        blockable: false,
       },
       332: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
         playerDamage: "1T6+2",
         damage: ["2T6"],
-        blockable: true,
+        blockable: false,
         defense: [5],
       },
       345: {

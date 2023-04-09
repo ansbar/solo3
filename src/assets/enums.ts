@@ -14,7 +14,10 @@ export enum EOpponents {
   none = "none",
   gorobei = "gorobei",
   humanEater = "humanEater",
-  soldiers = "soldiers"
+  soldiers = "soldiers",
+  captain = "captain",
+  magician = "magician",
+  monk = "monk"
 }
 
 export enum EItems {

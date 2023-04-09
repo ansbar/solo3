@@ -3,7 +3,7 @@
   import { usePlayerStore } from "../../stores/playerStore"
   import { EBattleStates } from "../../assets/enums"
   import { useOpponentStore } from "../../stores/opponentStore"
-  import { computed, onMounted } from "vue"
+  import { computed } from "vue"
   import { useTextStore } from "../../stores/textStore"
 
   const mainStore = useMainStore()

@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { onMounted, watch } from "vue"
+  import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
   import { useMainStore } from "../stores/mainStore"
   import { usePageStore } from "../stores/pageStore"
@@ -14,6 +14,8 @@
   import Image from "./Image.vue"
   import Battle from "./Battle/Battle.vue"
   import SideEffects from "./SideEffects.vue"
+  import SpecialCondition from "./SpecialCondition.vue"
+  import History from "./History.vue"
   import { EBattleStates } from "../assets/enums"
 
   const textStore = useTextStore()
@@ -30,6 +32,7 @@
       // If an opponent exists on page
       if (battlestate.value === "none") {
         // Init opponent data once per battle
+        mainStore.clearHistory()
         opponentStore.setOpponentStaticData(opponent[pageStore.opponent], currentPageId.value)          
       }
       // Set opponent page data every page switch
@@ -59,6 +62,16 @@
       mainStore.addToCounter(true)
     }    
   })
+
+  const showChoices = computed(() => {
+    // Hide choices when in an battle or whn there are special conditions
+    return (battlestate.value === EBattleStates.none || battlestate.value === EBattleStates.pending) 
+      && !pageStore.specialCondition
+  })
+
+  const showHistory = computed(() => {
+    return pageStore.opponent || pageStore.specialCondition
+  })
 </script>
 
 <template>
@@ -69,6 +82,8 @@
     <Opponent v-if="pageStore.opponent" />
     <Battle v-if="pageStore.opponent" />
     <SideEffects v-if="showSideEffects()" />
-    <Choices v-if="battlestate === EBattleStates.none || battlestate === EBattleStates.pending" />
+    <SpecialCondition v-if="pageStore.specialCondition" />    
+    <Choices v-if="showChoices" />
+    <History v-if="showHistory" />
   </section>
 </template>

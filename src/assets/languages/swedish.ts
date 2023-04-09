@@ -6,7 +6,9 @@ export const languageGeneral: ILanguageGeneral = {
     damage: "Skada",
     defense: "Försvar",    
     captain: "Kaptenen",
-    soldiers: "soldater"
+    soldiers: "Soldater",
+    magician: "Magikern",
+    monk: "Munken"
   },
   help: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -140,8 +142,8 @@ export const languagePages: ILanguagePages = {
   33: {
     mainText: "Du hoppar från båten, högt upp i luften i en graciös båge mot den andra sidan. Folkmassan drar andan av förundran. Gör ett Ödesslag.",
     choices: [
-      "Ödet ler mot dig",
-      "Ödet vänder ryggen åt dig, du hoppar för kort och ramlar i vallgraven"
+      "Gå vidare",
+      "Du hoppar för kort och ramlar i vallgraven"
     ]
   },
   35: {

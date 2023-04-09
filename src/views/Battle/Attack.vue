@@ -61,13 +61,18 @@
   const attack = () => {      
     const attackModifier = calculateAttackModifier()          
     const attackRoll = dice.doRoll(attackChance.value, attackModifier)
-    const isHitText = computed(() => isHit.value ? "träffar" : "missar")
+    const hitText = computed(() => {
+      if (opponentStore.playerAttackType === EAttackType.throw)       
+        return isHit.value ? "Du lyckas med att kasta" : "Du misslyckas med att kasta"
+      else
+        return isHit.value ? "Du träffar" : "Du missar"
+    })
          
     isHit.value = (attackRoll > opponent.value.defense) ? true : false    
             
     rollText.value = `Du slår ${attackChance.value} och resultatet blir ${attackRoll}.`
     rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
-    rollText.value += `<b>Du ${isHitText.value} ${opponent.value.name}!</b>`
+    rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
 
     if(isHit.value){
       // A successful throw adds 2 to damage on next attack

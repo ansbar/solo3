@@ -5,7 +5,7 @@ export type IOpponents = Record<string, IOpponent>
 export interface IOpponent {
   opponents: number,
   win: number,
-  loss: number
+  loss?: number
   attributes: {
     name: string[]
     hp: number[]
