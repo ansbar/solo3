@@ -1,9 +1,22 @@
+import { EAbilities } from "./enums"
+
 export interface General {
   playerName: string
   damage: string
   hp: string
   defense: string
   innerForce: string
+}
+
+export interface GeneralTexts {
+  general: General
+  opponents: Opponents
+  help: Help
+  abilities: TAbilities
+  items: Items
+  defense: Defense
+  misc: Misc
+  modifiers: Modifiers
 }
 
 export interface Opponents {
@@ -14,6 +27,8 @@ export interface Help {
   block: string
   innerForce: string
 }
+
+export type TAbilities = Record<EAbilities, string>
 
 export interface Abilities {
   shuriken: string
@@ -26,6 +41,7 @@ export interface Abilities {
   lockPicker: string
   climb: string
 }
+export type AbilitiesKey = keyof Abilities 
 
 export interface Items {
   healingPotion: string
@@ -48,15 +64,4 @@ export interface Modifiers {
   kick: string
   throw: string
   fate: string
-}
-
-export interface GeneralTexts {
-  general: General
-  opponents: Opponents
-  help: Help
-  abilities: Abilities
-  items: Items
-  defense: Defense
-  misc: Misc
-  modifiers: Modifiers
 }

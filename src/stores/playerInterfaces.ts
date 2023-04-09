@@ -1,4 +1,4 @@
-import { EnumAbilities } from "../assets/enums"
+import { EAbilities } from "../assets/enums"
 
 interface Player_items {
   shuriken: number
@@ -18,18 +18,18 @@ interface Player_modifiers {
 
 interface Player_attributes {
   hp: number
-  hp_max: number
+  hpMax: number
   innerStrength: number
 }
 
 interface Player_temporary {
   useInnerStrength: boolean | null
-  attackModifier: boolean | null
-  damageModifier: boolean | null
+  attackModifier: number 
+  damageModifier: number
 }
 
 export interface Player {
-  abilities: EnumAbilities[]
+  abilities: EAbilities[]
   items: Player_items
   modifiers: Player_modifiers
   attributes: Player_attributes

@@ -1,0 +1,177 @@
+<script lang="ts" setup>
+  import { ref, onMounted, computed } from "vue"
+  import { useDice } from "../../utils/dice"
+  import { usePlayerStore } from "../../stores/playerStore"
+  import { useTextStore } from "../../stores/textStore"
+  import { useMainStore } from "../../stores/mainStore"
+  import { useOpponentStore } from "../../stores/opponentStore"
+  import { EAttackType, EBattleStates } from "../../assets/enums"
+
+  const textStore = useTextStore()
+  const mainStore = useMainStore()
+  const playerStore = usePlayerStore()
+  const opponentStore = useOpponentStore()
+  const dice = useDice()
+
+  const isHit = ref(false)
+  const attackChance = ref("2T6")
+  const rollText = ref("")
+  const damageText =  ref("")
+
+  const opponent = computed(() => {
+    // Todo: let user choose which opponent to attack
+    return opponentStore.opponents[0]
+  })
+
+  onMounted(() => {
+    // If attack is instant only damage part is needed
+    if(opponentStore.playerAttackType !== EAttackType.instant){
+      attack()
+    }else{
+      doDamage()
+    }            
+  })
+
+  const commitBattleState = (battleState: string) => {
+    mainStore.setBattlestate(battleState as EBattleStates)
+  }
+
+  const calculateAttackModifier = () => {
+    // Calculate attack modifiers. 
+    // First modifier for the type, like punch. 
+    // And then the temporary modifier, like block.
+    let totalModifier = 0
+    let permanentModifier = 0
+    if (opponentStore.playerAttackType === EAttackType.kick 
+      || opponentStore.playerAttackType === EAttackType.punch 
+      || opponentStore.playerAttackType === EAttackType.throw) {
+      permanentModifier = playerStore.modifiers[opponentStore.playerAttackType]
+    }     
+    totalModifier = permanentModifier + playerStore.temporary.attackModifier
+    
+    if (permanentModifier || playerStore.temporary.attackModifier)
+      mainStore.addToHistory(`- Använde attackmodifierare: p${permanentModifier}, t${playerStore.temporary.attackModifier}`)
+    
+    playerStore.setTemporaryAttackModifier(0) // Reset after use
+
+    return totalModifier
+  }
+
+  // Attack opponent
+  const attack = () => {      
+    const attackModifier = calculateAttackModifier()          
+    const attackRoll = dice.doRoll(attackChance.value, attackModifier)
+    const isHitText = computed(() => isHit.value ? "träffar" : "missar")
+         
+    isHit.value = (attackRoll > opponent.value.defense) ? true : false    
+            
+    rollText.value = `Du slår ${attackChance.value} och resultatet blir ${attackRoll}.`
+    rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
+    rollText.value += `<b>Du ${isHitText.value} ${opponent.value.name}!</b>`
+
+    if(isHit.value){
+      // A successful throw adds 2 to damage on next attack
+      if(opponentStore.playerAttackType === EAttackType.throw){
+        playerStore.setTemporaryDamageModifier(2)
+      }else{
+        doDamage()
+      }
+    }                
+  }
+
+  // Damage on opponent
+  const doDamage = () => {
+    let damageRoll = dice.doRoll(opponentStore.playerDamage || "", playerStore.temporary.damageModifier)  
+    let innerStrengthText = ""
+    let damageModifierText = ""
+              
+    if(playerStore.temporary.damageModifier)
+      damageModifierText = "+" + playerStore.temporary.damageModifier    
+
+    if(playerStore.temporary.useInnerStrength){                
+      damageRoll = damageRoll * 2
+      innerStrengthText = " gånger 2"  
+      playerStore.setTemporaryInnerStrength(null)              
+    }                
+
+    opponentStore.setOpponentHp(0, damageRoll)
+
+    damageText.value = `${opponent.value.name} tar ${damageRoll} i skada (${opponentStore.playerDamage}${damageModifierText}${innerStrengthText})`
+
+    if(opponent.value.hp < 1){
+      damageText.value += " och besegras!"
+      mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
+    }else{
+      damageText.value += ` och har ${opponent.value.hp} kroppspoäng kvar.`
+    }       
+              
+    playerStore.setTemporaryDamageModifier(0)
+  }  
+
+  const doWin = () => {
+    mainStore.currentPageId = opponentStore.win
+    mainStore.battlestate = EBattleStates.none
+  }
+</script>
+
+<template>
+  <section>
+    <!-- Attack text -->
+    <div
+      class="text"
+      v-html="rollText"
+    />
+
+    <!-- Damage texts -->
+    <div
+      class="text"
+      v-html="damageText"
+    />            
+      
+    <!-- Miss or Throw -->
+    <template v-if="!isHit || opponentStore.playerAttackType != 'throw'">
+      <div
+        v-if="opponent.hp > 0"
+        class="text"
+      >
+        {{ textStore.page.stillAlive }}
+      </div>
+      <button
+        v-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'"
+        class="cta"
+        @click="commitBattleState('defend')"
+      >
+        Försvara dig
+      </button>
+      <button
+        v-if="opponentStore.playerAttackType === 'instant'"
+        class="cta"
+        @click="commitBattleState('pending')"
+      >
+        Gå vidare
+      </button>
+
+      <template v-if="opponent.hp <= 0">
+        <div class="text">
+          <b>{{ opponent.name }} är besegrad</b>
+        </div>
+        
+        <button        
+          class="cta"
+          @click="doWin"
+        >
+          Gå vidare
+        </button>
+      </template>
+    </template>
+    <!-- Throw -->
+    <div v-else>
+      <button
+        class="cta"
+        @click="commitBattleState('pending')"
+      >
+        Kastet lyckas, välj attack
+      </button>
+    </div>
+  </section>
+</template>
