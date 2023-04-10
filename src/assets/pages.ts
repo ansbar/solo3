@@ -121,7 +121,7 @@ export const pageData: IPages = {
         hp: 10,
       },
       items: {
-        "gold": 10
+        gold: 10
       },
     },
     choices: [
@@ -135,7 +135,7 @@ export const pageData: IPages = {
   27: {
     sideEffects: {
       modifiers: {
-        "fate": -1
+        fate: -1
       },
     },
     choices: [
@@ -880,6 +880,15 @@ export const pageData: IPages = {
       }
     ]
   },
+  227: {
+    choices: [
+      {
+        goto: 283,
+      }, {
+        goto: 275,
+      }
+    ]
+  },
   231: {
     choices: [
       {
@@ -1127,9 +1136,11 @@ export const pageData: IPages = {
   },
   295: {},
   297: {
-    // "items": {
-    //     "healingPotion": true
-    // },
+    sideEffects: {
+      items: {
+        healingPotion: true
+      },
+    },
     choices: [
       {
         goto: 65,
@@ -1157,10 +1168,6 @@ export const pageData: IPages = {
   },
   310: {
     opponent: EOpponents.humanEater,
-    // "battle": {
-    //     "opponent": opponents.humanEater,            
-    //     "win": 360,
-    // },
     choices: [
       {
         goto: 332
@@ -1182,6 +1189,42 @@ export const pageData: IPages = {
       }
     ]
   },
+  315: {
+    specialCondition: {
+      type: "attack",
+      modifier: "kick",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.cobraman
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 227,
+      }, {
+        criteria: false,
+        goto: 3150,
+      }
+    ]
+  },
+  3150: {
+    choices: [
+      {
+        ability: EAbilities.immunity,
+        goto: 31502
+      }, {
+        goto: 31501
+      }
+    ]
+  },
+  31501: {},
+  31502: {
+    choices: [
+      {
+        goto: 227
+      }
+    ]
+  },  
   316: {
     // "battle": {
     //     "opponent": opponents.giant,            

@@ -83,9 +83,9 @@
     <SideEffects v-if="showSideEffects()" />
     <Opponent v-if="pageStore.opponent" />
     <Battle v-if="pageStore.opponent" />
-
     <SpecialCondition v-if="pageStore.specialCondition" />    
     <Choices v-if="showChoices" />
+    <!-- TODO Lägg till möjlighet att använda helande dryck utanför strid -->
     <History v-if="showHistory" />
   </section>
 </template>

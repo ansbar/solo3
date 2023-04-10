@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAttackType } from "../assets/enums"
+import { EAbilities } from "../assets/enums"
 import { type Player } from "./playerInterfaces"
 import { useMainStore } from "./mainStore"
 

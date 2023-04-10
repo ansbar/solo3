@@ -11,7 +11,6 @@
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const { playerDefense } = useOpponents()
-
   const dice = useDice()
 
   const isHit = ref(false)
@@ -21,7 +20,6 @@
   const currentAttackingOpponent = ref(0)
 
   onMounted(() => {    
-    console.info("First check")
     currentAttackingOpponent.value = firstOpponentAlive(0) as number
     defend()    
   })
@@ -37,16 +35,11 @@
    * - check if there are any opponents alive to attack (when deciding which button to show; next opponent or next round)
    * - check which opponent is the next current attacker (needed when an opponent in the middle is dead) */
   const firstOpponentAlive = (opponentIndex: number) => {
-    console.log("firstOpponentAlive opponentIndex", opponentIndex)
     for (let i = opponentIndex; i < opponentStore.opponents.length; i++) {      
       if (opponentStore.opponents[i].hp > 0) {
-        console.info("firstOpponentAlive alive", i)
         return i
-      } else {
-        console.info("firstOpponentAlive dead", i)
-      }      
+      }   
     }
-    console.info("no opponent alive found")
     return false
   }
 
@@ -87,7 +80,7 @@
     rollText.value += "<b>" + opponent.value.name + (isHit.value ? " träffar " : " missar ") + " dig!</b>"         
             
     // If a hit and opponent attack isnt blockable, do damage directly
-    if(!opponentStore.blockable && isHit.value)
+    if(isHit.value && (hasBlocked.value || !opponentStore.blockable))
       takeDamage()  
   }
 
@@ -107,16 +100,18 @@
     isHit.value = false
   }
 
+  // Determines and sets the next attacker in a multiple opponent attack
   const setNextAttacker = () => {
-    console.info("setNextAttacker check")
     currentAttackingOpponent.value = firstOpponentAlive(currentAttackingOpponent.value + 1) as number
     damageText.value = ""
     defend()
   }
+  // If player loses a battle but is still alive
   const doLoss = () => {
     mainStore.currentPageId = opponentStore.loss
     mainStore.battlestate = EBattleStates.none
   }
+  // If player loses a battle and is dead
   const doStartOver = () => {
     mainStore.currentPageId = 0
     mainStore.battlestate = EBattleStates.none
@@ -130,7 +125,6 @@
       class="text"
       v-html="rollText"
     />
-
 
     <!-- Question about blocking. Only when opponent attack is punch. Only one block per round (if many opponents) -->
     <div

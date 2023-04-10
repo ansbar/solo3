@@ -8,7 +8,8 @@ export const languageGeneral: ILanguageGeneral = {
     piratecaptain: "Piratkaptenen",
     soldiers: "Soldater",
     magician: "Magikern",
-    monk: "Munken"
+    monk: "Munken",
+    cobraman: "Kobramannen"
   },
   help: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -185,7 +186,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   50: {
-    mainText: "Flickan tar din hand i hennes och leder dig till marmorbänken. Den gamle mannen förklarar att han måste spilla lite av ditt blod i silverkalken för att kunna läsa din framtid. Han skär i en ven i din arm och blodet rinner ned i kannan. Du tittar förskräckt på honom när han låter det rinna tills du har förlorat en kvarts liter och det börjar pirra i armen. Dra bort 2 KROPPSPOÄNG. Sedan sluter han såret med en besvärjelse. Flickan häller en grön, magisk vätska i kannan. Du känner dig svag och lyder honom när han ber dig titta i spegeln som hänger på väggen ovanför dig. Han börjar sjunga och tar fram ett kristallprisma som han håller över kannan. Blodet och vätskan bubblar och Oraklets mässande blir högre. En bild av två män som lämnar en stad till häst formas i spegeln. Den större av de två är klädd i en svart ringbrynja och bär en svart sköld prydd med ett silversvärd hängande i en silvertråd, Domsvärdet. Hans ansikte är arrogant och grymt. Den andre är klädd som en krigarmunk, i rött med ett smalt, svart bälte. De rider tysta mot dig och munkens genomborrande, svarta ögon blickar in i dina utan att blinka. Oraklet talar om för dig att visionen visar Yaemon, Flammans Stormästare, som rider med Honoric, Marskalk av Domsvärdslegionen, norrut från Mortavalon Han berättar för dig att de färdas mot Förändringens pelare för att framsäga ett ord var som ska fängsla en gud och gudinna i Underjorden. Honoric vill styra hela Människoländerna. Du faller i trans och när du vaknar är du utanför Domedag, gående på vägen mot Mortavalon. Du undrar vad Oraklet kan ha gjort medan du var i trans. Har han berättat om din vision för någon? Visionen antydde i alla fall att Honoric och Yaemon är långt framför dig. Du inser att du måste färdas till Mortavalon för att ta reda på var Yaemon och Honoric är.",
+    mainText: "Flickan tar din hand i hennes och leder dig till marmorbänken. Den gamle mannen förklarar att han måste spilla lite av ditt blod i silverkalken för att kunna läsa din framtid. Han skär i en ven i din arm och blodet rinner ned i kannan. Du tittar förskräckt på honom när han låter det rinna tills du har förlorat en kvarts liter och det börjar pirra i armen. Dra bort 2 KROPPSPOÄNG. Sedan sluter han såret med en besvärjelse. Flickan häller en grön, magisk vätska i kannan. Du känner dig svag och lyder honom när han ber dig titta i spegeln som hänger på väggen ovanför dig. Han börjar sjunga och tar fram ett kristallprisma som han håller över kannan. Blodet och vätskan bubblar och Oraklets mässande blir högre. En bild av två män som lämnar en stad till häst formas i spegeln. Den större av de två är klädd i en svart ringbrynja och bär en svart sköld prydd med ett silversvärd hängande i en silvertråd, Domsvärdet. Hans ansikte är arrogant och grymt. Den andre är klädd som en krigarmunk, i rött med ett smalt, svart bälte. De rider tysta mot dig och munkens genomborrande, svarta ögon blickar in i dina utan att blinka. Oraklet talar om för dig att visionen visar Yaemon, Flammans Stormästare, som rider med Honoric, Marskalk av Domsvärdslegionen, norrut från Mortavalon. Han berättar för dig att de färdas mot Förändringens pelare för att framsäga ett ord var som ska fängsla en gud och gudinna i Underjorden. Honoric vill styra hela Människoländerna. Du faller i trans och när du vaknar är du utanför Domedag, gående på vägen mot Mortavalon. Du undrar vad Oraklet kan ha gjort medan du var i trans. Har han berättat om din vision för någon? Visionen antydde i alla fall att Honoric och Yaemon är långt framför dig. Du inser att du måste färdas till Mortavalon för att ta reda på var Yaemon och Honoric är.",
     choices: [
       "Gå vidare"
     ]
@@ -535,9 +536,9 @@ export const languagePages: ILanguagePages = {
     ]
   },
   196: {
-    mainText: "Du går uppför trappan till Templet. Träbänkarna tycks vara slump- mässigt utställda därinne, men taket är genomborrat av rosettfönster och det är ljust och vackert där inne. Kristaller reﬂekterar solens strålar mot en målning av ett förstört slott med soldater och bönder som dansar i gläntorna framför det. Den dödade prästen eller den unge krigaren syns inte till någonstans. En av Prästerna går fram mot dig och du frågar honom om han kan ge dig lite information. Han frågar om du tillber Béatan.",
+    mainText: "Du går uppför trappan till Templet. Träbänkarna tycks vara slumpmässigt utställda därinne, men taket är genomborrat av rosettfönster och det är ljust och vackert där inne. Kristaller reﬂekterar solens strålar mot en målning av ett förstört slott med soldater och bönder som dansar i gläntorna framför det. Den dödade prästen eller den unge krigaren syns inte till någonstans. En av Prästerna går fram mot dig och du frågar honom om han kan ge dig lite information. Han frågar om du tillber Béatan.\nVilken gud säger du att du tillber?",
     choices: [
-      "Vilken gud säger du att du tillber? Kwon",
+      "Kwon",
       "Allmodern",
       "eller Béatan",
       "Om du hellre går ut ur Templet och följer efter den gamle mannen som sade sig vara ett Orakel"
@@ -612,6 +613,13 @@ export const languagePages: ILanguagePages = {
     mainText: "Du ger barägaren två guldstycken för rummet och går upp på övervåningen. Du sover lätt med sinnena på helspänn och är redo när tre fulla soldater rusar in. Det är bara ett ögonblicks verk att slå två av dem medvetslösa med skickliga sparkar och den tredje stirrar förvånat på och springer sedan ut ur rummet. Du sover lite under resten av natten och får tillbaka 1 KROPPSPOÄNG, om du hade förlorat någon. På morgonen lämnar du staden på vägen mot Mortavalon.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  227: {
+    mainText: "Kobramannen väser och skruvar sig i änden på kopplet, då pojken flyr till tryggheten medan Kobramannen var distraherad. De två männen, väldiga, feta sällar som liknar de oxar som drar deras vagn, berättar för dig att de ska föra Kobramannen till djurparken i Mortavalon.\n\"Han bodde ensam i en grotta en liten bit upp i berget här\", säger en och pekar mot ett mörkt hål i bergssluttningen, täckt av ett klipputsprång. \"Vi vågade inte ge oss för långt in, men det finns säkert skatter att hämta, det garanterar jag.\" Så piskar de sina oxar framåt och drar den väsande Kobramannen efter sig.\nPojken, som sitter bak på vagnen, ropar, \"Tack för att du räddade mig - skaka inte hand med den unge magikern!\" Männen skrattar och du lämnas att fundera över meningen bakom hans underliga ord.",
+    choices: [
+      "Om du går förbi oxkärran och rakt mot Mortavalon",
+      "Om du går in i grottan"
     ]
   },
   231: {
@@ -789,7 +797,7 @@ export const languagePages: ILanguagePages = {
     mainText: "Du griper den Tvåhövdade jätten runt låren, men den väger över ett ton och du finner att du inte kan kasta den. Monstret släpper sin väldiga klubba och lyfter dig, slänger dig i klippan och trampar på dig. Ditt huvud krossas som en mogen melon när kraften från dess häl trycker ned det. Du har misslyckats med ditt uppdrag."
   },
   297: {
-    mainText: "Du berättar för prästen om ditt uppdrag att stoppa Yaemon från att fjättra din gud, Kwon, i Inferno. Han rynkar pannan och säger, ”Jag skulle inte vara så orolig om det inte var för att Yaemons munkar av Röda Syrsans orden är i förbund den förbannade Domsvärdslegionen.” Han fortsätter med att säga att Honoric, legionens marskalk, har lämnat Domedag just när hans män väntade sig att han skulle leda dem i strid mot folket i Föraningens tom. Han gav sig av med Yaemon och de red ensamma mot Mortavalon. ”Du tror väl inte att du kan stoppa dem ensam. Honoric dödade fyrtio män, ärrade veteraner, i striden vid Håltornet. Tre av Ödets Verktyg dog för hans Magiska klinga, Sorcerak, den dagen. Du har inga vapen. lngen man kan stå emot Yaemon i strid utan vapen. han har varit Stormästare i hundra årstider.” ”Det du säger är kanske sant, men jag har svurit att försöka.” Han har inte mer att berätta, men han ger dig en liten ﬂaska som innehåller en klarblå vätska. Det är en Läkande dryck och du kan använda den en gång när du inte är i strid för att få tillbaka upp till tio förlorade KROPPSPOÄNG. Du tackar prästen och lämnar templet, fast besluten att hinna ikapp Yaemon.",
+    mainText: "Du berättar för prästen om ditt uppdrag att stoppa Yaemon från att fjättra din gud, Kwon, i Inferno. Han rynkar pannan och säger, ”Jag skulle inte vara så orolig om det inte var för att Yaemons munkar av Röda Syrsans orden är i förbund med den förbannade Domsvärdslegionen.” Han fortsätter med att säga att Honoric, legionens marskalk, har lämnat Domedag just när hans män väntade sig att han skulle leda dem i strid mot folket i Föraningens tom. Han gav sig av med Yaemon och de red ensamma mot Mortavalon. ”Du tror väl inte att du kan stoppa dem ensam. Honoric dödade fyrtio män, ärrade veteraner, i striden vid Håltornet. Tre av Ödets Verktyg dog för hans Magiska klinga, Sorcerak, den dagen. Du har inga vapen. lngen man kan stå emot Yaemon i strid utan vapen. han har varit Stormästare i hundra årstider.” ”Det du säger är kanske sant, men jag har svurit att försöka.” Han har inte mer att berätta, men han ger dig en liten ﬂaska som innehåller en klarblå vätska. Det är en Läkande dryck och du kan använda den en gång när du inte är i strid för att få tillbaka upp till tio förlorade KROPPSPOÄNG. Du tackar prästen och lämnar templet, fast besluten att hinna ikapp Yaemon.",
     choices: [
       "Om du lämnar staden genom hamnporten och beger dig mot Mortavalon",
       "Om du går in i Domedag genom Obsidianporten"
@@ -828,6 +836,29 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du har färdigheten Giftpilar och vill använda en",
       "Annars"
+    ]
+  },
+  315: {
+    mainText: "Kobramannen tittar upp när du kastar dig fram i en ﬂygande Tigersprångets spark. Men kobramannen kan hugga snabbt som en orm och han har 6 i Försvar mot din spark.",
+    choices: [
+      "Du träffar Kobramannen",
+      "Du missar Kobramannen"
+    ]
+  },
+  3150: {
+    mainText: "Du misslyckas med att sparka Kobramannen och han biter dig i vristen och sprutar in ett dödligt gift.",
+    choices: [
+      "Om du har har lmmunitet mot gift",
+      "Annars"
+    ]
+  },
+  31501: {
+    mainText: "Du dör i svåra smärtor",
+  },
+  31502: {
+    mainText: "Om du har lmmunitet, stirrar männen förvånat när du tar dig upp medan pojken sätter sig i säkerhet",
+    choices: [
+      "Gå vidare"
     ]
   },
   316: {

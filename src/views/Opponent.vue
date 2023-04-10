@@ -34,6 +34,7 @@
       <div
         v-for="(o) in opponentStore.opponents"
         :key="o.name"
+        :class="o.hp === 0 ? 'dead' : ''"
       >
         <h3>{{ o.name }}</h3>
         <ul>
@@ -62,5 +63,8 @@
     > div + div {
       margin-top: 1rem;
     }
+  }
+  .dead {
+    color: #999;
   }
 </style>

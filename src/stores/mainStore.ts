@@ -17,6 +17,7 @@ export const useMainStore = defineStore("main", {
       battleRoundCounter: 1,
       currentPageId: 0,
       currentOpponent: 0,
+      thrownOpponent: undefined,
       history: []
     }
   ),

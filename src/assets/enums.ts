@@ -17,7 +17,8 @@ export enum EOpponents {
   soldiers = "soldiers",
   piratecaptain = "piratecaptain",
   magician = "magician",
-  monk = "monk"
+  monk = "monk",
+  cobraman = "cobraman"
 }
 
 export enum EItems {
