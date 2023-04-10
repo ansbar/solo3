@@ -36,9 +36,6 @@ export enum EBattleStates {
   innerStrength = "innerStrength",
   attack = "attack",
   defend = "defend",
-  win = "win",
-  loss = "loss",
-  miss = "miss"
 }
 
 export enum EPlayerModifiers {

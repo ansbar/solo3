@@ -4,12 +4,14 @@
   import { useOpponentStore } from "../stores/opponentStore"
   import { storeToRefs } from "pinia"
   import { EAttackType, EDefenseType } from "../assets/enums"
+  import { useOpponents } from "../utils/opponents"
 
   const opponentStore = useOpponentStore()
+  const textStore = useTextStore()
+  const { playerDefense } = useOpponents()
+
   const { playerAttackType, playerDamage } = storeToRefs(useOpponentStore())
   const { attributes } = storeToRefs(usePlayerStore())
-
-  const textStore = useTextStore()
 </script>
 
 <template>
@@ -19,13 +21,7 @@
       <ul>
         <li>Kroppspoäng: {{ attributes.hp }}/{{ attributes.hpMax }}</li>
         <li v-if="playerAttackType !== EAttackType.instant">
-          Ditt försvar: 
-          <span
-            v-for="(o) in opponentStore.opponents"
-            :key="o.name"
-          >
-            {{ o.playerDefense }}
-          </span>
+          Ditt försvar: {{ playerDefense }}
         </li>
         
         <li>Skada: {{ playerDamage }}</li>

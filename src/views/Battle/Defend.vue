@@ -4,39 +4,66 @@
   import { usePlayerStore } from "../../stores/playerStore"
   import { useMainStore } from "../../stores/mainStore"
   import { useOpponentStore } from "../../stores/opponentStore"
+  import { useOpponents } from "../../utils/opponents"
   import { EBattleStates } from "../../assets/enums"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
+  const { playerDefense } = useOpponents()
+
   const dice = useDice()
 
   const isHit = ref(false)
   const rollText = ref("")
   const damageText =  ref("")
-  const useBlock: Ref<null | boolean> = ref(null)
+  const hasBlocked = ref(false)
+  const currentAttackingOpponent = ref(0)
 
+  onMounted(() => {    
+    console.info("First check")
+    currentAttackingOpponent.value = firstOpponentAlive(0) as number
+    defend()    
+  })
+
+  // Returns current opponents data
   const opponent = computed(() => {
-    // Todo: let user choose which opponent to attack
-    return opponentStore.opponents[0]
+    return opponentStore.opponents[currentAttackingOpponent.value]
   })
 
-  onMounted(() => {
-    defend()  
-  })
+  /* Returns the index of the first opponent alive
+   * It is used for:
+   * - check the first opponent alive at mounted (start of defense phase)
+   * - check if there are any opponents alive to attack (when deciding which button to show; next opponent or next round)
+   * - check which opponent is the next current attacker (needed when an opponent in the middle is dead) */
+  const firstOpponentAlive = (opponentIndex: number) => {
+    console.log("firstOpponentAlive opponentIndex", opponentIndex)
+    for (let i = opponentIndex; i < opponentStore.opponents.length; i++) {      
+      if (opponentStore.opponents[i].hp > 0) {
+        console.info("firstOpponentAlive alive", i)
+        return i
+      } else {
+        console.info("firstOpponentAlive dead", i)
+      }      
+    }
+    console.info("no opponent alive found")
+    return false
+  }
 
   const commitBattleState = (battleState: string) => {
     mainStore.setBattlestate(battleState as EBattleStates)
   }
 
-  watch(useBlock, (value) => {
+  // Watch for block click
+  const useBlock = (value: boolean) => {
     damageText.value = ""
             
     // Do damage
     if(value){
+      hasBlocked.value = true
       const blockRoll = dice.doRoll("2T6")
 
-      if(blockRoll < opponent.value.playerDefense){
+      if(blockRoll < playerDefense.value){
         isHit.value = false
         damageText.value = "Du lyckas blockera!\n"
       }else{
@@ -48,15 +75,15 @@
 
     if(isHit.value)
       takeDamage()
-  })
+  }
 
-  // Player defend 
+  // Do a player defense roll 
   const defend = () => {
     const attackRoll = dice.doRoll("2T6", undefined)
-    isHit.value = (attackRoll > opponent.value.playerDefense) ? true : false
+    isHit.value = (attackRoll > playerDefense.value) ? true : false
 
     rollText.value = opponent.value.name + " slår 2T6 och resultatet blir: " + attackRoll + ". "
-    rollText.value += "Du har " + opponent.value.playerDefense + " i försvar.\n"
+    rollText.value += "Du har " + playerDefense.value + " i försvar.\n"
     rollText.value += "<b>" + opponent.value.name + (isHit.value ? " träffar " : " missar ") + " dig!</b>"         
             
     // If a hit and opponent attack isnt blockable, do damage directly
@@ -64,7 +91,7 @@
       takeDamage()  
   }
 
-  // Damage on player
+  // Do a player damage roll
   const takeDamage = () => {
     const damageRoll = dice.doRoll(opponent.value.damage, undefined)  
     playerStore.setPlayerAttributeHp(-damageRoll)
@@ -80,6 +107,12 @@
     isHit.value = false
   }
 
+  const setNextAttacker = () => {
+    console.info("setNextAttacker check")
+    currentAttackingOpponent.value = firstOpponentAlive(currentAttackingOpponent.value + 1) as number
+    damageText.value = ""
+    defend()
+  }
   const doLoss = () => {
     mainStore.currentPageId = opponentStore.loss
     mainStore.battlestate = EBattleStates.none
@@ -90,6 +123,7 @@
   }
 </script>
 
+
 <template>
   <section>
     <div
@@ -97,9 +131,10 @@
       v-html="rollText"
     />
 
-    <!-- Question about blocking. Only when opponent attack is punch -->
+
+    <!-- Question about blocking. Only when opponent attack is punch. Only one block per round (if many opponents) -->
     <div
-      v-if="isHit && opponentStore.blockable && useBlock === null"
+      v-if="isHit && opponentStore.blockable && !hasBlocked"
       class="text"
     >
       Vill du försöka 
@@ -110,29 +145,37 @@
       <div class="button-group">                    
         <button
           class="cta"
-          @click="useBlock = false"
+          @click="useBlock(false)"
         >
           Nej
         </button>
-        <button @click="useBlock = true">
+        <button @click="useBlock(true)">
           Ja
         </button>
       </div>
     </div>
 
-    <!-- Damage texts -->
-    <template v-if="useBlock !== null || !isHit || !opponentStore.blockable">
+
+    <!-- Damage texts and buttons -->
+    <template v-else-if="rollText">
       <div
         class="text"
         v-html="damageText"
       />        
 
       <button
-        v-if="playerStore.attributes.hp > 0"
+        v-if="playerStore.attributes.hp > 0 && !firstOpponentAlive(currentAttackingOpponent + 1)"
         @click="commitBattleState('pending')"
       >
         Nästa runda
       </button>
+      <button
+        v-else-if="playerStore.attributes.hp > 0"
+        @click="setNextAttacker()"
+      >
+        Nästa attackerare
+      </button>
+
       <button
         v-else-if="playerStore.attributes.hp === 0 && opponentStore.loss"
         @click="doLoss"

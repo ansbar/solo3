@@ -2,7 +2,7 @@ import { IOpponents } from "../assets/interfaces/opponents"
 import { EAttackType, EAbilities } from "../assets/enums"
 
 const opponents: IOpponents = {
-  "gorobei": {
+  gorobei: {
     opponents: 1,
     attributes: {
       name: ["Gorobei"],
@@ -116,8 +116,7 @@ const opponents: IOpponents = {
       hpMax: [12, 9, 10],
       hp: [12, 9, 10],
     },
-    win: 110,
-    loss: 95,
+    win: 268,
     pages: {
       237: {
         playerAttackType: EAttackType.throw,
@@ -139,7 +138,7 @@ const opponents: IOpponents = {
         playerDefense: [9, 8, 7],
         playerDamage: "1T6",
         blockable: true,
-        damage: ["1T6", "1T6", "1T6"],
+        damage: ["1T6+3", "1T6+1", "1T6+1"],
         defense: [5, 4, 4],
       }
     }

@@ -3,7 +3,7 @@
   import { usePlayerStore } from "../../stores/playerStore"
   import { EBattleStates } from "../../assets/enums"
   import { useOpponentStore } from "../../stores/opponentStore"
-  import { computed } from "vue"
+  import { computed, onMounted } from "vue"
   import { useTextStore } from "../../stores/textStore"
 
   const mainStore = useMainStore()
@@ -19,6 +19,12 @@
     return playerStore.attributes.innerStrength > 0 
       && opponentStore.playerAttackType != "throw"
       && opponentStore.playerAttackType != "instant"
+  })
+
+  onMounted(() => {
+    // Clear any thrown opponent
+    mainStore.setThrownOpponent()
+    if (!showInnerStrength.value) startBattle(false)
   })
 
   const startBattle = (useInnerStrength: boolean) => { 
@@ -50,17 +56,7 @@
             Ja
           </button>
         </div>
-      </div>
-      <div v-else>
-        <div class="button-group">                    
-          <button
-            class="cta"
-            @click="startBattle(false)"
-          >
-            Attackera {{ opponentStore.id }}
-          </button>
-        </div>
-      </div>
+      </div>      
     </div>
   </section>
 </template>

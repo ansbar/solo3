@@ -924,29 +924,7 @@ export const pageData: IPages = {
     ]
   },
   237: {
-    battle: {
-      id: EOpponents.soldiers,
-      blockable: true,
-      attackType: EAttackType.throw,
-      attacks: [
-        {
-          player_defense: 8,
-          player_damage: "",
-          opponent_damage: "1T6+1",
-          opponent_defense: 5,
-        }, {
-          player_defense: 8,
-          player_damage: "1T6",
-          opponent_damage: "1T6+1",
-          opponent_defense: 5,
-        }, {
-          player_defense: 8,
-          player_damage: "1T6",
-          opponent_damage: "1T6+1",
-          opponent_defense: 5,
-        }
-      ]
-    },
+    opponent: EOpponents.soldiers,
     choices: [
       {
         goto: 256
@@ -965,29 +943,7 @@ export const pageData: IPages = {
     ]
   },
   248: {
-    battle: {
-      id: EOpponents.soldiers,
-      blockable: true,
-      attackType: EAttackType.punch,
-      attacks: [
-        {
-          player_defense: 8, // 9 om 1, 8 om 2, 7 om 3
-          player_damage: "1T6",
-          opponent_damage: "1T6+3",
-          opponent_defense: 4,
-        }, {
-          player_defense: 8,
-          player_damage: "1T6",
-          opponent_damage: "1T6+1",
-          opponent_defense: 4,
-        }, {
-          player_defense: 8,
-          player_damage: "1T6",
-          opponent_damage: "1T6+1",
-          opponent_defense: 4,
-        }
-      ]
-    },
+    opponent: EOpponents.soldiers,
     choices: [
       {
         goto: 237
@@ -1031,29 +987,6 @@ export const pageData: IPages = {
   },
   256: {
     opponent: EOpponents.soldiers,
-    // battle: {
-    //   id: EOpponents.soldiers,
-    //   blockable: true,
-    //   attackType: EAttackType.kick,
-    //   attacks: [
-    //     {
-    //       player_defense: 8, // 9 om 1, 8 om 2, 7 om 3
-    //       player_damage: "1T6",
-    //       opponent_damage: "1T6",
-    //       opponent_defense: 5,
-    //     }, {
-    //       player_defense: 8,
-    //       player_damage: "1T6",
-    //       opponent_damage: "1T6",
-    //       opponent_defense: 4,
-    //     }, {
-    //       player_defense: 8,
-    //       player_damage: "1T6",
-    //       opponent_damage: "1T6",
-    //       opponent_defense: 4,
-    //     }
-    //   ]
-    // },
     choices: [
       {
         goto: 237

@@ -5,6 +5,8 @@ interface Main {
   battlestate: EBattleStates
   currentPageId: number
   battleRoundCounter: number
+  thrownOpponent?: number
+  currentOpponent: number
   history: string[]
 }
 
@@ -14,6 +16,7 @@ export const useMainStore = defineStore("main", {
       battlestate: EBattleStates.none,
       battleRoundCounter: 1,
       currentPageId: 0,
+      currentOpponent: 0,
       history: []
     }
   ),
@@ -27,6 +30,12 @@ export const useMainStore = defineStore("main", {
     },
     addToHistory (payload: string) {
       this.history.unshift(payload)
+    },
+    setCurrentOpponent (payload: number){
+      this.currentOpponent = payload
+    },
+    setThrownOpponent (payload?: number){
+      this.thrownOpponent = payload || undefined
     },
     clearHistory () {
       this.history = []

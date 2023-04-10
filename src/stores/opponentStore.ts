@@ -17,7 +17,7 @@ interface StoreOpponent {
     name: string
     hp: number,
     hpMax: number,    
-    playerDefense: number,
+    playerDefense: number[],
     damage: string
     defense: number,
   }[]
@@ -54,7 +54,7 @@ export const useOpponentStore = defineStore("opponent", {
           name: payload.attributes.name[i],
           hp: payload.attributes.hp[i],
           hpMax: payload.attributes.hpMax[i],
-          playerDefense: payload.pages[page].playerDefense?.[i],
+          playerDefense: payload.pages[page].playerDefense,
           damage: payload.pages[page].damage?.[i],
           defense: payload.pages[page].defense?.[i],
         })
@@ -70,7 +70,7 @@ export const useOpponentStore = defineStore("opponent", {
       })
 
       for (let i = 0; i < this.opponents.length; i++) {
-        this.opponents[i].playerDefense = payload.playerDefense?.[i]
+        this.opponents[i].playerDefense = payload.playerDefense
         this.opponents[i].damage = payload.damage?.[i]
         this.opponents[i].defense = payload.defense?.[i]
       }

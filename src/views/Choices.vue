@@ -22,7 +22,7 @@
   // Change page
   const gotoStory = (pageId: number) => {
     if (mainStore.currentPageId === pageId) {
-      mainStore.setBattlestate (EBattleStates.innerStrength)
+      mainStore.setBattlestate(EBattleStates.chooseOpponent)
     } else {
       mainStore.setCurrentPageId(pageId)
     }

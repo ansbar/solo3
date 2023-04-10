@@ -1,8 +1,9 @@
 <script lang="ts" setup>
   import { useMainStore } from "../../stores/mainStore"
-  import Start from "./Start.vue"
+  import InnerStrength from "./InnerStrength.vue"
   import Attack from "./Attack.vue"
   import Defend from "./Defend.vue"
+  import ChooseOpponent from "./ChooseOpponent.vue"
   import { storeToRefs } from "pinia"
   import { EBattleStates } from "../../assets/enums"
 
@@ -13,8 +14,9 @@
   <div
     class="battle"
     :class="battlestate === EBattleStates.pending ? 'hide' : ''"
-  >    
-    <Start v-if="battlestate === EBattleStates.innerStrength" />
+  >
+    <ChooseOpponent v-if="battlestate === EBattleStates.chooseOpponent" />
+    <InnerStrength v-if="battlestate === EBattleStates.innerStrength" />
     <Attack v-if="battlestate === EBattleStates.attack" />
     <Defend v-if="battlestate === EBattleStates.defend" />
   </div>

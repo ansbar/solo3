@@ -664,7 +664,7 @@ export const languagePages: ILanguagePages = {
       "eller Bevingade hästens spark",
       "eller ett nytt slag"
     ],
-    stillAlive: "Var och en av de soldater som fortfarande lever anfaller dig en gång. Du kan bara Blockera en och du har 7 i Försvar om tre lever, 8 om två lever och 9 om bara en är kvar i livet."
+    stillAlive: "Var och en av de soldater som fortfarande lever anfaller dig en gång. Du kan bara Blockera en attack."
   },
   252: {
     mainText: "Isen är förrädisk och det är bara din goda balansförmåga som gör att du kan behålla fotfästet när Snöjätten kastar sig över dig, viftande med sina svarta klor. Du kan inte se hans ögon, men av hans vildsinta beteende inser du att du måste slåss mot den vitpälsade kolossen.",
@@ -729,7 +729,7 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Du måste försöka hoppa över treuddens svepande skaft. Du har 8 i Försvar mot det väldiga slaget. "
   },
   268: {
-    mainText: "Dina tre angripare ligger runt dig, döda eller medvetslösa. En respekt- fylld tystnad sänker sig över krogen och ingen vill möta din blick. Du inser att ryktet kommer att spridas att det finns en munk i Domedag som inte slåss som Röda Syrsans munkar. Du beslutar dig för att lämna krogen och staden så fort som möjligt. En ung soldat följer efter dig när du går, men du smiter från honom bland de vindlande bakgatorna och tar dig snabbt fram till stadsporten. Du kommer säkert igenom innan order ges om att stoppa alla främlingar. Väl i säkerhet borta från stadsmuren, klättrar du upp i ett träd där du kan sova dold.",
+    mainText: "Dina tre angripare ligger runt dig, döda eller medvetslösa. En respektfylld tystnad sänker sig över krogen och ingen vill möta din blick. Du inser att ryktet kommer att spridas att det finns en munk i Domedag som inte slåss som Röda Syrsans munkar. Du beslutar dig för att lämna krogen och staden så fort som möjligt. En ung soldat följer efter dig när du går, men du smiter från honom bland de vindlande bakgatorna och tar dig snabbt fram till stadsporten. Du kommer säkert igenom innan order ges om att stoppa alla främlingar. Väl i säkerhet borta från stadsmuren, klättrar du upp i ett träd där du kan sova dold.",
     choices: [
       "Gå vidare"
     ]

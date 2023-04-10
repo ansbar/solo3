@@ -5,12 +5,14 @@
   import { useTextStore } from "../../stores/textStore"
   import { useMainStore } from "../../stores/mainStore"
   import { useOpponentStore } from "../../stores/opponentStore"
+  import { useOpponents } from "../../utils/opponents"
   import { EAttackType, EBattleStates } from "../../assets/enums"
 
   const textStore = useTextStore()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
+  const { opponentsAlive } = useOpponents()
   const dice = useDice()
 
   const isHit = ref(false)
@@ -19,8 +21,7 @@
   const damageText =  ref("")
 
   const opponent = computed(() => {
-    // Todo: let user choose which opponent to attack
-    return opponentStore.opponents[0]
+    return opponentStore.opponents[mainStore.currentOpponent]
   })
 
   onMounted(() => {
@@ -77,6 +78,7 @@
     if(isHit.value){
       // A successful throw adds 2 to damage on next attack
       if(opponentStore.playerAttackType === EAttackType.throw){
+        mainStore.setThrownOpponent(mainStore.currentOpponent)
         playerStore.setTemporaryDamageModifier(2)
       }else{
         doDamage()
@@ -99,7 +101,7 @@
       playerStore.setTemporaryInnerStrength(null)              
     }                
 
-    opponentStore.setOpponentHp(0, damageRoll)
+    opponentStore.setOpponentHp(mainStore.currentOpponent, damageRoll)
 
     damageText.value = `${opponent.value.name} tar ${damageRoll} i skada (${opponentStore.playerDamage}${damageModifierText}${innerStrengthText})`
 
@@ -162,11 +164,19 @@
           <b>{{ opponent.name }} är besegrad</b>
         </div>
         
-        <button        
+        <button    
+          v-if="!opponentsAlive"   
           class="cta"
           @click="doWin"
         >
           Gå vidare
+        </button>
+        <button
+          v-else
+          class="cta"
+          @click="commitBattleState('defend')"
+        >
+          Försvara dig
         </button>
       </template>
     </template>

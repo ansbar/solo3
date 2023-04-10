@@ -37,7 +37,7 @@
       }
       // Set opponent page data every page switch
       opponentStore.setOpponentPageData(opponent[pageStore.opponent].pages[currentPageId.value])
-      mainStore.setBattlestate(EBattleStates.innerStrength)
+      mainStore.setBattlestate(EBattleStates.chooseOpponent)
     } else if (pageStore.autoEndBattle) {
       // If the battle was ended through a page choice
       mainStore.setBattlestate(EBattleStates.none)

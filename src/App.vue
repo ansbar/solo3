@@ -107,6 +107,12 @@ button {
   border-top: 2px solid #347fd6;
   border-bottom: 2px solid #0d509d;
 
+  &:disabled {
+    border-top: 2px solid #eee;
+    border-bottom: 2px solid #ccc;
+    cursor: auto;
+  }
+
   &:hover, &:focus {
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
   }
