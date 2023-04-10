@@ -35,6 +35,8 @@ export interface ILanguageMisc {
   piratecaptain: string
   soldiers: string
   cobraman: string
+  snowGiant: string
+  goblin: string
   [key: string]: string
 }
 

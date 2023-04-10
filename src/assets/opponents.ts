@@ -173,12 +173,11 @@ const opponents: IOpponents = {
   snowGiant: {
     opponents: 1,
     attributes: {
-      name: ["Snöjätte"],
+      name: ["Snöjätten"],
       hpMax: [22],
       hp: [22]
     },
-    win: 110,
-    loss: 95,
+    win: 111,
     pages: {
       184: {
         playerAttackType: EAttackType.kick,
@@ -187,6 +186,14 @@ const opponents: IOpponents = {
         damage: ["1T6+3"],
         blockable: true,
         defense: [6],
+      },
+      146: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [6],
+        damage: ["1T6+3"],
+        defense: [5],
+        blockable: true,
       },
       160: {
         playerAttackType: EAttackType.punch,
@@ -209,43 +216,42 @@ const opponents: IOpponents = {
   cobraman: {
     opponents: 1,
     attributes: {
-      name: ["Kobraman"],
+      name: ["Kobramannen"],
       hpMax: [10],
       hp: [10],
       missAbility: EAbilities.immunity
     },
-    win: 110,
-    loss: 95,
+    win: 394,
+    miss: 412,
     pages: {
       25: {
         playerAttackType: EAttackType.kick,
-        playerDefense: [7],
+        playerDefense: [],
         playerDamage: "1T6+2",
-        damage: ["1T6+2"],
-        blockable: true,
-        defense: [6],
+        damage: [],
+        blockable: false,
+        defense: [7],
       },
       42: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
-        playerDefense: [7],
-        damage: ["1T6+2"],
-        defense: [8],
+        playerDefense: [],
+        damage: ["1T6"],
+        defense: [7],
         blockable: false,
       },
       13: {
         playerAttackType: EAttackType.throw,
-        playerDefense: [7],
-        damage: ["1T6"],
+        playerDefense: [],
+        damage: [],
         blockable: false,
-        defense: [6],
+        defense: [7],
       }
     }
   },
   goblin: {
     opponents: 1,
     attributes: {
-      name: ["Vätte"],
+      name: ["Vätten"],
       hpMax: [18],
       hp: [18]
     },

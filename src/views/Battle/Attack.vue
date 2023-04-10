@@ -119,6 +119,11 @@
     mainStore.currentPageId = opponentStore.win
     mainStore.battlestate = EBattleStates.none
   }
+
+  const handleSpecialMiss = () => {
+    mainStore.battlestate = EBattleStates.pending
+    mainStore.setCurrentPageId(opponentStore.miss as number)
+  }
 </script>
 
 <template>
@@ -136,7 +141,7 @@
       v-html="damageText"
     />            
       
-    <!-- Miss or Throw -->
+    <!-- Miss or not Throw -->
     <template v-if="!isHit || opponentStore.playerAttackType != 'throw'">
       <div
         v-if="opponent.hp > 0"
@@ -144,22 +149,49 @@
       >
         {{ textStore.page.stillAlive }}
       </div>
+      <!-- If special case when player misses (skip defend phase and go to special page) -->
+      <a
+        v-if="!isHit && opponentStore.miss"
+        href="#"
+        @click="handleSpecialMiss()"
+      >
+        {{ textStore.page.miss }}
+      </a>    
+      <!-- If special case when player hits (skip defend phase and go to special page) -->
+      <template v-else-if="isHit && opponentStore.miss">
+        <button    
+          v-if="!opponentsAlive"   
+          class="cta"
+          @click="doWin"
+        >
+          Gå vidare
+        </button>
+        <button      
+          v-else  
+          class="cta"
+          @click="commitBattleState('pending')"
+        >
+          Gå vidare
+        </button>
+      </template>      
+      <!-- If playes is alive and attack is not instant -->
       <button
-        v-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'"
+        v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'"
         class="cta"
         @click="commitBattleState('defend')"
       >
         Försvara dig
       </button>
+      <!-- If instant attack -->
       <button
-        v-if="opponentStore.playerAttackType === 'instant'"
+        v-else-if="opponentStore.playerAttackType === 'instant'"
         class="cta"
         @click="commitBattleState('pending')"
       >
         Gå vidare
       </button>
-
-      <template v-if="opponent.hp <= 0">
+      <!-- If player is dead -->
+      <template v-else-if="opponent.hp === 0">
         <div class="text">
           <b>{{ opponent.name }} är besegrad</b>
         </div>

@@ -9,7 +9,9 @@ export const languageGeneral: ILanguageGeneral = {
     soldiers: "Soldater",
     magician: "Magikern",
     monk: "Munken",
-    cobraman: "Kobramannen"
+    goblin: "Vätten",
+    cobraman: "Kobramannen",
+    snowGiant: "Snöjätten"
   },
   help: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -81,9 +83,8 @@ export const languagePages: ILanguagePages = {
   13: {
     mainText: "Du försöker hoppa upp och låsa benen runt Kobramannens hals när han slår, för att vrida till och kasta honom till marken, men hans snabbhet överraskar dig ändå.",
     choices: [
-      "Du kan finta och slå",
-      "Finta och kasta",
-      "Eller sparka igen"
+      "Du kan angripa honom med Tigertassens slag",
+      "Eller Bevingade hästens spark"
     ],
     stillAlive: "Gorobei angriper dig. Ditt försvar mot Gorobeis Kobraslag är 7.",
     miss: "Du inte lyckas kasta Kobramannen"
@@ -118,7 +119,6 @@ export const languagePages: ILanguagePages = {
       "Finta och kasta",
       "Eller sparka igen"
     ],
-    stillAlive: "Gorobei angriper dig. Ditt försvar mot Gorobeis Kobraslag är 7.",
     miss: "Din spark missade, han träffar med sitt hugg"
   },
   26: {
@@ -428,6 +428,14 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  146: {
+    mainText: "Du tappar balansen när din fot halkar på den förrädiska isen och glider över den glänsande ytan, samtidigt som Snöjättens klor träffar dig. Du förlorar 6 KROPPSPOÄNG. Om du fortfarande lever lyckas du på något sätt återfå fotfästet. Folkmassan ylar av blodtörst och du anfaller igen med Järnnävens slag genom att slå uppåt mot den vita jätten från din hukande ställning.",
+    choices: [
+      "Du kan använda en Kluven blixtspark",
+      "eller glida under hans viftande armar och använda Draksvanskastet",
+      "eller slå igen"
+    ],
+  },
   151: {
     mainText: "Stormästaren ler och skakar på huvudet. ”Du har svarat sanningsenligt. Det är inte fel av dig att vilja hämnas Naijishi, som älskade dig och lärde dig att älska Herren Kwon, men du måste vänta tålmodigt på att din tid ska komma och aldrig glömma, att tjäna Kwon är att hjälpa hela mänskligheten. Men vad gäller tortyren, är det bara genom att misslyckas med ett uppdrag som en sann Skuggkrigare kan bli fångad och det finns alltid üd att bita av sig tungan och blöda till döds, hellre än att riskera att avslöja hemligheter. Du behöver bara frukta att misslyckas med ett uppdrag. Jag ska inte säga att du har misslyckats, för ingen har någonsin bemästrat Tigerns väg som du, och vi ska inte hålla kvar vårt skarpaste vapen i skidan för evigt. Du har lyckats med provet.” \nDe för dig tillbaka till Tempelsalen där munkarna och byboma har väntat för att se om du skulle klara provet. Böner till Kwon utgör en del av ceremonin när du utnämns till De Fyra Vindarnas Stormästare. Gorobei applåderar med de andra, för han är fortfarande en lnvigd av Inre cirkeln, men hans tid kommer, för han är en skicklig krigare och en god munk. Skulle du dö, efterträder han troligen dig. ",
     choices: [
@@ -494,7 +502,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   1840: {
-    mainText: "Du sparkar till med vänster fot två gånger i snabb följd mot det vita pälsberget. Du siktar på hans sida och tinning, men tappar nästan fotfästet. Gör ett Odesslag.",
+    mainText: "Du sparkar till med vänster fot två gånger i snabb följd mot det vita pälsberget. Du siktar på hans sida och tinning, men tappar nästan fotfästet. Gör ett ödesslag.",
     choices: [
       "Gå vidare",
       "Gå vidare"
@@ -590,7 +598,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   214: {
-    mainText: "l din träning i att ta små doser gift ingår också stora mängder alkohol och du kan dricka nästan vem som helst under bordet. Den unge Kaptenen börjar sluddra och drickandet går långsammare. Du berättar för dem att du är en munk som dyrkar den Lede och de behandlar dig som en av de sina. Den unge Kaptenen frågar dig om resan som Honoric, ledaren för Domsvärdslegionen, gör tillsammans med Yaemon. Du säger åt dem att Yaemon färdas norrut i ett viktigt ärende. De skrattar åt det och börjar skämta med dig om att Honorics ärende är viktigare. Du förstår att han också känner till ett ord som kan binda en gud i Inferno och att de färdas mot Snöviddema. Efter ett tag låtsas du ha fått för mycket mjöd och hyr ett rum för natten på värdshuset. Det kostar 2 guldstycken. Du sover lätt med sinnena på spänn, men ingenting händer. Du vaknar på morgonen, lätt uppfriskad. Du får tillbaka 1 KROPPSPOANG om du vill. Du ger dig av och går ut ur staden på vägen mot Mortavalon.",
+    mainText: "l din träning i att ta små doser gift ingår också stora mängder alkohol och du kan dricka nästan vem som helst under bordet. Den unge Kaptenen börjar sluddra och drickandet går långsammare. Du berättar för dem att du är en munk som dyrkar den Lede och de behandlar dig som en av de sina. Den unge Kaptenen frågar dig om resan som Honoric, ledaren för Domsvärdslegionen, gör tillsammans med Yaemon. Du säger åt dem att Yaemon färdas norrut i ett viktigt ärende. De skrattar åt det och börjar skämta med dig om att Honorics ärende är viktigare. Du förstår att han också känner till ett ord som kan binda en gud i Inferno och att de färdas mot Snöviddema. Efter ett tag låtsas du ha fått för mycket mjöd och hyr ett rum för natten på värdshuset. Det kostar 2 guldstycken. Du sover lätt med sinnena på spänn, men ingenting händer. Du vaknar på morgonen, lätt uppfriskad. Du får tillbaka 1 KROPPSPOÄNG om du vill. Du ger dig av och går ut ur staden på vägen mot Mortavalon.",
     choices: [
       "Gå vidare",
     ]
@@ -958,6 +966,13 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  351: {
+    mainText: "När han märker att du inte vill ta honom i handen börjar magikern mässa på en besvärjelse.",
+    choices: [
+      "Om du har färdigheten Giftpilar kan du använda en sådan",
+      "Annars kan du anfalla honom med ett Järnnävens slag"
+    ]
+  },
   352: {
     mainText: "Du springer några steg längs Aquamarins däck innan du hoppar över relingen och landar mot piratskeppets sida, hängande i spygatterna med händerna. Du väntar ett ögonblick innan du börjar maka dig med en hand över den andra mot Havsgravens röda akter. Gör ett ödesslag och se om någon av Kaparna har lagt märke till när du hoppade över till deras skepp.",
     choices: [
@@ -1081,15 +1096,22 @@ export const languagePages: ILanguagePages = {
     ]
   },
   412: {
-    mainText: "Kobramannen hugger blixtsnabbt. Tänderna sjunker in i din arm och pumpar ut ett dödligt gift i dina vener. Du är dock immun mot giftet som inte någon effekt, men kobramannens tänder sliter ändå upp ditt skinn och du blöder. Du förlorar 2 KROPPSPOÄNG.",
+    mainText: "Kobramannen hugger blixtsnabbt. Tänderna sjunker in i din arm och pumpar ut ett dödligt gift i dina vener.",
+    choices: [
+      "Om du har immunitet mot gift",
+      "Om du inte har det"
+    ]
+  },
+  4120: {
+    mainText: "Du är dock immun mot giftet som inte har någon effekt, men kobramannens tänder sliter ändå upp ditt skinn och du blöder. Du förlorar 2 KROPPSPOÄNG.",
     choices: [
       "Du kan använda Bevingade hästens spark",
       "eller Tigertassens slag",
       "eller Tigertandskastet"
     ]
   },
-  4120: {
-    mainText: "Kobramannen hugger blixtsnabbt. Tänderna sjunker in i din arm och pumpar ut ett dödligt gift i dina vener. Du har inte har utvecklat immunitet mot gift under din lärotid och upptäcker plötsligt att det blir svårt att andas. Du faller bakåt mot sanden och dör medan vrålet från blodet i dina öron blandas med vrålet från folkmassan. Ditt äventyr är slut. "
+  41201: {
+    mainText: "Du har inte har utvecklat lmmunitet mot gift under din lärotid och upptäcker plötsligt att det blir svårt att andas. Du faller bakåt mot sanden och dör medan vrålet från blodet i dina öron blandas med vrålet från folkmassan. Ditt äventyr är slut.",
   },
   414: {
     mainText: "Du stirrar upp mot natthimlen tills du kan se i mörkret som en uggla. Sedan klämmer du dig igenom den smalaste av öppningarna mellan de två husen och beger dig mot Spindelvävshallen, som egentligen är en stor, välvd bro, tio meter upp och helt sluten. Den förbinder sovsalarna på första våningen med balkongen i refektoriet där munkarna äter. Du står under fönstret mitt på valvbågen och sätter fast Kattklorna på händer och fötter. Sedan tar du fram den lilla änterhaken och repet från en av dräktens innerﬁckor. Du kastar in den ﬁltklädda kroken genom det öppna fönstret och spänner repet innan du klättrar uppför det med en hand i taget, som en apa. Du är alldeles under fönstret när du ser två händer på kroken över dig.",

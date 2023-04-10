@@ -6,6 +6,7 @@ export interface IOpponent {
   opponents: number,
   win: number,
   loss?: number
+  miss?: number
   attributes: {
     name: string[]
     hp: number[]

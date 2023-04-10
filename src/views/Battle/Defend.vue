@@ -108,7 +108,7 @@
   }
   // If player loses a battle but is still alive
   const doLoss = () => {
-    mainStore.currentPageId = opponentStore.loss
+    mainStore.currentPageId = opponentStore.loss as number
     mainStore.battlestate = EBattleStates.none
   }
   // If player loses a battle and is dead
@@ -178,6 +178,7 @@
       </button>     
       <a 
         v-else
+        href="#"
         @click="doStartOver"
       >
         Du är död. Börja om?

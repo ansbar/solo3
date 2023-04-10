@@ -38,21 +38,16 @@ export const pageData: IPages = {
       }
     ]
   },
-  // 13: {
-  //   "battle": {
-  //     "opponent": opponents.cobraman,
-  //     "win": 394,
-  //     "loss": 4120,
-  //     "miss": 412
-  //   },
-  //   choices: [
-  //     {
-  //       goto: 42,
-  //     }, {
-  //       goto: 25,
-  //     }
-  //   ]
-  // },
+  13: {
+    opponent: EOpponents.cobraman,
+    choices: [
+      {
+        goto: 42,
+      }, {
+        goto: 25,
+      }
+    ]
+  },
   16: {
     choices: [
       {
@@ -65,19 +60,6 @@ export const pageData: IPages = {
   },
   17: {
     opponent: EOpponents.gorobei,
-    // battle: {
-    //   id: EOpponents.gorobei,
-    //   attackType: EAttackType.kick,
-    //   blockable: true,
-    //   attacks: [
-    //     {
-    //       player_defense: 7,
-    //       player_damage: "1T6+2",
-    //       opponent_damage: "1T6",
-    //       opponent_defense: 6,
-    //     }
-    //   ]
-    // },
     choices: [
       {
         goto: 35
@@ -98,23 +80,18 @@ export const pageData: IPages = {
       }
     ]
   },
-  // 25: {
-  //   "battle": {
-  //     "opponent": opponents.cobraman,
-  //     "win": 394,
-  //     "loss": 4120,
-  //     "miss": 412
-  //   },
-  //   choices: [
-  //     {
-  //       goto: 42,
-  //     }, {
-  //       goto: 13,
-  //     }, {
-  //       goto: 25,
-  //     }
-  //   ]
-  // },
+  25: {
+    opponent: EOpponents.cobraman,
+    choices: [
+      {
+        goto: 42,
+      }, {
+        goto: 13,
+      }, {
+        goto: 25,
+      }
+    ]
+  },
   26: {
     sideEffects: {
       attributes: {
@@ -199,24 +176,18 @@ export const pageData: IPages = {
       }
     ]
   },
-
-  // 42: {
-  //     "battle": {
-  //         "opponent": opponents.cobraman,            
-  //         "win": 394,
-  //         "loss": 4120,
-  //         "miss": 412
-  //     },
-  //     choices: [
-  //         {
-  //             goto: 25,
-  //         },{
-  //             goto: 13,
-  //         },{
-  //             goto: 42,
-  //         }
-  //     ]
-  // },
+  42: {
+    opponent: EOpponents.cobraman,
+    choices: [
+        {
+            goto: 25,
+        },{
+            goto: 13,
+        },{
+            goto: 42,
+        }
+    ]
+  },
   45: {
     choices: [
       {
@@ -589,6 +560,23 @@ export const pageData: IPages = {
       }
     ]
   },
+  146: {
+    sideEffects: {
+      attributes: {
+        hp: -6
+      }
+    },
+    opponent: EOpponents.snowGiant,
+    choices: [
+      {
+        goto: 1840,
+      }, {
+        goto: 202,
+      }, {
+        goto: 160,
+      }
+    ]
+  },
   151: {
     choices: [
       {
@@ -604,10 +592,7 @@ export const pageData: IPages = {
     ]
   },
   160: {
-    // "battle": {
-    //     "opponent": opponents.snowGiant,   
-    //     "win": 111
-    // },
+    opponent: EOpponents.snowGiant,
     choices: [
       {
         goto: 1840,
@@ -676,6 +661,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  184: {
+    opponent: EOpponents.snowGiant,
+    choices: [
+      {
+        goto: 202,
+      }, {
+        goto: 160,
+      }, {
+        goto: 1840,
+      }
+    ]
+  },
   // Special fate roll, divided into two stories (184 and this)
   1840: {
     specialCondition: {
@@ -688,21 +685,6 @@ export const pageData: IPages = {
       }, {
         criteria: false,
         goto: 146,
-      }
-    ]
-  },
-  184: {
-    // "battle": {
-    //     "opponent": opponents.snowGiant,   
-    //     "win": 111
-    // },
-    choices: [
-      {
-        goto: 202,
-      }, {
-        goto: 160,
-      }, {
-        goto: 1840,
       }
     ]
   },
@@ -775,9 +757,7 @@ export const pageData: IPages = {
     ]
   },  
   202: {
-    // "battle": {
-    //     "opponent": opponents.snowGiant
-    // },
+    opponent: EOpponents.snowGiant,
     choices: [
       {
         goto: 1840
@@ -970,7 +950,7 @@ export const pageData: IPages = {
       }, {
         goto: 160
       }, {
-        goto: 184,
+        goto: 1840,
       }
     ]
   },
@@ -1047,10 +1027,7 @@ export const pageData: IPages = {
     ]
   },
   267: {
-    // "battle": {
-    //     "opponent": opponents.goblin,            
-    //     "win": 272,
-    // },
+    opponent: EOpponents.goblin,
     choices: [
       {
         goto: 281
@@ -1094,10 +1071,7 @@ export const pageData: IPages = {
     ]
   },
   281: {
-    // "battle": {
-    //     "opponent": opponents.goblin,            
-    //     "win": 272,
-    // },
+    opponent: EOpponents.goblin,
     choices: [
       {
         goto: 293
@@ -1120,10 +1094,7 @@ export const pageData: IPages = {
   285: {},
   287: {},
   293: {
-    // "battle": {
-    //     "opponent": opponents.goblin,            
-    //     "win": 272,
-    // },
+    opponent: EOpponents.goblin,
     choices: [
       {
         goto: 281
@@ -1400,7 +1371,7 @@ export const pageData: IPages = {
   351: {
     choices: [
       {
-        "attribute": EAbilities.poisonArrows,
+        attribute: EAbilities.poisonArrows,
         goto: 389,
       }, {
         goto: 326,
@@ -1433,7 +1404,7 @@ export const pageData: IPages = {
   359: {
     choices: [
       {
-        "attribute": "innerStrength",
+        attribute: "innerStrength",
         goto: 395,
       }, {
         goto: 403,
@@ -1609,6 +1580,16 @@ export const pageData: IPages = {
     ]
   },
   412: {
+    choices: [
+      {
+        ability: EAbilities.immunity,
+        goto: 4120,
+      }, {
+        goto: 41201,
+      }
+    ]
+  },
+  4120: {
     sideEffects: {
       attributes: {
         hp: -2,
@@ -1624,8 +1605,7 @@ export const pageData: IPages = {
       }
     ]
   },
-  // Special dead page for 412
-  4120: {},
+  41201: {},
   414: {
     choices: [
       {
