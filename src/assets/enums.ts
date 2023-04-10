@@ -20,7 +20,8 @@ export enum EOpponents {
   monk = "monk",
   cobraman = "cobraman",
   snowGiant = "snowGiant",
-  goblin = "goblin"
+  goblin = "goblin",
+  giant = "giant"
 }
 
 export enum EItems {

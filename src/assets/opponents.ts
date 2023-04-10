@@ -150,8 +150,7 @@ const opponents: IOpponents = {
       hpMax: [25],
       hp: [25],
     },
-    win: 110,
-    loss: 95,
+    win: 336,
     pages: {
       325: {
         playerAttackType: EAttackType.punch,
@@ -159,7 +158,7 @@ const opponents: IOpponents = {
         playerDefense: [8],
         damage: ["2T6"],
         defense: [3],
-        blockable: true,
+        blockable: false,
       },
       316: {
         playerAttackType: EAttackType.kick,
@@ -167,6 +166,7 @@ const opponents: IOpponents = {
         playerDamage: "1T6+2",
         damage: ["2T6+1"],
         defense: [4],
+        blockable: false,
       }
     }
   },

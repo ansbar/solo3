@@ -22,7 +22,7 @@ export const usePlayerStore = defineStore("player", {
       fate: 0,
     },
     attributes: {
-      hp: 2,
+      hp: 20,
       hpMax: 20,
       innerStrength: 5
     },

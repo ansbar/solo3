@@ -263,6 +263,24 @@ export const pageData: IPages = {
       }
     ]
   },
+  66: {
+    sideEffects: {
+      modifiers: {
+        kick: 1
+      }
+    },
+    choices: [
+      {
+        goto: 20
+      }, {
+        goto: 32
+      }, {
+        goto: 43
+      }, {
+        goto: 53
+      }
+    ]
+  },
   67: {
     opponent: EOpponents.piratecaptain,
     choices: [
@@ -272,6 +290,15 @@ export const pageData: IPages = {
         goto: 77
       }, {
         goto: 67
+      }
+    ]
+  },
+  70: {
+    choices: [
+      {
+        goto: 271
+      }, {
+        goto: 284
       }
     ]
   },
@@ -344,6 +371,18 @@ export const pageData: IPages = {
         goto: 35
       }, {
         goto: 61
+      }
+    ]
+  },
+  83: {
+    sideEffects: {
+      attributes: {
+        hp: -4
+      }
+    },
+    choices: [
+      {
+        goto: 66
       }
     ]
   },
@@ -438,6 +477,15 @@ export const pageData: IPages = {
       }
     ]
   },
+  113: {
+    choices: [
+      {
+        goto: 122,
+      }, {
+        goto: 70,
+      }
+    ]
+  },
   114: {
     sideEffects: {
       modifiers: {
@@ -467,6 +515,7 @@ export const pageData: IPages = {
       }
     ]
   },
+  122: {},
   125: {
     choices: [
       {
@@ -491,6 +540,15 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 191,
+      }
+    ]
+  },
+  133: {
+    choices: [
+      {
+        goto: 173,
+      }, {
+        goto: 113,
       }
     ]
   },
@@ -717,6 +775,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  193: {
+    choices: [
+      {
+        goto: 83,
+      }
+    ]
+  },
   194: {
     choices: [
       {
@@ -787,6 +852,16 @@ export const pageData: IPages = {
         goto: 6
       }, {
         goto: 36
+      }
+    ]
+  },
+  210: {
+    choices: [
+      {
+        ability: EAbilities.climb,
+        goto: 193,
+      }, {
+        goto: 133,
       }
     ]
   },
@@ -1235,10 +1310,7 @@ export const pageData: IPages = {
     ]
   },  
   316: {
-    // "battle": {
-    //     "opponent": opponents.giant,            
-    //     "win": 336,
-    // },
+    opponent: EOpponents.giant,
     choices: [
       {
         goto: 325
@@ -1260,10 +1332,7 @@ export const pageData: IPages = {
     ]
   },
   325: {
-    // "battle": {
-    //     "opponent": opponents.giant,            
-    //     "win": 336,
-    // },
+    opponent: EOpponents.giant,
     choices: [
       {
         goto: 316

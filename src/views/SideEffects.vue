@@ -73,7 +73,7 @@
             {{ textStore.modifiers[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
           </li>
         </ul>
-      </div>
+      </div> 
     </div>
   </section>
 </template>

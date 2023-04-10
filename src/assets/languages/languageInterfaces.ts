@@ -39,6 +39,7 @@ export interface ILanguageMisc {
   cobraman: string
   snowGiant: string
   goblin: string
+  giant: string
   [key: string]: string
 }
 

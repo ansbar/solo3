@@ -52,8 +52,15 @@
     v-else-if="textStore.page.choices"
     class="choices"
   >
+    <li v-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
+      <a
+        href="#"
+        @click="gotoStory(1)"
+      >Du är död. Börja om?</a>
+    </li>
     <li
       v-for="(choice, index) in pageStore.choices"
+      v-else
       :key="choice.goto"
       class="choice"
     >
@@ -76,13 +83,6 @@
       >
         {{ textStore.page.choices[index] }} ({{ textStore.abilities[choice.ability] }})
       </span>
-    </li>
-
-    <li v-if="!pageStore.choices?.length">
-      <a
-        href="#"
-        @click="gotoStory(1)"
-      >Du är död. Börja om?</a>
     </li>
   </ul>
 </template>

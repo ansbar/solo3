@@ -11,7 +11,8 @@ export const languageGeneral: ILanguageGeneral = {
     monk: "Munken",
     goblin: "Vätten",
     cobraman: "Kobramannen",
-    snowGiant: "Snöjätten"
+    snowGiant: "Snöjätten",
+    giant: "Den tvåhövdade jätten"
   },
   help: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -227,6 +228,15 @@ export const languagePages: ILanguagePages = {
       "Om du går norrut från vägen, ut i vildmarken"
     ]
   },
+  66: {
+    mainText: "Grottan är kal. Togawa sitter med korslagda ben på golvet och du följer hans exempel. Han ger dig komplimanger för din färdighet i Tigerns väg, men eftersom du inser att han är skickligare än du, ger du honom komplimanger för sparken som dödade Klippmonstret. Han erbjuder sig att visa den för dig. Han kallar den för Kwons slaga, och den är till och med kraftigare än de sparkar som du använder.\nAnteckna den på din Speltabell som en ny spark du har lärt dig. Du kan lägga +1 till din sparkmodifikation för råden som Togawa ger. Du talar om för honom att du är från De Stilla Drömmarnas Ö, berättar om ditt uppdrag och ber honom om hjälp Han förvånar dig med att fråga, \"Vilket är ditt hem?\"\nOm du svarar:",
+    choices: [
+      "Jag har inget hem.",
+      "Mitt hem är min kropp.",
+      "Som jag sade, är jag från De Stilla Drömmarnas Ö.",
+      "Jag tror på Kwon, världen är mitt hem."
+    ]
+  },  
   67: {
     mainText: "lnnan morgonstjärnan når fram slår du upp med benet och driver upp foten i Kaptenens ansikte.\n Du har totalt fyra rundor på dig att besegra honom.",
     choices: [
@@ -235,6 +245,13 @@ export const languagePages: ILanguagePages = {
       "eller sparka igen"
     ],
     stillAlive: "Han anfaller dig med morgonstjärnan. Ditt Försvar mot den pliggade kulan och kedjan är 7"
+  },
+  70: {
+    mainText: "Den unga Lyckoﬂoden rinner nedför en smal dal som ringlar sig som en orm mellan de branta sluttningarna i Visionernas berg. Luften blir svalare när du klättrar och snön börjar falla. Du vänder ut och in på din dräkt så att det vita fodret kamouflerar dig i snön. Du sover gott i passet, trots kölden och får tillbaka upp till 4 KROPPSPOANG. På den andra dagen hör du ett rop från andra sidan en brant och du rör dig försiktigt fram för att titta. En krigare håller sitt svärd högt mot en grupp Arocker, fågelmän, som anfaller. När du tittar på slår en grön ljusblixt ut från hans svärd och fäller en av Arockerna.",
+    choices: [
+      "Om du hjälper krigaren, som är hårt pressad",
+      "Om du hellre gömmer dig i snön tills Arockerna ger sig av"
+    ]
   },
   73: {
     mainText: "Du ror båten över det slemmiga träsket mot vallgraven, men från det ögonblick då du steg i båten har det runnit in vatten genom sprickorna och när du flyter ut i vallgraven börjar båten sjunka. Till din fasa ser du att vattnet är fullt av Flytande munnar, rovgiriga fiskar som bara består av tänder och en töjbar mage.",
@@ -273,6 +290,12 @@ export const languagePages: ILanguagePages = {
       "Om du låtsas slå och sedan använder Tigersprångets spark",
       "eller om du låtsas greppa honom, men istället använder Kobraslaget",
       "eller om höjer foten som för att sparka, men i stället går åt sidan och använder Virvelkastet"
+    ]
+  },
+  83: {
+    mainText: "Grottan är mörk och du stirrar in i den tills dina ögon har vant sig vid mörkret innan du ropar Togawas namn. Skelettet av en hjort från de Västra öarna, med nästan 3 meter breda horn, ligger på klippgolvet. De kraftiga lårbenen är uppbrutna för märgen. Du går försiktigt framåt, men stelnar till när du hör något som liknar en oxe som andas tungt. Du står stilla när ett tre meter långt Klippmonster angriper. Du försöker blockera hans tunga slag, men det sveper din arm åt sidan och slänger in dig i grottväggen. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever kastar du dig huvudstupa i marken och gör en volt mot monstret, sedan rullar du upp på fötter och slår ut med foten i en enda ﬂytande rörelse. Klippmonstret slår till mot dig och stönar av smärta. Du hoppar undan från hans klor men odjuret tycks vara ogenomträngligt för dina slag och striden fortsätter en stund. Plötsligt dyker en munk upp från ingenstans, mitt ur luften tycks det. Klippmonstret tittar upp när mannen landar precis framför det. Munken snurrar runt åt höger på vänster fot, vänder ryggen åt odjuret och slår till med höger fot runt och upp i Klippmonstrets mellangärde med en snabbhet som knappt ens du kan tro på. Han vrålar till när hans lnre kraft frigörs och sparken fäller Klippmonstret, som skakar grottan när det faller stelt till marken. Munken vänder sig mot dig och bugar. \"Mitt namn är Togawa. Var vänlig följ mig.\" Hans egen grotta ligger en kort klättring ovanför Klippmonstrets och du följer efter honom dit.",
+    choices: [
+      "Gå vidare"
     ]
   },
   86: {
@@ -353,6 +376,13 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  113: {
+    mainText: "Du hasar tillbaka nedför de steniga sluttningarna till Lyckopassets botten.",
+    choices: [
+      "Du kan vända tillbaka söderut och ta dig utefter bergen mot staden Fiendil",
+      "Eller fortsätta genom Lyckopasset"
+    ]
+  },
   114: {
     mainText: "Han ser den dödliga avsikten i dina ögon ett ögonblick innan ditt slag träffar, men accepterar stoiskt döden. Hans nacke är bruten, men han kan fortfarande tala och har uppenbarligen godtagit sitt öde.\n “Det var förutbestämt att du skulle döda mig så, Hämnare.” Det verkar ändå som om Ödesgudinnan inte är nöjd. Eremiten vördade henne och hon vänder ryggen åt dig för det okänsliga dådet som hon visste att du skulle utföra. Du känner nästan hur din tur sviker dig, dra ifrån 2 från din Ödesmodifikation. Du kan inte låta bli att förbanna alltings meningslöshet när du går vidare in i staden. Folk ler när du går förbi, något som ingen har gjort i de andra städerna. De tycks ﬂyta förbi dig med det obekymrade lugnet hos dem som har godtagit att deras öde redan är bestämt.",
     choices: [
@@ -375,6 +405,9 @@ export const languagePages: ILanguagePages = {
       "Om du överger den och drar dig över sanddynerna"
     ]
   },
+  122: {
+    mainText: "Det är svårt att gå när du rör dig i utkanten av de grova kullarna vid foten av Visionernas berg och resan tar flera dagar längre tid än du hade väntat dig. Efter den längsta dagens slit som du hittills har tvingat dig igenom, faller mörkret. Månen är röd och det kommer ingen mer dag. Du är för sent ute. Det eviga mörkret har fallit och Kwon har fängslats i lnferno. Din INRE KRAFT försvinner och det finns ingenting du kan göra för att stoppa ondskan från att växa. Du har misslyckats.",
+  },
   125: {
     mainText: "Du glider genom natten mot stadsporten, men någon har sett dig. Larmet går vid barackerna när du närmar dig porten och facklor ﬂammar upp på porthusets torn och några kastas ned på gatan nedanför. Du hör det omisskännliga ljudet från ett armborst och svänger runt mot ljudet.",
     choices: [
@@ -393,6 +426,13 @@ export const languagePages: ILanguagePages = {
     mainText: "Stormästaren skakar på huvudet. ”Du har varken svarat sant eller vist. Du kan inte dölja din vilja att hämnas Naijishi, som älskade dig och lärde dig att älska Herren Kwon, från oss som har känt dig nästan hela ditt korta liv. Det är inte fel av dig att vilja hämnas Naijishi, men du måste vänta tålmodigt på att din tid ska komma och aldrig glömma, att tjäna Kwon är att hjälpa hela mänskligheten. Vad gäller tortyren, är det bara genom att misslyckas med ett uppdrag som en sann Skuggkrigare kan fångas och det ﬁnns alltid tid att bita av sig tungan och blöda till döds för att undvika risken att förråda hemligheter. Du behöver bara frukta att misslyckas med ett uppdrag. Du har misslyckats med det andliga provet och är ännu inte redo att bli en De Fyra Vindarnas Stormästare. Gå tillbaka till Tempelsalen och be Gorobei komma in till oss.” \nDu återvänder modfälld till huvudtemplet och det hörs ett svagt jämmer från byborna när du ber Gorobei att gå in i påklädningskammaren. Han lägger armen om dina axlar och säger, ”Nästa gång,” innan han går in bakom silkesförhänget. En timme senare kommer han tillbaka och du applåderar med de andra när han utnämns till Stormästare. ",
     choices: [
       "Gå vidare"
+    ]
+  },
+  133: {
+    mainText: "Bergssidan höjer sig över dig och du inser att det kommer att bli en farlig klättring.",
+    choices: [
+      "Om du vill fortsätta lägger du ditt liv i Ödesgudinnans händer",
+      "Om du hellre låter bli att ta risken och ger upp möjligheten att hitta Togawa, om han fortfarande lever"
     ]
   },
   134: {
@@ -537,6 +577,12 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  193: {
+    mainText: "Du fäster Kattkloma vid händema och klättrar försiktigt uppför bergssidan. Du undviker avsatser där sprickoma vamar dig för att klippan kan ge vika under dig. Till sist öppnar sig den släta klippsidan i en grottöppning.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   194: {
     mainText: "Du sätter dig vid hans bord och han ber om ett oxhuvud mjöd. Han ler mot dig med sänkta ögonlock när mjödet kommer, doppar två muggar i den bräddfulla hinken och ställer försiktigt en av dem framför dig. Ni höjer muggarna tillsammans och tömmer dem. Det hörs ett bravorop när ni ställer ned muggarna igen tillsammans. Den unge kaptenen doppar dem i hinken igen och ett nytt bravorop hälsar era ansträngningar.",
     choices: [
@@ -586,6 +632,13 @@ export const languagePages: ILanguagePages = {
       "Du kan följa efter Prästerna in i Frie Béatans tempel",
       "Du kan lämna Helgedomen och gå in genom Obsidianporten",
       "Du kan följa efter den gamle mannen som påstod sig vara ett Orakel"
+    ]
+  },
+  210: {
+    mainText: "På morgonen den tredje dagen utanför Mortavalon är du högt uppe i Lyckopasset. Luften är frisk och doftar av bergsljung. Berget Gwalo-drun höjer sig i en klippig topp framför dig. Du klättrar uppför den steniga sluttningen vid dess fot och halkar bakåt när småstenen glider ned, tills du når ett bälte med tallar. Vid trädlinjen blir bergssidan brant och farlig.",
+    choices: [
+      "Om du har färdigheten Klättra",
+      "Om du inte har den"
     ]
   },
   211: {
@@ -648,8 +701,8 @@ export const languagePages: ILanguagePages = {
   234: {
     mainText: "”Men vi har väntat på dig. Vimsig själv känner redan till dig, men inte den Ledes tjänare, det är inte deras öde att veta... ” Han tystnar, ”. ..ännu. ” \n”Vem är Vimsig?” frågar du. \n”Ödets Överstepräst, Fiendils härskare. Du vet inte mycket, främling. Här får du en gyllene välsignelse. Gå till Volontären. ” Han pekar nedför huvudgatan. ”Där får du höra något du får nytta av. Ja, vi visste allt att du skulle komma.” Han brister ut i ett rungande skratt. Eftersom du inte vill väcka mer uppmärksamhet skyndar du nedför huvudgatan, Drömmarens Promenad. Tjugofem meter nedåt gatan hänger Volontärens skylt, en ung krigare med böjt knä som mottar ett svärd från en man i gyllene kläder och som bär en leende guldmask.",
     choices: [
-      "Du kan hoppa upp i riggen och kasta en Shuriken på Människoätaren",
-      "Du kan anfalla Människoätaren när den kommer ombord och samtidigt plattar till en del av Aquamarins reling"
+      "Ska du följa den gamle eremitens råd och gå in",
+      "eller fortsätta nedför Drömmarens Promenad"
     ]
   },
   235: {
