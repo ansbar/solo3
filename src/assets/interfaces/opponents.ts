@@ -26,6 +26,7 @@ export interface IOpponentPage {
   playerDefense: number[]
   playerDamage?: string
   blockable?: boolean
+  missDamage?: number
   damage: string[] // 1T6+1
   defense: number[]
 }

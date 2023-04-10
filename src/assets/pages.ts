@@ -1,4 +1,4 @@
-import { EAttackType, EAbilities, EOpponents } from "./enums"
+import { EAbilities, EOpponents } from "./enums"
 import { IPages } from "../stores/pageInterfaces"
 
 export const pageData: IPages = {
@@ -797,7 +797,7 @@ export const pageData: IPages = {
         hp: 2
       },
     },
-    "image": true,
+    image: true,
     choices: [
       {
         goto: 357,
@@ -922,6 +922,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  242: {
+    choices: [
+      {
+        goto: 221
+      }
+    ]
+  },
   243: {
     choices: [
       {
@@ -974,6 +981,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  255: {
+    choices: [
+      {
+        goto: 260
+      },
+      {
+        goto: 81
+      }
+    ]
+  },
   256: {
     opponent: EOpponents.soldiers,
     choices: [
@@ -1017,7 +1034,7 @@ export const pageData: IPages = {
     ]
   },
   261: {
-    "image": true,
+    image: true,
     choices: [
       {
         goto: 243
@@ -1030,9 +1047,9 @@ export const pageData: IPages = {
     opponent: EOpponents.goblin,
     choices: [
       {
-        goto: 281
+        goto: 293
       }, {
-        goto: 267
+        goto: 281
       }
     ]
   },
@@ -1040,6 +1057,20 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 254
+      }
+    ]
+  },
+  272: {
+    sideEffects: {
+      items: {
+        "fireLizardEssence": true
+      }
+    },
+    choices: [
+      {
+        goto: 242
+      }, {
+        goto: 255
       }
     ]
   },
@@ -1093,6 +1124,13 @@ export const pageData: IPages = {
   },
   285: {},
   287: {},
+  290: {
+    choices: [
+      {
+        goto: 275,
+      }
+    ]
+  },
   293: {
     opponent: EOpponents.goblin,
     choices: [

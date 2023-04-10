@@ -34,7 +34,8 @@ export const languageGeneral: ILanguageGeneral = {
     shuriken: "kaststjärnor",
     gold: "guldstycken",
     glove: "magisk slaghandske",
-    magicShuriken: "förtrollad kaststjärna"
+    magicShuriken: "förtrollad kaststjärna",
+    fireLizardEssence: "eldödle-essens"
   },
   defense: {
     punch: "Försvar mot slag",
@@ -666,6 +667,12 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om du inte lyckas kasta honom angrips du av de av dina motståndare som är i livet. Du har 7 i försvar mot dem om tre lever, 8 om två lever och 9 om bara en fortfarande är vid liv. Var och en gör ett individuellt anfall mot dig och du kan bara blockera ett av dem. Varje anfall gör 1T6+1 i skada om de träffar"
   },
+  242: {
+    mainText: "Han berättar att han är en munk som dyrkar Kwon och bjuder dig att följa med till hans kloster i Försoningens Trädgårdar. Templet ligger i en rosenträdgård och du är lycklig över att ha hittat en säker tillflyktsort där du kan meditera och söka hjälp. Du faller på knä i bön i det kala templet och bredvid sjunger munken psalmen till Kwon Förlösaren.",
+    choices: [
+      "Gå vidare",
+    ]
+  },
   243: {
     mainText: "När du går ut på slätten går mannen i blått och guld ut på issjön. Lejonen rusar dreglande fram mot dig. De är stora och starka. Du kan inte låta bli att beundra deras styrka och snabbhet.",
     choices: [
@@ -705,6 +712,13 @@ export const languagePages: ILanguagePages = {
       "Om du går norrut från vägen, ut i vildmarken"
     ]
   },
+  255: {
+    mainText: "Mannen vänder sig bort som om han hade tagit miste, och du tar dig ut ur massan av kroppar så fort du kan. Du har blivit välkänd i Mortavalon. Alla talar om dina bedrifter på arenan och du bestämmer dig för att det är klokt att lämna staden och dess intresse för ond, bråd död. Du går ut genom den norra portalen, förklädd till lantarbetare.\nVakterna vid porten frågar dig vart du ska, \"Det är spelens dag, en helgdag\", men du ignorerar dem och de låter dig gå.",
+    choices: [
+      "Om du beger dig mot nordost över vildmarken till staden Fiendil",
+      "Om du beger dig norrut mot Stormjättevägen längs Visionernas berg"
+    ]
+  },
   256: {
     mainText: "Du går fram på höger fot och lyfter sedan vänster, svänger runt åt höger och sparkar ned vänster häl i luften mot den ena angriparens huvud. Du får välja vem du anfaller.",
     choices: [
@@ -738,16 +752,23 @@ export const languagePages: ILanguagePages = {
   267: {
     mainText: "Vätten försöker skyffla upp dig på änden av sin obehagligt hullingförsedda treudd, men du dansar åt sidan och försöker gripa tag i skaftet på den så att du kan slänga hans tunga kropp över höften.",
     choices: [
-      "Du kan försöka använda Tigertassens slag,",
-      "eller Virvelkastet",
-      "eller Tigersprångets spark igen"
+      "Du kan slå",
+      "eller sparka",
     ],
-    stillAlive: "Du måste försöka hoppa över treuddens svepande skaft. Du har 8 i Försvar mot det väldiga slaget. "
+    successfulThrow: "Om du lyckas kasta honom ser du honom rulla runt och komma upp på fötter, men du anfaller medan han reser sig.",
+    unsuccessfulThrow: "Om du misslyckas med att kasta honom kör han in sin armbåge 1 dina revben med benknäckande styrka (du förlorar 2 KROPPSPOANG) Om du fortfarande lever försöker han spetsa dig på treudden. Du har 7 i Försvar mot hans anfall.",
   },
   268: {
     mainText: "Dina tre angripare ligger runt dig, döda eller medvetslösa. En respektfylld tystnad sänker sig över krogen och ingen vill möta din blick. Du inser att ryktet kommer att spridas att det finns en munk i Domedag som inte slåss som Röda Syrsans munkar. Du beslutar dig för att lämna krogen och staden så fort som möjligt. En ung soldat följer efter dig när du går, men du smiter från honom bland de vindlande bakgatorna och tar dig snabbt fram till stadsporten. Du kommer säkert igenom innan order ges om att stoppa alla främlingar. Väl i säkerhet borta från stadsmuren, klättrar du upp i ett träd där du kan sova dold.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  272: {
+    mainText: "Folkmassan jublar när du kastar ned Vättens treudd i vallgraven, och själva slottet börjar sjunka ned i marken. Du söker igenom den svartmuskiga bestens avskyvärda kropp och hittar en ﬂaska med texten \"Magisk dryck\". Det är Vättens pris för hans seger på arenan, hans mest älskade ägodel. Du tar av korken och känner den omisskännliga lukten av Eldödle-essens, inte alls en magisk dryck. Vätten hade blivit lurad, men du kan få användning för den och beslutar dig för att behålla den. Slottet försvinner utom synhåll för Mortavalons hänryckta befolkning. Du har tillfälligt stillat deras blodtörst och en gång för dig till gatan utanför. En folkmassa samlas runt dig. En aristokrats butler erbjuder dig arbete som livvakt, medan det regnar rosor över er. Du försöker komma undan den oönskade uppmärksamheten, men en man drar i din järnärm. Du vänder dig om, redo att använda ett Kobraslag, men han säger, \"Kommer du från de Stilla Drömmarnas Ö?\"",
+    choices: [
+      "Om du medger att du gör det",
+      "Om du säger att du aldrig har hört talas om en sådan ö"
     ]
   },
   273: {
@@ -777,7 +798,8 @@ export const languagePages: ILanguagePages = {
       "Du kan försöka använda Tigertassens slag,",
       "eller Virvelkastet",
       "eller Tigersprångets spark igen"
-    ]
+    ],
+    stillAlive: "Om Vätten fortfarande lever stöter han med treudden mot din mage. Du har 8 i Försvar mot stöten när du hoppar åt sidan i det trånga tornet.",
   },
   283: {
     mainText: "Vägen slingrar sig ned från bergen och du ser staden Mortavalon som ligger i en skål av gröna beteshagar och majsfält. lnfarten till staden är genom en stor triumfbåge tillägnad en seger för Imperiets jägare som följer Imperiets gud, Moraine, mot Ödesgudinnans soldater. Det är kväll och du sluter dig till en grupp bönder som har arbetat på fälten. Du förklarar att du är en främling och frågar dem om deras stad. Det verkar som om det största templet är tillägnat Dödsguden, men Prästerna lägger sig sällan i det dagliga livet så länge ingen bråkar om de enstaka försvinnandena. De ägnar sig åt barnaoffer. l morgon är det helgdag, för det ska bli strid på arenan. Det verkar som om de letar efter en kämpe som kan vinna en otrolig förmögenhet.",
@@ -791,6 +813,12 @@ export const languagePages: ILanguagePages = {
   },
   287: {
     mainText: "Du faller baklänges från Spindelvävshallen, ned på stenarna på går- den nedanför och bryter nacken. Du har misslyckats."
+  },
+  290: {
+    mainText: "Bonden som har lett dig stannar utanför en ståtlig vit byggnad och pekar in. Du tackar honom och går in på den svala byggnadens mannorgolv. Du stegar självsäkert fram mot en krigare klädd i en blå och gyllene toga. Plötsligt öppnar sig golvet under dig och du faller ned på golvet i en mörk tunnel nedanför. Mannen i toga ropar ned efter dig, \"Skynda dig till arenan, min vän. Om mina män får tag i dig först dödar de dig.\" Du ser ingen annan väg ut än tunneln framför dig.",
+    choices: [
+      "Gå vidare",
+    ]
   },
   293: {
     mainText: "När Vätten svänger runt treuddens skaft mot din sida, ger du honom ett slag med sidan av handen mot hans vårtiga axel.",

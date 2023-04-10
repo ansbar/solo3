@@ -7,6 +7,7 @@
   import { useOpponentStore } from "../../stores/opponentStore"
   import { useOpponents } from "../../utils/opponents"
   import { EAttackType, EBattleStates } from "../../assets/enums"
+  import { useGeneric } from "../../utils/generic"
 
   const textStore = useTextStore()
   const mainStore = useMainStore()
@@ -14,6 +15,7 @@
   const opponentStore = useOpponentStore()
   const { opponentsAlive } = useOpponents()
   const dice = useDice()
+  const generic = useGeneric()
 
   const isHit = ref(false)
   const attackChance = ref("2T6")
@@ -61,29 +63,32 @@
   // Attack opponent
   const attack = () => {      
     const attackModifier = calculateAttackModifier()          
-    const attackRoll = dice.doRoll(attackChance.value, attackModifier)
+    const attackRoll = dice.doRoll(attackChance.value, attackModifier)      
+    isHit.value = (attackRoll > opponent.value.defense) ? true : false    
+
     const hitText = computed(() => {
       if (opponentStore.playerAttackType === EAttackType.throw)       
         return isHit.value ? "Du lyckas med att kasta" : "Du misslyckas med att kasta"
       else
         return isHit.value ? "Du träffar" : "Du missar"
     })
-         
-    isHit.value = (attackRoll > opponent.value.defense) ? true : false    
             
     rollText.value = `Du slår ${attackChance.value} och resultatet blir ${attackRoll}.`
     rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
     rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
-
-    if(isHit.value){
-      // A successful throw adds 2 to damage on next attack
-      if(opponentStore.playerAttackType === EAttackType.throw){
+    console.log(opponentStore.missDamage, !opponentStore.missDamage) 
+    if(isHit.value){      
+      if(opponentStore.playerAttackType !== EAttackType.throw){
+        doDamage()        
+      }else{
+        // A successful throw instead adds 2 to damage on next attack
         mainStore.setThrownOpponent(mainStore.currentOpponent)
         playerStore.setTemporaryDamageModifier(2)
-      }else{
-        doDamage()
       }
-    }                
+    } else if (opponentStore.missDamage) {
+      // In the case a static damage is applied when player fails with attack (like page 267)
+      playerStore.setPlayerAttributeHp(opponentStore.missDamage)
+    }     
   }
 
   // Damage on opponent
@@ -135,29 +140,42 @@
       v-html="rollText"
     />
 
+
     <!-- Damage texts -->
     <div
       class="text"
       v-html="damageText"
-    />            
+    />    
+
       
     <!-- Miss or not Throw -->
     <template v-if="!isHit || opponentStore.playerAttackType != 'throw'">
+      <!-- If opponent is still alive -->
       <div
         v-if="opponent.hp > 0"
         class="text"
       >
-        {{ textStore.page.stillAlive }}
+        <!-- Unsuccessful throw text -->
+        <template v-if="opponentStore.playerAttackType === 'throw'">
+          {{ textStore.page.unsuccessfulThrow }}
+        </template>
+
+        <!-- If opponent is still alive text -->
+        <template v-else>
+          {{ textStore.page.stillAlive }}
+        </template>       
       </div>
-      <!-- If special case when player misses (skip defend phase and go to special page) -->
+
+      <!-- If special skip defend phase at miss (go to special page) -->
       <a
         v-if="!isHit && opponentStore.miss"
         href="#"
         @click="handleSpecialMiss()"
       >
         {{ textStore.page.miss }}
-      </a>    
-      <!-- If special case when player hits (skip defend phase and go to special page) -->
+      </a>  
+
+      <!-- If special skip defend phase at hit (go to special page) -->
       <template v-else-if="isHit && opponentStore.miss">
         <button    
           v-if="!opponentsAlive"   
@@ -173,15 +191,27 @@
         >
           Gå vidare
         </button>
-      </template>      
-      <!-- If playes is alive and attack is not instant -->
-      <button
-        v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'"
-        class="cta"
-        @click="commitBattleState('defend')"
-      >
-        Försvara dig
-      </button>
+      </template>    
+
+      <!-- If opponent is alive and attack is not instant -->
+      <template v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'">
+        <button
+          v-if="playerStore.attributes.hp > 0"
+          class="cta"
+          @click="commitBattleState('defend')"
+        >
+          Försvara dig
+        </button>
+
+        <a 
+          v-else
+          href="#"
+          @click="generic.doStartOver()"
+        >
+          Du är död. Börja om?
+        </a>     
+      </template>
+
       <!-- If instant attack -->
       <button
         v-else-if="opponentStore.playerAttackType === 'instant'"
@@ -190,7 +220,8 @@
       >
         Gå vidare
       </button>
-      <!-- If player is dead -->
+
+      <!-- If opponent is dead -->
       <template v-else-if="opponent.hp === 0">
         <div class="text">
           <b>{{ opponent.name }} är besegrad</b>
@@ -212,8 +243,17 @@
         </button>
       </template>
     </template>
+
+
     <!-- Throw -->
     <div v-else>
+      <div
+        v-if="textStore.page.successfulThrow"
+        class="text"
+      >
+        {{ textStore.page.successfulThrow }}
+      </div>
+
       <button
         class="cta"
         @click="commitBattleState('pending')"

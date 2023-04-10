@@ -6,12 +6,14 @@
   import { useOpponentStore } from "../../stores/opponentStore"
   import { useOpponents } from "../../utils/opponents"
   import { EBattleStates } from "../../assets/enums"
+  import { useGeneric } from "../../utils/generic"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const { playerDefense } = useOpponents()
   const dice = useDice()
+  const generic = useGeneric()
 
   const isHit = ref(false)
   const rollText = ref("")
@@ -111,11 +113,6 @@
     mainStore.currentPageId = opponentStore.loss as number
     mainStore.battlestate = EBattleStates.none
   }
-  // If player loses a battle and is dead
-  const doStartOver = () => {
-    mainStore.currentPageId = 0
-    mainStore.battlestate = EBattleStates.none
-  }
 </script>
 
 
@@ -179,7 +176,7 @@
       <a 
         v-else
         href="#"
-        @click="doStartOver"
+        @click="generic.doStartOver()"
       >
         Du är död. Börja om?
       </a>     

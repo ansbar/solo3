@@ -33,6 +33,7 @@ export interface IPageSidesideEffects {
     magicShuriken?: boolean
     shuriken?: number  
     gold?: number
+    fireLizardEssence?: boolean
   },
   attributes?: {
     hp?: number

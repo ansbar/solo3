@@ -11,6 +11,7 @@ interface StoreOpponent {
   playerAttackValue?: number,
   playerDamage?: string
   blockable?: boolean
+  missDamage?: number
   win: number,
   loss?: number,
   miss?: number
@@ -34,6 +35,7 @@ export const useOpponentStore = defineStore("opponent", {
     playerAttackValue: undefined,
     playerDamage: undefined,
     blockable: undefined,
+    missDamage: undefined,
     opponents: [],
     win: 0,
     loss: 0,
@@ -69,6 +71,7 @@ export const useOpponentStore = defineStore("opponent", {
         playerAttackType: payload.playerAttackType,
         playerAttackValue: payload.playerAttackValue,
         playerDamage: payload.playerDamage,
+        missDamage: payload.missDamage,
         blockable: payload.blockable,
       })
 

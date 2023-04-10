@@ -8,6 +8,8 @@ export interface ILanguagePage {
   mainText: string
   choices?: string[]
   stillAlive?: string
+  successfulThrow?: string
+  unsuccessfulThrow?: string
   miss?: string
   directWin?: string
 }
@@ -47,6 +49,7 @@ export interface ILanguageItems {
   opalring: string
   glove: string
   magicShuriken: string
+  fireLizardEssence: string
 }
 
 export interface ILanguageModifiers {

@@ -12,7 +12,8 @@ export const usePlayerStore = defineStore("player", {
       opalring: false,
       healingPotion: false,
       glove: false,
-      magicShuriken: false
+      magicShuriken: false,
+      fireLizardEssence: false
     },
     modifiers: {
       punch: 0,
@@ -21,7 +22,7 @@ export const usePlayerStore = defineStore("player", {
       fate: 0,
     },
     attributes: {
-      hp: 20,
+      hp: 2,
       hpMax: 20,
       innerStrength: 5
     },

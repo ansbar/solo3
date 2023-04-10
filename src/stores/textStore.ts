@@ -15,6 +15,8 @@ export const useTextStore = defineStore("texts", {
       mainText: "",
       choices: [""],
       stillAlive: "",
+      successfulThrow: "",
+      unsuccessfulThrow: "",
       miss: "",
       directWin: ""
     },
@@ -35,6 +37,9 @@ export const useTextStore = defineStore("texts", {
       defense: "",
       piratecaptain: "",
       soldiers: "",
+      cobraman: "",
+      snowGiant: "",
+      goblin: "",
     },
     help: {
       block: "",
@@ -47,6 +52,7 @@ export const useTextStore = defineStore("texts", {
       gold: "",
       glove: "",
       magicShuriken: "",
+      fireLizardEssence: "",
     },
     defense: {
       punch: "",

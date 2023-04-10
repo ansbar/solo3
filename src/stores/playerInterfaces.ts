@@ -7,6 +7,7 @@ interface Player_items {
   gold: number
   glove: boolean
   magicShuriken: boolean
+  fireLizardEssence: boolean
 }
 
 interface Player_modifiers {
