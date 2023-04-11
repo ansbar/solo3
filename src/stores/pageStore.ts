@@ -1,6 +1,7 @@
 import { defineStore } from "pinia"
 import { IPage } from "./pageInterfaces"
 import { usePlayerStore } from "./playerStore"
+import { EAddedAbilities } from "../assets/enums"
 
 export const usePageStore = defineStore("page", {
   state: (): IPage => (
@@ -54,6 +55,16 @@ export const usePageStore = defineStore("page", {
         const attributes = this.sideEffects.attributes        
         if (attributes.hp) playerStore.setPlayerAttributeHp(attributes.hp)
         if (attributes.innerStrength) playerStore.setAttributeInnerStrength(attributes.innerStrength)
+      }   
+
+      if (this.sideEffects?.abilities) {
+        const abilities = this.sideEffects.abilities        
+        if (abilities.kwonsFlail) {
+          playerStore.addPlayerAbility(EAddedAbilities.kwonsFlail)
+        } else {
+          const index = playerStore.abilities.indexOf(EAddedAbilities.kwonsFlail)
+          if (index != -1) playerStore.removePlayerAbility(index)
+        }
       }      
     }
   }

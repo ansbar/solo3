@@ -267,6 +267,9 @@ export const pageData: IPages = {
     sideEffects: {
       modifiers: {
         kick: 1
+      },
+      abilities: {
+        kwonsFlail: true
       }
     },
     choices: [

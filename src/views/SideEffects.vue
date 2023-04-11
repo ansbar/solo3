@@ -74,6 +74,21 @@
           </li>
         </ul>
       </div> 
+
+      <div
+        v-if="pageStore.sideEffects?.abilities"
+        class="text"
+      >
+        Följande färdigheter har justerats:<br>
+        <ul>
+          <li
+            v-for="(value, key) in pageStore.sideEffects?.abilities"
+            :key="key"
+          >
+            {{ textStore.abilities[key] }} {{ value ? "har lagts till" : "har tagits bort" }}
+          </li>
+        </ul>
+      </div>
     </div>
   </section>
 </template>

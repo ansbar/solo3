@@ -1,4 +1,4 @@
-import { EAbilities } from "../assets/enums"
+import { EAbilities, EAddedAbilities } from "../assets/enums"
 
 interface Player_items {
   shuriken: number
@@ -30,7 +30,7 @@ interface Player_temporary {
 }
 
 export interface Player {
-  abilities: EAbilities[]
+  abilities: Array<EAbilities | EAddedAbilities>
   items: Player_items
   modifiers: Player_modifiers
   attributes: Player_attributes

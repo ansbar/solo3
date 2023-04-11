@@ -10,6 +10,10 @@ export enum EAbilities {
   climb = "climb"
 }
 
+export enum EAddedAbilities {
+  kwonsFlail = "kwonsFlail"
+}
+
 export enum EOpponents {
   none = "none",
   gorobei = "gorobei",

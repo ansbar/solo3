@@ -43,6 +43,9 @@ export interface IPageSidesideEffects {
     attack?: number
     damage?: number
   }
+  abilities?: {
+    kwonsFlail?: boolean
+  }
 }
 
 export interface IPageChoiceSpec {

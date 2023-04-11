@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { EAbilities } from "../assets/enums"
+import { EAbilities, EAddedAbilities } from "../assets/enums"
 import { type Player } from "./playerInterfaces"
 import { useMainStore } from "./mainStore"
 
@@ -34,7 +34,7 @@ export const usePlayerStore = defineStore("player", {
   }),
   actions: {
     // Abilities
-    addPlayerAbility (payload: EAbilities) {
+    addPlayerAbility (payload: EAbilities | EAddedAbilities) {
       this.abilities.push(payload)
     },
     removePlayerAbility (payload: number) {

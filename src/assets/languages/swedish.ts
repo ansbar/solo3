@@ -27,7 +27,8 @@ export const languageGeneral: ILanguageGeneral = {
     escapeArtist: "Utbrytningskonst",
     poisonArrows: "Giftpilar",
     lockPicker: "Dyrka upp lås, upptäcka och oskadligöra fällor",
-    climb: "Klättra"
+    climb: "Klättra",
+    kwonsFlail: "Kwons slaga",
   },
   items: {
     healingPotion: "helande dryck (10 kroppspoäng)",
