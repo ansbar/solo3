@@ -37,7 +37,8 @@ export const languageGeneral: ILanguageGeneral = {
     gold: "guldstycken",
     glove: "magisk slaghandske",
     magicShuriken: "förtrollad kaststjärna",
-    fireLizardEssence: "eldödle-essens"
+    fireLizardEssence: "eldödle-essens",
+    herbs: "örter"
   },
   defense: {
     punch: "Försvar mot slag",
@@ -83,6 +84,12 @@ export const languagePages: ILanguagePages = {
       "Om du struntar i nyhetsutroparen och går vidare genom staden"
     ]
   },
+  10: {
+    mainText: "Han tittar på dig och nickar, uppenbarligen nöjd. Du sover den natten i den egendomlige munkens grotta. Han har få ägodelar och säger att han inte har sett en mänsklig varelse på åratal, förutom i sömnen. Det verkar som om han lever av luft, för han har inget annat att erbjuda dig än kallt och uppfriskande regnvatten från bergen. På morgonen påstår han att han på något sätt har sett Yaemon, Flammans Stormästare, färdas norrut från staden Domedag tillsammans med Honoric, Vasch-Ros tjänare, Marskalk för Domsvärdslegionen. \"Och de färdas för att möta en tredje,\" säger han, \"Manse Dödsmagikern, som vördar Nemesis. En mäktig och ond magiker. Detta oheliga förbund måste stoppas. Av alla onda gudar har bara den Ledes, Vasch-Ros, och Nemesis anhängare disciplin nog att sluta förbund. Nemesis är den främsta av alla onda gudar. Aldrig förr har tre så mäktiga och onda män litat på varandra.\"\n\"Det är planeternas förening, \" svarar du. Togawa plockar fram en väska med örter från en spricka i berget. \"De här har helande förmågor\" säger han. Du tar dem och kan använda dem när som helst när du inte blir anfallen. Örterna helar upp till 8 KROPPSPOÄNG, men bara en gång. Du tackar honom och ska just fråga om han vill göra dig sällskap när han lägger sig ned på grottgolvet och somnar. Du känner att du inte kan få mer hjälp och börjar klättra nedför berget Gwalodrun till passet nedanför. En dag senare når du högländerna vid Lyckopasset.",
+    choices: [
+      "Gå vidare",
+    ]
+  },
   13: {
     mainText: "Du försöker hoppa upp och låsa benen runt Kobramannens hals när han slår, för att vrida till och kasta honom till marken, men hans snabbhet överraskar dig ändå.",
     choices: [
@@ -115,6 +122,12 @@ export const languagePages: ILanguagePages = {
       "Sitta kvar"
     ]
   },
+  20: {
+    mainText: "\"Se dig omkring\", säger Togawa, \"är det här mitt hem?\" Du stirrar förvirrat på honom. \"Nej, \" fortsätter han, \"mitt hem är min kropp och ditt hem är din kropp.\"",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   25: {
     mainText: "Kobramannen slår lika snabbt som du när du vrider dig åt sidan och sparkar med foten mot hans bröstkorg.",
     choices: [
@@ -135,6 +148,13 @@ export const languagePages: ILanguagePages = {
     mainText: "Flickan tittar hånfullt på dig, som om du på något sätt var ovärdig. Den gamle mannen skriker åt dig, ”Må Ödet aldrig mer le mot dig.” Han har förbannat dig. Dra ett från din Ödesmodifikation. Du lämnar snabbt kapellet och beslutar dig för att gå in genom Obsidianporten till själva staden.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  32: {
+    mainText: "Togawa nickar. \"Vilka är dina vapen?\" frågar han\nOm du svarar:",
+    choices: [
+      "Jag behöver inga vapen.",
+      "Mina vapen är allting som existerar."
     ]
   },
   34: {
@@ -175,6 +195,12 @@ export const languagePages: ILanguagePages = {
     ],
     miss: "Du misslyckas med att hugga till mot hans svajande huvud"
   },
+  43: {
+    mainText: "\"Se dig omkring,\" säger Togawa, \"är detta mitt hem?\" Du stirrar förvirrat på honom. \"Nej, \" fortsätter han, \"mitt hem är min kropp och ditt hem är din kropp.\"" ,
+    choices: [
+      "Gå vidare"
+    ]
+  },
   45: {
     mainText: "Du duckar undan för Kaptenens svingande morgonstjärna, sedan hoppar du åt sidan när han försöker överraska dig med att slå dig i ansiktet med de tunga guldringar som han har på vänster hand. lnnan du kan angripa honom igen sänks ett kedjenät ned över dig och du faller kämpande ned på däck. Två sjörövare såg dig angripa deras kapten. Eftersom de var hans favoriter sprang de fram för att hjälpa honom genom att slänga ned ett nät från trappan. De binder dig och drar tillbaka dig till Aquamarin där dina Skuggkrigarredskap tas ifrån dig och du binds fast vid en åra.",
     choices: [
@@ -190,6 +216,12 @@ export const languagePages: ILanguagePages = {
   },
   50: {
     mainText: "Flickan tar din hand i hennes och leder dig till marmorbänken. Den gamle mannen förklarar att han måste spilla lite av ditt blod i silverkalken för att kunna läsa din framtid. Han skär i en ven i din arm och blodet rinner ned i kannan. Du tittar förskräckt på honom när han låter det rinna tills du har förlorat en kvarts liter och det börjar pirra i armen. Dra bort 2 KROPPSPOÄNG. Sedan sluter han såret med en besvärjelse. Flickan häller en grön, magisk vätska i kannan. Du känner dig svag och lyder honom när han ber dig titta i spegeln som hänger på väggen ovanför dig. Han börjar sjunga och tar fram ett kristallprisma som han håller över kannan. Blodet och vätskan bubblar och Oraklets mässande blir högre. En bild av två män som lämnar en stad till häst formas i spegeln. Den större av de två är klädd i en svart ringbrynja och bär en svart sköld prydd med ett silversvärd hängande i en silvertråd, Domsvärdet. Hans ansikte är arrogant och grymt. Den andre är klädd som en krigarmunk, i rött med ett smalt, svart bälte. De rider tysta mot dig och munkens genomborrande, svarta ögon blickar in i dina utan att blinka. Oraklet talar om för dig att visionen visar Yaemon, Flammans Stormästare, som rider med Honoric, Marskalk av Domsvärdslegionen, norrut från Mortavalon. Han berättar för dig att de färdas mot Förändringens pelare för att framsäga ett ord var som ska fängsla en gud och gudinna i Underjorden. Honoric vill styra hela Människoländerna. Du faller i trans och när du vaknar är du utanför Domedag, gående på vägen mot Mortavalon. Du undrar vad Oraklet kan ha gjort medan du var i trans. Har han berättat om din vision för någon? Visionen antydde i alla fall att Honoric och Yaemon är långt framför dig. Du inser att du måste färdas till Mortavalon för att ta reda på var Yaemon och Honoric är.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  53: {
+    mainText: "\"Se dig omkring,\" säger Togawa, \"är detta mitt hem?\" Du stirrar förvirrat på honom. \"Nej, \" fortsätter han, \"mitt hem är min kropp och ditt hem är din kropp.\"" ,
     choices: [
       "Gå vidare"
     ]
@@ -901,6 +933,12 @@ export const languagePages: ILanguagePages = {
   },
   303: {
     mainText: "Det är gott och väl efter midnatt när du kommer ut från härbärget i den svala nattluften, klädd i din svarta dräkt och huva. När du närmar dig klostret kan du se att det är lätt att klättra upp på taket till gången som förbinder refektoriet med bönerummet, eftersom det står vintunnor uppställda mot väggen. Du tar dig upp på taket och sänker dig ned på en mycket liten gårdsplan. Du går runt ett hörn på gårdsplanen och kommer in i en återvändsgränd. Den enda vägen ut som du kan se är en smal gång som leder åt vänster. Du tar dig försiktigt nedför den, men sliter av en osynlig tråd, tunn som spindelväv, och en klocka börjar ringa i refektoriet. Du springer nedför gången som svänger till vänster igen och kommer till en ny återvändsgränd utan flyktväg. Gångarna är byggda för att leda in inkräktare i återvändsgränder de inte kan fly från, och det är där du befinner dig. Flera munkar dyker upp bakom dig och du försöker förtvivlat klättra upp på väggen, men den är täckt med ett klibbigt nät som du fastnar i. Du är hjälplös och kan bara döda dig själv innan de får tag i dig genom att bita av dig tungan och förblöda. Ditt äventyr slutar här."
+  },
+  304: {
+    mainText: "Togawa nickar igen och ställer en tredje fråga, \"Vilka är dina ögon? \" \"Mina ögon är Solen och Månen,\" svarar du, reciterande orden ur den hemliga Skuggkrigarnas Stormästares Litania. \"Jag är Skuggkrigare. Jag följer Tigerns väg. \" Togawa bugar sig för dig, \"En De Fyra Vindarnas Stormästare, \" säger han, \"jag måste göra mitt bästa för att hjälpa dig\".\nDu sover på grottans kalla golv, men i dina drömmar kommer Togawa fram till dig, hans kropp silvrig och eterisk, och sträcker fram handen mot dig. Du tar den och han lyfter dig ut ur din kropp. När du tittar ned kan du se dig själv sova i ljusskenet. Ni är snart långt från grottan, bortsvepta av en eterisk vind. Du håller hårt fast i honom i vetskap om att utan Togawas ledning skulle du driva hjälplöst. Skuggkrigarens färdigheter kan inte hjälpa dig här. Munken pekar framåt mot ett glimmande portvalv bortom vilket en silverstig sträcker sig upp bland molnen. Keruber ﬂockas runt pelarna och en Skyddsängel, vit och tadelfri, står mellan dem.\n\"Det här är Porten till De sju himlarna,\" säger Togawa. \"Vi kan inte gå in ännu.\" När han talar tar en skepnad form på silvervägen. Den glider förbi Skyddsängeln och när den närmar sig ser du att det är en perfekt tiger, men den har vit päls och blå ögon.\n\"Andetigern är en av Kwons tjänare,\" säger Togawa. \"Hon ska hjälpa oss.\" När tigrinnan ser på dig överför hon en del av sin kunskap. Hon har följt efter Yaemon på andeplanet, utan att han har märkt det. Yaemon och Honoric, marskalk över Domsvärdslegionen som dyrkar guden Vasch-Ro, färdas mot den fjärran staden Druath Glennan vid kanten av Snövidderna. De ska möta en tredje man där, Manse Dödsmagikern, en mäktig och ond magiker som dyrkar Nemesis, Ondskans högste princip. Tillsammans planerar de att färdas till Förändringens pelare och var och en av dem känner till ett hemligt ord som kan binda en gud eller gudinna i lnferno. Du inser att du måste färdas till Druath Glennan så snabbt som möjligt. Andetigern välsignar dig och Ödesgudinnan kommer att le mot dig. Din Ödesmodifikation är nu +1. Du försöker tala till Andetigern, men orden kommer inte fram och Togawa drar iväg dig från Porten till De sju himlarna. När du vaknar på morgonen säger han, \"Det oheliga förbundet måste stoppas. Av alla onda gudar är det bara den Ledes, Vasch-Ros och Nemesis anhängare som har disciplin att ena sig. Nemesis är den främsta av de onda gudarna. Aldrig förr har tre så mäktiga och onda män litat på varandra. \" Han tar fram en väska med örter ur en spricka i berget. \"De här har helande krafter,\" säger han. Du tar dem och kan använda dem när som helst när du inte är i strid för att få tillbaka upp till 8 KROPPSPOÄNG. Du tackar honom och ska just fråga honom om han vill göra dig sällskap, när han lägger sig ned på grottgolvet och somnar. Du känner att du inte kan få mer hjälp och börjar klättringen nedför berget Gwalodrun till passet nedanför. En dag senare kommer du in bland kullarna i Lyckopasset.",
+    choices: [
+      "Gå vidare"
+    ]
   },
   307: {
     mainText: "Du går in på krogen Svarta svärdet. Den har ett långt utskänkningsrum med en flammande eld, till och med vid skördetiden i månaden Allmoderns prakt. Därinne sitter ungefär fyrtio män och dricker, de ﬂesta soldater. lnte en enda sjöman syns till, trots att du fortfarande är nära hamnen. Soldaterna har tagit med sina vapen in på krogen, men många har lossat på eller tagit av sig delar av rustningen i den tryckande hettan. Stanken av gammal svett är överväldigande. En man som måste väga 130 kg eller mer spatserar upp och ned utefter den långa baren, slänger upp mjödstop på disken och plockar på sig silver. Du köper ett stop och lyssnar till pratet. De ropar från bord till bord om fälttåget som de ska utkämpa mot folket i Föraningens tom. Vid ett bord sitter en särdeles högljudd man på tjugofem år eller så. Han vill ha mjöd och två av soldaterna som är med honom tar hans mugg och slåss om äran att få köpa honom ett stop. Han ignorerar det, lägger märke till dig och utmanar dig på mjödhävning. ",

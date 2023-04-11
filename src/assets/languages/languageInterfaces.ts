@@ -51,6 +51,7 @@ export interface ILanguageItems {
   glove: string
   magicShuriken: string
   fireLizardEssence: string
+  herbs: string
 }
 
 export interface ILanguageModifiers {

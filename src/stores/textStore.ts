@@ -54,6 +54,7 @@ export const useTextStore = defineStore("texts", {
       glove: "",
       magicShuriken: "",
       fireLizardEssence: "",
+      herbs: "",
     },
     defense: {
       punch: "",

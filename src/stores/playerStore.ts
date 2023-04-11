@@ -13,7 +13,8 @@ export const usePlayerStore = defineStore("player", {
       healingPotion: false,
       glove: false,
       magicShuriken: false,
-      fireLizardEssence: false
+      fireLizardEssence: false,
+      herbs: false
     },
     modifiers: {
       punch: 0,
@@ -46,6 +47,9 @@ export const usePlayerStore = defineStore("player", {
     },
     togglePlayerItemMagicShuriken (payload: boolean) {
       this.items.magicShuriken = payload
+    },
+    togglePlayerItemHerbs (payload: boolean) {
+      this.items.herbs = payload
     },
     setPlayerItemGold (payload: number) {
       this.items.gold += payload

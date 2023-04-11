@@ -49,6 +49,7 @@ export const usePageStore = defineStore("page", {
         if (items.magicShuriken) playerStore.togglePlayerItemMagicShuriken(items.magicShuriken)
         if (items.gold) playerStore.setPlayerItemGold(items.gold)
         if (items.shuriken) playerStore.setPlayerItemShuriken(items.shuriken)
+        if (items.herbs) playerStore.togglePlayerItemHerbs(items.herbs)
       }      
       
       if (this.sideEffects?.attributes) {
