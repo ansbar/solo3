@@ -12,7 +12,9 @@ export const languageGeneral: ILanguageGeneral = {
     goblin: "Vätten",
     cobraman: "Kobramannen",
     snowGiant: "Snöjätten",
-    giant: "Den tvåhövdade jätten"
+    giant: "Den tvåhövdade jätten",
+    guard: "Vakten",
+    yaemon: "Yaemon"
   },
   help: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -157,9 +159,9 @@ export const languagePages: ILanguagePages = {
     ]
   },
   15: {
-    mainText: "",
+    mainText: "Du säger farväl till soldaten och går raskt bort från slottet.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   16: {
@@ -179,9 +181,10 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Gorobei angriper dig. Ditt försvar mot Gorobeis Kobraslag är 7."
   },
   18: {
-    mainText: "",
+    mainText: "Han rosslar svagt när ståltråden skär av hans luftstrupe och du sänker försiktigt ned kroppen på golvet innan du ordnar änterhaken och glider ned på gräset på Inre Borggården som omger Stora Kärntornet.",
     choices: [
-      ""
+      "Om du klättrar upp på Kämtornets tak",
+      "Om du klättar uppför Kärntomet till den första fönsterraden och tar dig in där"
     ]
   },
   19: {
@@ -198,27 +201,31 @@ export const languagePages: ILanguagePages = {
     ]
   },
   21: {
-    mainText: "",
+    mainText: "Prästerna har slagit läger bland kullarna som omger Mortavalon. I närheten av en grottöppning under ett klipputsprång. Sedan de har ätit vid en liten eld går två av dem bort till platsen där du ligger. l stället för att ge dig mat säger de att de ska föra dig tillbaka till fånghålorna under Vasch-Ros katedral i Domedag, där du kan ruttna bort. Du frågar dem nyfiket varför de för dig dit i stället för till deras eget tempel i Mortavalon.\n\"Eftersom Manse Dödsmagikern, en av Nemesis tjänare och den mäktigaste av alla magiker, färdas norrut för att möta Honoric och Yaemon, som tillhör Röda Syrsans orden, för att bruka stor magi som ska störta världen i mörker och föra oss närmare den dag när vi, Nemesis tjänare, ska styra hela Orb.\"\n\"Yaemon kommer att förråda honom\", säger du. De skrattar och svarar att Dödsmagikern känner alla mäns tankar och kan sitta långt bort och se dem väva sina planer. Så lämnar de dig och gör sig i ordning för att sova. Du sliter med dina bojor i några timmar och lyckas lösa upp dem så att du kan få in dina tummar under repet. Till sist är du fri och bestämmer dig för att krypa in i grottan, så att de inte kan använda besvärjelser för att fånga dig igen.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   22: {
-    mainText: "",
+    mainText: "Vakten tvekar, sedan säger han, \"Vänta här medan Jag hämtar de nödvändiga papperen. Du behöver ett passerkort.\" Han ger tecken till en annan soldat att ta över och går in under fällgallret till borggården.",
     choices: [
-      ""
+      "Om du väntar på att han ska komma tillbaka",
+      "Om du lämnar slottet för den händelse han har gått för att förbereda en fälla"
     ]
   },
   23: {
-    mainText: "",
+    mainText: "Barbaren höjer sin röst till ett stridsrop när han svingar till mot dig i bärsärkarraseri. Han bryr sig inte om dina anfall så länge hans svärd får smaka ditt blod. Dra ett från all skada du gör på honom. Han hugger mot ditt huvud med svärdet, men du går åt sidan, vrider dig och sparkar till med vänster fot mot hans ansikte när svärdet sveper förbi bakom ryggen på dig.",
     choices: [
-      ""
+      "Du kan slå",
+      "kasta",
+      "eller sparka igen"
     ]
   },
   24: {
-    mainText: "",
+    mainText: "När hans fot närmar sig ditt huvud försöker du tvinga upp din högra handﬂata mot hans fotled för att tvinga hans ben över ditt huvud, men du har missbedömt det och din arm klyver luften förbi hans ben. Hans fot slår in i ditt ansikte. Hans INRE KRAFT är förlamande stark och det sprutar blod från din sönderslagna näsa och dina spruckna läppar. Du förlorar 10 KROPPSPOANG. Om du fortfarande lever kastas du bakåt av kraften i sparken. Du använder all din viljestyrka för att förtränga smärtan och ta dig upp på fötter, när Yaemon kommer rusande för att angripa igen.",
     choices: [
-      ""
+      "Du har inte tid att sparka, men du kan försöka slå",
+      "eller kasta honom"
     ]
   },
   25: {
@@ -244,28 +251,24 @@ export const languagePages: ILanguagePages = {
     ]
   },
   28: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Han fångar upp ståltråden som äter sig in i hans stålhandske och ropar på hjälp. Du dödar honom snabbt, men inte snabbare än att en armborstskäkta från en annan vakt hinner sända dig i döden och du faller handlöst mot gräset nedanför.",
   },
   29: {
-    mainText: "",
+    mainText: "Du hoppar över den nu väldiga ädelstenen som rullar nedför trappan bakom dig och måttar en Bevingade hästens spark mot Dödsmagikern innan du landar. Han slungas till golvet som en trasdocka. När han faller kastar han sin ormstav. Den förvandlas till en levande kobra med utspänt huvud och som ringlar mot dig, redo att hugga.",
     choices: [
-      ""
+      "Om du struntar i den och kastar dig över Dödsmagikern för att försöka göra slut på honom",
+      "Om du försöker greppa ormens hals innan den kan hugg"
     ]
   },
   30: {
-    mainText: "",
+    mainText: "Ett väldigt Troll med vårtig, grön och slemmig hud, kommer rusande ut ur dimman och stannar upp framför dig. Du sparkar och slår för allt vad du är värd, men så snart du åstadkommer ett sår läks det igen på magisk väg. Det uppslitna köttet kryper över benen för att förenas igen och lämnar bara efter sig purpurfärgade ärr. Trollet klöser till dig och du förlorar 4 KROPPSPOANG. Om du fortfarande lever, ser det som om du kommer att förlora striden.",
     choices: [
-      ""
+      "Om du vänder dig om och ﬂyr så fort du kan",
+      "Om du har färdigheten Spela död"
     ]
   },
   31: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Du väntar på att vakten ska komma tillbaka när du hör ett svagt gnisslande ljud bakom dig. Du vänder dig om i tid för att se Honoric och Manse Dödsmagikern stiga fram ur en hemlig dörröppning. Du ska just ta fram en kaststjärna, när Manse kastar en besvärjelse och din kropp grips av en darrande förlamning. Du kan inte göra motstånd när Honoric skickligt klyver ditt huvud från axlarna med ett svärd.",
   },
   32: {
     mainText: "Togawa nickar. \"Vilka är dina vapen?\" frågar han\nOm du svarar:",
@@ -304,33 +307,36 @@ export const languagePages: ILanguagePages = {
     ]
   },
   37: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Trots att du gör allt du kan, förmår du inte ta dig loss från bojorna. Du hör prästerna tala, och det verkar som om de dyrkar Nemesis, Ondskans främsta princip. På något sätt har ryktet om dina undersökningar i Domedag färdats före dig, men du kan inte lista ut varför Nemesis präster är i förbund med Röda Syrsans munkar och med Domsvärdslegionen som följer Krigsguden Vasch-Ro. De återvänder med dig till Domedag, där du förs till fängelsehålorna under Vasch-Ros katedral och kedjas vid väggen. Fångvaktaren bryr sig inte om att ge dig mat eller vatten och inom några dagar är du död.",
   },
   38: {
-    mainText: "",
+    mainText: "Du använder återigen änterhaken och tar dig snabbt och tyst uppför väggen. Vid krönet ser du en vakt som har hört den dova dunsen från den ﬁltklädda kroken när den föll ned på murkrönet. Du klättrar åt sidan från kroken genom att ta fäste där murbruket har spolats bort från stenarna och hoppar över muren vid sidan om honom, med strypsnaran redo mellan tänderna. Han svänger runt när du försöker slänga snaran över huvudet på honom. Gör ett Anfallsslag. Han har 4 i Försvar när han höjer armen.",
     choices: [
-      ""
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   39: {
-    mainText: "",
+    mainText: "Barbaren har arbetat upp ett bärsärkarraseri och klyver luften i mäktiga hugg med svärdet utan att bry sig om någon smärta. Det enda han är ute efter är ditt blod. Draksvansen överraskar honom när du försöker slå undan benen under honom. Han har bara 4 i försvar när hans svärd hugger i luften över dig.",
     choices: [
-      ""
-    ]
+      "Du kan slå",
+      "eller sparka när Olvar försöker resa sig",
+    ],
+    unsuccessfulThrow: "Om du misslyckas med att kasta honom, försöker han hugga dig i två delar från pannan till buken när du reser dig. Du har 6 i Försvar mot hans hugg samtidigt som han uppger ett blodisande vrål. Han gör 1T6+1 i skada om han träffar dig",
+ 
   },
   40: {
-    mainText: "",
+    mainText: "Du siktar lite fel och dina Shuriken visslar förbi Yaemons huvud. När de första två försvinner ut i natten slår Yaemon upp med handen och fångar skickligt den sista i ﬂykten. Sedan skickar han tillbaka den mot dig med en knyck med handleden. All din skicklighet krävs för att svepa undan den med underarmen i sista ögonblicket och den ﬂyger iväg med ett vinande ljud. Yaemon väntade sig inte att du skulle parera din egen Shuriken och du har ett ögonblick att handla på.",
     choices: [
-      ""
+      "Du kan använda en Giftpil om du kan konsten",
+      "Du kan gå i närkamp med Yaemon"
     ]
   },
   41: {
-    mainText: "",
+    mainText: "Du är helt tyst och använder Skuggkrigarens kattgång för att få stegen att verka som om du var på väg åt andra hållet, ut ur träsket. Men den spårar dig endast på lukten och plaskandet från de lufsande stegen kommer allt snabbare.",
     choices: [
-      ""
+      "Om du tar hänsyn till vindriktningen och springer fortare",
+      "Om du står kvar och slåss"
     ]
   },
   42: {
@@ -349,9 +355,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   44: {
-    mainText: "",
+    mainText: "När du försöker springa mot prästerna tar deras besvärjelse effekt och dina ben och armar blir som till bly. Din kropp darrar när du med en stor viljeansträngning tvingar dig ytterligare några steg framåt, men de har inga problem att slå ned dig och binda dig ordentligt. Om du haren Ring tar de den ifrån dig. Stryk den från Speltabellen.",
     choices: [
-      ""
+      "Om du har färdigheten Utbrytningskonst",
+      "Om du inte har den"
     ]
   },
   45: {
@@ -368,21 +375,25 @@ export const languagePages: ILanguagePages = {
     ]
   },
   47: {
-    mainText: "",
+    mainText: "Barbaren faller till sist samman i en hög med benen brutna. Mot slutet verkade det som om han skulle slåss för evigt, men hans stridsrop kommer aldrig mer att bekymra Orbs länder. Runvävare har återfått sin syn och han har tittat på under slutet av striden. Så snart Olvar är död springer han fram och tar diademet med den blå juvelen från Barbarens panna.\n\"Jag tar hand om den här,\" säger han och drar sitt svärd mot dig.",
     choices: [
-      ""
+      "Om du vill slåss om diademet med mannen som du räddade från fågelmännen",
+      "Om du vill ta 5 guldstycken från Olvars kropp och låta mannen gå, kan du antingen bege dig mot nordväst ut ur passet mot staden Nordansnö",
+      "eller mot staden Druath Glennan",
+      "eller mot väster genom Trollkärret till staden lonalbion för att ta ett skepp över Stjärnans hav"
     ]
   },
   48: {
-    mainText: "",
+    mainText: "\"Underhöll du de fattiga utan betalning? Inte så konstigt att jag inte såg dig uppträda. Kom in då\", och han vinkar in dig på borggården, en gård omgiven av höga murar på alla sidor.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   49: {
-    mainText: "",
+    mainText: "Det magiska kraftfältet växer, men din kaststjärna har sådan tyngd att den går igenom och slår Manse till golvet. När han faller kastar han ned sin ormstav som förvandlas till en levande kobra med huvudet utspänt. Den krälar fram mot dig, redo att hugga.",
     choices: [
-      ""
+      "Om du struntar i den och angriper Dödsmagikern för att försöka göra slut på honom",
+      "Om du försöker hugga tag om ormens hals innan den kan hugga"
     ]
   },
   50: {
@@ -392,15 +403,16 @@ export const languagePages: ILanguagePages = {
     ]
   },
   51: {
-    mainText: "",
+    mainText: "Din hand slår genom luften med blixtens hastighet tre gånger efter varandra och tre Shuriken ﬂyger mot Yaemon. Gör ett Shurikenslag.",
     choices: [
-      ""
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   52: {
-    mainText: "",
+    mainText: "Du tömmer Eldödle-essensen på vallgravens yta och det uppmuntrar ox-grodorna att fortsätta kväka.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   53: {
@@ -410,9 +422,17 @@ export const languagePages: ILanguagePages = {
     ]
   },
   54: {
-    mainText: "",
+    mainText: "Du vrider din vänstra fot och piskar till med högerfoten i en båge mot Yaemons huvud. Den här gången är han beredd och duckar igen under din svepande fot. När du vänder dig för att möta honom hoppar han upp och kör in sin högerfot i din ljumske, följt av en snabb saxspark med andra benet upp i ansikte på dig. Du faller på rygg på golvet som en säck potatis, omtöcknad. Du förlorar 8 KROPPSPOÄNG.\nOm du fortfarande lever lyfter han upp din handled från marken och vänder ryggen mot dig med benen på vardera sidan om din arm. Han vrider runt och sätter sig bredvid dig med ena vaden över din hals. Du skriker av smärta när han börjar sätta ett väldigt tryck på din arm för att bryta den. Du står emot, men inser att armgreppet är till fördel för honom. Med förvånansvärd smidighet lägger du din vikt på skulderbladen och svingar båda fötterna över huvudet mot Yaemon. Han tvingas släppa dig för att blockera anfallet. När han gör det, för du tillbaka dina ben och tar dig upp på fötter genom att sätta handﬂatorna mot marken bakom huvudet och trycka till hårt, innan Yaemon hinner reagera. Du hoppar utom räckhåll och vänder dig för att möta honom när han tar sig upp på fötter. Du är fortfarande lite virrig och skakar på huvudet för att det ska klarna, precis i tid för att se Yaemon kasta sig mot dig med en hel serie anfall.",
     choices: [
-      ""
+      "Om du har färdigheten Akrobatik",
+      "Om inte",
+    ]
+  },
+  540: {
+    mainText: "Då du inte har färdigheten Akrobatik måste du blockera Yaemons anfall. Du har 7 i Försvar",
+    choices: [
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   55: {
@@ -657,10 +677,13 @@ export const languagePages: ILanguagePages = {
     ]
   },
   92: {
-    mainText: "",
+    mainText: "Olvar uppger ett vildsint vrål samtidigt som han struntar i all försiktighet, svingar sitt svärd över huvudet och stöter till mot dig. Han har gripits av bärsärkarraseri och är uppfylld av stridslust. Han känner varken fruktan eller smärta förrän antingen du eller han ligger död. Dra ett från all skada du gör på honom. Du parerar hans svärd med underarmen, går åt sidan och gör ett Kobraslag från höften.",
     choices: [
-      ""
-    ]
+      "Om du fortfarande lever kan du sparka",
+      "eller kasta",
+      "eller slå igen"
+    ],
+    stillAlive: "Om han fortfarande lever svingar han sitt svärd i en väldig båge från vänster till höger och försöker hugga upp din bröstkorg. Du har 8 i Försvar mot det vildsinta hugget när du försöker hoppa bakåt."
   },
   93: {
     mainText: "Vildmarken övergår i gläntor längs Lyckoﬂodens dalgång. Du passerar spåren av underliga djur överallt och när du går i utkanten av en tät och dyster skog hittar du en bred sträng av upptrampat gräs i gläntan. När du böjer dig fram för att undersöka spåren ser du att de har gjorts av en stor grupp halvtroll för några dagar sedan, kanske på väg tillbaka till Klyftan. När du sniffar i luften stapplar en man mot dig, ut ur det midjehöga gräset. Han är gammal och bär en blå kåpa som är i trasor, men det är hans ansikte som gör dig uppmärksam. Det är täckt med blod, för hans ögon har blivit utstuckna. Du ropar till honom och han sätter sig plötsligt ned och säger att han inte har något guld, men däremot en fruktansvärd sjukdom som du skulle få om du åt upp honom. Du försäkrar honom att du inte är en kannibal och frågar honom vad som har hänt. Han säger att han är en munk från Fiendil. Han har förlorat tidsbegreppet, men han tror att han har känt solen fyra gånger i ansiktet sedan en man som kallas Honoric lät sticka ut hans ögon för att han spionerade genom ett nyckelhål. ”Han var tillsammans med en Stormästare av vår orden, en fin man som heter Yaemon och jag såg dem planera en resa på en karta, men Yaemon hörde mig och jag blev infångad. Hjälp mig, jag svälter. Åt vilket håll ligger floden?” Du säger åt honom att gå nedför kullen om han vill hitta ﬂoden, och eftersom du tycker synd om honom ger du honom några nötter som du har plockat. Han kommer bara ihåg att de planerade att möta en tredje man som de kallade Dödsmagikern. Det finns inget mer du kan göra för att hjälpa honom, så du färdas vidare mot Fiendil.",
@@ -1298,6 +1321,9 @@ export const languagePages: ILanguagePages = {
   },
   311: {
     mainText: "Den lilla pilen flyger förbi hans öra och magikern spärrar upp ögonen av förvåning. När du bereder dig att sparka magikern den här gången pekar han med fingret mot dig och uttalar ord som verkar tappa dig på din styrka. Du stapplar kraftlöst fram när Vätten hoppar ned från sitt slottstom. Magikern går bakåt och tittar på när Vätten närmar sig dig och viftar med sin treudd. Du är för svag för att springa och han kör in treuddens spetsar i din mage innan han lyfter dig på den och drar ut dig i vallgraven. Vattnet kokar när de Flytande munnarna kommer för att äta, och på några minuter har ditt kött slitits från benen."
+  },
+  313: {
+    mainText: "Det är många dagars marsch över snövidderna. Du vet inte exakt var staden ligger och förbannar den ödsliga tomheten, för det finns ingen ledtråd till vart du ska gå. Till sist får du syn på de vita kupolerna och ishusen i staden Nordansnö på kvällen till den natt då månen blir röd, en natt utan slut. Du är för sent ute. Det eviga mörkret har kommit och Kwon har fjättrats i lnferno. Din lnre kraft försvinner och och det finns ingenting du kan göra för att förhindra att ondskan tilltar i styrka. Du har misslyckats."
   },
   314: {
     mainText: "Du svänger ned på en sidogata så att du närmar dig Spindelvävshallen från baksidan. Klädd i svart från topp till tå i din Skuggkrigardräkt smyger du försiktigt genom natten och andas tyst som en fågel. Du stannar helt stilla när du får syn på en munk som kommer nedför den annars öde gatan mot dig. Han stannar också och tycks känna faran.",

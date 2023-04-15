@@ -285,6 +285,41 @@ const opponents: IOpponents = {
       }
     }
   },
+  olvar: {
+    opponents: 1,
+    attributes: {
+      name: ["Olvar Barbaren"],
+      hpMax: [18],
+      hp: [18],
+    },
+    win: 47,
+    pages: {
+      23: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [8],
+        playerDamage: "1T6+1",
+        damage: ["1T6+1"],
+        blockable: true,
+        defense: [7],
+      },
+      92: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [8],
+        damage: ["1T6+2"],
+        defense: [6],
+        blockable: true,
+      },
+      39: {
+        playerAttackType: EAttackType.throw,
+        directWinGoto: 34,
+        playerDefense: [7],
+        damage: ["1T6"],
+        blockable: false,
+        defense: [6],
+      }
+    }
+  },
 }
 
 export default opponents

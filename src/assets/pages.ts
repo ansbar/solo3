@@ -147,7 +147,7 @@ export const pageData: IPages = {
   15: {
     choices: [
       {
-        goto: 75,
+        goto: 145,
       }
     ]
   },
@@ -176,7 +176,9 @@ export const pageData: IPages = {
   18: {
     choices: [
       {
-        goto: 75,
+        goto: 174,
+      }, {
+        goto: 2,
       }
     ]
   },
@@ -200,28 +202,37 @@ export const pageData: IPages = {
   21: {
     choices: [
       {
-        goto: 75,
+        goto: 275,
       }
     ]
   },
   22: {
     choices: [
       {
-        goto: 75,
+        goto: 31,
+      }, {
+        goto: 15
       }
     ]
   },
   23: {
+    opponent: EOpponents.olvar,
     choices: [
       {
-        goto: 75,
+        goto: 92,
+      }, {
+        goto: 39,
+      }, {
+        goto: 23,
       }
     ]
   },
   24: {
     choices: [
       {
-        goto: 75,
+        goto: 155,
+      },{
+        goto: 68,
       }
     ]
   },
@@ -267,34 +278,32 @@ export const pageData: IPages = {
       }
     ]
   },
-  28: {
-    choices: [
-      {
-        goto: 75,
-      }
-    ]
-  },
+  28: {},
   29: {
     choices: [
       {
-        goto: 75,
+        goto: 400,
+      },{
+        goto: 9,
       }
     ]
   },
   30: {
+    sideEffects: {
+      attributes: {
+        hp: -4
+      }
+    },
     choices: [
       {
-        goto: 75,
+        goto: 14,        
+      },{
+        goto: 5,
+        ability: EAbilities.playDead
       }
     ]
   },
-  31: {
-    choices: [
-      {
-        goto: 75,
-      }
-    ]
-  },
+  31: {},
   32: {
     choices: [
       {
@@ -347,38 +356,51 @@ export const pageData: IPages = {
       }
     ]
   },
-  37: {
-    choices: [
-      {
-        goto: 75,
-      }
-    ]
-  },
+  37: {},
   38: {
+    specialCondition: {
+      type: "attack",
+      modifier: "punch",
+      attack: "2T6",
+      defense: 4,
+      opponent: EOpponents.guard
+    },
     choices: [
       {
-        goto: 75,
+        criteria: true,
+        goto: 18,
+      }, {
+        criteria: false,
+        goto: 28,
       }
     ]
   },
   39: {
+    opponent: EOpponents.olvar,
     choices: [
       {
-        goto: 75,
+        goto: 92,
+      },{
+        goto: 23,
       }
     ]
   },
   40: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.poisonArrows,
+        goto: 69,
+      },{
+        goto: 89,
       }
     ]
   },
   41: {
     choices: [
       {
-        goto: 75,
+        goto: 14,
+      }, {
+        goto: 30
       }
     ]
   },
@@ -404,7 +426,11 @@ export const pageData: IPages = {
   44: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.escapeArtist,
+        goto: 21,
+      },
+      {
+        goto: 37,
       }
     ]
   },
@@ -427,21 +453,29 @@ export const pageData: IPages = {
   47: {
     choices: [
       {
-        goto: 75,
+        goto: 78,
+      }, {
+        goto: 313,
+      }, {
+        goto: 219,
+      }, {
+        goto: 59,
       }
     ]
   },
   48: {
     choices: [
       {
-        goto: 75,
+        goto: 112,
       }
     ]
   },
   49: {
     choices: [
       {
-        goto: 75,
+        goto: 400,
+      },{
+        goto: 9
       }
     ]
   },
@@ -458,16 +492,27 @@ export const pageData: IPages = {
     ]
   },
   51: {
+    specialCondition: {
+      type: "attack",
+      modifier: "shuriken",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.yaemon
+    },
     choices: [
       {
-        goto: 75,
+        criteria: true,
+        goto: 378,
+      }, {
+        criteria: false,
+        goto: 40,
       }
     ]
   },
   52: {
     choices: [
       {
-        goto: 75,
+        goto: 74,
       }
     ]
   },
@@ -479,9 +524,34 @@ export const pageData: IPages = {
     ]
   },
   54: {
+    sideEffects: {
+      attributes: {
+        hp: -8
+      }
+    },
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.acrobat,
+        goto: 181,
+      },{
+        goto: 540,
+      }
+    ]
+  },
+  540: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 7,
+      opponent: EOpponents.yaemon
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 378,
+      }, {
+        criteria: false,
+        goto: 40,
       }
     ]
   },
@@ -822,9 +892,14 @@ export const pageData: IPages = {
     ]
   },
   92: {
+    opponent: EOpponents.olvar,
     choices: [
       {
-        goto: 75,
+        goto: 23,
+      },{
+        goto: 39,
+      },{
+        goto: 92,
       }
     ]
   },
@@ -1739,6 +1814,7 @@ export const pageData: IPages = {
     ]
   },
   311: {},
+  313: {},
   314: {
     choices: [
       {

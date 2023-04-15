@@ -40,6 +40,7 @@ export interface ILanguageMisc {
   snowGiant: string
   goblin: string
   giant: string
+  yaemon: string
   [key: string]: string
 }
 

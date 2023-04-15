@@ -25,7 +25,10 @@ export enum EOpponents {
   cobraman = "cobraman",
   snowGiant = "snowGiant",
   goblin = "goblin",
-  giant = "giant"
+  giant = "giant",
+  olvar = "olvar",
+  guard = "guard",
+  yaemon = "yaemon"
 }
 
 export enum EItems {

@@ -30,13 +30,17 @@
     }
 
     const roll = dice.doRoll(attack, modifier)
-    isSuccess.value = roll > defense
+    isSuccess.value = condition?.type === "block" ? roll < defense : roll > defense
 
     resultText.value = `Du slår ${attack} och resultatet blir ${roll}.`
     if (condition?.type === "fate") {
       resultText.value += " Ett ödesslag behöver vara över 7.\n"
       resultText.value += `<b>Ödet ${isSuccess.value ? "ler mot dig!" : "vänder dig ryggen."}</b>`
-    } else {
+    } else if (condition?.type === "block") {
+      const opponentName = textStore.misc[condition?.opponent as EOpponents]
+      resultText.value += ` Du har ${condition?.defense} i försvar.\n`
+      resultText.value += `<b>${opponentName} träffar ${isSuccess.value ? "inte" : ""} dig.</b>`
+    }else {
       const opponentName = textStore.misc[condition?.opponent as EOpponents]
       resultText.value += ` ${opponentName} har ${condition?.defense} i försvar.\n`
       resultText.value += `<b>Du träffar ${isSuccess.value ? "" : "inte"} ${opponentName.toLowerCase()}.</b>`

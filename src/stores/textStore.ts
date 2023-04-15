@@ -41,6 +41,7 @@ export const useTextStore = defineStore("texts", {
       snowGiant: "",
       goblin: "",
       giant: "",
+      yaemon: "",
     },
     help: {
       block: "",
