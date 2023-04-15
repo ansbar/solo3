@@ -71,8 +71,27 @@ export const languagePages: ILanguagePages = {
       "Gör en saltomortal till Gorobeis sida innan du anfaller"
     ]
   },
+  2: {
+    mainText: "Vakten som går sitt pass på lnre Borggården märker inte att du med en lätt skrapning tvingar upp fönstret till ett förrådsrum. Rummet går ut till en spiraltrappa upplyst av facklor fästade i hållare på den yttre väggen. Halvvägs upp lägger din skarpa syn märker till ett nät av fina trådar som är sträckta över trappan och fästade vid ståltrådar som försvinner in genom hål i den inre väggen. Du går ned på händerna och \"går\" uppför trappan Du känner efter de nästan osynliga trådarna när du passerar och spetsar öronen efter minsta ljud. Till sist är du förbi dem.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   3: {
     mainText: "Kroken fastnar i slottsmuren och du tar ett språng mot vallgravens andra sida. Du faller i vattnet med ett plask och börjar dra dig uppför muren så fort du kan. Vattnet kokar runt dig när de Flytande Munnarna ilar mot sitt byte. Två sitter fortfarande fast vid dig när du drar dig upp. Du förlorar 3 KROPPSPOÄNG när de sliter i ditt kött. Om du fortfarande är vid liv, borstar du undan dem, ställer dig upp och ser dig omkring. Svartalven syns inte till någonstans utan är försvunnen i träsket. Riddaren ligger utbredd på sanden men mannen i blå och gyllene klädnad ﬂyter över vallgraven på ett litet isﬂak.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  4: {
+    mainText: "Prästerna springer fram till ﬂodstranden och en av dem får syn på dig och pekar. De börjar slita av sig sina ringbrynjor.",
+    choices: [
+      "Om du har färdigheten Giftpilar och vill använda den",
+      "Om du inte har den eller hellre snabbt vill simma uppströms"
+    ]
+  },
+  5: {
+    mainText: "Du ligger i det mörka träsket och när Trollet böjer sig ned och plockar upp dig med klorna, sveper dess stank över dig. Du förlorar 2 KROPPSPOÄNG av den hårdhänta behandlingen när den gör sig beredd att äta upp dig. Om du fortfarande lever när du närmar dig den gapande käften, slår du dina järnärmar i ansiktet på den. Du ser hur det svarta blodet som springer fram ur ögat krymper till en tår när det krossade ögat återformas. Men trollet släpper dig av förvåning och du flyr så fort du kan.",
     choices: [
       "Gå vidare"
     ]
@@ -84,10 +103,41 @@ export const languagePages: ILanguagePages = {
       "Om du struntar i nyhetsutroparen och går vidare genom staden"
     ]
   },
+  7: {
+    mainText: "Du tillbringar nästa dag ensam på vakt, men ingen lämnar slottet. Det är fortfarande tio dagar tills månen blir röd vid planetemas förening och du kan se hur förberedelserna börjar på den yttre borggården. Yaemon, Honoric och Manse Dödsmagikern beger sig mot Förändringens pelare imorgon. Dina böner till Kwon om en stormig, månlös natt besvaras och du bestämmer att i natt ska du fullfölja ditt uppdrag eller dö i ett ärofullt försök. Vinden och regnet och mörkret gör det möjligt för dig att ta dig in i slottet som om du var osynlig. Du förbereder dig i stilla meditation och tar på dig din dräkt innan du börjar stirra in i mörkret tills din mörkersyn är lika skarp som en ugglas.",
+    choices: [
+      "Om du har färdigheten Klättra och vill klättra över slottsmuren",
+      "Annars kan du lyfta upp gallret utanför vallgraven och hoppa ned i tunneln under."
+    ]
+  },
+  8: {
+    mainText: "Barbaren stelnar till när du lägger pilen på din hoprullade tunga och spottar ut den i en enda flytande rörelse. Pilen genomborrar hans kind, men han har en järnfysik och trots att en grimas av smärta förvrider hans ansiktsdrag, lyckas hans kropp övervinna det kraftiga giftet. Du kan anteckna att han har förlorat 4 KROPPSPOANG. Medan du står stilla av förvåning hugger han mot dig och hans svärd skär genom luften mot din axel. Du har 8 i Försvar mot hugget när du höjer din vänstra underarm för att svepa svärdet åt sidan. Om han träffar dig gör svärdet 1T6+1 i skada.",
+    choices: [
+      "Om du överlever kan du använda Kobraslaget",
+      "eller Bevingade hästens spark",
+      "eller Draksvansen"
+    ]
+  },
+  9: {
+    mainText: "Trots att kobran kan hugga snabbare än ögat uppfattar, är du ännu snabbare. Du griper tag om halsen på den med ena handen och skär av huvudet på den med en Shuriken du håller i den andra. Manse ligger på rygg, men han kan fortfarande kasta besvärjelser och hans Besvärjelseord ekar i din hjärna när hans magiska kraft återigen börjar verka. Han knyter sin näve och det är som om järnstänger trängde emot dig från alla håll. Hans bleka ansikte darrar av ansträngning när han knyter näven ännu hårdare tills din bröstkorg trycks in. Han öppnar handen och du faller livlös till golvet."
+  },
   10: {
     mainText: "Han tittar på dig och nickar, uppenbarligen nöjd. Du sover den natten i den egendomlige munkens grotta. Han har få ägodelar och säger att han inte har sett en mänsklig varelse på åratal, förutom i sömnen. Det verkar som om han lever av luft, för han har inget annat att erbjuda dig än kallt och uppfriskande regnvatten från bergen. På morgonen påstår han att han på något sätt har sett Yaemon, Flammans Stormästare, färdas norrut från staden Domedag tillsammans med Honoric, Vasch-Ros tjänare, Marskalk för Domsvärdslegionen. \"Och de färdas för att möta en tredje,\" säger han, \"Manse Dödsmagikern, som vördar Nemesis. En mäktig och ond magiker. Detta oheliga förbund måste stoppas. Av alla onda gudar har bara den Ledes, Vasch-Ros, och Nemesis anhängare disciplin nog att sluta förbund. Nemesis är den främsta av alla onda gudar. Aldrig förr har tre så mäktiga och onda män litat på varandra.\"\n\"Det är planeternas förening, \" svarar du. Togawa plockar fram en väska med örter från en spricka i berget. \"De här har helande förmågor\" säger han. Du tar dem och kan använda dem när som helst när du inte blir anfallen. Örterna helar upp till 8 KROPPSPOÄNG, men bara en gång. Du tackar honom och ska just fråga om han vill göra dig sällskap när han lägger sig ned på grottgolvet och somnar. Du känner att du inte kan få mer hjälp och börjar klättra nedför berget Gwalodrun till passet nedanför. En dag senare når du högländerna vid Lyckopasset.",
     choices: [
       "Gå vidare",
+    ]
+  },
+  11: {
+    mainText: "Din Shuriken sårar bara den första vakten och han ropar ut en varning. Du ser magiska ljus tändas runt slottet som lyktgubbar och beslutar dig för att klättra tillbaka nedför tornet och över vallgraven igen, för att försöka ta dig in i slottet genom gallret som leder till en underjordisk tunnel.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  12: {
+    mainText: "Du simmar uppströms, men när du ger dig av börjar de mässa igen och när besvärjelsen verkar, märker du att du inte kan röra dina lemmar. Du ﬂyter stilla nedströms, in i deras välkomnande armar och de binder dig hårt. Om du har en Ring, tar de den ifrån dig. Stryk den från Speltabellen.",
+    choices: [
+      "Om du har färdigheten Utbrytarkonst",
+      "Om du inte har det"
     ]
   },
   13: {
@@ -98,6 +148,19 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Gorobei angriper dig. Ditt försvar mot Gorobeis Kobraslag är 7.",
     miss: "Du inte lyckas kasta Kobramannen"
+  },
+  14: {
+    mainText: "l brådskan går du farligt nära stigens kant. Det förrädiska träsket omger dig helt, dolt i dimman. Gör ett Ödesslag",
+    choices: [
+      "Om Ödet ler mot dig",
+      "Om Ödet vänder ryggen åt dig"
+    ]
+  },
+  15: {
+    mainText: "",
+    choices: [
+      ""
+    ]
   },
   16: {
     mainText: "Du går till barackerna och sällar dig till en kö av människor, några unga och Vältränade, andra äldre och lite mer nedgångna. Du väljs ut tillsammans med några av de andra och får visa din skicklighet med svärdet. Det lyckas någorlunda, men inte bra, eftersom du aldrig har fått träning i svärdsfäktning. Ni grupperas och drillas i några timmar innan ni får marschera till era nattbaracker. Du lyckas få reda på att Domsvärdslegionen ska gå till angrepp mot folket i Föraningens spiror men att det finns gott om tid att träna inför striden, för fältherren, Honoric, har lämnat staden för att färdas norrut. När ni lägger er att sova börjar de tala om att plundra Tornen och om allt byte de ska ha med sig hem. Barackerna är bevakade för den händelse några av de nya rekryterna skulle ändra sig i fråga om att ta värvning, men du bestämmer dig för att det inte ﬁnns mer av intresse här och försöker desertera under de lugna timmarna före gryningen. Du virar din svarta huvudduk om huvudet tills bara ögonspringorna syns och tar på dig din svarta dräkt.",
@@ -115,6 +178,12 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Gorobei angriper dig. Ditt försvar mot Gorobeis Kobraslag är 7."
   },
+  18: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   19: {
     mainText: "Aquamarins stora åror förs av två man vardera. Bredvid dig stirrar en roddare tomt på dig. Han var nyligen fri, men har nu bundits vid åran av piraterna. De vita ärren på hans rygg säger dig att han är en av de två som har varit på en slavgalär tidigare. Han har en väldig överkropp med onaturligt bred bröstkorg och små ben som smalnar av mot de små fötterna, något som gör att han liknar en padda. Han talar om för dig att han förslavades som pojke och inte känner till något annat liv än roddardäcket. Han jämrar sig lågt vid tanken på det grymma öde som har drabbat honom och berättar för dig att han var den enda på det förra slavskeppet som levde längre än ett år. Piraterna utser en Slavdrivare och två män med piskor för att övervaka Aquamarins roddardäck. Det verkar som om de ska sälja henne och besättningen i någon laglös hamn. ",
     choices: [
@@ -126,6 +195,30 @@ export const languagePages: ILanguagePages = {
     mainText: "\"Se dig omkring\", säger Togawa, \"är det här mitt hem?\" Du stirrar förvirrat på honom. \"Nej, \" fortsätter han, \"mitt hem är min kropp och ditt hem är din kropp.\"",
     choices: [
       "Gå vidare"
+    ]
+  },
+  21: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  22: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  23: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  24: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   25: {
@@ -148,6 +241,30 @@ export const languagePages: ILanguagePages = {
     mainText: "Flickan tittar hånfullt på dig, som om du på något sätt var ovärdig. Den gamle mannen skriker åt dig, ”Må Ödet aldrig mer le mot dig.” Han har förbannat dig. Dra ett från din Ödesmodifikation. Du lämnar snabbt kapellet och beslutar dig för att gå in genom Obsidianporten till själva staden.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  28: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  29: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  30: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  31: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   32: {
@@ -186,6 +303,36 @@ export const languagePages: ILanguagePages = {
       "Om du beslutar dig för att snabbt ge dig av"
     ]
   },
+  37: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  38: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  39: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  40: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  41: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   42: {
     mainText: "Medan Kobramannen med sina locklösa ögon tittar på och vaksamt väntar på att du ska blotta dig, slår du med baksidan av händerna mot den svajande halsen, men du måste vara snabb för att hinna före hans pisksnabba hugg.",
     choices: [
@@ -201,6 +348,12 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  44: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   45: {
     mainText: "Du duckar undan för Kaptenens svingande morgonstjärna, sedan hoppar du åt sidan när han försöker överraska dig med att slå dig i ansiktet med de tunga guldringar som han har på vänster hand. lnnan du kan angripa honom igen sänks ett kedjenät ned över dig och du faller kämpande ned på däck. Två sjörövare såg dig angripa deras kapten. Eftersom de var hans favoriter sprang de fram för att hjälpa honom genom att slänga ned ett nät från trappan. De binder dig och drar tillbaka dig till Aquamarin där dina Skuggkrigarredskap tas ifrån dig och du binds fast vid en åra.",
     choices: [
@@ -214,16 +367,58 @@ export const languagePages: ILanguagePages = {
       "Om du lämnar Domedag genom hamnporten och beger dig mot Mortavalon"
     ]
   },
+  47: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  48: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  49: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   50: {
     mainText: "Flickan tar din hand i hennes och leder dig till marmorbänken. Den gamle mannen förklarar att han måste spilla lite av ditt blod i silverkalken för att kunna läsa din framtid. Han skär i en ven i din arm och blodet rinner ned i kannan. Du tittar förskräckt på honom när han låter det rinna tills du har förlorat en kvarts liter och det börjar pirra i armen. Dra bort 2 KROPPSPOÄNG. Sedan sluter han såret med en besvärjelse. Flickan häller en grön, magisk vätska i kannan. Du känner dig svag och lyder honom när han ber dig titta i spegeln som hänger på väggen ovanför dig. Han börjar sjunga och tar fram ett kristallprisma som han håller över kannan. Blodet och vätskan bubblar och Oraklets mässande blir högre. En bild av två män som lämnar en stad till häst formas i spegeln. Den större av de två är klädd i en svart ringbrynja och bär en svart sköld prydd med ett silversvärd hängande i en silvertråd, Domsvärdet. Hans ansikte är arrogant och grymt. Den andre är klädd som en krigarmunk, i rött med ett smalt, svart bälte. De rider tysta mot dig och munkens genomborrande, svarta ögon blickar in i dina utan att blinka. Oraklet talar om för dig att visionen visar Yaemon, Flammans Stormästare, som rider med Honoric, Marskalk av Domsvärdslegionen, norrut från Mortavalon. Han berättar för dig att de färdas mot Förändringens pelare för att framsäga ett ord var som ska fängsla en gud och gudinna i Underjorden. Honoric vill styra hela Människoländerna. Du faller i trans och när du vaknar är du utanför Domedag, gående på vägen mot Mortavalon. Du undrar vad Oraklet kan ha gjort medan du var i trans. Har han berättat om din vision för någon? Visionen antydde i alla fall att Honoric och Yaemon är långt framför dig. Du inser att du måste färdas till Mortavalon för att ta reda på var Yaemon och Honoric är.",
     choices: [
       "Gå vidare"
     ]
   },
+  51: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  52: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   53: {
     mainText: "\"Se dig omkring,\" säger Togawa, \"är detta mitt hem?\" Du stirrar förvirrat på honom. \"Nej, \" fortsätter han, \"mitt hem är min kropp och ditt hem är din kropp.\"" ,
     choices: [
       "Gå vidare"
+    ]
+  },
+  54: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  55: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   56: {
@@ -245,10 +440,34 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  59: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  60: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   61: {
     mainText: "Du höjer foten som för att sparka Gorobei i bröstet, men snurrar 1 stället in bredvid honom och greppar hans arm för att kasta honom över höften. Du förstår snart att du har begått ett misstag, när ditt grepp glider över oljan som täcker honom och han använder sin skicklighet som brottare för att gripa tag i dig och låsa din arm bakom ryggen, samtidigt som han griper dig om strupen. Han är fruktansvärt stark. Du försöker göra en bakåtvolt över honom och bryta greppet men han är beredd på det och trycker ned dig mot golvet innan han ger dig ett kraftigt slag.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  62: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  63: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   64: {
@@ -279,11 +498,35 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Han anfaller dig med morgonstjärnan. Ditt Försvar mot den pliggade kulan och kedjan är 7"
   },
+  68: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  69: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   70: {
     mainText: "Den unga Lyckoﬂoden rinner nedför en smal dal som ringlar sig som en orm mellan de branta sluttningarna i Visionernas berg. Luften blir svalare när du klättrar och snön börjar falla. Du vänder ut och in på din dräkt så att det vita fodret kamouflerar dig i snön. Du sover gott i passet, trots kölden och får tillbaka upp till 4 KROPPSPOÄNG. På den andra dagen hör du ett rop från andra sidan en brant och du rör dig försiktigt fram för att titta. En krigare håller sitt svärd högt mot en grupp Arocker, fågelmän, som anfaller. När du tittar på slår en grön ljusblixt ut från hans svärd och fäller en av Arockerna.",
     choices: [
       "Om du hjälper krigaren, som är hårt pressad",
       "Om du hellre gömmer dig i snön tills Arockerna ger sig av"
+    ]
+  },
+  71: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  72: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   73: {
@@ -292,6 +535,12 @@ export const languagePages: ILanguagePages = {
       "Om du har färdigheten Klättra kan du försöka kasta upp din änterhake på miniatyrslottets mur och hoppas kunna klättra uppför repet",
       "Om du är Akrobat kan du försöka göra ett jättehopp till andra sidan vallgraven",
       "Om du inte vill använda de här färdigheterna, eller inte har dem, kan du dyka ned i vallgraven och simma mot slottet"
+    ]
+  },
+  74: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   75: {
@@ -317,6 +566,18 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Han anfaller dig med sin morgonstjärna. Ditt Försvar mot kulan och kedjan är 8"
   },
+  78: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  79: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   80: {
     mainText: "Du går fram för att anfalla, men gör plötsligt en volt och landar vid sidan om Gorobei när hans näve sveper i luften över den punkt där du stod. Han vänder sig mot dig, men du har överraskat honom och det blir lättare att anfalla honom än om du bara stod framför honom och utväxlade slag. Du får lägga två till tärningsslaget för det första anfallet.",
     choices: [
@@ -325,10 +586,34 @@ export const languagePages: ILanguagePages = {
       "eller om höjer foten som för att sparka, men i stället går åt sidan och använder Virvelkastet"
     ]
   },
+  81: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  82: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   83: {
     mainText: "Grottan är mörk och du stirrar in i den tills dina ögon har vant sig vid mörkret innan du ropar Togawas namn. Skelettet av en hjort från de Västra öarna, med nästan 3 meter breda horn, ligger på klippgolvet. De kraftiga lårbenen är uppbrutna för märgen. Du går försiktigt framåt, men stelnar till när du hör något som liknar en oxe som andas tungt. Du står stilla när ett tre meter långt Klippmonster angriper. Du försöker blockera hans tunga slag, men det sveper din arm åt sidan och slänger in dig i grottväggen. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever kastar du dig huvudstupa i marken och gör en volt mot monstret, sedan rullar du upp på fötter och slår ut med foten i en enda ﬂytande rörelse. Klippmonstret slår till mot dig och stönar av smärta. Du hoppar undan från hans klor men odjuret tycks vara ogenomträngligt för dina slag och striden fortsätter en stund. Plötsligt dyker en munk upp från ingenstans, mitt ur luften tycks det. Klippmonstret tittar upp när mannen landar precis framför det. Munken snurrar runt åt höger på vänster fot, vänder ryggen åt odjuret och slår till med höger fot runt och upp i Klippmonstrets mellangärde med en snabbhet som knappt ens du kan tro på. Han vrålar till när hans lnre kraft frigörs och sparken fäller Klippmonstret, som skakar grottan när det faller stelt till marken. Munken vänder sig mot dig och bugar. \"Mitt namn är Togawa. Var vänlig följ mig.\" Hans egen grotta ligger en kort klättring ovanför Klippmonstrets och du följer efter honom dit.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  84: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  85: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   86: {
@@ -346,6 +631,36 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Han anfaller dig med morgonstjärnan. Ditt Försvar mot den pliggade kulan och kedjan är 7",
     directWin: "Du har lyckats kasta honom och han slungas över relingen på akterkastellet ned i havet."
+  },
+  88: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  89: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  90: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  91: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  92: {
+    mainText: "",
+    choices: [
+      ""
+    ]
   },
   93: {
     mainText: "Vildmarken övergår i gläntor längs Lyckoﬂodens dalgång. Du passerar spåren av underliga djur överallt och när du går i utkanten av en tät och dyster skog hittar du en bred sträng av upptrampat gräs i gläntan. När du böjer dig fram för att undersöka spåren ser du att de har gjorts av en stor grupp halvtroll för några dagar sedan, kanske på väg tillbaka till Klyftan. När du sniffar i luften stapplar en man mot dig, ut ur det midjehöga gräset. Han är gammal och bär en blå kåpa som är i trasor, men det är hans ansikte som gör dig uppmärksam. Det är täckt med blod, för hans ögon har blivit utstuckna. Du ropar till honom och han sätter sig plötsligt ned och säger att han inte har något guld, men däremot en fruktansvärd sjukdom som du skulle få om du åt upp honom. Du försäkrar honom att du inte är en kannibal och frågar honom vad som har hänt. Han säger att han är en munk från Fiendil. Han har förlorat tidsbegreppet, men han tror att han har känt solen fyra gånger i ansiktet sedan en man som kallas Honoric lät sticka ut hans ögon för att han spionerade genom ett nyckelhål. ”Han var tillsammans med en Stormästare av vår orden, en fin man som heter Yaemon och jag såg dem planera en resa på en karta, men Yaemon hörde mig och jag blev infångad. Hjälp mig, jag svälter. Åt vilket håll ligger floden?” Du säger åt honom att gå nedför kullen om han vill hitta ﬂoden, och eftersom du tycker synd om honom ger du honom några nötter som du har plockat. Han kommer bara ihåg att de planerade att möta en tredje man som de kallade Dödsmagikern. Det finns inget mer du kan göra för att hjälpa honom, så du färdas vidare mot Fiendil.",
@@ -365,6 +680,12 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  96: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   97: {
     mainText: "En av piraterna har fått syn på dig och han kryper längs Havsgravens däck för att hugga av dig händerna med sin kroksabel. Ett svagt klingande från hans många öronringar varnar dig och du hoppar smidigt över relingen upp på däck och fångar hans arm med din vänsterhand när han svingar kroksabeln mot ditt huvud. Sedan använder du Virvelkastet för att kasta honom över relingen. Du vänder dig om och springer uppför trappan till akterkastellet där Sjörövarkaptenen står och leder sina män. Du hoppar uppför de sista stegen för att kunna dyka upp från ingenstans framför honom. Han kliver förvånad bakåt, men återfår snart sin fattning. Han är en högrest man med gråsprängt skägg och guldarmringar som får venerna på hans kraftiga armar att stå ut som strängar. Han svingar sin morgonstjärna mot dig när du går till anfall.",
     choices: [
@@ -375,6 +696,12 @@ export const languagePages: ILanguagePages = {
   },
   98: {
     mainText: "När du vadar genom träsket vänder sig Shaggothen med ett vedervärdigt slurpande ljud och Svartalven slår sig fri från de sugande tentaklerna. Hon ler av tacksamhet så att hennes stora mandelögon blir till springor. Ni vänder er för att möta Shaggothen tillsammans, men du slungas plötsligt in i vecken på dess ruttnande kött av ett slag från alvens svärd. Hon skrattar rått och vadar ut till båten medan du förgäves försöker ta dig loss från den slemmiga bestens grepp. Den sjunker långsamt ned i träsket och drar dig med sig. Din näsa och dina lungor fylls med gyttja medan du hjälplöst kämpar. När träsket torkar upp kommer inte ens dina ben att finnas kvar. "
+  },
+  99: {
+    mainText: "",
+    choices: [
+      ""
+    ]
   },
   100: {
     mainText: "När du knäfaller framför det stora altaret bland de många valven i katedralen med domen, godtar Ödesgudinnan dig som hennes tjänare. På samma gång tar din egen gud, Kwon, avstånd från dig och din INRE KRAFT tas ifrån dig så att du försvagas. Det bekymrar dig inte, för nu vet du att det var ödesbestämt att det skulle ske, och det är meningslöst att ångra det. Ditt uppdrag att döda Yaemon ter sig oviktigt och du tillbringar stilla dagar i Fiendil som präst i katedralen, tills till och med stadens lugna folk en dag tycks upprörda. Ett stort mörker, en lång natt utan dag, följs av nyheter om att den fruktade Domsvärdslegionen och Röda Syrsans munkar har intagit Föraningens torn och är på marsch mot Fiendil. Det är för sent. Kwon är fjättrad i Inferno men ditt misslyckande bekymrar dig inte."
@@ -834,6 +1161,14 @@ export const languagePages: ILanguagePages = {
       "eller gå ut på issjön"
     ]
   },
+  262: {
+    mainText: "Du gör upp en liten eld i kojan innan du sätter dig på golvet för att meditera. Din själ vandrar i fjärran när dörren till kojan plötsligt öppnas. In stiger en barbarkrigare. Han bär ett halsband av jättevesslans tänder, ett björnskinn och en underlig tiara med en djupblå sten på pannan. Hans rustning är egendomligt gjord av överlappande metallplattor likt ﬁskfjäll. Han pekar illvilligt med sitt långsvärd och säger på en oborstad nordmans variant av handelsspråket, \"God kväll, min lilla bergstomte. Olvar Kaoskrigaren tänker ta alla dina pengar!\"\nSka du?",
+    choices: [
+      "Hoppa upp och anfalla?",
+      "Ge honom din pengabörs?",
+      "Kasta blixtpulver på elden?"
+    ],
+  },
   267: {
     mainText: "Vätten försöker skyffla upp dig på änden av sin obehagligt hullingförsedda treudd, men du dansar åt sidan och försöker gripa tag i skaftet på den så att du kan slänga hans tunga kropp över höften.",
     choices: [
@@ -891,6 +1226,12 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du vill följa med en av dem för att träffa Arenans mästare",
       "Om du hellre går genom staden"
+    ]
+  },
+  284: {
+    mainText: "Krigaren slåss väl, men efter en timme kommer det inga fler magiska blixtar från hans svärd och han faller av stigen. Fågelmännen dödar honom och bär i väg honom till sina klipphyllor. Du fortsätter och kommer till slut fram till en koja i närheten av flodens källa. Kylan berör dig inte så länge du rör på dig, eftersom du är tränad länge och hårt att motstå extrema temperaturer, men du bestämmer dig för att tillbringa natten i kojan för att vara säker för fågelmännen.",
+    choices: [
+      "Gå vidare"
     ]
   },
   285: {

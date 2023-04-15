@@ -17,6 +17,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  2: {
+    choices: [
+      {
+        goto: 399
+      }
+    ]
+  },
   3: {
     sideEffects: {
       attributes: {
@@ -29,6 +36,24 @@ export const pageData: IPages = {
       }
     ]
   },
+  4: {
+    choices: [
+      {
+        ability: EAbilities.poisonArrows,
+        goto: 419
+      },
+      {
+        goto: 12
+      }
+    ]
+  },
+  5: {
+    choices: [
+      {
+        goto: 14
+      }
+    ]
+  },
   6: {
     choices: [
       {
@@ -38,6 +63,28 @@ export const pageData: IPages = {
       }
     ]
   },
+  7: {
+    choices: [
+      {
+        ability: EAbilities.climb,
+        goto: 392
+      }, {
+        goto: 402
+      }
+    ]
+  },
+  8: {
+    choices: [
+      {
+        goto: 377
+      }, {
+        goto: 302
+      }, {
+        goto: 318
+      }
+    ]
+  },
+  9: {},
   10: {
     sideEffects: {
       items: {
@@ -50,6 +97,29 @@ export const pageData: IPages = {
       }
     ]
   },
+  11: {
+    choices: [
+      {
+        goto: 398
+      }
+    ]
+  },
+  12: {
+    sideEffects: {
+      items: {
+        opalring: false
+      }
+    },
+    choices: [
+      {
+        ability: EAbilities.escapeArtist,
+        goto: 21
+      },
+      {
+        goto: 37
+      }
+    ]
+  },
   13: {
     opponent: EOpponents.cobraman,
     choices: [
@@ -57,6 +127,27 @@ export const pageData: IPages = {
         goto: 42,
       }, {
         goto: 25,
+      }
+    ]
+  },
+  14: {
+    specialCondition: {
+      type: "fate",
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 417,
+      }, {
+        criteria: false,
+        goto: 404,
+      }
+    ]
+  },
+  15: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -82,6 +173,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  18: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   19: {
     choices: [
       {
@@ -96,6 +194,34 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 10
+      }
+    ]
+  },
+  21: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  22: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  23: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  24: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -138,6 +264,34 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 6,
+      }
+    ]
+  },
+  28: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  29: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  30: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  31: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -193,6 +347,41 @@ export const pageData: IPages = {
       }
     ]
   },
+  37: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  38: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  39: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  40: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  41: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   42: {
     opponent: EOpponents.cobraman,
     choices: [
@@ -212,6 +401,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  44: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   45: {
     choices: [
       {
@@ -228,6 +424,27 @@ export const pageData: IPages = {
       }
     ]
   },
+  47: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  48: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  49: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   50: {
     sideEffects: {
       attributes: {
@@ -240,10 +457,38 @@ export const pageData: IPages = {
       }
     ]
   },
+  51: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  52: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   53: {
     choices: [
       {
         goto: 10,
+      }
+    ]
+  },
+  54: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  55: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -275,11 +520,39 @@ export const pageData: IPages = {
       }
     ]
   },
+  59: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  60: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   61: {
     autoEndBattle: true,
     choices: [
       {
         goto: 95
+      }
+    ]
+  },
+  62: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  63: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -326,6 +599,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  68: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  69: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   70: {
     sideEffects: {
       attributes: {
@@ -340,6 +627,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  71: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  72: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   73: {
     choices: [
       {
@@ -350,6 +651,13 @@ export const pageData: IPages = {
         goto: 33
       }, {
         goto: 64
+      }
+    ]
+  },
+  74: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -396,6 +704,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  78: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  79: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   80: {
     sideEffects: {
       temporary: {
@@ -412,6 +734,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  81: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  82: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   83: {
     sideEffects: {
       attributes: {
@@ -421,6 +757,20 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 66
+      }
+    ]
+  },
+  84: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  85: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -440,6 +790,41 @@ export const pageData: IPages = {
         goto: 77
       }, {
         goto: 67
+      }
+    ]
+  },
+  88: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  89: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  90: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  91: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
+  92: {
+    choices: [
+      {
+        goto: 75,
       }
     ]
   },
@@ -464,6 +849,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  96: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   97: {
     choices: [
       {
@@ -476,6 +868,13 @@ export const pageData: IPages = {
     ]
   },
   98: {},
+  99: {
+    choices: [
+      {
+        goto: 75,
+      }
+    ]
+  },
   100: {},
   105: {
     choices: [
@@ -1164,6 +1563,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  262: {
+    image: true,
+    choices: [
+      {
+        goto: 226
+      }, {
+        goto: 204
+      }, {
+        goto: 117
+      }
+    ]
+  },
   267: {
     opponent: EOpponents.goblin,
     choices: [
@@ -1240,6 +1651,13 @@ export const pageData: IPages = {
         goto: 290,
       }, {
         goto: 169,
+      }
+    ]
+  },
+  284: {
+    choices: [
+      {
+        goto: 262,
       }
     ]
   },

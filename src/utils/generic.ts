@@ -15,6 +15,7 @@ export function useGeneric() {
       mainStore.setBattlestate(EBattleStates.chooseOpponent)
     } else {
       mainStore.setCurrentPageId(pageId)
+      mainStore.battlestate = EBattleStates.pending
     }
   }
 
