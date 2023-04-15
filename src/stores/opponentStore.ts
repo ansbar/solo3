@@ -15,6 +15,7 @@ interface StoreOpponent {
   win: number,
   loss?: number,
   miss?: number
+  directWin?: number,
   opponents: {
     name: string
     hp: number,
@@ -39,7 +40,8 @@ export const useOpponentStore = defineStore("opponent", {
     opponents: [],
     win: 0,
     loss: 0,
-    miss: 0
+    miss: 0,
+    directWin: 0
   }),
   actions: {
     setOpponentStaticData(payload: IOpponent, page: number) {
@@ -73,6 +75,7 @@ export const useOpponentStore = defineStore("opponent", {
         playerDamage: payload.playerDamage,
         missDamage: payload.missDamage,
         blockable: payload.blockable,
+        directWin: payload.directWinGoto
       })
 
       for (let i = 0; i < this.opponents.length; i++) {

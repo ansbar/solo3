@@ -29,4 +29,5 @@ export interface IOpponentPage {
   missDamage?: number
   damage: string[] // 1T6+1
   defense: number[]
+  directWinGoto?: number
 }

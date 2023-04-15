@@ -10,5 +10,13 @@ export function useGeneric() {
     mainStore.battlestate = EBattleStates.none
   }
 
-  return { doStartOver }
+  const gotoPage = (pageId: number) => {
+    if (mainStore.currentPageId === pageId) {
+      mainStore.setBattlestate(EBattleStates.chooseOpponent)
+    } else {
+      mainStore.setCurrentPageId(pageId)
+    }
+  }
+
+  return { doStartOver, gotoPage }
 }

@@ -102,6 +102,7 @@ const opponents: IOpponents = {
       },
       87: {
         playerAttackType: EAttackType.throw,
+        directWinGoto: 34,
         playerDefense: [7],
         damage: ["1T6"],
         blockable: false,

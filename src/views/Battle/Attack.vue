@@ -61,24 +61,28 @@
     const attackRoll = dice.doRoll(attackChance.value, attackModifier)      
     isHit.value = (attackRoll > opponent.value.defense) ? true : false    
 
-    const hitText = computed(() => {
+    const hitText = computed(() => {      
       if (opponentStore.playerAttackType === EAttackType.throw)       
         return isHit.value ? "Du lyckas med att kasta" : "Du misslyckas med att kasta"
       else
         return isHit.value ? "Du träffar" : "Du missar"
     })
-            
+
     rollText.value = `Du slår ${attackChance.value} och resultatet blir ${attackRoll}.`
     rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
     rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
 
     if(isHit.value){      
-      if(opponentStore.playerAttackType !== EAttackType.throw){
+      if(opponentStore.playerAttackType !== EAttackType.throw && !opponentStore.directWin){
         doDamage()        
       } else {
-        // A successful throw instead adds 2 to damage on next attack
-        mainStore.setThrownOpponent(mainStore.currentOpponent)
-        playerStore.setTemporaryDamageModifier(2)
+        if (opponentStore.directWin) {
+          //
+        } else {
+          // A successful throw instead adds 2 to damage on next attack
+          mainStore.setThrownOpponent(mainStore.currentOpponent)
+          playerStore.setTemporaryDamageModifier(2)
+        }
       }
     } else if (opponentStore.missDamage) {
       // In the case a static damage is applied when player fails with attack (like page 267)
@@ -142,9 +146,22 @@
       v-html="damageText"
     />    
 
-      
+    
     <!-- Miss or not Throw -->
-    <template v-if="!isHit || opponentStore.playerAttackType != 'throw'">
+    <template v-if="textStore.page.directWin && isHit">
+      <div class="text">   
+        {{ textStore.page.directWin }}
+      </div>
+      <a 
+        href="#"
+        @click="generic.gotoPage(opponentStore.directWin as number)"
+      >
+        Gå vidare
+      </a>     
+    </template>
+
+    <!-- Miss or not Throw -->
+    <template v-else-if="!isHit || opponentStore.playerAttackType != 'throw'">
       <!-- If opponent is still alive -->
       <div
         v-if="opponent.hp > 0"

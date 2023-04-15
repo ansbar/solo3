@@ -157,17 +157,17 @@ export const languagePages: ILanguagePages = {
       "Mina vapen är allting som existerar."
     ]
   },
-  34: {
-    mainText: "Krasch! Kaptenens huvud slår i däcket på vägen ned och skallen krossas innan vågorna slukar honom. Nyheten sprider sig snabbt bland piraterna. De avbryter striden för att hoppa tillbaka ombord på Havsgraven och börjar ivrigt slåss för att avgöra vem som ska bli den nye, enväldige kaptenen. Du dyker ned från akterkastellet och simmar snabbt mot Aquamarin, som redan är på väg bort. Dina lungor är på bristningsgränsen när du till sist får tag i en åra och kan häva dig upp över relingen.",
-    choices: [
-      "Gå vidare"
-    ]
-  },
   33: {
     mainText: "Du hoppar från båten, högt upp i luften i en graciös båge mot den andra sidan. Folkmassan drar andan av förundran. Gör ett Ödesslag.",
     choices: [
       "Gå vidare",
       "Du hoppar för kort och ramlar i vallgraven"
+    ]
+  },
+  34: {
+    mainText: "Krasch! Kaptenens huvud slår i däcket på vägen ned och skallen krossas innan vågorna slukar honom. Nyheten sprider sig snabbt bland piraterna. De avbryter striden för att hoppa tillbaka ombord på Havsgraven och börjar ivrigt slåss för att avgöra vem som ska bli den nye, enväldige kaptenen. Du dyker ned från akterkastellet och simmar snabbt mot Aquamarin, som redan är på väg bort. Dina lungor är på bristningsgränsen när du till sist får tag i en åra och kan häva dig upp över relingen.",
+    choices: [
+      "Gå vidare",
     ]
   },
   35: {
@@ -341,9 +341,8 @@ export const languagePages: ILanguagePages = {
   87: {
     mainText: "Du duckar under det svepande klotet och kedjan och hoppar upp i luften i ett försök att lägga fötterna runt hans hals och genom en smidig vridning kasta honom i havet. \nDu har totalt fyra rundor på dig att besegra honom.",
     choices: [
-      "Du kan försöka Tigertandskastet",
-      "eller Kobraslaget",
-      "eller sparka igen"
+      "Du kan använda Kobraslaget",
+      "eller Tigersprånget"
     ],
     stillAlive: "Han anfaller dig med morgonstjärnan. Ditt Försvar mot den pliggade kulan och kedjan är 7",
     directWin: "Du har lyckats kasta honom och han slungas över relingen på akterkastellet ned i havet."
@@ -391,7 +390,7 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Du kan använda Tigersprånget",
       "eller Kobraslaget",
-      "eller Tigertanden"
+      "eller Tigertandskastet"
     ]
   },
   110: {
