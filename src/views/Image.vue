@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { storeToRefs } from "pinia"
-  import { usePageStore } from "../stores/pageStore"
-  import { useMainStore } from "../stores/mainStore"
+  import { useMainStore, usePageStore } from "@/stores"
 
   const { image } = storeToRefs(usePageStore())
   const { currentPageId } = storeToRefs(useMainStore())

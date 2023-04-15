@@ -1,6 +1,5 @@
 <script lang="ts" setup>
-  import { useTextStore } from "../stores/textStore"
-  import { usePageStore } from "../stores/pageStore"
+  import { useTextStore, usePageStore } from "@/stores"
 
   const pageStore = usePageStore()
   const textStore = useTextStore()

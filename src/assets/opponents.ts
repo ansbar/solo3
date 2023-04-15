@@ -1,5 +1,5 @@
-import { IOpponents } from "../assets/interfaces/opponents"
-import { EAttackType, EAbilities } from "../assets/enums"
+import { IOpponents } from "@/assets/interfaces/opponents"
+import { EAttackType, EAbilities } from "@/assets/enums"
 
 const opponents: IOpponents = {
   gorobei: {

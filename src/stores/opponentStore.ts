@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAttackType } from "../assets/enums"
-import { IOpponent, IOpponentPage } from "../assets/interfaces/opponents"
+import { EAbilities, EAttackType } from "@/assets/enums"
+import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponents"
 
 interface StoreOpponent {
   id: string

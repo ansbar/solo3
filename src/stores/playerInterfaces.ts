@@ -1,10 +1,10 @@
-import { EAbilities, EAddedAbilities } from "../assets/enums"
+import { EAbilities, EAddedAbilities } from "@/assets/enums"
 
 interface Player_items {
+  gold: number
   shuriken: number
   opalring: boolean
-  healingPotion: boolean
-  gold: number
+  healingPotion: boolean  
   glove: boolean
   magicShuriken: boolean
   fireLizardEssence: boolean

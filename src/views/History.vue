@@ -1,8 +1,7 @@
 <script setup lang="ts">
-  import { useMainStore } from "../stores/mainStore"
+  import { useMainStore } from "@/stores"
 
   const mainStore = useMainStore()
-
 </script>
 
 <template>

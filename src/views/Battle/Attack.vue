@@ -1,21 +1,18 @@
 <script lang="ts" setup>
   import { ref, onMounted, computed } from "vue"
-  import { useDice } from "../../utils/dice"
-  import { usePlayerStore } from "../../stores/playerStore"
-  import { useTextStore } from "../../stores/textStore"
-  import { useMainStore } from "../../stores/mainStore"
-  import { useOpponentStore } from "../../stores/opponentStore"
-  import { useOpponents } from "../../utils/opponents"
-  import { EAttackType, EBattleStates } from "../../assets/enums"
-  import { useGeneric } from "../../utils/generic"
+  import { useDice } from "@/utils/dice"
+  import { useMainStore, usePlayerStore, useTextStore, useOpponentStore } from "@/stores"
+  import { useOpponents } from "@/utils/opponents"
+  import { EAttackType, EBattleStates } from "@/assets/enums"
+  import { useGeneric } from "@/utils/generic"
 
   const textStore = useTextStore()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
-  const { opponentsAlive } = useOpponents()
   const dice = useDice()
   const generic = useGeneric()
+  const { opponentsAlive } = useOpponents() 
 
   const isHit = ref(false)
   const attackChance = ref("2T6")
@@ -27,12 +24,11 @@
   })
 
   onMounted(() => {
-    // If attack is instant only damage part is needed
-    if(opponentStore.playerAttackType !== EAttackType.instant){
+    // If attack is instant only the damage part is needed
+    if(opponentStore.playerAttackType !== EAttackType.instant)
       attack()
-    }else{
-      doDamage()
-    }            
+    else
+      doDamage()      
   })
 
   const commitBattleState = (battleState: string) => {
@@ -40,8 +36,7 @@
   }
 
   const calculateAttackModifier = () => {
-    // Calculate attack modifiers. 
-    // First modifier for the type, like punch. 
+    // First permanent modifier for the type, like punch. 
     // And then the temporary modifier, like block.
     let totalModifier = 0
     let permanentModifier = 0
@@ -76,11 +71,11 @@
     rollText.value = `Du slår ${attackChance.value} och resultatet blir ${attackRoll}.`
     rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
     rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
-    console.log(opponentStore.missDamage, !opponentStore.missDamage) 
+
     if(isHit.value){      
       if(opponentStore.playerAttackType !== EAttackType.throw){
         doDamage()        
-      }else{
+      } else {
         // A successful throw instead adds 2 to damage on next attack
         mainStore.setThrownOpponent(mainStore.currentOpponent)
         playerStore.setTemporaryDamageModifier(2)
@@ -179,14 +174,12 @@
       <template v-else-if="isHit && opponentStore.miss">
         <button    
           v-if="!opponentsAlive"   
-          class="cta"
           @click="doWin"
         >
           Gå vidare
         </button>
         <button      
           v-else  
-          class="cta"
           @click="commitBattleState('pending')"
         >
           Gå vidare
@@ -197,7 +190,6 @@
       <template v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'">
         <button
           v-if="playerStore.attributes.hp > 0"
-          class="cta"
           @click="commitBattleState('defend')"
         >
           Försvara dig
@@ -215,7 +207,6 @@
       <!-- If instant attack -->
       <button
         v-else-if="opponentStore.playerAttackType === 'instant'"
-        class="cta"
         @click="commitBattleState('pending')"
       >
         Gå vidare
@@ -229,14 +220,12 @@
         
         <button    
           v-if="!opponentsAlive"   
-          class="cta"
           @click="doWin"
         >
           Gå vidare
         </button>
         <button
           v-else
-          class="cta"
           @click="commitBattleState('defend')"
         >
           Försvara dig
@@ -255,7 +244,6 @@
       </div>
 
       <button
-        class="cta"
         @click="commitBattleState('pending')"
       >
         Kastet lyckas, välj attack

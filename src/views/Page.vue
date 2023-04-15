@@ -1,14 +1,11 @@
 <script lang="ts" setup>
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
-  import { useMainStore } from "../stores/mainStore"
-  import { usePageStore } from "../stores/pageStore"
-  import { useTextStore } from "../stores/textStore"
-  import { useOpponentStore } from "../stores/opponentStore"  
-  import { languagePages } from "../assets/languages/swedish"
-  import { pageData } from "../assets/pages"
+  import { useMainStore, useOpponentStore, useTextStore, usePageStore } from "@/stores"
+  import { languagePages } from "@/assets/languages/swedish"
+  import { pageData } from "@/assets/pages"
   import Opponent from "./Opponent.vue"
-  import opponent from "../assets/opponents"
+  import opponent from "@/assets/opponents"
   import MainText from "./MainText.vue"
   import Choices from "./Choices.vue"
   import Image from "./Image.vue"
@@ -16,7 +13,8 @@
   import SideEffects from "./SideEffects.vue"
   import SpecialCondition from "./SpecialCondition.vue"
   import History from "./History.vue"
-  import { EBattleStates } from "../assets/enums"
+  import NonBattleInfo from "./NonBattleInfo.vue"
+  import { EBattleStates } from "@/assets/enums"
 
   const textStore = useTextStore()
   const pageStore = usePageStore()
@@ -73,6 +71,10 @@
   const showHistory = computed(() => {
     return pageStore.opponent || pageStore.specialCondition
   })
+
+  const showNonBattleInfo = computed(() => {
+    return !pageStore.opponent
+  })
 </script>
 
 <template>
@@ -85,7 +87,7 @@
     <Battle v-if="pageStore.opponent" />
     <SpecialCondition v-if="pageStore.specialCondition" />    
     <Choices v-if="showChoices" />
-    <!-- TODO Lägg till möjlighet att använda helande dryck utanför strid -->
+    <NonBattleInfo v-if="showNonBattleInfo" />
     <History v-if="showHistory" />
   </section>
 </template>

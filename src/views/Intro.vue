@@ -1,11 +1,8 @@
 <script setup lang="ts">
   import { computed, onMounted } from "vue"
-  import { usePlayerStore } from "../stores/playerStore"
-  import { useTextStore } from "../stores/textStore"
-  import { useMainStore } from "../stores/mainStore"
-  import { EBattleStates } from "../assets/enums"
-  import { languageGeneral } from "../assets/languages/swedish"
-  import { EAbilities } from "../assets/enums"
+  import { useMainStore, usePlayerStore, useTextStore } from "@/stores"
+  import { languageGeneral } from "@/assets/languages/swedish"
+  import { EAbilities } from "@/assets/enums"
 
   const playerStore = usePlayerStore()
   const textsStore = useTextStore()
@@ -105,7 +102,6 @@
     <div class="text">
       <div class="button-group">
         <button
-          class="cta"
           :disabled="!isAllAbilitiesChosen"
           @click="startGame"
           v-text="'Starta äventyret!'"

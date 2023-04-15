@@ -1,5 +1,5 @@
 import { EAbilities, EOpponents } from "./enums"
-import { IPages } from "../stores/pageInterfaces"
+import { IPages } from "@/stores/pageInterfaces"
 
 export const pageData: IPages = {
   1: {
@@ -112,6 +112,7 @@ export const pageData: IPages = {
     ]
   },
   26: {
+    image: true,
     sideEffects: {
       attributes: {
         hp: 10,
@@ -183,6 +184,7 @@ export const pageData: IPages = {
     ]
   },
   36: {
+    image: true,
     choices: [
       {
         goto: 50,
@@ -325,6 +327,11 @@ export const pageData: IPages = {
     ]
   },
   70: {
+    sideEffects: {
+      attributes: {
+        hp: 4,
+      },
+    },
     choices: [
       {
         goto: 271
@@ -507,6 +514,9 @@ export const pageData: IPages = {
         goto: 372,
       }
     ]
+  },
+  112: {
+    image: true,
   },
   113: {
     choices: [
@@ -707,6 +717,7 @@ export const pageData: IPages = {
     ]
   },
   172: {
+    image: true,
     choices: [
       {
         goto: 98,
@@ -719,6 +730,7 @@ export const pageData: IPages = {
   },
   175: {},
   176: {
+    image: true,
     choices: [
       {
         goto: 256,
@@ -951,6 +963,9 @@ export const pageData: IPages = {
       }
     ]
   },
+  223: {
+    image: true,
+  },
   225: {
     sideEffects: {
       attributes: {
@@ -1169,7 +1184,7 @@ export const pageData: IPages = {
   272: {
     sideEffects: {
       items: {
-        "fireLizardEssence": true
+        fireLizardEssence: true
       }
     },
     choices: [
@@ -1413,10 +1428,6 @@ export const pageData: IPages = {
   },
   332: {
     opponent: EOpponents.humanEater,
-    // "battle": {
-    //   id: EOpponents.humanEater,            
-
-    // },
     choices: [
       {
         goto: 310
@@ -1451,6 +1462,9 @@ export const pageData: IPages = {
       }
     ]
   },
+  337: {
+    image: true,
+  },
   338: {
     choices: [
       {
@@ -1463,6 +1477,7 @@ export const pageData: IPages = {
     ]
   },
   341: {
+    image: true,
     sideEffects: {
       attributes: {
         hp: 20,

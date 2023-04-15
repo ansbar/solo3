@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { EBattleStates } from "../assets/enums"
+import { EBattleStates } from "@/assets/enums"
 
 interface Main {
   battlestate: EBattleStates

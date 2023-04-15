@@ -1,12 +1,9 @@
 <script lang="ts" setup>
+  import { useMainStore, usePlayerStore, useTextStore, usePageStore } from "@/stores"
   import { ref } from "vue"
-  import { useTextStore } from "../stores/textStore"
-  import { usePlayerStore } from "../stores/playerStore"
-  import { usePageStore } from "../stores/pageStore"
-  import { useMainStore } from "../stores/mainStore"
-  import { useDice } from "../utils/dice"
-  import { EPlayerModifiers } from "../assets/enums"
-  import { EOpponents } from "../assets/enums"
+  import { useDice } from "@/utils/dice"
+  import { EPlayerModifiers } from "@/assets/enums"
+  import { EOpponents } from "@/assets/enums"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()

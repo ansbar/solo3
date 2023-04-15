@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAddedAbilities } from "../assets/enums"
+import { EAbilities, EAddedAbilities, EItems } from "@/assets/enums"
 import { type Player } from "./playerInterfaces"
 import { useMainStore } from "./mainStore"
 
@@ -42,6 +42,9 @@ export const usePlayerStore = defineStore("player", {
       this.abilities.splice(payload, 1)
     },
     // Items
+    togglePlayerItem (payload: {item: EItems, toggle: boolean }){
+      this.items[payload.item] = payload.toggle as never // Todo, why is never needed
+    },
     setPlayerItemShuriken (payload: number) {
       this.items.shuriken += payload
     },

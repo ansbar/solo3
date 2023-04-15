@@ -1,7 +1,7 @@
 <script lang="ts" setup>
+  import { useMainStore } from "@/stores"
   import { storeToRefs } from "pinia"  
-  import { languagePages } from "../assets/languages/swedish"
-  import { useMainStore } from "../stores/mainStore"
+  import { languagePages } from "@/assets/languages/swedish"
 
   const { currentPageId } = storeToRefs(useMainStore())
 </script>

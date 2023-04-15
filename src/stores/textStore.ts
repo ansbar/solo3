@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { ILanguagePage, ILanguageGeneral } from "../assets/languages/languageInterfaces"
+import { ILanguagePage, ILanguageGeneral } from "@/assets/languages/languageInterfaces"
 
 interface StoreTexts extends ILanguageGeneral {
   page: ILanguagePage

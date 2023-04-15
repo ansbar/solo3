@@ -1,10 +1,8 @@
 <script lang="ts" setup>
-  import { usePlayerStore } from "../stores/playerStore"
-  import { useTextStore } from "../stores/textStore"
-  import { useOpponentStore } from "../stores/opponentStore"
+  import {  usePlayerStore, useTextStore, useOpponentStore } from "@/stores"
   import { storeToRefs } from "pinia"
-  import { EAttackType, EDefenseType } from "../assets/enums"
-  import { useOpponents } from "../utils/opponents"
+  import { EAttackType, EDefenseType } from "@/assets/enums"
+  import { useOpponents } from "@/utils/opponents"
 
   const opponentStore = useOpponentStore()
   const textStore = useTextStore()

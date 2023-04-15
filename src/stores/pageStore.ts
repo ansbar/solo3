@@ -1,7 +1,7 @@
 import { defineStore } from "pinia"
 import { IPage } from "./pageInterfaces"
 import { usePlayerStore } from "./playerStore"
-import { EAddedAbilities } from "../assets/enums"
+import { EAddedAbilities } from "@/assets/enums"
 
 export const usePageStore = defineStore("page", {
   state: (): IPage => (

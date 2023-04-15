@@ -1,5 +1,5 @@
 import { computed } from "vue"
-import { useOpponentStore } from "../stores/opponentStore"
+import { useOpponentStore } from "@/stores/opponentStore"
 
 export function useOpponents() {
   const opponentStore = useOpponentStore()  

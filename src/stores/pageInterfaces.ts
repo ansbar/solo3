@@ -1,4 +1,4 @@
-import { EAbilities, EItems, EOpponents, EAttackType } from "../assets/enums"
+import { EAbilities, EItems, EOpponents, EAttackType } from "@/assets/enums"
 
 export interface IPages {
   [key: number]: IPage

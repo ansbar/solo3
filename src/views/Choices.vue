@@ -1,10 +1,7 @@
 <script lang="ts" setup>
-  import { useMainStore } from "../stores/mainStore"
-  import { usePlayerStore } from "../stores/playerStore"
-  import { useTextStore } from "../stores/textStore"
-  import { usePageStore } from "../stores/pageStore"
-  import { useOpponentStore } from "../stores/opponentStore"
-  import { EAbilities, EBattleStates } from "../assets/enums"
+  import { useMainStore, usePlayerStore, useTextStore, usePageStore } from "@/stores"
+  import { useOpponentStore } from "@/stores/opponentStore"
+  import { EAbilities, EBattleStates } from "@/assets/enums"
 
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()

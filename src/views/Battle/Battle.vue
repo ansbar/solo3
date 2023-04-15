@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { useMainStore } from "../../stores/mainStore"
+  import { useMainStore } from "@/stores"
   import InnerStrength from "./InnerStrength.vue"
   import Attack from "./Attack.vue"
   import Defend from "./Defend.vue"

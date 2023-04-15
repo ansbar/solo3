@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { onMounted } from "vue"
-  import { useMainStore } from "../../stores/mainStore"
-  import { useOpponentStore } from "../../stores/opponentStore"
+  import { useMainStore, useOpponentStore } from "@/stores"
   import { EBattleStates } from "../../assets/enums"
 
   const mainStore = useMainStore()

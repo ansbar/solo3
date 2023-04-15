@@ -38,7 +38,7 @@ export const languageGeneral: ILanguageGeneral = {
     glove: "magisk slaghandske",
     magicShuriken: "förtrollad kaststjärna",
     fireLizardEssence: "eldödle-essens",
-    herbs: "örter"
+    herbs: "örter (8 kroppspoäng)"
   },
   defense: {
     punch: "Försvar mot slag",
@@ -280,7 +280,7 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Han anfaller dig med morgonstjärnan. Ditt Försvar mot den pliggade kulan och kedjan är 7"
   },
   70: {
-    mainText: "Den unga Lyckoﬂoden rinner nedför en smal dal som ringlar sig som en orm mellan de branta sluttningarna i Visionernas berg. Luften blir svalare när du klättrar och snön börjar falla. Du vänder ut och in på din dräkt så att det vita fodret kamouflerar dig i snön. Du sover gott i passet, trots kölden och får tillbaka upp till 4 KROPPSPOANG. På den andra dagen hör du ett rop från andra sidan en brant och du rör dig försiktigt fram för att titta. En krigare håller sitt svärd högt mot en grupp Arocker, fågelmän, som anfaller. När du tittar på slår en grön ljusblixt ut från hans svärd och fäller en av Arockerna.",
+    mainText: "Den unga Lyckoﬂoden rinner nedför en smal dal som ringlar sig som en orm mellan de branta sluttningarna i Visionernas berg. Luften blir svalare när du klättrar och snön börjar falla. Du vänder ut och in på din dräkt så att det vita fodret kamouflerar dig i snön. Du sover gott i passet, trots kölden och får tillbaka upp till 4 KROPPSPOÄNG. På den andra dagen hör du ett rop från andra sidan en brant och du rör dig försiktigt fram för att titta. En krigare håller sitt svärd högt mot en grupp Arocker, fågelmän, som anfaller. När du tittar på slår en grön ljusblixt ut från hans svärd och fäller en av Arockerna.",
     choices: [
       "Om du hjälper krigaren, som är hårt pressad",
       "Om du hellre gömmer dig i snön tills Arockerna ger sig av"
@@ -842,7 +842,7 @@ export const languagePages: ILanguagePages = {
       "eller sparka",
     ],
     successfulThrow: "Om du lyckas kasta honom ser du honom rulla runt och komma upp på fötter, men du anfaller medan han reser sig.",
-    unsuccessfulThrow: "Om du misslyckas med att kasta honom kör han in sin armbåge 1 dina revben med benknäckande styrka (du förlorar 2 KROPPSPOANG) Om du fortfarande lever försöker han spetsa dig på treudden. Du har 7 i Försvar mot hans anfall.",
+    unsuccessfulThrow: "Om du misslyckas med att kasta honom kör han in sin armbåge 1 dina revben med benknäckande styrka (du förlorar 2 KROPPSPOÄNG) Om du fortfarande lever försöker han spetsa dig på treudden. Du har 7 i Försvar mot hans anfall.",
   },
   268: {
     mainText: "Dina tre angripare ligger runt dig, döda eller medvetslösa. En respektfylld tystnad sänker sig över krogen och ingen vill möta din blick. Du inser att ryktet kommer att spridas att det finns en munk i Domedag som inte slåss som Röda Syrsans munkar. Du beslutar dig för att lämna krogen och staden så fort som möjligt. En ung soldat följer efter dig när du går, men du smiter från honom bland de vindlande bakgatorna och tar dig snabbt fram till stadsporten. Du kommer säkert igenom innan order ges om att stoppa alla främlingar. Väl i säkerhet borta från stadsmuren, klättrar du upp i ett träd där du kan sova dold.",

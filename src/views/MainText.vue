@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { storeToRefs } from "pinia"
-  import { useTextStore } from "../stores/textStore"
+  import { useTextStore } from "@/stores"
 
   const { page } = storeToRefs(useTextStore())
 </script>

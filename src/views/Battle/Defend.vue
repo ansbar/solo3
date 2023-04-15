@@ -1,12 +1,10 @@
 <script lang="ts" setup>
-  import { ref, onMounted, computed, Ref, watch } from "vue"
-  import { useDice } from "../../utils/dice"
-  import { usePlayerStore } from "../../stores/playerStore"
-  import { useMainStore } from "../../stores/mainStore"
-  import { useOpponentStore } from "../../stores/opponentStore"
-  import { useOpponents } from "../../utils/opponents"
-  import { EBattleStates } from "../../assets/enums"
-  import { useGeneric } from "../../utils/generic"
+  import { ref, onMounted, computed } from "vue"
+  import { useDice } from "@/utils/dice"
+  import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
+  import { useOpponents } from "@/utils/opponents"
+  import { EBattleStates } from "@/assets/enums"
+  import { useGeneric } from "@/utils/generic"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
