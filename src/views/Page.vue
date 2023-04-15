@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
-  import { useMainStore, useOpponentStore, useTextStore, usePageStore } from "@/stores"
+  import { useMainStore, useOpponentStore, useTextStore, usePageStore, usePlayerStore } from "@/stores"
   import { languagePages } from "@/assets/languages/swedish"
   import { pageData } from "@/assets/pages"
   import Opponent from "./Opponent.vue"
@@ -15,8 +15,11 @@
   import History from "./History.vue"
   import NonBattleInfo from "./NonBattleInfo.vue"
   import { EBattleStates } from "@/assets/enums"
+  import { useStorage } from "@/utils/storage"
 
+  const { setStoreToStorage, removeStoreFromStorage } = useStorage()
   const textStore = useTextStore()
+  const playerStore = usePlayerStore()
   const pageStore = usePageStore()
   const opponentStore = useOpponentStore()
   const mainStore = useMainStore()
@@ -50,6 +53,17 @@
 
   watch(currentPageId, (pageId) => {
     initPage(pageId) // Watch for page switch
+
+    // Save some data to local storage at page swap as long as not in combat
+    console.log(pageStore.specialCondition)
+    if (!pageStore.opponent && !pageStore.specialCondition) {
+      setStoreToStorage("main", mainStore)
+      setStoreToStorage("player", playerStore)
+    } else {
+      // Remove all store data if in battle or some fate/attack roll so that user cant restart battles if unsuccessful.
+      removeStoreFromStorage("main")
+      removeStoreFromStorage("player")
+    }    
   })
 
   watch(battlestate, (state: EBattleStates) => {

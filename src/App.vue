@@ -1,18 +1,39 @@
 <script lang="ts" setup>
+  import Setup from "./views/Setup.vue"
   import Intro from "./views/Intro.vue"
   import Page from "./views/Page.vue"
   import Dev from "./views/Dev.vue"
   import { storeToRefs } from "pinia"  
-  import { useMainStore } from "./stores/mainStore"
+  import { useMainStore, usePlayerStore } from "./stores"
+  import { onMounted } from "vue"
+  import { useStorage } from "@/utils/storage"
 
-  const { currentPageId } = storeToRefs(useMainStore())
+  const mainStore = useMainStore()
+  const playerStore = usePlayerStore()
+  const { getStoreFromStorage } = useStorage()  
+  const { currentPageId, dev } = storeToRefs(useMainStore())
+
+  const init = () => {
+    // Get saved local storage data if it exists and setup.
+    const mainStorageData = getStoreFromStorage("main")
+    const playerStorageData = getStoreFromStorage("player")
+    if (mainStorageData)
+      mainStore.$state = mainStorageData
+    if (playerStorageData)
+      playerStore.$state = playerStorageData
+  }
+  
+  onMounted(() => {
+    init()   
+  })
 </script>
 
 <template>
-  <Dev />
+  <Dev v-if="dev" />
   <div class="wrapper">    
-    <Intro v-if="currentPageId === 0" />
-    <Page v-else />
+    <!-- <Intro /> -->
+    <Setup v-if="currentPageId === 0" />
+    <Page v-if="currentPageId > 0" />
   </div>
 </template>
 

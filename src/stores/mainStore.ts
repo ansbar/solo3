@@ -4,6 +4,7 @@ import { EBattleStates } from "@/assets/enums"
 interface Main {
   battlestate: EBattleStates
   currentPageId: number
+  dev: boolean
   battleRoundCounter: number
   thrownOpponent?: number
   currentOpponent: number
@@ -16,6 +17,7 @@ export const useMainStore = defineStore("main", {
       battlestate: EBattleStates.none,
       battleRoundCounter: 1,
       currentPageId: 0,
+      dev: false,
       currentOpponent: 0,
       thrownOpponent: undefined,
       history: []
