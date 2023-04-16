@@ -28,6 +28,7 @@ export enum EOpponents {
   giant = "giant",
   olvar = "olvar",
   guard = "guard",
+  priests = "priests",
   yaemon = "yaemon"
 }
 

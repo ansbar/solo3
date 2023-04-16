@@ -35,6 +35,7 @@ export interface IPageSidesideEffects {
     gold?: number
     fireLizardEssence?: boolean
     herbs?: boolean
+    amulet?: boolean
   },
   attributes?: {
     hp?: number

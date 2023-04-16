@@ -65,6 +65,7 @@ export interface ILanguageItems {
   magicShuriken: string
   fireLizardEssence: string
   herbs: string
+  amulet: string
 }
 
 export interface ILanguageModifiers {

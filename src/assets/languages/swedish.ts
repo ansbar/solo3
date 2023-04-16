@@ -20,6 +20,7 @@ export const languageGeneral: ILanguageGeneral = {
     giant: "Den tvåhövdade jätten",
     guard: "Vakten",
     olvar: "Olvar Barbaren",
+    priests: "Präster",
     yaemon: "Yaemon"
   },
   help: {
@@ -46,7 +47,8 @@ export const languageGeneral: ILanguageGeneral = {
     glove: "magisk slaghandske",
     magicShuriken: "förtrollad kaststjärna",
     fireLizardEssence: "eldödle-essens",
-    herbs: "örter (8 kroppspoäng)"
+    herbs: "örter (8 kroppspoäng)",
+    amulet: "Amulett"
   },
   defense: {
     punch: "Försvar mot slag",
@@ -442,9 +444,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   55: {
-    mainText: "",
+    mainText: "Ditt avslutande slag får den siste att falla ihop baklänges mot floden. Du har slagit ihjäl allihop. Vagnarna syns inte till någonstans, men du lägger märke till att en av männen bär en Amulett. Amuletten är en ljus kristall innefattad i en guldbricka på vilken det finns en inskription och magiska runor: \"Den som bär mig kan motstå Dödens Finger.\" Du hänger Amuletten om halsen. Anteckna den på Speltabellen. När du letar igenom deras kroppar hittar du en sliten bokrullelåda. Muttrande en bön till Kwon att skydda dig från besvärjelser, öppnar du den. Papyrusrullen som ligger där, visar att ägaren var en Nemesispräst, \"Ondskans främsta Princip, han som återför allt till Mörker.\"\nDen innehåller en beskrivning av dig. Det var ingen tillfällighet att de angrep dig. Ryktet har på något sätt gått före dig, för deras Nemesistempel ligger i Mortavalon. Du vandrar vidare in i bergsområdet som omger Mortavalon och undrar vem som kan ha kontaktat Nemesistemplet om dig, och varför. När du går runt en krök bland kullarna lägger du märke till en grotta täckt av ett klipputsprång i berget ovanför dig",
     choices: [
-      ""
+      "Om du fortsätter längs vägen mot Mortavalon",
+      "Om du hellre går in i grottan"
     ]
   },
   56: {
@@ -467,16 +470,14 @@ export const languagePages: ILanguagePages = {
     ]
   },
   59: {
-    mainText: "",
+    mainText: "Du travar stadigt på i två dagar och håller ett öga på de sågtandade Visionernas berg till höger, innan du kommer in i ett fuktigt och dimmigt land, Trollkärret. Det är ett väldigt träskland och i dimman har du ingen aning om hur lång tid det kan ta att gå runt det mot söder. Du bestämmer dig för att fortsätta genom det och följa spåren av ett litet djur. När du går fram över den blöta marken blir dimman allt tätare och en väldig, mörk skepnad skymtar framför dig. Dimman har dämpat ljudet av dess väldiga fötter i gyttjan. Den stannar och sniffar högt.",
     choices: [
-      ""
+      "Om du vill röra dig försiktigt men snabbt framåt",
+      "Om du hellre vill stå stilla och vänta på att den ska hitta dig"
     ]
   },
   60: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Kaststjärnan hänger i luften framför honom i det magiska kraftfältet som glöder när det absorberar stöten. När du störtar fram för att angripa är han färdig med sin besvärjelse och det väller upp eld inom dig. Det sipprar ut rök genom din mun och näsa när dina lungor och andra inre organ fattar eld. Dödsmagikern har kastat besvärjelsen lnre eld på dig, en besvärjelse som bara de mäktigaste av de onda trollkarlarna känner till, och du kremeras inifrån.",
   },
   61: {
     mainText: "Du höjer foten som för att sparka Gorobei i bröstet, men snurrar 1 stället in bredvid honom och greppar hans arm för att kasta honom över höften. Du förstår snart att du har begått ett misstag, när ditt grepp glider över oljan som täcker honom och han använder sin skicklighet som brottare för att gripa tag i dig och låsa din arm bakom ryggen, samtidigt som han griper dig om strupen. Han är fruktansvärt stark. Du försöker göra en bakåtvolt över honom och bryta greppet men han är beredd på det och trycker ned dig mot golvet innan han ger dig ett kraftigt slag.",
@@ -485,13 +486,15 @@ export const languagePages: ILanguagePages = {
     ]
   },
   62: {
-    mainText: "",
+    mainText: "Vakten tvekar, sedan säger han, \"Vänta här medan jag hämtar de nödvändiga papperen. Du behöver ett passerkort.\" Han ger tecken till en annan soldat att ta över och går in under fällgallret till slottsgården. ",
     choices: [
-      ""
-    ]
+      "Väntar du på att han ska komma tillbaka",
+      "Om du hellre går din väg med tanke på att han kan ha gått för att förbereda en fälla"
+    ],
+    unsuccessfulThrow: "Om han fortfarande lever, eller om du misslyckades med att ens kasta honom, försöker de kvarvarande prästerna att slå ned dig med sina stridsklubbor. "
   },
   63: {
-    mainText: "",
+    mainText: "Du hoppar med fötterna före mot en av prästerna i ett försök att lägga dina fötter runt hans huvud, innan du vrider till för att kasta honom till marken. Du kan välja vilken av dem du angriper.",
     choices: [
       ""
     ]
@@ -544,10 +547,13 @@ export const languagePages: ILanguagePages = {
     ]
   },
   71: {
-    mainText: "",
+    mainText: "Du försöker köra upp hälen i ljumsken på en av prästerna och sedan sparka upp i ansiktet på honom. Du får välja vem du vill anfalla.",
     choices: [
-      ""
-    ]
+      "Om du överlever deras anfall kan du försöka använda Tigertandskastet",
+      "eller Kobraslaget",
+      "eller sparka igen."
+    ],
+    stillAlive: "Om några fortfarande lever angriper de dig med sina stridsklubbor. Var och en har ett individuellt anfall"
   },
   72: {
     mainText: "",
@@ -619,10 +625,13 @@ export const languagePages: ILanguagePages = {
     ]
   },
   82: {
-    mainText: "",
+    mainText: "Dina fingrar slår fram som stålkäppar mot en av angriparna och du hoppas fånga honom i armhålan, där han inte är skyddad av ringbrynjan. Du kan välja vem du vill anfalla.",
     choices: [
-      ""
-    ]
+      "Om du överlever deras anfall kan du använda en Kluven blixtspark",
+      "eller Tigertandskastet",
+      "eller slå till igen"
+    ],
+    stillAlive: "Om några av prästerna fortfarande lever försöker de svinga sina stridsklubbor mot dig."
   },
   83: {
     mainText: "Grottan är mörk och du stirrar in i den tills dina ögon har vant sig vid mörkret innan du ropar Togawas namn. Skelettet av en hjort från de Västra öarna, med nästan 3 meter breda horn, ligger på klippgolvet. De kraftiga lårbenen är uppbrutna för märgen. Du går försiktigt framåt, men stelnar till när du hör något som liknar en oxe som andas tungt. Du står stilla när ett tre meter långt Klippmonster angriper. Du försöker blockera hans tunga slag, men det sveper din arm åt sidan och slänger in dig i grottväggen. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever kastar du dig huvudstupa i marken och gör en volt mot monstret, sedan rullar du upp på fötter och slår ut med foten i en enda ﬂytande rörelse. Klippmonstret slår till mot dig och stönar av smärta. Du hoppar undan från hans klor men odjuret tycks vara ogenomträngligt för dina slag och striden fortsätter en stund. Plötsligt dyker en munk upp från ingenstans, mitt ur luften tycks det. Klippmonstret tittar upp när mannen landar precis framför det. Munken snurrar runt åt höger på vänster fot, vänder ryggen åt odjuret och slår till med höger fot runt och upp i Klippmonstrets mellangärde med en snabbhet som knappt ens du kan tro på. Han vrålar till när hans lnre kraft frigörs och sparken fäller Klippmonstret, som skakar grottan när det faller stelt till marken. Munken vänder sig mot dig och bugar. \"Mitt namn är Togawa. Var vänlig följ mig.\" Hans egen grotta ligger en kort klättring ovanför Klippmonstrets och du följer efter honom dit.",

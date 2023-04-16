@@ -320,6 +320,40 @@ const opponents: IOpponents = {
       }
     }
   },
+  priests: {
+    opponents: 3,
+    attributes: {
+      name: ["1:a prästen", "2:a prästen", "3:e prästen"],
+      hpMax: [12, 14, 13],
+      hp: [12, 14, 13], // Todo, behövs den här raden verkligen
+    },
+    win: 55,
+    pages: {
+      63: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [9, 8, 7],
+        blockable: true,
+        damage: ["1T6+1", "1T6+1", "1T6+1"],
+        defense: [4, 5, 5],
+      },
+      82: {
+        playerAttackType: EAttackType.punch,
+        playerDefense: [9, 8, 7],
+        playerDamage: "1T6",
+        blockable: true,
+        damage: ["1T6+1", "1T6+1", "1T6+1"],
+        defense: [5, 7, 6],
+      },
+      71: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [9, 8, 7],
+        playerDamage: "1T6+2",
+        blockable: true,
+        damage: ["1T6+1", "1T6+1", "1T6+1"],
+        defense: [4, 5, 5],
+      }
+    }
+  },
 }
 
 export default opponents

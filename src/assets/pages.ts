@@ -556,9 +556,17 @@ export const pageData: IPages = {
     ]
   },
   55: {
+    sideEffects: {
+      items: {
+        amulet: true
+      }
+    },
     choices: [
       {
-        goto: 75,
+        goto: 283,  
+      },
+      {
+        goto: 275,  
       }
     ]
   },
@@ -593,17 +601,14 @@ export const pageData: IPages = {
   59: {
     choices: [
       {
-        goto: 75,
-      }
-    ]
-  },
-  60: {
-    choices: [
+        goto: 41,
+      },
       {
-        goto: 75,
+        goto: 30,
       }
     ]
   },
+  60: {},
   61: {
     autoEndBattle: true,
     choices: [
@@ -615,7 +620,10 @@ export const pageData: IPages = {
   62: {
     choices: [
       {
-        goto: 75,
+        goto: 31,
+      },
+      {
+        goto: 15,
       }
     ]
   },
@@ -698,9 +706,16 @@ export const pageData: IPages = {
     ]
   },
   71: {
+    opponent: EOpponents.priests,
     choices: [
       {
-        goto: 75,
+        goto: 63,
+      },
+      {
+        goto: 82,
+      },
+      {
+        goto: 71,
       }
     ]
   },
@@ -814,7 +829,12 @@ export const pageData: IPages = {
   82: {
     choices: [
       {
-        goto: 75,
+        goto: 71,
+      },
+      {
+        goto: 63,
+      },{
+        goto: 82,
       }
     ]
   },
