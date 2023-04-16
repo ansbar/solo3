@@ -1,13 +1,12 @@
 <script lang="ts" setup>
-  import { storeToRefs } from "pinia"
-  import { useTextStore } from "@/stores"
+  import { useTexts } from "@/utils/texts"
 
-  const { page } = storeToRefs(useTextStore())
+  const { mainText } = useTexts()
 </script>
 
 <template>
   <div class="main-text">
-    {{ page.mainText }}
+    {{ mainText }}
   </div>
 </template>
 

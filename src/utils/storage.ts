@@ -15,7 +15,9 @@ export function useStorage() {
 
   const setStoreToStorage = (name: Stores, store: any) => {
     const storeWithoutHistory = { ...store, history: [] }
-    return localStorage.setItem("solo-" + name, JSON.stringify(storeWithoutHistory))
+    const stringifiedStorage = JSON.stringify(storeWithoutHistory)
+
+    return localStorage.setItem("solo-" + name, "stringifiedStorage")
   }
 
   return { getStoreFromStorage, setStoreToStorage, removeStoreFromStorage }

@@ -1,18 +1,19 @@
 <script lang="ts" setup>
   import { ref, onMounted, computed } from "vue"
   import { useDice } from "@/utils/dice"
-  import { useMainStore, usePlayerStore, useTextStore, useOpponentStore } from "@/stores"
+  import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
   import { useOpponents } from "@/utils/opponents"
   import { EAttackType, EBattleStates } from "@/assets/enums"
   import { useGeneric } from "@/utils/generic"
+  import { useTexts } from "@/utils/texts"
 
-  const textStore = useTextStore()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const dice = useDice()
   const generic = useGeneric()
   const { opponentsAlive } = useOpponents() 
+  const { pageTexts } = useTexts()
 
   const isHit = ref(false)
   const attackChance = ref("2T6")
@@ -148,9 +149,9 @@
 
     
     <!-- Miss or not Throw -->
-    <template v-if="textStore.page.directWin && isHit">
+    <template v-if="pageTexts.directWin && isHit">
       <div class="text">   
-        {{ textStore.page.directWin }}
+        {{ pageTexts.directWin }}
       </div>
       <a 
         href="#"
@@ -169,12 +170,12 @@
       >
         <!-- Unsuccessful throw text -->
         <template v-if="opponentStore.playerAttackType === 'throw'">
-          {{ textStore.page.unsuccessfulThrow }}
+          {{ pageTexts.unsuccessfulThrow }}
         </template>
 
         <!-- If opponent is still alive text -->
         <template v-else>
-          {{ textStore.page.stillAlive }}
+          {{ pageTexts.stillAlive }}
         </template>       
       </div>
 
@@ -184,7 +185,7 @@
         href="#"
         @click="handleSpecialMiss()"
       >
-        {{ textStore.page.miss }}
+        {{ pageTexts.miss }}
       </a>  
 
       <!-- If special skip defend phase at hit (go to special page) -->
@@ -254,10 +255,10 @@
     <!-- Throw -->
     <div v-else>
       <div
-        v-if="textStore.page.successfulThrow"
+        v-if="pageTexts.successfulThrow"
         class="text"
       >
-        {{ textStore.page.successfulThrow }}
+        {{ pageTexts.successfulThrow }}
       </div>
 
       <button

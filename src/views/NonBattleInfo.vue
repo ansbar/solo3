@@ -6,11 +6,12 @@
   
   import { computed } from "vue"
   import { EItems } from "@/assets/enums"
-  import { usePlayerStore, useTextStore } from "@/stores"
+  import { usePlayerStore } from "@/stores"
   import { languageGeneral } from "@/assets/languages/swedish"
+  import { useTexts } from "@/utils/texts"
 
   const playerStore = usePlayerStore()
-  const textStore = useTextStore()
+  const { choicesTexts } = useTexts()
 
   interface Item {
     key: EItems,
@@ -51,7 +52,7 @@
       <template v-if="playerNonBattleItems.length">
         <h4>Använd något ur din packning:</h4>
         <ul
-          v-if="textStore.page.choices"
+          v-if="choicesTexts"
           class="choices"
         >
           <li

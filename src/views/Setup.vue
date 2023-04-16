@@ -1,11 +1,12 @@
 <script setup lang="ts">
   import { computed, onMounted } from "vue"
-  import { useMainStore, usePlayerStore, useTextStore } from "@/stores"
+  import { useMainStore, usePlayerStore } from "@/stores"
   import { EAbilities } from "@/assets/enums"
+  import { useTexts } from "@/utils/texts"
 
   const playerStore = usePlayerStore()
-  const textsStore = useTextStore()
   const mainStore = useMainStore()
+  const { abilityTexts } = useTexts()
 
   const playerAbilities = computed(() => playerStore.abilities)
 
@@ -48,14 +49,14 @@
               v-if="!isAllAbilitiesChosen"
               href="#"
               title="Välj"
-              :text="textsStore.abilities[ability]"
+              :text="abilityTexts[ability]"
               @click="playerStore.addPlayerAbility(ability)"
             />
             <span
               v-else
               title="Ta bort en färdighet för att välja denna"
               class="non-active-link"
-              v-text="textsStore.abilities[ability]"
+              v-text="abilityTexts[ability]"
             />
           </li>
         </ul>
@@ -72,7 +73,7 @@
             <a
               href="#"
               title="Ta bort"
-              :text="textsStore.abilities[ability]"
+              :text="abilityTexts[ability]"
               @click="playerStore.removePlayerAbility(index)"
             />
           </li>

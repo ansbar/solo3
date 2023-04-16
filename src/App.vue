@@ -5,14 +5,12 @@
   import Dev from "./views/Dev.vue"
   import SavedInfo from "./views/SavedInfo.vue"
   import { storeToRefs } from "pinia"  
-  import { useMainStore, usePlayerStore, useTextStore } from "./stores"
+  import { useMainStore, usePlayerStore } from "./stores"
   import { onMounted } from "vue"
   import { useStorage } from "@/utils/storage"
   import { computed } from "vue"
   import { EAbilities, EBattleStates } from "./assets/enums"
-  import { languageGeneral } from "@/assets/languages/swedish"
 
-  const textsStore = useTextStore()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const { getStoreFromStorage } = useStorage()  
@@ -32,7 +30,6 @@
   }
 
   const init = () => {
-    textsStore.setGeneralTexts(languageGeneral)
     checkStorage()    
 
     if (mainStore.dev) {
@@ -149,7 +146,7 @@ img {
 
 ul {
   display: block !important;
-  margin: 0;
+  margin: 0.5rem 0;
   padding-left: 1em;
   list-style-type: circle;
 

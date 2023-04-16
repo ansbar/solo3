@@ -10,6 +10,7 @@
     <div class="wrapper">  
       <span v-if="savedData">Ditt data är sparat.</span>
       <span v-else>Ditt spel är INTE sparat</span>
+      <a href="mailto:ansbar@gmail.com?subject=Soloäventyr">Kontakt</a>
     </div>
   </section>
 </template>
@@ -22,6 +23,11 @@
     position: fixed;
     bottom: 0;
     color: #bbb;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+    }
 
     @media screen and (max-width: 600px) {
 

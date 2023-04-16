@@ -4,7 +4,12 @@ export const languageGeneral: ILanguageGeneral = {
   misc: {
     playerName: "Hämnaren",
     damage: "Skada",
-    defense: "Försvar",    
+    defense: "Försvar",
+  },
+  opponents: {
+    none: "",
+    gorobei: "Gorobei",
+    humanEater: "Människoätaren",
     piratecaptain: "Piratkaptenen",
     soldiers: "Soldater",
     magician: "Magikern",
@@ -14,6 +19,7 @@ export const languageGeneral: ILanguageGeneral = {
     snowGiant: "Snöjätten",
     giant: "Den tvåhövdade jätten",
     guard: "Vakten",
+    olvar: "Olvar Barbaren",
     yaemon: "Yaemon"
   },
   help: {

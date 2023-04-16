@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-  import { useMainStore, usePlayerStore, useTextStore, useOpponentStore } from "@/stores"
+  import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
   import { EBattleStates } from "@/assets/enums"
   import { computed, onMounted } from "vue"
+  import { useTexts } from "@/utils/texts"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
-  const textStore = useTextStore()
+  const { helpTexts } = useTexts()
 
   const showInnerStrength = computed(() => {
     /* Cant use inner strength if:
@@ -40,7 +41,7 @@
   <section>
     <div class="text">
       <div v-if="showInnerStrength">
-        Vill du använda din <a :title="textStore.help.innerStrength">inre kraft</a>   
+        Vill du använda din <a :title="helpTexts.innerStrength">inre kraft</a>   
         i attacken ({{ playerStore.attributes.innerStrength }} kvar)?
         <div class="button-group">                    
           <button

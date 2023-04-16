@@ -1,13 +1,14 @@
 <script lang="ts" setup>
-  import { useMainStore, usePlayerStore, useTextStore, usePageStore } from "@/stores"
+  import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
   import { EAbilities, EBattleStates } from "@/assets/enums"
+  import { useTexts } from "@/utils/texts"
 
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const pageStore = usePageStore()
-  const textStore = useTextStore()
   const mainStore = useMainStore()
+  const { choicesTexts, abilityTexts } = useTexts()
 
   // Returns true if player  has the requested ability
   const hasAbility = (ability: EAbilities) => {
@@ -46,7 +47,7 @@
   </ul>
   <!-- Normal case-->
   <ul
-    v-else-if="textStore.page.choices"
+    v-else-if="choicesTexts"
     class="choices"
   >
     <li v-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
@@ -68,8 +69,8 @@
         :title="'Story ' + choice.goto"
         @click="gotoStory(choice.goto)"
       >
-        {{ textStore.page.choices[index] }}
-        <span v-if="choice.ability">({{ textStore.abilities[choice.ability] }})</span>
+        {{ choicesTexts[index] }}
+        <span v-if="choice.ability">({{ abilityTexts[choice.ability] }})</span>
       </a>
 
       <!-- Player lacks ability -->
@@ -78,7 +79,7 @@
         class="non-active-link"
         title="Du saknar denna förmåga"
       >
-        {{ textStore.page.choices[index] }} ({{ textStore.abilities[choice.ability] }})
+        {{ choicesTexts[index] }} ({{ abilityTexts[choice.ability] }})
       </span>
     </li>
   </ul>

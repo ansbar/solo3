@@ -1,8 +1,7 @@
 <script lang="ts" setup>
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
-  import { useMainStore, useOpponentStore, useTextStore, usePageStore, usePlayerStore } from "@/stores"
-  import { languagePages } from "@/assets/languages/swedish"
+  import { useMainStore, useOpponentStore, usePageStore, usePlayerStore } from "@/stores"
   import { pageData } from "@/assets/pages"
   import Opponent from "./Opponent.vue"
   import opponent from "@/assets/opponents"
@@ -18,7 +17,6 @@
   import { useStorage } from "@/utils/storage"
 
   const { setStoreToStorage, removeStoreFromStorage } = useStorage()
-  const textStore = useTextStore()
   const playerStore = usePlayerStore()
   const pageStore = usePageStore()
   const opponentStore = useOpponentStore()
@@ -26,7 +24,7 @@
   const { currentPageId, battlestate } = storeToRefs(useMainStore())
 
   const initPage = (pageId: number) => {
-    textStore.setPageTexts(languagePages[pageId]) // Set all language for page
+    //textStore.setPageTexts(languagePages[pageId]) // Set all language for page
     pageStore.setPageData(pageData[pageId]) // Set all page data, like choices
 
     if (pageStore.opponent) {
@@ -47,7 +45,7 @@
 
   const initStorage = () => {
     // Save some data to local storage at page swap as long as not in combat
-    if (!pageStore.opponent && !pageStore.specialCondition) {
+    if (!pageStore.opponent && !pageStore.specialCondition && !pageStore.sideEffects) {
       setStoreToStorage("main", mainStore)
       setStoreToStorage("player", playerStore)
       mainStore.setSavedData(true)

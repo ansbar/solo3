@@ -1,8 +1,9 @@
 <script lang="ts" setup>
-  import { useTextStore, usePageStore } from "@/stores"
+  import { usePageStore } from "@/stores"
+  import { useTexts } from "@/utils/texts"
 
   const pageStore = usePageStore()
-  const textStore = useTextStore()
+  const { itemTexts, temporaryTexts, attributeTexts, modifierTexts, abilityTexts } = useTexts()
 </script>
 
 <template>
@@ -18,7 +19,7 @@
             v-for="(value, key) in pageStore.sideEffects?.items"
             :key="key"
           >
-            {{ textStore.items[key] }} 
+            {{ itemTexts[key] }} 
             <span v-if="typeof value === 'number'">
               {{ value > 0 ? "+" : "" }}{{ value }}
             </span>
@@ -39,7 +40,7 @@
             v-for="(value, key) in pageStore.sideEffects?.attributes"
             :key="key"
           >
-            {{ textStore.attributes[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
+            {{ attributeTexts[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
           </li>
         </ul>
       </div>
@@ -54,7 +55,7 @@
             v-for="(value, key) in pageStore.sideEffects?.temporary"
             :key="key"
           >
-            {{ textStore.temporary[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
+            {{ temporaryTexts[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
           </li>
         </ul>
       </div>
@@ -69,7 +70,7 @@
             v-for="(value, key) in pageStore.sideEffects?.modifiers"
             :key="key"
           >
-            {{ textStore.modifiers[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
+            {{ modifierTexts[key] }} {{ (value && value > 0) ? "+" : "" }}{{ value }} 
           </li>
         </ul>
       </div> 
@@ -84,7 +85,7 @@
             v-for="(value, key) in pageStore.sideEffects?.abilities"
             :key="key"
           >
-            {{ textStore.abilities[key] }} {{ value ? "har lagts till" : "har tagits bort" }}
+            {{ abilityTexts[key] }} {{ value ? "har lagts till" : "har tagits bort" }}
           </li>
         </ul>
       </div>

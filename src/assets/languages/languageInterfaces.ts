@@ -19,6 +19,7 @@ export interface ILanguageGeneral {
   abilities: TAbilities
   defense: TDefenseType
   misc: ILanguageMisc
+  opponents: ILanguageOpponents
   modifiers: ILanguageModifiers
   attributes: ILanguageAttributes
   items: ILanguageItems
@@ -34,12 +35,23 @@ export interface ILanguageMisc {
   playerName: string
   damage: string
   defense: string
-  piratecaptain: string
+  [key: string]: string
+}
+
+export interface ILanguageOpponents {
+  none: string
+  gorobei: string
+  humanEater: string
   soldiers: string
+  piratecaptain: string
+  magician: string
+  monk: string
   cobraman: string
   snowGiant: string
   goblin: string
   giant: string
+  olvar: string
+  guard: string
   yaemon: string
   [key: string]: string
 }

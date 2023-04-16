@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-  import {  usePlayerStore, useTextStore, useOpponentStore } from "@/stores"
+  import {  usePlayerStore, useOpponentStore } from "@/stores"
   import { storeToRefs } from "pinia"
   import { EAttackType, EDefenseType } from "@/assets/enums"
   import { useOpponents } from "@/utils/opponents"
+  import { useTexts } from "@/utils/texts"
 
   const opponentStore = useOpponentStore()
-  const textStore = useTextStore()
+  const { defenseTexts } = useTexts()
   const { playerDefense } = useOpponents()
 
   const { playerAttackType, playerDamage } = storeToRefs(useOpponentStore())
@@ -38,7 +39,7 @@
         <ul>
           <li>Kroppspoäng: {{ o.hp }}/{{ o.hpMax }}</li>
           <li v-if="playerAttackType !== EAttackType.instant">
-            {{ textStore.defense[playerAttackType as unknown as EDefenseType] }}: {{ o.defense }}
+            {{ defenseTexts[playerAttackType as unknown as EDefenseType] }}: {{ o.defense }}
           </li>
         
           <li v-if="o.damage">
