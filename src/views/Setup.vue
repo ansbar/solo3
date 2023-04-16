@@ -3,7 +3,9 @@
   import { useMainStore, usePlayerStore } from "@/stores"
   import { EAbilities } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
+  import { useGeneric } from "@/utils/generic"
 
+  const { getImageUrl } = useGeneric()
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
   const { abilityTexts } = useTexts()
@@ -36,6 +38,9 @@
 <template>
   <div>
     <h1>Tigerns väg - Hämnaren</h1>
+    <img
+      :src="getImageUrl()"
+    >
     <h2>Välj tre färdigheter</h2>
     <div class="card">
       <div class="first-col">

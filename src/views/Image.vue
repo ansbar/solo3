@@ -1,13 +1,10 @@
 <script lang="ts" setup>
   import { storeToRefs } from "pinia"
-  import { useMainStore, usePageStore } from "@/stores"
+  import { usePageStore } from "@/stores"
+  import { useGeneric } from "@/utils/generic"
 
-  const { image } = storeToRefs(usePageStore())
-  const { currentPageId } = storeToRefs(useMainStore())
-
-  const getImageUrl = () => {
-    return new URL(`../assets/images/${currentPageId.value}.png`, import.meta.url).href
-  }
+  const { image } = storeToRefs(usePageStore())  
+  const { getImageUrl } = useGeneric()
 </script>
 
 <template>

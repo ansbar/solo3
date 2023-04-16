@@ -19,5 +19,7 @@ export function useGeneric() {
     }
   }
 
-  return { doStartOver, gotoPage }
+  const getImageUrl = () => new URL(`/src/assets/images/${mainStore.currentPageId}.png`, import.meta.url).href
+
+  return { doStartOver, gotoPage, getImageUrl }
 }

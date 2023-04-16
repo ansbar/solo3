@@ -7,7 +7,7 @@
 
 <template>
   <div>
-    <h1>Tigerns väg - Hämnaren</h1>
+    <h1>Tigerns väg - soloäventyr</h1>
     <h2 class="red">
       Beta 0.1
     </h2>

@@ -41,6 +41,8 @@
       // If the battle was ended through a page choice
       mainStore.setBattlestate(EBattleStates.none)
     }
+    const el = document.getElementById("app")  
+    if (el) el.scrollIntoView({ behavior: "smooth" })
   }
 
   const initStorage = () => {

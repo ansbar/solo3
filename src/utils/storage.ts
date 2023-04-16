@@ -26,7 +26,6 @@ export function useStorage() {
       store = mainStore.$state
 
     try {
-      window.console.log(store)
       const stringifiedStorage = JSON.stringify(store)
       return localStorage.setItem("solo-" + name, stringifiedStorage)
     } catch (err) {
