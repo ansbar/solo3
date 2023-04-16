@@ -43,6 +43,7 @@ export enum EItems {
 }
 
 export enum EBattleStates {
+  intro = "intro",
   none = "none",
   pending = "pending",
   chooseOpponent = "chooseOpponent",

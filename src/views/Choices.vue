@@ -88,6 +88,10 @@
 .choice {
   margin-bottom: 0.5em;
 
+  @media screen and (max-width: 600px) {
+    margin: 1.3rem 0;
+  }
+
   a {
     color: #1967dd;
   }

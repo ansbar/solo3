@@ -80,6 +80,7 @@ export const useTextStore = defineStore("texts", {
 
   actions: {
     setPageTexts(payload: ILanguagePage) {
+      this.$reset
       this.$patch({ page: payload })
     },
     setGeneralTexts(payload: ILanguageGeneral) {

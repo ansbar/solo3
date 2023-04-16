@@ -55,11 +55,20 @@
     width: 35%;
     padding-right: 3rem;
     border-right: 2px #9eb890 dashed;
+
+    @media screen and (max-width: 600px) {
+      width: 43%;
+      padding-right: 1rem;
+    }
   }
   .opponents {
     padding-left: 3rem;
     > div + div {
       margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding-left: 1rem;
     }
   }
   .dead {

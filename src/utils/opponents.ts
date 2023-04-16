@@ -13,7 +13,7 @@ export function useOpponents() {
     return alive
   })
 
-  // Returns the player defens for current opponent
+  // Returns the player defense for current opponent
   const playerDefense = computed(() => opponentStore.opponents[0].playerDefense[opponentsAlive.value - 1])
 
   return { opponentsAlive, playerDefense }

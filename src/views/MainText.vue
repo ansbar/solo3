@@ -13,6 +13,7 @@
 
 <style lang="scss">
   .main-text {
+    line-height: 1.4;
     white-space: pre-line;
     margin-bottom: 1em;
   }

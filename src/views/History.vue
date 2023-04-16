@@ -22,7 +22,7 @@
 </template>
 
 <style lang="scss">
-  .history {
+  .card.history {
     min-width: 200px;
     max-width: 340px;
     padding-right: 1rem !important;
@@ -33,5 +33,11 @@
     overflow: auto;
     font-size: 14px;
     font-family: monospace;
+  }
+
+  @media screen and (max-width: 600px) {
+    .history {
+      display: none !important;
+    }
   }
 </style>

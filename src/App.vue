@@ -3,57 +3,110 @@
   import Intro from "./views/Intro.vue"
   import Page from "./views/Page.vue"
   import Dev from "./views/Dev.vue"
+  import SavedInfo from "./views/SavedInfo.vue"
   import { storeToRefs } from "pinia"  
-  import { useMainStore, usePlayerStore } from "./stores"
+  import { useMainStore, usePlayerStore, useTextStore } from "./stores"
   import { onMounted } from "vue"
   import { useStorage } from "@/utils/storage"
+  import { computed } from "vue"
+  import { EAbilities, EBattleStates } from "./assets/enums"
+  import { languageGeneral } from "@/assets/languages/swedish"
 
+  const textsStore = useTextStore()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const { getStoreFromStorage } = useStorage()  
-  const { currentPageId, dev } = storeToRefs(useMainStore())
+  const { currentPageId, dev, battlestate } = storeToRefs(useMainStore())
 
-  const init = () => {
+  const checkStorage = () => {
     // Get saved local storage data if it exists and setup.
+    
     const mainStorageData = getStoreFromStorage("main")
     const playerStorageData = getStoreFromStorage("player")
-    if (mainStorageData)
+    if (mainStorageData) {
       mainStore.$state = mainStorageData
+      mainStore.setSavedData(true)
+    }
     if (playerStorageData)
       playerStore.$state = playerStorageData
+  }
+
+  const init = () => {
+    textsStore.setGeneralTexts(languageGeneral)
+    checkStorage()    
+
+    if (mainStore.dev) {
+      playerStore.addPlayerAbility(EAbilities.escapeArtist)
+      playerStore.addPlayerAbility(EAbilities.acrobat)
+      playerStore.addPlayerAbility(EAbilities.immunity)
+      playerStore.addPlayerAbility(EAbilities.climb)
+      playerStore.addPlayerAbility(EAbilities.deflectArrows)
+      playerStore.addPlayerAbility(EAbilities.lockPicker)
+      playerStore.addPlayerAbility(EAbilities.playDead)
+      playerStore.addPlayerAbility(EAbilities.poisonArrows)
+      playerStore.addPlayerAbility(EAbilities.shuriken)
+    }
   }
   
   onMounted(() => {
     init()   
   })
+
+  const showIntro = computed(() => battlestate.value === EBattleStates.intro)
+  const showSetup = computed(() => currentPageId.value === 0 && battlestate.value !== EBattleStates.intro)
+  const showPage = computed(() => currentPageId.value > 0)
 </script>
 
 <template>
   <Dev v-if="dev" />
-  <div class="wrapper">    
-    <!-- <Intro /> -->
-    <Setup v-if="currentPageId === 0" />
-    <Page v-if="currentPageId > 0" />
+  <div class="wrapper app">    
+    <Intro v-if="showIntro" />
+    <Setup v-if="showSetup" />
+    <Page v-if="showPage" />
   </div>
+  <SavedInfo />
 </template>
 
 <style lang="scss">
+@import url("style/normalize.css");
 
 body {
   font-size: 18px;
-  line-height: 1.3em;
+  line-height: 1.5rem;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  padding: 0 10px 80px 0;
+
+  @media screen and (max-width: 600px) {
+    line-height: 1.3rem;
+    font-size: 16px;
+  }  
 }
 
 h1 {
   line-height: initial;
+
+  @media screen and (max-width: 600px) {
+    font-size: 30px;
+  }  
+}
+
+h4 {
+  font-size: 18px;
+
+  &:first-child {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
 }
 
 .wrapper {
   max-width: 700px;
   margin: 0 auto;
+  padding: 10px;
   text-align: left;
+
+  &.app {
+    margin-bottom: 20px;
+  }
 }
 
 .card {
@@ -62,6 +115,11 @@ h1 {
   border-radius: 5px;
   padding: 2em 2.5em 2em 2em;
   margin-bottom: 1.5em;
+
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+    padding: 1em 1.5em 1em 1em;
+  }
 
   h3 {
     margin: 0 0 0.5em 0;
@@ -75,6 +133,10 @@ img {
 .text {
   margin: 1em 0;
   white-space: pre-line;
+
+  &.small {
+    font-size: 14px;
+  }
 
   &:first-child {
     margin-top: 0
@@ -136,6 +198,10 @@ button {
 
   &:hover, &:focus {
     box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+  }
+
+  @media screen and (max-width: 600px) {
+    min-height: 30px;
   }
 }
 </style>

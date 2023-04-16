@@ -45,25 +45,32 @@
     }
   }
 
-  const showSideEffects = () => typeof pageStore.sideEffects === "object"
-
-  onMounted(() => {
-    initPage(currentPageId.value)
-  })
-
-  watch(currentPageId, (pageId) => {
-    initPage(pageId) // Watch for page switch
-
+  const initStorage = () => {
     // Save some data to local storage at page swap as long as not in combat
-    console.log(pageStore.specialCondition)
     if (!pageStore.opponent && !pageStore.specialCondition) {
       setStoreToStorage("main", mainStore)
       setStoreToStorage("player", playerStore)
+      mainStore.setSavedData(true)
     } else {
       // Remove all store data if in battle or some fate/attack roll so that user cant restart battles if unsuccessful.
       removeStoreFromStorage("main")
       removeStoreFromStorage("player")
+      mainStore.setSavedData(false)
     }    
+  }
+
+  const showSideEffects = () => typeof pageStore.sideEffects === "object"
+
+  onMounted(() => {
+    initPage(currentPageId.value)
+
+    if (battlestate.value === EBattleStates.intro)
+      mainStore.setBattlestate(EBattleStates.none)
+  })
+
+  watch(currentPageId, (pageId) => {
+    initPage(pageId) // Watch for page switch
+    initStorage()        
   })
 
   watch(battlestate, (state: EBattleStates) => {
@@ -82,13 +89,8 @@
       && !pageStore.specialCondition
   })
 
-  const showHistory = computed(() => {
-    return pageStore.opponent || pageStore.specialCondition
-  })
-
-  const showNonBattleInfo = computed(() => {
-    return !pageStore.opponent
-  })
+  const showHistory = computed(() => pageStore.opponent || pageStore.specialCondition)
+  const showNonBattleInfo = computed(() => !pageStore.opponent)
 </script>
 
 <template>

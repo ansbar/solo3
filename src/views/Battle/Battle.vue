@@ -61,10 +61,17 @@
   }
 
   .battle {
+    font-family: Times New Roman;
+    font-size: 20px;
     border: 2px dashed #9eb890;
     margin-bottom: 2rem;
     border-radius: 10px;
     padding: 2em 2.5em 2em 2em;
+
+    @media screen and (max-width: 600px) {
+      padding: 1em 1.5em 1em 1em;
+      font-size: 18px;
+    }
 
     &.hide {
       border: 0;

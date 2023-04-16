@@ -5,6 +5,7 @@ interface Main {
   battlestate: EBattleStates
   currentPageId: number
   dev: boolean
+  savedData: boolean
   battleRoundCounter: number
   thrownOpponent?: number
   currentOpponent: number
@@ -14,13 +15,14 @@ interface Main {
 export const useMainStore = defineStore("main", {
   state: (): Main => (
     { 
-      battlestate: EBattleStates.none,
+      battlestate: EBattleStates.intro,
       battleRoundCounter: 1,
       currentPageId: 0,
-      dev: false,
+      dev: true,
       currentOpponent: 0,
       thrownOpponent: undefined,
-      history: []
+      history: [],
+      savedData: false
     }
   ),
   actions: {
@@ -36,6 +38,9 @@ export const useMainStore = defineStore("main", {
     },
     setCurrentOpponent (payload: number){
       this.currentOpponent = payload
+    },
+    setSavedData (payload: boolean){
+      this.savedData = payload
     },
     setThrownOpponent (payload?: number){
       this.thrownOpponent = payload || undefined

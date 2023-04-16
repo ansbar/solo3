@@ -1,7 +1,6 @@
 <script setup lang="ts">
   import { computed, onMounted } from "vue"
   import { useMainStore, usePlayerStore, useTextStore } from "@/stores"
-  import { languageGeneral } from "@/assets/languages/swedish"
   import { EAbilities } from "@/assets/enums"
 
   const playerStore = usePlayerStore()
@@ -11,25 +10,11 @@
   const playerAbilities = computed(() => playerStore.abilities)
 
   onMounted(() => {
-    init()
-
-    if (mainStore.dev) {
-      playerStore.addPlayerAbility(EAbilities.escapeArtist)
-      playerStore.addPlayerAbility(EAbilities.acrobat)
-      playerStore.addPlayerAbility(EAbilities.immunity)
-      playerStore.addPlayerAbility(EAbilities.climb)
-      playerStore.addPlayerAbility(EAbilities.deflectArrows)
-      playerStore.addPlayerAbility(EAbilities.lockPicker)
-      playerStore.addPlayerAbility(EAbilities.playDead)
-      playerStore.addPlayerAbility(EAbilities.poisonArrows)
-      playerStore.addPlayerAbility(EAbilities.shuriken)
-      startGame()
-    }
+    init()    
   })
 
   const init = () => {
     // Todo: let user choose a language
-    textsStore.setGeneralTexts(languageGeneral)
   }
 
   // Abilities not already chosen by player

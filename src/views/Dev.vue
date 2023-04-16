@@ -27,6 +27,10 @@
     width: 100%;
     padding: 20px 0;
     border-bottom: 2px solid #ddd;
+
+    @media screen and (max-width: 600px) {
+      padding: 0
+    }
   }
 
   select {
