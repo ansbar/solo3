@@ -15,7 +15,7 @@
 
 <template>
   <div class="card">
-    <div class="player">
+    <div class="first-col">
       <h3>Hämnaren (du)</h3>
       <ul>
         <li>Kroppspoäng: {{ attributes.hp }}/{{ attributes.hpMax }}</li>
@@ -29,7 +29,7 @@
         <li>Inre kraft: {{ attributes.innerStrength }}</li>
       </ul>
     </div>
-    <div class="opponents">
+    <div class="second-col">
       <div
         v-for="(o) in opponentStore.opponents"
         :key="o.name"
@@ -52,26 +52,6 @@
 </template>
 
 <style lang="scss" scoped>
-  .player {
-    width: 35%;
-    padding-right: 3rem;
-    border-right: 2px #9eb890 dashed;
-
-    @media screen and (max-width: 600px) {
-      width: 43%;
-      padding-right: 1rem;
-    }
-  }
-  .opponents {
-    padding-left: 3rem;
-    > div + div {
-      margin-top: 1rem;
-    }
-
-    @media screen and (max-width: 600px) {
-      padding-left: 1rem;
-    }
-  }
   .dead {
     color: #999;
   }

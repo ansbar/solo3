@@ -102,7 +102,7 @@ h4 {
   text-align: left;
 
   &.app {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
   }
 }
 
@@ -116,6 +116,27 @@ h4 {
   @media screen and (max-width: 600px) {
     font-size: 14px;
     padding: 1em 1.5em 1em 1em;
+  }
+
+  .first-col {
+    width: 35%;
+    padding-right: 3rem;
+    border-right: 2px #9eb890 dashed;
+
+    @media screen and (max-width: 600px) {
+      width: 43%;
+      padding-right: 1rem;
+    }
+  }
+  .second-col {
+    padding-left: 3rem;
+    > div + div {
+      margin-top: 1rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      padding-left: 1rem;
+    }
   }
 
   h3 {

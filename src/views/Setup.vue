@@ -38,7 +38,7 @@
     <h1>Tigerns väg - Hämnaren</h1>
     <h2>Välj tre färdigheter</h2>
     <div class="card">
-      <div>
+      <div class="first-col">
         <h3>Tillgängliga</h3>
         <ul>
           <li
@@ -61,7 +61,7 @@
           </li>
         </ul>
       </div>
-      <div>
+      <div class="second-col">
         <h3 v-if="playerAbilities.length">
           Valda
         </h3>

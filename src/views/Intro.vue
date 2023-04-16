@@ -8,7 +8,9 @@
 <template>
   <div>
     <h1>Tigerns väg - Hämnaren</h1>
-
+    <h2 class="red">
+      Beta 0.1
+    </h2>
     <div class="text small">
       Copyright Mark Smith & Jamie Thomson 1985<br>
       Illustreringar av Bob Harvey<br>
@@ -21,7 +23,11 @@
       Reglerna fungerar enligt originalet och upplevelsen är därför utmanande. 
       Det kommer krävas många försök innan du kommer nära att slutföra äventyret.
     </div>
-    
+
+    <div class="text red">
+      Ungefär 40% av innehållet är portat för tillfället så det går inte att spela klart äventyret.
+      Om du hittar buggar, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten.
+    </div>    
    
     <section class="card">
       <div>
@@ -41,3 +47,9 @@
     Välj färdigheter
   </button>
 </template>
+
+<style lang="scss">
+  .red {
+    color: red
+  }
+</style>

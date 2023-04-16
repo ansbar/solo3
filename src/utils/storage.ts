@@ -1,4 +1,9 @@
+import { usePlayerStore } from "@/stores"
+import { useMainStore } from "@/stores"
+
 export function useStorage() {
+  const playerStore = usePlayerStore()
+  const mainStore = useMainStore()
   type Stores = "main" | "player" 
 
   const getStoreFromStorage = (name: Stores) => {
@@ -13,11 +18,21 @@ export function useStorage() {
     localStorage.removeItem("solo-" + name)
   }
 
-  const setStoreToStorage = (name: Stores, store: any) => {
-    const storeWithoutHistory = { ...store, history: [] }
-    const stringifiedStorage = JSON.stringify(store)
+  const setStoreToStorage = (name: Stores) => {
+    let store 
+    if (name === "player")
+      store = playerStore.$state
+    else if (name === "main")
+      store = mainStore.$state
 
-    return localStorage.setItem("solo-" + name, stringifiedStorage)
+    try {
+      window.console.log(store)
+      const stringifiedStorage = JSON.stringify(store)
+      return localStorage.setItem("solo-" + name, stringifiedStorage)
+    } catch (err) {
+      console.error(err)
+      return false
+    }    
   }
 
   return { getStoreFromStorage, setStoreToStorage, removeStoreFromStorage }

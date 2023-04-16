@@ -46,8 +46,8 @@
   const initStorage = () => {
     // Save some data to local storage at page swap as long as not in combat
     if (!pageStore.opponent && !pageStore.specialCondition && !pageStore.sideEffects) {
-      setStoreToStorage("main", mainStore)
-      setStoreToStorage("player", playerStore)
+      setStoreToStorage("main")
+      setStoreToStorage("player")
       mainStore.setSavedData(true)
     } else {
       // Remove all store data if in battle or some fate/attack roll so that user cant restart battles if unsuccessful.
