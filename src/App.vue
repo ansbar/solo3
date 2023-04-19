@@ -32,7 +32,7 @@
   const init = () => {
     checkStorage()    
 
-    if (mainStore.dev) {
+    if (dev.value) {
       playerStore.addPlayerAbility(EAbilities.escapeArtist)
       playerStore.addPlayerAbility(EAbilities.acrobat)
       playerStore.addPlayerAbility(EAbilities.immunity)

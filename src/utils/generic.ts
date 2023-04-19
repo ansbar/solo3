@@ -1,13 +1,17 @@
 import { useMainStore } from "../stores/mainStore"
 import { EBattleStates } from "../assets/enums"
+import { useStorage } from "./storage"
 
 export function useGeneric() {
   const mainStore = useMainStore()  
+  const storage = useStorage()
 
    // If player loses a battle and is dead
    const doStartOver = () => {
+    storage.removeStoreFromStorage("main")
+    storage.removeStoreFromStorage("player")
     mainStore.currentPageId = 0
-    mainStore.battlestate = EBattleStates.none
+    mainStore.battlestate = EBattleStates.intro
   }
 
   const gotoPage = (pageId: number) => {

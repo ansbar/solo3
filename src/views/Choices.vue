@@ -2,6 +2,7 @@
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
   import { EAbilities, EBattleStates } from "@/assets/enums"
+  import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
 
   const playerStore = usePlayerStore()
@@ -9,6 +10,7 @@
   const pageStore = usePageStore()
   const mainStore = useMainStore()
   const { choicesTexts, abilityTexts } = useTexts()
+  const generic = useGeneric()
 
   // Returns true if player  has the requested ability
   const hasAbility = (ability: EAbilities) => {
@@ -47,18 +49,18 @@
   </ul>
   <!-- Normal case-->
   <ul
-    v-else-if="choicesTexts"
+    v-else
     class="choices"
   >
     <li v-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
       <a
         href="#"
-        @click="gotoStory(1)"
+        @click="generic.doStartOver()"
       >Du är död. Börja om?</a>
     </li>
     <li
       v-for="(choice, index) in pageStore.choices"
-      v-else
+      v-else-if="choicesTexts"
       :key="choice.goto"
       class="choice"
     >

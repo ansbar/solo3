@@ -82,7 +82,6 @@ const opponents: IOpponents = {
       counterGoto: 45,
     },
     win: 58,
-    loss: 45,
     pages: {
       67: {
         playerAttackType: EAttackType.kick,

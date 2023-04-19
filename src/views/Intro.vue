@@ -1,23 +1,29 @@
 <script lang="ts" setup>
   import { EBattleStates } from "@/assets/enums"
   import { useMainStore } from "@/stores"
+  import { useGeneric } from "@/utils/generic"
 
+  const { getImageUrl } = useGeneric()
   const mainStore = useMainStore()
 </script>
 
 <template>
   <div>
     <h1>Tigerns väg - soloäventyr</h1>
+    
     <h2 class="red">
       Beta 0.1
     </h2>
+    <img
+      :src="getImageUrl()"
+    >
     <div class="text small">
       Copyright Mark Smith & Jamie Thomson 1985<br>
       Illustreringar av Bob Harvey<br>
       Översatt av Gunilla Jonsson 1986<br>
       Svensk copyright Äventyrsspel 1986
     </div>
-
+    
     <div class="text">
       Detta är en portad version av boken Hämnaren från 1985. 
       Reglerna fungerar enligt originalet och upplevelsen är därför utmanande. 

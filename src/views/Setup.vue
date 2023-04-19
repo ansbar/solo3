@@ -1,24 +1,14 @@
 <script setup lang="ts">
-  import { computed, onMounted } from "vue"
+  import { computed } from "vue"
   import { useMainStore, usePlayerStore } from "@/stores"
   import { EAbilities } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
-  import { useGeneric } from "@/utils/generic"
 
-  const { getImageUrl } = useGeneric()
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
   const { abilityTexts } = useTexts()
 
   const playerAbilities = computed(() => playerStore.abilities)
-
-  onMounted(() => {
-    init()    
-  })
-
-  const init = () => {
-    // Todo: let user choose a language
-  }
 
   // Abilities not already chosen by player
   const availableAbilities = computed((): EAbilities[] => {
@@ -37,10 +27,7 @@
 
 <template>
   <div>
-    <h1>Tigerns väg - Hämnaren</h1>
-    <img
-      :src="getImageUrl()"
-    >
+    <h1>Tigerns väg - Hämnaren</h1>    
     <h2>Välj tre färdigheter</h2>
     <div class="card">
       <div class="first-col">
