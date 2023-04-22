@@ -508,6 +508,11 @@ export const pageData: IPages = {
       defense: 6,
       opponent: EOpponents.yaemon
     },
+    sideEffects: {
+      items: {
+        shuriken: -3
+      }
+    },
     choices: [
       {
         criteria: true,
@@ -757,6 +762,11 @@ export const pageData: IPages = {
       attack: "2T6",
       defense: 7,
       opponent: EOpponents.manse
+    },
+    sideEffects: {
+      items: {
+        shuriken: -1
+      }
     },
     choices: [
       {
@@ -1066,25 +1076,40 @@ export const pageData: IPages = {
   102: {
     choices: [
       {
-        goto: 67
+        ability: EAbilities.poisonArrows,
+        goto: 90
+      },{        
+        goto: 413
+      },{
+        item: EItems.shuriken,
+        amount: 1,
+        goto: 72
       },
     ]
   },
   103: {
     choices: [
       {
-        goto: 67
+        goto: 4
+      },
+      {
+        goto: 123
       },
     ]
   },
   104: {
     choices: [
       {
-        goto: 67
+        goto: 112
       },
     ]
   },
   105: {
+    sideEffects: {
+      items: {
+        shuriken: -1
+      }
+    },
     choices: [
       {
         goto: 125
@@ -1092,10 +1117,23 @@ export const pageData: IPages = {
     ]
   },
   106: {
+    opponent: EOpponents.olvar,
     choices: [
       {
-        goto: 67
-      },
+        goto: 1060
+      }
+    ]
+  },
+  1060: {
+    opponent: EOpponents.olvar,
+    choices: [
+      {
+        goto: 92
+      }, {
+        goto: 23
+      }, {
+        goto: 39
+      }
     ]
   },
   107: {
@@ -1109,13 +1147,7 @@ export const pageData: IPages = {
       }
     ]
   },
-  108: {
-    choices: [
-      {
-        goto: 67
-      },
-    ]
-  },
+  108: {},
   109: {
     choices: [
       {

@@ -781,21 +781,24 @@ export const languagePages: ILanguagePages = {
     ]
   },
    102: {
-    mainText: "",
+    mainText: "Amuletten splittras, bitama glänser när de faller nedför trappan som bitar från en splittrad vas. Dödsmagikem är förvånad över att du stod emot hans infernaliska trollkonst, men han börjar förbereda en annan besvärjelse. Hans åldriga ord frammanar visioner av förmänsklig ondska och illviljan hos länge sedan glömda gudar.",
     choices: [
-      ""
+      "Du kan använda en giftpil",
+      "Annars kan du gå till angrepp",
+      "eller kasta en Shuriken"
     ]
   },
    103: {
-    mainText: "",
+    mainText: "Du vänder dig om och springer men, när de avslutar sin ondskefulla besvärjelse blir dina rörelser långsammare, lemmarna känns tunga som bly och det är bara med stor ansträngning som du kan få dem att röra sig överhuvudtaget. Du stapplar fram till floden och försvinner ur sikte bakom några sävsnår.",
     choices: [
-      ""
+      "Du kan glida ned i ﬂoden och hålla dig under ytan genom att andas genom det smäckra bamburöret",
+      "Om du hellre rullar ned en sten i ﬂoden och långsamt krälar bort genom säven"
     ]
   },
    104: {
-    mainText: "",
+    mainText: "\"Ja,\" säger vakten, \"det är en vacker stad. Jag seglade dit en gång med ett skepp. Kom in då..\" Du tackar honom och går in under fällgallret till borggården bakom.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   105: {
@@ -804,10 +807,18 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
-   106: {
-    mainText: "",
+  106: {
+    mainText: "Barbaren stelnar till när du lägger pilen på din hoprullade tunga och spottar ut den i en enda flytande rörelse. Pilen genomborrar hans kind, men han har en järnfysik och trots att en grimas av smärta förvrider hans ansiktsdrag, lyckas hans kropp övervinna det kraftiga giftet. Du kan anteckna att han har förlorat 4 KROPPSPOÄNG.",
     choices: [
-      ""
+      "Gå vidare",
+    ]
+  },
+  1060: {
+    mainText: "Medan du står stilla av förvåning hugger han mot dig och hans svärd skär genom luften mot din axel. Du har 8 i Försvar mot hugget när du höjer din vänstra underarm för att svepa svärdet åt sidan. Om han träffar dig gör svärdet 1T6+1 i skada.",
+    choices: [
+      "Du kan använda Kobraslaget",
+      "eller Bevingade hästens spark",
+      "eller Draksvansen"
     ]
   },
   107: {
@@ -819,13 +830,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   108: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Du använder andningsröret för att få luft, men efter tio minuter i den frysande vallgraven bestämmer du dig för att riskera att krypa upp och börja klättra. Änterhaken, som är lindad med ﬁlt, fastnar och du tar dig snabbt och ljudlöst upp till bröstvämet. När du kikar över bröstvärnet grips du av en egendomlig skräck och för ett ögonblick är du stel av rädsla. Det är tillräckligt för att Honoric ska hinna begrava sitt Magiska svärd, Sorcerak, i ditt huvud och du faller tillbaka ned i vallgraven, död. En av vakterna hörde dig i vallgraven när grodorna slutade kväka.",
   },
   109: {
-    mainText: "",
+    mainText: "Du griper med händerna om dess underarm - den är för ohanterlig för att hoppa undan, men i stället slår det upp eld över hela dess kropp och du blir svårt bränd. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever när du hoppar bakåt, oförmögen att göra något Virvelkast, träffas du av dess glödande näve. Ditt Försvar när du försöker kasta dig åt sidan är 6.",
     choices: [
       ""
     ]
