@@ -8,11 +8,9 @@
 
   onMounted(() => {
     /* Show opponent list to choose from if more than one opponent
-     * Also skip choice if player did a succesful throw (the next attack should be the same opponent)
+     * Skip choice if player did a succesful throw (the next attack should be the same opponent)
      * Otherwise carry on to next phase */
-    if (opponentStore.opponents.length === 1) {
-      mainStore.battlestate = EBattleStates.innerStrength
-    } else if (mainStore.thrownOpponent) {
+    if (mainStore.thrownOpponent) {
       mainStore.setCurrentOpponent(mainStore.thrownOpponent)
       mainStore.battlestate = EBattleStates.innerStrength      
     }

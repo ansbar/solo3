@@ -74,6 +74,15 @@ export const pageData: IPages = {
     ]
   },
   8: {
+    opponent: EOpponents.olvar,
+    choices: [
+      {
+        goto: 800
+      }
+    ]
+  },
+  800: {
+    opponent: EOpponents.olvar,
     choices: [
       {
         goto: 377
@@ -680,14 +689,37 @@ export const pageData: IPages = {
   68: {
     choices: [
       {
-        goto: 75,
+        goto: 367,
+      },
+      {
+        goto: 319
       }
     ]
   },
   69: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.acrobat,
+        goto: 350,
+      },{
+        goto: 690,
+      }
+    ]
+  },
+  690: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 7,
+      opponent: EOpponents.yaemon
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 411,
+      }, {
+        criteria: false,
+        goto: 24,
       }
     ]
   },
@@ -720,9 +752,19 @@ export const pageData: IPages = {
     ]
   },
   72: {
+    specialCondition: {
+      type: "shuriken",
+      attack: "2T6",
+      defense: 7,
+      opponent: EOpponents.manse
+    },
     choices: [
       {
-        goto: 75,
+        criteria: true,
+        goto: 49,
+      }, {
+        criteria: false,
+        goto: 60,
       }
     ]
   },
@@ -742,7 +784,11 @@ export const pageData: IPages = {
   74: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.escapeArtist,
+        goto: 277,
+      },
+      {
+        goto: 38,
       }
     ]
   },
@@ -792,17 +838,32 @@ export const pageData: IPages = {
   78: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.acrobat,
+        goto: 233,
+      },
+      {
+        goto: 780,
       }
     ]
   },
-  79: {
+  780: {
+    specialCondition: {
+      type: "shuriken",
+      attack: "2T6",
+      defense: 7,
+      opponent: EOpponents.runeweaver
+    },
     choices: [
       {
-        goto: 75,
+        criteria: true,
+        goto: 292,
+      }, {
+        criteria: false,
+        goto: 365,
       }
     ]
   },
+  79: {},
   80: {
     sideEffects: {
       temporary: {
@@ -819,13 +880,7 @@ export const pageData: IPages = {
       }
     ]
   },
-  81: {
-    choices: [
-      {
-        goto: 75,
-      }
-    ]
-  },
+  81: {},
   82: {
     choices: [
       {
@@ -853,15 +908,30 @@ export const pageData: IPages = {
   84: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.acrobat,
+        goto: 350,
+      },{
+        goto: 690,
       }
     ]
   },
   85: {
+    sideEffects: {
+      attributes: {
+        hp: -8
+      }
+    },
     choices: [
       {
-        goto: 75,
-      }
+        goto: 377,
+      },{
+        goto: 302,
+      },{
+        goto: 318,
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 8,
+      },
     ]
   },
   86: {
@@ -1622,7 +1692,7 @@ export const pageData: IPages = {
     opponent: EOpponents.humanEater,
     sideEffects: {
       items: {
-        "shuriken": -1
+        shuriken: -1
       },
     },
     choices: [

@@ -21,7 +21,9 @@ export const languageGeneral: ILanguageGeneral = {
     guard: "Vakten",
     olvar: "Olvar Barbaren",
     priests: "Präster",
-    yaemon: "Yaemon"
+    yaemon: "Yaemon",
+    manse: "Manse Dödsmagikern",
+    runeweaver: "Runvävaren"
   },
   help: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -121,9 +123,15 @@ export const languagePages: ILanguagePages = {
     ]
   },
   8: {
-    mainText: "Barbaren stelnar till när du lägger pilen på din hoprullade tunga och spottar ut den i en enda flytande rörelse. Pilen genomborrar hans kind, men han har en järnfysik och trots att en grimas av smärta förvrider hans ansiktsdrag, lyckas hans kropp övervinna det kraftiga giftet. Du kan anteckna att han har förlorat 4 KROPPSPOANG. Medan du står stilla av förvåning hugger han mot dig och hans svärd skär genom luften mot din axel. Du har 8 i Försvar mot hugget när du höjer din vänstra underarm för att svepa svärdet åt sidan. Om han träffar dig gör svärdet 1T6+1 i skada.",
+    mainText: "Barbaren stelnar till när du lägger pilen på din hoprullade tunga och spottar ut den i en enda flytande rörelse. Pilen genomborrar hans kind, men han har en järnfysik och trots att en grimas av smärta förvrider hans ansiktsdrag, lyckas hans kropp övervinna det kraftiga giftet. Du kan anteckna att han har förlorat 4 KROPPSPOÄNG.",
     choices: [
-      "Om du överlever kan du använda Kobraslaget",
+      "Gå vidare",
+    ]
+  },
+  800: {
+    mainText: "Medan du står stilla av förvåning hugger han mot dig och hans svärd skär genom luften mot din axel. Du har 8 i Försvar mot hugget när du höjer din vänstra underarm för att svepa svärdet åt sidan. Om han träffar dig gör svärdet 1T6+1 i skada.",
+    choices: [
+      "Du kan använda Kobraslaget",
       "eller Bevingade hästens spark",
       "eller Draksvansen"
     ]
@@ -230,7 +238,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   24: {
-    mainText: "När hans fot närmar sig ditt huvud försöker du tvinga upp din högra handﬂata mot hans fotled för att tvinga hans ben över ditt huvud, men du har missbedömt det och din arm klyver luften förbi hans ben. Hans fot slår in i ditt ansikte. Hans INRE KRAFT är förlamande stark och det sprutar blod från din sönderslagna näsa och dina spruckna läppar. Du förlorar 10 KROPPSPOANG. Om du fortfarande lever kastas du bakåt av kraften i sparken. Du använder all din viljestyrka för att förtränga smärtan och ta dig upp på fötter, när Yaemon kommer rusande för att angripa igen.",
+    mainText: "När hans fot närmar sig ditt huvud försöker du tvinga upp din högra handﬂata mot hans fotled för att tvinga hans ben över ditt huvud, men du har missbedömt det och din arm klyver luften förbi hans ben. Hans fot slår in i ditt ansikte. Hans INRE KRAFT är förlamande stark och det sprutar blod från din sönderslagna näsa och dina spruckna läppar. Du förlorar 10 KROPPSPOÄNG. Om du fortfarande lever kastas du bakåt av kraften i sparken. Du använder all din viljestyrka för att förtränga smärtan och ta dig upp på fötter, när Yaemon kommer rusande för att angripa igen.",
     choices: [
       "Du har inte tid att sparka, men du kan försöka slå",
       "eller kasta honom"
@@ -269,7 +277,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   30: {
-    mainText: "Ett väldigt Troll med vårtig, grön och slemmig hud, kommer rusande ut ur dimman och stannar upp framför dig. Du sparkar och slår för allt vad du är värd, men så snart du åstadkommer ett sår läks det igen på magisk väg. Det uppslitna köttet kryper över benen för att förenas igen och lämnar bara efter sig purpurfärgade ärr. Trollet klöser till dig och du förlorar 4 KROPPSPOANG. Om du fortfarande lever, ser det som om du kommer att förlora striden.",
+    mainText: "Ett väldigt Troll med vårtig, grön och slemmig hud, kommer rusande ut ur dimman och stannar upp framför dig. Du sparkar och slår för allt vad du är värd, men så snart du åstadkommer ett sår läks det igen på magisk väg. Det uppslitna köttet kryper över benen för att förenas igen och lämnar bara efter sig purpurfärgade ärr. Trollet klöser till dig och du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever, ser det som om du kommer att förlora striden.",
     choices: [
       "Om du vänder dig om och ﬂyr så fort du kan",
       "Om du har färdigheten Spela död"
@@ -527,16 +535,25 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Han anfaller dig med morgonstjärnan. Ditt Försvar mot den pliggade kulan och kedjan är 7"
   },
-  68: {
-    mainText: "",
+  68: { // Todo Du måste bestämma nu om du ska använda INRE KRAFT om du har någon kvar.
+    mainText: "Han är alldeles för snabb för att du ska kunna använda Tigertandskastet. Du måste bestämma nu om du ska använda INRE KRAFT om du har någon kvar.",
     choices: [
-      ""
+      "Du kan använda Virvelkastet när han rusar fram",
+      "eller Draksvanskastet"
     ]
   },
   69: {
-    mainText: "",
+    mainText: "Så snart du kan, lägger du en nål på tungan samtidigt som du virvlar fram genom luften för att komma inom räckhåll. När du landar på fötterna spottar du hårt och pilen ﬂyger iväg mot Yaemon. Han gör inget försök att flytta sig, men så, till din förvåning, blåser han den lilla pilen åt sidan, centimetrar från ansiktet. Sedan hukar han sig ned och hoppar upp högt i luften mot dig med vänstra benet utsträckt i en flygande Bevingade hästens spark riktad mot ditt huvud. Han uppger ett väldigt tjut och du inser att han använder lnre kraft.",
     choices: [
-      ""
+      "Om du har färdigheten Akrobatik",
+      "Om du inte har det kan du inte göra annat än att försöka blockera sparken."
+    ]
+  },
+  690: {
+    mainText: "Då du inte har färdigheten Akrobatik måste du blockera Yaemons anfall. Du har 8 i Försvar",
+    choices: [
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   70: {
@@ -556,9 +573,10 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Om några fortfarande lever angriper de dig med sina stridsklubbor. Var och en har ett individuellt anfall"
   },
   72: {
-    mainText: "",
+    mainText: "Hans veka hand gör en rörelse i luften och en svagt glödande sköld formas framför honom. Du kastar en Shuriken med all din kraft och hoppas bryta igenom hans förtrollade skydd. Gör ett Anfallsslag.",
     choices: [
-      ""
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   73: {
@@ -570,9 +588,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   74: {
-    mainText: "",
+    mainText: "Du halar dig ljudlöst upp ur vallgraven och börjar den svåra klättringen uppför slottsmuren med hjälp av Kattkloma för att få grepp i varje tänkbar skreva. Du ska just kika över bröstvärnet när de långsamma stegen från en patrullerande vakt passerar ovanför dig. Du hänger ljudlöst kvar och trycker dig mot muren när han oförklarligt stannar för att titta ut över vallgraven. Dina armar värker av ansträngning när han går i väg mot det närmaste tomet efter tio minuter, och du tar dig över bröstvärnet. Du använder änterhaken och repet för att snabbt ta dig ned till Borggården nedanför. Anterhaken lossnar när du skakar på repet och du fångar den. När du ser dig omkring inser du att du bara har tagit dig in på den yttre borggården. Det finns ytterligare en mur mellan dig och lnre borggården som omger Stora kärntornet. Det finns ett smalt hål i väggen som används för att räcka över vapen och mat när porten är stängd.",
     choices: [
-      ""
+      "Om du har färdigheten Utbtytarkonst kan du försöka ta dig igenom det",
+      "Annars kan du använda dina färdigheter i Klättring för att bestiga muren till lnre borggården"
     ]
   },
   75: {
@@ -599,16 +618,21 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Han anfaller dig med sin morgonstjärna. Ditt Försvar mot kulan och kedjan är 8"
   },
   78: {
-    mainText: "",
+    mainText: "När du springer fram för att anfalla, pekar Runvävare med sitt svärd mot dig och uttalar en besvärjelse. Ett klot av grön energi slår ut mot dig från svärdsspetsen.",
     choices: [
-      ""
+      "Om du har färdigheten Akrobatik kan du försöka hoppa upp i luften, göra en volt över den och kasta dig mot krigarmagikern",
+      "Om du inte är Akrobat eller inte vill försöka göra det, kan du leda undan den med en Shuriken."
+    ]
+  },
+  780: {
+    mainText: "Du försöker leda undan klotet med en shuriken. Klotets försvar är 7.",
+    choices: [
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   79: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Ditt försök att infiltrera slottet verkar gå bra, när du efter många äventyr går från Inre borggården till Stora kärntornet. Men trots all din försiktighet har en skarpögd vakt fått syn på dig i ljuset från fullmånen.\nDet strömmar ut män från Kärntornet mot dig och du vänder om för att fly men vägen är blockerad av Honoric och gardeskaptenen. Du dödar kaptenen, men vaktema är snart över dig och du kan inte blockera deras stötar och parera de mäktiga huggen från Honorics svärd på samma gång. Ditt huvud flyger i väg från dina axlar och Honoric står kvar, obesegrad.",
   },
   80: {
     mainText: "Du går fram för att anfalla, men gör plötsligt en volt och landar vid sidan om Gorobei när hans näve sveper i luften över den punkt där du stod. Han vänder sig mot dig, men du har överraskat honom och det blir lättare att anfalla honom än om du bara stod framför honom och utväxlade slag. Du får lägga två till tärningsslaget för det första anfallet.",
@@ -619,10 +643,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   81: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "När du klättrar upp till Stormjättevägen blir luften kallare och snön börjar falla. Det finns inga stigar, annat än de som trampats upp av bergsgetter och till och med de är snart igensnöade. Du är vid den högsta punkten i passet när en molnbank samlas ovanför dig. Du tittar upp och ser vad som tycks vara en jättestaty på den närmaste bergstoppen. Snön faller tungt när en blixt slår ut från toppen mot bergssidan ovanför. Det hörs ett plötsligt mullrande och du börjar springa, men den framrusande lavinen som sattes igång av blixten hinner ikapp dig. Du krossas till döds under lavinen.",
   },
   82: {
     mainText: "Dina fingrar slår fram som stålkäppar mot en av angriparna och du hoppas fånga honom i armhålan, där han inte är skyddad av ringbrynjan. Du kan välja vem du vill anfalla.",
@@ -640,15 +661,19 @@ export const languagePages: ILanguagePages = {
     ]
   },
   84: {
-    mainText: "",
+    mainText: "Du vänder dig åt sidan och riktar med ett vrål en Bevingade hästens spark rakt mot hans huvud. Yaemon, som förutser vad du tänker göra. lägger sig på rygg och kör in sin fot i din ljumske när din spark sveper över huvudet på honom. Du viker dig dubbel av smärta när han lägger sina fötter runt din hals och vrider till i en våldsam cirkel i luften, en variant av Tigertandskastet. Du kan inte kontrollera dig själv för smärtan och faller hjälplöst samman i en hög. Du förlorar 6 KROPPSPOÄNG. Om du fortfarande lever tar du dig upp på fötter så snabbt du kan och hoppar utom räckhåll för Yaemons slag. Men när du stannar upp hoppar han genom luften mot dig, med vänster ben utsträckt i en Bevingade hästens spark.",
     choices: [
-      ""
+      "Om du har färdigheten Akrobatik",
+      "Om du inte har det kan du bara försöka blockera"
     ]
   },
   85: {
-    mainText: "",
+    mainText: "Blixten träffar dig i sidan. Den bränner ditt kött och stöter till dig som om du hade träffats av en murbräcka. Du slängs in i den bortre väggen och förlorar 8 KROPPSPOÄNG. Om du fortfarande är vid liv, snurrar du genom luften och landar säkert på föttema. Du övervinner smärtan när barbaren rör sig framåt för att anfalla dig med sitt långsvärd.",
     choices: [
-      ""
+      "Du kan använda Kobraslaget",
+      "eller Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "Om du har färdigheten Giftpilar, kan du använda en sådan"
     ]
   },
   86: {

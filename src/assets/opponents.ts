@@ -293,6 +293,20 @@ const opponents: IOpponents = {
     },
     win: 47,
     pages: {
+      8: {
+        playerAttackType: EAttackType.instant,
+        playerDamage: "4",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },
+      800: {
+        playerAttackType: EAttackType.defense,
+        playerDamage: "",
+        playerDefense: [8],
+        damage: ["1T6+1"],
+        defense: []
+      },
       23: {
         playerAttackType: EAttackType.kick,
         playerDefense: [8],

@@ -38,7 +38,7 @@
         <h3>{{ o.name }}</h3>
         <ul>
           <li>Kroppspoäng: {{ o.hp }}/{{ o.hpMax }}</li>
-          <li v-if="playerAttackType !== EAttackType.instant">
+          <li v-if="playerAttackType !== EAttackType.instant && o.defense">
             {{ defenseTexts[playerAttackType as unknown as EDefenseType] }}: {{ o.defense }}
           </li>
         

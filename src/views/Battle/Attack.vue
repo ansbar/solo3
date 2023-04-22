@@ -26,10 +26,13 @@
 
   onMounted(() => {
     // If attack is instant only the damage part is needed
-    if(opponentStore.playerAttackType !== EAttackType.instant)
-      attack()
+    if(opponentStore.playerAttackType === EAttackType.instant)
+      doDamage()    
+    // If battle starts with defense phase
+    else if (opponentStore.playerAttackType === EAttackType.defense)
+      commitBattleState("defend")
     else
-      doDamage()      
+      attack()        
   })
 
   const commitBattleState = (battleState: string) => {
@@ -93,7 +96,15 @@
 
   // Damage on opponent
   const doDamage = () => {
-    let damageRoll = dice.doRoll(opponentStore.playerDamage || "", playerStore.temporary.damageModifier)  
+    if (!opponentStore.playerDamage) return
+
+    let damageRoll = 0
+    // If constant damge (not a roll like 1T6) we skip damageRoll
+    if (opponentStore.playerDamage.length > 2)
+      damageRoll = dice.doRoll(opponentStore.playerDamage || "", playerStore.temporary.damageModifier)  
+    else
+      damageRoll = parseInt(opponentStore.playerDamage)
+
     let innerStrengthText = ""
     let damageModifierText = ""
               

@@ -1,7 +1,7 @@
 <script lang="ts" setup>
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
-  import { useMainStore, useOpponentStore, usePageStore, usePlayerStore } from "@/stores"
+  import { useMainStore, useOpponentStore, usePageStore } from "@/stores"
   import { pageData } from "@/assets/pages"
   import Opponent from "./Opponent.vue"
   import opponent from "@/assets/opponents"
@@ -13,34 +13,44 @@
   import SpecialCondition from "./SpecialCondition.vue"
   import History from "./History.vue"
   import NonBattleInfo from "./NonBattleInfo.vue"
-  import { EBattleStates } from "@/assets/enums"
+  import { EAttackType, EBattleStates } from "@/assets/enums"
   import { useStorage } from "@/utils/storage"
 
   const { setStoreToStorage, removeStoreFromStorage } = useStorage()
-  const playerStore = usePlayerStore()
   const pageStore = usePageStore()
   const opponentStore = useOpponentStore()
   const mainStore = useMainStore()
   const { currentPageId, battlestate } = storeToRefs(useMainStore())
 
+  // When a page change happends
   const initPage = (pageId: number) => {
-    //textStore.setPageTexts(languagePages[pageId]) // Set all language for page
     pageStore.setPageData(pageData[pageId]) // Set all page data, like choices
 
-    if (pageStore.opponent) {
-      // If an opponent exists on page
-      if (battlestate.value === "none") {
-        // Init opponent data once per battle
+    // If an opponent exists on page
+    if (pageStore.opponent) {      
+      // Init opponent data once per battle
+      if (battlestate.value === "none") {       
         mainStore.clearHistory()
         opponentStore.setOpponentStaticData(opponent[pageStore.opponent], currentPageId.value)          
       }
+
       // Set opponent page data every page switch
       opponentStore.setOpponentPageData(opponent[pageStore.opponent].pages[currentPageId.value])
-      mainStore.setBattlestate(EBattleStates.chooseOpponent)
+      if (opponentStore.playerAttackType === EAttackType.defense) {
+        // Skip attack if player wont be able to attack
+        mainStore.battlestate = EBattleStates.defend
+      } else if (opponentStore.opponents.length === 1) {
+        // Skip chooseOpponent if only one opponent
+        mainStore.battlestate = EBattleStates.innerStrength
+      } else {
+        mainStore.setBattlestate(EBattleStates.chooseOpponent)
+      }      
     } else if (pageStore.autoEndBattle) {
       // If the battle was ended through a page choice
       mainStore.setBattlestate(EBattleStates.none)
     }
+
+    // Scroll to top
     const el = document.getElementById("app")  
     if (el) el.scrollIntoView({ behavior: "smooth" })
   }

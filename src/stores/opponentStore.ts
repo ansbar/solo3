@@ -32,7 +32,7 @@ export const useOpponentStore = defineStore("opponent", {
     counter: undefined,
     counterGoto: undefined,
     missAbility: undefined,
-    playerAttackType: EAttackType.instant,
+    playerAttackType: EAttackType.none,
     playerAttackValue: undefined,
     playerDamage: undefined,
     blockable: undefined,

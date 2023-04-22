@@ -29,7 +29,9 @@ export enum EOpponents {
   olvar = "olvar",
   guard = "guard",
   priests = "priests",
-  yaemon = "yaemon"
+  yaemon = "yaemon",
+  manse = "manse",
+  runeweaver = "runeweaver"
 }
 
 export enum EItems {
@@ -71,7 +73,8 @@ export enum EAttackType {
   punch = "punch",
   kick = "kick",
   throw = "throw",
-  instant = "instant"
+  instant = "instant",
+  defense = "defense"
 }
 
 export enum EBattleModifiers { 
