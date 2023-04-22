@@ -1,20 +1,33 @@
 <script lang="ts" setup>
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
-  import { EAbilities, EBattleStates } from "@/assets/enums"
+  import { EAbilities, EBattleStates, EItems } from "@/assets/enums"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
+  import { IChoice } from "@/stores/pageInterfaces"
 
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const pageStore = usePageStore()
   const mainStore = useMainStore()
-  const { choicesTexts, abilityTexts } = useTexts()
+  const { choicesTexts, abilityTexts, itemTexts } = useTexts()
   const generic = useGeneric()
 
   // Returns true if player  has the requested ability
   const hasAbility = (ability: EAbilities) => {
+    console.log("hasAbility", ability, playerStore.abilities.includes(ability))
     if (playerStore.abilities.includes(ability))
+      return true
+    return false
+  }
+
+  // Returns true if player has enough of the requested item
+  const hasItem = (item: EItems, amount?: number) => {
+    // Some items like shuriken can the you have multiple of
+    console.log("hasItem", item, amount, amount && playerStore.items[item] as number >= amount,!amount && playerStore.items[item] as boolean)
+    if (amount && playerStore.items[item] as number >= amount)
+      return true
+    else if (!amount && playerStore.items[item] as boolean)
       return true
     return false
   }
@@ -26,6 +39,16 @@
     } else {
       mainStore.setCurrentPageId(pageId)
     }
+  }
+
+  // Checks if there is a condition for displaying the choice. Either an ability or an item
+  const fulfillsChoiceCondition = (choice: IChoice) => {
+    if (choice.ability) {
+      return hasAbility(choice.ability)
+    } else if (choice.item) {
+      return hasItem(choice.item, choice.amount)
+    } 
+    return true
   }
 
   const handleCounterGoto = () => {
@@ -64,24 +87,27 @@
       :key="choice.goto"
       class="choice"
     >
-      <!-- If player has ability OR choice has no ability dependence -->
+      <!-- If no condition exists or if player fulfills condition -->
       <a
-        v-if="!choice.ability || hasAbility(choice.ability)"
+        v-if="fulfillsChoiceCondition(choice)"
         href="#"
         :title="'Story ' + choice.goto"
         @click="gotoStory(choice.goto)"
       >
         {{ choicesTexts[index] }}
         <span v-if="choice.ability">({{ abilityTexts[choice.ability] }})</span>
+        <span v-if="choice.item">({{ itemTexts[choice.item] }})</span>
       </a>
 
       <!-- Player lacks ability -->
       <span
         v-else
         class="non-active-link"
-        title="Du saknar denna förmåga"
+        title="Du saknar denna förmåga eller föremål"
       >
-        {{ choicesTexts[index] }} ({{ abilityTexts[choice.ability] }})
+        {{ choicesTexts[index] }} 
+        <span v-if="choice.ability">({{ abilityTexts[choice.ability] }})</span>
+        <span v-if="choice.item">({{ itemTexts[choice.item] }})</span>
       </span>
     </li>
   </ul>

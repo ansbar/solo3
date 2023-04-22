@@ -693,27 +693,27 @@ export const languagePages: ILanguagePages = {
     directWin: "Du har lyckats kasta honom och han slungas över relingen på akterkastellet ned i havet."
   },
   88: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Det är bara Yaemon som lägger märke till att du lägger pilen i munnen och när du vänder dig om och spottar pilen mot honom knäpper han till med fingrarna och fångar den skickligt mellan tummen och fingret, några centimetrar framför ansiktet. \"Döda honom,\" säger han och Manse Dödsmagikern, som är ivrig att visa sina konster, lyder. Han håller ut händerna mot dig som om han höll i en apelsin och gör några tecken. Till din fasa slits hjärtat ut ur bröstkorgen på dig och ﬂyger till hans hand. Han klämmer det pulserande organet och golvet dränks i blod när du faller död ned.",
   },
   89: {
-    mainText: "",
+    mainText: "Du snurrar mot Yaemon och anfaller.",
     choices: [
-      ""
+      "Om du ska du slå",
+      "eller sparka",
+      "eller kasta"
     ]
   },
   90: {
-    mainText: "",
+    mainText: "Hans smäckra händer sveper genom luften och en svagt glödande sköld som stoppar nålen, bildas framför honom. Med glödande ögon som är fyllda av hat börjar han förbereda en ny besvärjelse.",
     choices: [
-      ""
+      "Du beslutar dig för att anfalla honom i närstrid"
     ]
   },
   91: {
-    mainText: "",
+    mainText: "Regnet dämpas något när du långsamt tar dig över vallgraven. Du hör knarrandet från vaktens häl mot gruset när han vänder sig för att titta ut över vattnet, oroad av oxgrodornas plötsliga tystnad. Du glider ned under ytan",
     choices: [
-      ""
+      "Ödet ler mot dig vänder sig vakten bort",
+      "Ödet vänder ryggen åt dig"
     ]
   },
   92: {
@@ -744,9 +744,11 @@ export const languagePages: ILanguagePages = {
     ]
   },
   96: {
-    mainText: "",
+    mainText: "Du är ibland dem innan de kan avsluta vadhelst ondsint besvärjelse de hade börjat med och de använder sina stridsklubbor mot dig istället. De bär hela ringbrynjor och är väl skyddade men långsamma.",
     choices: [
-      ""
+      "Du kan använda Tigertandskastet",
+      "eller Kobraslaget",
+      "eller en Kluven blixtspark"
     ]
   },
   97: {
@@ -761,18 +763,51 @@ export const languagePages: ILanguagePages = {
     mainText: "När du vadar genom träsket vänder sig Shaggothen med ett vedervärdigt slurpande ljud och Svartalven slår sig fri från de sugande tentaklerna. Hon ler av tacksamhet så att hennes stora mandelögon blir till springor. Ni vänder er för att möta Shaggothen tillsammans, men du slungas plötsligt in i vecken på dess ruttnande kött av ett slag från alvens svärd. Hon skrattar rått och vadar ut till båten medan du förgäves försöker ta dig loss från den slemmiga bestens grepp. Den sjunker långsamt ned i träsket och drar dig med sig. Din näsa och dina lungor fylls med gyttja medan du hjälplöst kämpar. När träsket torkar upp kommer inte ens dina ben att finnas kvar. "
   },
   99: {
-    mainText: "",
+    mainText: "Du är bevakad hela tiden, men du har tid att undersöka låset till porten som leder in till lnre borggården och du hittar ett hål i väggen som används till att skicka mat och vapen igenom när porten är låst. \nNär tiden är inne tas du in i själva Kämtomet. Huvudhallen har en stor spiraltrappa som leder till slottets tak och vidare till tre torn. Du föses in i samtalsrummet före middagen för att underhålla Yaemon och Honoric. Manse Dödsmagikem syns inte till någonstans.\nYaemon iakttar dig noga, men Honoric verkar avslappnad och häller vin från en karaff i en guldbägare. Slottskaptenen och hans dam sitter mellan dem. Du sjunger en sång från Människoländerna om tappra krigardåd och förlorad kärlek och din jonglering ger en artig applåd.\nSå snart din föreställning är slut ger Kaptenen signal och din eskort, två vakter, föser ut dig ur samtalsrummet just när Manse kommer in genom den motsatta dörren.",
     choices: [
-      ""
+      "Om du har färdigheten Gittpilar kan du använda den mot Yaemon",
+      "Om du inte har den eller inte vill använda den kan du låta vakterna eskortera dig ut ur slottet"
     ]
   },
   100: {
     mainText: "När du knäfaller framför det stora altaret bland de många valven i katedralen med domen, godtar Ödesgudinnan dig som hennes tjänare. På samma gång tar din egen gud, Kwon, avstånd från dig och din INRE KRAFT tas ifrån dig så att du försvagas. Det bekymrar dig inte, för nu vet du att det var ödesbestämt att det skulle ske, och det är meningslöst att ångra det. Ditt uppdrag att döda Yaemon ter sig oviktigt och du tillbringar stilla dagar i Fiendil som präst i katedralen, tills till och med stadens lugna folk en dag tycks upprörda. Ett stort mörker, en lång natt utan dag, följs av nyheter om att den fruktade Domsvärdslegionen och Röda Syrsans munkar har intagit Föraningens torn och är på marsch mot Fiendil. Det är för sent. Kwon är fjättrad i Inferno men ditt misslyckande bekymrar dig inte."
   },
+  101: {
+    mainText: "När du går genom portalen längst ned i trappan ser du Yaemon på taket till Stora kärntornet. Han bär en tatuering av Syrsan på pannan och är klädd i Röda Syrsans röda ordensjacka och löst sittande byxor.\nHan är i medelåldern, men kroppen är smidig och kraftfull. De spända musklerna på underarmarna spelar när han knyter nävama. Han bugar sig för dig och säger sedan, \nDu har gjort ditt värv, Skuggkrigare.\n Du återgäldar hans bugning och säger, \"Mitt uppdrag är ännu inte fullgjort.\"\nHan ler och säger, \"Jag dödade din andlige fader, liksom jag dödade din verkliga far när du var ett spädbarn. Nu ska jag döda dig.\"\nlngen har någonsin talat med dig om din fars död, men Yaemons ord får bara längtan efter hämnd att brinna starkare inom dig. Du bemästrar din vrede och lugnar ned dig, redo att slåss. Yaemon har varit Flammans Stormästare längre än du har levat. Du kommer aldrig att möta någon som är skickligare i den dödliga Syrsans väg. Hans kropp är på toppen av sin förmåga och hans vilja är stark. Du rör dig mot honom och inser att det här kommer att bli en strid som inte liknar någon annan. Yaemon har 20 i KROPPSPOÄNG.",
+    choices: [
+      "Om du rusar fram och anfaller",
+      "Du kan gå närmare och använda Giftpilar",
+      "Du kan kasta 3 Shuriken i följd"
+    ]
+  },
+   102: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+   103: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+   104: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   105: {
     mainText: "Din Shuriken ﬁnner sitt mål. Vakten slänger upp handen mot strupen och skriker innan han faller ihop på golvet, död. Du inser att larmet kan ha gått, så du lämnar kvar kaststjärnan och springer ut ur barackerna mot stadsporten. Stryk en Shuriken från Speltabellen.",
     choices: [
       "Gå vidare"
+    ]
+  },
+   106: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   107: {
@@ -781,6 +816,18 @@ export const languagePages: ILanguagePages = {
       "Du kan använda Tigersprånget",
       "eller Kobraslaget",
       "eller Tigertandskastet"
+    ]
+  },
+  108: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  109: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   110: {
@@ -796,6 +843,12 @@ export const languagePages: ILanguagePages = {
     mainText: "Snöjätten faller ned på isen med ett brak och rör sig inte. Hans blod fläckar den frusna ytan rosaröd. När du ﬂämtar efter andan och ser dig omkring, ser du att riddaren är död, förgiftad av Kobramannen som jagar mannen i blå och gyllene klädnad. Du ﬂyttar dig till vallgravssidan av isen och lyckas bryta loss ett litet isﬂak från kanten. Du knuffar iväg det mot slottet och hoppar upp på det. När du tittar ned i vallgraven ser du att den är fylld av Flytande munnar, en rovgirig fisk som bara består av tänder och en tänjbar buk. När du lugnt flyter över tar mannen i blå och gyllene klädnad upp en lång påle och lyfts med hjälp av sin magi smidigt upp i luften. Publiken applåderar honom. Han knuffar sig mot slottet med pålen och ni kommer fram till andra sidan vallgraven tillsammans.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  112: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   113: {
@@ -820,6 +873,30 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  117: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  118: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  119: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  120: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   121: {
     mainText: "Du griper tag i den lilla båten, medan Shaggothen långsamt sjunker ned i gyttjan och drar med sig den kämpande Svartalven. Hon ger ifrån sig ett bubblande skrik när hon långsamt sjunker under ytan. Till ditt förtret är båten full av sprickor och hål och den har släppt in en hel del träskvatten.",
     choices: [
@@ -829,6 +906,18 @@ export const languagePages: ILanguagePages = {
   },
   122: {
     mainText: "Det är svårt att gå när du rör dig i utkanten av de grova kullarna vid foten av Visionernas berg och resan tar flera dagar längre tid än du hade väntat dig. Efter den längsta dagens slit som du hittills har tvingat dig igenom, faller mörkret. Månen är röd och det kommer ingen mer dag. Du är för sent ute. Det eviga mörkret har fallit och Kwon har fängslats i lnferno. Din INRE KRAFT försvinner och det finns ingenting du kan göra för att stoppa ondskan från att växa. Du har misslyckats.",
+  },
+  123: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  124: {
+    mainText: "",
+    choices: [
+      ""
+    ]
   },
   125: {
     mainText: "Du glider genom natten mot stadsporten, men någon har sett dig. Larmet går vid barackerna när du närmar dig porten och facklor ﬂammar upp på porthusets torn och några kastas ned på gatan nedanför. Du hör det omisskännliga ljudet från ett armborst och svänger runt mot ljudet.",
@@ -844,10 +933,40 @@ export const languagePages: ILanguagePages = {
       "Om du inte kan eller inte vill, kan du använda INRE KRAFT att slå upp dörren med"
     ]
   },
+  127: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   128: {
     mainText: "Stormästaren skakar på huvudet. ”Du har varken svarat sant eller vist. Du kan inte dölja din vilja att hämnas Naijishi, som älskade dig och lärde dig att älska Herren Kwon, från oss som har känt dig nästan hela ditt korta liv. Det är inte fel av dig att vilja hämnas Naijishi, men du måste vänta tålmodigt på att din tid ska komma och aldrig glömma, att tjäna Kwon är att hjälpa hela mänskligheten. Vad gäller tortyren, är det bara genom att misslyckas med ett uppdrag som en sann Skuggkrigare kan fångas och det ﬁnns alltid tid att bita av sig tungan och blöda till döds för att undvika risken att förråda hemligheter. Du behöver bara frukta att misslyckas med ett uppdrag. Du har misslyckats med det andliga provet och är ännu inte redo att bli en De Fyra Vindarnas Stormästare. Gå tillbaka till Tempelsalen och be Gorobei komma in till oss.” \nDu återvänder modfälld till huvudtemplet och det hörs ett svagt jämmer från byborna när du ber Gorobei att gå in i påklädningskammaren. Han lägger armen om dina axlar och säger, ”Nästa gång,” innan han går in bakom silkesförhänget. En timme senare kommer han tillbaka och du applåderar med de andra när han utnämns till Stormästare. ",
     choices: [
       "Gå vidare"
+    ]
+  },
+  129: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  130: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  131: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  132: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   133: {
@@ -865,6 +984,12 @@ export const languagePages: ILanguagePages = {
       "eller Tigertandskastet"
     ]
   },
+  135: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   136: {
     mainText: "Du försöker rulla undan, men armborstpilen slår in i sidan på dig och du ligger och kravlar på marken. Du förlorar 4 KROPPSPOÄNG. Vaktema vid stadsporten rusar fram mot dig när du hoppar upp på fötter.",
     choices: [
@@ -879,16 +1004,52 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  138: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   139: {
     mainText: "Stormästaren ler och skakar på huvudet. ”Du har svarat klokt men inte sanningsenligt. Du kan inte dölja din önskan att hämnas Naijishi som älskade dig och lärde dig att älska Herren Kwon, från oss som har känt dig nästan hela ditt korta liv. Det är inte fel av dig att vilja hämnas på Yaemon, men vänta tålmodigt på att din tid ska komma och glöm aldrig, att tjäna Kwon är att hjälpa hela mänskligheten. Men du har rätt när du säger att en Skuggkrigare bara behöver frukta att misslyckas, för att uthärda tortyr måste man först uthärda misslyckandet. Det finns alltid tid att bita av sig tungan och blöda till döds, hellre än att riskera att förråda hemligheter under tortyr. Jag ska inte säga att du har misslyckats, du är snarare som en vässad klinga som vill ut ur skidan. Du behöver bara årens visdom för att slipas till perfektion. Jag ska inte hålla ett sådant mäktigt vapen kvar i skidan - du har klarat provet.” \nDe leder dig tillbaka till Tempelsalen, där munkarna och byborna har väntat för att se om du klarade provet. Böner till Kwon utsägs som en del av ceremonin när du utnämns till De Fyra Vindarnas Stor mästare. Gorobei applåderar med de andra. Han är fortfarande en lnvigd av lnre cirkeln, men hans tid kommer, för han är en skicklig krigare och en god munk. Om du skulle dö tar han antagligen din plats.",
     choices: [
       "Gå vidare"
     ]
   },
+  140: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  141: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  142: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  143: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
   144: {
     mainText: "Du väntar, till synes nedslagen, på att vakterna ska ta dig till fånga, men gör sedan en hög volt i luften över dem och springer genom porten, samtidigt som solens första strålar visar sig. De förbluffade soldaterna springer efter dig men du seglar nedför vägen snabbt som vinden och de ger snart upp den fruktlösa jakten.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  145: {
+    mainText: "",
+    choices: [
+      ""
     ]
   },
   146: {
@@ -898,6 +1059,30 @@ export const languagePages: ILanguagePages = {
       "eller glida under hans viftande armar och använda Draksvanskastet",
       "eller slå igen"
     ],
+  },
+  147: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  148: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  149: {
+    mainText: "",
+    choices: [
+      ""
+    ]
+  },
+  150: {
+    mainText: "",
+    choices: [
+      ""
+    ]
   },
   151: {
     mainText: "Stormästaren ler och skakar på huvudet. ”Du har svarat sanningsenligt. Det är inte fel av dig att vilja hämnas Naijishi, som älskade dig och lärde dig att älska Herren Kwon, men du måste vänta tålmodigt på att din tid ska komma och aldrig glömma, att tjäna Kwon är att hjälpa hela mänskligheten. Men vad gäller tortyren, är det bara genom att misslyckas med ett uppdrag som en sann Skuggkrigare kan bli fångad och det finns alltid üd att bita av sig tungan och blöda till döds, hellre än att riskera att avslöja hemligheter. Du behöver bara frukta att misslyckas med ett uppdrag. Jag ska inte säga att du har misslyckats, för ingen har någonsin bemästrat Tigerns väg som du, och vi ska inte hålla kvar vårt skarpaste vapen i skidan för evigt. Du har lyckats med provet.” \nDe för dig tillbaka till Tempelsalen där munkarna och byboma har väntat för att se om du skulle klara provet. Böner till Kwon utgör en del av ceremonin när du utnämns till De Fyra Vindarnas Stormästare. Gorobei applåderar med de andra, för han är fortfarande en lnvigd av Inre cirkeln, men hans tid kommer, för han är en skicklig krigare och en god munk. Skulle du dö, efterträder han troligen dig. ",

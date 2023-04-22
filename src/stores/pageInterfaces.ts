@@ -80,6 +80,7 @@ export interface IChoice {
   goto: number
   ability?: EAbilities
   item?: EItems
+  amount?: number
   attribute?: string
   abilityNegation?: boolean
   criteria?: boolean

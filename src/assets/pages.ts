@@ -1,4 +1,4 @@
-import { EAbilities, EOpponents } from "./enums"
+import { EAbilities, EItems, EOpponents } from "./enums"
 import { IPages } from "@/stores/pageInterfaces"
 
 export const pageData: IPages = {
@@ -953,31 +953,31 @@ export const pageData: IPages = {
       }
     ]
   },
-  88: {
-    choices: [
-      {
-        goto: 75,
-      }
-    ]
-  },
+  88: {},
   89: {
     choices: [
       {
-        goto: 75,
-      }
+        goto: 266,
+      },{
+        goto: 390,
+      },{
+        goto: 401,
+      },
     ]
   },
   90: {
     choices: [
       {
-        goto: 75,
+        goto: 413,
       }
     ]
   },
   91: {
     choices: [
       {
-        goto: 75,
+        goto: 74,
+      },{
+        goto: 108,
       }
     ]
   },
@@ -1017,7 +1017,11 @@ export const pageData: IPages = {
   96: {
     choices: [
       {
-        goto: 75,
+        goto: 63
+      }, {
+        goto: 82
+      }, {
+        goto: 71
       }
     ]
   },
@@ -1036,16 +1040,62 @@ export const pageData: IPages = {
   99: {
     choices: [
       {
-        goto: 75,
+        ability: EAbilities.poisonArrows,
+        goto: 88,
+      },
+      {
+        goto: 418,
       }
     ]
   },
   100: {},
+  101: {
+    choices: [
+      {
+        goto: 89
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 69
+      },{
+        item: EItems.shuriken,
+        amount: 3,
+        goto: 51
+      },
+    ]
+  },
+  102: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  103: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  104: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
   105: {
     choices: [
       {
         goto: 125
       }
+    ]
+  },
+  106: {
+    choices: [
+      {
+        goto: 67
+      },
     ]
   },
   107: {
@@ -1057,6 +1107,20 @@ export const pageData: IPages = {
       }, {
         goto: 87
       }
+    ]
+  },
+  108: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  109: {
+    choices: [
+      {
+        goto: 67
+      },
     ]
   },
   110: {
@@ -1111,6 +1175,34 @@ export const pageData: IPages = {
       }
     ]
   },
+  117: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  118: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  119: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  120: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
   121: {
     choices: [
       {
@@ -1121,6 +1213,20 @@ export const pageData: IPages = {
     ]
   },
   122: {},
+  123: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  124: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
   125: {
     choices: [
       {
@@ -1141,11 +1247,46 @@ export const pageData: IPages = {
       }
     ]
   },
+  127: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
   128: {
     choices: [
       {
         goto: 191,
       }
+    ]
+  },
+  129: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  130: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  131: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  132: {
+    choices: [
+      {
+        goto: 67
+      },
     ]
   },
   133: {
@@ -1166,6 +1307,13 @@ export const pageData: IPages = {
       }, {
         goto: 13,
       }
+    ]
+  },
+  135: {
+    choices: [
+      {
+        goto: 67
+      },
     ]
   },
   136: {
@@ -1209,6 +1357,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  138: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
   139: {
     choices: [
       {
@@ -1216,11 +1371,46 @@ export const pageData: IPages = {
       }
     ]
   },
+  140: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  141: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  142: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  143: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
   144: {
     choices: [
       {
         goto: 254,
       }
+    ]
+  },
+  145: {
+    choices: [
+      {
+        goto: 67
+      },
     ]
   },
   146: {
@@ -1238,6 +1428,34 @@ export const pageData: IPages = {
       }, {
         goto: 160,
       }
+    ]
+  },
+  147: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  148: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  149: {
+    choices: [
+      {
+        goto: 67
+      },
+    ]
+  },
+  150: {
+    choices: [
+      {
+        goto: 67
+      },
     ]
   },
   151: {
