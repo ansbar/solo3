@@ -25,7 +25,8 @@ export const usePlayerStore = defineStore("player", {
     attributes: {
       hp: 20,
       hpMax: 20,
-      innerStrength: 5
+      innerStrength: 5,
+      innerStrengthMax: 5
     },
     temporary: {
       useInnerStrength: null,
@@ -69,15 +70,19 @@ export const usePlayerStore = defineStore("player", {
     // Attributes
     setPlayerAttributeHp (payload: number) {
       this.attributes.hp += payload
-      if (this.attributes.hp > 20) {
-        this.attributes.hp = 20
+      if (this.attributes.hp > this.attributes.hpMax) {
+        this.attributes.hp = this.attributes.hpMax
       } else if (this.attributes.hp < 0) {
         this.attributes.hp = 0
       }
     },
     setAttributeInnerStrength (payload: number) {
       this.attributes.innerStrength += payload
-      this.attributes.innerStrength = (this.attributes.innerStrength > 5) ? 5 : this.attributes.innerStrength
+      if (this.attributes.innerStrength > this.attributes.innerStrengthMax) {
+        this.attributes.innerStrength = this.attributes.innerStrengthMax
+      } else if (this.attributes.innerStrength < 0) {
+        this.attributes.innerStrength = 0
+      }
     },
     // Modifiers
     setPlayerModifierPunch (payload: number) {

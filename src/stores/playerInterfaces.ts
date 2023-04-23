@@ -22,6 +22,7 @@ interface Player_attributes {
   hp: number
   hpMax: number
   innerStrength: number
+  innerStrengthMax: number
 }
 
 interface Player_temporary {

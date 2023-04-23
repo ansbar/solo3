@@ -21,7 +21,7 @@ export const useMainStore = defineStore("main", {
       battlestate: EBattleStates.intro,
       battleRoundCounter: 1,
       currentPageId: 0,
-      dev: true,
+      dev: false,
       currentOpponent: 0,
       thrownOpponent: undefined,
       history: [],
@@ -43,6 +43,7 @@ export const useMainStore = defineStore("main", {
           playerStore.modifiers.throw = 1
           playerStore.items.shuriken = 6
           playerStore.attributes.innerStrength = 6
+          playerStore.attributes.innerStrengthMax = 6
           this.numberOfAbilities = 4
           break     
         case "medium":
@@ -52,6 +53,7 @@ export const useMainStore = defineStore("main", {
           playerStore.modifiers.throw = 2
           playerStore.items.shuriken = 7
           playerStore.attributes.innerStrength = 7
+          playerStore.attributes.innerStrengthMax = 7
           this.numberOfAbilities = 5
           break
         default:
@@ -61,6 +63,7 @@ export const useMainStore = defineStore("main", {
           playerStore.modifiers.throw = 0
           playerStore.items.shuriken = 5
           playerStore.attributes.innerStrength = 5
+          playerStore.attributes.innerStrengthMax = 5
           this.numberOfAbilities = 3
           break
       }
