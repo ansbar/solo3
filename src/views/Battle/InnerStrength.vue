@@ -7,7 +7,7 @@
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
-  const { helpTexts } = useTexts()
+  const { gameHelpTexts } = useTexts()
 
   const showInnerStrength = computed(() => {
     /* Cant use inner strength if:
@@ -41,7 +41,7 @@
   <section>
     <div class="text">
       <div v-if="showInnerStrength">
-        Vill du använda din <a :title="helpTexts.innerStrength">inre kraft</a>   
+        Vill du använda din <a :title="gameHelpTexts.innerStrength">inre kraft</a>   
         i attacken ({{ playerStore.attributes.innerStrength }} kvar)?
         <div class="button-group">                    
           <button

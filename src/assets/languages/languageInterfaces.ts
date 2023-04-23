@@ -1,5 +1,9 @@
 import { TAbilities, TDefenseType } from "../types"
 
+export interface IndexSignature {
+  [key: string]: string
+}
+
 export interface ILanguagePages {
   [key: number]: ILanguagePage
 }
@@ -15,7 +19,8 @@ export interface ILanguagePage {
 }
 
 export interface ILanguageGeneral {
-  help: ILanguageHelp
+  gameHelp: ILanguageHelp
+  difficultyHelp: IDifficulty
   abilities: TAbilities
   defense: TDefenseType
   misc: ILanguageMisc
@@ -24,11 +29,18 @@ export interface ILanguageGeneral {
   attributes: ILanguageAttributes
   items: ILanguageItems
   temporary: ILanguageTemporary
+  difficulty: IDifficulty
 }
 
 export interface ILanguageHelp {
   block: string
   innerStrength: string
+}
+
+export interface IDifficulty {
+  medium: string
+  hard: string
+  veryHard: string
 }
 
 export interface ILanguageMisc {

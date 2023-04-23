@@ -1,6 +1,5 @@
 export enum EAbilities {
   deflectArrows = "deflectArrows",
-  shuriken = "shuriken",
   acrobat = "acrobat",
   immunity = "immunity",
   playDead = "playDead",
@@ -81,4 +80,10 @@ export enum EBattleModifiers {
   innerStrength = "innerStrength",
   block = "block",
   throw = "throw"
+}
+
+export enum EDifficulty {  
+  veryHard = "veryHard",
+  hard = "hard",
+  medium = "medium",
 }

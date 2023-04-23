@@ -36,12 +36,10 @@
 
       // Set opponent page data every page switch
       opponentStore.setOpponentPageData(opponent[pageStore.opponent].pages[currentPageId.value])
+
       if (opponentStore.playerAttackType === EAttackType.defense) {
         // Skip attack if player wont be able to attack
         mainStore.battlestate = EBattleStates.defend
-      } else if (opponentStore.opponents.length === 1) {
-        // Skip chooseOpponent if only one opponent
-        mainStore.battlestate = EBattleStates.innerStrength
       } else {
         mainStore.setBattlestate(EBattleStates.chooseOpponent)
       }      

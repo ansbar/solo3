@@ -42,11 +42,18 @@ export function useTexts() {
   const miscTexts = computed(() => {
     return languageGeneral.misc
   })
-  const helpTexts = computed(() => {
-    return languageGeneral.help
+  const gameHelpTexts = computed(() => {
+    return languageGeneral.gameHelp
+  })
+  const difficultyHelpTexts = computed(() => {
+    return languageGeneral.difficultyHelp
+  })
+  const difficultyTexts = computed(() => {
+    return languageGeneral.difficulty
   })
 
   return { 
+    difficultyTexts,
     pageTexts, 
     mainText, 
     choicesTexts, 
@@ -58,5 +65,7 @@ export function useTexts() {
     defenseTexts, 
     opponentTexts, 
     miscTexts, 
-    helpTexts }
+    gameHelpTexts,
+    difficultyHelpTexts
+  }
 }

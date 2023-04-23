@@ -12,7 +12,7 @@
     <h1>Tigerns väg - soloäventyr</h1>
     
     <h2 class="red">
-      Beta 0.1
+      Beta 0.2.1
     </h2>
     <img
       :src="getImageUrl()"
@@ -50,7 +50,7 @@
   </div>
 
   <button @click="mainStore.setBattlestate(EBattleStates.none)">
-    Välj färdigheter
+    Starta din karaktär
   </button>
 </template>
 

@@ -1,10 +1,11 @@
 <script lang="ts" setup>
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
-  import { EAbilities, EBattleStates, EItems } from "@/assets/enums"
+  import { EAbilities, EBattleStates, EDifficulty, EItems } from "@/assets/enums"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   import { IChoice } from "@/stores/pageInterfaces"
+  import { pageData } from "@/assets/pages"
 
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
@@ -15,7 +16,6 @@
 
   // Returns true if player  has the requested ability
   const hasAbility = (ability: EAbilities) => {
-    console.log("hasAbility", ability, playerStore.abilities.includes(ability))
     if (playerStore.abilities.includes(ability))
       return true
     return false
@@ -24,7 +24,6 @@
   // Returns true if player has enough of the requested item
   const hasItem = (item: EItems, amount?: number) => {
     // Some items like shuriken can the you have multiple of
-    console.log("hasItem", item, amount, amount && playerStore.items[item] as number >= amount,!amount && playerStore.items[item] as boolean)
     if (amount && playerStore.items[item] as number >= amount)
       return true
     else if (!amount && playerStore.items[item] as boolean)
@@ -55,6 +54,12 @@
     mainStore.battleRoundCounter = 1
     gotoStory(opponentStore.counterGoto as number)
   }
+
+  const leadsToDeath = (page: number) => {
+    if (mainStore.difficulty !== EDifficulty.medium || !pageData[page]) 
+      return false
+    return !pageData[page].choices?.length
+  } 
 </script>
 
 <template>
@@ -97,6 +102,10 @@
         {{ choicesTexts[index] }}
         <span v-if="choice.ability">({{ abilityTexts[choice.ability] }})</span>
         <span v-if="choice.item">({{ itemTexts[choice.item] }})</span>
+        <span
+          v-if="leadsToDeath(choice.goto)"
+          style="color: gray"
+        > (Valet leder till döden)</span>
       </a>
 
       <!-- Player lacks ability -->

@@ -25,12 +25,16 @@ export const languageGeneral: ILanguageGeneral = {
     manse: "Manse Dödsmagikern",
     runeweaver: "Runvävaren"
   },
-  help: {
+  gameHelp: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
     innerStrength: "Om din attack träffar kommer skadan dubbleras. Du kan dock bara använda din inre kraft ett begränsat antal gånger. Observera att kraften är förbrukad även om du missar. Använd den med förnuft."
   },
+  difficultyHelp: {
+    medium: "<h4>Medium</h4><ul><li>5 färdigheter</li><li>2 i slag/spark/block/ödes-modifikationer</li><li>7 inre kraft</li><li>7 shuriken</li><li>Varning vid val som leder till döden</li></ul>",
+    hard: "<h4>Svårt</h4><ul><li>4 färdigheter</li><li>1 i slag/spark/block/ödes-modifikationer</li><li>6 inre kraft</li><li>6 shuriken</li></ul>",
+    veryHard: "<h4>Väldigt svårt (enligt boken)</h4><ul><li>3 färdigheter</li><li>0 i slag/spark/kast/ödes-modifikationer</li><li>5 inre kraft</li><li>5 shuriken</li></ul>"
+  },
   abilities: {
-    shuriken: "Shurikenjutsu",
     deflectArrows: "Slå av pilar",
     acrobat: "Akrobatik",
     immunity: "Immunitet mot gift",
@@ -70,7 +74,12 @@ export const languageGeneral: ILanguageGeneral = {
   temporary: {
     attack: "attack",
     damage: "damage"
-  }
+  },
+  difficulty: {
+    medium: "Medium",
+    hard: "Svårt",
+    veryHard: "Väldigt svårt"
+  },
 }
 
 export const languagePages: ILanguagePages = {
@@ -273,7 +282,7 @@ export const languagePages: ILanguagePages = {
     mainText: "Du hoppar över den nu väldiga ädelstenen som rullar nedför trappan bakom dig och måttar en Bevingade hästens spark mot Dödsmagikern innan du landar. Han slungas till golvet som en trasdocka. När han faller kastar han sin ormstav. Den förvandlas till en levande kobra med utspänt huvud och som ringlar mot dig, redo att hugga.",
     choices: [
       "Om du struntar i den och kastar dig över Dödsmagikern för att försöka göra slut på honom",
-      "Om du försöker greppa ormens hals innan den kan hugg"
+      "Om du försöker greppa ormens hals innan den kan hugga"
     ]
   },
   30: {

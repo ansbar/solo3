@@ -1,14 +1,15 @@
 <script setup lang="ts">
-  import { computed } from "vue"
+  import { computed, ref, watch } from "vue"
   import { useMainStore, usePlayerStore } from "@/stores"
-  import { EAbilities } from "@/assets/enums"
+  import { EAbilities, EDifficulty } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
-  const { abilityTexts } = useTexts()
+  const { abilityTexts, difficultyTexts, difficultyHelpTexts } = useTexts()
 
   const playerAbilities = computed(() => playerStore.abilities)
+  const difficultyChoice = ref("veryHard")
 
   // Abilities not already chosen by player
   const availableAbilities = computed((): EAbilities[] => {
@@ -18,7 +19,11 @@
   // Returns true if player has the requested ability
   const hasAbility = (ability: EAbilities) => playerStore.abilities.includes(ability)
 
-  const isAllAbilitiesChosen = computed(() => playerAbilities.value.length >= 3)
+  const isAllAbilitiesChosen = computed(() => playerAbilities.value.length >= mainStore.numberOfAbilities)
+
+  watch(difficultyChoice, (value) => {
+    mainStore.setDifficulty(value as EDifficulty)
+  })
 
   const startGame = () => {
     mainStore.setCurrentPageId(1)
@@ -27,8 +32,29 @@
 
 <template>
   <div>
-    <h1>Tigerns väg - Hämnaren</h1>    
-    <h2>Välj tre färdigheter</h2>
+    <h1>Skapa din karaktär</h1>    
+    <h2>Välj svårighetsgrad</h2>
+    <div class="card">
+      <div class="first-col thin">
+        <select v-model="difficultyChoice">
+          <option
+            v-for="(difficulty, index) in EDifficulty"
+            :key="difficulty"
+            :value="index"
+          >
+            {{ difficultyTexts[difficulty] }}
+          </option>
+        </select>
+      </div>
+      <div class="second-col">
+        <div
+          class="text"
+          v-html="difficultyHelpTexts[mainStore.difficulty]"
+        />
+      </div>
+    </div>
+
+    <h2>Välj {{ mainStore.numberOfAbilities }} färdigheter</h2>
     <div class="card">
       <div class="first-col">
         <h3>Tillgängliga</h3>

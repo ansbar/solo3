@@ -41,7 +41,6 @@
       playerStore.addPlayerAbility(EAbilities.lockPicker)
       playerStore.addPlayerAbility(EAbilities.playDead)
       playerStore.addPlayerAbility(EAbilities.poisonArrows)
-      playerStore.addPlayerAbility(EAbilities.shuriken)
     }
   }
   
@@ -122,6 +121,10 @@ h4 {
     width: 35%;
     padding-right: 3rem;
     border-right: 2px #9eb890 dashed;
+
+    &.thin {
+      width: 20%;
+    }
 
     @media screen and (max-width: 600px) {
       width: 43%;
