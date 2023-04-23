@@ -2,6 +2,8 @@
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
   import { useMainStore, useOpponentStore, usePageStore } from "@/stores"
+  import { EAttackType, EBattleStates } from "@/assets/enums"
+  import { useStorage } from "@/utils/storage"
   import { pageData } from "@/assets/pages"
   import Opponent from "./Opponent.vue"
   import opponent from "@/assets/opponents"
@@ -13,13 +15,12 @@
   import SpecialCondition from "./SpecialCondition.vue"
   import History from "./History.vue"
   import NonBattleInfo from "./NonBattleInfo.vue"
-  import { EAttackType, EBattleStates } from "@/assets/enums"
-  import { useStorage } from "@/utils/storage"
 
-  const { setStoreToStorage, removeStoreFromStorage } = useStorage()
+
+  const mainStore = useMainStore()
   const pageStore = usePageStore()
   const opponentStore = useOpponentStore()
-  const mainStore = useMainStore()
+  const { setStoreToStorage, removeStoreFromStorage } = useStorage()
   const { currentPageId, battlestate } = storeToRefs(useMainStore())
 
   // When a page change happends
@@ -54,7 +55,7 @@
   }
 
   const initStorage = () => {
-    // Save some data to local storage at page swap as long as not in combat
+    // Save some data to local storage at page change as long as not in combat or simular
     if (!pageStore.opponent && !pageStore.specialCondition && !pageStore.sideEffects) {
       setStoreToStorage("main")
       setStoreToStorage("player")
@@ -77,7 +78,7 @@
   })
 
   watch(currentPageId, (pageId) => {
-    initPage(pageId) // Watch for page switch
+    initPage(pageId) // Watch for page change
     initStorage()        
   })
 
