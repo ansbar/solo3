@@ -27,6 +27,14 @@ module.exports = {
       switchCase: 0,
       ignores: []
     }],
-    "vue/no-v-html": 0
+    "vue/no-v-html": 0,
+    "vue/max-attributes-per-line": ["error", {
+      "singleline": {
+        "max": 3
+      },      
+      "multiline": {
+        "max": 3
+      }
+    }]
   }
 }

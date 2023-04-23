@@ -6,6 +6,7 @@
   const { currentPageId } = storeToRefs(useMainStore())
 </script>
 
+
 <template>
   <section class="dev">
     <div class="wrapper">  
@@ -21,6 +22,7 @@
     </div>
   </section>
 </template>
+
 
 <style lang="scss">
   .dev {

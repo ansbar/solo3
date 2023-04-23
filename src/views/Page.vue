@@ -102,8 +102,10 @@
   const showNonBattleInfo = computed(() => !pageStore.opponent)
 </script>
 
+
 <template>
   <h1>#{{ currentPageId }}</h1>
+  
   <section>
     <Image />
     <MainText />    

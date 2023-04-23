@@ -9,20 +9,19 @@
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
-  const opponentStore = useOpponentStore()
-  const dice = useDice()
-  const generic = useGeneric()
+  const opponentStore = useOpponentStore() 
+  
   const { opponentsAlive } = useOpponents() 
   const { pageTexts } = useTexts()
-
-  const isHit = ref(false)
-  const attackChance = ref("2T6")
-  const rollText = ref("")
+  const generic = useGeneric()
+  const dice = useDice()  
+  
+  const attackChance = ref("2T6")  
   const damageText =  ref("")
+  const rollText = ref("")
+  const isHit = ref(false)
 
-  const opponent = computed(() => {
-    return opponentStore.opponents[mainStore.currentOpponent]
-  })
+  const opponent = computed(() => opponentStore.opponents[mainStore.currentOpponent])
 
   onMounted(() => {
     // If attack is instant only the damage part is needed
@@ -59,6 +58,7 @@
     return totalModifier
   }
 
+
   // Attack opponent
   const attack = () => {      
     const attackModifier = calculateAttackModifier()          
@@ -76,30 +76,31 @@
     rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
     rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
 
-    if(isHit.value){      
+    // Hit
+    if(isHit.value){     
+      // No damage if direct win or throw
       if(opponentStore.playerAttackType !== EAttackType.throw && !opponentStore.directWin){
         doDamage()        
       } else {
-        if (opponentStore.directWin) {
-          //
-        } else {
+        if (!opponentStore.directWin) {          
           // A successful throw instead adds 2 to damage on next attack
           mainStore.setThrownOpponent(mainStore.currentOpponent)
           playerStore.setTemporaryDamageModifier(2)
         }
       }
     } else if (opponentStore.missDamage) {
-      // In the case a static damage is applied when player fails with attack (like page 267)
+      // In the case a static damage is applied when player fails with an attack (like page 267)
       playerStore.setPlayerAttributeHp(opponentStore.missDamage)
     }     
   }
+
 
   // Damage on opponent
   const doDamage = () => {
     if (!opponentStore.playerDamage) return
 
     let damageRoll = 0
-    // If constant damge (not a roll like 1T6) we skip damageRoll
+    // If set damge (not a roll like 1T6) we skip damageRoll
     if (opponentStore.playerDamage.length > 2)
       damageRoll = dice.doRoll(opponentStore.playerDamage || "", playerStore.temporary.damageModifier)  
     else
@@ -145,29 +146,17 @@
 <template>
   <section>
     <!-- Attack text -->
-    <div
-      v-if="rollText"
-      class="text"
-      v-html="rollText"
-    />
-
+    <div v-if="rollText" class="text" v-html="rollText" />
 
     <!-- Damage texts -->
-    <div
-      class="text"
-      v-html="damageText"
-    />    
+    <div class="text" v-html="damageText" />    
 
-    
-    <!-- Miss or not Throw -->
+    <!-- Direct win -->
     <template v-if="pageTexts.directWin && isHit">
-      <div class="text">   
+      <div class="text">
         {{ pageTexts.directWin }}
       </div>
-      <a 
-        href="#"
-        @click="generic.gotoPage(opponentStore.directWin as number)"
-      >
+      <a href="#" @click="generic.gotoPage(opponentStore.directWin as number)">
         Gå vidare
       </a>     
     </template>
@@ -175,10 +164,7 @@
     <!-- Miss or not Throw -->
     <template v-else-if="!isHit || opponentStore.playerAttackType != 'throw'">
       <!-- If opponent is still alive -->
-      <div
-        v-if="opponent.hp > 0"
-        class="text"
-      >
+      <div v-if="opponent.hp > 0" class="text">
         <!-- Unsuccessful throw text -->
         <template v-if="opponentStore.playerAttackType === 'throw'">
           {{ pageTexts.unsuccessfulThrow }}
@@ -191,53 +177,33 @@
       </div>
 
       <!-- If special skip defend phase at miss (go to special page) -->
-      <a
-        v-if="!isHit && opponentStore.miss"
-        href="#"
-        @click="handleSpecialMiss()"
-      >
+      <a v-if="!isHit && opponentStore.miss" href="#" @click="handleSpecialMiss()">
         {{ pageTexts.miss }}
       </a>  
 
       <!-- If special skip defend phase at hit (go to special page) -->
       <template v-else-if="isHit && opponentStore.miss">
-        <button    
-          v-if="!opponentsAlive"   
-          @click="doWin"
-        >
+        <button v-if="!opponentsAlive" @click="doWin">
           Gå vidare
         </button>
-        <button      
-          v-else  
-          @click="commitBattleState('pending')"
-        >
+        <button v-else @click="commitBattleState('pending')">
           Gå vidare
         </button>
       </template>    
 
       <!-- If opponent is alive and attack is not instant -->
       <template v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'">
-        <button
-          v-if="playerStore.attributes.hp > 0"
-          @click="commitBattleState('defend')"
-        >
+        <button v-if="playerStore.attributes.hp > 0" @click="commitBattleState('defend')">
           Försvara dig
         </button>
 
-        <a 
-          v-else
-          href="#"
-          @click="generic.doStartOver()"
-        >
+        <a v-else href="#" @click="generic.doStartOver()">
           Du är död. Börja om?
         </a>     
       </template>
 
       <!-- If instant attack -->
-      <button
-        v-else-if="opponentStore.playerAttackType === 'instant'"
-        @click="commitBattleState('pending')"
-      >
+      <button v-else-if="opponentStore.playerAttackType === 'instant'" @click="commitBattleState('pending')">
         Gå vidare
       </button>
 
@@ -247,16 +213,10 @@
           <b>{{ opponent.name }} är besegrad</b>
         </div>
         
-        <button    
-          v-if="!opponentsAlive"   
-          @click="doWin"
-        >
+        <button v-if="!opponentsAlive" @click="doWin">
           Gå vidare
         </button>
-        <button
-          v-else
-          @click="commitBattleState('defend')"
-        >
+        <button v-else @click="commitBattleState('defend')">
           Försvara dig
         </button>
       </template>
@@ -265,16 +225,11 @@
 
     <!-- Throw -->
     <div v-else>
-      <div
-        v-if="pageTexts.successfulThrow"
-        class="text"
-      >
+      <div v-if="pageTexts.successfulThrow" class="text">
         {{ pageTexts.successfulThrow }}
       </div>
 
-      <button
-        @click="commitBattleState('pending')"
-      >
+      <button @click="commitBattleState('pending')">
         Kastet lyckas, välj attack
       </button>
     </div>
