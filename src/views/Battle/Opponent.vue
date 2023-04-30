@@ -23,7 +23,9 @@
           Ditt försvar: {{ playerDefense }}
         </li>
         
-        <li>Skada: {{ playerDamage }}</li>
+        <li v-if="playerDamage">
+          Skada: {{ playerDamage }}
+        </li>
       </ul>
       <ul>
         <li>Inre kraft: {{ attributes.innerStrength }}</li>

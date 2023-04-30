@@ -26,6 +26,7 @@
   })
 
   const startGame = () => {
+    playerStore.setPlayerAttributeHp(20)
     mainStore.setCurrentPageId(1)
   }
 </script>

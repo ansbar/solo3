@@ -1,67 +1,47 @@
 <script lang="ts" setup>
-  import { ref, onMounted, computed } from "vue"
+  import { useBattle } from "./helpers"
   import { useDice } from "@/utils/dice"
-  import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
+  import { useTexts } from "@/utils/texts"
+  import { useGeneric } from "@/utils/generic"
+  import { ref, onMounted, computed } from "vue"
   import { useOpponents } from "@/utils/opponents"
   import { EAttackType, EBattleStates } from "@/assets/enums"
-  import { useGeneric } from "@/utils/generic"
-  import { useTexts } from "@/utils/texts"
+  import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
 
+
+  const dice = useDice()  
+  const battle = useBattle()
+  const generic = useGeneric()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore() 
   
   const { opponentsAlive } = useOpponents() 
   const { pageTexts } = useTexts()
-  const generic = useGeneric()
-  const dice = useDice()  
   
-  const attackChance = ref("2T6")  
-  const damageText =  ref("")
-  const rollText = ref("")
   const isHit = ref(false)
-
+  const rollText = ref("")
+  const damageText = ref("")  
+  const attackChance = ref("2T6")  
+  
   const opponent = computed(() => opponentStore.opponents[mainStore.currentOpponent])
 
-  onMounted(() => {
-    // If attack is instant only the damage part is needed
+
+  onMounted(() => {    
     if(opponentStore.playerAttackType === EAttackType.instant)
-      doDamage()    
-    // If battle starts with defense phase
+      // If the attack is instant no roll has to be made and only the damage part is needed
+      battle.dealDamage(damageText, opponent)
     else if (opponentStore.playerAttackType === EAttackType.defense)
-      commitBattleState("defend")
+      // If battle starts with the defense phase, attack phase is skipped of various reasons
+      battle.changeState("defend")
     else
-      attack()        
+      doAttack()        
   })
-
-  const commitBattleState = (battleState: string) => {
-    mainStore.setBattlestate(battleState as EBattleStates)
-  }
-
-  const calculateAttackModifier = () => {
-    // First permanent modifier for the type, like punch. 
-    // And then the temporary modifier, like block.
-    let totalModifier = 0
-    let permanentModifier = 0
-    if (opponentStore.playerAttackType === EAttackType.kick 
-      || opponentStore.playerAttackType === EAttackType.punch 
-      || opponentStore.playerAttackType === EAttackType.throw) {
-      permanentModifier = playerStore.modifiers[opponentStore.playerAttackType]
-    }     
-    totalModifier = permanentModifier + playerStore.temporary.attackModifier
-    
-    if (permanentModifier || playerStore.temporary.attackModifier)
-      mainStore.addToHistory(`- Använde attackmodifierare: p${permanentModifier}, t${playerStore.temporary.attackModifier}`)
-    
-    playerStore.setTemporaryAttackModifier(0) // Reset after use
-
-    return totalModifier
-  }
 
 
   // Attack opponent
-  const attack = () => {      
-    const attackModifier = calculateAttackModifier()          
+  const doAttack = () => {      
+    const attackModifier = battle.calculateAttackModifier()          
     const attackRoll = dice.doRoll(attackChance.value, attackModifier)      
     isHit.value = (attackRoll > opponent.value.defense) ? true : false    
 
@@ -76,61 +56,33 @@
     rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
     rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
 
-    // Hit
-    if(isHit.value){     
+    // Handle hit or miss
+    if(isHit.value){
+      // In the case damage is applied when player succeeds with an attack (like page 131)
+      if (opponentStore.directDamageOnPlayer?.onlyOnHit) {
+        damageText.value += battle.takeDamage(damageText, opponentStore.directDamageOnPlayer.damage)
+
+        // If player should die during direct damage we skip the normal damage phase
+        if (playerStore.attributes.hp > 0) {
+          damageText.value += "\n\n"
+          battle.dealDamage(damageText, opponent)
+        }          
+      
       // No damage if direct win or throw
-      if(opponentStore.playerAttackType !== EAttackType.throw && !opponentStore.directWin){
-        doDamage()        
-      } else {
-        if (!opponentStore.directWin) {          
-          // A successful throw instead adds 2 to damage on next attack
-          mainStore.setThrownOpponent(mainStore.currentOpponent)
-          playerStore.setTemporaryDamageModifier(2)
-        }
+      } else if(opponentStore.playerAttackType !== EAttackType.throw && !opponentStore.directWin){
+        battle.dealDamage(damageText, opponent)
+
+      } else if (!opponentStore.directWin) {          
+        // A successful throw instead adds 2 to damage on next attack
+        mainStore.setThrownOpponent(mainStore.currentOpponent)
+        playerStore.setTemporaryDamageModifier(2)
       }
+
     } else if (opponentStore.missDamage) {
       // In the case a static damage is applied when player fails with an attack (like page 267)
       playerStore.setPlayerAttributeHp(opponentStore.missDamage)
     }     
   }
-
-
-  // Damage on opponent
-  const doDamage = () => {
-    if (!opponentStore.playerDamage) return
-
-    let damageRoll = 0
-    // If set damge (not a roll like 1T6) we skip damageRoll
-    if (opponentStore.playerDamage.length > 2)
-      damageRoll = dice.doRoll(opponentStore.playerDamage || "", playerStore.temporary.damageModifier)  
-    else
-      damageRoll = parseInt(opponentStore.playerDamage)
-
-    let innerStrengthText = ""
-    let damageModifierText = ""
-              
-    if(playerStore.temporary.damageModifier)
-      damageModifierText = "+" + playerStore.temporary.damageModifier    
-
-    if(playerStore.temporary.useInnerStrength){                
-      damageRoll = damageRoll * 2
-      innerStrengthText = " gånger 2"  
-      playerStore.setTemporaryInnerStrength(null)              
-    }                
-
-    opponentStore.setOpponentHp(mainStore.currentOpponent, damageRoll)
-
-    damageText.value = `${opponent.value.name} tar ${damageRoll} i skada (${opponentStore.playerDamage}${damageModifierText}${innerStrengthText})`
-
-    if(opponent.value.hp < 1){
-      damageText.value += " och besegras!"
-      mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
-    }else{
-      damageText.value += ` och har ${opponent.value.hp} kroppspoäng kvar.`
-    }       
-              
-    playerStore.setTemporaryDamageModifier(0)
-  }  
 
   const doWin = () => {
     mainStore.currentPageId = opponentStore.win
@@ -164,13 +116,13 @@
     <!-- Miss or not Throw -->
     <template v-else-if="!isHit || opponentStore.playerAttackType != 'throw'">
       <!-- If opponent is still alive -->
-      <div v-if="opponent.hp > 0" class="text">
+      <div v-if="opponent.hp > 0 && playerStore.attributes.hp > 0" class="text">
         <!-- Unsuccessful throw text -->
         <template v-if="opponentStore.playerAttackType === 'throw'">
           {{ pageTexts.unsuccessfulThrow }}
         </template>
 
-        <!-- If opponent is still alive text -->
+        <!-- If opponent and player is still alive text -->
         <template v-else>
           {{ pageTexts.stillAlive }}
         </template>       
@@ -186,14 +138,14 @@
         <button v-if="!opponentsAlive" @click="doWin">
           Gå vidare
         </button>
-        <button v-else @click="commitBattleState('pending')">
+        <button v-else @click="battle.changeState('pending')">
           Gå vidare
         </button>
       </template>    
 
       <!-- If opponent is alive and attack is not instant -->
       <template v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'">
-        <button v-if="playerStore.attributes.hp > 0" @click="commitBattleState('defend')">
+        <button v-if="playerStore.attributes.hp > 0" @click="battle.changeState('defend')">
           Försvara dig
         </button>
 
@@ -203,7 +155,7 @@
       </template>
 
       <!-- If instant attack -->
-      <button v-else-if="opponentStore.playerAttackType === 'instant'" @click="commitBattleState('pending')">
+      <button v-else-if="opponentStore.playerAttackType === 'instant'" @click="battle.changeState('pending')">
         Gå vidare
       </button>
 
@@ -216,7 +168,7 @@
         <button v-if="!opponentsAlive" @click="doWin">
           Gå vidare
         </button>
-        <button v-else @click="commitBattleState('defend')">
+        <button v-else @click="battle.changeState('defend')">
           Försvara dig
         </button>
       </template>
@@ -229,7 +181,7 @@
         {{ pageTexts.successfulThrow }}
       </div>
 
-      <button @click="commitBattleState('pending')">
+      <button @click="battle.changeState('pending')">
         Kastet lyckas, välj attack
       </button>
     </div>

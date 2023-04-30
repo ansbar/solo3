@@ -844,7 +844,8 @@ export const languagePages: ILanguagePages = {
   109: {
     mainText: "Du griper med händerna om dess underarm - den är för ohanterlig för att hoppa undan, men i stället slår det upp eld över hela dess kropp och du blir svårt bränd. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever när du hoppar bakåt, oförmögen att göra något Virvelkast, träffas du av dess glödande näve. Ditt Försvar när du försöker kasta dig åt sidan är 6.",
     choices: [
-      ""
+      "Du kan använda Järnnävens slag",
+      "Eller Tigersprångets spark"
     ]
   },
   110: {
@@ -863,9 +864,9 @@ export const languagePages: ILanguagePages = {
     ]
   },
   112: {
-    mainText: "",
+    mainText: "Du spatserar över borggården mot Förvaltarens kontor. De två männen i svarta resekläder, Honoric och Manse Dödsmagikern, pratar med Gardeskaptenen och en grupp av hans män. Du stannar för att titta på håll när Honoric, en kraftigt byggd man med ett arrogant och grymt utseende, lånar Kaptenens vapen och erbjuder soldaterna att anfalla honom. Flera gör så på en gång, men det går inte att komma förbi hans blixtrande svärd. Han awäpnar tre av dem och slår tillbaka resten. Allt de kan göra är att parera hans hugg och du vet att han skulle kunna döda dem om han ville. Manse grinar illa när han ser på uppvisningen och förvandlar Honorics svärd till en tulpan genom att peka på det. Gardeskaptenen kan inte låta bli att skrocka vid åsynen av den väldige mannen, Fältmarskalk över Domsvärdslegionen, hållande i en tulpan som han ska prygla soldaterna med. Honoric blir röd av vrede, slänger blomman och drar sitt eget väldiga, svarta svärd. Du grips av en ilning av skräck och vakterna kurar ihop när en slöja av skräck sänker sig över slottet. Det förhäxade svärdet ryker lätt och tulpanen har förvandlats tillbaka till ett svärd.\"Var är din magi nu, Dödsmagiker, dina besvärjelser fungerar inte när Sorcerak är draget\", säger Honoric. Dödsmagikerns ögon blir till springor och hans bleka, magra ansikte tycks blekna ännu mer när han yttrar en annan besvärjelse. Ingenting händer och Honoric vänder sig om och går mot slottet, samtidigt som han stoppar tillbaka Sorcerak i skidan. När han öppnar porten in till lnre borggården får du syn på ett torn på slottets baksida som tycks vara delvis raserat. Det skulle vara lätt att klättra uppför det. Förvaltaren talar om för dig att de har hyrt \"en riktig bard\" för imorgon, men när han har hört dig sjunga och sett dig jonglera säger han att du kan göra ditt nummer vid middagen i kväll.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   113: {
@@ -876,7 +877,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   114: {
-    mainText: "Han ser den dödliga avsikten i dina ögon ett ögonblick innan ditt slag träffar, men accepterar stoiskt döden. Hans nacke är bruten, men han kan fortfarande tala och har uppenbarligen godtagit sitt öde.\n “Det var förutbestämt att du skulle döda mig så, Hämnare.” Det verkar ändå som om Ödesgudinnan inte är nöjd. Eremiten vördade henne och hon vänder ryggen åt dig för det okänsliga dådet som hon visste att du skulle utföra. Du känner nästan hur din tur sviker dig, dra ifrån 2 från din Ödesmodifikation. Du kan inte låta bli att förbanna alltings meningslöshet när du går vidare in i staden. Folk ler när du går förbi, något som ingen har gjort i de andra städerna. De tycks ﬂyta förbi dig med det obekymrade lugnet hos dem som har godtagit att deras öde redan är bestämt.",
+    mainText: "Han ser den dödliga avsikten i dina ögon ett ögonblick innan ditt slag träffar, men accepterar stoiskt döden. Hans nacke är bruten, men han kan fortfarande tala och har uppenbarligen godtagit sitt öde.\n \"Det var förutbestämt att du skulle döda mig så, Hämnare.\" Det verkar ändå som om Ödesgudinnan inte är nöjd. Eremiten vördade henne och hon vänder ryggen åt dig för det okänsliga dådet som hon visste att du skulle utföra. Du känner nästan hur din tur sviker dig, dra ifrån 2 från din Ödesmodifikation. Du kan inte låta bli att förbanna alltings meningslöshet när du går vidare in i staden. Folk ler när du går förbi, något som ingen har gjort i de andra städerna. De tycks ﬂyta förbi dig med det obekymrade lugnet hos dem som har godtagit att deras öde redan är bestämt.",
     choices: [
       "Gå vidare"
     ]
@@ -891,9 +892,12 @@ export const languagePages: ILanguagePages = {
     ]
   },
   117: {
-    mainText: "",
+    mainText: "När pulvret kommer i kontakt med elden slår en lysande blixt upp. Du skyddade dina ögon, men Olvar är för ögonblicket förblindad. Barbaren backar ut genom dörren och du följer efter med en Bevingade hästens spark i bröstet på honom. Han kastar upp armarna och faller baklänges i snön. Anteckna att han har förlorat 5 KROPPSPOÄNG, för du har brutit några av hans revben. Du ska just springa ut i snön och göra slut på honom när en blå ljusblixt slår ut från ädelstenen på hans panna mot dörröppningen. Du hoppar bakåt i luften, gör en volt när blixten passerar under dig och landar upprätt, vänd mot dörren.\nOlvar har återfått synförmågan och rusar in.",
     choices: [
-      ""
+      "Du kan använda Bevingade hästens spark",
+      "eller Kobraslaget",
+      "eller Draksvanskastet",
+      "Om du har färdigheten Giftpilar och vill använda en"
     ]
   },
   118: {
@@ -903,9 +907,12 @@ export const languagePages: ILanguagePages = {
     ]
   },
   119: {
-    mainText: "",
+    mainText: "Flammor slår upp över dess massiva kropp när Elementarvarelsen försöker gripa tag i dig. Du sparkar med all din styrka i hopp om att göra någon verkan på den glödande kolossen. Om du lyckas träffa den, måste du dra ett från dina KROPPSPOANG, eftersom ﬂammorna bränner din fot.",
+    stillAlive: "Om Efretin fortfarande står framför dig försöker den slå dig till marken med båda sina väldiga nävar. Ditt Försvar mot dessa hammarslag är 7.",
     choices: [
-      ""
+      "Du kan använda järnnäven",
+      "eller Virvelkastet",
+      "eller sparka igen"
     ]
   },
   120: {
@@ -975,9 +982,12 @@ export const languagePages: ILanguagePages = {
     ]
   },
   131: {
-    mainText: "",
+    mainText: "Den glödande elementaren är klumpig och du kan knappast missa. Du är bara orolig över att den kanske inte känner smärtan från ditt slag. Dra ett från dina KROPPSPOÄNG om du träffar den, eftersom din hand blir bränd av ﬂammoma som slickar dess kropp.",
+    stillAlive: "Om Efretin fortfarande står upp framför dig, försöker den köra in sin ﬂammande näve i din bröstkorg. Ditt försvar mot slaget när du försöker snurra runt åt sidan är 7.",
     choices: [
-      ""
+      "Du kan använda Tigersprångets spark",
+      "eller Virvelkastet",
+      "eller slå igen"
     ]
   },
   132: {
@@ -1536,6 +1546,15 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  302: {
+    mainText: "Barbarens röst höjs i ett vrål av stridslust när han hugger mot dig i bärsärkar-raseri. Han bryr sig inte om dina anfall så länge hans svärd får smaka ditt blod. Dra ifrån 1 från all skada du gör på honom. Han hugger med sitt svärd nedåt mot ditt huvud, men du tar ett steg åt höger sida, vrider dig och sparkar till med foten mot hans ansikte när svärdet visslar förbi bakom din rygg.",
+    choices: [
+      "Du kan slå",
+      "eller kasta",
+      "eller sparka igen"
+    ],
+    stillAlive: "Om han fortfarande lever, hugger han med svärdet från höger till vänster genom den punkt där du står. Du har 8 i Försvar när du hoppar bakåt."
+  },
   303: {
     mainText: "Det är gott och väl efter midnatt när du kommer ut från härbärget i den svala nattluften, klädd i din svarta dräkt och huva. När du närmar dig klostret kan du se att det är lätt att klättra upp på taket till gången som förbinder refektoriet med bönerummet, eftersom det står vintunnor uppställda mot väggen. Du tar dig upp på taket och sänker dig ned på en mycket liten gårdsplan. Du går runt ett hörn på gårdsplanen och kommer in i en återvändsgränd. Den enda vägen ut som du kan se är en smal gång som leder åt vänster. Du tar dig försiktigt nedför den, men sliter av en osynlig tråd, tunn som spindelväv, och en klocka börjar ringa i refektoriet. Du springer nedför gången som svänger till vänster igen och kommer till en ny återvändsgränd utan flyktväg. Gångarna är byggda för att leda in inkräktare i återvändsgränder de inte kan fly från, och det är där du befinner dig. Flera munkar dyker upp bakom dig och du försöker förtvivlat klättra upp på väggen, men den är täckt med ett klibbigt nät som du fastnar i. Du är hjälplös och kan bara döda dig själv innan de får tag i dig genom att bita av dig tungan och förblöda. Ditt äventyr slutar här."
   },
@@ -1605,6 +1624,14 @@ export const languagePages: ILanguagePages = {
       "eller sparka igen."
     ],
     stillAlive: "Du har 8 i försvar mot monstrets trädstam. Den är omöjlig att blockera eftersom den är så stor och tung, men det är relativt lätt att hoppa undan från den eftersom du är så liten och snabb när du försöker hoppa, skutta och hjula undan den."
+  },
+  318: {
+    mainText: "Barbaren har hetsat upp sig till ett bärsärkarraseri och klyver luften med mäktiga svärdshugg, obekymrad om smärta och enbart törstande efter ditt blod. Draksvansen tar honom med överraskning, när du försöker slå undan benen under honom. Han har bara 4 i försvar när hans svärd klyver luften över dig.",
+    choices: [
+      "Du kan sparka",
+      "eller slå"
+    ],
+    unsuccessfulThrow: "Om du misslyckas med att kasta honom försöker han hugga av dig på mitten från pannan till magen när du tar dig upp. Du har 6 i Försvar mot hans hugg när han ger ifrån sig ett blodisande tjut. Han gör 1T6+2 i skada."
   },
   323: {
     mainText: "Du tar upp några fiskfjäll ur en ficka och lägger dem över ögongloberna. Du kan se ganska bra genom dem, men de gör att du ser blind ut. Du sätter dig ned för att tigga i närheten av ingången till klostret och hör tillräckligt för att övertygas om att munkarna som dyrkar den Lede är genomonda. Men det är en kvinna i en svart kappa täckt med ett mönster av grön spindelväv som drar till sig din uppmärksamhet. Hon går mot klostret tillsammans med två munkar klädda i rött, och de tycks gräla om någonting. Hon förhandlar om ett pris för en besvärjelse som de vill att hon ska kasta i ”Spindelvävshallen ”. Hon påpekar att om den är deras enda försvar mot spioner i korridoren som förbinder refektoriet med sovcellerna, är besvärjelsen Nullaqs nät värd mer än trehundra guldmynt. Du tar upp din huva med dess magra skörd av kopparmynt och traskar långsamt bort för att ligga lågt tills mörkret faller. Du bestämmer dig för att utnyttja din vetskap om att Spindelvävshallen bara har en fälla, spindelväven från häxan som du såg tidigare.",
@@ -1678,6 +1705,12 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du är Akrobat",
       "Om du inte är det"
+    ]
+  },
+  344: {
+    mainText: "Barbaren faller till slut som en hög brutna ben. Mot slutet verkade det som om striden skulle rasa för evigt, men hans stridsrop ska aldrig med störa Orb.",
+    choices: [
+      "Gå vidare",
     ]
   },
   345: {
@@ -1761,6 +1794,15 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Gå vidare"
     ]
+  },
+  377: {
+    mainText: "Olvar uppger ett vildsint vrål, överger all försiktighet och svingar svärdet över huvudet och gör ett utfall mot dig. Han har gripits av bärsärkarraseri och är helt uppslukad av stridslust. Han känner ingen fruktan eller smärta förrän antingen du eller han ligger död. Dra ifrån 1 från all skada du gör på honom. Du parerar hans klinga med underarmen, går åt sidan och måttar ett Kobraslag från höften och uppåt.",
+    choices: [
+      "Om du överlever anfallet kan du använda Järnnävens slag",
+      "eller Virvelkastet",
+      "eller sparka igen."
+    ],
+    stillAlive: "Du har 8 i försvar mot monstrets trädstam. Den är omöjlig att blockera eftersom den är så stor och tung, men det är relativt lätt att hoppa undan från den eftersom du är så liten och snabb när du försöker hoppa, skutta och hjula undan den."
   },
   380: {
     mainText: "Pilen når fram till dig när du befinner dig mitt i luften mellan riggen och däcket, men du slår upp med handen och plockar den ur luften några centimetrar framför ditt bröst och kastar den åt sidan. Människoätaren är rasande och höjer sin spikklubba för att krossa dig.",

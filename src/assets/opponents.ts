@@ -1,5 +1,5 @@
 import { IOpponents } from "@/assets/interfaces/opponents"
-import { EAttackType, EAbilities } from "@/assets/enums"
+import { EAttackType, EAbilities, EBattleStates } from "@/assets/enums"
 
 const opponents: IOpponents = {
   gorobei: {
@@ -293,20 +293,6 @@ const opponents: IOpponents = {
     },
     win: 47,
     pages: {
-      8: {
-        playerAttackType: EAttackType.instant,
-        playerDamage: "4",
-        playerDefense: [0],
-        damage: [""],
-        defense: [0]
-      },
-      800: {
-        playerAttackType: EAttackType.defense,
-        playerDamage: "",
-        playerDefense: [8],
-        damage: ["1T6+1"],
-        defense: []
-      },
       106: {
         playerAttackType: EAttackType.instant,
         playerDamage: "4",
@@ -331,7 +317,7 @@ const opponents: IOpponents = {
       },
       92: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
+        playerDamage: "1T6-1",
         playerDefense: [8],
         damage: ["1T6+2"],
         defense: [6],
@@ -339,11 +325,66 @@ const opponents: IOpponents = {
       },
       39: {
         playerAttackType: EAttackType.throw,
-        directWinGoto: 34,
-        playerDefense: [7],
-        damage: ["1T6"],
+        playerDefense: [6],
+        damage: ["1T6+2"],
         blockable: false,
+        defense: [4],
+      },
+    }
+  },
+  // There are two versions of the Olvar battle, one with the surviving Rune weaver
+  olvarAndRuneWeaver: {
+    opponents: 1,
+    attributes: {
+      name: ["Olvar Barbaren"],
+      hpMax: [18],
+      hp: [18],
+    },
+    win: 344,
+    pages: {
+      8: {
+        playerAttackType: EAttackType.instant,
+        playerDamage: "4",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },
+      800: {
+        playerAttackType: EAttackType.defense,
+        playerDamage: "",
+        playerDefense: [8],
+        damage: ["1T6+1"],
+        defense: []
+      },
+      117: {
+        playerAttackType: EAttackType.instant,
+        playerDamage: "5",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },      
+      302: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [8],
+        playerDamage: "1T6+1",
+        damage: ["1T6+1"],
+        blockable: true,
+        defense: [7],
+      },
+      377: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6-1",
+        playerDefense: [8],
+        damage: ["1T6+2"],
         defense: [6],
+        blockable: true,
+      },
+      318: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [6],
+        damage: ["1T6+2"],
+        blockable: false,
+        defense: [4],
       }
     }
   },
@@ -378,6 +419,54 @@ const opponents: IOpponents = {
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [4, 5, 5],
+      }
+    }
+  },
+  efreti: {
+    opponents: 1,
+    attributes: {
+      name: ["Efreti"],
+      hpMax: [22],
+      hp: [22],
+    },
+    win: 197,
+    pages: {
+      119: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [7],
+        playerDamage: "1T6+2",
+        directDamageOnPlayer: {
+          state: EBattleStates.attack,
+          onlyOnHit: true,
+          damage: "1"
+        },
+        damage: ["2T6+1"],
+        blockable: false,
+        defense: [5],
+      },
+      131: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [7],
+        directDamageOnPlayer: {
+          state: EBattleStates.attack,
+          onlyOnHit: true,
+          damage: "1"
+        },
+        damage: ["2T6+1"],
+        defense: [4],
+        blockable: false,
+      },
+      109: {
+        playerAttackType: EAttackType.defense,
+        playerDefense: [6],
+        directDamageOnPlayer: {
+          state: EBattleStates.defend,          
+          damage: "4"
+        },
+        damage: ["2T6+1"],
+        blockable: false,
+        defense: [],
       }
     }
   },

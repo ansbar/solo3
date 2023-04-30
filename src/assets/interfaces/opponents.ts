@@ -1,4 +1,4 @@
-import { EAbilities, EAttackType } from "../enums"
+import { EAbilities, EAttackType, EBattleStates } from "../enums"
 
 export type IOpponents = Record<string, IOpponent>
 
@@ -24,10 +24,16 @@ export interface IOpponentPage {
   playerAttackType: EAttackType
   playerAttackValue?: number
   playerDefense: number[]
-  playerDamage?: string
+  playerDamage?: string  
   blockable?: boolean
   missDamage?: number
   damage: string[] // 1T6+1
+  // Direct damage to the player
+  directDamageOnPlayer?: {
+    state: EBattleStates,
+    onlyOnHit?: boolean // Only when a successful player attack lands
+    damage: string
+  },
   defense: number[]
   directWinGoto?: number
 }

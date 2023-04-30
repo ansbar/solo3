@@ -5,6 +5,7 @@
   import { useOpponents } from "@/utils/opponents"
   import { EBattleStates } from "@/assets/enums"
   import { useGeneric } from "@/utils/generic"
+  import { useBattle } from "./helpers"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
@@ -12,46 +13,40 @@
   const { playerDefense } = useOpponents()
   const dice = useDice()
   const generic = useGeneric()
+  const battle = useBattle()
 
   const isHit = ref(false)
   const rollText = ref("")
+  const directDamageText =  ref("")
   const damageText =  ref("")
   const hasBlocked = ref(false)
   const currentAttackingOpponent = ref(0)
 
+
   onMounted(() => {    
-    currentAttackingOpponent.value = firstOpponentAlive(0) as number
-    defend()    
+    // Get data for first opponent alive
+    currentAttackingOpponent.value = battle.firstOpponentAlive(0) as number
+
+    // In the rare case damage is applied when player attacks but attack phase is skipped (like page 109)
+    if (opponentStore.directDamageOnPlayer?.state === EBattleStates.defend && !opponentStore.directDamageOnPlayer.onlyOnHit){
+      directDamageText.value = battle.takeDamage(directDamageText, opponentStore.directDamageOnPlayer.damage)
+
+      // If player should die during direct damage we skip the normal defence phase 
+      if (playerStore.attributes.hp > 0) 
+        defend()
+    } else {
+      defend()    
+    }
   })
 
   // Returns current opponents data
-  const opponent = computed(() => {
-    return opponentStore.opponents[currentAttackingOpponent.value]
-  })
-
-  /* Returns the index of the first opponent alive
-   * It is used for:
-   * - check the first opponent alive at mounted (start of defense phase)
-   * - check if there are any opponents alive to attack (when deciding which button to show; next opponent or next round)
-   * - check which opponent is the next current attacker (needed when an opponent in the middle is dead) */
-  const firstOpponentAlive = (opponentIndex: number) => {
-    for (let i = opponentIndex; i < opponentStore.opponents.length; i++) {      
-      if (opponentStore.opponents[i].hp > 0) {
-        return i
-      }   
-    }
-    return false
-  }
-
-  const commitBattleState = (battleState: string) => {
-    mainStore.setBattlestate(battleState as EBattleStates)
-  }
+  const opponent = computed(() => opponentStore.opponents[currentAttackingOpponent.value])
 
   // Watch for block click
   const useBlock = (value: boolean) => {
     damageText.value = ""
             
-    // Do damage
+    // Deal damage
     if(value){
       hasBlocked.value = true
       const blockRoll = dice.doRoll("2T6")
@@ -86,24 +81,14 @@
 
   // Do a player damage roll
   const takeDamage = () => {
-    const damageRoll = dice.doRoll(opponent.value.damage, undefined)  
-    playerStore.setPlayerAttributeHp(-damageRoll)
-            
-    damageText.value += "Du tar " + damageRoll + " i skada (" + opponent.value.damage + ")"
-    if(playerStore.attributes.hp < 1){
-      damageText.value += " <b>och besegras!</b>"
-      mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
-    }else{
-      damageText.value += " och har " + playerStore.attributes.hp + " kroppspoäng kvar."
-    }
-
+    damageText.value = battle.takeDamage(damageText, opponent.value.damage)
     isHit.value = false
-  }
+  }  
 
   // Determines and sets the next attacker in a multiple opponent attack
   const setNextAttacker = () => {
-    currentAttackingOpponent.value = firstOpponentAlive(currentAttackingOpponent.value + 1) as number
-    damageText.value = ""
+    currentAttackingOpponent.value = battle.firstOpponentAlive(currentAttackingOpponent.value + 1) as number
+    damageText.value += ""
     defend()
   }
   // If player loses a battle but is still alive
@@ -116,6 +101,12 @@
 
 <template>
   <section>
+    <div
+      v-if="directDamageText"
+      class="text"
+      v-html="directDamageText"
+    />
+    
     <div
       class="text"
       v-html="rollText"
@@ -146,15 +137,15 @@
 
 
     <!-- Damage texts and buttons -->
-    <template v-else-if="rollText">
+    <template v-else>
       <div
         class="text"
         v-html="damageText"
       />        
 
       <button
-        v-if="playerStore.attributes.hp > 0 && !firstOpponentAlive(currentAttackingOpponent + 1)"
-        @click="commitBattleState('pending')"
+        v-if="playerStore.attributes.hp > 0 && !battle.firstOpponentAlive(currentAttackingOpponent + 1)"
+        @click="battle.changeState('pending')"
       >
         Nästa runda
       </button>

@@ -5,7 +5,7 @@
   import { EAttackType, EBattleStates } from "@/assets/enums"
   import { useStorage } from "@/utils/storage"
   import { pageData } from "@/assets/pages"
-  import Opponent from "./Opponent.vue"
+  import Opponent from "./Battle/Opponent.vue"
   import opponent from "@/assets/opponents"
   import MainText from "./MainText.vue"
   import Choices from "./Choices.vue"
@@ -15,7 +15,6 @@
   import SpecialCondition from "./SpecialCondition.vue"
   import History from "./History.vue"
   import NonBattleInfo from "./NonBattleInfo.vue"
-
 
   const mainStore = useMainStore()
   const pageStore = usePageStore()
@@ -66,9 +65,7 @@
       removeStoreFromStorage("player")
       mainStore.setSavedData(false)
     }    
-  }
-
-  const showSideEffects = () => typeof pageStore.sideEffects === "object"
+  }  
 
   onMounted(() => {
     initPage(currentPageId.value)
@@ -79,7 +76,7 @@
 
   watch(currentPageId, (pageId) => {
     initPage(pageId) // Watch for page change
-    initStorage()        
+    if (!mainStore.dev) initStorage()        
   })
 
   watch(battlestate, (state: EBattleStates) => {
@@ -93,23 +90,23 @@
   })
 
   const showChoices = computed(() => {
-    // Hide choices when in an battle or whn there are special conditions
+    // Hide choices when in an battle or when there are special conditions
     return (battlestate.value === EBattleStates.none || battlestate.value === EBattleStates.pending) 
       && !pageStore.specialCondition
   })
-
   const showHistory = computed(() => pageStore.opponent || pageStore.specialCondition)
+  const showSideEffects = computed(() => typeof pageStore.sideEffects === "object")  
   const showNonBattleInfo = computed(() => !pageStore.opponent)
 </script>
 
 
 <template>
   <h1>#{{ currentPageId }}</h1>
-  
+
   <section>
     <Image />
     <MainText />    
-    <SideEffects v-if="showSideEffects()" />
+    <SideEffects v-if="showSideEffects" />
     <Opponent v-if="pageStore.opponent" />
     <Battle v-if="pageStore.opponent" />
     <SpecialCondition v-if="pageStore.specialCondition" />    

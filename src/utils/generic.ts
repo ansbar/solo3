@@ -6,7 +6,7 @@ export function useGeneric() {
   const mainStore = useMainStore()  
   const storage = useStorage()
 
-   // If player loses a battle and is dead
+   // If player looses a battle and is dead
    const doStartOver = () => {
     storage.removeStoreFromStorage("main")
     storage.removeStoreFromStorage("player")

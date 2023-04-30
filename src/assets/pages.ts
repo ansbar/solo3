@@ -74,7 +74,7 @@ export const pageData: IPages = {
     ]
   },
   8: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 800
@@ -82,7 +82,7 @@ export const pageData: IPages = {
     ]
   },
   800: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 377
@@ -1149,9 +1149,12 @@ export const pageData: IPages = {
   },
   108: {},
   109: {
+    opponent: EOpponents.efreti,
     choices: [
       {
-        goto: 67
+        goto: 131
+      },{
+        goto: 119
       },
     ]
   },
@@ -1177,6 +1180,11 @@ export const pageData: IPages = {
   },
   112: {
     image: true,
+    choices: [
+      {
+        goto: 99,
+      }
+    ]
   },
   113: {
     choices: [
@@ -1208,9 +1216,17 @@ export const pageData: IPages = {
     ]
   },
   117: {
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
-        goto: 67
+        goto: 302
+      },{
+        goto: 377
+      },{
+        goto: 318
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 8
       },
     ]
   },
@@ -1222,9 +1238,16 @@ export const pageData: IPages = {
     ]
   },
   119: {
+    opponent: EOpponents.efreti,
     choices: [
       {
-        goto: 67
+        goto: 131
+      },
+      {
+        goto: 109
+      },
+      {
+        goto: 119
       },
     ]
   },
@@ -1308,9 +1331,16 @@ export const pageData: IPages = {
     ]
   },
   131: {
+    opponent: EOpponents.efreti,
     choices: [
       {
-        goto: 67
+        goto: 119
+      },
+      {
+        goto: 109
+      },
+      {
+        goto: 131
       },
     ]
   },
@@ -2119,6 +2149,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  302: {
+    opponent: EOpponents.olvarAndRuneWeaver,
+    choices: [
+      {
+        goto: 377
+      }, {
+        goto: 318
+      }, {
+        goto: 302,
+      }
+    ]
+  },
   303: {},
   304: {
     sideEffects: {
@@ -2210,6 +2252,16 @@ export const pageData: IPages = {
         goto: 295
       }, {
         goto: 316,
+      }
+    ]
+  },
+  318: {
+    opponent: EOpponents.olvarAndRuneWeaver,
+    choices: [
+      {
+        goto: 302
+      }, {
+        goto: 377
       }
     ]
   },
@@ -2472,6 +2524,18 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 65
+      }
+    ]
+  },
+  377: {
+    opponent: EOpponents.olvarAndRuneWeaver,
+    choices: [
+      {
+        goto: 377
+      }, {
+        goto: 318
+      }, {
+        goto: 302,
       }
     ]
   },

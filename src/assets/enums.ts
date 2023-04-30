@@ -26,11 +26,13 @@ export enum EOpponents {
   goblin = "goblin",
   giant = "giant",
   olvar = "olvar",
+  olvarAndRuneWeaver = "olvarAndRuneWeaver",
   guard = "guard",
   priests = "priests",
   yaemon = "yaemon",
   manse = "manse",
-  runeweaver = "runeweaver"
+  runeweaver = "runeweaver",
+  efreti ="efreti"
 }
 
 export enum EItems {
@@ -68,12 +70,12 @@ export enum EDefenseType {
 }
 
 export enum EAttackType {
-  none = "none",
+  none = "none", // Primarily used as a initializer
   punch = "punch",
   kick = "kick",
-  throw = "throw",
-  instant = "instant",
-  defense = "defense"
+  throw = "throw", // No damage is being dealt here, instead next attack has a higher damage
+  instant = "instant", // No attack roll is needed, the player attack is a hit. Skip to damage dealing
+  defense = "defense" // Go directly to defense phase, attack phase is skipped of various reasons
 }
 
 export enum EBattleModifiers { 

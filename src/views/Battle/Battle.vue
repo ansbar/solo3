@@ -3,6 +3,7 @@
   import InnerStrength from "./InnerStrength.vue"
   import Attack from "./Attack.vue"
   import Defend from "./Defend.vue"
+
   import ChooseOpponent from "./ChooseOpponent.vue"
   import { storeToRefs } from "pinia"
   import { EBattleStates } from "../../assets/enums"

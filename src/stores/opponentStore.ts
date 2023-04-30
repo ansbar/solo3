@@ -1,6 +1,21 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAttackType } from "@/assets/enums"
+import { EAbilities, EAttackType, EBattleStates } from "@/assets/enums"
 import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponents"
+
+interface DirectDamageOnPlayer {
+  state: EBattleStates,
+  onlyOnHit?: boolean,
+  damage: string
+}
+
+export interface Opponent {
+  name: string
+  hp: number,
+  hpMax: number,    
+  playerDefense: number[],
+  damage: string
+  defense: number,
+}
 
 interface StoreOpponent {
   id: string
@@ -16,14 +31,8 @@ interface StoreOpponent {
   loss?: number,
   miss?: number
   directWin?: number,
-  opponents: {
-    name: string
-    hp: number,
-    hpMax: number,    
-    playerDefense: number[],
-    damage: string
-    defense: number,
-  }[]
+  directDamageOnPlayer?: DirectDamageOnPlayer,
+  opponents: Opponent[]
 }
 
 export const useOpponentStore = defineStore("opponent", {
@@ -37,6 +46,7 @@ export const useOpponentStore = defineStore("opponent", {
     playerDamage: undefined,
     blockable: undefined,
     missDamage: undefined,
+    directDamageOnPlayer: {} as DirectDamageOnPlayer,
     opponents: [],
     win: 0,
     loss: 0,
@@ -75,6 +85,7 @@ export const useOpponentStore = defineStore("opponent", {
         playerDamage: payload.playerDamage,
         missDamage: payload.missDamage,
         blockable: payload.blockable,
+        directDamageOnPlayer: payload.directDamageOnPlayer,
         directWin: payload.directWinGoto
       })
 
