@@ -44,7 +44,8 @@ export enum EItems {
   glove = "glove",
   magicShuriken = "magicShuriken",
   fireLizardEssence = "fireLizardEssence",
-  herbs = "herbs"
+  herbs = "herbs",
+  amulet = "amulet"
 }
 
 export enum EBattleStates {

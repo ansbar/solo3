@@ -10,6 +10,7 @@ interface Player_items {
   magicShuriken: number
   fireLizardEssence: number
   herbs: number
+  amulet: number
 }
 
 interface Player_modifiers {

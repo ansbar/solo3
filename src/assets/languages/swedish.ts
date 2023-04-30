@@ -773,7 +773,7 @@ export const languagePages: ILanguagePages = {
     mainText: "När du vadar genom träsket vänder sig Shaggothen med ett vedervärdigt slurpande ljud och Svartalven slår sig fri från de sugande tentaklerna. Hon ler av tacksamhet så att hennes stora mandelögon blir till springor. Ni vänder er för att möta Shaggothen tillsammans, men du slungas plötsligt in i vecken på dess ruttnande kött av ett slag från alvens svärd. Hon skrattar rått och vadar ut till båten medan du förgäves försöker ta dig loss från den slemmiga bestens grepp. Den sjunker långsamt ned i träsket och drar dig med sig. Din näsa och dina lungor fylls med gyttja medan du hjälplöst kämpar. När träsket torkar upp kommer inte ens dina ben att finnas kvar. "
   },
   99: {
-    mainText: "Du är bevakad hela tiden, men du har tid att undersöka låset till porten som leder in till lnre borggården och du hittar ett hål i väggen som används till att skicka mat och vapen igenom när porten är låst. \nNär tiden är inne tas du in i själva Kämtomet. Huvudhallen har en stor spiraltrappa som leder till slottets tak och vidare till tre torn. Du föses in i samtalsrummet före middagen för att underhålla Yaemon och Honoric. Manse Dödsmagikem syns inte till någonstans.\nYaemon iakttar dig noga, men Honoric verkar avslappnad och häller vin från en karaff i en guldbägare. Slottskaptenen och hans dam sitter mellan dem. Du sjunger en sång från Människoländerna om tappra krigardåd och förlorad kärlek och din jonglering ger en artig applåd.\nSå snart din föreställning är slut ger Kaptenen signal och din eskort, två vakter, föser ut dig ur samtalsrummet just när Manse kommer in genom den motsatta dörren.",
+    mainText: "Du är bevakad hela tiden, men du har tid att undersöka låset till porten som leder in till lnre borggården och du hittar ett hål i väggen som används till att skicka mat och vapen igenom när porten är låst. \nNär tiden är inne tas du in i själva Kämtomet. Huvudhallen har en stor spiraltrappa som leder till slottets tak och vidare till tre torn. Du föses in i samtalsrummet före middagen för att underhålla Yaemon och Honoric. Manse Dödsmagikern syns inte till någonstans.\nYaemon iakttar dig noga, men Honoric verkar avslappnad och häller vin från en karaff i en guldbägare. Slottskaptenen och hans dam sitter mellan dem. Du sjunger en sång från Människoländerna om tappra krigardåd och förlorad kärlek och din jonglering ger en artig applåd.\nSå snart din föreställning är slut ger Kaptenen signal och din eskort, två vakter, föser ut dig ur samtalsrummet just när Manse kommer in genom den motsatta dörren.",
     choices: [
       "Om du har färdigheten Gittpilar kan du använda den mot Yaemon",
       "Om du inte har den eller inte vill använda den kan du låta vakterna eskortera dig ut ur slottet"
@@ -791,7 +791,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
    102: {
-    mainText: "Amuletten splittras, bitama glänser när de faller nedför trappan som bitar från en splittrad vas. Dödsmagikem är förvånad över att du stod emot hans infernaliska trollkonst, men han börjar förbereda en annan besvärjelse. Hans åldriga ord frammanar visioner av förmänsklig ondska och illviljan hos länge sedan glömda gudar.",
+    mainText: "Amuletten splittras, bitarna glänser när de faller nedför trappan som bitar från en splittrad vas. Dödsmagikern är förvånad över att du stod emot hans infernaliska trollkonst, men han börjar förbereda en annan besvärjelse. Hans åldriga ord frammanar visioner av förmänsklig ondska och illviljan hos länge sedan glömda gudar.",
     choices: [
       "Du kan använda en giftpil",
       "Annars kan du gå till angrepp",
@@ -937,15 +937,18 @@ export const languagePages: ILanguagePages = {
     mainText: "Det är svårt att gå när du rör dig i utkanten av de grova kullarna vid foten av Visionernas berg och resan tar flera dagar längre tid än du hade väntat dig. Efter den längsta dagens slit som du hittills har tvingat dig igenom, faller mörkret. Månen är röd och det kommer ingen mer dag. Du är för sent ute. Det eviga mörkret har fallit och Kwon har fängslats i lnferno. Din INRE KRAFT försvinner och det finns ingenting du kan göra för att stoppa ondskan från att växa. Du har misslyckats.",
   },
   123: {
-    mainText: "",
+    mainText: "Prästerna springer fram till ﬂodstranden och stirrar ned i vattnet på den plats där stenen föll i. Trögheten försvinner och du glider genom sävsnåren och iväg när de tittar ned. En tar av sig sin ringbrynja för att undersöka ﬂodens djup när du försvinner upp bland kullarna som omger staden Mortavalon Du kommer upp på vägen igen och när du rundar en krök ser du en grotta under ett klipputsprång ovanför dig. ",
     choices: [
-      ""
+      "Om du fortsätter rakt fram till Mortavalon",
+      "Om du går in i grottan"
     ]
   },
   124: {
-    mainText: "",
+    mainText: "\"Aha, jag var också i Druath. Synd att jag missade dig. Var sjöng du?\"",
     choices: [
-      ""
+      "Om du svarar: På Allmodems härbärge",
+      "På Hydrans Huvuden",
+      "På Stora torget"
     ]
   },
   125: {
@@ -963,9 +966,12 @@ export const languagePages: ILanguagePages = {
     ]
   },
   127: {
-    mainText: "",
+    mainText: "Blixten sveper förbi dig och bränner plankorna i stugan. Runvävaren var närmare blixten än Olvar, så hans syn kommer inte tillbaka än på ett tag. Du hoppar fram och anfaller barbaren som står beredd med sitt svärd och skakar på huvudet för att se bättre.",
     choices: [
-      ""
+      "Du kan använda Kobraslaget mot hans oskyddade hals",
+      "eller den Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "eller, om du har färdigheten Giftpilar, kan du använda en"
     ]
   },
   128: {
@@ -975,15 +981,17 @@ export const languagePages: ILanguagePages = {
     ]
   },
   129: {
-    mainText: "",
+    mainText: "Hästen påverkas också. Den saktar ned till en strävsam lunk och gnäggar gällt av skräck. Din kropp darrar när du kämpar för att röra dig, men inte lyckas. Prästerna, för du vet att det är prästmagi, slår dig ur sadeln och binder dig ordentligt. Om du har en Ring tar de den ifrån dig. Stryk den från Speltabellen.",
     choices: [
-      ""
+      "Om du är skicklig i Utbrytarkonst",
+      "Om du inte är det"
     ]
   },
   130: {
-    mainText: "",
+    mainText: "Du går genom portalen som leder till tornet krönt av den Svarta Virvelströmmen. Spiraltrappan är upplyst av ett olycksbådande, grönt sken och du ser ett rött öga som hängeri tomma intet längst upp i stentrappan. Det glöder och ögonvitan är fasansfullt rödsprängd. Det blinkar en gång, sedan försvinner det när dörren till kammaren ovanför slängs upp. Manse Dödsmagikern reser sig högt över dig längst upp i trappan. Hans onaturligt vita hudfärg lyser spöklikt grön i ljuset. Hans ögon glöder blodsprängt röda och han bär en svart stav krönt av ett kobrahuvud i grön, snidad jade. \nInnan du hinner röra dig pekar han med ett långt finger mot dig och säger kallt, \"DÖ!\"",
     choices: [
-      ""
+      "Om du har Amuletten som skyddar mot Dödens Finger",
+      "Om du inte har den"
     ]
   },
   131: {

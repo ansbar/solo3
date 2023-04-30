@@ -15,7 +15,8 @@ export const usePlayerStore = defineStore("player", {
       glove: 0,
       magicShuriken: 0,
       fireLizardEssence: 0,
-      herbs: 0
+      herbs: 0,
+      amulet: 0
     },
     modifiers: {
       punch: 0,

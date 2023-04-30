@@ -1273,14 +1273,20 @@ export const pageData: IPages = {
   123: {
     choices: [
       {
-        goto: 67
+        goto: 283
+      },{
+        goto: 275
       },
     ]
   },
   124: {
     choices: [
       {
-        goto: 67
+        goto: 48
+      },{
+        goto: 22
+      },{
+        goto: 62
       },
     ]
   },
@@ -1307,7 +1313,14 @@ export const pageData: IPages = {
   127: {
     choices: [
       {
-        goto: 67
+        goto: 92
+      },{
+        goto: 23
+      },{
+        goto: 39
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 106
       },
     ]
   },
@@ -1321,15 +1334,21 @@ export const pageData: IPages = {
   129: {
     choices: [
       {
-        goto: 67
-      },
+        goto: 21,
+        ability: EAbilities.escapeArtist        
+      },{
+        goto: 37,
+      }
     ]
   },
   130: {
     choices: [
       {
-        goto: 67
-      },
+        goto: 102,
+        item: EItems.amulet
+      },{
+        goto: 140,
+      }
     ]
   },
   131: {

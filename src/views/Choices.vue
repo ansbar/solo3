@@ -21,13 +21,6 @@
     return false
   }
 
-  // Returns true if player has enough of the requested item
-  const hasItem = (item: EItems, amount: number) => {
-    if (playerStore.items[item] >= amount) return true
-   
-    return false
-  }
-
   // Change page
   const gotoStory = (pageId: number) => {
     if (mainStore.currentPageId === pageId) {
@@ -42,7 +35,7 @@
     if (choice.ability) {
       return hasAbility(choice.ability)
     } else if (choice.item) {
-      return hasItem(choice.item, choice.amount || 0)
+      return playerStore.items[choice.item] >= (choice.amount || 1)
     } 
     return true
   }
