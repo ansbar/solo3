@@ -3,12 +3,13 @@ import { EAbilities, EAddedAbilities } from "@/assets/enums"
 interface Player_items {
   gold: number
   shuriken: number
-  opalring: boolean
-  healingPotion: boolean  
-  glove: boolean
-  magicShuriken: boolean
-  fireLizardEssence: boolean
-  herbs: boolean
+  flashPowder: number
+  opalring: number
+  healingPotion: number  
+  glove: number
+  magicShuriken: number
+  fireLizardEssence: number
+  herbs: number
 }
 
 interface Player_modifiers {

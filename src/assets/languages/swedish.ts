@@ -47,6 +47,7 @@ export const languageGeneral: ILanguageGeneral = {
   },
   items: {
     healingPotion: "helande dryck (10 kroppspoäng)",
+    flashPowder: "blixtpulver",
     opalring: "opalring",
     shuriken: "kaststjärnor",
     gold: "guldstycken",
@@ -901,9 +902,11 @@ export const languagePages: ILanguagePages = {
     ]
   },
   118: {
-    mainText: "",
+    mainText: "Han slår till med höger hand mot vänstra sidan av din hals. Du för upp benet i en båge från vänster till höger och för hans hand åt sidan, men han drar tillbaka den och hugger igen på andra sidan av din hals. Du får snabbt ge vika och vrider upp armen över bröstet för att ta emot slaget med underarmen. Med obeveklig snabbhet sluter Yaemon sin hand och slår rakt upp med näven, i ett försök att driva upp sina knogar i din näsa. Du är hårt pressad, men lyckas få upp underarmen över huvudet precis i tid för att ta emot slaget. Ett ögonblick senare slår han upp med sidan av höger fot mot din strupe i en Bevingade hästens spark, men med en snabbhet född ur desperationen lyckas du slå undan hans fot med din vänstra hand. Kraften från sparken får honom att virvla runt och du tar chansen att hoppa utom räckhåll, medan ekot från hans vrål ekar i natten. Yaemon vänder sig för att möta dig och du tar tillfället i akt att göra ett motanfall.",
     choices: [
-      ""
+      "Om du sparkar",
+      "eller slår",
+      "eller kastar"
     ]
   },
   119: {
@@ -916,9 +919,11 @@ export const languagePages: ILanguagePages = {
     ]
   },
   120: {
-    mainText: "",
+    mainText: "Du höjer dig ljudlöst ur vallgraven och klättrar lätt till toppen av det förfallna tornet, piskad av vinden och regnet. När du kikar över bröstvärnet ser du två vakter som står vid en eld som har tänts under en stor tjärad segelduk. Elden brinner en bit från trappan som leder till den lnre borggården som omger Stora Kämtornet. Du duckar bakom bröstvärnet igen och hänger där när molnen splittras så att månen skiner igenom. Fem minuter senare är månen dold igen och du kryper ljudlöst över bröstvärnet upp på tornets tak.",
     choices: [
-      ""
+      "Kastar du en Shuriken på en av vakterna och springer fram för att använda strypsnaran på den andra?",
+      "Om du kastar en liten sten i elden",
+      "Om du har något blixtpulver kvar, kan du kasta in det i elden"
     ]
   },
   121: {

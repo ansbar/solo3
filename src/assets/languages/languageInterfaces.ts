@@ -72,12 +72,14 @@ export interface ILanguageItems {
   shuriken: string  
   gold: string
   healingPotion: string
+  flashPowder: string
   opalring: string
   glove: string
   magicShuriken: string
   fireLizardEssence: string
   herbs: string
   amulet: string
+  [key: string]: string
 }
 
 export interface ILanguageModifiers {

@@ -97,7 +97,7 @@ export const pageData: IPages = {
   10: {
     sideEffects: {
       items: {
-        herbs: true
+        herbs: 1
       },
     },
     choices: [
@@ -116,7 +116,7 @@ export const pageData: IPages = {
   12: {
     sideEffects: {
       items: {
-        opalring: false
+        opalring: -1
       }
     },
     choices: [
@@ -572,7 +572,7 @@ export const pageData: IPages = {
   55: {
     sideEffects: {
       items: {
-        amulet: true
+        amulet: 1
       }
     },
     choices: [
@@ -822,7 +822,7 @@ export const pageData: IPages = {
         hp: 3,
       },
       items: {
-        magicShuriken: true
+        magicShuriken: 1
       },
     },
     choices: [
@@ -1217,6 +1217,11 @@ export const pageData: IPages = {
   },
   117: {
     opponent: EOpponents.olvarAndRuneWeaver,
+    sideEffects: {
+      items: {
+        flashPowder: -1
+      }
+    },
     choices: [
       {
         goto: 302
@@ -1232,9 +1237,7 @@ export const pageData: IPages = {
   },
   118: {
     choices: [
-      {
-        goto: 67
-      },
+      { goto: 131 },{ goto: 109 },{ goto: 119 },
     ]
   },
   119: {
@@ -1253,10 +1256,9 @@ export const pageData: IPages = {
   },
   120: {
     choices: [
-      {
-        goto: 67
-      },
-    ]
+      { goto: 11 },
+      { goto: 355 },
+      { goto: 415, item: EItems.flashPowder, amount: 1 }]
   },
   121: {
     choices: [
@@ -1588,7 +1590,7 @@ export const pageData: IPages = {
   177: {
     sideEffects: {
       items: {
-        opalring: true
+        opalring: 1
       },
     },
     choices: [
@@ -1721,7 +1723,7 @@ export const pageData: IPages = {
   206: {
     sideEffects: {
       items: {
-        opalring: false,
+        opalring: -1,
         gold: -5 // Todo, ska vara 5 kvar, fixa i slutet
       },
     },
@@ -2011,13 +2013,9 @@ export const pageData: IPages = {
   262: {
     image: true,
     choices: [
-      {
-        goto: 226
-      }, {
-        goto: 204
-      }, {
-        goto: 117
-      }
+      { goto: 226 }, 
+      { goto: 204 }, 
+      { goto: 117, item: EItems.flashPowder, amount: 1 }
     ]
   },
   267: {
@@ -2040,7 +2038,7 @@ export const pageData: IPages = {
   272: {
     sideEffects: {
       items: {
-        fireLizardEssence: true
+        fireLizardEssence: 1
       }
     },
     choices: [
@@ -2131,7 +2129,7 @@ export const pageData: IPages = {
   297: {
     sideEffects: {
       items: {
-        healingPotion: true
+        healingPotion: 1
       },
     },
     choices: [
@@ -2165,7 +2163,7 @@ export const pageData: IPages = {
   304: {
     sideEffects: {
       items: {
-        herbs: true
+        herbs: 1
       },
     },
     choices: [
@@ -2335,11 +2333,11 @@ export const pageData: IPages = {
   },
   336: {
     sideEffects: {
-      "items": {
-        "glove": true
+      items: {
+        glove: 1
       },    
       modifiers: {
-        "punch": 1,
+        punch: 1,
       },
     },
     choices: [
@@ -2394,11 +2392,15 @@ export const pageData: IPages = {
       }
     ]
   },
+  344: {
+    choices: [
+      {
+        goto: 366
+      }
+    ]
+  },
   345: {
     opponent: EOpponents.humanEater,
-    // "battle": {
-    //     "opponent": opponents.humanEater
-    // },
     choices: [
       {
         goto: 332

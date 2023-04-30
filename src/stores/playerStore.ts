@@ -8,13 +8,14 @@ export const usePlayerStore = defineStore("player", {
     abilities: [],
     items: {
       shuriken: 5,
+      flashPowder: 1,
       gold: 0,
-      opalring: false,
-      healingPotion: false,
-      glove: false,
-      magicShuriken: false,
-      fireLizardEssence: false,
-      herbs: false
+      opalring: 0,
+      healingPotion: 0,
+      glove: 0,
+      magicShuriken: 0,
+      fireLizardEssence: 0,
+      herbs: 0
     },
     modifiers: {
       punch: 0,
@@ -43,29 +44,8 @@ export const usePlayerStore = defineStore("player", {
       this.abilities.splice(payload, 1)
     },
     // Items
-    togglePlayerItem (payload: {item: EItems, toggle: boolean }){
-      this.items[payload.item] = payload.toggle as never // Todo, why is never needed
-    },
-    setPlayerItemShuriken (payload: number) {
-      this.items.shuriken += payload
-    },
-    togglePlayerItemMagicShuriken (payload: boolean) {
-      this.items.magicShuriken = payload
-    },
-    togglePlayerItemHerbs (payload: boolean) {
-      this.items.herbs = payload
-    },
-    setPlayerItemGold (payload: number) {
-      this.items.gold += payload
-    },
-    togglePlayerItemOpalring (payload: boolean) {
-      this.items.opalring = payload
-    },
-    togglePlayerItemGlove (payload: boolean) {
-      this.items.glove = payload
-    },
-    togglePlayerItemHealingPotion (payload: boolean) {
-      this.items.healingPotion = payload
+    setPlayerItem (payload: {item: EItems, amount: number }){
+      this.items[payload.item] += payload.amount 
     },
     // Attributes
     setPlayerAttributeHp (payload: number) {

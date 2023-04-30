@@ -21,7 +21,7 @@
   const nonBattleItems = {
     healingPotion: {
       key: EItems.healingPotion,
-      value:10,
+      value: 10,
     },
     herbs: {
       key: EItems.herbs,
@@ -39,7 +39,7 @@
   })
 
   const useItem = (item: Item) => {
-    playerStore.togglePlayerItem({ item: item.key, toggle: false })
+    playerStore.setPlayerItem({ item: item.key, amount: -1 })
     playerStore.setPlayerAttributeHp(item.value)
   }
 </script>

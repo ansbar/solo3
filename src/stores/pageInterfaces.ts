@@ -27,15 +27,17 @@ export interface IPageSidesideEffects {
     throw?: number
   }  
   items?: {
-    opalring?: boolean,
-    healingPotion?: boolean
-    glove?: boolean,
-    magicShuriken?: boolean
+    opalring?: number,
+    healingPotion?: number
+    flashPowder?: number,
+    glove?: number,
+    magicShuriken?: number
     shuriken?: number  
     gold?: number
-    fireLizardEssence?: boolean
-    herbs?: boolean
-    amulet?: boolean
+    fireLizardEssence?: number
+    herbs?: number
+    amulet?: number
+    [key: string]: number | undefined
   },
   attributes?: {
     hp?: number

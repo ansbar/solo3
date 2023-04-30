@@ -1,7 +1,7 @@
 import { defineStore } from "pinia"
 import { IPage } from "./pageInterfaces"
 import { usePlayerStore } from "./playerStore"
-import { EAddedAbilities } from "@/assets/enums"
+import { EAddedAbilities, EItems } from "@/assets/enums"
 
 export const usePageStore = defineStore("page", {
   state: (): IPage => (
@@ -41,15 +41,14 @@ export const usePageStore = defineStore("page", {
         if (temporary.damage) playerStore.setTemporaryAttackModifier(temporary.damage)       
       }
       
-      if (this.sideEffects?.items) {
-        const items = this.sideEffects.items        
-        if (items.opalring) playerStore.togglePlayerItemOpalring(items.opalring)        
-        if (items.glove) playerStore.togglePlayerItemGlove(items.glove)
-        if (items.healingPotion) playerStore.togglePlayerItemHealingPotion(items.healingPotion)
-        if (items.magicShuriken) playerStore.togglePlayerItemMagicShuriken(items.magicShuriken)
-        if (items.gold) playerStore.setPlayerItemGold(items.gold)
-        if (items.shuriken) playerStore.setPlayerItemShuriken(items.shuriken)
-        if (items.herbs) playerStore.togglePlayerItemHerbs(items.herbs)
+      if (this.sideEffects?.items) {        
+        const items = this.sideEffects.items   
+        
+        for (const key in items) {
+          if (Object.hasOwn(items, key)) {
+            playerStore.setPlayerItem({ item: key as EItems, amount: items[key] || 0 })
+          }
+        }
       }      
       
       if (this.sideEffects?.attributes) {

@@ -22,12 +22,9 @@
   }
 
   // Returns true if player has enough of the requested item
-  const hasItem = (item: EItems, amount?: number) => {
-    // Some items like shuriken can the you have multiple of
-    if (amount && playerStore.items[item] as number >= amount)
-      return true
-    else if (!amount && playerStore.items[item] as boolean)
-      return true
+  const hasItem = (item: EItems, amount: number) => {
+    if (playerStore.items[item] >= amount) return true
+   
     return false
   }
 
@@ -45,7 +42,7 @@
     if (choice.ability) {
       return hasAbility(choice.ability)
     } else if (choice.item) {
-      return hasItem(choice.item, choice.amount)
+      return hasItem(choice.item, choice.amount || 0)
     } 
     return true
   }

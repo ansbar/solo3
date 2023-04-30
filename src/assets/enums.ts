@@ -37,6 +37,7 @@ export enum EOpponents {
 
 export enum EItems {
   healingPotion = "healingPotion",
+  flashPowder = "flashPowder",
   opalring = "opalring",
   shuriken = "shuriken",
   gold = "gold",
