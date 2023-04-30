@@ -1004,9 +1004,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   132: {
-    mainText: "",
+    mainText: "Regnet dämpas något när du tar dig fram över vallgraven. Du hör knarrandet från en vakts fötter på gruset när han vänder sig om för att titta ut över vattnet, oroad av oxgrodornas plötsliga tystnad. Du glider ned under ytan. Gör ett Ödesslag.",
     choices: [
-      ""
+      "Gå vidare",
+      "Gå vidare"
     ]
   },
   133: {
@@ -1025,9 +1026,11 @@ export const languagePages: ILanguagePages = {
     ]
   },
   135: {
-    mainText: "",
+    mainText: "Prästerna sitter av hästarna och börjar recitera en ondskefull besvärjelse medan de långsamt går fram mot dig. Dina lemmar känns tyngre.",
     choices: [
-      ""
+      "Om du anfaller dem",
+      "Om du springer fram till ﬂoden för att gömma dig i sävsnåren och rulla ned en sten i vattnet, innan du ålar i väg",
+      "Om du springer fram till ﬂoden, dyker ned och stannar under vattnet med hjälp av ditt bamburör"
     ]
   },
   136: {
@@ -1045,9 +1048,9 @@ export const languagePages: ILanguagePages = {
     ]
   },
   138: {
-    mainText: "",
+    mainText: "När du smyger dig mot vallgraven i månskenet denna stilla natt, uppfattar din skarpa hörsel ett dämpat rop från slottets bröstvärn. De har sett dig. Du ligger lågt en timme, men när du hör gläfsandet från hundar bestämmer du dig för att springa ut i skogen. Du använder din skogskunskap för att lura bort hundama från spåret och återvänder till slottet dagen därpå.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   139: {
@@ -1057,28 +1060,25 @@ export const languagePages: ILanguagePages = {
     ]
   },
   140: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "Ditt hjärta slår häftigt, sedan slits det ut ur bröstkorgen och ﬂyger till Dödsmagikerns utsträckta hand. Han klämmer organet, som fortfarande slår, och trappstegen ovanför dig är dränkta med ditt blod. Du faller död ned och rullar ned till Stora Kärntornets tak nedanför. Utan försvar mot Manses djävulska häxkonster kunde du inte stå emot honom.",
   },
   141: {
-    mainText: "",
+    mainText: "Du går över Stora Kärntornets tak och går in i tornet som kröns av Svarta Virvelströmmens ﬂagga. Med Sorcerak på ryggen klättrar du upp till tornets topp. Trappan är upplyst av ett olycksbådande grönt sken och du ser ett rött öga som hänger i tomma intet längst upp i stentrappan. Det glöder och ögonvitan är fruktansvärt blodsprängd.\nPlötsligt smäller det till och försvinner när du klättrar uppför de sista trappstegen och slänger upp dörren längst upp. Manse Dödsmagikern, som fortfarande är klädd i sin svarta kappa vilken gör hans ansikte än mer blekt, reser sig ur sängen när du kommer in. Fruktan som strålar ut från Sorceraks magiska klinga får hans vita hår att resa sig. Han uttalar en besvärjelse, men ingenting händer. Du kastar ned Sorcerak på golvet framför honom, och han ryggar bakåt. Hans ögon glöder lika röda som det du såg utanför hans kammare.\nHans röst är en svag väsning när han hotar dig, \"Om du dödar mig tar det där ondsinta svärdet din själ.\" Du struntar i honom och han försöker kasta en sista besvärjelse när du går framåt, men Sorcerak upplöser magin när en blixt av eld lämnar hans mun och du kastar honom med lätthet till golvet. Han är inte stark och kämpar förgäves när du kör ned hälen i hans hals. Nacken knäcks som torr kvist. Aldrig mer ska Manse Dödsmagikern offra barn till sin gud Nemesis. Med hjälp av Honorics svärd har du befriat Orb från dess mäktigaste svarta magiker. Du lämnar Sorcerak rykande på kammarens golv och går nedför torntrappan för att leta rätt på Yaemon och hämnas din andliga fader.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   142: {
-    mainText: "",
+    mainText: "Blixten träffar dig i sidan, bränner ditt kött och ger dig en stöt som om du hade träffats av en murbräcka. Du kastas in i den bortre väggen.\nDu förlorar 8 KROPPSPOÄNG. Om du fortfarande lever vrider du dig i luften och landar säkert på fötterna. Du lyckas övervinna smärtan när Barbaren går fram för att angripa dig med sitt långsvärd. Runvävare stod närmare eldblixten än Olvar, så han är förblindad ett tag till.",
     choices: [
-      ""
+      "Du kan använda Kobraslaget",
+      "eller Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "eller, om du har färdigheten Giftpilar, kan du använda en sådan"
     ]
   },
   143: {
-    mainText: "",
-    choices: [
-      ""
-    ]
+    mainText: "När du närmar dig grottöppningen i den släta klippan ger den smala klippavsatsen som du står på vika. Du faller och försöker använda händer och fötter för att hindra fallet genom att snudda vid bergssidan när du faller. Men fallet är för högt och du studsar bort från bergssidan och spetsas på en liten tall. Du har misslyckats med ditt uppdrag.",
   },
   144: {
     mainText: "Du väntar, till synes nedslagen, på att vakterna ska ta dig till fånga, men gör sedan en hög volt i luften över dem och springer genom porten, samtidigt som solens första strålar visar sig. De förbluffade soldaterna springer efter dig men du seglar nedför vägen snabbt som vinden och de ger snart upp den fruktlösa jakten.",
@@ -1087,9 +1087,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   145: {
-    mainText: "",
+    mainText: "Du gömmer dig i ett hål i marken, studerar porthuset och väntar på att mörkret ska falla. Månen är vit och full och natten är stilla. Det blåser inte ens tillräckligt för att banéren på de tre tornen ska vaja.",
     choices: [
-      ""
+      "Om du väljer att försöka döda Yaemon, Honoric och Manse Dödsmagikern ikväll",
+      "Om du hellre väntar och ser om vädret blir sämre imorgon"
     ]
   },
   146: {
@@ -1101,27 +1102,37 @@ export const languagePages: ILanguagePages = {
     ],
   },
   147: {
-    mainText: "",
+    mainText: "Du tömmer Eldödle-essensen på vallgravens yta och får oxgrodorna att fortsätta kväka. ",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   148: {
-    mainText: "",
+    mainText: "Du går tyst fram till portalen längst ned i tornet som kröns av Röda Syrsans banér. Du rör dig försiktigt när du glider uppför stentrappan och känner efter fällor hela tiden.",
     choices: [
-      ""
+      "Gå vidare"
     ]
   },
   149: {
-    mainText: "",
+    mainText: "Efretin höjer sig över dig, med ﬂammorna slickande dess rödglänsande kött. Den sträcker sig efter dig och det strömmar eld nedfor dess arm.",
     choices: [
-      ""
+      "Du kan använda Jämnävens slag",
+      "eller Virvelkastet",
+      "eller Tigersprångets spark"
     ]
   },
   150: {
-    mainText: "",
+    mainText: "Du tittar åt sidan på Yaemon. Du hoppar som en krabba så att du kommer inom räckhåll, och gör ännu en Kluven blixtspark med foten riktad mot hans ljumske. Yaemon är inte så lätt att lura en gång till.\nHan hoppar högt över din första spark och medan han ännu är i luften sparkar han dig i ansiktet, innan du hinner avsluta din Kluvna blixtspark. Du vacklar bakåt och han landar framför dig. Han lägger sin vänstra hand på din bröstkorg, kröker vänster ben runt ditt och stöter till. Du faller platt på rygg och han sätter sig på ett knä bredvid dig, samtidigt som han slår ned med höger hand mot ditt bröst med ett vrål av lnre Kraft, så att dina revben knäcks. Du förlorar 11 KROPPSPOÄNG.\nOm du fortfarande lever inser du att du bara har sekunder på dig innan Yaemon gör slut på dig och fruktan för döden ger dig styrka att rulla undan och utom räckhåll för honom. Du tar dig upp på fötter så fort du kan, men han är över dig igen med en serie anfall.",
     choices: [
-      ""
+      "Om du har färdigheten Akrobatik",
+      "Om inte"
+    ]
+  },
+  1500: {
+    mainText: "Du har inte färdigheten akrobatik och därför måste du försöka blockera. Ditt Försvar är bara 6, eftersom du fortfarande är en smula omtöcknad.",
+    choices: [
+      "Du lyckas",
+      "Du misslyckas"
     ]
   },
   151: {
@@ -1130,8 +1141,50 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  152: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   153: {
     mainText: "Det tar bara ett ögonblick att dyrka upp låset med en liten fil. Det klickar till tyst och de väloljade gångjärnen ger inget ljud ifrån sig när du öppnar hyttdörren. Därinne sover Sjörövarkaptenen. Han har övergett sin egen hytt för bekvämligheten på Aquamarin. Han är full och snarkar högt. Du tar tid på dig att smeta gift på låsdyrken innan du stöter den i hans halspulsåder. Du vänder dig om och ropar signalen för besättningen att bryta sig ut samtidigt som Sjörövarkaptenen ligger i dödsryckningar. Du leder anfallet och de romdränkta piraterna tas med överraskning. Många hoppar i havet utan att tänka på att deras skepp ligger en kilometer bort i mörkret. Du är glad att se Glaivas, som har befriats av en besättningsman, göra slut på en ful pirat som visade sig besvärlig. De få som fortfarande är vid liv ger sig till honom och han ger order om att sätta dem vid årorna så att de får smaka sin egen medicin. Nästa morgon hissar ni seglen igen och seglar med god fart.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  154: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  155: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  156: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  157: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  158: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  159: {
+    mainText: "",
     choices: [
       "Gå vidare"
     ]
@@ -1145,8 +1198,50 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Snöjätten försöker krossa dig med ett slag med klorna. Du har 5 i Försvar när du kämpar för att hålla balansen på isen. Om du fortfarande lever kan du glida in under de fäktande armarna"
   },
+  161: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  162: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  163: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   164: {
     mainText: "Den snurrande Shuriken träffar Sjörövarkaptenen i strupen och ropet han hade på sina läppar dränks i ett blodigt gurglande när han faller livlös ned på plankoma. Du ger signalen och besättningen rusar upp från roddardäck, viftande med kedjor och kroksablar de har tagit från vakterna. Du leder anfallet och ni överraskar de romrusiga piraterna. Många hoppar i havet utan att minnas att deras skepp ligger en kilometer bort i mörkret. Du är glad att se Glaivas, befriad av en i besättningen, göra slut på en ful pirat som visade sig besvärlig. De få som fortfarande är vid liv ger sig till honom och han ger order om att sätta dem vid årorna så att de får smaka sin egen medicin. l gryningen hissar ni seglen igen och sätter god fart.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  165: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  166: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  167: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  168: {
+    mainText: "",
     choices: [
       "Gå vidare"
     ]
@@ -1157,12 +1252,36 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  170: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  171: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   172: {
     mainText: "Du hoppar ned i det slemmiga, gröna träsket och sjunker nästan ned till midjan. Kärret suger ned fötterna på dig när du kämpar dig fram mot båten som skvalpar stilla mitt i sörjan av gyttja och slem. Svartalven försöker också ta sig fram till båten, men plötsligt sprutar det upp gyttja och slem när en formlös massa av späck och piskande tentakler dyker upp ur vattnet framför henne. Det är en Shaggoth, eller slembest, som virar sina stinkande tentakler runt den skrikande Svartalven. Du tittar flyktigt ut över öknen, där riddaren slåss mot Kobramannen.",
     choices: [
       "Om du kommer till Svartalvens hjälp",
       "Om du tar dig fram till båten",
       "Om du vadar förbi och tar dig ut i öknen"
+    ]
+  },
+  173: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  174: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
     ]
   },
   175: {
@@ -1178,6 +1297,36 @@ export const languagePages: ILanguagePages = {
   },
   177: {
     mainText: "Gryningens Stormästare ler och säger, ”Du klarar provet, för du har svarat både vist och rätt. Det är inte fel av dig att vilja hämnas Naijishi, som älskade dig och lärde dig att älska Herren Kwon, men du måste vänta tålmodigt på att din tid ska komma och glöm aldrig, att tjäna Kwon är att hjälpa hela mänskligheten. Det är bara genom att misslyckas med ett uppdrag som en sann Skuggkrigare kan tas till fånga och det finns alltid tid att bita av sig tungan och förblöda, hellre än att riskera att avslöja hemligheter under tortyr. ” Han fortsätter, ”Vi har aldrig sett någon så lovande eller någon som bemästrar Tigerns väg så väl. Jag ska recitera Skuggkrigarnas Stormästares litania - minns den, för en dag kan den komma till användning. \n\nJAG ÄR SKUGGKRIGAREN \nMin Far och Mor är Himlen och Jorden \nMitt Hem är min Kropp \nMin Kraft är Trofasthet \nMin Magi är Träning \nMitt Liv och min Död är Andning \nMin Kropp är Kontroll \nMina Ögon är Solen och Månen \nMina Öron är Känslighet \nMina Lagar är Självförsvar \nMin Styrka är Anpassning \nMin Ambition är att Tillvarata varje Möjlighet \nMin Vän är Sinnet \nMin Fiende är Vårdslöshet \nMitt Skydd är Rätt Handling \nMitt Vapen är Allting \nMin Strategi är En fot framför Den andra \nMin Tilltro är till Kwon \nMIN VÄG ÄR TIGERNS VÄG” \n\nHans ord etsas in i ditt minne. Anteckna den här texten så att du kan referera till Litanian igen om du skulle behöva det. \nSedan tar han en Opalring från sitt finger och ger den till dig. ”Du kan få användning för den här, ” säger han och sätter den på ditt ﬁnger. När Stormästarens ekande ord har dött bort för de tillbaka dig till Tempelsalen, där munkarna och byborna har väntat för att se om du skulle klara provet. Ni ber böner till Kwon under ceremonin när du utnämns till De Fyra Vindamas Stormästare. Gorobei applåderar med de andra. Han är fortfarande en lnvigd av Inre cirkeln, men hans tid kommer, för han är en stor krigare och en god munk. Om du skulle dö tar antagligen han din plats. ",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  178: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  179: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  180: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  181: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  182: {
+    mainText: "",
     choices: [
       "Gå vidare"
     ]
@@ -1205,11 +1354,41 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Snöjätten försöker krossa dig med ett slag med klorna. Du har 5 i Försvar när du kämpar för att hålla balansen på isen. Om du fortfarande lever kan du glida in under de fäktande armarna"
   },
+  185: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   186: {
     mainText: "En ung soldat hånler och kallar dig en pestsmittad kloakråtta. Du sitter i ett hörn och ignorerar honom. Din skarpa hörsel gör att du kan lyssna på deras samtal i stället för på alla de andra som talar i värdshuset som är fyllt med folk. Det verkar som om de väntar på att ledaren för Domsvärdslegionen, Honoric, ska återvända innan de marscherar mot Föraningens tom. Han tycks ha lämnat staden tillsammans med Yaemon, och färdats norrut. En av de berusade soldaterna vid bordet bredvid börjar förolämpa dig och sedan säger han åt dig att om du vill leva borde du lämna värdshuset nu.",
     choices: [
       "Om du stannar vid ditt bord",
       "Om du hyr ett rum på övervåningen för natten"
+    ]
+  },
+  187: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  188: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  189: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  190: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
     ]
   },
   191: {
@@ -1237,6 +1416,12 @@ export const languagePages: ILanguagePages = {
       "Om du inte är det"
     ]
   },
+  195: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   196: {
     mainText: "Du går uppför trappan till Templet. Träbänkarna tycks vara slumpmässigt utställda därinne, men taket är genomborrat av rosettfönster och det är ljust och vackert där inne. Kristaller reﬂekterar solens strålar mot en målning av ett förstört slott med soldater och bönder som dansar i gläntorna framför det. Den dödade prästen eller den unge krigaren syns inte till någonstans. En av Prästerna går fram mot dig och du frågar honom om han kan ge dig lite information. Han frågar om du tillber Béatan.\nVilken gud säger du att du tillber?",
     choices: [
@@ -1244,6 +1429,24 @@ export const languagePages: ILanguagePages = {
       "Allmodern",
       "eller Béatan",
       "Om du hellre går ut ur Templet och följer efter den gamle mannen som sade sig vara ett Orakel"
+    ]
+  },
+  197: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  198: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  199: {
+    mainText: "",
+    choices: [
+      "Gå vidare"
     ]
   },
   200: {

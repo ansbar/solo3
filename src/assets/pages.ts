@@ -1366,10 +1366,17 @@ export const pageData: IPages = {
     ]
   },
   132: {
+    specialCondition: {
+      type: "fate",
+    },
     choices: [
       {
-        goto: 67
-      },
+        criteria: true,
+        goto: 120,
+      }, {
+        criteria: false,
+        goto: 108,
+      }
     ]
   },
   133: {
@@ -1395,8 +1402,12 @@ export const pageData: IPages = {
   135: {
     choices: [
       {
-        goto: 67
-      },
+        goto: 44,
+      }, {
+        goto: 123,
+      }, {
+        goto: 4,
+      }
     ]
   },
   136: {
@@ -1443,7 +1454,7 @@ export const pageData: IPages = {
   138: {
     choices: [
       {
-        goto: 67
+        goto: 166
       },
     ]
   },
@@ -1454,34 +1465,38 @@ export const pageData: IPages = {
       }
     ]
   },
-  140: {
-    choices: [
-      {
-        goto: 67
-      },
-    ]
-  },
+  140: {},
   141: {
+    image: true,
     choices: [
       {
-        goto: 67
+        goto: 305
       },
     ]
   },
   142: {
+    sideEffects: {
+      attributes: {
+        hp: -8
+      }
+    },
     choices: [
       {
-        goto: 67
+        goto: 92
+      },
+      {
+        goto: 23
+      },
+      {
+        goto: 39
+      },
+      {
+        ability: EAbilities.poisonArrows,
+        goto: 106
       },
     ]
   },
-  143: {
-    choices: [
-      {
-        goto: 67
-      },
-    ]
-  },
+  143: {},
   144: {
     choices: [
       {
@@ -1492,8 +1507,10 @@ export const pageData: IPages = {
   145: {
     choices: [
       {
-        goto: 67
-      },
+        goto: 79
+      },{
+        goto: 7,
+      }
     ]
   },
   146: {
@@ -1516,32 +1533,67 @@ export const pageData: IPages = {
   147: {
     choices: [
       {
-        goto: 67
+        goto: 120
       },
     ]
   },
   148: {
     choices: [
       {
-        goto: 67
+        goto: 129
       },
     ]
   },
   149: {
     choices: [
       {
-        goto: 67
+        goto: 131
+      },{
+        goto: 109
+      },{
+        goto: 119
       },
     ]
   },
   150: {
+    sideEffects: {
+      attributes: {
+        hp: -11
+      }
+    },
     choices: [
       {
-        goto: 67
-      },
+        goto: 181
+      },{
+        goto: 1500
+      }
+    ]
+  },
+  1500: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.yaemon
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 18,
+      }, {
+        criteria: false,
+        goto: 308,
+      }
     ]
   },
   151: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  152: {
     choices: [
       {
         goto: 191,
@@ -1552,6 +1604,48 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 26,
+      }
+    ]
+  },
+  154: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  155: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  156: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  157: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  158: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  159: {
+    choices: [
+      {
+        goto: 191,
       }
     ]
   },
@@ -1567,6 +1661,27 @@ export const pageData: IPages = {
       }
     ]
   },
+  161: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  162: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  163: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
   164: {
     choices: [
       {
@@ -1574,10 +1689,52 @@ export const pageData: IPages = {
       }
     ]
   },
+  165: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  166: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  167: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  168: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
   169: {
     choices: [
       {
         goto: 221,
+      }
+    ]
+  },
+  170: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  171: {
+    choices: [
+      {
+        goto: 191,
       }
     ]
   },
@@ -1590,6 +1747,20 @@ export const pageData: IPages = {
         goto: 121,
       }, {
         goto: 134,
+      }
+    ]
+  },
+  173: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  174: {
+    choices: [
+      {
+        goto: 191,
       }
     ]
   },
@@ -1612,6 +1783,41 @@ export const pageData: IPages = {
         opalring: 1
       },
     },
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  178: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  179: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  180: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  181: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  182: {
     choices: [
       {
         goto: 191,
@@ -1654,6 +1860,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  185: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
   186: {
     choices: [
       {
@@ -1661,6 +1874,34 @@ export const pageData: IPages = {
       },
       {
         goto: 225,
+      }
+    ]
+  },
+  187: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  188: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  189: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  190: {
+    choices: [
+      {
+        goto: 191,
       }
     ]
   },
@@ -1700,6 +1941,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  195: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
   196: {
     choices: [
       {
@@ -1710,6 +1958,27 @@ export const pageData: IPages = {
         goto: 56,
       }, {
         goto: 36,
+      }
+    ]
+  },
+  197: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  198: {
+    choices: [
+      {
+        goto: 191,
+      }
+    ]
+  },
+  199: {
+    choices: [
+      {
+        goto: 191,
       }
     ]
   },
