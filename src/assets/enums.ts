@@ -86,6 +86,11 @@ export enum EBattleModifiers {
   throw = "throw"
 }
 
+export enum EAttributes {
+  hp = "hp",
+  innerStrength = "innerStrength"
+}
+
 export enum EDifficulty {  
   veryHard = "veryHard",
   hard = "hard",

@@ -1,4 +1,4 @@
-import { EAbilities, EItems, EOpponents } from "./enums"
+import { EAbilities, EAttributes, EItems, EOpponents } from "./enums"
 import { IPages } from "@/stores/pageInterfaces"
 
 export const pageData: IPages = {
@@ -74,7 +74,7 @@ export const pageData: IPages = {
     ]
   },
   8: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: EOpponents.olvar,
     choices: [
       {
         goto: 800
@@ -82,7 +82,7 @@ export const pageData: IPages = {
     ]
   },
   800: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: EOpponents.olvar,
     choices: [
       {
         goto: 377
@@ -225,7 +225,7 @@ export const pageData: IPages = {
     ]
   },
   23: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 92,
@@ -385,7 +385,7 @@ export const pageData: IPages = {
     ]
   },
   39: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 92,
@@ -613,6 +613,11 @@ export const pageData: IPages = {
     ]
   },
   59: {
+    sideEffects: {
+      items: {
+        gold: 5
+      }
+    },
     choices: [
       {
         goto: 41,
@@ -992,7 +997,7 @@ export const pageData: IPages = {
     ]
   },
   92: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 23,
@@ -1117,7 +1122,7 @@ export const pageData: IPages = {
     ]
   },
   106: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 1060
@@ -1125,7 +1130,7 @@ export const pageData: IPages = {
     ]
   },
   1060: {
-    opponent: EOpponents.olvar,
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 92
@@ -1216,7 +1221,7 @@ export const pageData: IPages = {
     ]
   },
   117: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: EOpponents.olvar,
     sideEffects: {
       items: {
         flashPowder: -1
@@ -1311,6 +1316,7 @@ export const pageData: IPages = {
     ]
   },
   127: {
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
         goto: 92
@@ -1475,6 +1481,7 @@ export const pageData: IPages = {
     ]
   },
   142: {
+    opponent: EOpponents.olvarAndRuneWeaver,
     sideEffects: {
       attributes: {
         hp: -8
@@ -1594,10 +1601,23 @@ export const pageData: IPages = {
     ]
   },
   152: {
+    opponent: EOpponents.olvarAndRuneWeaver,
+    sideEffects: {
+      attributes: {
+        hp: -8,
+      },
+    },
     choices: [
       {
-        goto: 191,
-      }
+        goto: 92,
+      },{
+        goto: 23,
+      },{
+        goto: 39,
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 106,
+      },
     ]
   },
   153: {
@@ -1690,10 +1710,17 @@ export const pageData: IPages = {
     ]
   },
   165: {
+    opponent: EOpponents.olvarAndRuneWeaver,
     choices: [
       {
-        goto: 191,
-      }
+        goto: 92,
+      },{
+        goto: 23,
+      },{
+        goto: 39,
+      },{
+        goto: 106,
+      },
     ]
   },
   166: {
@@ -1878,9 +1905,20 @@ export const pageData: IPages = {
     ]
   },
   187: {
+    opponent: EOpponents.olvarAndRuneWeaver,
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.olvarAndRuneWeaver
+    },
     choices: [
       {
-        goto: 191,
+        criteria: true,
+        goto: 127,
+      }, {
+        criteria: false,
+        goto: 142,
       }
     ]
   },
@@ -2008,6 +2046,23 @@ export const pageData: IPages = {
       }
     ]
   },
+  204: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 5,
+      opponent: EOpponents.olvar
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 406,
+      }, {
+        criteria: false,
+        goto: 85,
+      }
+    ]
+  },
   206: {
     sideEffects: {
       items: {
@@ -2073,6 +2128,37 @@ export const pageData: IPages = {
       }
     ]
   },
+  216: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.olvar
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 406,
+      }, {
+        criteria: false,
+        goto: 85,
+      }
+    ]
+  },
+  219: {
+    sideEffects: {
+      items: {
+        gold: 5
+      }
+    },
+    choices: [
+      {
+        goto: 205,
+      }, {
+        goto: 190,
+      }
+    ]
+  },
   220: {
     choices: [
       {
@@ -2112,6 +2198,23 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 254,
+      }
+    ]
+  },
+  226: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.olvar
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 406,
+      }, {
+        criteria: false,
+        goto: 85,
       }
     ]
   },
@@ -2177,6 +2280,23 @@ export const pageData: IPages = {
       }
     ]
   },
+  239: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 5,
+      opponent: EOpponents.olvar
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 165,
+      }, {
+        criteria: false,
+        goto: 152,
+      }
+    ]
+  },
   242: {
     choices: [
       {
@@ -2202,6 +2322,17 @@ export const pageData: IPages = {
         goto: 256
       }, {
         goto: 248
+      }
+    ]
+  },
+  251: {
+    choices: [
+      {
+        goto: 239
+      }, {
+        goto: 216
+      }, {
+        goto: 187
       }
     ]
   },
@@ -2323,6 +2454,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  271: {
+    sideEffects: {
+      attributes: {
+        hp: -3
+      }
+    },
+    choices: [
+      {
+        goto: 251
+      }
+    ]
+  },
   272: {
     sideEffects: {
       items: {
@@ -2436,7 +2579,7 @@ export const pageData: IPages = {
     ]
   },
   302: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: EOpponents.olvar,
     choices: [
       {
         goto: 377
@@ -2542,7 +2685,7 @@ export const pageData: IPages = {
     ]
   },
   318: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: EOpponents.olvar,
     choices: [
       {
         goto: 302
@@ -2712,7 +2855,7 @@ export const pageData: IPages = {
   351: {
     choices: [
       {
-        attribute: EAbilities.poisonArrows,
+        ability: EAbilities.poisonArrows,
         goto: 389,
       }, {
         goto: 326,
@@ -2745,7 +2888,7 @@ export const pageData: IPages = {
   359: {
     choices: [
       {
-        attribute: "innerStrength",
+        attribute: EAttributes.innerStrength,
         goto: 395,
       }, {
         goto: 403,
@@ -2774,6 +2917,17 @@ export const pageData: IPages = {
         goto: 267
       }, {
         goto: 293,
+      }
+    ]
+  },
+  366: {
+    choices: [
+      {
+        goto: 219,
+      }, {
+        goto: 313,
+      }, {
+        goto: 59,
       }
     ]
   },
@@ -2818,7 +2972,7 @@ export const pageData: IPages = {
     ]
   },
   377: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: EOpponents.olvar,
     choices: [
       {
         goto: 377
@@ -2923,6 +3077,30 @@ export const pageData: IPages = {
       }
     ]
   },
+  404: {
+    choices: [
+      {
+        ability: EAbilities.climb,
+        goto: 385,
+      }, {
+        goto: 362,
+      }
+    ]
+  },
+  406: {
+    choices: [
+      {
+        goto: 377
+      }, {
+        goto: 302
+      }, {
+        goto: 318
+      }, {
+        ability: EAbilities.poisonArrows,
+        goto: 8
+      }
+    ]
+  },
   408: {
     choices: [
       {
@@ -2965,6 +3143,16 @@ export const pageData: IPages = {
         goto: 342
       }, {
         goto: 375
+      }
+    ]
+  },
+  417: {
+    choices: [
+      {
+        attribute: EAttributes.innerStrength,
+        goto: 343,
+      }, {
+        goto: 327,
       }
     ]
   },

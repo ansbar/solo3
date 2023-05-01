@@ -1,5 +1,5 @@
 import { IOpponents } from "@/assets/interfaces/opponents"
-import { EAttackType, EAbilities, EBattleStates } from "@/assets/enums"
+import { EAttackType, EAbilities, EBattleStates, EOpponents } from "@/assets/enums"
 
 const opponents: IOpponents = {
   gorobei: {
@@ -284,7 +284,7 @@ const opponents: IOpponents = {
       }
     }
   },
-  olvar: {
+  olvarAndRuneWeaver: {
     opponents: 1,
     attributes: {
       name: ["Olvar Barbaren"],
@@ -293,6 +293,32 @@ const opponents: IOpponents = {
     },
     win: 47,
     pages: {
+      127: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },
+      142: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },
+      152: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+        enableAlly: true
+      },
+      165: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+        enableAlly: true
+      },
       106: {
         playerAttackType: EAttackType.instant,
         playerDamage: "4",
@@ -307,6 +333,13 @@ const opponents: IOpponents = {
         damage: ["1T6+1"],
         defense: []
       },
+      187: {
+        playerAttackType: EAttackType.instant,
+        playerDamage: "5",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },   
       23: {
         playerAttackType: EAttackType.kick,
         playerDefense: [8],
@@ -314,6 +347,11 @@ const opponents: IOpponents = {
         damage: ["1T6+1"],
         blockable: true,
         defense: [7],
+        allyAttack: {
+          damage: "1T6+1",
+          defense: 8,
+          ally: EOpponents.runeweaver
+        }
       },
       92: {
         playerAttackType: EAttackType.punch,
@@ -322,6 +360,11 @@ const opponents: IOpponents = {
         damage: ["1T6+2"],
         defense: [6],
         blockable: true,
+        allyAttack: {
+          damage: "1T6+1",
+          defense: 8,
+          ally: EOpponents.runeweaver
+        }
       },
       39: {
         playerAttackType: EAttackType.throw,
@@ -329,11 +372,16 @@ const opponents: IOpponents = {
         damage: ["1T6+2"],
         blockable: false,
         defense: [4],
+        allyAttack: {
+          damage: "1T6+1",
+          defense: 8,
+          ally: EOpponents.runeweaver
+        }
       },
     }
   },
-  // There are two versions of the Olvar battle, one with the surviving Rune weaver
-  olvarAndRuneWeaver: {
+  // There are two versions of the Olvar battle, one with the surviving Rune weaver as an ally
+  olvar: {
     opponents: 1,
     attributes: {
       name: ["Olvar Barbaren"],
@@ -369,7 +417,7 @@ const opponents: IOpponents = {
         playerDamage: "1T6+1",
         damage: ["1T6+1"],
         blockable: true,
-        defense: [7],
+        defense: [7],        
       },
       377: {
         playerAttackType: EAttackType.punch,

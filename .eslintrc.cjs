@@ -21,6 +21,7 @@ module.exports = {
   rules: {
     semi: ["error", "never"],
     quotes: ["error", "double"],
+    "@typescript-eslint/no-non-null-assertion": "off",
     "vue/multi-word-component-names": 0,
     "vue/script-indent": ["error", 2, {
       baseIndent: 1,

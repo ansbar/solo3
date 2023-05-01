@@ -20,6 +20,7 @@ export const languageGeneral: ILanguageGeneral = {
     giant: "Den tvåhövdade jätten",
     guard: "Vakten",
     olvar: "Olvar Barbaren",
+    olvarAndRuneWeaver: "Olvar Barbaren",
     priests: "Präster",
     yaemon: "Yaemon",
     manse: "Manse Dödsmagikern",
@@ -1142,9 +1143,12 @@ export const languagePages: ILanguagePages = {
     ]
   },
   152: {
-    mainText: "",
+    mainText: "Blixten träffar dig i sidan, bränner ditt kött och slungar dig bakåt som om du hade träffats av en murbräcka. Du kastas in i den bortre väggen. Du förlorar 8 KROPPSPOÄNG. Men om du fortfarande lever svänger du runt i luften och landar säkert på föttema. Du lyckas övervinna smärtan när Barbaren rör sig mot dig för att anfalla med sitt långsvärd. Runvävare kommer till din hjälp. Barbaren koncentrerar sina anfall på dig, men du får slå för ett anfall från Runvävare mot Olvar när du själv gör ett slag, spark eller kast. Runvävare gör 1T6+1 i skada med sitt svärd och Olvars Försvar mot honom är 8.",
     choices: [
-      "Gå vidare"
+      "Du kan använda Kobraslaget",
+      "eller Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "eller, om du har färdigheten Giftpilar, kan du använda en sådan"
     ]
   },
   153: {
@@ -1223,9 +1227,12 @@ export const languagePages: ILanguagePages = {
     ]
   },
   165: {
-    mainText: "",
+    mainText: "Blixten sveper förbi dig och sätter eld på stugans plankor. Du anfaller tillsammans med Runvävare. Barbaren koncentrerar sina anfall på dig. Du får slå ett anfall för Runvävare när du själv anfaller med ett slag, spark eller kast. Olvars Försvar mot Runvävare är 8, och Runvävares svärd gör 1T6+1 i skada.",
     choices: [
-      "Gå vidare"
+      "Anfaller du Barbaren med ett Kobraslag mot hans oskyddade hals",
+      "eller med en Bevingade hästens spark",
+      "eller med ett Draksvanskast",
+      "Eller, om du har färdigheten Giftpilar, kan du använda en av dem"
     ]
   },
   166: {
@@ -1368,8 +1375,9 @@ export const languagePages: ILanguagePages = {
     ]
   },
   187: {
-    mainText: "",
+    mainText: "När pulvret kommer i beröring med ﬂammoma slår det upp en ljusblixt. Du skyddade dina ögon, men Olvar och Runvävare är för ögonblicket förblindade. Barbaren backar ut genom dörren och du följer efter med en Bevingade hästens spark mot hans bröstkorg. Han slänger upp armarna och faller baklänges i snön. Anteckna att han har förlorat 5 KROPPSPOÄNG, för du har knäckt några av hans revben. Du ska just springa ut i snön och göra slut på honom, när en blå ljusblixt slår ut mot dörröppningen från ädelstenen på hans panna. Du försöker kasta dig tillbaka in och har 6 i Försvar mot Blixten när Olvar återfår synförmågan.",
     choices: [
+      "Gå vidare",
       "Gå vidare"
     ]
   },
@@ -1470,6 +1478,13 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Snöjätten försöker trampa på ditt huvud när du rullar undan för att komma på fötter så fort som möjligt. Ditt försvar mot det är 7 och du har inte tid att blockera."
   },
+  204: {
+    mainText: "Barbarens ögon släpper aldrig din blick när han tar ifrån dig din pengabörs. Sedan kräver han hånleende att få dina Skuggkrigar-verktyg också. Du anfaller hellre än att ge bort utrustningen som du behöver för ditt uppdrag. En blå ljusblixt slår ut med en smäll från ädelstenen på Olvars panna. Du försöker omedelbart vrida dig åt sidan. Ditt försvar mot blixten när du försöker hoppa undan är 5.",
+    choices: [
+      "Gå vidare",
+      "Gå vidare"
+    ]
+  },
   206: {
     mainText: "Barägaren har blandat Ras Ande i mjödet och det var starkare än du insåg. Alkoholen går snabbt ut i blodet och du reser dig för att gå, men svimmar. Du vaknar på morgonen, liggande i rännstenen, fullständigt nedlortad. Några av dina guldmynt har försvunnit, men du hade gömt fem av dem på dig och dem har du kvar. Om du hade en Opalring har den också blivit stulen. Stryk den från din Speltabell. Du bestämmer dig för att bege dig norrut, utifall att Yaemon skulle nå Förändringens pelare före dig och lämnar staden på vägen mot Mortavalon.",
     choices: [
@@ -1507,6 +1522,20 @@ export const languagePages: ILanguagePages = {
       "Gå vidare",
     ]
   },
+  216: {
+    mainText: "Barbarens ögon går från dig till Runvävare och han tar din pengabörs. Sedan ber han hånleende att få dina Skuggkrigarredskap också. Runvävare drar sitt svärd, kallar dig ynkrygg och anfaller Olvar. Lnnan han kan gå i närstrid med honom slår en blixt ut med en smäll från ädelstenen på Barbarens panna. Den slår in i Runvävares bröstkorg och han slungas in i den bortre väggen, död. Sedan vänder han sig mot dig och ännu en blå blixt slår ut mot dig. Du försöker hoppa rakt upp, över den. Du har 6 i Försvar mot blixten.",
+    choices: [
+      "Gå vidare",
+      "Gå vidare",
+    ]
+  },
+  219: {
+    mainText: "Sjöbrisen för med sig saltstänk från havet när du travar fram längs Stjärnhavets östkust. För att spara tid bestämmer du dig för att simma över den smala östra spetsen av det stjärnformade havet. Det kalla vattnet är uppfriskande. Till slut kommer du fram till de stenlagda gatorna i staden Druath Glennan. Husen är höga och smala, byggda av mörkt tegel, förutom träbalkongerna som nästan nuddar vid varandra och gör gatorna mörka och dystra. Du är glad över att ha förklätt dig till sjöman, eftersom vakterna uppenbarligen får sin lön av munkarna som dyrkar den Lede. Deras kloster med sina röda fönsterluckor, ligger utefter ena sidan av Gudamas torg, mitt emot ett tempel till Allmodern. Du lägger märke till ett fattighus på en av de sjaskiga sidogatorna, förklär dig till tiggare och sällar dig till fyllbultarna där som får hjälp av Allmoderns prästinnor. Du planerar att rekognoscera i den Ledes tempel i hopp om att hitta Yaemon där, när du hör en av tiggarna berätta om hur han blev av med sin arm. Han har ett varigt och blodigt bandage löst hängande från axeln. Det verkar som om han en gång var sopare i klostret, men han slängdes ut eftersom han söp. Han hörde genom omvägar att Yaemon, Flammans Stormästare, besökte klostret och han beslutade sig dåraktigt nog för att kasta sig framför ärkemunken och be att få tillbaka sitt jobb. Yaemon tog underligt nog emot honom, men han talade hånfullt om för honom att till och med rännstenen var en alltför bra plats för honom. Han hade en vän med sig, \"med ondskefullt utseende och ett ondskefullt hjärta. Han hade de mest fasansfulla, själlösa, röda ögon... Manse Dödsmagikern kallade de honom. Hur som helst. Bara för skojs skull sade han att han skulle straffa mig, och innan jag visste vad som hade hänt ramlade min arm av. Jag skulle ha förblött om det inte var för prästinnorna.\"\nHan får inte mycket sympati. En av dem, med sluddrande röst, frågar vad han väntar sig om han beblandar sig med Yaemon, Flammans Stormästare, och Dödsmagikern, den mäktigaste trollkarlen på Orb. Du får veta av deras samtal att Yaemon har väntat med Honoric, ledaren för Domsvärdslegionen, på att Manse Dödsmagikern skulle ansluta sig till dem i Druath Glennan. Nu har de gett sig av mot det slott som kallas Fruktans borg, i närheten av Vättetandsbergen. Eftersom det är sent bestämmer du dig för att stanna i fattighuset och ge dig av följande morgon. \nDu vaknar mitt i nattet av lukten av sur rök. Rummet som du sover i har fattat eld och lågorna blockerar dörröppningen och fyller hallen utanför. Det finns inga fönster att fly genom. Rummet fylls med rök.",
+    choices: [
+      "Om du hoppar genom den täta väggen av eldslågor",
+      "Om du sliter loss golvplankoma",
+    ]
+  },
   220: {
     mainText: "Du springer fram till isen och hoppar upp på den, så att du glider iväg från lejonen. De springer efter dig, men tappar fotfästet på den förrädiska ytan och får ganska komiska ansiktsuttryck när de upplever något helt oväntat. Du lyckas ta dig förbi dem genom att använda din utmärkta balansförmåga. Varje gång de kastar sig mot dig halkar de och faller platt ned. Du springer över slätten och hoppar ned i träsket. Lejonen, som kommer upp på gräset, hugger efter dina hälar igen, men stannar innan de kommer ut i det onaturligt gröna slemmet. ",
     choices: [
@@ -1524,6 +1553,13 @@ export const languagePages: ILanguagePages = {
   225: {
     mainText: "Du ger barägaren två guldstycken för rummet och går upp på övervåningen. Du sover lätt med sinnena på helspänn och är redo när tre fulla soldater rusar in. Det är bara ett ögonblicks verk att slå två av dem medvetslösa med skickliga sparkar och den tredje stirrar förvånat på och springer sedan ut ur rummet. Du sover lite under resten av natten och får tillbaka 1 KROPPSPOÄNG, om du hade förlorat någon. På morgonen lämnar du staden på vägen mot Mortavalon.",
     choices: [
+      "Gå vidare"
+    ]
+  },
+  226: {
+    mainText: "När du hoppar mot Olvar nickar han mot dig och en blixt slår ut med en smäll mot dig från ädelstenen på hans panna. Du har 6 i Försvar mot blixten när du försöker hoppa undan.",
+    choices: [
+      "Gå vidare",
       "Gå vidare"
     ]
   },
@@ -1570,6 +1606,14 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om du inte lyckas kasta honom angrips du av de av dina motståndare som är i livet. Du har 7 i försvar mot dem om tre lever, 8 om två lever och 9 om bara en fortfarande är vid liv. Var och en gör ett individuellt anfall mot dig och du kan bara blockera ett av dem. Varje anfall gör 1T6+1 i skada om de träffar"
   },
+  239: {
+    mainText: "När du hoppar fram mot Olvar, nickar han mot dig och en blixt slår ut med en smäll från ädelstenen på hans panna. Du försöker hoppa över blixten och du har 5 i Försvar mot den.",
+    choices: [
+      "Gå vidare",
+      "Gå vidare",
+    ],
+    stillAlive: "Om du inte lyckas kasta honom angrips du av de av dina motståndare som är i livet. Du har 7 i försvar mot dem om tre lever, 8 om två lever och 9 om bara en fortfarande är vid liv. Var och en gör ett individuellt anfall mot dig och du kan bara blockera ett av dem. Varje anfall gör 1T6+1 i skada om de träffar"
+  },
   242: {
     mainText: "Han berättar att han är en munk som dyrkar Kwon och bjuder dig att följa med till hans kloster i Försoningens Trädgårdar. Templet ligger i en rosenträdgård och du är lycklig över att ha hittat en säker tillflyktsort där du kan meditera och söka hjälp. Du faller på knä i bön i det kala templet och bredvid sjunger munken psalmen till Kwon Förlösaren.",
     choices: [
@@ -1591,6 +1635,14 @@ export const languagePages: ILanguagePages = {
       "eller ett nytt slag"
     ],
     stillAlive: "Var och en av de soldater som fortfarande lever anfaller dig en gång. Du kan bara Blockera en attack."
+  },
+  251: {
+    mainText: "Runvävare gör upp en eld i kojan medan du sätter dig på golvet för att meditera. Hans enda rustning är ett brösthamesk av härdat läder och du lägger märke till att han på något sätt gör upp eld utan ﬂinta och stål. Din själ vandrar vida omkring när dörren till kojan plötsligt slås upp. ln kommer en barbarkrigare. Han bär ett halsband av jättevesslans tänder, ett bjömskinn och en underlig tiara med en djupblå ädelsten på pannan. Han har en egendomlig rustning av överlappande metallbitar, som fiskfjäll. Han pekar illvilligt med sitt långsvärd och säger på nordmännens förvrängning av handelsspråket, \"Nåväl, mina små bergstomtar. Jag tar hand om era pengar och alla era saker\". \nRunvävare svarar, \"Vad tar du oss för, som hotar oss på det sättet? Enkla bönder?\"\nBarbaren säger, \"Jag struntar i om ni så är prinsar. Jag är Olvar Kaoskrigaren och jag tar hand om allt ert guld.\"\n",
+    choices: [
+      "Du kan anfalla",
+      "Du kan ge honom din pengabörs",
+      "Du kan kasta blixtpulver i elden"
+    ]
   },
   252: {
     mainText: "Isen är förrädisk och det är bara din goda balansförmåga som gör att du kan behålla fotfästet när Snöjätten kastar sig över dig, viftande med sina svarta klor. Du kan inte se hans ögon, men av hans vildsinta beteende inser du att du måste slåss mot den vitpälsade kolossen.",
@@ -1671,6 +1723,12 @@ export const languagePages: ILanguagePages = {
   },
   268: {
     mainText: "Dina tre angripare ligger runt dig, döda eller medvetslösa. En respektfylld tystnad sänker sig över krogen och ingen vill möta din blick. Du inser att ryktet kommer att spridas att det finns en munk i Domedag som inte slåss som Röda Syrsans munkar. Du beslutar dig för att lämna krogen och staden så fort som möjligt. En ung soldat följer efter dig när du går, men du smiter från honom bland de vindlande bakgatorna och tar dig snabbt fram till stadsporten. Du kommer säkert igenom innan order ges om att stoppa alla främlingar. Väl i säkerhet borta från stadsmuren, klättrar du upp i ett träd där du kan sova dold.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  271: {
+    mainText: "Du hoppar uti luften och griper tag i en av Arockerna när den sveper ned bakom krigaren. Med en kraftig knyck bryter du nacken av den. En vass klo sliter upp din axel (du förlorar 3 KROPPSPOÄNG). Om du fortfarande lever vänder du dig om och griper tag i angriparens ben, drar ned honom och ger honom ett förlamande Tigertassens slag i sidan av halsen. Annu en magisk blixt slår ut från krigarens svärd. När de ser det glider Arockerna i väg över dalen, så att du kan fortsätta din färd. Krigaren presenterar sig som Runvävare. Du vet att runor är symboler som används för besvärjelser. Han tackar dig för att du hjälpte honom och berättar att han färdas norrut för att hitta nya betesmarker, efter en något pinsam sammanstötning med myndigheterna i Mortavalon. Ni går tillsammans ytterligare en bit och kommer fram till en liten koja i närheten av flodens källa. Ni bestämmer er för att tillbringa natten där - Runvävare vill tända en eld mot kylan.",
     choices: [
       "Gå vidare"
     ]
@@ -1986,6 +2044,14 @@ export const languagePages: ILanguagePages = {
       "eller Tigertassens slag"
     ]
   },
+  366: {
+    mainText: "Du försöker ta av tiaran från Barbarens huvud, men du bränner dig när du rör vid den. Du förstår av de Magiska tecken som är inristade på den, att den smiddes djupt nere i Klyftan av Svartalver. Ingen med rent hjärta kan röra vid den.\nDu tillbringar natten i kojan och får tillbaka upp till 3 KROPPSPOÄNG. Du lämnar kvar de oanvändbara skattema, de skulle bara tynga dig på resan, men du bestämmer dig för att ta 5 guldstycken från Olvar.\nDe skulle kunna komma till användning. I soluppgången ger du dig av på ditt uppdrag igen. Senare på dagen kommer du ned ur Lyckopasset.",
+    choices: [
+      "Du kan bege dig mot nordost till Stjämhavet och Druath Glennan",
+      "eller norrut mot staden Nordansnö",
+      "eller österut genom Trollkärret till staden lonalbion, för att ta en båt över Stjärnhavet"
+    ]
+  },
   368: {
     mainText: "Spindelvävshallen är en böjd korridor, som en välvd bro, som förbinder bostadsdelen på övervåningen med refektoriet där munkarna äter. När dörren går upp ser du ett rum som är svagt upplyst av två ﬂämtande ljus. Eftersom du är förvarnad lägger du märke till blänket av de många trådarna, tunna som spindelväv, som går kors och tvärs över golvet. Några av dem antar du är anknutna till klockor eller fällor som skulle förråda eller döda dig. Du böjer dig ned, går upp i handstående och går genom rummet på händerna. Du kan balansera på en arm medan den andra försiktigt undersöker golvet framför dig efter trådar. Det tar dig en halvtimme att långsamt gå genom rummet, men du lyckas utan att bryta någon av trådarna. Du kommer fram till dörren och går smidigt ned på fötter igen innan du öppnar den. Nu står du på balkongen över refektoriet och matsalen. Medan du kryper ihop bakom balkongen får du reda på det du behöver veta, av munkar som dricker vin sent in på natten. Yaemon tycks har gett sig av mot Mortavalon, tillsammans med Honoric, Marskalk över Doms- värdslegionen, för tio dagar sedan. lnnan du hinner ge dig av får du syn på en bokrulle där några av de sparkar, slag och kast som används i Syrsans Väg, stridskonsten som används av den Ledes munkar, finns beskrivna. Du kan höja din Slagmodifikation med 1, eftersom du lär dig några användbara tekniker. De är skickliga på att slå. Du lägger också märke till att de inte känner till den Kluvna blixtsparken. Det kan vara bra att veta när du måste slåss mot en munk som dyrkar den Lede. Du lyckas ta dig ut samma väg som du kom utan svårighet, och håller dig dold i ett nedbränt bageri resten av natten. På morgonen lämnar du Domedag, fast besluten att hinna ifatt Yaemon och Honoric.",
     choices: [
@@ -2014,11 +2080,11 @@ export const languagePages: ILanguagePages = {
   377: {
     mainText: "Olvar uppger ett vildsint vrål, överger all försiktighet och svingar svärdet över huvudet och gör ett utfall mot dig. Han har gripits av bärsärkarraseri och är helt uppslukad av stridslust. Han känner ingen fruktan eller smärta förrän antingen du eller han ligger död. Dra ifrån 1 från all skada du gör på honom. Du parerar hans klinga med underarmen, går åt sidan och måttar ett Kobraslag från höften och uppåt.",
     choices: [
-      "Om du överlever anfallet kan du använda Järnnävens slag",
-      "eller Virvelkastet",
-      "eller sparka igen."
+      "Om du fortfarande lever kan du sparka",
+      "eller kasta",
+      "eller slå till igen."
     ],
-    stillAlive: "Du har 8 i försvar mot monstrets trädstam. Den är omöjlig att blockera eftersom den är så stor och tung, men det är relativt lätt att hoppa undan från den eftersom du är så liten och snabb när du försöker hoppa, skutta och hjula undan den."
+    stillAlive: "Om han fortfarande lever svingar han sitt svärd i en väldig båge från vänster till höger, i ett försök att sprätta upp ditt bröst. Du har 8 i Försvar mot hans vilda hugg, när du försöker hoppa bakåt"
   },
   380: {
     mainText: "Pilen når fram till dig när du befinner dig mitt i luften mellan riggen och däcket, men du slår upp med handen och plockar den ur luften några centimetrar framför ditt bröst och kastar den åt sidan. Människoätaren är rasande och höjer sin spikklubba för att krossa dig.",
@@ -2074,6 +2140,22 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  404: {
+    mainText: "Ditt sista steg ledde dig från stigen och rakt ut i träsket. Du börjar obevekligt sjunka och slår i gyttjan som bubblar runt dig. Du lugnar ned dig och slutar röra dig, så att du sjunker långsammare.",
+    choices: [
+      "Om du har färdigheten Klättra",
+      "Om du inte har det"
+    ]
+  },
+  406: {
+    mainText: "Blixten går förbi dig och slår in i väggen bakom, så att kojans brädor börjar glöda. Du går till anfall innan Olvar hinner fyra av en till.",
+    choices: [
+      "Du kan försöka använda Kobraslaget mot hans oskyddade hals",
+      "eller Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "eller om du har färdigheten Giftpilar, kan du använda en sådan"
+    ]
+  },
   408: {
     mainText: "Du går förbi slavmarknaden där en kapten från Domsvärdslegionen bjuder utan att mötas av något motstånd, på män för att ro skeppen i Yttre befästningens förbund, Domedags flotta. De flesta av stadsborna tycks ta en stor omväg förbi platsen och du skyndar förbi. Du kommer till stadens största byggnad och stannar upp för att stirra fascinerat. Du gissar att det måsta vara templet till Vasch-Ro. Det är en väldig katedral byggd av basaltblock, med ett väldigt, fyrkantigt och befäst tom, slätt och outsmyckat, som höjer sig sjuttio meter över byggnaderna omkring. Bakom det ligger Honorics residens, mer en fästning än ett palats. Du fortsätter mot en krog med en skylt med soldater med ekrade hjul på sköldarna, som hukar sig framför ett svart svärd som hänger i luften. Den ligger i en gatukrok och bakom den till höger skymtar du ett kloster byggt i mörk sten med klarröda fönsterluckor. Det kan bara vara templet till den Lede, din gud Kwons förvridne bror. Yaemon kanske finns därinne.",
     choices: [
@@ -2105,5 +2187,12 @@ export const languagePages: ILanguagePages = {
       "Om du försöker ta dig uppför den sista metern rep innan han hinner ta loss kroken",
       "Om du försöker sätta fast Klorna i broväggen och klättra upp till sidan av fönstret"
     ]
-  }
+  },
+  417: {
+    mainText: "Ditt sista steg ledde dig från stigen och rakt ut i träsket. Du börjar obevekligt sjunka och slår i gyttjan som bubblar runt dig. Du lugnar ned dig och slutar röra dig, så att du sjunker långsammare.",
+    choices: [
+      "Om du har någon INRE KRAFT kvar",
+      "Om du inte har det"
+    ]
+  },
 }

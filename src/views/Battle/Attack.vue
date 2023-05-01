@@ -6,12 +6,14 @@
   import { ref, onMounted, computed } from "vue"
   import { useOpponents } from "@/utils/opponents"
   import { EAttackType, EBattleStates } from "@/assets/enums"
-  import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
+  import { useMainStore, usePlayerStore, useOpponentStore, usePageStore } from "@/stores"
+  import { languageGeneral } from "@/assets/languages/swedish"
 
 
   const dice = useDice()  
   const battle = useBattle()
   const generic = useGeneric()
+  const pageStore = usePageStore()
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore() 
@@ -22,6 +24,8 @@
   const isHit = ref(false)
   const rollText = ref("")
   const damageText = ref("")  
+  const rollTextAlly = ref("")
+  const damageTextAlly = ref("")  
   const attackChance = ref("2T6")  
   
   const opponent = computed(() => opponentStore.opponents[mainStore.currentOpponent])
@@ -34,16 +38,32 @@
     else if (opponentStore.playerAttackType === EAttackType.defense)
       // If battle starts with the defense phase, attack phase is skipped of various reasons
       battle.changeState("defend")
-    else
-      doAttack()        
+    else {
+      doAttack()     
+      // In the rare case you have an ally (like page 165)
+      if (opponentStore.enableAlly && opponent.value.hp > 0) doAllyAttack()   
+    }
   })
 
+  const doAllyAttack = () => {
+    // When you have an ally fighting side by side with you
+    const _attackRoll = dice.doRoll(attackChance.value) 
+    const _isHit = (_attackRoll > opponentStore.allyAttack!.defense)
+    const _hitText = _isHit ? "träffar!" : "missar."
+
+    rollTextAlly.value = `${languageGeneral.opponents[opponentStore.allyAttack!.ally]} slår ${attackChance.value} och resultatet blir ${_attackRoll}.`
+    rollTextAlly.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
+    rollTextAlly.value += `<b>Attacken ${_hitText}</b>`
+
+    if (_isHit)
+      damageTextAlly.value += battle.dealDamage(damageTextAlly, opponent, true)     
+  }
 
   // Attack opponent
   const doAttack = () => {      
     const attackModifier = battle.calculateAttackModifier()          
     const attackRoll = dice.doRoll(attackChance.value, attackModifier)      
-    isHit.value = (attackRoll > opponent.value.defense) ? true : false    
+    isHit.value = (attackRoll > opponent.value.defense)  
 
     const hitText = computed(() => {      
       if (opponentStore.playerAttackType === EAttackType.throw)       
@@ -103,6 +123,10 @@
     <!-- Damage texts -->
     <div class="text" v-html="damageText" />    
 
+    <!-- Ally texts -->
+    <div v-if="rollTextAlly" class="text" v-html="rollTextAlly" />
+    <div v-if="damageTextAlly" class="text" v-html="damageTextAlly" />    
+
     <!-- Direct win -->
     <template v-if="pageTexts.directWin && isHit">
       <div class="text">
@@ -116,14 +140,13 @@
     <!-- Miss or not Throw -->
     <template v-else-if="!isHit || opponentStore.playerAttackType != 'throw'">
       <!-- If opponent is still alive -->
-      <div v-if="opponent.hp > 0 && playerStore.attributes.hp > 0" class="text">
-        <!-- Unsuccessful throw text -->
+      <div v-if="opponent.hp > 0 && playerStore.attributes.hp > 0" class="text">        
         <template v-if="opponentStore.playerAttackType === 'throw'">
+          <!-- Unsuccessful throw text -->
           {{ pageTexts.unsuccessfulThrow }}
-        </template>
-
-        <!-- If opponent and player is still alive text -->
-        <template v-else>
+        </template>        
+        <template v-else-if="pageTexts.stillAlive">
+          <!-- If opponent and player is still alive text -->
           {{ pageTexts.stillAlive }}
         </template>       
       </div>
@@ -154,8 +177,8 @@
         </a>     
       </template>
 
-      <!-- If instant attack -->
-      <button v-else-if="opponentStore.playerAttackType === 'instant'" @click="battle.changeState('pending')">
+      <!-- If instant attack and not a combined special condition (thise buttons will override) -->
+      <button v-else-if="opponentStore.playerAttackType === 'instant' && !pageStore.specialCondition" @click="battle.changeState('pending')">
         Gå vidare
       </button>
 

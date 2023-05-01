@@ -37,8 +37,12 @@
       // Set opponent page data every page switch
       opponentStore.setOpponentPageData(opponent[pageStore.opponent].pages[currentPageId.value])
 
-      if (opponentStore.playerAttackType === EAttackType.defense) {
+      if (opponentStore.playerAttackType === EAttackType.none) {
+        // Skip whole attack phase, this is just a pending mode to keep opponents data intact until the battle starts again
+        mainStore.battlestate = EBattleStates.pending
+      } else if (opponentStore.playerAttackType === EAttackType.defense) {
         // Skip attack if player wont be able to attack
+        mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} startad`)
         mainStore.battlestate = EBattleStates.defend
       } else {
         mainStore.setBattlestate(EBattleStates.chooseOpponent)

@@ -1,4 +1,4 @@
-import { EAbilities, EAttackType, EBattleStates } from "../enums"
+import { EAbilities, EAttackType, EBattleStates, EOpponents } from "../enums"
 
 export type IOpponents = Record<string, IOpponent>
 
@@ -35,5 +35,11 @@ export interface IOpponentPage {
     damage: string
   },
   defense: number[]
-  directWinGoto?: number
+  directWinGoto?: number,
+  enableAlly?: boolean, // Will enable ally attack until end of battle 
+  allyAttack?: {
+    damage: string,
+    defense: number,
+    ally: EOpponents
+  }
 }

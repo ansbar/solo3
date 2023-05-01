@@ -46,24 +46,26 @@ export function useBattle() {
 
   
   // Deal damage to opponent
-  const dealDamage = (damageText: Ref<string>, opponent: Ref<Opponent>) => {
-    if (!opponentStore.playerDamage) return
+  const dealDamage = (damageText: Ref<string>, opponent: Ref<Opponent>, ally?: boolean) => {
+    // Set correct damage depending on normal attack or ally attack
+    const damage = ally ? opponentStore.allyAttack!.damage : opponentStore.playerDamage
+    if (!damage) return
 
-    const staticDamage = opponentStore.playerDamage.length <= 2
+    const staticDamage = damage.length <= 2
     let innerStrengthText = ""
     let damageModifierText = ""
     let damageRoll = 0
 
     // If static damage (like 5, not a roll like 1T6) we skip damageRoll
     if (!staticDamage)
-      damageRoll = dice.doRoll(opponentStore.playerDamage || "", playerStore.temporary.damageModifier)  
+      damageRoll = dice.doRoll(damage || "", ally ? undefined : playerStore.temporary.damageModifier)  
     else
-      damageRoll = parseInt(opponentStore.playerDamage)
+      damageRoll = parseInt(damage)
       
-    if (playerStore.temporary.damageModifier)
+    if (!ally && playerStore.temporary.damageModifier)
       damageModifierText = "+" + playerStore.temporary.damageModifier    
 
-    if (playerStore.temporary.useInnerStrength){                
+    if (!ally && playerStore.temporary.useInnerStrength){                
       damageRoll = damageRoll * 2
       innerStrengthText = " gånger 2"  
       playerStore.setTemporaryInnerStrength(null)              
@@ -72,7 +74,7 @@ export function useBattle() {
     opponentStore.setOpponentHp(mainStore.currentOpponent, damageRoll)
 
     damageText.value += `${opponent.value.name} tar ${damageRoll} i skada `
-    damageText.value += staticDamage ? "" : `(${opponentStore.playerDamage}${damageModifierText}${innerStrengthText})`
+    damageText.value += staticDamage ? "" : `(${damage}${damageModifierText}${innerStrengthText})`
 
     if (opponent.value.hp < 1){
       damageText.value += " och besegras!"

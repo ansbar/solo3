@@ -1,11 +1,17 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAttackType, EBattleStates } from "@/assets/enums"
+import { EAbilities, EAttackType, EBattleStates, EOpponents } from "@/assets/enums"
 import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponents"
 
 interface DirectDamageOnPlayer {
   state: EBattleStates,
   onlyOnHit?: boolean,
   damage: string
+}
+
+interface AllyAttack {  
+  damage: string,
+  defense: number,
+  ally: EOpponents
 }
 
 export interface Opponent {
@@ -32,6 +38,8 @@ interface StoreOpponent {
   miss?: number
   directWin?: number,
   directDamageOnPlayer?: DirectDamageOnPlayer,
+  enableAlly: boolean,
+  allyAttack?: AllyAttack,
   opponents: Opponent[]
 }
 
@@ -47,6 +55,8 @@ export const useOpponentStore = defineStore("opponent", {
     blockable: undefined,
     missDamage: undefined,
     directDamageOnPlayer: {} as DirectDamageOnPlayer,
+    enableAlly: false,
+    allyAttack: {} as AllyAttack,
     opponents: [],
     win: 0,
     loss: 0,
@@ -86,8 +96,12 @@ export const useOpponentStore = defineStore("opponent", {
         missDamage: payload.missDamage,
         blockable: payload.blockable,
         directDamageOnPlayer: payload.directDamageOnPlayer,
-        directWin: payload.directWinGoto
+        directWin: payload.directWinGoto,
+        allyAttack: payload.allyAttack
       })
+
+      // Will enable ally attack until end of battle 
+      if (payload.enableAlly) this.enableAlly = true
 
       for (let i = 0; i < this.opponents.length; i++) {
         this.opponents[i].playerDefense = payload.playerDefense

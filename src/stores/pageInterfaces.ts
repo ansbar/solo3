@@ -1,4 +1,4 @@
-import { EAbilities, EItems, EOpponents, EAttackType } from "@/assets/enums"
+import { EAbilities, EItems, EOpponents, EAttackType, EAttributes } from "@/assets/enums"
 
 export interface IPages {
   [key: number]: IPage
@@ -83,7 +83,7 @@ export interface IChoice {
   ability?: EAbilities
   item?: EItems
   amount?: number
-  attribute?: string
+  attribute?: EAttributes.innerStrength
   abilityNegation?: boolean
   criteria?: boolean
 }

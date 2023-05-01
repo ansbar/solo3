@@ -1,18 +1,20 @@
 <script lang="ts" setup>
-  import { useMainStore } from "@/stores"
+  import { useMainStore, useOpponentStore } from "@/stores"
   import InnerStrength from "./InnerStrength.vue"
   import Attack from "./Attack.vue"
   import Defend from "./Defend.vue"
 
   import ChooseOpponent from "./ChooseOpponent.vue"
   import { storeToRefs } from "pinia"
-  import { EBattleStates } from "../../assets/enums"
+  import { EAttackType, EBattleStates } from "../../assets/enums"
 
+  const opponentStore = useOpponentStore()
   const { battlestate } = storeToRefs(useMainStore())
 </script>
 
 <template>
   <div
+    v-if="opponentStore.playerAttackType !== EAttackType.none"
     class="battle"
     :class="battlestate === EBattleStates.pending ? 'hide' : ''"
   >

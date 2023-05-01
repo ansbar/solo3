@@ -63,6 +63,7 @@ export interface ILanguageOpponents {
   goblin: string
   giant: string
   olvar: string
+  olvarAndRuneWeaver: string
   guard: string
   yaemon: string
   [key: string]: string

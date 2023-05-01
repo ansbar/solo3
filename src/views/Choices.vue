@@ -36,6 +36,8 @@
       return hasAbility(choice.ability)
     } else if (choice.item) {
       return playerStore.items[choice.item] >= (choice.amount || 1)
+    } else if (choice.attribute) {
+      return playerStore.attributes[choice.attribute] >= (choice.amount || 1)
     } 
     return true
   }
