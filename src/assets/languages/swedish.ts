@@ -407,7 +407,7 @@ export const languagePages: ILanguagePages = {
       "Om du vill slåss om diademet med mannen som du räddade från fågelmännen",
       "Om du vill ta 5 guldstycken från Olvars kropp och låta mannen gå, kan du antingen bege dig mot nordväst ut ur passet mot staden Nordansnö",
       "eller mot staden Druath Glennan",
-      "eller mot väster genom Trollkärret till staden lonalbion för att ta ett skepp över Stjärnans hav"
+      "eller mot väster genom Trollkärret till staden Ionalbion för att ta ett skepp över Stjärnans hav"
     ]
   },
   48: {
@@ -1584,6 +1584,14 @@ export const languagePages: ILanguagePages = {
       "Du kan anfalla Människoätaren när den kommer ombord och samtidigt plattar till en del av Aquamarins reling"
     ]
   },
+  233: {
+    mainText: "Runvävare ligger död vid dina fötter, med sitt svärd nedkört i trägolvet bredvid sig. Du plockar upp det, men inser att han verkligen var både magiker och krigare, för det krävs en magikers besvärjelse för att skapa de pulserande, gröna ljuskloten som exploderar när de träffar någonting. Du sträcker dig efter Tiaran, men bränner dig när du rör vid den. Magiska tecken som finns inristade i den visar att den smiddes djupt nere i Klyftan av svartalver. Ingen med rent hjärta kan röra vid den. Du tillbringar natten i kojan och får tillbaka upp till 3 KROPPSPOÄNG. Du lämnar kvar de odugliga skattema. De skulle bara tynga dig på resan. l gryningen ger du dig av igen för att fullgöra ditt uppdrag. Senare på dagen går du ned från det höga Lyckopasset.",
+    choices: [
+      "Ska du bege dig mot nordöst till Stjärnhavet och Druath Glennan",
+      "eller norrut mot staden Nordansnö",
+      "eller österut genom Trollkärret till Ionalbion och vidare med båt över Stjärnhavet"
+    ]
+  },
   234: {
     mainText: "”Men vi har väntat på dig. Vimsig själv känner redan till dig, men inte den Ledes tjänare, det är inte deras öde att veta... ” Han tystnar, ”. ..ännu. ” \n”Vem är Vimsig?” frågar du. \n”Ödets Överstepräst, Fiendils härskare. Du vet inte mycket, främling. Här får du en gyllene välsignelse. Gå till Volontären. ” Han pekar nedför huvudgatan. ”Där får du höra något du får nytta av. Ja, vi visste allt att du skulle komma.” Han brister ut i ett rungande skratt. Eftersom du inte vill väcka mer uppmärksamhet skyndar du nedför huvudgatan, Drömmarens Promenad. Tjugofem meter nedåt gatan hänger Volontärens skylt, en ung krigare med böjt knä som mottar ett svärd från en man i gyllene kläder och som bär en leende guldmask.",
     choices: [
@@ -1614,6 +1622,14 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om du inte lyckas kasta honom angrips du av de av dina motståndare som är i livet. Du har 7 i försvar mot dem om tre lever, 8 om två lever och 9 om bara en fortfarande är vid liv. Var och en gör ett individuellt anfall mot dig och du kan bara blockera ett av dem. Varje anfall gör 1T6+1 i skada om de träffar"
   },
+  241: {
+    mainText: "Du väntar på att Runvävare ska göra ett utfall mot dig och går sedan åt sidan och försöker gripa tag i hans handled, vrida till och kasta honom över höften.",
+    choices: [
+      "Du kan antingen slå",
+      "eller sparka medan han kämpar för att komma på fötter."
+    ],
+    unsuccessfulThrow: "Om du inte lyckas kasta honom drar han tillbaka sin svärdsarm och måttar ett väldigt hugg mot ditt huvud. Du har 7 i Försvar mot hans klinga."
+  },
   242: {
     mainText: "Han berättar att han är en munk som dyrkar Kwon och bjuder dig att följa med till hans kloster i Försoningens Trädgårdar. Templet ligger i en rosenträdgård och du är lycklig över att ha hittat en säker tillflyktsort där du kan meditera och söka hjälp. Du faller på knä i bön i det kala templet och bredvid sjunger munken psalmen till Kwon Förlösaren.",
     choices: [
@@ -1635,6 +1651,15 @@ export const languagePages: ILanguagePages = {
       "eller ett nytt slag"
     ],
     stillAlive: "Var och en av de soldater som fortfarande lever anfaller dig en gång. Du kan bara Blockera en attack."
+  },
+  250: {
+    mainText: "Du tar ett steg in åt höger och försöker slå in högerfoten i hans mellangärde och sedan vidare upp mot hans strupe i snabb följd.",
+    choices: [
+      "Om du fortfarande lever kan du slå",
+      "eller kasta",
+      "eller sparka igen"
+    ],
+    stillAlive: "Om han fortfarande lever anfaller han dig och du har 7 i Försvar mot hans hugg."
   },
   251: {
     mainText: "Runvävare gör upp en eld i kojan medan du sätter dig på golvet för att meditera. Hans enda rustning är ett brösthamesk av härdat läder och du lägger märke till att han på något sätt gör upp eld utan ﬂinta och stål. Din själ vandrar vida omkring när dörren till kojan plötsligt slås upp. ln kommer en barbarkrigare. Han bär ett halsband av jättevesslans tänder, ett bjömskinn och en underlig tiara med en djupblå ädelsten på pannan. Han har en egendomlig rustning av överlappande metallbitar, som fiskfjäll. Han pekar illvilligt med sitt långsvärd och säger på nordmännens förvrängning av handelsspråket, \"Nåväl, mina små bergstomtar. Jag tar hand om era pengar och alla era saker\". \nRunvävare svarar, \"Vad tar du oss för, som hotar oss på det sättet? Enkla bönder?\"\nBarbaren säger, \"Jag struntar i om ni så är prinsar. Jag är Olvar Kaoskrigaren och jag tar hand om allt ert guld.\"\n",
@@ -1712,6 +1737,15 @@ export const languagePages: ILanguagePages = {
       "Kasta blixtpulver på elden?"
     ],
   },
+  263: {
+    mainText: "Du slår till mot sidan av Runvävares hals, snabb som en huggande orm.",
+    choices: [
+      "Om du överlever kan du sparka",
+      "eller kasta",
+      "eller slå till igen"
+    ],
+    stillAlive: "Om han fortfarande lever sveper han till med svärdet mot dina ben. Du har 6 i Försvar när du försöker hoppa över bladet."
+  },
   267: {
     mainText: "Vätten försöker skyffla upp dig på änden av sin obehagligt hullingförsedda treudd, men du dansar åt sidan och försöker gripa tag i skaftet på den så att du kan slänga hans tunga kropp över höften.",
     choices: [
@@ -1753,6 +1787,14 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  276: {
+    mainText: "Krigarmagikern väger svärdet på vanligt sätt i handen nu, beredd att sticka eller parera. Det finns kanske ingen magi kvar i svärdet, tänker du när du bestämmer dig för om du ska använda..",
+    choices: [
+      "Kluven blixtspark",
+      "ett Virvelkast",
+      "eller Tigertassens slag"
+    ]
+  },
   280: {
     mainText: "Människoätaren trampar ned trärelingen och höjer klubban för att slå till dig, när du landar mjukt framför honom. En skur av pilar från piratskeppets akterkastell visslar över dig.",
     choices: [
@@ -1789,6 +1831,12 @@ export const languagePages: ILanguagePages = {
   287: {
     mainText: "Du faller baklänges från Spindelvävshallen, ned på stenarna på går- den nedanför och bryter nacken. Du har misslyckats."
   },
+  288: {
+    mainText: "Du hoppar högt upp i luften och gör en volt mot Runvävare, över blixten som slår ut och exploderar mot kojans vägg med en smäll.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   290: {
     mainText: "Bonden som har lett dig stannar utanför en ståtlig vit byggnad och pekar in. Du tackar honom och går in på den svala byggnadens mannorgolv. Du stegar självsäkert fram mot en krigare klädd i en blå och gyllene toga. Plötsligt öppnar sig golvet under dig och du faller ned på golvet i en mörk tunnel nedanför. Mannen i toga ropar ned efter dig, \"Skynda dig till arenan, min vän. Om mina män får tag i dig först dödar de dig.\" Du ser ingen annan väg ut än tunneln framför dig.",
     choices: [
@@ -1803,6 +1851,12 @@ export const languagePages: ILanguagePages = {
       "eller Tigersprångets spark igen"
     ],
     stillAlive: "Du måste försöka hoppa över treuddens svepande skaft. Du har 8 i Försvar mot det väldiga slaget. "
+  },
+  294: {
+    mainText: "Sjögräset knastrar under dina fötter när du närmar dig staden Ionalbion, belägen uppe på de vita klipporna över Stjärnhavet. Flockar med får ﬂyr från dig när du vandrar över de böljande kullarna utanför landporten. Vaktema bär ett emblem som du inte känner igen, ett dansande svärd med en bokrulle virad runt klingan. Gatan sträcker sig ned mot havsporten och hamnen. Du går förbi en fontän formad som en delﬁn, där en ung kvinna säljer blommor gjorda av marsipan utanför en av de många bokrullebutikerna. Du antar att de flesta resenärerna borde gå förbi fontänen och frågar henne om hon har lagt märke till någon speciell person de senaste tio dagama. Hon svarar på en guttural dialekt av handelsspråket att trots att hon sitter vid fontänen varje dag har hon inte sett någon ovanlig person. Du bestämmer dig för att gå direkt till hamnen, där ett antal långa, låga galärer ligger ankrade. En skylt anger att ”Tumlaren” seglar mot Druath Glennan vid högvatten. Det kostar två guldstycken att åka med. Du går ombord på skeppet när de ska kasta loss och betalar guldet till hyttpojken.",
+    choices: [
+      "Gå vidare"
+    ]
   },
   295: {
     mainText: "Du griper den Tvåhövdade jätten runt låren, men den väger över ett ton och du finner att du inte kan kasta den. Monstret släpper sin väldiga klubba och lyfter dig, slänger dig i klippan och trampar på dig. Ditt huvud krossas som en mogen melon när kraften från dess häl trycker ned det. Du har misslyckats med ditt uppdrag."
@@ -1930,6 +1984,9 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  327: {
+    mainText: "Du slår till gång på gång men Shaggothen tycks oberörd. Den virar sina tentakler runt dig och börjar sjunka tillbaka ned i träsket. Du dras ned med den och dina lungor fylls av slem. Den kommer att lägga sin avkomma i din kropp och när de växer blir du mat åt dem."
+  },
   329: {
     mainText: "Du formar ett ”O” med tungan och lägger försiktigt en av giftpilarna på den med en skicklig rörelse. Du andas in och spottar ut. Pilen har fastnat i munken innan han har förstått vad du gör. Giftet verkar. Han viker sig dubbel i krampryckningar på den leriga vägen och dör. Du ödslar ingen tid, utan tar av honom hans röda kläder och drar dem över din egen Skuggkrigardräkt. Du går med lugn säkerhet in i sovsalarna i klostret och tar dig till Spindelvävshallen.",
     choices: [
@@ -1958,6 +2015,12 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  337: {
+    mainText: "Skeppet glider ut ur hamnen och sätter segel. Du står vid relingen och ser tillbaka mot klipporna som försvinner i fjärran. Det finns bara en annan passagerare, en kvinna som är svept i hermelinpäls mot sjöbrisen. Hon tycks fascinera besättningen. Hon uppsöker dig och presenterar sig som Dierdra. När du tittar efter ser du att hennes ansikte är målat så att hon liknar en fin katt. Du har aldrig sett en sådan ansiktsmålning förut, och det onaturliga över den stör dig. Hon ler och frågar om du finner resan besvärlig. Du svarar inte, men hon fortsätter, ”Jag skulle inte heller bry mig om den, om jag skulle underhålla någon som intresserade mig. ” Du börjar prata en del med henne och hon berättar för dig att hon är sångerska, men det är när hon berättar vilka hon ska sjunga för som du blir intresserad. Av hennes beskrivning att döma kan det bara vara Yaemon, Flammans Stormästare, mannen du har svurit att döda. Hon pratar också om mannen som kallas Manse Dödsmagikern, en svart trollkarl som dyrkar Nemesis och kan frammana varelser från elementarplanen för att slåss mot sina fiender. Hon tycks inte störas av tanken på att möta sådana människor, men hennes behagligt sjungande röst har snart förhäxat dig. Innan du inser vad du gör har du berättat för henne om ditt uppdrag. Du väntar skräckslaget på hur hon ska reagera när förtrollningen är bruten. Hon ler och säger att hon egentligen inte alls är sångerska, utan magiker, och hon svär vid allt som är gott att hon ska hjälpa dig. Hon vänder sig bort och kuttrar mjukt två gånger. En vit duva kommer ned från skyn bakom dig och landar på hennes utsträckta hand. När skeppet glider in i hamnen i Druath Glennan säger hon åt dig att besöka en fattig familjs hus utanför stadsmuren och vänta på ett meddelande från henne. Du är osäker på om du gör som hon ber dig för att du litar på henne, eller för att hon har förhäxat dig, men du lämnar skeppet och går mot det fallfärdiga rucklet som tycks krypa ihop i skuggan nedanför stadsmuren.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   338: {
     mainText: "Pilen borrar sig in i magikerns kind och han slår till med handen mot den, när det dödliga giftet börjar verka. Han börjar gunga på fötterna och faller sedan ned i vallgraven. Folkmassan är tyst, för de kan inte se pilen och tror att du är en magiker. Vattnet kokar när de Flytande munnarna kastar sig mot sitt byte. lnom en minut har hans kött slitits från benen. Du klättrar upp mot Vätten i tornet. Odjuret gör sig till inför publiken, säker på att segra igen. Han slår sig för bröstet, som är dubbelt så brett som ditt, och svänger treudden med en hand. Tornet är grovt byggt med många fästen för händerna och du rör dig runt det för att hålla Vätten osäker om var du befinner dig. Sedan griper du tag i en utstickande sten med båda händerna och svingar dig upp i tornet bakom honom. Han virvlar runt och du anfaller honom med blixtens hastighet.",
     choices: [
@@ -1979,6 +2042,13 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du är Akrobat",
       "Om du inte är det"
+    ]
+  },
+  343: {
+    mainText: "Du utdelar ett fruktansvärt slag mot den pulserande gröna säck som är Shaggothens kropp. Du skriker till när den INRE KRAFT lämnar dig. Det går en dallring genom den och tentaklema släpper dig, när den ljudlöst sjunker ned i det bubblande träsket. När han får se det, lufsar Trollet bakom dig iväg och du fortsätter din mödosamma resa. När natten faller på har du kommit igenom träsket och fortsätter i månskenet. Vid soluppgången måste du bestämma vilken väg du ska ta.",
+    choices: [
+      "Om du går till Ionalbion vid Stjärnhavets södra strand och tar båten till Druath Glennan",
+      "Om du går norrut mot staden Nordansnö"
     ]
   },
   344: {
@@ -2044,12 +2114,18 @@ export const languagePages: ILanguagePages = {
       "eller Tigertassens slag"
     ]
   },
+  365: {
+    mainText: "Kaststjärnan missar och fastnar i kojans trävägg, när energiklotet träffar dig och exploderar. Du förlorar 6 KROPPSPOÄNG när explosionen bränner dig och kastar dig bakåt några steg. Om du fortfarande lever morrar du av vrede när du cirklar runt Runvävare.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   366: {
     mainText: "Du försöker ta av tiaran från Barbarens huvud, men du bränner dig när du rör vid den. Du förstår av de Magiska tecken som är inristade på den, att den smiddes djupt nere i Klyftan av Svartalver. Ingen med rent hjärta kan röra vid den.\nDu tillbringar natten i kojan och får tillbaka upp till 3 KROPPSPOÄNG. Du lämnar kvar de oanvändbara skattema, de skulle bara tynga dig på resan, men du bestämmer dig för att ta 5 guldstycken från Olvar.\nDe skulle kunna komma till användning. I soluppgången ger du dig av på ditt uppdrag igen. Senare på dagen kommer du ned ur Lyckopasset.",
     choices: [
       "Du kan bege dig mot nordost till Stjämhavet och Druath Glennan",
       "eller norrut mot staden Nordansnö",
-      "eller österut genom Trollkärret till staden lonalbion, för att ta en båt över Stjärnhavet"
+      "eller österut genom Trollkärret till staden Ionalbion, för att ta en båt över Stjärnhavet"
     ]
   },
   368: {
@@ -2104,6 +2180,13 @@ export const languagePages: ILanguagePages = {
     mainText: "Din fot slår in i hans solarplexus med en otrolig kraft, knäcker ett revben och får honom att tappa andan. Han viker sig dubbel, oförmögen att röra sig, och du slår ut med en kluven blixtspark. Din fot slår först in i hans mellangärde igen, sedan upp mot hans strupe i en enda flytande rörelse. 'Han faller död ned på den leriga gatan tre sekunder efter det att du anföll. Du ödslar ingen tid, utan tar av honom hans röda dräkt och drar den över din Skuggkrigardräkt. Du går lugnt och självsäkert in i klostrets sovsalar utan att någon stoppar dig, och fortsätter mot Spindelnätens hall.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  385: {
+    mainText: "Du tar fram din änterhake och repet ur en ﬁcka i dräkten, som nu är täckt med slem, och kastar kroken mot en förvriden stubbe vid stigen. Vid andra försöket fastnar den. Du ser dig försiktigt om efter odjuret som förföljde dig och drar dig upp ur gungﬂyt. När du tar loss kroken och lägger tillbaka den, får du syn på den mörka skepnaden av odjuret bakom dig på stigen, ett väldigt, vårtigt Troll. Det rör sig inte.\nPlötsligt sprutar träsket upp framför dig och grova, ﬁbriga tentakler ringlar sig runt dig. En missformad utväxt som liknar ett grönt stenblock, en Shaggoth, angriper dig. Du hoppar undan från en av tentaklerna och slår till den pulserande massan till kropp. Din näve sjunker in och gör inte mycket skada.",
+    choices: [
+      "Om du har någon INRE KRAFT kvar",
+      "Om du inte har det"
     ]
   },
   389: {

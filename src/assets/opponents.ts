@@ -518,6 +518,40 @@ const opponents: IOpponents = {
       }
     }
   },
+  runeweaver: {
+    opponents: 1,
+    attributes: {
+      name: ["Runvävaren"],
+      hpMax: [10],
+      hp: [10],
+    },
+    win: 233,
+    pages: {
+      263: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [6],
+        damage: ["1T6+1"],
+        defense: [5],
+        blockable: true,
+      },
+      250: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [7],
+        playerDamage: "1T6+2",
+        damage: ["1T6+1"],
+        blockable: true,
+        defense: [6],
+      },
+      241: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [7],
+        damage: ["1T6+2"],
+        blockable: false,
+        defense: [5],
+      },
+    }
+  },
 }
 
 export default opponents

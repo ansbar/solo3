@@ -172,8 +172,12 @@
           Försvara dig
         </button>
 
-        <a v-else href="#" @click="generic.doStartOver()">
-          Du är död. Börja om?
+        <a 
+          v-else href="#" 
+          class="red"
+          @click="generic.doStartOver()"
+        >
+          Du har misslyckats. Börja om?
         </a>     
       </template>
 

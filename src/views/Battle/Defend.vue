@@ -164,10 +164,11 @@
       </button>     
       <a 
         v-else
+        class="red"
         href="#"
         @click="generic.doStartOver()"
       >
-        Du är död. Börja om?
+        Du har misslyckats. Börja om?
       </a>     
     </template>
   </section>

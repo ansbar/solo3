@@ -44,7 +44,7 @@
     }else {
       const opponentName = opponentTexts.value[condition?.opponent as EOpponents]
       resultText.value += ` ${opponentName} har ${condition?.defense} i försvar.\n`
-      resultText.value += `<b>Du träffar ${isSuccess.value ? "" : "inte"} ${opponentName}.</b>`
+      resultText.value += `<b>Du lyckas${isSuccess.value ? "!" : " inte."}</b>`
     }
   }
 

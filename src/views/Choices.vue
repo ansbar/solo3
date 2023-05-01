@@ -75,8 +75,9 @@
     <li v-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
       <a
         href="#"
+        class="red"
         @click="generic.doStartOver()"
-      >Du är död. Börja om?</a>
+      >Du har misslyckats. Börja om?</a>
     </li>
     <li
       v-for="(choice, index) in pageStore.choices"
