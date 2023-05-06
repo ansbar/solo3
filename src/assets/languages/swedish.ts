@@ -5,7 +5,7 @@ export const languageGeneral: ILanguageGeneral = {
     playerName: "Hämnaren",
     damage: "Skada",
     defense: "Försvar",
-    hiddenMainText: "Du måste bestämma nu om du ska använda INRE KRAFT"
+    hiddenMainText: "Du måste bestämma nu om du ska använda INRE KRAFT."
   },
   opponents: {
     none: "",
@@ -29,7 +29,7 @@ export const languageGeneral: ILanguageGeneral = {
   },
   gameHelp: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
-    innerStrength: "Om din attack träffar kommer skadan dubbleras. Du kan dock bara använda din inre kraft ett begränsat antal gånger. Observera att kraften är förbrukad även om du missar. Använd den med förnuft."
+    innerForce: "Om din attack träffar kommer skadan dubbleras. Du kan dock bara använda din inre kraft ett begränsat antal gånger. Observera att kraften är förbrukad även om du missar. Använd den med förnuft."
   },
   difficultyHelp: {
     medium: "<h4>Medium</h4><ul><li>5 färdigheter</li><li>2 i slag/spark/block/ödes-modifikationer</li><li>7 inre kraft</li><li>7 shuriken</li><li>Varning vid val som leder till döden</li></ul>",
@@ -71,7 +71,7 @@ export const languageGeneral: ILanguageGeneral = {
     fate: "ödesmodifikation",  
   },
   attributes: {
-    innerStrength: "inre kraft",
+    innerForce: "inre kraft",
     hp: "kroppspoäng",
   },
   temporary: {

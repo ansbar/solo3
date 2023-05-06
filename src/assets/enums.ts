@@ -53,7 +53,7 @@ export enum EBattleStates {
   none = "none",
   pending = "pending",
   chooseOpponent = "chooseOpponent",
-  innerStrength = "innerStrength",
+  innerForce = "innerForce",
   attack = "attack",
   defend = "defend",
 }
@@ -81,14 +81,14 @@ export enum EAttackType {
 }
 
 export enum EBattleModifiers { 
-  innerStrength = "innerStrength",
+  innerForce = "innerForce",
   block = "block",
   throw = "throw"
 }
 
 export enum EAttributes {
   hp = "hp",
-  innerStrength = "innerStrength"
+  innerForce = "innerForce"
 }
 
 export enum EDifficulty {  

@@ -1,6 +1,6 @@
 <script lang="ts" setup>
   import { useMainStore, useOpponentStore } from "@/stores"
-  import InnerStrength from "./InnerStrength.vue"
+  import InnerForce from "./InnerForce.vue"
   import Attack from "./Attack.vue"
   import Defend from "./Defend.vue"
 
@@ -19,7 +19,7 @@
     :class="battlestate === EBattleStates.pending ? 'hide' : ''"
   >
     <ChooseOpponent v-if="battlestate === EBattleStates.chooseOpponent" />
-    <InnerStrength v-if="battlestate === EBattleStates.innerStrength" />
+    <InnerForce v-if="battlestate === EBattleStates.innerForce" />
     <Attack v-if="battlestate === EBattleStates.attack" />
     <Defend v-if="battlestate === EBattleStates.defend" />
   </div>

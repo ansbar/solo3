@@ -27,11 +27,11 @@ export const usePlayerStore = defineStore("player", {
     attributes: {
       hp: 20,
       hpMax: 20,
-      innerStrength: 5,
-      innerStrengthMax: 5
+      innerForce: 5,
+      innerForceMax: 5
     },
     temporary: {
-      useInnerStrength: null,
+      useInnerForce: null,
       attackModifier: 0,
       damageModifier: 0
     }
@@ -57,12 +57,12 @@ export const usePlayerStore = defineStore("player", {
         this.attributes.hp = 0
       }
     },
-    setAttributeInnerStrength (payload: number) {
-      this.attributes.innerStrength += payload
-      if (this.attributes.innerStrength > this.attributes.innerStrengthMax) {
-        this.attributes.innerStrength = this.attributes.innerStrengthMax
-      } else if (this.attributes.innerStrength < 0) {
-        this.attributes.innerStrength = 0
+    setAttributeInnerForce (payload: number) {
+      this.attributes.innerForce += payload
+      if (this.attributes.innerForce > this.attributes.innerForceMax) {
+        this.attributes.innerForce = this.attributes.innerForceMax
+      } else if (this.attributes.innerForce < 0) {
+        this.attributes.innerForce = 0
       }
     },
     // Modifiers
@@ -79,8 +79,8 @@ export const usePlayerStore = defineStore("player", {
       this.modifiers.fate += payload
     },
     // Temporary
-    setTemporaryInnerStrength (payload: boolean | null) {
-      this.temporary.useInnerStrength = payload
+    setTemporaryInnerForce (payload: boolean | null) {
+      this.temporary.useInnerForce = payload
     },
     setTemporaryAttackModifier (payload: number) {
       const mainStore = useMainStore()

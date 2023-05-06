@@ -11,16 +11,16 @@
      * Also skip choice if player did a succesful throw (the next attack should be the same opponent)
      * Otherwise carry on to next phase */
     if (opponentStore.opponents.length === 1) {
-      mainStore.battlestate = EBattleStates.innerStrength
+      mainStore.battlestate = EBattleStates.innerForce
     } else if (mainStore.thrownOpponent) {
       mainStore.setCurrentOpponent(mainStore.thrownOpponent)
-      mainStore.battlestate = EBattleStates.innerStrength      
+      mainStore.battlestate = EBattleStates.innerForce      
     }
   })
 
   const chooseOpponent = (index: number) => {
     mainStore.setCurrentOpponent(index)
-    mainStore.setBattlestate(EBattleStates.innerStrength)
+    mainStore.setBattlestate(EBattleStates.innerForce)
   }
 </script>
 

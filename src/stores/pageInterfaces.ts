@@ -41,7 +41,7 @@ export interface IPageSidesideEffects {
   },
   attributes?: {
     hp?: number
-    innerStrength?: number
+    innerForce?: number
   }
   temporary?: {
     attack?: number
@@ -83,7 +83,7 @@ export interface IChoice {
   ability?: EAbilities
   item?: EItems
   amount?: number
-  attribute?: EAttributes.innerStrength
+  attribute?: EAttributes.innerForce
   abilityNegation?: boolean
   criteria?: boolean
 }

@@ -85,7 +85,7 @@
 
   watch(battlestate, (state: EBattleStates) => {
     // Handle history
-    if (state === EBattleStates.innerStrength) {
+    if (state === EBattleStates.innerForce) {
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} startad`)
     } else if (state === EBattleStates.pending) {
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  

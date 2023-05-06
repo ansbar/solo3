@@ -42,8 +42,8 @@ export const useMainStore = defineStore("main", {
           playerStore.modifiers.kick = 1
           playerStore.modifiers.throw = 1
           playerStore.items.shuriken = 6
-          playerStore.attributes.innerStrength = 6
-          playerStore.attributes.innerStrengthMax = 6
+          playerStore.attributes.innerForce = 6
+          playerStore.attributes.innerForceMax = 6
           this.numberOfAbilities = 4
           break     
         case "medium":
@@ -52,8 +52,8 @@ export const useMainStore = defineStore("main", {
           playerStore.modifiers.kick = 2
           playerStore.modifiers.throw = 2
           playerStore.items.shuriken = 7
-          playerStore.attributes.innerStrength = 7
-          playerStore.attributes.innerStrengthMax = 7
+          playerStore.attributes.innerForce = 7
+          playerStore.attributes.innerForceMax = 7
           this.numberOfAbilities = 5
           break
         default:
@@ -62,8 +62,8 @@ export const useMainStore = defineStore("main", {
           playerStore.modifiers.kick = 0
           playerStore.modifiers.throw = 0
           playerStore.items.shuriken = 5
-          playerStore.attributes.innerStrength = 5
-          playerStore.attributes.innerStrengthMax = 5
+          playerStore.attributes.innerForce = 5
+          playerStore.attributes.innerForceMax = 5
           this.numberOfAbilities = 3
           break
       }
@@ -74,7 +74,7 @@ export const useMainStore = defineStore("main", {
       this.currentPageId = payload
     },
     setBattlestate (payload: EBattleStates) {
-      if (this.battlestate === EBattleStates.none && payload === EBattleStates.innerStrength) 
+      if (this.battlestate === EBattleStates.none && payload === EBattleStates.innerForce) 
         this.addToHistory("Striden börjar")
       this.battlestate = payload
     },

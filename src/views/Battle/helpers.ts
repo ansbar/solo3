@@ -52,7 +52,7 @@ export function useBattle() {
     if (!damage) return
 
     const staticDamage = damage.length <= 2
-    let innerStrengthText = ""
+    let innerForceText = ""
     let damageModifierText = ""
     let damageRoll = 0
 
@@ -65,16 +65,16 @@ export function useBattle() {
     if (!ally && playerStore.temporary.damageModifier)
       damageModifierText = "+" + playerStore.temporary.damageModifier    
 
-    if (!ally && playerStore.temporary.useInnerStrength){                
+    if (!ally && playerStore.temporary.useInnerForce){                
       damageRoll = damageRoll * 2
-      innerStrengthText = " gånger 2"  
-      playerStore.setTemporaryInnerStrength(null)              
+      innerForceText = " gånger 2"  
+      playerStore.setTemporaryInnerForce(null)              
     }                
 
     opponentStore.setOpponentHp(mainStore.currentOpponent, damageRoll)
 
     damageText.value += `${opponent.value.name} tar ${damageRoll} i skada `
-    damageText.value += staticDamage ? "" : `(${damage}${damageModifierText}${innerStrengthText})`
+    damageText.value += staticDamage ? "" : `(${damage}${damageModifierText}${innerForceText})`
 
     if (opponent.value.hp < 1){
       damageText.value += " och besegras!"

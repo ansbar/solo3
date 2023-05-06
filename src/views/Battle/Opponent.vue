@@ -28,7 +28,7 @@
         </li>
       </ul>
       <ul>
-        <li>Inre kraft: {{ attributes.innerStrength }}</li>
+        <li>Inre kraft: {{ attributes.innerForce }}</li>
       </ul>
     </div>
     <div class="second-col">

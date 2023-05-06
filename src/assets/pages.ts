@@ -1440,7 +1440,7 @@ export const pageData: IPages = {
   137: {
     sideEffects: {
       attributes: {
-        innerStrength: -1
+        innerForce: -1
       },
       items: {
         shuriken: -1,
@@ -2182,7 +2182,7 @@ export const pageData: IPages = {
     sideEffects: {
       attributes: {
         hp: 4,
-        innerStrength: 3
+        innerForce: 3
       },
     },
     choices: [
@@ -3026,7 +3026,7 @@ export const pageData: IPages = {
   359: {
     choices: [
       {
-        attribute: EAttributes.innerStrength,
+        attribute: EAttributes.innerForce,
         goto: 395,
       }, {
         goto: 403,
@@ -3161,7 +3161,7 @@ export const pageData: IPages = {
   385: {
     choices: [
       {
-        attribute: EAttributes.innerStrength,
+        attribute: EAttributes.innerForce,
         goto: 343,
       }, {
         goto: 327,
@@ -3309,7 +3309,7 @@ export const pageData: IPages = {
   417: {
     choices: [
       {
-        attribute: EAttributes.innerStrength,
+        attribute: EAttributes.innerForce,
         goto: 343,
       }, {
         goto: 327,

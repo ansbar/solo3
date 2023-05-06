@@ -34,7 +34,7 @@ export interface ILanguageGeneral {
 
 export interface ILanguageHelp {
   block: string
-  innerStrength: string
+  innerForce: string
 }
 
 export interface IDifficulty {
@@ -93,7 +93,7 @@ export interface ILanguageModifiers {
 
 export interface ILanguageAttributes {
   hp: string
-  innerStrength: string
+  innerForce: string
 }
 
 export interface ILanguageTemporary {

@@ -11,8 +11,8 @@
   const text = computed(() => {
     // In some scenarios we need to hide the mainText until a choce has been made.
     // For example in page 340 the player hase to choose to use InnerForce before reading text.
-    // This only affets the innerStrength phase
-    if (mainStore.battlestate !== EBattleStates.innerStrength) return mainText.value
+    // This only affets the innerForce phase
+    if (mainStore.battlestate !== EBattleStates.innerForce) return mainText.value
 
     return opponentStore.enableInnerForce ? miscTexts.value.hiddenMainText : mainText.value 
   })

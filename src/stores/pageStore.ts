@@ -54,7 +54,7 @@ export const usePageStore = defineStore("page", {
       if (this.sideEffects?.attributes) {
         const attributes = this.sideEffects.attributes        
         if (attributes.hp) playerStore.setPlayerAttributeHp(attributes.hp)
-        if (attributes.innerStrength) playerStore.setAttributeInnerStrength(attributes.innerStrength)
+        if (attributes.innerForce) playerStore.setAttributeInnerForce(attributes.innerForce)
       }   
 
       if (this.sideEffects?.abilities) {

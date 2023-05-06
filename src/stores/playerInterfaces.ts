@@ -23,12 +23,12 @@ interface Player_modifiers {
 interface Player_attributes {
   hp: number
   hpMax: number
-  innerStrength: number
-  innerStrengthMax: number
+  innerForce: number
+  innerForceMax: number
 }
 
 interface Player_temporary {
-  useInnerStrength: boolean | null
+  useInnerForce: boolean | null
   attackModifier: number 
   damageModifier: number
 }
