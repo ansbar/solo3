@@ -552,6 +552,31 @@ const opponents: IOpponents = {
       },
     }
   },
+  yaemon: {
+    opponents: 1,
+    attributes: {
+      name: ["Yaemon"],
+      hpMax: [20],
+      hp: [20],
+    },
+    win: 420,
+    pages: {
+      24: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },    
+      340: {
+        playerAttackType: EAttackType.instant,
+        enableInnerForce: true,
+        playerDamage: "4",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },      
+    }
+  },
 }
 
 export default opponents

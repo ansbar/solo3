@@ -237,6 +237,12 @@ export const pageData: IPages = {
     ]
   },
   24: {
+    opponent: EOpponents.yaemon,
+    sideEffects: {
+      attributes: {
+        hp: -10
+      }
+    },
     choices: [
       {
         goto: 155,
@@ -1630,14 +1636,20 @@ export const pageData: IPages = {
   154: {
     choices: [
       {
-        goto: 191,
+        goto: 361,
+      }, {
+        goto: 141,
       }
     ]
   },
   155: {
     choices: [
       {
-        goto: 191,
+        goto: 340,
+      },{
+        goto: 330,
+      },{
+        goto: 410,
       }
     ]
   },
@@ -2487,6 +2499,26 @@ export const pageData: IPages = {
       }
     ]
   },
+  265: {
+    choices: [
+      {
+        goto: 229
+      }, {
+        goto: 274
+      }
+    ]
+  },
+  266: {
+    choices: [
+      {
+        goto: 340
+      }, {
+        goto: 330
+      }, {
+        goto: 410
+      }
+    ]
+  },
   267: {
     opponent: EOpponents.goblin,
     choices: [
@@ -2869,6 +2901,22 @@ export const pageData: IPages = {
         goto: 267
       }, {
         goto: 293,
+      }
+    ]
+  },
+  340: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 301
+      }, {
+        goto: 330
+      }, {
+        goto: 410,
+      }, {
+        goto: 390
+      }, {
+        goto: 401,
       }
     ]
   },

@@ -22,6 +22,7 @@ export interface IOpponent {
 
 export interface IOpponentPage {
   playerAttackType: EAttackType
+  enableInnerForce?: boolean // Only applicable combined with playerAttackType instant, like page 340
   playerAttackValue?: number
   playerDefense: number[]
   playerDamage?: string  

@@ -29,6 +29,7 @@ interface StoreOpponent {
   counterGoto?: number,
   missAbility?: EAbilities
   playerAttackType: EAttackType
+  enableInnerForce?: boolean
   playerAttackValue?: number,
   playerDamage?: string
   blockable?: boolean
@@ -50,6 +51,7 @@ export const useOpponentStore = defineStore("opponent", {
     counterGoto: undefined,
     missAbility: undefined,
     playerAttackType: EAttackType.none,
+    enableInnerForce: undefined,
     playerAttackValue: undefined,
     playerDamage: undefined,
     blockable: undefined,
@@ -91,6 +93,7 @@ export const useOpponentStore = defineStore("opponent", {
       // This is set every page switch
       this.$patch({
         playerAttackType: payload.playerAttackType,
+        enableInnerForce: payload.enableInnerForce,
         playerAttackValue: payload.playerAttackValue,
         playerDamage: payload.playerDamage,
         missDamage: payload.missDamage,

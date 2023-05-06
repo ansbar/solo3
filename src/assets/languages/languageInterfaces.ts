@@ -47,6 +47,7 @@ export interface ILanguageMisc {
   playerName: string
   damage: string
   defense: string
+  hiddenMainText: string
   [key: string]: string
 }
 

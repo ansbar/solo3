@@ -5,6 +5,7 @@ export const languageGeneral: ILanguageGeneral = {
     playerName: "Hämnaren",
     damage: "Skada",
     defense: "Försvar",
+    hiddenMainText: "Du måste bestämma nu om du ska använda INRE KRAFT"
   },
   opponents: {
     none: "",
@@ -1158,15 +1159,18 @@ export const languagePages: ILanguagePages = {
     ]
   },
   154: {
-    mainText: "",
+    mainText: "Ekdörren knakar lätt på gångjämen när du stiger in i Honorics kammare. Giftångoma vrider sig som en orm ur munnen på honom. Du övervinner skräcken som strålar ut från hans svärd, tar upp det och lämnar kammaren så fort du kan, noga med att inte andas förrän du är i säkerhet utanför. Du fäster svärdet på ryggen och klättrar ut genom tornets fönster.",
     choices: [
-      "Gå vidare"
+      "Om du klättrar upp i det tom som kröns av Röda syrsans flagg",
+      "Om du väljer det som pryds av Svarta Virvelströmmens banér"
     ]
   },
   155: {
-    mainText: "",
+    mainText: "Du vänder sidan mot honom, bredbent med lätt böjda knän och nävarna redo. Du måste bestämma nu om du ska använda INRE KRAFT om du har någon kvar.",
     choices: [
-      "Gå vidare"
+      "När han går i närstrid med dig kan du använda Kobraslaget",
+      "eller Järnnävens slag",
+      "eller Tigertassens slag"
     ]
   },
   156: {
@@ -1746,6 +1750,21 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om han fortfarande lever sveper han till med svärdet mot dina ben. Du har 6 i Försvar när du försöker hoppa över bladet."
   },
+  265: {
+    mainText: "Du hoppar upp och hänger dig i hålet som leder upp på vinden, sedan klämmer du dig igenom och upp på brädoma ovanför. Du känner efter lösa brädor och kravlar försiktigt fram till en spricka i innertaket.\nEtt ensamt ljus som brinner i kammaren nedanför ger tillräcklig belysning för att du ska kunna se. Honoric sover. Hans arroganta drag verkar mindre grymma än när han är vaken, och han har munnen öppen och snarkar lätt. Hans väldiga svärd ligger utdraget ur skidan bredvid honom. Du kan inte se några fällor i kammaren.",
+    choices: [
+      "Om du vill hälla din enda dos av lntets blod på en vaxad tråd ned i Honorics mun.",
+      "Om du föredrar att gå tillbaka nedför trappan och gå in genom dörren efter att ha oljat gångjärnen",
+    ],
+  },
+  266: {
+    mainText: "Vilket slag vill du använda? Du måste bestämma nu om du ska använda INRE KRAFT.",
+    choices: [
+      "Kobraslaget?",
+      "Jämnävens slag?",
+      "Tigertassens slag?"
+    ],
+  },
   267: {
     mainText: "Vätten försöker skyffla upp dig på änden av sin obehagligt hullingförsedda treudd, men du dansar åt sidan och försöker gripa tag i skaftet på den så att du kan slänga hans tunga kropp över höften.",
     choices: [
@@ -2027,6 +2046,17 @@ export const languagePages: ILanguagePages = {
       "Använder du Tigersprångets spark",
       "eller Virvelkastet",
       "eller Tigertassens slag"
+    ]
+  },
+  340: {
+    mainText: "När du går fram slår Yaemon ut med näven mot ditt huvud, men du går ned på ena knät och slår honom med raka ﬁngrar i mellangärdet, alldeles under bröstkorgen. Han grymtar till av smärta och viker sig dubbel. Du hoppar upp på fötter, slår upp med armbågen så att din högra hand vilar mot höger axel, och slår till honom kraftigt under käken. Dra 4 ifrån hans KROPPSPOÄNG. Du får fördubbla det om du använde INRE KRAFT.",
+    stillAlive: "Om han fortfarande lever slås hans huvud bakåt, men han kastar sig tillbaka och slår upp föttema mot ditt huvud, som du lyckas skydda, och vidare över det, så att han landar säkert en bit bort. Men nu står du alldeles bakom honom och kan anfalla igen.",
+    choices: [
+      "Om du använder Kobraslaget igen",
+      "eller Jämnävens slag",
+      "eller Tigertassens slag",
+      "eller en spark",
+      "eller ett kast"
     ]
   },
   341: {

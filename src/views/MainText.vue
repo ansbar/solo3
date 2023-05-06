@@ -1,12 +1,26 @@
 <script lang="ts" setup>
+  import { computed } from "vue"
+  import { useOpponentStore, useMainStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
+  import { EBattleStates } from "@/assets/enums"
 
-  const { mainText } = useTexts()
-</script>
+  const { mainText, miscTexts } = useTexts()
+  const mainStore = useMainStore()
+  const opponentStore = useOpponentStore()
+
+  const text = computed(() => {
+    // In some scenarios we need to hide the mainText until a choce has been made.
+    // For example in page 340 the player hase to choose to use InnerForce before reading text.
+    // This only affets the innerStrength phase
+    if (mainStore.battlestate !== EBattleStates.innerStrength) return mainText.value
+
+    return opponentStore.enableInnerForce ? miscTexts.value.hiddenMainText : mainText.value 
+  })
+ </script>
 
 <template>
   <div class="main-text">
-    {{ mainText }}
+    {{ text }}
   </div>
 </template>
 
