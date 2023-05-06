@@ -1118,7 +1118,7 @@ export const languagePages: ILanguagePages = {
   149: {
     mainText: "Efretin höjer sig över dig, med ﬂammorna slickande dess rödglänsande kött. Den sträcker sig efter dig och det strömmar eld nedfor dess arm.",
     choices: [
-      "Du kan använda Jämnävens slag",
+      "Du kan använda Järnnävens slag",
       "eller Virvelkastet",
       "eller Tigersprångets spark"
     ]
@@ -1192,10 +1192,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   159: {
-    mainText: "",
-    choices: [
-      "Gå vidare"
-    ]
+    mainText: "Kraften bakom slaget kastar dig bakåt genom luften och du slår i marken på rygg, omtöcknad. Ett ögonblick senare har Yaemon gått ned på knä bredvid dig och han driver först den ena, sedan den andra knutna näven mot din tinning, samtidigt som han vrålar när hans INRE KRAFT frigörs. Din skalle spräcks och du dör omedelbart.",
   },
   160: {
     mainText: "Snöjätten slår till med klorna mot ditt ansikte. Ditt Försvar mot det väldiga slaget från hans armar när du kämpar för att hålla balansen på isen, är 6.",
@@ -1246,9 +1243,11 @@ export const languagePages: ILanguagePages = {
     ]
   },
   167: {
-    mainText: "",
+    mainText: "Du störtar igenom luften och ned på marken där du rullar runt. När du kommer upp på fötter kastar du dig framstupa i luften och vrider dig så att du landar vänd mot Yaemon, som hoppar upp på fötter. Du tar tillvara på chansen och hjular fram mot honom, gör en volt för att komma inom räckhåll och tar Yaemon med överraskning.",
     choices: [
-      "Gå vidare"
+      "Försöker du använda ett slag",
+      "en spark",
+      "eller ett kast"
     ]
   },
   168: {
@@ -1647,6 +1646,14 @@ export const languagePages: ILanguagePages = {
       "eller gå tillbaka ut på issjön"
     ]
   },
+  245: {
+    mainText: "Du kastar dig till marken och försöker fånga hans ben mellan dina för att välta honom, men han är beredd den här gången och hoppar rakt upp så att han landar på dig. Han trampar dig i mellangärdet med ett vrål, när han släpper fram sin INRE KRAFT. Dina revben knäcks som bambuspön. Du förlorar 10 KROPPSPOÄNG och han hoppar över dig och vänder sig i luften så att han landar framför ditt huvud. Om du fortfarande lever, lyckas du övervinna din smärta och slå ihop händerna, samtidigt som du tittar upp och bakåt, så att du med snabbheten och styrkan hos en björn fångar Yaemons fot när han försöker sparka igen. För ett ögonblick tror du att du har honom fast, men han genomför sin spark och skjuter ifrån med det andra benet. Han använder ditt grepp som en språngbräda och slungar hela kroppen framåt så att hans ben slits ur ditt grepp. Du drar upp knäna till bröstet och rätar ut benen, så att rörelsens kraft får dig på fötter. Du hinner precis se Yaemon vrida sig i luften för att landa framför dig igen. Du har initiativet.",
+    choices: [
+      "Ska du slå",
+      "eller sparka",
+      "eller försöka använda Virvelkastet"
+    ]
+  },
   248: {
     mainText: "Dina nävar slår blixtsnabbt ut mot en av angriparna. Du får välja vem av dem det blir.",
     choices: [
@@ -1761,7 +1768,7 @@ export const languagePages: ILanguagePages = {
     mainText: "Vilket slag vill du använda? Du måste bestämma nu om du ska använda INRE KRAFT.",
     choices: [
       "Kobraslaget?",
-      "Jämnävens slag?",
+      "Järnnävens slag?",
       "Tigertassens slag?"
     ],
   },
@@ -1893,6 +1900,13 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  301: {
+    mainText: "Du tar ett steg till höger, står med benen isär och lätt böjda knän, och klyver luften med vänster arm i ett slag från höften mot Yaemons strupe. Han är beredd och reagerar blixtsnabbt. Han lutar sig bakåt och slår till med vänster handﬂata uppåt och i kors. Han slår in i din handled med vänster hand, och höger hand träffar din armmuskel alldeles ovanför armbågen. Smärtan är outhärdlig när din arm tvingas mot leden och bryts med en smäll. Du förlorar 8 KROPPSPOÄNG. Om du fortfarande lever kan du inte slå igen. Du kan inte heller använda Akrobatik om du har den färdigheten. När du vacklar bakåt av smärta försöker du förtvivlat övervinna den i tid för att kunna svara på Yaemons nästa anfall. Du tittar upp och ser honom hoppa genom luften mot dig med vänster ben utsträckt i en Bevingade hästens spark riktad mot ditt huvud. Du har 7 i Försvar.",
+    choices: [
+      "Gå vidare",
+      "Gå vidare"
+    ]
+  },
   302: {
     mainText: "Barbarens röst höjs i ett vrål av stridslust när han hugger mot dig i bärsärkar-raseri. Han bryr sig inte om dina anfall så länge hans svärd får smaka ditt blod. Dra ifrån 1 från all skada du gör på honom. Han hugger med sitt svärd nedåt mot ditt huvud, men du tar ett steg åt höger sida, vrider dig och sparkar till med foten mot hans ansikte när svärdet visslar förbi bakom din rygg.",
     choices: [
@@ -1916,6 +1930,14 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du antar utmaningen",
       "Om du avböjer"
+    ]
+  },
+  308: {
+    mainText: "Han slår till med höger hand mot vänster sida av din hals. Du för upp ditt ben i en båge från vänster till höger och föser hans arm åt sidan, men han drar tillbaka den och slår till igen mot andra sidan av din hals, så att du blir omtöcknad. Med oförminskad vildsinthet knyter Yaemon sin hand till en näve och rätar på armen, så att hans knogar slår in i din näsa. Smärtan sköljer över dig. Ett ögonblick senare slår han in foten i ditt huvud med en Bevingade hästens spark och du tappar fotfästet och slungas bakåt med utbredda armar. Du förlorar 10 KROPPSPOÄNG när ljudet av hans vrål ekar uti natten. Om du fortfarande lever lyckas du lindra fallet med armarna när du landar platt på ryggen. l sista ögonblicket klarnar din blick och du ser Yaemons fot trampa ned mot ditt huvud. Du rullar undan och hoppar på fötter och utom räckhåll.\nDu cirklar försiktigt runt honom och går sedan till anfall.",
+    choices: [
+      "Om du försöker använda ett slag",
+      "eller en spark",
+      "eller ett kast"
     ]
   },
   310: {
@@ -1980,6 +2002,16 @@ export const languagePages: ILanguagePages = {
     ],
     unsuccessfulThrow: "Om du misslyckas med att kasta honom försöker han hugga av dig på mitten från pannan till magen när du tar dig upp. Du har 6 i Försvar mot hans hugg när han ger ifrån sig ett blodisande tjut. Han gör 1T6+2 i skada."
   },
+  319: {
+    mainText: "När du ska till att gå ned på marken och slå undan benen under honom, riktar Yaemon en Bevingade hästens spark mot ditt huvud. Du handlar instinktivt och griper tag med händema i hans fot. Du använder en variant av Draksvanskastet, krokar fast din högra häl runt hans andra vrist och drar undan den. Han faller till marken och sätter sig upp, redo att vrida sig åt sidan. Du håller fortfarande i hans ben och kör upp din högra fot i hans ansikte med ett vrål. Han förlorar 6 KROPPSPOÄNG. Du får fördubbla det om du använder INRE KRAFT.",
+    stillAlive: "Om han fortfarande lever, använder han kraften när hans överkropp tvingas tillbaka ned på marken till att vrida loss foten ur ditt grepp och göra en volt bakåt. Han använder händema för att komma upp i luften och landar på fötterna. Han utdelar nästan omedelbart en saxspark. Hans vänstra fot slår ut mot din ljumske och den högrafoten slår upp mot ditt huvud, så att han ﬂyger upp i luften. Du går tillbaka på din vänsterfot med lätt böjda knän och kör upp höger handflata i en rak blockering med armen som stoppar Yaemons spark mot ljumsken. Sedan för du upp armen över bröstet och för undan sparken mot ansiktet, så att du är redo för ett motangrepp.",
+    choices: [
+      "Ska du pröva Draksvanskastet igen",
+      "eller virvelkastet",
+      "eller ett slag",
+      "eller en spark"
+    ],
+  },
   323: {
     mainText: "Du tar upp några fiskfjäll ur en ficka och lägger dem över ögongloberna. Du kan se ganska bra genom dem, men de gör att du ser blind ut. Du sätter dig ned för att tigga i närheten av ingången till klostret och hör tillräckligt för att övertygas om att munkarna som dyrkar den Lede är genomonda. Men det är en kvinna i en svart kappa täckt med ett mönster av grön spindelväv som drar till sig din uppmärksamhet. Hon går mot klostret tillsammans med två munkar klädda i rött, och de tycks gräla om någonting. Hon förhandlar om ett pris för en besvärjelse som de vill att hon ska kasta i ”Spindelvävshallen ”. Hon påpekar att om den är deras enda försvar mot spioner i korridoren som förbinder refektoriet med sovcellerna, är besvärjelsen Nullaqs nät värd mer än trehundra guldmynt. Du tar upp din huva med dess magra skörd av kopparmynt och traskar långsamt bort för att ligga lågt tills mörkret faller. Du bestämmer dig för att utnyttja din vetskap om att Spindelvävshallen bara har en fälla, spindelväven från häxan som du såg tidigare.",
     choices: [
@@ -2010,6 +2042,15 @@ export const languagePages: ILanguagePages = {
     mainText: "Du formar ett ”O” med tungan och lägger försiktigt en av giftpilarna på den med en skicklig rörelse. Du andas in och spottar ut. Pilen har fastnat i munken innan han har förstått vad du gör. Giftet verkar. Han viker sig dubbel i krampryckningar på den leriga vägen och dör. Du ödslar ingen tid, utan tar av honom hans röda kläder och drar dem över din egen Skuggkrigardräkt. Du går med lugn säkerhet in i sovsalarna i klostret och tar dig till Spindelvävshallen.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  330: {
+    mainText: "Du slår med höger näve mot Yaemons huvud, men han tar ett steg mot dig och åt höger, bredbent och med böjda knän, och slår upp med sidan av vänster hand mot insidan av din högra handled så att slaget går förbi honom. Sedan vrider han upp sin högra hand i ditt mellangärde med ett rop. Du viker dig dubbel och förlorar 4 KROPPSPOÄNG. Om du fortfarande lever drar han tillbaka handen och för den genom luften mot ditt huvud. Men du reagerar snabbt och sätter dig bokstavligt talat ned så att hans arm visslar förbi över huvudet på dig.\nSedan gör du en bakåtkullerbytta så att du kommer utom räckhåll. Du rullar upp till huvudstående och knycker till så att du kommer upp på fötter mitt emot Yaemon. Han morrar frustrerat åt din ﬂykt. Du kan anfalla igen.",
+    choices: [
+      "Använder du Kobraslaget",
+      "eller Tigertassens slag",
+      "eller ett kast",
+      "eller en spark"
     ]
   },
   332: {
@@ -2053,7 +2094,7 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Om han fortfarande lever slås hans huvud bakåt, men han kastar sig tillbaka och slår upp föttema mot ditt huvud, som du lyckas skydda, och vidare över det, så att han landar säkert en bit bort. Men nu står du alldeles bakom honom och kan anfalla igen.",
     choices: [
       "Om du använder Kobraslaget igen",
-      "eller Jämnävens slag",
+      "eller Järnnävens slag",
       "eller Tigertassens slag",
       "eller en spark",
       "eller ett kast"
@@ -2158,6 +2199,20 @@ export const languagePages: ILanguagePages = {
       "eller österut genom Trollkärret till staden Ionalbion, för att ta en båt över Stjärnhavet"
     ]
   },
+  367: {
+    mainText: "Du slår ut med vänster arm i ett försök att gripa tag i Yaemons handled, men han reagerar nästan omedelbart med att gå bakåt och gripa tag i din arm. Så vrider han dig så att du har ryggen mot honom.\nHan drar upp din underarm mellan skulderbladen på dig i en smärtsam låsning, medan han lägger sin andra arm om ditt huvud. Du vet att du bara har en sekund på dig innan din nacke bryts, så du går ned i hukande ställning och hoppar med föttema över Yaemons huvud, så att du landar bakom honom och bryter hans grepp. När dina fötter slår i marken snurrar han runt och sparkar till med höger fot i en vid båge från höger till vänster. Sparken träffar dig i sidan av huvudet med våldsam kraft, när han vrålar till med den lnre kraftens styrka. Du förlorar 10 KROPPSPOÄNG. Om du fortfarande lever tar reﬂexerna över så att du rullar med slaget och hjular undan till sidan av Yaemon. När du stannar upp känner du dig lite omtumlad. Han kastar sig över dig igen med en serie slag.",
+    choices: [
+      "Om du har färdigheten Akrobatik",
+      "om inte"
+    ]
+  },
+  3670: {
+    mainText: "Du saknar färdigheten Akrobatik och försöka blockera hans många anfall. Du har 7 i Försvar.",
+    choices: [
+      "Om du har färdigheten Akrobatik",
+      "om inte"
+    ]
+  },
   368: {
     mainText: "Spindelvävshallen är en böjd korridor, som en välvd bro, som förbinder bostadsdelen på övervåningen med refektoriet där munkarna äter. När dörren går upp ser du ett rum som är svagt upplyst av två ﬂämtande ljus. Eftersom du är förvarnad lägger du märke till blänket av de många trådarna, tunna som spindelväv, som går kors och tvärs över golvet. Några av dem antar du är anknutna till klockor eller fällor som skulle förråda eller döda dig. Du böjer dig ned, går upp i handstående och går genom rummet på händerna. Du kan balansera på en arm medan den andra försiktigt undersöker golvet framför dig efter trådar. Det tar dig en halvtimme att långsamt gå genom rummet, men du lyckas utan att bryta någon av trådarna. Du kommer fram till dörren och går smidigt ned på fötter igen innan du öppnar den. Nu står du på balkongen över refektoriet och matsalen. Medan du kryper ihop bakom balkongen får du reda på det du behöver veta, av munkar som dricker vin sent in på natten. Yaemon tycks har gett sig av mot Mortavalon, tillsammans med Honoric, Marskalk över Doms- värdslegionen, för tio dagar sedan. lnnan du hinner ge dig av får du syn på en bokrulle där några av de sparkar, slag och kast som används i Syrsans Väg, stridskonsten som används av den Ledes munkar, finns beskrivna. Du kan höja din Slagmodifikation med 1, eftersom du lär dig några användbara tekniker. De är skickliga på att slå. Du lägger också märke till att de inte känner till den Kluvna blixtsparken. Det kan vara bra att veta när du måste slåss mot en munk som dyrkar den Lede. Du lyckas ta dig ut samma väg som du kom utan svårighet, och håller dig dold i ett nedbränt bageri resten av natten. På morgonen lämnar du Domedag, fast besluten att hinna ifatt Yaemon och Honoric.",
     choices: [
@@ -2247,6 +2302,13 @@ export const languagePages: ILanguagePages = {
       "eller glida över däcket och använda Draksvanskastet"
     ]
   },
+  401: {
+    mainText: "Yaemon är för snabb för att du ska kunna lyckas med Tigertandskastet.",
+    choices: [
+      "Du kan försöka med Virvelkastet",
+      "eller Draksvanskastet"
+    ]
+  },
   403: {
     mainText: "Munken är en mästare på närstrid. Han går bakåt och slår undan din fot med underarmen. Sedan skriker han skräckslaget: ”SKUGGKRIGARE!”,för att larma de andra. Du inser att ditt uppdrag skulle vara i fara om du stannade och försvinner snabbt bland bakgatorna. Du gömmer dig i ett utbränt bageri under natten. Du funderar över att munken såg att du var en Skuggkrigare och beslutar dig för att lämna Domedag, fast besluten att se till att Yaemon inte når fram till Förändringens pelare före dig. Du lämnar staden nästa morgon, förklädd till tiggare.",
     choices: [
@@ -2274,6 +2336,13 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Du kan gå in på krogen och höra efter skvaller",
       "Du kan försöka smyga dig in i klostret"
+    ]
+  },
+  410: {
+    mainText: "Du för handen från vänster till höger i ett vildsint försök att slå till honom över halsen. Olyckligtvis är han för snabb för dig och han fångar din handled och ger dig skickligt en kort spark i magen. Du förlorar 2 KROPPSPOÄNG. Om du fortfarande lever sätter han fotsulan mot din mage och faller bakåt, så att du dras med. Sedan rätar han ut benet så att du ﬂyger över honom.",
+    choices: [
+      "Om du har färdigheten Akrobatik",
+      "Om du inte har det",
     ]
   },
   412: {

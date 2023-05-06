@@ -1674,13 +1674,7 @@ export const pageData: IPages = {
       }
     ]
   },
-  159: {
-    choices: [
-      {
-        goto: 191,
-      }
-    ]
-  },
+  159: {},
   160: {
     opponent: EOpponents.snowGiant,
     choices: [
@@ -1745,7 +1739,11 @@ export const pageData: IPages = {
   167: {
     choices: [
       {
-        goto: 191,
+        goto: 266,
+      },{
+        goto: 390,
+      },{
+        goto: 401,
       }
     ]
   },
@@ -2351,6 +2349,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  245: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 266
+      }, {
+        goto: 390
+      }, {
+        goto: 367
+      }
+    ]
+  },
   248: {
     opponent: EOpponents.soldiers,
     choices: [
@@ -2685,6 +2695,29 @@ export const pageData: IPages = {
       }
     ]
   },
+  301: {
+    sideEffects: {
+      attributes: {
+        hp: -8
+      }
+    },
+    opponent: EOpponents.yaemon,
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 7,
+      opponent: EOpponents.yaemon
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 411,
+      }, {
+        criteria: false,
+        goto: 24,
+      }
+    ]
+  },
   302: {
     opponent: EOpponents.olvar,
     choices: [
@@ -2716,6 +2749,18 @@ export const pageData: IPages = {
         goto: 194
       }, {
         goto: 186
+      }
+    ]
+  },
+  308: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 266
+      }, {
+        goto: 390
+      }, {
+        goto: 401,
       }
     ]
   },
@@ -2801,6 +2846,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  319: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 245
+      }, {
+        goto: 367
+      }, {
+        goto: 266
+      }, {
+        goto: 390
+      }
+    ]
+  },
   323: {
     choices: [
       {
@@ -2847,6 +2906,25 @@ export const pageData: IPages = {
       {
         goto: 368
       }
+    ]
+  },
+  330: {
+    opponent: EOpponents.yaemon,
+    sideEffects: {
+      attributes: {
+        hp: -4
+      }
+    },
+    choices: [
+      {
+        goto: 340
+      }, {
+        goto: 410
+      }, {
+        goto: 401,
+      }, {
+        goto: 390
+      },
     ]
   },
   332: {
@@ -3081,6 +3159,32 @@ export const pageData: IPages = {
       }
     ]
   },
+  367: {
+    choices: [
+      {
+        goto: 181,
+      }, {
+        goto: 3670,
+      }
+    ]
+  },
+  3670: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 7,
+      opponent: EOpponents.yaemon
+    },
+    choices: [
+      {
+        criteria: true,
+        goto: 118,
+      }, {
+        criteria: false,
+        goto: 308,
+      }
+    ]
+  },
   368: {
     sideEffects: {
       modifiers: {
@@ -3230,6 +3334,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  401: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 367
+      }, {
+        goto: 228
+      }
+    ]
+  },
   403: {
     choices: [
       {
@@ -3268,6 +3382,22 @@ export const pageData: IPages = {
       }, {
         goto: 273
       }
+    ]
+  },
+  410: {
+    opponent: EOpponents.yaemon,
+    sideEffects: {
+      attributes: {
+        hp: -2
+      }
+    },
+    choices: [
+      {
+        ability: EAbilities.acrobat,
+        goto: 167
+      }, {
+        goto: 159
+      },
     ]
   },
   412: {
