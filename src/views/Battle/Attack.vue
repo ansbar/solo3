@@ -137,6 +137,7 @@
       </a>     
     </template>
 
+
     <!-- Miss or not Throw -->
     <template v-else-if="!isHit || opponentStore.playerAttackType != 'throw'">
       <!-- If opponent is still alive -->
@@ -151,10 +152,12 @@
         </template>       
       </div>
 
+
       <!-- If special skip defend phase at miss (go to special page) -->
       <a v-if="!isHit && opponentStore.miss" href="#" @click="handleSpecialMiss()">
         {{ pageTexts.miss }}
       </a>  
+
 
       <!-- If special skip defend phase at hit (go to special page) -->
       <template v-else-if="isHit && opponentStore.miss">
@@ -165,6 +168,7 @@
           Gå vidare
         </button>
       </template>    
+
 
       <!-- If opponent is alive and attack is not instant -->
       <template v-else-if="opponent.hp > 0 && opponentStore.playerAttackType !== 'instant'">
@@ -180,11 +184,7 @@
           Du har misslyckats. Börja om?
         </a>     
       </template>
-
-      <!-- If instant attack and not a combined special condition (thise buttons will override) -->
-      <button v-else-if="opponentStore.playerAttackType === 'instant' && !pageStore.specialCondition" @click="battle.changeState('pending')">
-        Gå vidare
-      </button>
+      
 
       <!-- If opponent is dead -->
       <template v-else-if="opponent.hp === 0">
@@ -199,6 +199,12 @@
           Försvara dig
         </button>
       </template>
+
+      
+      <!-- If instant attack and not a combined special condition (thise buttons will override) -->
+      <button v-else-if="opponentStore.playerAttackType === 'instant' && !pageStore.specialCondition" @click="battle.changeState('pending')">
+        Gå vidare
+      </button>
     </template>
 
 

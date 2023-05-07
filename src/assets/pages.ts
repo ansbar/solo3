@@ -1,4 +1,4 @@
-import { EAbilities, EAttributes, EItems, EOpponents } from "./enums"
+import { EAbilities, EAddedAbilities, EAttributes, EItems, EOpponents } from "./enums"
 import { IPages } from "@/stores/pageInterfaces"
 
 export const pageData: IPages = {
@@ -544,6 +544,7 @@ export const pageData: IPages = {
     ]
   },
   54: {
+    opponent: EOpponents.yaemon,
     sideEffects: {
       attributes: {
         hp: -8
@@ -559,6 +560,7 @@ export const pageData: IPages = {
     ]
   },
   540: {
+    opponent: EOpponents.yaemon,
     specialCondition: {
       type: "block",
       attack: "2T6",
@@ -927,6 +929,11 @@ export const pageData: IPages = {
     ]
   },
   84: {
+    sideEffects: {
+      attributes: {
+        hp: -6
+      }
+    },
     choices: [
       {
         ability: EAbilities.acrobat,
@@ -1569,6 +1576,7 @@ export const pageData: IPages = {
     ]
   },
   150: {
+    opponent: EOpponents.yaemon,
     sideEffects: {
       attributes: {
         hp: -11
@@ -1583,6 +1591,7 @@ export const pageData: IPages = {
     ]
   },
   1500: {
+    opponent: EOpponents.yaemon,
     specialCondition: {
       type: "block",
       attack: "2T6",
@@ -2237,6 +2246,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  228: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 245,
+      }, {
+        goto: 367,
+      }, {
+        goto: 266,
+      }, {
+        goto: 390,
+      }
+    ]
+  },
   231: {
     choices: [
       {
@@ -2323,6 +2346,22 @@ export const pageData: IPages = {
       }
     ]
   },
+  240: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 54
+      }, {
+        goto: 306
+      }, {
+        goto: 84
+      }, {
+        goto: 266
+      }, {
+        goto: 401
+      }
+    ]
+  },
   241: {
     opponent: EOpponents.runeweaver,
     choices: [
@@ -2350,6 +2389,11 @@ export const pageData: IPages = {
     ]
   },
   245: {
+    sideEffects: {
+      attributes: {
+        hp: -10
+      }
+    },
     opponent: EOpponents.yaemon,
     choices: [
       {
@@ -2743,6 +2787,25 @@ export const pageData: IPages = {
       }
     ]
   },
+  306: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 150
+      }, {
+        goto: 278
+      }, {
+        goto: 84
+      }, {
+        ability: EAddedAbilities.kwonsFlail,
+        goto: 240
+      }, {
+        goto: 266
+      }, {
+        goto: 401
+      }
+    ]
+  },
   307: {
     choices: [
       {
@@ -3068,6 +3131,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  350: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 266,
+      }, {
+        goto: 401,
+      }, {
+        goto: 390,
+      }
+    ]
+  },
   351: {
     choices: [
       {
@@ -3160,6 +3235,7 @@ export const pageData: IPages = {
     ]
   },
   367: {
+    opponent: EOpponents.yaemon,
     choices: [
       {
         goto: 181,
@@ -3169,6 +3245,7 @@ export const pageData: IPages = {
     ]
   },
   3670: {
+    opponent: EOpponents.yaemon,
     specialCondition: {
       type: "block",
       attack: "2T6",
@@ -3237,6 +3314,17 @@ export const pageData: IPages = {
       }
     ]
   },
+  378: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        ability: EAbilities.poisonArrows,
+        goto: 69
+      }, {
+        goto: 89
+      }
+    ]
+  },
   380: {
     choices: [
       {
@@ -3287,6 +3375,21 @@ export const pageData: IPages = {
       }, {
         criteria: false,
         goto: 311,
+      }
+    ]
+  },
+  390: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 84,
+      }, {
+        goto: 306,
+      }, {
+        goto: 278,
+      }, {
+        ability: EAddedAbilities.kwonsFlail,
+        goto: 240,
       }
     ]
   },
@@ -3445,5 +3548,8 @@ export const pageData: IPages = {
         goto: 327,
       }
     ]
+  },
+  420: {
+    endPage: true
   },
 }

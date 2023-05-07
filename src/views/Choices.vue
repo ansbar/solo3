@@ -1,7 +1,8 @@
 <script lang="ts" setup>
+  import { computed } from "vue"
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
-  import { EAbilities, EBattleStates, EDifficulty, EItems } from "@/assets/enums"
+  import { EAbilities, EAddedAbilities, EBattleStates, EDifficulty } from "@/assets/enums"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   import { IChoice } from "@/stores/pageInterfaces"
@@ -11,11 +12,11 @@
   const opponentStore = useOpponentStore()
   const pageStore = usePageStore()
   const mainStore = useMainStore()
-  const { choicesTexts, abilityTexts, itemTexts } = useTexts()
+  const { choicesTexts, abilityTexts, itemTexts, difficultyTexts } = useTexts()
   const generic = useGeneric()
 
   // Returns true if player  has the requested ability
-  const hasAbility = (ability: EAbilities) => {
+  const hasAbility = (ability: EAbilities | EAddedAbilities) => {
     if (playerStore.abilities.includes(ability))
       return true
     return false
@@ -52,10 +53,28 @@
       return false
     return !pageData[page].choices?.length
   } 
+
+  const endText = computed(() => {
+    let text = "Du har klarat av äventyret HÄMNAREN på svårighetsgrad <b>"
+    text += difficultyTexts.value[mainStore.difficulty] + "</b>.<br/>"
+
+    switch (mainStore.difficulty) {
+    case EDifficulty.medium:
+      text += "Bra gjort! Försök igen på en högre svårighetsgrad för ett mer utmanade äventyr!"
+      break
+    case EDifficulty.hard:
+      text += "Bra gjort!! Försök igen på den högsta svårighetsgraden för ett mer utmanade äventyr!"
+      break    
+    case EDifficulty.veryHard:
+      text += "Sjukt imponerande! Hur många försök krävdes det för att klara äventyret? Bara att invänta nästa bok, FÖRGÖRAREN!"
+      break
+    }
+    return text
+  })
 </script>
 
 <template>
-  <!-- Special case for opponents that has to befeated before a certain count -->
+  <!-- Special case for opponents that has to be defeated before a certain count -->
   <ul v-if="opponentStore.counter && opponentStore.counter < mainStore.battleRoundCounter">
     <li>
       <a
@@ -72,7 +91,10 @@
     v-else
     class="choices"
   >
-    <li v-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
+    <li v-if="pageStore.endPage">
+      <span v-html="endText" />
+    </li>
+    <li v-else-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
       <a
         href="#"
         class="red"

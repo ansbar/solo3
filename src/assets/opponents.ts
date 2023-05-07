@@ -566,6 +566,36 @@ const opponents: IOpponents = {
         playerDefense: [0],
         damage: [""],
         defense: [0],
+      },  
+      69: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      690: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      84: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      150: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      1500: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
       },   
       167: {
         playerAttackType: EAttackType.none,
@@ -573,6 +603,22 @@ const opponents: IOpponents = {
         damage: [""],
         defense: [0],
       },  
+      228: {
+        playerAttackType: EAttackType.instant,
+        enableInnerForce: true,
+        playerDamage: "2",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },     
+      240: {
+        playerAttackType: EAttackType.instant,
+        enableInnerForce: true,
+        playerDamage: "8",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },     
       245: {
         playerAttackType: EAttackType.none,
         playerDefense: [0],
@@ -590,6 +636,14 @@ const opponents: IOpponents = {
         playerDefense: [0],
         damage: [""],
         defense: [0],
+      },    
+      306: {
+        playerAttackType: EAttackType.instant,
+        enableInnerForce: true,
+        playerDamage: "6",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
       },    
       308: {
         playerAttackType: EAttackType.none,
@@ -614,6 +668,30 @@ const opponents: IOpponents = {
         defense: [0]
       },     
       330: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      350: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      367: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
+      3670: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },  
+      378: {
         playerAttackType: EAttackType.none,
         playerDefense: [0],
         damage: [""],

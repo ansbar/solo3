@@ -12,7 +12,7 @@
     <h1>Tigerns väg - soloäventyr</h1>
     
     <h2 class="red">
-      Beta 0.4.0
+      Beta 0.4.1
     </h2>
     <img
       :src="getImageUrl()"
@@ -31,7 +31,7 @@
     </div>
 
     <div class="text red">
-      Ungefär 55% av innehållet är portat för tillfället så det går inte att spela klart äventyret.
+      Ungefär 60% av innehållet är portat för tillfället så det går inte att spela klart äventyret.
       Om du hittar buggar, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten.
     </div>    
    

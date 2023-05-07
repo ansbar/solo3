@@ -1573,6 +1573,16 @@ export const languagePages: ILanguagePages = {
       "Om du går in i grottan"
     ]
   },
+  228: {
+    mainText: "Du faller glidande till marken, och innan Yaemon vet vad som händer lägger du dina ben runt hans, vrider vildsint till och fäller honom till golvet. Han kan inte använda sina ben för att hindra fallet ordentligt, så han slår i slottstaket med ett skrik. Han förlorar 2 KROPPSPOÄNG.",
+    stillAlive: "Annars återhämtar han sig snabbt och när du drar upp knäna till bröstet och rätar ut benen så att du smidigt kommer upp på fötter, står han framför dig. Men du har fortfarande initiativet.",
+    choices: [
+      "Använder du Draksvanskastet igen",
+      "eller Virvelkastet",
+      "eller ett slag",
+      "eller en spark"
+    ]
+  },
   231: {
     mainText: "När lejonen kastar sig fram inser du att till och med du är en enkel match för dem, naturens perfekta mördare. Folkmassan blir tyst.",
     choices: [
@@ -1624,6 +1634,17 @@ export const languagePages: ILanguagePages = {
       "Gå vidare",
     ],
     stillAlive: "Om du inte lyckas kasta honom angrips du av de av dina motståndare som är i livet. Du har 7 i försvar mot dem om tre lever, 8 om två lever och 9 om bara en fortfarande är vid liv. Var och en gör ett individuellt anfall mot dig och du kan bara blockera ett av dem. Varje anfall gör 1T6+1 i skada om de träffar"
+  },
+  240: {
+    mainText: "Du snurrar blixtsnabbt runt åt höger på vänsterfoten och slår upp med höger häl i en båge som om benet var en kedja och foten en tung metallkula. Den slår in i sidan av Yaemons ansikte med en smäll och får hans huvud att virvla runt. Kraften från slaget gör att han slungas iväg, nätt och jämnt förmögen att hålla sig på fötter. Dra 8 från hans KROPPSPOÄNG. Fördubbla det om du använde INRE KRAFT.",
+    choices: [
+      "Om du använder Kwons slaga igen",
+      "eller en Kluven blixtspark",
+      "eller Bevingade hästens spark",
+      "eller ett slag",
+      "eller ett kast"
+    ],
+    stillAlive: "Om han fortfarande, lever hoppar du med huvudet före mot honom och gör en volt i luften, så att bägge föttema slår mot honom i en ﬂygande spark. Han återhämtar sig i sista ögonblicket och får upp höger underarm över ansiktet, så att han kan fösa dina fötter åt sidan. Du landar mjukt med ryggen mot honom, handlar snabbt och slår upp med vänster fot i en båge från vänster till höger. Den här gången duckar Yaemon och när du vänder dig om för att möta honom måttar du en Tigersprångets spark mot hans ansikte. Yaemon är pressad.\nHan backar och undviker din spark med några tum. Sedan gör han en volt tillbaka, på händerna och sedan upp på fötter, och fortsätter att volta tills han är gott och väl utom räckhåll. Du följer efter honom och när han stannar är du beredd att anfalla igen."
   },
   241: {
     mainText: "Du väntar på att Runvävare ska göra ett utfall mot dig och går sedan åt sidan och försöker gripa tag i hans handled, vrida till och kasta honom över höften.",
@@ -1925,6 +1946,18 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  306: {
+    mainText: "Yaemon går fram och måttar en Tigersprångets spark mot ditt ansikte, men du stiger åt sidan och vänder dig bort från den. Yaemons spark visslar förbi din rygg när du driver upp sidan av din fot i Yaemons mage och sedan vidare upp mot huvudet på honom. Han reagerar snabbt och blockerar din första spark med underarmen, men den andra överraskar honom och träffar i ansiktet. Huvudet slås bakåt och han vacklar till, tillfälligt omtöcknad. Dra ifrån 6 av hans KROPPSPOÄNG. Fördubbla det om du använde Inre styrka.",
+    stillAlive: "Om han fortfarande lever återhämtar han sig, och du kan följa upp ditt anfall.",
+    choices: [
+      "Vill du använda en Kluven blixtspark igen",
+      "eller Tigersprångets spark",
+      "eller Bevingade hästens spark",
+      "eller Kwons slaga om du kan den",
+      "eller ett slag",
+      "eller ett kast"
+    ]
+  },
   307: {
     mainText: "Du går in på krogen Svarta svärdet. Den har ett långt utskänkningsrum med en flammande eld, till och med vid skördetiden i månaden Allmoderns prakt. Därinne sitter ungefär fyrtio män och dricker, de ﬂesta soldater. lnte en enda sjöman syns till, trots att du fortfarande är nära hamnen. Soldaterna har tagit med sina vapen in på krogen, men många har lossat på eller tagit av sig delar av rustningen i den tryckande hettan. Stanken av gammal svett är överväldigande. En man som måste väga 130 kg eller mer spatserar upp och ned utefter den långa baren, slänger upp mjödstop på disken och plockar på sig silver. Du köper ett stop och lyssnar till pratet. De ropar från bord till bord om fälttåget som de ska utkämpa mot folket i Föraningens tom. Vid ett bord sitter en särdeles högljudd man på tjugofem år eller så. Han vill ha mjöd och två av soldaterna som är med honom tar hans mugg och slåss om äran att få köpa honom ett stop. Han ignorerar det, lägger märke till dig och utmanar dig på mjödhävning. ",
     choices: [
@@ -2142,6 +2175,14 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  350: {
+    mainText: "När han ﬂyger mot dig hoppar du baklänges upp i handstående och sedan bakåt på fötter igen ﬂera gånger, tills du är utom räckvidd för Yaemons anfall. När han kommer ned byter du riktning och hoppar snabbt mot honom. Du stannar upp alldeles framför honom precis när han smidigt landar på fötterna. Du har möjlighet att anfalla.",
+    choices: [
+      "Ska du slå",
+      "eller kasta",
+      "eller sparka"
+    ]
+  },
   351: {
     mainText: "När han märker att du inte vill ta honom i handen börjar magikern mässa på en besvärjelse.",
     choices: [
@@ -2247,6 +2288,14 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om han fortfarande lever svingar han sitt svärd i en väldig båge från vänster till höger, i ett försök att sprätta upp ditt bröst. Du har 8 i Försvar mot hans vilda hugg, när du försöker hoppa bakåt"
   },
+  378: {
+    mainText: "Dina tre Shuriken ﬂyger mot Yaemons strupe, men han vänder sig åt sidan i exakt rätt ögonblick, höjer högerarmen framför bröstet och för höger hand upp och ned genom luften i en snabb rörelse. Han använder baksidan av handen och tumroten för att slå undan dina Shuriken utan att röra vid eggen och de ﬂyger ut i natten. Du är förbluffad, men inser att du måste handla innan han har slutat koncentrera sig på dina stjärnor.",
+    choices: [
+      "Använder du en Giftpil, om du har den färdigheten",
+      "eller går du till anfall i närstrid",
+    ],
+    stillAlive: "Om han fortfarande lever svingar han sitt svärd i en väldig båge från vänster till höger, i ett försök att sprätta upp ditt bröst. Du har 8 i Försvar mot hans vilda hugg, när du försöker hoppa bakåt"
+  },
   380: {
     mainText: "Pilen når fram till dig när du befinner dig mitt i luften mellan riggen och däcket, men du slår upp med handen och plockar den ur luften några centimetrar framför ditt bröst och kastar den åt sidan. Människoätaren är rasande och höjer sin spikklubba för att krossa dig.",
     choices: [
@@ -2279,6 +2328,15 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Gå vidare",
       "Gå vidare"
+    ]
+  },
+  390: {
+    mainText: "Vilken spark vill du använda?",
+    choices: [
+      "Bevingade hästens spark",
+      "Kluven blixtspark",
+      "Tigersprångets spark",
+      "Kwons slaga, om du kan den"
     ]
   },
   394: {
@@ -2376,5 +2434,8 @@ export const languagePages: ILanguagePages = {
       "Om du har någon INRE KRAFT kvar",
       "Om du inte har det"
     ]
+  },
+  420: {
+    mainText: "Yaemon faller dödligt sårad ned på det Stora Kärntornets stentak. Vinden ylar och det hörs ett blixtnedslag. Hans ansikte lyses plötsligt upp av en blixt och han ler underligt nog, lugn inför döden. Han höjer rösten över det piskande regnet: \"Du är verkligen mäktig, Skuggkrigare. Jag har kämpat mot många väldiga krigare. Din far från Människoländerna var en av dem, men jag besegrade honom, som de andra.\" Du ska just fråga honom vem din far var när han grips av en hostattack som tar hans sista andetag. Yaemon är död och du har lyckats med ditt uppdrag. Din berömmelse som Hämnaren, kommer att sprida sig över Orbs länder på fruktans vingar, för du har dödat tre så mäktiga tyranner, att de kunde hålla gudarna som gisslan. \nYaemons röda jacka, som är dränkt i regn och svett, har fallit upp så att du ser ett vaxat pergament, Kettsuinrullarna. Du ska just öppna det när du överväldigas av en underbar känsla av frid och din gud Kwons röst ljuder omkring dig. \"Gryningens Stormästare gav dig ett passande namn, Hämnare, för nu är det Yaemon och inte jag som ska försmäkta i det kokande blodets sjö i lnferno. Om du hade misslyckats hade Domens legion och Röda Syrsans munkar svept över Människoländerna med hjälp av Prästerna som dyrkar Nemesis och hela mänskligheten skulle ha levt i fruktan under de onda härskare som du har dödat.\" Dina sår är helade som genom ett under och en ny styrka fyller din kropp när guden ger dig INRE KRAFT. Du känner dig bländad och överväldigad av vad som händer och känslan av Kwons godhet fyller din själ med ljus.\n \"Det är ont om tid nu, Hämnare, för de onda gudarna rör sig än en gång mot oss. Du måste återlämna Kettsuinrullarna till deras rätta plats i Klipptemplet på de Stilla Drömmarnas O, men din färd kommer att kantas av faror. Jag ska hjälpa dig: välj en färdighet från Tigerns väg som du ännu inte behärskar, och jag ska lära dig den. Du kommer att behärska den som om du hade tränat den sedan barnsben. \" Guden fortsätter, \"Jag ska hjälpa dig, men bara en gång, när du är i stor fara. Om du verkligen behöver mig, säg bara \"Kwon, förlös mig,\" så ska jag bli din räddning. Jag kommer att vaka över dig, Hämnare, för jag hoppas att du en dag ska sälla dig till mig i Gudarnas trädgård.\"\nNär Kwons närvaro försvinner kan du inte låta bli att ropa, \"Vem var min verkliga far?\"\nDet är som om det var vinden själv som talade till dig när Kwons röst bleknar bort, \"Tiden är inte kommen än, Hämnare. \"\nDu darrar till och lägger för första gången märke till hur kallt regnet är. Kwon har försvunnit och du är ensam igen. Du hör med förskräckelse männens rop och ljudet av bepansrade fötter i Kärntornets tappa.",
   },
 }

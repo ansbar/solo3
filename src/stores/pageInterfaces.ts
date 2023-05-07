@@ -1,9 +1,10 @@
-import { EAbilities, EItems, EOpponents, EAttackType, EAttributes } from "@/assets/enums"
+import { EAbilities, EItems, EOpponents, EAttackType, EAttributes, EAddedAbilities } from "@/assets/enums"
 
 export interface IPages {
   [key: number]: IPage
 }
 export interface IPage {
+  endPage?: boolean // Last page in the book
   autoEndBattle?: boolean
   battle?: IPageBattle
   sideEffects?: IPageSidesideEffects
@@ -80,7 +81,7 @@ export interface IAttacks {
 
 export interface IChoice {
   goto: number
-  ability?: EAbilities
+  ability?: EAbilities | EAddedAbilities
   item?: EItems
   amount?: number
   attribute?: EAttributes.innerForce

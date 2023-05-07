@@ -11,7 +11,8 @@ export const usePageStore = defineStore("page", {
       choices: undefined,
       specialCondition: undefined,
       autoEndBattle: false,
-      sideEffects: undefined
+      sideEffects: undefined,
+      endPage: false
     }
   ),
   actions: {
@@ -26,6 +27,7 @@ export const usePageStore = defineStore("page", {
 
       this.opponent = payload.opponent 
       this.autoEndBattle = payload.autoEndBattle
+      this.endPage = payload.endPage
 
       if (this.sideEffects?.modifiers) {
         const modifiers = this.sideEffects.modifiers        
