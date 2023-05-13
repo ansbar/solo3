@@ -515,7 +515,128 @@ const opponents: IOpponents = {
         damage: ["2T6+1"],
         blockable: false,
         defense: [],
-      }
+      },
+      170: {
+        playerAttackType: EAttackType.instant,
+        playerDamage: "2",
+        playerDefense: [0],
+        damage: [""],
+        defense: [0]
+      },
+    }
+  },
+  firstOfTwoMonks: {
+    opponents: 1,
+    attributes: {
+      name: ["Den förste av Den Ledes präster"],
+      hpMax: [10],
+      hp: [10],
+    },
+    win: 233,
+    pages: {
+      109: {
+        playerAttackType: EAttackType.defense,
+        playerDefense: [6],
+        directDamageOnPlayer: {
+          state: EBattleStates.defend,          
+          damage: "4"
+        },
+        damage: ["2T6+1"],
+        blockable: false,
+        defense: [],
+      },
+      168: {
+        playerAttackType: EAttackType.defense,
+        playerDamage: "",
+        playerDefense: [6],
+        damage: ["1T6+2"],
+        defense: [5],
+        blockable: false,
+      },
+      250: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [7],
+        playerDamage: "1T6+2",
+        damage: ["1T6+1"],
+        blockable: true,
+        defense: [6],
+      },
+      241: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [7],
+        damage: ["1T6+2"],
+        blockable: false,
+        defense: [5],
+      },
+    }
+  },
+  secondOfTwoMonks: {
+    opponents: 1,
+    attributes: {
+      name: ["Den andre av Den Ledes präster"],
+      hpMax: [12],
+      hp: [12],
+    },
+    win: 233,
+    pages: {
+      263: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [6],
+        damage: ["1T6+1"],
+        defense: [5],
+        blockable: true,
+      },
+      250: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [7],
+        playerDamage: "1T6+2",
+        damage: ["1T6+1"],
+        blockable: true,
+        defense: [6],
+      },
+      236: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [7],
+        damage: ["1T6+2"],
+        blockable: false,
+        defense: [5],
+      },
+    }
+  },
+  torturer: {
+    opponents: 1,
+    attributes: {
+      name: ["Torteraren"],
+      hpMax: [15],
+      hp: [15],
+    },
+    win: 224,
+    pages: {
+      238: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [7],
+        damage: ["1T6"],
+        defense: [6],
+        blockable: true,
+      },
+      249: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [7],
+        playerDamage: "1T6+2",
+        damage: ["1T6+1"],
+        blockable: true,
+        defense: [5],
+      },
+      259: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [7],
+        missDamage: -2,
+        damage: ["1T6+1"],
+        blockable: false,
+        defense: [6],
+      },
     }
   },
   runeweaver: {
@@ -551,7 +672,7 @@ const opponents: IOpponents = {
         defense: [5],
       },
     }
-  },
+  },  
   yaemon: {
     opponents: 1,
     attributes: {

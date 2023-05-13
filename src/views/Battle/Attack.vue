@@ -99,7 +99,7 @@
       }
 
     } else if (opponentStore.missDamage) {
-      // In the case a static damage is applied when player fails with an attack (like page 267)
+      // In the case a static damage is applied when player fails with an attack (like page 267 and 259)
       playerStore.setPlayerAttributeHp(opponentStore.missDamage)
     }     
   }

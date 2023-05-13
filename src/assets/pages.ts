@@ -1665,21 +1665,27 @@ export const pageData: IPages = {
   156: {
     choices: [
       {
-        goto: 191,
+        item: EItems.fireLizardEssence,
+        goto: 147,
+      },{
+        goto: 132,
       }
     ]
   },
   157: {
     choices: [
       {
-        goto: 191,
+        ability: EAbilities.playDead,
+        goto: 376,
+      },{
+        goto: 103,
       }
     ]
   },
   158: {
     choices: [
       {
-        goto: 191,
+        goto: 305,
       }
     ]
   },
@@ -1697,6 +1703,11 @@ export const pageData: IPages = {
     ]
   },
   161: {
+    sideEffects: {
+      items: {
+        magicShuriken: -1
+      }
+    },
     choices: [
       {
         goto: 191,
@@ -1706,14 +1717,20 @@ export const pageData: IPages = {
   162: {
     choices: [
       {
-        goto: 191,
+        goto: 104,
+      },{
+        goto: 354,
+      },{
+        goto: 124,
       }
     ]
   },
   163: {
     choices: [
       {
-        goto: 191,
+        goto: 96,
+      },{
+        goto: 103,
       }
     ]
   },
@@ -1741,7 +1758,12 @@ export const pageData: IPages = {
   166: {
     choices: [
       {
-        goto: 191,
+        ability: EAbilities.climb,
+        goto: 392,
+      },{
+        goto: 156,
+      },{
+        goto: 402,
       }
     ]
   },
@@ -1757,9 +1779,14 @@ export const pageData: IPages = {
     ]
   },
   168: {
+    opponent: EOpponents.firstOfTwoMonks,
     choices: [
       {
-        goto: 191,
+        goto: 322,
+      },{
+        goto: 335,
+      },{
+        goto: 312,
       }
     ]
   },
@@ -1771,6 +1798,7 @@ export const pageData: IPages = {
     ]
   },
   170: {
+    opponent: EOpponents.efreti,
     choices: [
       {
         goto: 191,
@@ -1778,9 +1806,19 @@ export const pageData: IPages = {
     ]
   },
   171: {
+    specialCondition: {
+      type: "block",
+      attack: "2T6",
+      defense: 8,
+      opponent: EOpponents.priests
+    },
     choices: [
       {
-        goto: 191,
+        criteria: true,
+        goto: 163,
+      },{
+        criteria: false,
+        goto: 157,
       }
     ]
   },
@@ -1797,16 +1835,28 @@ export const pageData: IPages = {
     ]
   },
   173: {
+    specialCondition: {
+      type: "fate",
+    },
     choices: [
       {
-        goto: 191,
+        goto: 83,
+      },{
+        goto: 143,
       }
     ]
   },
   174: {
     choices: [
       {
-        goto: 191,
+        goto: 331,
+      },{
+        goto: 269,
+      },{
+        goto: 247,
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 230,
       }
     ]
   },
@@ -1838,35 +1888,39 @@ export const pageData: IPages = {
   178: {
     choices: [
       {
-        goto: 191,
+        goto: 320,
+      },{
+        goto: 148,
+      },{
+        goto: 130,
       }
     ]
   },
   179: {
     choices: [
       {
-        goto: 191,
+        goto: 145,
+      },{
+        goto: 162,
       }
     ]
   },
-  180: {
-    choices: [
-      {
-        goto: 191,
-      }
-    ]
-  },
+  180: {},
   181: {
     choices: [
       {
-        goto: 191,
+        goto: 266,
+      },{
+        goto: 390,
+      },{
+        goto: 401,
       }
     ]
   },
   182: {
     choices: [
       {
-        goto: 191,
+        goto: 135,
       }
     ]
   },
@@ -1909,7 +1963,9 @@ export const pageData: IPages = {
   185: {
     choices: [
       {
-        goto: 191,
+        goto: 168,
+      },{
+        goto: 299,
       }
     ]
   },
@@ -1944,21 +2000,25 @@ export const pageData: IPages = {
   188: {
     choices: [
       {
-        goto: 191,
+        goto: 399,
       }
     ]
   },
   189: {
     choices: [
       {
-        goto: 191,
+        goto: 320,
+      },{
+        goto: 148,
+      },{
+        goto: 130,
       }
     ]
   },
   190: {
     choices: [
       {
-        goto: 191,
+        goto: 179,
       }
     ]
   },
@@ -1999,10 +2059,19 @@ export const pageData: IPages = {
     ]
   },
   195: {
+    specialCondition: {
+      type: "attack",
+      modifier: "punch",
+      attack: "2T6",
+      defense: 5,
+      opponent: EOpponents.priests
+    },
     choices: [
       {
-        goto: 191,
-      }
+        goto: 387,
+      },{
+        goto: 407,
+      }      
     ]
   },
   196: {
@@ -2021,24 +2090,14 @@ export const pageData: IPages = {
   197: {
     choices: [
       {
-        goto: 191,
+        goto: 81,
+      },{
+        goto: 70,
       }
     ]
   },
-  198: {
-    choices: [
-      {
-        goto: 191,
-      }
-    ]
-  },
-  199: {
-    choices: [
-      {
-        goto: 191,
-      }
-    ]
-  },
+  198: {},
+  199: {},
   200: {
     choices: [
       {
@@ -2065,6 +2124,15 @@ export const pageData: IPages = {
       }
     ]
   },
+  203: {
+    choices: [
+      {
+        goto: 81,
+      },{
+        goto: 70,
+      },
+    ]
+  },
   204: {
     specialCondition: {
       type: "block",
@@ -2082,6 +2150,7 @@ export const pageData: IPages = {
       }
     ]
   },
+  205: {},
   206: {
     sideEffects: {
       items: {
@@ -2095,6 +2164,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  207: {
+    choices: [
+      {
+        ability: EAbilities.deflectArrows,
+        goto: 188,
+      },{
+        goto: 198,
+      },
+    ]
+  },
   208: {
     choices: [
       {
@@ -2106,6 +2185,7 @@ export const pageData: IPages = {
       }
     ]
   },
+  209: {},
   210: {
     choices: [
       {
@@ -2132,6 +2212,21 @@ export const pageData: IPages = {
       }
     ]
   },
+  213: {
+    choices: [
+      {
+        goto: 149,
+      },{
+        goto: 180,
+      },{
+        item: EItems.magicShuriken,
+        goto: 161,
+      },{
+        item: EItems.shuriken,
+        goto: 170,
+      },
+    ]
+  },
   214: {
     sideEffects: {
       items: {
@@ -2147,6 +2242,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  215: {
+    choices: [
+      {
+        goto: 399,
+      }
+    ]
+  },  
   216: {
     specialCondition: {
       type: "block",
@@ -2161,6 +2263,43 @@ export const pageData: IPages = {
       }, {
         criteria: false,
         goto: 85,
+      }
+    ]
+  },
+  217: {
+    choices: [
+      {
+        goto: 397,
+      }
+    ]
+  },  
+  218: {
+    choices: [
+      {
+        goto: 331,
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 230,
+      },{
+        goto: 247,
+      },{
+        goto: 2180,
+      },
+    ]
+  },  
+  2180: {
+    specialCondition: {
+      type: "attack",
+      modifier: "shuriken",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.guard
+    },
+    choices: [
+      {
+        goto: 189,
+      },{
+        goto: 199,
       }
     ]
   },
@@ -2202,9 +2341,33 @@ export const pageData: IPages = {
       }
     ]
   },
+  222: {
+    choices: [
+      {
+        goto: 289,
+      }
+    ]
+  },  
   223: {
     image: true,
+    choices: [
+      {
+        ability: EAbilities.acrobat,
+        goto: 195,
+      },{
+        goto: 171,
+      },{
+        goto: 182,
+      }
+    ]
   },
+  224: {
+    choices: [
+      {
+        goto: 270,
+      }
+    ]
+  },  
   225: {
     sideEffects: {
       attributes: {
@@ -2260,6 +2423,24 @@ export const pageData: IPages = {
       }
     ]
   },
+  229: {
+    choices: [
+      {
+        goto: 154,
+      }, {
+        goto: 130,
+      }, {
+        goto: 217,
+      }, 
+    ]
+  },  
+  230: {
+    choices: [
+      {
+        goto: 65,
+      }
+    ]
+  },  
   231: {
     choices: [
       {
@@ -2319,6 +2500,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  236: {
+    opponent: EOpponents.secondOfTwoMonks,
+    choices: [
+      {
+        goto: 264,
+      },{
+        goto: 244,
+      }
+    ]
+  },  
   237: {
     opponent: EOpponents.soldiers,
     choices: [
@@ -2329,6 +2520,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  238: {
+    opponent: EOpponents.torturer,
+    choices: [
+      {
+        goto: 249,
+      },{
+        goto: 259,
+      },{
+        goto: 238,
+      }
+    ]
+  },  
   239: {
     specialCondition: {
       type: "block",
@@ -2388,6 +2591,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  244: {
+    choices: [
+      {
+        goto: 65,
+      }
+    ]
+  },  
   245: {
     sideEffects: {
       attributes: {
@@ -2405,6 +2615,20 @@ export const pageData: IPages = {
       }
     ]
   },
+  246: {
+    choices: [
+      {
+        goto: 65,
+      }
+    ]
+  },  
+  247: {
+    choices: [
+      {
+        goto: 65,
+      }
+    ]
+  },  
   248: {
     opponent: EOpponents.soldiers,
     choices: [
@@ -2417,6 +2641,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  249: {
+    opponent: EOpponents.torturer,
+    choices: [
+      {
+        goto: 249,
+      },{
+        goto: 259,
+      },{
+        goto: 238,
+      }
+    ]
+  },  
   250: {
     opponent: EOpponents.runeweaver,
     choices: [
@@ -2509,6 +2745,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  259: {
+    opponent: EOpponents.torturer,
+    choices: [
+      {
+        goto: 249,
+      },{
+        goto: 238,
+      }
+    ]
+  },  
   260: {
     sideEffects: {
       attributes: {

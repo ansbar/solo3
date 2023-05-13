@@ -21,6 +21,8 @@ export enum EOpponents {
   piratecaptain = "piratecaptain",
   magician = "magician",
   monk = "monk",
+  firstOfTwoMonks = "firstOfTwoMonks",
+  secondOfTwoMonks = "secondOfTwoMonks",
   cobraman = "cobraman",
   snowGiant = "snowGiant",
   goblin = "goblin",
@@ -32,7 +34,8 @@ export enum EOpponents {
   yaemon = "yaemon",
   manse = "manse",
   runeweaver = "runeweaver",
-  efreti ="efreti"
+  efreti = "efreti",
+  torturer = "torturer"
 }
 
 export enum EItems {
