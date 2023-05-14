@@ -2592,9 +2592,14 @@ export const pageData: IPages = {
     ]
   },
   244: {
+    opponent: EOpponents.secondOfTwoMonks,
     choices: [
       {
-        goto: 65,
+        goto: 264,
+      },{
+        goto: 326,
+      },{
+        goto: 244,
       }
     ]
   },  

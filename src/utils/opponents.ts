@@ -15,6 +15,11 @@ export function useOpponents() {
 
   // Returns the player defense for current opponent
   const playerDefense = computed(() => opponentStore.opponents[0].playerDefense[opponentsAlive.value - 1])
+  const playerThrowDefense = computed(() => {
+    if (opponentStore.opponents[0].playerThrowDefense)
+      return opponentStore.opponents[0].playerThrowDefense[opponentsAlive.value - 1]
+    return 0
+  })
 
-  return { opponentsAlive, playerDefense }
+  return { opponentsAlive, playerDefense, playerThrowDefense }
 }

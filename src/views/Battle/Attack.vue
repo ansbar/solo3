@@ -115,17 +115,21 @@
   }
 </script>
 
+
 <template>
   <section>
     <!-- Attack text -->
     <div v-if="rollText" class="text" v-html="rollText" />
 
+
     <!-- Damage texts -->
     <div class="text" v-html="damageText" />    
+
 
     <!-- Ally texts -->
     <div v-if="rollTextAlly" class="text" v-html="rollTextAlly" />
     <div v-if="damageTextAlly" class="text" v-html="damageTextAlly" />    
+
 
     <!-- Direct win -->
     <template v-if="pageTexts.directWin && isHit">
@@ -175,7 +179,6 @@
         <button v-if="playerStore.attributes.hp > 0" @click="battle.changeState('defend')">
           Försvara dig
         </button>
-
         <a 
           v-else href="#" 
           class="red"

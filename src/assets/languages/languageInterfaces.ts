@@ -14,6 +14,7 @@ export interface ILanguagePage {
   stillAlive?: string
   successfulThrow?: string
   unsuccessfulThrow?: string
+  successfulOpponentThrow?: string
   miss?: string
   directWin?: string
 }

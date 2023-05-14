@@ -19,6 +19,7 @@ export interface Opponent {
   hp: number,
   hpMax: number,    
   playerDefense: number[],
+  playerThrowDefense?: number[],
   damage: string
   defense: number,
 }
@@ -84,6 +85,7 @@ export const useOpponentStore = defineStore("opponent", {
           hp: payload.attributes.hp[i],
           hpMax: payload.attributes.hpMax[i],
           playerDefense: payload.pages[page].playerDefense,
+          playerThrowDefense: payload.pages[page].playerThrowDefense,
           damage: payload.pages[page].damage?.[i],
           defense: payload.pages[page].defense?.[i],
         })

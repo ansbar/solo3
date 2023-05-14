@@ -1802,10 +1802,14 @@ export const languagePages: ILanguagePages = {
     ]
   },
   244: {
-    mainText: "",
+    mainText: "Den andre munken anfaller. lnnan han hinner sparka till, dansar du fram och slår till med raka fingrar under hans revben.",
     choices: [
-      "Gå vidare",
-    ]
+      "Om du fortfarande lever kan du använda Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "eller Kobraslaget igen"
+    ],
+    successfulOpponentThrow: "Han kastar dig och du ﬂyger genom luften och slår i marken med axeln före. Du rullar upp på fötter, men munken är redo och försöker sparka dig. Du har bara 6 i försvar mot det och du har inte tid att blockera.",
+    stillAlive: "Om han fortfarande lever försöker han kasta dig till marken. Ditt försvar mot Syrsans variant av Virvelkastet är 7."
   },
   245: {
     mainText: "Du kastar dig till marken och försöker fånga hans ben mellan dina för att välta honom, men han är beredd den här gången och hoppar rakt upp så att han landar på dig. Han trampar dig i mellangärdet med ett vrål, när han släpper fram sin INRE KRAFT. Dina revben knäcks som bambuspön. Du förlorar 10 KROPPSPOÄNG och han hoppar över dig och vänder sig i luften så att han landar framför ditt huvud. Om du fortfarande lever, lyckas du övervinna din smärta och slå ihop händerna, samtidigt som du tittar upp och bakåt, så att du med snabbheten och styrkan hos en björn fångar Yaemons fot när han försöker sparka igen. För ett ögonblick tror du att du har honom fast, men han genomför sin spark och skjuter ifrån med det andra benet. Han använder ditt grepp som en språngbräda och slungar hela kroppen framåt så att hans ben slits ur ditt grepp. Du drar upp knäna till bröstet och rätar ut benen, så att rörelsens kraft får dig på fötter. Du hinner precis se Yaemon vrida sig i luften för att landa framför dig igen. Du har initiativet.",

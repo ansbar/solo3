@@ -1,6 +1,7 @@
 <script lang="ts" setup>
   import { ref, onMounted, computed } from "vue"
   import { useDice } from "@/utils/dice"
+  import { useTexts } from "@/utils/texts"
   import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
   import { useOpponents } from "@/utils/opponents"
   import { EBattleStates } from "@/assets/enums"
@@ -10,13 +11,16 @@
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
-  const { playerDefense } = useOpponents()
-  const dice = useDice()
+  const { playerDefense, playerThrowDefense } = useOpponents()
+  const { pageTexts } = useTexts()  
   const generic = useGeneric()
   const battle = useBattle()
+  const dice = useDice()
+  
 
   const isHit = ref(false)
   const rollText = ref("")
+  const throwRollText = ref("")
   const directDamageText =  ref("")
   const damageText =  ref("")
   const hasBlocked = ref(false)
@@ -32,8 +36,7 @@
       directDamageText.value = battle.takeDamage(directDamageText, opponentStore.directDamageOnPlayer.damage)
 
       // If player should die during direct damage we skip the normal defence phase 
-      if (playerStore.attributes.hp > 0) 
-        defend()
+      if (playerStore.attributes.hp > 0) defend()
     } else {
       defend()    
     }
@@ -65,8 +68,26 @@
       takeDamage()
   }
 
+  const defendThrow = () => {
+    //In the rare case the opponent performs a throw we need to separate the throw from the following attack (if hit). Like in page 244.
+    if (!playerThrowDefense.value) return true // If no throw exists for the page (normally)
+    
+    const throwAttackRoll = dice.doRoll("2T6", undefined)
+    isHit.value = (throwAttackRoll > playerThrowDefense.value) ? true : false
+
+    throwRollText.value = opponent.value.name + " slår 2T6 och resultatet blir: " + throwAttackRoll + ". "
+    throwRollText.value += "Du har " + playerThrowDefense.value + " i försvar.\n"
+    throwRollText.value += "<b>" + opponent.value.name + (isHit.value ? " lyckas " : " misslyckas med att ") + " kasta dig!</b>\n"    
+    throwRollText.value += isHit.value ? pageTexts.value.successfulOpponentThrow : ""
+
+    return isHit.value
+  }
+
   // Do a player defense roll 
   const defend = () => {
+    // Skip the normal defend roll if opponent an throw happend and was unsuccesful
+    if (!defendThrow()) return
+  
     const attackRoll = dice.doRoll("2T6", undefined)
     isHit.value = (attackRoll > playerDefense.value) ? true : false
 
@@ -74,7 +95,7 @@
     rollText.value += "Du har " + playerDefense.value + " i försvar.\n"
     rollText.value += "<b>" + opponent.value.name + (isHit.value ? " träffar " : " missar ") + " dig!</b>"         
             
-    // If a hit and opponent attack isnt blockable, do damage directly
+    // If a hit and opponent attack isn't blockable, do damage directly
     if(isHit.value && (hasBlocked.value || !opponentStore.blockable))
       takeDamage()  
   }
@@ -91,6 +112,7 @@
     damageText.value += ""
     defend()
   }
+
   // If player loses a battle but is still alive
   const doLoss = () => {
     mainStore.currentPageId = opponentStore.loss as number
@@ -105,6 +127,12 @@
       v-if="directDamageText"
       class="text"
       v-html="directDamageText"
+    />
+
+    <div
+      v-if="throwRollText"
+      class="text"
+      v-html="throwRollText"
     />
     
     <div
