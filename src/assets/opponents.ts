@@ -590,11 +590,11 @@ const opponents: IOpponents = {
       },
       264: {
         playerAttackType: EAttackType.kick,
-        playerDefense: [7],
+        playerDefense: [8],
         playerDamage: "1T6+2",
-        damage: ["1T6+1"],
+        damage: ["1T6"],
         blockable: true,
-        defense: [6],
+        defense: [7],
       },
       326: {
         playerAttackType: EAttackType.throw,

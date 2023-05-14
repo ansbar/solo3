@@ -2257,7 +2257,7 @@ export const pageData: IPages = {
       modifier: "shuriken",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.guard
+      opponent: EOpponents.captain
     },
     choices: [
       {
@@ -2591,9 +2591,17 @@ export const pageData: IPages = {
     ]
   },  
   247: {
+    specialCondition: {
+      type: "attack",
+      attack: "2T6",
+      defense: 6,
+      opponent: EOpponents.captain
+    },
     choices: [
       {
-        goto: 65,
+        goto: 178,
+      },{
+        goto: 209,
       }
     ]
   },  
@@ -2713,6 +2721,15 @@ export const pageData: IPages = {
       }
     ]
   },
+  258: {
+    choices: [
+      {
+        goto: 409
+      },{
+        goto: 222
+      },
+    ]
+  },
   259: {
     opponent: EOpponents.torturer,
     choices: [
@@ -2767,6 +2784,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  264: {
+    opponent: EOpponents.secondOfTwoMonks,
+    choices: [
+      {
+        goto: 244
+      }, {
+        goto: 236
+      }, {
+        goto: 264
+      }
+    ]
+  },
   265: {
     choices: [
       {
@@ -2804,6 +2833,24 @@ export const pageData: IPages = {
       }
     ]
   },
+  269: {
+    choices: [
+      {
+        goto: 189
+      },{
+        goto: 199
+      },{
+        goto: 218
+      },
+    ]
+  },
+  270: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
   271: {
     sideEffects: {
       attributes: {
@@ -2839,6 +2886,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  274: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
   275: {
     choices: [
       {
@@ -2854,6 +2908,27 @@ export const pageData: IPages = {
         goto: 241,
       },      {
         goto: 263,
+      },
+    ]
+  },
+  277: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
+  278: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
+  279: {
+    choices: [
+      {
+        goto: 1000
       },
     ]
   },
@@ -2880,6 +2955,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  282: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
   283: {
     choices: [
       {
@@ -2897,6 +2979,13 @@ export const pageData: IPages = {
     ]
   },
   285: {},
+  286: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
   287: {},
   288: {
     choices: [
@@ -2905,11 +2994,32 @@ export const pageData: IPages = {
       }
     ]
   },
+  289: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
   290: {
     choices: [
       {
         goto: 275,
       }
+    ]
+  },
+  291: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
+  292: {
+    choices: [
+      {
+        goto: 1000
+      },
     ]
   },
   293: {
@@ -2932,6 +3042,13 @@ export const pageData: IPages = {
     ]
   },
   295: {},
+  296: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
   297: {
     sideEffects: {
       items: {
@@ -2951,6 +3068,20 @@ export const pageData: IPages = {
       {
         goto: 254
       }
+    ]
+  },
+  299: {
+    choices: [
+      {
+        goto: 1000
+      },
+    ]
+  },
+  300: {
+    choices: [
+      {
+        goto: 1000
+      },
     ]
   },
   301: {

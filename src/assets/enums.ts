@@ -35,7 +35,8 @@ export enum EOpponents {
   manse = "manse",
   runeweaver = "runeweaver",
   efreti = "efreti",
-  torturer = "torturer"
+  torturer = "torturer",
+  captain = "captain"
 }
 
 export enum EItems {
