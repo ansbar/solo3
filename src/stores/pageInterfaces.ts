@@ -1,4 +1,4 @@
-import { EAbilities, EItems, EOpponents, EAttackType, EAttributes, EAddedAbilities } from "@/assets/enums"
+import { EAbilities, EItems, EOpponents, EAttackType, EAttributes, EAddedAbilities, ECondition } from "@/assets/enums"
 
 export interface IPages {
   [key: number]: IPage
@@ -51,6 +51,9 @@ export interface IPageSidesideEffects {
   abilities?: {
     kwonsFlail?: boolean
   }
+  conditions?: {
+    hasNotVisitedSwordOfDoomTower: boolean
+  }
 }
 
 export interface IPageChoiceSpec {
@@ -84,8 +87,8 @@ export interface IChoice {
   ability?: EAbilities | EAddedAbilities
   item?: EItems
   amount?: number
-  attribute?: EAttributes.innerForce
+  attribute?: EAttributes
   abilityNegation?: boolean
-  criteria?: boolean
+  condition?: ECondition
 }
 

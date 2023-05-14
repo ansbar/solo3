@@ -1,4 +1,4 @@
-import { EAbilities, EAddedAbilities, EAttributes, EItems, EOpponents } from "./enums"
+import { EAbilities, EAddedAbilities, EAttributes, ECondition, EItems, EOpponents } from "./enums"
 import { IPages } from "@/stores/pageInterfaces"
 
 export const pageData: IPages = {
@@ -145,10 +145,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 417,
       }, {
-        criteria: false,
         goto: 404,
       }
     ]
@@ -334,10 +332,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 382,
       }, {
-        criteria: false,
         goto: 64,
       }
     ]
@@ -382,10 +378,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 18,
       }, {
-        criteria: false,
         goto: 28,
       }
     ]
@@ -521,10 +515,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 378,
       }, {
-        criteria: false,
         goto: 40,
       }
     ]
@@ -569,10 +561,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 378,
       }, {
-        criteria: false,
         goto: 40,
       }
     ]
@@ -605,10 +595,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 3,
       }, {
-        criteria: false,
         goto: 64,
       }
     ]
@@ -733,10 +721,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 411,
       }, {
-        criteria: false,
         goto: 24,
       }
     ]
@@ -783,10 +769,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 49,
       }, {
-        criteria: false,
         goto: 60,
       }
     ]
@@ -821,10 +805,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 94,
       }, {
-        criteria: false,
         goto: 125,
       }
     ]
@@ -878,10 +860,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 292,
       }, {
-        criteria: false,
         goto: 365,
       }
     ]
@@ -1390,10 +1370,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 120,
       }, {
-        criteria: false,
         goto: 108,
       }
     ]
@@ -1462,10 +1440,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 164,
       }, {
-        criteria: false,
         goto: 175,
       }
     ]
@@ -1600,10 +1576,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 18,
       }, {
-        criteria: false,
         goto: 308,
       }
     ]
@@ -1814,10 +1788,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 163,
       },{
-        criteria: false,
         goto: 157,
       }
     ]
@@ -1952,10 +1924,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 184,
       }, {
-        criteria: false,
         goto: 146,
       }
     ]
@@ -1989,10 +1959,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 127,
       }, {
-        criteria: false,
         goto: 142,
       }
     ]
@@ -2142,10 +2110,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 406,
       }, {
-        criteria: false,
         goto: 85,
       }
     ]
@@ -2258,10 +2224,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 406,
       }, {
-        criteria: false,
         goto: 85,
       }
     ]
@@ -2392,10 +2356,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 406,
       }, {
-        criteria: false,
         goto: 85,
       }
     ]
@@ -2541,10 +2503,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 165,
       }, {
-        criteria: false,
         goto: 152,
       }
     ]
@@ -2623,7 +2583,10 @@ export const pageData: IPages = {
   246: {
     choices: [
       {
-        goto: 65,
+        condition: ECondition.hasNotVisitedSwordOfDoomTower,
+        goto: 339,
+      },{
+        goto: 370,
       }
     ]
   },  
@@ -3005,10 +2968,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 411,
       }, {
-        criteria: false,
         goto: 24,
       }
     ]
@@ -3112,10 +3073,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 227,
       }, {
-        criteria: false,
         goto: 3150,
       }
     ]
@@ -3206,10 +3165,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 253,
       }, {
-        criteria: false,
         goto: 311,
       }
     ]
@@ -3410,10 +3367,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 107,
       }, {
-        criteria: false,
         goto: 97,
       }
     ]
@@ -3505,10 +3460,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 118,
       }, {
-        criteria: false,
         goto: 308,
       }
     ]
@@ -3621,10 +3574,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 338,
       }, {
-        criteria: false,
         goto: 311,
       }
     ]
@@ -3661,10 +3612,8 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        criteria: true,
         goto: 384,
       }, {
-        criteria: false,
         goto: 403,
       }
     ]

@@ -1820,9 +1820,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   246: {
-    mainText: "",
+    mainText: "Du är immun mot kobrans dödliga gift, men inte mot magin som höll den fången i Ormstaven. Dess käftar sluter sig obevekligt om din hals och du sliter förtvivlat när tändema närmar sig halspulsådern. l desperation sliter du loss ormhuvudet från din hals. Du krossar hjärnan på den och sargar dig själv svårt. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever förbinder du halsen med hjälp av en bit tyg från din dräkt och hämtar andan innan du bestämmer dig för vilket tom du ska gå in i härnäst.",
     choices: [
-      "Gå vidare",
+      "Du kan välja tornet som kröns av Domsvärdets banér, om du inte redan har varit där",
+      "eller tornet som ståtar med Röda Syrsans flagga"
     ]
   },
   247: {

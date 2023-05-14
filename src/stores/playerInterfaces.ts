@@ -1,5 +1,14 @@
 import { EAbilities, EAddedAbilities } from "@/assets/enums"
 
+export interface Player {
+  abilities: Array<EAbilities | EAddedAbilities>
+  items: Player_items
+  modifiers: Player_modifiers
+  attributes: Player_attributes
+  conditions: Player_conditions
+  temporary: Player_temporary
+}
+
 interface Player_items {
   gold: number
   shuriken: number
@@ -33,10 +42,6 @@ interface Player_temporary {
   damageModifier: number
 }
 
-export interface Player {
-  abilities: Array<EAbilities | EAddedAbilities>
-  items: Player_items
-  modifiers: Player_modifiers
-  attributes: Player_attributes
-  temporary: Player_temporary
+interface Player_conditions {
+  hasNotVisitedSwordOfDoomTower: boolean
 }

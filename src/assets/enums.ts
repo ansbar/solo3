@@ -99,3 +99,7 @@ export enum EDifficulty {
   hard = "hard",
   medium = "medium",
 }
+
+export enum ECondition {
+  hasNotVisitedSwordOfDoomTower = "hasNotVisitedSwordOfDoomTower"
+}

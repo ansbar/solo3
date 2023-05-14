@@ -39,6 +39,8 @@
       return playerStore.items[choice.item] >= (choice.amount || 1)
     } else if (choice.attribute) {
       return playerStore.attributes[choice.attribute] >= (choice.amount || 1)
+    }  else if (choice.condition) {
+      return playerStore.conditions[choice.condition]
     } 
     return true
   }
@@ -66,7 +68,7 @@
       text += "Bra gjort!! Försök igen på den högsta svårighetsgraden för ett mer utmanade äventyr!"
       break    
     case EDifficulty.veryHard:
-      text += "Sjukt imponerande! Hur många försök krävdes det för att klara äventyret? Bara att invänta nästa bok, FÖRGÖRAREN!"
+      text += "Djupt imponerande! Hur många försök krävdes det för att klara äventyret? Bara att invänta nästa bok, FÖRGÖRAREN!"
       break
     }
     return text

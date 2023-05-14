@@ -1,7 +1,7 @@
 import { defineStore } from "pinia"
 import { IPage } from "./pageInterfaces"
 import { usePlayerStore } from "./playerStore"
-import { EAddedAbilities, EItems } from "@/assets/enums"
+import { EAddedAbilities, ECondition, EItems } from "@/assets/enums"
 
 export const usePageStore = defineStore("page", {
   state: (): IPage => (
@@ -41,6 +41,11 @@ export const usePageStore = defineStore("page", {
         const temporary = this.sideEffects.temporary        
         if (temporary.attack) playerStore.setTemporaryAttackModifier(temporary.attack)    
         if (temporary.damage) playerStore.setTemporaryAttackModifier(temporary.damage)       
+      }
+
+      if (this.sideEffects?.conditions) {
+        const c = this.sideEffects.conditions     
+        if (c.hasNotVisitedSwordOfDoomTower) playerStore.toggleCondition({ condition: ECondition.hasNotVisitedSwordOfDoomTower, state: false})      
       }
       
       if (this.sideEffects?.items) {        

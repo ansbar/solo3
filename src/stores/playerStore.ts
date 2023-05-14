@@ -1,5 +1,5 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAddedAbilities, EItems } from "@/assets/enums"
+import { EAbilities, EAddedAbilities, ECondition, EItems } from "@/assets/enums"
 import { type Player } from "./playerInterfaces"
 import { useMainStore } from "./mainStore"
 
@@ -30,6 +30,9 @@ export const usePlayerStore = defineStore("player", {
       innerForce: 5,
       innerForceMax: 5
     },
+    conditions: {
+      hasNotVisitedSwordOfDoomTower: true,
+    },
     temporary: {
       useInnerForce: null,
       attackModifier: 0,
@@ -43,6 +46,10 @@ export const usePlayerStore = defineStore("player", {
     },
     removePlayerAbility (payload: number) {
       this.abilities.splice(payload, 1)
+    },
+    // Conditions
+    toggleCondition (payload: { condition: ECondition, state: boolean}) {
+      this.conditions[payload.condition] = payload.state
     },
     // Items
     setPlayerItem (payload: {item: EItems, amount: number }){

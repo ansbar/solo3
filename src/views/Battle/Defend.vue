@@ -82,9 +82,9 @@
 
     return isHit.value
   }
-
-  // Do a player defense roll 
+  
   const defend = () => {
+    // Do a player defense roll 
     // Skip the normal defend roll if opponent an throw happend and was unsuccesful
     if (!defendThrow()) return
   
