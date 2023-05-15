@@ -104,8 +104,8 @@
     }     
   }
 
-  const doWin = () => {
-    mainStore.currentPageId = opponentStore.win
+  const handleWin = (pageId: number) => {
+    mainStore.currentPageId = pageId
     mainStore.battlestate = EBattleStates.none
   }
 
@@ -136,7 +136,7 @@
       <div class="text">
         {{ pageTexts.directWin }}
       </div>
-      <a href="#" @click="generic.gotoPage(opponentStore.directWin as number)">
+      <a href="#" @click="handleWin(opponentStore.directWin as number)">
         Gå vidare
       </a>     
     </template>
@@ -165,7 +165,7 @@
 
       <!-- If special skip defend phase at hit (go to special page) -->
       <template v-else-if="isHit && opponentStore.miss">
-        <button v-if="!opponentsAlive" @click="doWin">
+        <button v-if="!opponentsAlive" @click="handleWin(opponentStore.win)">
           Gå vidare
         </button>
         <button v-else @click="battle.changeState('pending')">
@@ -195,7 +195,7 @@
           <b>{{ opponent.name }} är besegrad</b>
         </div>
         
-        <button v-if="!opponentsAlive" @click="doWin">
+        <button v-if="!opponentsAlive" @click="handleWin(opponentStore.win)">
           Gå vidare
         </button>
         <button v-else @click="battle.changeState('defend')">

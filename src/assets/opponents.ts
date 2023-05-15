@@ -156,7 +156,7 @@ const opponents: IOpponents = {
         playerAttackType: EAttackType.punch,
         playerDamage: "1T6",
         playerDefense: [8],
-        damage: ["2T6"],
+        damage: ["2T6+1"],
         defense: [3],
         blockable: false,
       },
