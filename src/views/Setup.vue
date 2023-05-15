@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { computed, ref, watch } from "vue"
+  import { computed, ref, watch, onMounted } from "vue"
   import { useMainStore, usePlayerStore } from "@/stores"
   import { EAbilities, EDifficulty } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
@@ -18,17 +18,18 @@
 
   // Returns true if player has the requested ability
   const hasAbility = (ability: EAbilities) => playerStore.abilities.includes(ability)
-
   const isAllAbilitiesChosen = computed(() => playerAbilities.value.length >= mainStore.numberOfAbilities)
+  const startGame = () => mainStore.setCurrentPageId(1)
 
   watch(difficultyChoice, (value) => {
     mainStore.setDifficulty(value as EDifficulty)
-  })
+  })  
 
-  const startGame = () => {
-    playerStore.setPlayerAttributeHp(20)
-    mainStore.setCurrentPageId(1)
-  }
+  onMounted(() => {
+    //Reset all player values
+    playerStore.initPlayer()
+    mainStore.setDifficulty(EDifficulty.veryHard)
+  })
 </script>
 
 <template>
@@ -36,7 +37,7 @@
     <h1>Skapa din karaktär</h1>    
     <h2>Välj svårighetsgrad</h2>
     <div class="card">
-      <div class="first-col thin">
+      <div>
         <select v-model="difficultyChoice">
           <option
             v-for="(difficulty, index) in EDifficulty"
@@ -46,8 +47,7 @@
             {{ difficultyTexts[difficulty] }}
           </option>
         </select>
-      </div>
-      <div class="second-col">
+        <hr>
         <div
           class="text"
           v-html="difficultyHelpTexts[mainStore.difficulty]"
@@ -111,3 +111,10 @@
     </div>
   </div>
 </template>
+
+
+<style lang="scss">
+  .card select {
+    margin-bottom: 0.6rem
+  }
+</style>
