@@ -11,7 +11,7 @@
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
-  const { playerDefense, playerThrowDefense } = useOpponents()
+  const { playerDefense, playerThrowDefense, firstOpponentAlive } = useOpponents()
   const { pageTexts } = useTexts()  
   const generic = useGeneric()
   const battle = useBattle()
@@ -29,7 +29,7 @@
 
   onMounted(() => {    
     // Get data for first opponent alive
-    currentAttackingOpponent.value = battle.firstOpponentAlive(0) as number
+    currentAttackingOpponent.value = firstOpponentAlive(0) as number
 
     // In the rare case damage is applied when player attacks but attack phase is skipped (like page 109)
     if (opponentStore.directDamageOnPlayer?.state === EBattleStates.defend && !opponentStore.directDamageOnPlayer.onlyOnHit){
@@ -108,7 +108,7 @@
 
   // Determines and sets the next attacker in a multiple opponent attack
   const setNextAttacker = () => {
-    currentAttackingOpponent.value = battle.firstOpponentAlive(currentAttackingOpponent.value + 1) as number
+    currentAttackingOpponent.value = firstOpponentAlive(currentAttackingOpponent.value + 1) as number
     damageText.value += ""
     defend()
   }
@@ -172,7 +172,7 @@
       />        
 
       <button
-        v-if="playerStore.attributes.hp > 0 && !battle.firstOpponentAlive(currentAttackingOpponent + 1)"
+        v-if="playerStore.attributes.hp > 0 && !firstOpponentAlive(currentAttackingOpponent + 1)"
         @click="battle.changeState('pending')"
       >
         Nästa runda

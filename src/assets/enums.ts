@@ -23,6 +23,7 @@ export enum EOpponents {
   monk = "monk",
   firstOfTwoMonks = "firstOfTwoMonks",
   secondOfTwoMonks = "secondOfTwoMonks",
+  monks = "monks",
   cobraman = "cobraman",
   snowGiant = "snowGiant",
   goblin = "goblin",

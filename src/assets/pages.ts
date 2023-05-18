@@ -2847,7 +2847,10 @@ export const pageData: IPages = {
   270: {
     choices: [
       {
-        goto: 1000
+        ability: EAbilities.lockPicker,
+        goto: 215
+      },{
+        goto: 207
       },
     ]
   },
@@ -2886,13 +2889,7 @@ export const pageData: IPages = {
       }
     ]
   },
-  274: {
-    choices: [
-      {
-        goto: 1000
-      },
-    ]
-  },
+  274: {},
   275: {
     choices: [
       {
@@ -2914,21 +2911,37 @@ export const pageData: IPages = {
   277: {
     choices: [
       {
-        goto: 1000
+        goto: 174
+      },{
+        goto: 2
       },
     ]
   },
   278: {
+    opponent: EOpponents.yaemon,
     choices: [
       {
-        goto: 1000
+        goto: 84
+      },{
+        ability: EAddedAbilities.kwonsFlail,
+        goto: 240
+      },{
+        goto: 266
+      },{
+        goto: 401
+      },{
+        goto: 306
       },
     ]
   },
   279: {
     choices: [
       {
-        goto: 1000
+        goto: 236
+      },{
+        goto: 244
+      },{
+        goto: 264
       },
     ]
   },
@@ -2958,7 +2971,7 @@ export const pageData: IPages = {
   282: {
     choices: [
       {
-        goto: 1000
+        goto: 270
       },
     ]
   },
@@ -2980,9 +2993,12 @@ export const pageData: IPages = {
   },
   285: {},
   286: {
+    opponent: EOpponents.monks,
     choices: [
       {
-        goto: 1000
+        goto: 353
+      },{
+        goto: 374
       },
     ]
   },
@@ -3504,6 +3520,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  353: {
+    opponent: EOpponents.monks,
+    choices: [
+      {
+        goto: 374
+      },{
+        goto: 286
+      },
+    ]
+  },
   357: {
     choices: [
       {
@@ -3623,6 +3649,16 @@ export const pageData: IPages = {
       }, {
         goto: 351,
       }
+    ]
+  },
+  374: {
+    opponent: EOpponents.monks,
+    choices: [
+      {
+        goto: 374
+      },{
+        goto: 286
+      },
     ]
   },
   375: {

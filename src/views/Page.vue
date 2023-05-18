@@ -31,7 +31,7 @@
       // Init opponent data once per battle
       if (battlestate.value === "none") {       
         mainStore.clearHistory()
-        opponentStore.setOpponentStaticData(opponent[pageStore.opponent], currentPageId.value)          
+        opponentStore.setOpponentStaticData(opponent[pageStore.opponent])          
       }
 
       // Set opponent page data every page switch

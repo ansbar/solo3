@@ -110,20 +110,5 @@ export function useBattle() {
   }
 
 
-  const firstOpponentAlive = (opponentIndex: number) => {
-    /* Returns the index of the first opponent alive
-     * It is used for:
-     * - check the first opponent alive at mounted (start of defense phase)
-     * - check if there are any opponents alive to attack (when deciding which button to show; next opponent or next round)
-     * - check which opponent is the next current attacker (needed when an opponent in the middle is dead) */
-    
-    for (let i = opponentIndex; i < opponentStore.opponents.length; i++) {      
-      if (opponentStore.opponents[i].hp > 0) {
-        return i
-      }   
-    }
-    return false
-  }
-
-  return { takeDamage, dealDamage, calculateAttackModifier, changeState, firstOpponentAlive,  }
+  return { takeDamage, dealDamage, calculateAttackModifier, changeState,  }
 }

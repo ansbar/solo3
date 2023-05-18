@@ -6,7 +6,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Gorobei"],
-      hpMax: [14],
       hp: [14],
     },
     win: 110,
@@ -34,7 +33,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Människoätaren"],
-      hpMax: [16],
       hp: [16],
     },
     win: 360,
@@ -65,9 +63,9 @@ const opponents: IOpponents = {
       345: {
         playerAttackType: EAttackType.throw,
         playerDefense: [7],
-        playerDamage: "1T6",
         damage: ["2T6"],
         blockable: false,
+        attackModification: 2,
         defense: [8],
       },
     }
@@ -76,7 +74,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Sjörövarkapten"],
-      hpMax: [12],
       hp: [12],
       counter: 4,
       counterGoto: 45,
@@ -113,7 +110,6 @@ const opponents: IOpponents = {
     opponents: 3,
     attributes: {
       name: ["Ung kapten", "1:a soldaten", "2:a soldaten"],
-      hpMax: [12, 9, 10],
       hp: [12, 9, 10],
     },
     win: 268,
@@ -147,7 +143,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Tvåhövdad jätte"],
-      hpMax: [25],
       hp: [25],
     },
     win: 336,
@@ -174,7 +169,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Snöjätten"],
-      hpMax: [22],
       hp: [22]
     },
     win: 111,
@@ -217,7 +211,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Kobramannen"],
-      hpMax: [10],
       hp: [10],
       missAbility: EAbilities.immunity
     },
@@ -252,7 +245,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Vätten"],
-      hpMax: [18],
       hp: [18]
     },
     win: 272,
@@ -288,7 +280,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Olvar Barbaren"],
-      hpMax: [18],
       hp: [18],
     },
     win: 47,
@@ -385,7 +376,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Olvar Barbaren"],
-      hpMax: [18],
       hp: [18],
     },
     win: 344,
@@ -440,8 +430,7 @@ const opponents: IOpponents = {
     opponents: 3,
     attributes: {
       name: ["1:a prästen", "2:a prästen", "3:e prästen"],
-      hpMax: [12, 14, 13],
-      hp: [12, 14, 13], // Todo, behövs den här raden verkligen
+      hp: [12, 14, 13], 
     },
     win: 55,
     pages: {
@@ -474,7 +463,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Efreti"],
-      hpMax: [22],
       hp: [22],
     },
     win: 197,
@@ -529,22 +517,10 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Den förste av Den Ledes präster"],
-      hpMax: [10],
-      hp: [10],
+      hp: [16],
     },
-    win: 233,
+    win: 279,
     pages: {
-      109: {
-        playerAttackType: EAttackType.defense,
-        playerDefense: [6],
-        directDamageOnPlayer: {
-          state: EBattleStates.defend,          
-          damage: "4"
-        },
-        damage: ["2T6+1"],
-        blockable: false,
-        defense: [],
-      },
       168: {
         playerAttackType: EAttackType.defense,
         playerDamage: "",
@@ -553,20 +529,29 @@ const opponents: IOpponents = {
         defense: [5],
         blockable: false,
       },
-      250: {
+      335: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
         playerDamage: "1T6+2",
         damage: ["1T6+1"],
-        blockable: true,
+        blockable: false,
         defense: [6],
       },
-      241: {
+      312: {
         playerAttackType: EAttackType.throw,
-        playerDefense: [7],
-        damage: ["1T6+2"],
+        playerDefense: [6],
+        damage: ["1T6+1"],
         blockable: false,
-        defense: [5],
+        defense: [6],
+      },
+      322: {
+        playerAttackType: EAttackType.punch,
+        playerDamage: "1T6",
+        playerDefense: [6],
+        damage: ["1T6"],
+        defense: [6],
+        playerThrowDefense: [7],
+        blockable: false,
       },
     }
   },
@@ -574,7 +559,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Den andre av Den Ledes präster"],
-      hpMax: [12],
       hp: [12],
     },
     win: 258,
@@ -596,12 +580,13 @@ const opponents: IOpponents = {
         blockable: true,
         defense: [7],
       },
-      326: {
+      236: {
         playerAttackType: EAttackType.throw,
         playerDefense: [7],
         damage: ["1T6+2"],
         blockable: false,
-        defense: [5],
+        defense: [6],
+        firstAttackBonus: 1
       },
     }
   },
@@ -609,7 +594,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Torteraren"],
-      hpMax: [15],
       hp: [15],
     },
     win: 224,
@@ -644,7 +628,6 @@ const opponents: IOpponents = {
     opponents: 1,
     attributes: {
       name: ["Runvävaren"],
-      hpMax: [10],
       hp: [10],
     },
     win: 233,
@@ -674,11 +657,43 @@ const opponents: IOpponents = {
       },
     }
   },  
+  monks: {
+    opponents: 2,
+    attributes: {
+      name: ["1:a munken", "2:a munken"],
+      hp: [14, 13],
+    },
+    win: 324,
+    pages: {
+      286: {
+        playerAttackType: EAttackType.throw,
+        playerDefense: [7, 5],
+        blockable: true,
+        damage: ["1T6+1", "1T6+1"],
+        defense: [5, 5],
+      },
+      353: {
+        playerAttackType: EAttackType.punch,
+        playerDefense: [8, 6],
+        playerDamage: "1T6",
+        blockable: true,
+        damage: ["1T6+1", "1T6+1"],
+        defense: [7, 7],
+      },
+      374: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [8, 6],
+        playerDamage: "1T6",
+        blockable: true,
+        damage: ["1T6+3", "1T6+1", "1T6+1"],
+        defense: [6, 7],
+      }
+    }
+  },
   yaemon: {
     opponents: 1,
     attributes: {
       name: ["Yaemon"],
-      hpMax: [20],
       hp: [20],
     },
     win: 420,
@@ -752,7 +767,13 @@ const opponents: IOpponents = {
         playerDefense: [0],
         damage: [""],
         defense: [0],
-      },    
+      },
+      278: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },   
       301: {
         playerAttackType: EAttackType.none,
         playerDefense: [0],

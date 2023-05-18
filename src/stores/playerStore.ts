@@ -41,20 +41,21 @@ export const usePlayerStore = defineStore("player", {
   }),
   actions: {
     initPlayer () {
-      this.items.flashPowder = 1
-      this.items.gold = 0
-      this.items.opalring = 0
-      this.items.healingPotion = 0
-      this.items.glove = 0
-      this.items.magicShuriken = 0
-      this.items.fireLizardEssence = 0
-      this.items.herbs = 0
-      this.items.amulet = 0
-      this.attributes.hp = 20
-      this.conditions.hasNotVisitedSwordOfDoomTower = true
-      this.temporary.useInnerForce = null
-      this.temporary.attackModifier = 0
-      this.temporary.damageModifier = 0
+      this.$reset() 
+      // this.items.flashPowder = 1
+      // this.items.gold = 0
+      // this.items.opalring = 0
+      // this.items.healingPotion = 0
+      // this.items.glove = 0
+      // this.items.magicShuriken = 0
+      // this.items.fireLizardEssence = 0
+      // this.items.herbs = 0
+      // this.items.amulet = 0
+      // this.attributes.hp = 20
+      // this.conditions.hasNotVisitedSwordOfDoomTower = true
+      // this.temporary.useInnerForce = null
+      // this.temporary.attackModifier = 0
+      // this.temporary.damageModifier = 0
     },
     // Abilities
     addPlayerAbility (payload: EAbilities | EAddedAbilities) {

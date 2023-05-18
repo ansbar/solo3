@@ -22,6 +22,7 @@ export interface Opponent {
   playerThrowDefense?: number[],
   damage: string
   defense: number,
+  attackModification?: number
 }
 
 interface StoreOpponent {
@@ -67,9 +68,11 @@ export const useOpponentStore = defineStore("opponent", {
     directWin: 0
   }),
   actions: {
-    setOpponentStaticData(payload: IOpponent, page: number) {
+    setOpponentStaticData(payload: IOpponent) {
       // This is set once per battle (static data)
-      this.$reset() // Reset opponent state when new opponent     
+
+      // Reset opponent state when new opponent
+      this.$reset() 
 
       this.$patch({
         counter: payload.attributes.counter,
@@ -83,11 +86,12 @@ export const useOpponentStore = defineStore("opponent", {
         this.opponents.push({
           name: payload.attributes.name[i],
           hp: payload.attributes.hp[i],
-          hpMax: payload.attributes.hpMax[i],
-          playerDefense: payload.pages[page].playerDefense,
-          playerThrowDefense: payload.pages[page].playerThrowDefense,
-          damage: payload.pages[page].damage?.[i],
-          defense: payload.pages[page].defense?.[i],
+          hpMax: payload.attributes.hp[i],
+          // Just to initalize opponent, these datas will be set in setOpponentPageData
+          playerDefense: [0],
+          playerThrowDefense: [0],
+          damage: "",
+          defense: 0
         })
       }
     },
@@ -110,8 +114,10 @@ export const useOpponentStore = defineStore("opponent", {
 
       for (let i = 0; i < this.opponents.length; i++) {
         this.opponents[i].playerDefense = payload.playerDefense
+        this.opponents[i].playerThrowDefense = payload.playerThrowDefense,
         this.opponents[i].damage = payload.damage?.[i]
         this.opponents[i].defense = payload.defense?.[i]
+        this.opponents[i].attackModification = payload.attackModification
       }
     },
     setOpponentHp (index: number, payload: number) {

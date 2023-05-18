@@ -1614,7 +1614,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   219: {
-    mainText: "Sjöbrisen för med sig saltstänk från havet när du travar fram längs Stjärnhavets östkust. För att spara tid bestämmer du dig för att simma över den smala östra spetsen av det stjärnformade havet. Det kalla vattnet är uppfriskande. Till slut kommer du fram till de stenlagda gatorna i staden Druath Glennan. Husen är höga och smala, byggda av mörkt tegel, förutom träbalkongerna som nästan nuddar vid varandra och gör gatorna mörka och dystra. Du är glad över att ha förklätt dig till sjöman, eftersom vakterna uppenbarligen får sin lön av munkarna som dyrkar den Lede. Deras kloster med sina röda fönsterluckor, ligger utefter ena sidan av Gudamas torg, mitt emot ett tempel till Allmodern. Du lägger märke till ett fattighus på en av de sjaskiga sidogatorna, förklär dig till tiggare och sällar dig till fyllbultarna där som får hjälp av Allmoderns prästinnor. Du planerar att rekognoscera i den Ledes tempel i hopp om att hitta Yaemon där, när du hör en av tiggarna berätta om hur han blev av med sin arm. Han har ett varigt och blodigt bandage löst hängande från axeln. Det verkar som om han en gång var sopare i klostret, men han slängdes ut eftersom han söp. Han hörde genom omvägar att Yaemon, Flammans Stormästare, besökte klostret och han beslutade sig dåraktigt nog för att kasta sig framför ärkemunken och be att få tillbaka sitt jobb. Yaemon tog underligt nog emot honom, men han talade hånfullt om för honom att till och med rännstenen var en alltför bra plats för honom. Han hade en vän med sig, \"med ondskefullt utseende och ett ondskefullt hjärta. Han hade de mest fasansfulla, själlösa, röda ögon... Manse Dödsmagikern kallade de honom. Hur som helst. Bara för skojs skull sade han att han skulle straffa mig, och innan jag visste vad som hade hänt ramlade min arm av. Jag skulle ha förblött om det inte var för prästinnorna.\"\nHan får inte mycket sympati. En av dem, med sluddrande röst, frågar vad han väntar sig om han beblandar sig med Yaemon, Flammans Stormästare, och Dödsmagikern, den mäktigaste trollkarlen på Orb. Du får veta av deras samtal att Yaemon har väntat med Honoric, ledaren för Domsvärdslegionen, på att Manse Dödsmagikern skulle ansluta sig till dem i Druath Glennan. Nu har de gett sig av mot det slott som kallas Fruktans borg, i närheten av Vättetandsbergen. Eftersom det är sent bestämmer du dig för att stanna i fattighuset och ge dig av följande morgon. \nDu vaknar mitt i nattet av lukten av sur rök. Rummet som du sover i har fattat eld och lågorna blockerar dörröppningen och fyller hallen utanför. Det finns inga fönster att fly genom. Rummet fylls med rök.",
+    mainText: "Sjöbrisen för med sig saltstänk från havet när du travar fram längs Stjärnhavets östkust. För att spara tid bestämmer du dig för att simma över den smala östra spetsen av det stjärnformade havet. Det kalla vattnet är uppfriskande. Till slut kommer du fram till de stenlagda gatorna i staden Druath Glennan. Husen är höga och smala, byggda av mörkt tegel, förutom träbalkongerna som nästan nuddar vid varandra och gör gatorna mörka och dystra. Du är glad över att ha förklätt dig till sjöman, eftersom vakterna uppenbarligen får sin lön av munkarna som dyrkar den Lede. Deras kloster med sina röda fönsterluckor, ligger utefter ena sidan av Gudarnas torg, mitt emot ett tempel till Allmodern. Du lägger märke till ett fattighus på en av de sjaskiga sidogatorna, förklär dig till tiggare och sällar dig till fyllbultarna där som får hjälp av Allmoderns prästinnor. Du planerar att rekognoscera i den Ledes tempel i hopp om att hitta Yaemon där, när du hör en av tiggarna berätta om hur han blev av med sin arm. Han har ett varigt och blodigt bandage löst hängande från axeln. Det verkar som om han en gång var sopare i klostret, men han slängdes ut eftersom han söp. Han hörde genom omvägar att Yaemon, Flammans Stormästare, besökte klostret och han beslutade sig dåraktigt nog för att kasta sig framför ärkemunken och be att få tillbaka sitt jobb. Yaemon tog underligt nog emot honom, men han talade hånfullt om för honom att till och med rännstenen var en alltför bra plats för honom. Han hade en vän med sig, \"med ondskefullt utseende och ett ondskefullt hjärta. Han hade de mest fasansfulla, själlösa, röda ögon... Manse Dödsmagikern kallade de honom. Hur som helst. Bara för skojs skull sade han att han skulle straffa mig, och innan jag visste vad som hade hänt ramlade min arm av. Jag skulle ha förblött om det inte var för prästinnorna.\"\nHan får inte mycket sympati. En av dem, med sluddrande röst, frågar vad han väntar sig om han beblandar sig med Yaemon, Flammans Stormästare, och Dödsmagikern, den mäktigaste trollkarlen på Orb. Du får veta av deras samtal att Yaemon har väntat med Honoric, ledaren för Domsvärdslegionen, på att Manse Dödsmagikern skulle ansluta sig till dem i Druath Glennan. Nu har de gett sig av mot det slott som kallas Fruktans borg, i närheten av Vättetandsbergen. Eftersom det är sent bestämmer du dig för att stanna i fattighuset och ge dig av följande morgon. \nDu vaknar mitt i nattet av lukten av sur rök. Rummet som du sover i har fattat eld och lågorna blockerar dörröppningen och fyller hallen utanför. Det finns inga fönster att fly genom. Rummet fylls med rök.",
     choices: [
       "Om du hoppar genom den täta väggen av eldslågor",
       "Om du sliter loss golvplankoma",
@@ -2008,9 +2008,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   270: {
-    mainText: "",
+    mainText: "En brant trappa vindlar sig uppåt från tortyrkammaren, förbi tomma fångceller. Du kommer ut i en hall i det Stora Kärntornet. En spiraltrappa leder upp från motsatta sidan av hallen.",
     choices: [
       "Gå vidare",
+      "Gå vidare"
     ]
   },
   271: {
@@ -2034,10 +2035,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   274: {
-    mainText: "",
-    choices: [
-      "Gå vidare",
-    ]
+    mainText: "Dörren glider lätt upp på de oljade gångjämen och du smyger tyst in i kammaren. Du känner en skugga av fruktan som utstrålar från Honorics svärd, Sorcerak, som plötsligt uttalar hans namn. Han vaknar otroligt nog omedelbart och rullar ned från den bortre sidan av sängen, samtidigt som han griper om sitt talande svärd. Du hoppar över sängen, men han är beredd och ropar högt när den vilda striden börjar. Han giymtar till av smärta när du slår in med foten i hans sida, men han är hård och otroligt skicklig med svärdet. Han hugger rakt igenom dina järnärmar och bryter din vänstra arm så att den blir obrukbar, men du svarar med ett väldigt slag som slungar honom bakåt. Du skymtar fruktan i Honorics ansikte när han inser hur dödlig du är, men han anfaller med fömyad styrka. Du fälls utan förvarning av ett slag bakifrån, och när du tittar upp ser du Yaemons orörliga ansikte. l samma stund genomborrar Honorics svärd ditt hjärta och du dör.",
   },
   275: {
     mainText: "Grottan är mörk, men det silar ned ljus från en smal spricka i taket. När du makar dig fram längs det ojämna golvet hör du steg bakom dig och du skyndar in i mörkret. En trappa leder nedåt och när du går ned hör du ett underligt ljud, som gnisslandet av kugghjul, ovanifrån. Plötsligt faller en störtflod av vatten nedför trappan och du springer i mörkret med handen mot väggen. Du står snart till knäna i vatten och börjar undra om det finns någon väg ut i änden av tunneln, när ett fällgaller slår ned i golvet bakom dig. Vattennivån sjunker och du finner att du har fångats i en järnbur. Det finns inget sätt att ta sig ut och du tillbringar några matta timmar med att vila och meditera. Plötsligt dränks buren i ljus när dörren i änden av tunneln slås upp. Du befinner dig under sittplatserna på en stor rund arena som långsamt fylls med folk. Folkmassan jublar när en trumpet ljuder och burens framsida faller till marken. En grupp soldater går fram till burens baksida. De gör tecken åt dig att gå ut på arenan och sticker med spjuten genom gallret. ”Må Ödesgudinnan le mot dig,” säger en. ”Bara en av er kan bli slottets konung och överleva.” Du går ut i solljuset och folkmassan jublar igen. Burens dörr dras upp igen bakom dig och du kan inte gå tillbaka. Du skelar mot solen och ser dig omkring.",
@@ -2054,21 +2052,29 @@ export const languagePages: ILanguagePages = {
     ]
   },
   277: {
-    mainText: "",
+    mainText: "Du kryper in i hålet som går genom den tre meter tjocka muren alldeles innan ännu en soldat går förbi på sin runda runt inre borggården. Han lägger lyckligtvis inte märke till din svartklädda skepnad i det mörka hålet. Du ligger stilla i en halvtimme innan du kommer underfund med hur lång tid hans runda tar. När du försöker fortsätta vidare upptäcker du att du har fastnat, men du kommer igenom hålet genom att dra axlarna ur led. Du springer över till det Stora Kärntornet och börjar klättra upp mot taket. Du hänger ljudlöst i dina Kattklor varje gång vakten går förbi nedanför.",
     choices: [
-      "Gå vidare",
+      "Om du vill fortsätta på Kärntornets utsida tills du når taket",
+      "Om du vill ta dig in vid ett av de lägre fönstren"
     ]
   },
   278: {
-    mainText: "",
+    mainText: "Du sparkar till med höger fot rakt mot Yaemons mage, men han hoppar bakåt med bägge föttema och fångar din fot. Han vräker dig uppåt så att du ﬂyger genom luften, men du använder hans kast till din fördel och slår upp med foten i ansiktet på honom när du gör en kullerbytta bakåt i luften. Han skriker till av smärta. Dra 2 från hans KROPPSPOÄNG.",
     choices: [
-      "Gå vidare",
-    ]
+      "Använder du Bevingade hästens spark",
+      "eller Kwons slaga om du har lärt dig den",
+      "eller ett slag",
+      "eller ett kast",
+      "eller en Kluven blixtspark"
+    ],
+    stillAlive: "Om han fortfarande lever är han rasande, och just när du landar mjukt på fötterna kommer han upp bredvid dig. Han vrider sig åt sidan och slår upp med höger fot i ditt solar plexus, sedan vidare upp i ansiktet och ned i bröstkorgen igen, i snabb följd med tre korta rop. Du förlorar 8 KROPPSPOÄNG. Om du fortfarande lever slår hans sista slag omkull dig på rygg. När ditt huvud klamar tittar du upp på Yaemon som står över dig med benen på var sida om din överkropp, och kör ned näven mot ditt ansikte. Du slår den åt sidan med höger hand och för tillbaka handen över bröstet för att parera ett kraftigt hugg mot halsen. Det tar dig bara bråkdelen av en sekund att lägga vänster arm runt hans ben och lyfta, så att han faller. Du tar dig snabbt loss och hoppar upp på fötter samtidigt som Yaemon. Han är ett ögonblick långsammare än du och du kan anfalla." 
   },
   279: {
-    mainText: "",
+    mainText: "Munken faller till marken hjälplöst hostande blod. Men du får inte ta igen dig, utan den andra munken bugar sig för dig innan han gör sig redo att anfalla. Du bestämmer dig för att byta taktik.",
     choices: [
-      "Gå vidare",
+      "Om du använder Draksvanskastet",
+      "eller Kobraslaget",
+      "eller Bevingade hästens spark"
     ]
   },
   280: {
@@ -2089,7 +2095,7 @@ export const languagePages: ILanguagePages = {
     stillAlive: "Om Vätten fortfarande lever stöter han med treudden mot din mage. Du har 8 i Försvar mot stöten när du hoppar åt sidan i det trånga tornet.",
   },
   282: {
-    mainText: "",
+    mainText: "På ett ögonblick har du slängt en kaststjärna mot Torterarens rygg och försvunnit ned i det svarta vattnet. Du stirrar upp från under ytan och ser Torteraren vrida sig i smärta. Han hotar pojken med ett glödgat järn och pojken pekar mot vattnet. Den rasande Torteraren vänder sitt maskerade ansikte mot vattnet, tar sin stora yxa och springer vrålande mot dammen. Du dyker upp ur vattnet och kastar ytterligare en Shuriken som träffar honom i armen innan han slåri vattenytan. Han flämtar till av smärta och du använder Tigertassen för att slå yxan ur händerna på honom. Du brottas med honom och ni sjunker ned i det svarta djupet. Han är stark, men ingen match för dig under vatten. Du är tränad för det här och använder upprepade Kobraslag för att slå honom medvetslös. Vattnet hindrar knappast kraften i dina slag alls.\nTorteraren flyter livlös upp till ytan och du drar dig flämtande upp i tortyrkammaren. Det finns flera fångar som bönfaller dig att du ska befria dem. Du ser en möjlighet att skapa en avledande manöver och gör det, men ber dem att räkna till tvåhundra innan de följer efter dig ut ur kammaren.",
     choices: [
       "Gå vidare",
     ]
@@ -2111,10 +2117,12 @@ export const languagePages: ILanguagePages = {
     mainText: "Du försöker göra en volt över vakterna, men du är för långsam och en av dem hugger till dig med svärdet när du ﬂyger över honom. Du faller till marken och innan du kan komma upp sticker en av dem svärdet i ryggen på dig och tvingar ned dig på den leriga vägen. Han har genomborrat din lever och du dör. Ditt äventyr slutar här."
   },
   286: {
-    mainText: "",
+    mainText: "När munkarna närmar sig för att sparka dig kastar du dig med fötterna före mot huvudet på en av dem. Om det är första gången du försöker göra det blir de överraskade. Siffran efter snedstrecket under Försvar mot Kast är deras Försvar om det här är andra (eller tredje osv) gången du använder det här kastet. Du kan bara anfalla en av dem.",
     choices: [
-      "Gå vidare",
-    ]
+      "Du kan använda Tigertassens slag",
+      "eller Bevingade hästens spark",
+    ],
+    unsuccessfulThrow: "Om du misslyckas med att kasta honom är du i underläge när du landar. Du har 5 i Försvar mot dem om båda lever (och du kan bara blockera ett av deras anfall) och 7 om bara en är kvar."
   },
   287: {
     mainText: "Du faller baklänges från Spindelvävshallen, ned på stenarna på går- den nedanför och bryter nacken. Du har misslyckats."
@@ -2370,7 +2378,7 @@ export const languagePages: ILanguagePages = {
       "eller Draksvanskastet",
       "eller sparka igen"
     ],
-    stillAlive: "Människoätaren försöker slå in ditt huvud. Du har 8 i Försvar mot hans tunga slag"
+    stillAlive: "Om Människoätaren fortfarande lever försöker den slå in ditt huvud med den tunga klubban. Du har 7 i försvar mot det klumpiga slaget."
   },
   334: {
     mainText: "Till din bestörtning väljer månen det här ögonblicket att komma fram från bakom ett moln och munken får syn på din skugga. \"Vem är du?\" frågar han spänt.",
@@ -2474,6 +2482,14 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  353: {
+    mainText: "Du kan välja vem av dem du vill anfalla, men munkarna som dyrkar den Lede är väl bevandrade i stridskonstema. En av munkarna försöker använda en Bevingade hästens spark mot dig, men du går åt sidan åt vänster och försöker slå honom över strupen med höger hand i ett Tigertassens slag.",
+    choices: [
+      "Om du överlever kan du använda Bevingade hästens spark",
+      "eller Tigertandskastet",
+    ],
+    stillAlive: "Om de fortfarande lever anfaller de dig. Du har 6 i Försvar mot deras båda anfall och 8 om bara en är i livet."
+  },
   357: {
     mainText: "Pojken skriker till när han dör och männen slår med piskan över oxen och kör därifrån, med Kobramannen släpande efter. Det ﬁnns en grotta under ett klipputsprång alldeles över dig på bergssidan. ”Den vägen till Mortavalon,” ropar en av männen och pekar mot grottan.",
     choices: [
@@ -2549,6 +2565,14 @@ export const languagePages: ILanguagePages = {
       "Om du vill ta hans hand, antingen för att kasta honom i vallgraven eller för att sluta fred med honom",
       "Om du hellre vill anfalla honom på något annat sätt"
     ]
+  },
+  374: {
+    mainText: "Du får välja vilken munk du vill anfalla. En av dem försöker slå till dig, men du lutar dig bakåt utom räckhåll och kör upp din fot mot hans huvud.",
+    choices: [
+      "Om du överlever kan du använda Bevingade hästens spark",
+      "eller Tigertandskastet",
+    ],
+    stillAlive: "Om de fortfarande lever anfaller de dig. Du har 6 i Försvar mot deras båda anfall och 8 om bara en är i livet."
   },
   375: {
     mainText: "Du lyckas hålla dig fast vid stenarna utanpå Spindelvävshallen när munken kastar ned änterhaken på stenläggningen nedanför. Du buktalar så att munken hör vad han tror är ett stönande från gårdsplanen nedanför. Han skrockar och lutar sig ut från fönstret för att titta ned, men han ser ingenting i mörkret. Han drar tillbaka huvudet och du tar dig långsamt uppför väggen mot fönstret, skjuter ifrån med fötterna, svänger ned och in genom fönstret och landar tyst bakom honom när han går bort från det. Han tycks märka att du är där och vänder på huvudet när du kastar din strypsnara om halsen på honom. Han dör utan ett ljud. Hallen är svagt upplyst av två ﬂämtande ljus, men dina skarpa ögon kan se den glittrande spindelväven som går kors och tvärs över golvet. Du sträcker dig upp från fönsterbrädet, kör in Kattklorna i murbruket i taket och tar dig långsamt över till dörren. Du befinner dig på en balkong över refektoriet och matsalen. När du kryper ihop bakom balkongen råkar du få höra det du behövde veta, av munkar som sitter och dricker vin till sent in på natten. Det verkar som om Yaemon har gett sig av mot Mortavalon tillsammans med Honoric, Marskalken över Domsvärdslegionen, för tio dagar sedan. Innan du ger dig av får du syn på en bokrulle som beskriver de sparkar, slag och kast som används i Syrsans väg, den stridsteknik som den Ledes munkar använder. Du kan höja din Kastmodifikation med 1, eftersom du lär dig några användbara tekniker. Du lägger också märke till att de inte känner till den Kluvna blixtsparken. Du lyckas ta dig ut genom ett fönster från balkongen och klättrar ned till gårdsplanen, där du hämtar din änterhake. Sedan gömmer du dig i ett nedbränt bageri resten av natten. På morgonen lämnar du Domedag, fast besluten att hinna ikapp Yaemon och Honoric.",

@@ -92,10 +92,12 @@
       } else if(opponentStore.playerAttackType !== EAttackType.throw && !opponentStore.directWin){
         battle.dealDamage(damageText, opponent)
 
-      } else if (!opponentStore.directWin) {          
-        // A successful throw instead adds 2 to damage on next attack
+      } else if (!opponentStore.directWin) {        
         mainStore.setThrownOpponent(mainStore.currentOpponent)
+        // A successful throw adds 2 to damage on next attack
         playerStore.setTemporaryDamageModifier(2)
+        // ..and most often a better chance to hit the opponent on next attack
+        if (opponent.value.attackModification) playerStore.setTemporaryAttackModifier(opponent.value.attackModification)
       }
 
     } else if (opponentStore.missDamage) {
