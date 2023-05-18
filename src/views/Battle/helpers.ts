@@ -44,11 +44,23 @@ export function useBattle() {
     return damageText.value
   }
 
+  const defaultPlayerDamage = {
+    none: "",
+    throw: "",
+    instant: "",
+    defense: "",
+    punch: "1T6",
+    kick: "1T6+2"    
+  }
+
   
   // Deal damage to opponent
   const dealDamage = (damageText: Ref<string>, opponent: Ref<Opponent>, ally?: boolean) => {
+    // If no specific damage is set, use default damage per attack type (normal behaviour)
+    let damage = opponentStore.playerDamage || defaultPlayerDamage[opponentStore.playerAttackType]
     // Set correct damage depending on normal attack or ally attack
-    const damage = ally ? opponentStore.allyAttack!.damage : opponentStore.playerDamage
+    if (ally) damage = opponentStore.allyAttack!.damage
+
     if (!damage) return
 
     const staticDamage = damage.length <= 2

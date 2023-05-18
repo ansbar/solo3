@@ -12,7 +12,7 @@
     <h1>Tigerns väg - soloäventyr</h1>
     
     <h2 class="red">
-      Beta 0.5.2
+      Beta 0.6.0
     </h2>
     <img
       :src="getImageUrl()"
@@ -31,20 +31,21 @@
     </div>
 
     <div class="text red">
-      Ungefär 75% av innehållet är portat för tillfället så det går inte att spela klart äventyret.
-      Om du hittar buggar, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten.
+      Ungefär 75% av innehållet är portat för tillfället så det går (oftast) inte att spela klart äventyret.
+      Om du hittar buggar, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    
     <section class="card">
       <div>
         <h4>Spara</h4>
-        Ditt spel sparas automatiskt i webbläsarens minne under förutsättning att:
+        Om du vill ta en paus i spelet så är det möjligt under följande förutsättningar:
         <ul>
           <li>du är utanför strid</li>
           <li>sidan inte har några sidoeffekter (som att få kroppspoäng)</li>
           <li>inga tärningsslag sker (som Ödesslag) </li>
         </ul>
-        Längst ner på sidan står det ifall spelet är sparat eller inte. 
+        Längst ner på sidan står det ifall spelet är sparat eller inte. <br>        
+        Ditt spel sparas automatiskt i webbläsarens minne.
       </div>
     </section>
   </div>

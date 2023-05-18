@@ -32,7 +32,7 @@ export interface IOpponentPage {
   // In rare cases the opponent performs a throw before the attack. Like in page 244.
   // In a multiple opponent battle the numbers indicate player defense against the current number of opponents.
   playerThrowDefense?: number [] 
-  playerDamage?: string  
+  playerDamage?: string // Only used when the damage differs from the default (IT6 for punch/1T6+2 for kick)
   blockable?: boolean
   missDamage?: number
   // After a successful attack (most often a throw) you can add this number to you next attack as a modification

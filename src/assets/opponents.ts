@@ -13,7 +13,6 @@ const opponents: IOpponents = {
     pages: {
       17: {
         playerAttackType: EAttackType.kick,
-        playerDamage: "1T6+2",
         playerDefense: [7],
         blockable: true,
         damage: ["1T6"],
@@ -22,7 +21,6 @@ const opponents: IOpponents = {
       35: {
         playerAttackType: EAttackType.punch,
         playerDefense: [7],
-        playerDamage: "1T6",
         blockable: true,
         damage: ["1T6"],
         defense: [7],
@@ -46,7 +44,6 @@ const opponents: IOpponents = {
       },
       310: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [8],
         damage: ["2T6"],
         defense: [4],
@@ -55,7 +52,6 @@ const opponents: IOpponents = {
       332: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
-        playerDamage: "1T6+2",
         damage: ["2T6"],
         blockable: false,
         defense: [5],
@@ -83,18 +79,16 @@ const opponents: IOpponents = {
       67: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
-        playerDamage: "1T6+2",
         damage: ["1T6+2"],
-        blockable: true,
+        blockable: false,
         defense: [6],
       },
       77: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [8],
         damage: ["1T6+2"],
         defense: [6],
-        blockable: true,
+        blockable: false,
       },
       87: {
         playerAttackType: EAttackType.throw,
@@ -124,7 +118,6 @@ const opponents: IOpponents = {
       248: {
         playerAttackType: EAttackType.punch,
         playerDefense: [9, 8, 7],
-        playerDamage: "1T6",
         blockable: true,
         damage: ["1T6+3", "1T6+1", "1T6+1"],
         defense: [4, 4, 4],
@@ -132,7 +125,6 @@ const opponents: IOpponents = {
       256: {
         playerAttackType: EAttackType.kick,
         playerDefense: [9, 8, 7],
-        playerDamage: "1T6",
         blockable: true,
         damage: ["1T6+3", "1T6+1", "1T6+1"],
         defense: [5, 4, 4],
@@ -149,7 +141,6 @@ const opponents: IOpponents = {
     pages: {
       325: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [8],
         damage: ["2T6+1"],
         defense: [3],
@@ -158,7 +149,6 @@ const opponents: IOpponents = {
       316: {
         playerAttackType: EAttackType.kick,
         playerDefense: [8],
-        playerDamage: "1T6+2",
         damage: ["2T6+1"],
         defense: [4],
         blockable: false,
@@ -176,14 +166,12 @@ const opponents: IOpponents = {
       184: {
         playerAttackType: EAttackType.kick,
         playerDefense: [5],
-        playerDamage: "1T6+2",
         damage: ["1T6+3"],
         blockable: true,
         defense: [6],
       },
       146: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [6],
         damage: ["1T6+3"],
         defense: [5],
@@ -191,7 +179,6 @@ const opponents: IOpponents = {
       },
       160: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [6],
         damage: ["1T6+3"],
         defense: [5],
@@ -220,7 +207,6 @@ const opponents: IOpponents = {
       25: {
         playerAttackType: EAttackType.kick,
         playerDefense: [],
-        playerDamage: "1T6+2",
         damage: [],
         blockable: false,
         defense: [7],
@@ -252,14 +238,12 @@ const opponents: IOpponents = {
       281: {
         playerAttackType: EAttackType.kick,
         playerDefense: [8],
-        playerDamage: "1T6+2",
         damage: ["1T6+3"],
         blockable: true,
         defense: [6],
       },
       293: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [8],
         damage: ["1T6+2"],
         defense: [5],
@@ -268,7 +252,6 @@ const opponents: IOpponents = {
       267: {
         playerAttackType: EAttackType.throw,
         missDamage: -2,
-        playerDamage: "",
         playerDefense: [7],
         damage: ["1T6+3"],
         blockable: false,
@@ -319,7 +302,6 @@ const opponents: IOpponents = {
       },
       1060: {
         playerAttackType: EAttackType.defense,
-        playerDamage: "",
         playerDefense: [8],
         damage: ["1T6+1"],
         defense: []
@@ -389,7 +371,6 @@ const opponents: IOpponents = {
       },
       800: {
         playerAttackType: EAttackType.defense,
-        playerDamage: "",
         playerDefense: [8],
         damage: ["1T6+1"],
         defense: []
@@ -444,7 +425,6 @@ const opponents: IOpponents = {
       82: {
         playerAttackType: EAttackType.punch,
         playerDefense: [9, 8, 7],
-        playerDamage: "1T6",
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [5, 7, 6],
@@ -452,7 +432,6 @@ const opponents: IOpponents = {
       71: {
         playerAttackType: EAttackType.kick,
         playerDefense: [9, 8, 7],
-        playerDamage: "1T6+2",
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [4, 5, 5],
@@ -470,7 +449,6 @@ const opponents: IOpponents = {
       119: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
-        playerDamage: "1T6+2",
         directDamageOnPlayer: {
           state: EBattleStates.attack,
           onlyOnHit: true,
@@ -482,7 +460,6 @@ const opponents: IOpponents = {
       },
       131: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [7],
         directDamageOnPlayer: {
           state: EBattleStates.attack,
@@ -523,7 +500,6 @@ const opponents: IOpponents = {
     pages: {
       168: {
         playerAttackType: EAttackType.defense,
-        playerDamage: "",
         playerDefense: [6],
         damage: ["1T6+2"],
         defense: [5],
@@ -532,7 +508,6 @@ const opponents: IOpponents = {
       335: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
-        playerDamage: "1T6+2",
         damage: ["1T6+1"],
         blockable: false,
         defense: [6],
@@ -546,7 +521,6 @@ const opponents: IOpponents = {
       },
       322: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [6],
         damage: ["1T6"],
         defense: [6],
@@ -565,7 +539,6 @@ const opponents: IOpponents = {
     pages: {
       244: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [6],
         damage: ["1T6"],
         defense: [6],
@@ -575,7 +548,6 @@ const opponents: IOpponents = {
       264: {
         playerAttackType: EAttackType.kick,
         playerDefense: [8],
-        playerDamage: "1T6+2",
         damage: ["1T6"],
         blockable: true,
         defense: [7],
@@ -600,7 +572,6 @@ const opponents: IOpponents = {
     pages: {
       238: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [7],
         damage: ["1T6"],
         defense: [6],
@@ -609,7 +580,6 @@ const opponents: IOpponents = {
       249: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
-        playerDamage: "1T6+2",
         damage: ["1T6+1"],
         blockable: true,
         defense: [5],
@@ -634,7 +604,6 @@ const opponents: IOpponents = {
     pages: {
       263: {
         playerAttackType: EAttackType.punch,
-        playerDamage: "1T6",
         playerDefense: [6],
         damage: ["1T6+1"],
         defense: [5],
@@ -643,7 +612,6 @@ const opponents: IOpponents = {
       250: {
         playerAttackType: EAttackType.kick,
         playerDefense: [7],
-        playerDamage: "1T6+2",
         damage: ["1T6+1"],
         blockable: true,
         defense: [6],
@@ -675,7 +643,6 @@ const opponents: IOpponents = {
       353: {
         playerAttackType: EAttackType.punch,
         playerDefense: [8, 6],
-        playerDamage: "1T6",
         blockable: true,
         damage: ["1T6+1", "1T6+1"],
         defense: [7, 7],
@@ -683,7 +650,6 @@ const opponents: IOpponents = {
       374: {
         playerAttackType: EAttackType.kick,
         playerDefense: [8, 6],
-        playerDamage: "1T6",
         blockable: true,
         damage: ["1T6+3", "1T6+1", "1T6+1"],
         defense: [6, 7],
