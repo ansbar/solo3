@@ -643,9 +643,12 @@ export const pageData: IPages = {
     ]
   },
   63: {
+    opponent: EOpponents.priests,
     choices: [
       {
-        goto: 75,
+        goto: 82,
+      },{
+        goto: 71,
       }
     ]
   },
@@ -885,11 +888,11 @@ export const pageData: IPages = {
   },
   81: {},
   82: {
+    opponent: EOpponents.priests,
     choices: [
       {
         goto: 71,
-      },
-      {
+      },{
         goto: 63,
       },{
         goto: 82,

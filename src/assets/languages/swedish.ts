@@ -521,8 +521,10 @@ export const languagePages: ILanguagePages = {
   63: {
     mainText: "Du hoppar med fötterna före mot en av prästerna i ett försök att lägga dina fötter runt hans huvud, innan du vrider till för att kasta honom till marken. Du kan välja vilken av dem du angriper.",
     choices: [
-      ""
-    ]
+      "Du kan använda Kobraslaget",
+      "eller en Kluven blixtspark"
+    ],
+    stillAlive: "Om han fortfarande lever, eller om du misslyckades med att ens kasta honom, försöker de kvarvarande prästerna att slå ned dig med sina stridsklubbor. Om 3 är i livet har du 7 i Försvar. Om 2 lever har du 8 i Försvar och om bara en finns kvar har du 9 i Försvar Du kan bara blockera ett av anfallen."
   },
   64: {
     mainText: "Så snart du träffar vattnet tycks det koka runt dig när Flytande munnar störtar fram för att få tag i sitt byte. Du kämpar, men har ingen chans. Inom en minut är ditt skelett renskrapat från kött."
@@ -535,7 +537,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   66: {
-    mainText: "Grottan är kal. Togawa sitter med korslagda ben på golvet och du följer hans exempel. Han ger dig komplimanger för din färdighet i Tigerns väg, men eftersom du inser att han är skickligare än du, ger du honom komplimanger för sparken som dödade Klippmonstret. Han erbjuder sig att visa den för dig. Han kallar den för Kwons slaga, och den är till och med kraftigare än de sparkar som du använder.\nAnteckna den på din Speltabell som en ny spark du har lärt dig. Du kan lägga +1 till din sparkmodifikation för råden som Togawa ger. Du talar om för honom att du är från De Stilla Drömmarnas Ö, berättar om ditt uppdrag och ber honom om hjälp Han förvånar dig med att fråga, \"Vilket är ditt hem?\"\nOm du svarar:",
+    mainText: "Grottan är kal. Togawa sitter med korslagda ben på golvet och du följer hans exempel. Han ger dig komplimanger för din färdighet i Tigerns väg, men eftersom du inser att han är skickligare än du, ger du honom komplimanger för sparken som dödade Klippmonstret. Han erbjuder sig att visa den för dig. Han kallar den för Kwons slaga, och den är till och med kraftigare än de sparkar som du använder.\nAnteckna den på din Speltabell som en ny spark du har lärt dig. Du kan lägga +1 till din sparkmodifikation för råden som Togawa ger. Du talar om för honom att du är från De Stilla Drömmarnas Ö, berättar om ditt uppdrag och ber honom om hjälp. Han förvånar dig med att fråga, \"Vilket är ditt hem?\"\nOm du svarar:",
     choices: [
       "Jag har inget hem.",
       "Mitt hem är min kropp.",

@@ -114,7 +114,6 @@ export const useOpponentStore = defineStore("opponent", {
         allyAttack: payload.allyAttack,
         firstAttackBonus: payload.firstAttackBonus
       })
-      console.log("firstAttackBonus", this.firstAttackBonus)
 
       // Will enable ally attack until end of battle 
       if (payload.enableAlly) this.enableAlly = true

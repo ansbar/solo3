@@ -12,7 +12,7 @@
      * Otherwise carry on to next phase */
     if (opponentStore.opponents.length === 1) {
       mainStore.battlestate = EBattleStates.innerForce
-    } else if (mainStore.thrownOpponent) {
+    } else if (mainStore.thrownOpponent !== undefined) {
       mainStore.setCurrentOpponent(mainStore.thrownOpponent)
       mainStore.battlestate = EBattleStates.innerForce      
     }

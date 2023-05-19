@@ -57,5 +57,6 @@ export function useOpponents() {
     return opponentDefense
   }
 
+
   return { opponentsAlive, playerDefense, playerThrowDefense, firstOpponentAlive, opponentDefense }
 }

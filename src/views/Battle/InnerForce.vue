@@ -21,7 +21,7 @@
 
   onMounted(() => {
     // Clear any thrown opponent
-    mainStore.setThrownOpponent()
+    mainStore.clearThrownOpponent()
     if (!showInnerForce.value) startBattle(false)
   })
 

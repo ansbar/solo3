@@ -187,6 +187,7 @@ const opponents: IOpponents = {
       202: {
         playerAttackType: EAttackType.throw,
         playerDefense: [7],
+        attackModification: 3,
         playerAttackValue: 3,
         damage: ["1T6+3"],
         blockable: false,
@@ -221,6 +222,7 @@ const opponents: IOpponents = {
       13: {
         playerAttackType: EAttackType.throw,
         playerDefense: [],
+        attackModification: 2,
         damage: [],
         blockable: false,
         defense: [7],
@@ -253,6 +255,7 @@ const opponents: IOpponents = {
         playerAttackType: EAttackType.throw,
         missDamage: -2,
         playerDefense: [7],
+        attackModification: 2,
         damage: ["1T6+3"],
         blockable: false,
         defense: [6],
@@ -341,6 +344,7 @@ const opponents: IOpponents = {
       },
       39: {
         playerAttackType: EAttackType.throw,
+        attackModification: 2,
         playerDefense: [6],
         damage: ["1T6+2"],
         blockable: false,
@@ -400,6 +404,7 @@ const opponents: IOpponents = {
       },
       318: {
         playerAttackType: EAttackType.throw,
+        attackModification: 2,
         playerDefense: [6],
         damage: ["1T6+2"],
         blockable: false,
@@ -417,6 +422,7 @@ const opponents: IOpponents = {
     pages: {
       63: {
         playerAttackType: EAttackType.throw,
+        //attackModification: 3,
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],

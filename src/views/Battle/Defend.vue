@@ -109,7 +109,7 @@
   // Determines and sets the next attacker in a multiple opponent attack
   const setNextAttacker = () => {
     currentAttackingOpponent.value = firstOpponentAlive(currentAttackingOpponent.value + 1) as number
-    damageText.value += ""
+    damageText.value = ""
     defend()
   }
 
