@@ -7,7 +7,7 @@
 
   const opponentStore = useOpponentStore()
   const { defenseTexts } = useTexts()
-  const { playerDefense } = useOpponents()
+  const { playerDefense, opponentDefense } = useOpponents()
 
   const { playerAttackType, playerDamage } = storeToRefs(useOpponentStore())
   const { attributes } = storeToRefs(usePlayerStore())
@@ -41,7 +41,7 @@
         <ul>
           <li>Kroppspoäng: {{ o.hp }}/{{ o.hpMax }}</li>
           <li v-if="playerAttackType !== EAttackType.instant && o.defense">
-            {{ defenseTexts[playerAttackType as unknown as EDefenseType] }}: {{ o.defense }}
+            {{ defenseTexts[playerAttackType as unknown as EDefenseType] }}: {{ opponentDefense(o.defense) }}
           </li>
         
           <li v-if="o.damage">

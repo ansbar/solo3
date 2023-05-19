@@ -1,7 +1,8 @@
 import { computed } from "vue"
-import { useOpponentStore } from "@/stores/opponentStore"
+import { useOpponentStore, useMainStore } from "@/stores/"
 
 export function useOpponents() {
+  const mainStore = useMainStore()
   const opponentStore = useOpponentStore()  
 
   // Returns number of opponents alive
@@ -48,6 +49,13 @@ export function useOpponents() {
     return false
   }
 
+  const opponentDefense = (opponentDefense: number) => {
+    // In some battles your first attack takes the opponent of guard and you have a bonus
+    // Actually it's a opponent defense decrease
+    if (opponentStore.firstAttackBonus && !opponentStore.attacksUsed.includes(mainStore.currentPageId))
+      return opponentDefense - opponentStore.firstAttackBonus
+    return opponentDefense
+  }
 
-  return { opponentsAlive, playerDefense, playerThrowDefense, firstOpponentAlive }
+  return { opponentsAlive, playerDefense, playerThrowDefense, firstOpponentAlive, opponentDefense }
 }

@@ -29,6 +29,8 @@ interface StoreOpponent {
   id: string
   counter?: number,
   counterGoto?: number,
+  // Some pages have different values depending on if the attack has already been used. Like page 236.
+  attacksUsed: number[]
   missAbility?: EAbilities
   playerAttackType: EAttackType
   enableInnerForce?: boolean
@@ -43,6 +45,7 @@ interface StoreOpponent {
   directDamageOnPlayer?: DirectDamageOnPlayer,
   enableAlly: boolean,
   allyAttack?: AllyAttack,
+  firstAttackBonus?: number,
   opponents: Opponent[]
 }
 
@@ -51,6 +54,7 @@ export const useOpponentStore = defineStore("opponent", {
     id: "",
     counter: undefined,
     counterGoto: undefined,
+    attacksUsed: [],
     missAbility: undefined,
     playerAttackType: EAttackType.none,
     enableInnerForce: undefined,
@@ -60,6 +64,7 @@ export const useOpponentStore = defineStore("opponent", {
     missDamage: undefined,
     directDamageOnPlayer: {} as DirectDamageOnPlayer,
     enableAlly: false,
+    firstAttackBonus: undefined,
     allyAttack: {} as AllyAttack,
     opponents: [],
     win: 0,
@@ -106,8 +111,10 @@ export const useOpponentStore = defineStore("opponent", {
         blockable: payload.blockable,
         directDamageOnPlayer: payload.directDamageOnPlayer,
         directWin: payload.directWinGoto,
-        allyAttack: payload.allyAttack
+        allyAttack: payload.allyAttack,
+        firstAttackBonus: payload.firstAttackBonus
       })
+      console.log("firstAttackBonus", this.firstAttackBonus)
 
       // Will enable ally attack until end of battle 
       if (payload.enableAlly) this.enableAlly = true

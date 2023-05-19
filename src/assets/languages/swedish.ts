@@ -1737,9 +1737,9 @@ export const languagePages: ILanguagePages = {
     ]
   },
   236: {
-    mainText: "Den andre munken tvekar en sekund när du kastar dig med fötterna före mot hans ben. Han har han 5 i Försvar mot det överraskande anfallet.",
-    successfulThrow: "Om du lyckas krokar du fast dina ben bakom hans och vrider till våldsamt så att han faller till marken. När han faller drar du tillbaka dina fötter och använder händerna för att resa upp ryggen från marken, som en krabba, och sedan hoppa upp till stående.",
-    unsuccessfulThrow: "Om du misslyckades med att kasta honom hoppar han upp över ditt svepande kast och landar på föttema, samtidigt som du hoppar upp. Han försöker slå till dig med två knytnävsslag. Du har 7 i Försvar.",
+    mainText: "Den andre munken tvekar en sekund när du kastar dig med fötterna före mot hans ben. Om det är första gången du försöker kasta honom har han 5, inte 6, i Försvar mot det överraskande anfallet.",
+    successfulThrow: "Du lyckas kroka fast dina ben bakom hans och vrider till våldsamt så att han faller till marken. När han faller drar du tillbaka dina fötter och använder händerna för att resa upp ryggen från marken, som en krabba, och sedan hoppa upp till stående.",
+    unsuccessfulThrow: "Du misslyckades med att kasta honom och han hoppar upp över ditt svepande kast och landar på föttema, samtidigt som du hoppar upp. Han försöker slå till dig med två knytnävsslag. Du har 7 i Försvar.",
     choices: [
       "Du kan sparka",
       "eller slå din motståndare"
@@ -1751,6 +1751,7 @@ export const languagePages: ILanguagePages = {
       "Du kan använda Bevingade hästens spark",
       "eller Järnnävens slag"
     ],
+    directWin: "Du lyckas kasta honom.",
     stillAlive: "Om du inte lyckas kasta honom angrips du av de av dina motståndare som är i livet. Du har 7 i försvar mot dem om tre lever, 8 om två lever och 9 om bara en fortfarande är vid liv. Var och en gör ett individuellt anfall mot dig och du kan bara blockera ett av dem. Varje anfall gör 1T6+1 i skada om de träffar"
   },
   238: {
@@ -2176,7 +2177,7 @@ export const languagePages: ILanguagePages = {
     mainText: "Du griper den Tvåhövdade jätten runt låren, men den väger över ett ton och du finner att du inte kan kasta den. Monstret släpper sin väldiga klubba och lyfter dig, slänger dig i klippan och trampar på dig. Ditt huvud krossas som en mogen melon när kraften från dess häl trycker ned det. Du har misslyckats med ditt uppdrag."
   },
   296: {
-    mainText: "",
+    mainText: "Du lyckas hoppa undan en av soldaternas svärdshugg och griper tag i hans handled, vrider och kastar honom över höften. Du kastar honom i ett litet bord med en smäll som splittrar det. Någon fäller en kommentar om ditt ovanliga sätt att slåss. Du hoppar över högen med krossade ben och trä och är ute från krogen innan någon annan hinner angripa dig. Du är inte förföljd och bestämmer dig för att sova på ett härbärge för ett guldstycke i natt. På morgonen bestämmer du dig för att bege dig norrut, så att Yaemon inte ska hinna till Förändringens pelare före dig och du lämnar staden längs vägen mot Mortavalon.",
     choices: [
       "Gå vidare",
     ]

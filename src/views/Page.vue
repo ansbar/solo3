@@ -90,6 +90,9 @@
     } else if (state === EBattleStates.pending) {
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
       mainStore.addToCounter(true)
+      // To know which attacks has been used during a battle
+      if (!opponentStore.attacksUsed.includes(mainStore.currentPageId))
+        opponentStore.attacksUsed.push(mainStore.currentPageId)
     }    
   })
 

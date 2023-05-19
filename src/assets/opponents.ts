@@ -95,7 +95,6 @@ const opponents: IOpponents = {
         directWinGoto: 34,
         playerDefense: [7],
         damage: ["1T6"],
-        blockable: false,
         defense: [6],
       }
     }
@@ -114,6 +113,7 @@ const opponents: IOpponents = {
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [5, 5, 5],
+        directWinGoto: 296,
       },
       248: {
         playerAttackType: EAttackType.punch,
@@ -514,6 +514,7 @@ const opponents: IOpponents = {
       },
       312: {
         playerAttackType: EAttackType.throw,
+        attackModification: 1,
         playerDefense: [6],
         damage: ["1T6+1"],
         blockable: false,
@@ -554,6 +555,7 @@ const opponents: IOpponents = {
       },
       236: {
         playerAttackType: EAttackType.throw,
+        attackModification: 1,
         playerDefense: [7],
         damage: ["1T6+2"],
         blockable: false,

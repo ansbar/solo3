@@ -2557,7 +2557,7 @@ export const pageData: IPages = {
       {
         goto: 264,
       },{
-        goto: 326,
+        goto: 236,
       },{
         goto: 244,
       }
@@ -3059,6 +3059,11 @@ export const pageData: IPages = {
   },
   295: {},
   296: {
+    sideEffects: {
+      items: {
+        gold: -1
+      }
+    },
     choices: [
       {
         goto: 1000

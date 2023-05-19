@@ -18,7 +18,7 @@
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore() 
   
-  const { opponentsAlive } = useOpponents() 
+  const { opponentsAlive, opponentDefense } = useOpponents() 
   const { pageTexts } = useTexts()
   
   const isHit = ref(false)
@@ -62,8 +62,8 @@
   // Attack opponent
   const doAttack = () => {      
     const attackModifier = battle.calculateAttackModifier()          
-    const attackRoll = dice.doRoll(attackChance.value, attackModifier)      
-    isHit.value = (attackRoll > opponent.value.defense)  
+    const attackRoll = dice.doRoll(attackChance.value, attackModifier) 
+    isHit.value = (attackRoll > opponentDefense(opponent.value.defense))  
 
     const hitText = computed(() => {      
       if (opponentStore.playerAttackType === EAttackType.throw)       
@@ -73,7 +73,7 @@
     })
 
     rollText.value = `Du slår ${attackChance.value} och resultatet blir ${attackRoll}.`
-    rollText.value += ` ${opponent.value.name} har ${opponent.value.defense} i försvar.\n`
+    rollText.value += ` ${opponent.value.name} har ${opponentDefense(opponent.value.defense)} i försvar.\n`
     rollText.value += `<b>${hitText.value} ${opponent.value.name}!</b>`
 
     // Handle hit or miss
@@ -134,8 +134,8 @@
 
 
     <!-- Direct win -->
-    <template v-if="pageTexts.directWin && isHit">
-      <div class="text">
+    <template v-if="opponentStore.directWin && isHit">
+      <div v-if="pageTexts.directWin" class="text">
         {{ pageTexts.directWin }}
       </div>
       <a href="#" @click="handleWin(opponentStore.directWin as number)">
