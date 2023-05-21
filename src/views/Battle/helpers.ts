@@ -90,7 +90,6 @@ export function useBattle() {
 
     if (opponent.value.hp < 1){
       damageText.value += " och besegras!"
-      mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
     } else{
       damageText.value += ` och har ${opponent.value.hp} kroppspoäng kvar.`
     }       

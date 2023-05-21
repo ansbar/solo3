@@ -3,6 +3,7 @@
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
   import { EAbilities, EAddedAbilities, EBattleStates, EDifficulty } from "@/assets/enums"
+  import opponent from "@/assets/opponents"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   import { IChoice } from "@/stores/pageInterfaces"
@@ -25,6 +26,7 @@
   // Change page
   const gotoStory = (pageId: number) => {
     if (mainStore.currentPageId === pageId) {
+      opponentStore.setOpponentPageData(opponent[pageStore.opponent!].pages[mainStore.currentPageId])
       mainStore.setBattlestate(EBattleStates.chooseOpponent)
     } else {
       mainStore.setCurrentPageId(pageId)

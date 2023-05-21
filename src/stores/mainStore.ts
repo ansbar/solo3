@@ -88,7 +88,6 @@ export const useMainStore = defineStore("main", {
       this.savedData = payload
     },
     setThrownOpponent (payload: number){
-      console.log("setThrownOpponent", payload)
       this.thrownOpponent = payload
     },
     clearThrownOpponent (){

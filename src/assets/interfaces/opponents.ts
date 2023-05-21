@@ -37,6 +37,9 @@ export interface IOpponentPage {
   missDamage?: number
   // After a successful attack (most often a throw) you can add this number to you next attack as a modification
   attackModification?: number
+  // Sometimes a successful attack (throw) results in a static defense number in the next attack instead of the normal attackModification
+  // Like page 63
+  staticDefenseModification?: number
   damage: string[] // 1T6+1
   // Direct damage to the player
   directDamageOnPlayer?: {

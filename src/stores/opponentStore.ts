@@ -1,6 +1,7 @@
 import { defineStore } from "pinia"
 import { EAbilities, EAttackType, EBattleStates, EOpponents } from "@/assets/enums"
 import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponents"
+import { usePlayerStore } from "./playerStore"
 
 interface DirectDamageOnPlayer {
   state: EBattleStates,
@@ -23,6 +24,7 @@ export interface Opponent {
   damage: string
   defense: number,
   attackModification?: number
+  staticDefenseModification?: number,
 }
 
 interface StoreOpponent {
@@ -64,7 +66,7 @@ export const useOpponentStore = defineStore("opponent", {
     missDamage: undefined,
     directDamageOnPlayer: {} as DirectDamageOnPlayer,
     enableAlly: false,
-    firstAttackBonus: undefined,
+    firstAttackBonus: undefined,    
     allyAttack: {} as AllyAttack,
     opponents: [],
     win: 0,
@@ -101,6 +103,8 @@ export const useOpponentStore = defineStore("opponent", {
       }
     },
     setOpponentPageData (payload: IOpponentPage) {
+      const playerStore = usePlayerStore()
+
       // This is set every page switch
       this.$patch({
         playerAttackType: payload.playerAttackType,
@@ -112,19 +116,25 @@ export const useOpponentStore = defineStore("opponent", {
         directDamageOnPlayer: payload.directDamageOnPlayer,
         directWin: payload.directWinGoto,
         allyAttack: payload.allyAttack,
-        firstAttackBonus: payload.firstAttackBonus
+        firstAttackBonus: payload.firstAttackBonus,
       })
-
       // Will enable ally attack until end of battle 
       if (payload.enableAlly) this.enableAlly = true
 
       for (let i = 0; i < this.opponents.length; i++) {
+        // If a temporary defense value is set we skip normal defense on that page
+        const defense = playerStore.temporary.opponentDefenseModifier || payload.defense?.[i]        
+
         this.opponents[i].playerDefense = payload.playerDefense
         this.opponents[i].playerThrowDefense = payload.playerThrowDefense,
         this.opponents[i].damage = payload.damage?.[i]
-        this.opponents[i].defense = payload.defense?.[i]
+        this.opponents[i].defense = defense
         this.opponents[i].attackModification = payload.attackModification
-      }
+        this.opponents[i].staticDefenseModification = payload.staticDefenseModification
+      }     
+      // Reset temporary defense value 
+      playerStore.setTemporaryOpponentDefenseModifier(0)
+      
     },
     setOpponentHp (index: number, payload: number) {
       this.opponents[index].hp -= payload

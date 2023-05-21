@@ -36,26 +36,13 @@ export const usePlayerStore = defineStore("player", {
     temporary: {
       useInnerForce: null,
       attackModifier: 0,
+      opponentDefenseModifier: 0,
       damageModifier: 0
     }
   }),
   actions: {
     initPlayer () {
       this.$reset() 
-      // this.items.flashPowder = 1
-      // this.items.gold = 0
-      // this.items.opalring = 0
-      // this.items.healingPotion = 0
-      // this.items.glove = 0
-      // this.items.magicShuriken = 0
-      // this.items.fireLizardEssence = 0
-      // this.items.herbs = 0
-      // this.items.amulet = 0
-      // this.attributes.hp = 20
-      // this.conditions.hasNotVisitedSwordOfDoomTower = true
-      // this.temporary.useInnerForce = null
-      // this.temporary.attackModifier = 0
-      // this.temporary.damageModifier = 0
     },
     // Abilities
     addPlayerAbility (payload: EAbilities | EAddedAbilities) {
@@ -105,6 +92,11 @@ export const usePlayerStore = defineStore("player", {
     // Temporary
     setTemporaryInnerForce (payload: boolean | null) {
       this.temporary.useInnerForce = payload
+    },
+    setTemporaryOpponentDefenseModifier (payload: number) {
+      const mainStore = useMainStore()
+      if (payload) mainStore.addToHistory(`- La till temporärt försvarsvärde för motståndare: ${payload}`)
+      this.temporary.opponentDefenseModifier = payload
     },
     setTemporaryAttackModifier (payload: number) {
       const mainStore = useMainStore()
