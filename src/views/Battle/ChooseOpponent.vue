@@ -33,13 +33,13 @@
   Välj motståndare att angripa
   <div class="button-group">
     <button
-      v-for="(opponent, index) in opponentStore.opponents"
+      v-for="(o, index) in opponentStore.opponents"
       :key="index"
-      :disabled="opponent.hp === 0"
+      :disabled="o.hp === 0"
       class="cta"
       @click="chooseOpponent(index)"
     >
-      {{ opponent.name }}
+      {{ o.name }}
     </button>
   </div>
 </template>

@@ -52,7 +52,7 @@
     // Deal damage
     if(value){
       hasBlocked.value = true
-      const blockRoll = dice.doRoll("2T6")
+      const blockRoll = dice.doRoll("Blockslag", "2T6")
 
       if(blockRoll < playerDefense.value){
         isHit.value = false
@@ -72,7 +72,7 @@
     //In the rare case the opponent performs a throw we need to separate the throw from the following attack (if hit). Like in page 244.
     if (!playerThrowDefense.value) return true // If no throw exists for the page (normally)
     
-    const throwAttackRoll = dice.doRoll("2T6", undefined)
+    const throwAttackRoll = dice.doRoll("Försvarsslag", "2T6")
     isHit.value = (throwAttackRoll > playerThrowDefense.value) ? true : false
 
     throwRollText.value = opponent.value.name + " slår 2T6 och resultatet blir: " + throwAttackRoll + ". "
@@ -88,7 +88,7 @@
     // Skip the normal defend roll if opponent an throw happend and was unsuccesful
     if (!defendThrow()) return
   
-    const attackRoll = dice.doRoll("2T6", undefined)
+    const attackRoll = dice.doRoll("Försvarsslag", "2T6")
     isHit.value = (attackRoll > playerDefense.value) ? true : false
 
     rollText.value = opponent.value.name + " slår 2T6 och resultatet blir: " + attackRoll + ". "

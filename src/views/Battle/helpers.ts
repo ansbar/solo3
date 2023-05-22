@@ -25,7 +25,7 @@ export function useBattle() {
 
     // If set damage (like a 5, not a roll like 1T6) we skip damageRoll
     if (!staticDamage)
-      damageRoll = dice.doRoll(damage, undefined)  
+      damageRoll = dice.doRoll("Skadeslag", damage, undefined)  
     else
       damageRoll = parseInt(damage)
       
@@ -52,7 +52,6 @@ export function useBattle() {
     punch: "1T6",
     kick: "1T6+2"    
   }
-
   
   // Deal damage to opponent
   const dealDamage = (damageText: Ref<string>, opponent: Ref<Opponent>, ally?: boolean) => {
@@ -70,9 +69,11 @@ export function useBattle() {
 
     // If static damage (like 5, not a roll like 1T6) we skip damageRoll
     if (!staticDamage)
-      damageRoll = dice.doRoll(damage || "", ally ? undefined : playerStore.temporary.damageModifier)  
-    else
+      damageRoll = dice.doRoll("Skadeslag", damage || "", ally ? undefined : playerStore.temporary.damageModifier)  
+    else {
       damageRoll = parseInt(damage)
+      mainStore.addToHistory(`- Fast skada: ${damage}`)
+     }
       
     if (!ally && playerStore.temporary.damageModifier)
       damageModifierText = "+" + playerStore.temporary.damageModifier    

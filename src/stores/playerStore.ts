@@ -36,7 +36,6 @@ export const usePlayerStore = defineStore("player", {
     temporary: {
       useInnerForce: null,
       attackModifier: 0,
-      opponentDefenseModifier: 0,
       damageModifier: 0
     }
   }),
@@ -93,19 +92,14 @@ export const usePlayerStore = defineStore("player", {
     setTemporaryInnerForce (payload: boolean | null) {
       this.temporary.useInnerForce = payload
     },
-    setTemporaryOpponentDefenseModifier (payload: number) {
-      const mainStore = useMainStore()
-      if (payload) mainStore.addToHistory(`- La till temporärt försvarsvärde för motståndare: ${payload}`)
-      this.temporary.opponentDefenseModifier = payload
-    },
     setTemporaryAttackModifier (payload: number) {
       const mainStore = useMainStore()
-      if (payload) mainStore.addToHistory(`- La till temporär attackmodifierare: ${payload}`)
+      if (payload) mainStore.addToHistory(`- Ny temporär attackmodifierare: ${payload}`)
       this.temporary.attackModifier = payload
     },
     setTemporaryDamageModifier (payload: number) {
       const mainStore = useMainStore()
-      if (payload) mainStore.addToHistory(`- La till temporär skademodifierare: ${payload}`)
+      if (payload) mainStore.addToHistory(`- Ny temporär skademodifierare: ${payload}`)
       this.temporary.damageModifier = payload === 0 ? payload : this.temporary.damageModifier + payload
     }
   }

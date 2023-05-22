@@ -422,11 +422,17 @@ const opponents: IOpponents = {
     pages: {
       63: {
         playerAttackType: EAttackType.throw,
-        staticDefenseModification: 2,
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [4, 5, 5],
+      },
+      630: {
+        playerAttackType: EAttackType.punch,
+        playerDefense: [9, 8, 7],
+        blockable: true,
+        damage: ["1T6+1", "1T6+1", "1T6+1"],
+        defense: [2, 2, 2],
       },
       82: {
         playerAttackType: EAttackType.punch,

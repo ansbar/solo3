@@ -11,6 +11,7 @@ export interface ILanguagePages {
 export interface ILanguagePage {
   mainText: string
   choices?: string[]
+  successfulThrowChoices?: string[]
   stillAlive?: string
   successfulThrow?: string
   unsuccessfulThrow?: string

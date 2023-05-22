@@ -524,7 +524,18 @@ export const languagePages: ILanguagePages = {
       "Du kan använda Kobraslaget",
       "eller en Kluven blixtspark"
     ],
-    stillAlive: "Om han fortfarande lever, eller om du misslyckades med att ens kasta honom, försöker de kvarvarande prästerna att slå ned dig med sina stridsklubbor. Om 3 är i livet har du 7 i Försvar. Om 2 lever har du 8 i Försvar och om bara en finns kvar har du 9 i Försvar Du kan bara blockera ett av anfallen."
+    successfulThrowChoices: [
+      "Du använder Tigertassens slag"
+    ],
+    successfulThrow: "Om du lyckas kan du försöka använda Tigertassens slag på den liggande prästen, som förtvivlat försöker rulla åt sidan.",
+    unsuccessfulThrow: "Om han fortfarande lever, eller om du misslyckades med att ens kasta honom, försöker de kvarvarande prästerna att slå ned dig med sina stridsklubbor. Om 3 är i livet har du 7 i Försvar. Om 2 lever har du 8 i Försvar och om bara en finns kvar har du 9 i Försvar Du kan bara blockera ett av anfallen."
+  },
+  630: {
+    mainText: "Du lyckas med kastet och försöker använda Tigertassens slag på den liggande prästen, som förtvivlat försöker rulla åt sidan. Hans Försvar är 2 och om du träffar honom får du lägga 2 till skadan.",
+    choices: [
+      "Du kan använda Kobraslaget",
+      "eller en Kluven blixtspark"
+    ],
   },
   64: {
     mainText: "Så snart du träffar vattnet tycks det koka runt dig när Flytande munnar störtar fram för att få tag i sitt byte. Du kämpar, men har ingen chans. Inom en minut är ditt skelett renskrapat från kött."

@@ -3,7 +3,7 @@ import { useMainStore } from "../stores/mainStore"
 export function useDice() {  
   const mainStore = useMainStore()
   
-  const doRoll = (diceValue: string, extraModifier?: number) => {
+  const doRoll = (log = "Slag", diceValue: string, extraModifier?: number) => {
     /* Takes the following format: "1T6+1" where "+1" is optional. */
     const numberOfDices: number = parseInt(diceValue.substring(0, 1))
     const numberOfSides: number = parseInt(diceValue.substring(2, 3))
@@ -39,7 +39,7 @@ export function useDice() {
       }
     }
 
-    mainStore.addToHistory(`- Slag: ${diceValue} (${diceRolls.slice(0, -2)}) ${extraModifierText} = ${diceResult}`)
+    mainStore.addToHistory(`- ${log}: ${diceValue} (${diceRolls.slice(0, -2)}) ${extraModifierText} = ${diceResult}`)
 
     return diceResult
   }

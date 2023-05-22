@@ -30,7 +30,7 @@
       modifier = playerStore.modifiers[condition?.modifier as EPlayerModifiers]
     }
 
-    const roll = dice.doRoll(attack, modifier)
+    const roll = dice.doRoll("Attackslag", attack, modifier)
     isSuccess.value = condition?.type === "block" ? roll < defense : roll > defense
 
     resultText.value = `Du slår ${attack} och resultatet blir ${roll}.`

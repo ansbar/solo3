@@ -9,6 +9,7 @@ export const usePageStore = defineStore("page", {
       opponent: undefined,
       image: undefined,
       choices: undefined,
+      successfulThrowChoices: undefined,
       specialCondition: undefined,
       autoEndBattle: false,
       sideEffects: undefined,
@@ -21,6 +22,7 @@ export const usePageStore = defineStore("page", {
       this.$reset() // Reset page state at every page change      
 
       this.$patch({ choices: payload.choices })
+      this.$patch({ successfulThrowChoices: payload.successfulThrowChoices })
       this.$patch({ specialCondition: payload.specialCondition })
       this.$patch({ image: payload.image })
       this.$patch({ sideEffects: payload.sideEffects })

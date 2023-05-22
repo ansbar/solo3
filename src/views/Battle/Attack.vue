@@ -46,7 +46,7 @@
 
   const doAllyAttack = () => {
     // When you have an ally fighting side by side with you
-    const _attackRoll = dice.doRoll(attackChance.value) 
+    const _attackRoll = dice.doRoll("Attackslag allierad", attackChance.value) 
     const _isHit = (_attackRoll > opponentStore.allyAttack!.defense)
     const _hitText = _isHit ? "träffar!" : "missar."
 
@@ -61,7 +61,7 @@
   // Attack opponent
   const doAttack = () => {      
     const attackModifier = battle.calculateAttackModifier()          
-    const attackRoll = dice.doRoll(attackChance.value, attackModifier) 
+    const attackRoll = dice.doRoll("Attackslag", attackChance.value, attackModifier) 
     isHit.value = (attackRoll > opponentDefense())  
 
     const hitText = computed(() => {      
@@ -97,7 +97,6 @@
         // A successful throw adds 2 to damage on next attack
         playerStore.setTemporaryDamageModifier(2)
         // and most often a better chance to hit the opponent on next attack. 
-        if (currentOpponent.value.staticDefenseModification) playerStore.setTemporaryOpponentDefenseModifier(currentOpponent.value.staticDefenseModification)
         if (currentOpponent.value.attackModification) playerStore.setTemporaryAttackModifier(currentOpponent.value.attackModification)
       }
 

@@ -644,6 +644,21 @@ export const pageData: IPages = {
   },
   63: {
     opponent: EOpponents.priests,
+    successfulThrowChoices: [
+      {
+        goto: 630
+      }
+    ],
+    choices: [
+      {
+        goto: 82,
+      },{
+        goto: 71,
+      }
+    ]
+  },
+  630: {
+    opponent: EOpponents.priests,
     choices: [
       {
         goto: 82,
@@ -820,7 +835,8 @@ export const pageData: IPages = {
         hp: 3,
       },
       items: {
-        magicShuriken: 1
+        magicShuriken: 1,
+        shuriken: -1
       },
     },
     choices: [

@@ -47,6 +47,14 @@
     return true
   }
 
+  // If a successful throw has been made and special choices exist, use them.
+  // Otherwise use the normal choices
+  const choices = computed(() => {
+    if (mainStore.thrownOpponent !== undefined && pageStore.successfulThrowChoices) 
+      return pageStore.successfulThrowChoices
+    return pageStore.choices
+  })
+
   const handleCounterGoto = () => {
     mainStore.battleRoundCounter = 1
     gotoStory(opponentStore.counterGoto as number)
@@ -106,7 +114,7 @@
       >Du har misslyckats. Börja om?</a>
     </li>
     <li
-      v-for="(choice, index) in pageStore.choices"
+      v-for="(choice, index) in choices"
       v-else-if="choicesTexts"
       :key="choice.goto"
       class="choice"

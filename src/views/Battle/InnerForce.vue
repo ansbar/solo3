@@ -30,7 +30,7 @@
     // After that the battle attack phase begins
     if(useInnerForce) {
       playerStore.setAttributeInnerForce(-1)
-      mainStore.addToHistory(`- Använde inre kraft, (${playerStore.attributes.innerForce} kvar)`)
+      mainStore.addToHistory(`- Använde inre kraft (${playerStore.attributes.innerForce} kvar)`)
     }
     playerStore.setTemporaryInnerForce(useInnerForce)
     mainStore.setBattlestate(EBattleStates.attack)

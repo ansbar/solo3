@@ -10,6 +10,7 @@ export interface IPage {
   sideEffects?: IPageSidesideEffects
   image?: boolean
   choices?: Array<IChoice>
+  successfulThrowChoices?: Array<IChoice>
   opponent?: EOpponents
   specialCondition?: {
     type: string

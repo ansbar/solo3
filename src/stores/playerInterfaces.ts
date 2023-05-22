@@ -40,7 +40,6 @@ interface Player_temporary {
   useInnerForce: boolean | null
   attackModifier: number 
   damageModifier: number
-  opponentDefenseModifier: number
 }
 
 interface Player_conditions {
