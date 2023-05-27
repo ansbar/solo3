@@ -37,7 +37,8 @@ export enum EOpponents {
   runeweaver = "runeweaver",
   efreti = "efreti",
   torturer = "torturer",
-  captain = "captain"
+  captain = "captain",
+  olderGod = "olderGod"
 }
 
 export enum EItems {
@@ -50,7 +51,8 @@ export enum EItems {
   magicShuriken = "magicShuriken",
   fireLizardEssence = "fireLizardEssence",
   herbs = "herbs",
-  amulet = "amulet"
+  amulet = "amulet",
+  poison = "poison"
 }
 
 export enum EBattleStates {

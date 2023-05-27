@@ -1,8 +1,10 @@
 <script lang="ts" setup>
   import { useMainStore } from "@/stores"
   import { storeToRefs } from "pinia"
+  import { ref } from "vue"
 
-  const { savedData } = storeToRefs(useMainStore())
+  const { savedData, currentPageId } = storeToRefs(useMainStore())
+  const mailTo = ref(`mailto:ansbar@gmail.com?subject=Soloäventyr&body=Gällande sida ${currentPageId.value}`)
 </script>
 
 <template>
@@ -10,7 +12,7 @@
     <div class="wrapper">  
       <span v-if="savedData">Ditt data är sparat.</span>
       <span v-else>Ditt spel är INTE sparat</span>
-      <a href="mailto:ansbar@gmail.com?subject=Soloäventyr">Kontakt</a>
+      <a :href="mailTo">Kontakt</a>
     </div>
   </section>
 </template>

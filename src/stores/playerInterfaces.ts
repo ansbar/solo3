@@ -20,6 +20,7 @@ interface Player_items {
   fireLizardEssence: number
   herbs: number
   amulet: number
+  poison: number
 }
 
 interface Player_modifiers {

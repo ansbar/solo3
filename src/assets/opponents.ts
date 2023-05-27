@@ -535,9 +535,8 @@ const opponents: IOpponents = {
       322: {
         playerAttackType: EAttackType.punch,
         playerDefense: [6],
-        damage: ["1T6"],
+        damage: ["1T6+1"],
         defense: [6],
-        playerThrowDefense: [7],
         blockable: false,
       },
     }
@@ -670,6 +669,30 @@ const opponents: IOpponents = {
       }
     }
   },
+  olderGod: {
+    opponents: 1,
+    attributes: {
+      name: ["Äldre gud"],
+      hp: [22],
+    },
+    win: 309,
+    pages: {
+      321: {
+        playerAttackType: EAttackType.punch,
+        playerDefense: [6],
+        damage: ["2T6+2"],
+        defense: [5],
+        blockable: false,
+      },
+      333: {
+        playerAttackType: EAttackType.kick,
+        playerDefense: [7],
+        damage: ["2T6+2"],
+        blockable: false,
+        defense: [5],
+      },
+    }
+  },  
   yaemon: {
     opponents: 1,
     attributes: {
@@ -837,7 +860,13 @@ const opponents: IOpponents = {
         playerDefense: [0],
         damage: [""],
         defense: [0],
-      },   
+      },  
+      411: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },    
     }
   },
 }

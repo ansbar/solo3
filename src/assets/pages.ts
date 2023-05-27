@@ -109,7 +109,7 @@ export const pageData: IPages = {
   11: {
     choices: [
       {
-        goto: 398
+        goto: 3980
       }
     ]
   },
@@ -1703,7 +1703,9 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        goto: 191,
+        goto: 81,
+      },{
+        goto: 70,
       }
     ]
   },
@@ -1794,7 +1796,7 @@ export const pageData: IPages = {
     opponent: EOpponents.efreti,
     choices: [
       {
-        goto: 191,
+        goto: 149,
       }
     ]
   },
@@ -3032,7 +3034,10 @@ export const pageData: IPages = {
   289: {
     choices: [
       {
-        goto: 1000
+        item: EItems.opalring,
+        goto: 203
+      },{
+        goto: 213
       },
     ]
   },
@@ -3044,16 +3049,25 @@ export const pageData: IPages = {
     ]
   },
   291: {
+    sideEffects: {
+      attributes: {
+        hp: -2
+      }
+    },
     choices: [
       {
-        goto: 1000
+        goto: 249
+      },{
+        goto: 238
+      },{
+        goto: 259
       },
     ]
   },
   292: {
     choices: [
       {
-        goto: 1000
+        goto: 276
       },
     ]
   },
@@ -3085,7 +3099,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        goto: 1000
+        goto: 254
       },
     ]
   },
@@ -3113,14 +3127,14 @@ export const pageData: IPages = {
   299: {
     choices: [
       {
-        goto: 1000
+        goto: 289
       },
     ]
   },
   300: {
     choices: [
       {
-        goto: 1000
+        goto: 179
       },
     ]
   },
@@ -3170,6 +3184,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  305: {
+    choices: [
+      {
+        goto: 101
+      },
+    ]
+  },
   306: {
     opponent: EOpponents.yaemon,
     choices: [
@@ -3210,6 +3231,15 @@ export const pageData: IPages = {
       }
     ]
   },
+  309: {
+    choices: [
+      {
+        goto: 282
+      },{
+        goto: 291
+      },
+    ]
+  },
   310: {
     opponent: EOpponents.humanEater,
     choices: [
@@ -3223,6 +3253,16 @@ export const pageData: IPages = {
     ]
   },
   311: {},
+  312: {
+    opponent: EOpponents.firstOfTwoMonks,
+    choices: [
+      {
+        goto: 322
+      },{
+        goto: 335
+      },
+    ]
+  },
   313: {},
   314: {
     choices: [
@@ -3280,6 +3320,7 @@ export const pageData: IPages = {
       }
     ]
   },
+  317: {},
   318: {
     opponent: EOpponents.olvar,
     choices: [
@@ -3304,6 +3345,39 @@ export const pageData: IPages = {
       }
     ]
   },
+  320: {
+    choices: [
+      {
+        goto: 274
+      },{
+        goto: 265
+      },
+    ]
+  },
+  321: {
+    opponent: EOpponents.olderGod,
+    choices: [
+      {
+        goto: 333
+      },{
+        goto: 349
+      },{
+        goto: 321
+      },
+    ]
+  },
+  322: {
+    opponent: EOpponents.firstOfTwoMonks,
+    choices: [
+      {
+        goto: 312
+      },{
+        goto: 335
+      },{
+        goto: 322
+      },
+    ]
+  },
   323: {
     choices: [
       {
@@ -3312,6 +3386,13 @@ export const pageData: IPages = {
       }, {
         goto: 314
       }
+    ]
+  },
+  324: {
+    choices: [
+      {
+        goto: 289
+      },
     ]
   },
   325: {
@@ -3343,6 +3424,15 @@ export const pageData: IPages = {
     ]
   },
   327: {},
+  328: {
+    choices: [
+      {
+        goto: 158
+      },{
+        goto: 274
+      },
+    ]
+  },
   329: {
     choices: [
       {
@@ -3369,6 +3459,7 @@ export const pageData: IPages = {
       },
     ]
   },
+  331: {},
   332: {
     opponent: EOpponents.humanEater,
     choices: [
@@ -3381,6 +3472,18 @@ export const pageData: IPages = {
       }
     ]
   },
+  333: {
+    opponent: EOpponents.olderGod,
+    choices: [
+      {
+        goto: 321
+      },{
+        goto: 349
+      },{
+        goto: 333
+      },
+    ]
+  },
   334: {
     choices: [
       {
@@ -3388,6 +3491,18 @@ export const pageData: IPages = {
       }, {
         goto: 347
       }
+    ]
+  },
+  335: {
+    opponent: EOpponents.firstOfTwoMonks,
+    choices: [
+      {
+        goto: 312
+      },{
+        goto: 322
+      },{
+        goto: 335
+      },
     ]
   },
   336: {
@@ -3422,6 +3537,15 @@ export const pageData: IPages = {
       }, {
         goto: 293,
       }
+    ]
+  },
+  339: {
+    choices: [
+      {
+        goto: 317
+      },{
+        goto: 328
+      },
     ]
   },
   340: {
@@ -3498,6 +3622,13 @@ export const pageData: IPages = {
       }
     ]
   },
+  346: {
+    choices: [
+      {
+        goto: 399
+      },
+    ]
+  },
   347: {
     sideEffects: {
       items: {
@@ -3510,6 +3641,8 @@ export const pageData: IPages = {
       }
     ]
   },
+  348: {},
+  349: {},
   350: {
     opponent: EOpponents.yaemon,
     choices: [
@@ -3554,6 +3687,26 @@ export const pageData: IPages = {
       },
     ]
   },
+  354: {
+    choices: [
+      {
+        goto: 31
+      },{
+        goto: 15
+      },
+    ]
+  },
+  355: {
+    choices: [
+      {
+        ability: EAbilities.lockPicker,
+        goto: 346
+      },{
+        goto: 381
+      },
+    ]
+  },
+  356: {}, // 356 missing in book
   357: {
     choices: [
       {
@@ -3563,6 +3716,7 @@ export const pageData: IPages = {
       }
     ]
   },
+  358: {},
   359: {
     choices: [
       {
@@ -3582,6 +3736,16 @@ export const pageData: IPages = {
       }
     ]
   },
+  361: {
+    choices: [
+      {
+        goto: 364
+      },{
+        goto: 130
+      },
+    ]
+  },
+  362: {},
   363: {
     sideEffects: {
       attributes: {
@@ -3598,6 +3762,7 @@ export const pageData: IPages = {
       }
     ]
   },  
+  364: {},
   365: {
     sideEffects: {
       attributes: {
@@ -3659,6 +3824,23 @@ export const pageData: IPages = {
       }
     ]
   },
+  369: {
+    choices: [
+      {
+        goto: 399
+      },
+    ]
+  },
+  370: {
+    choices: [
+      {        
+        goto: 305
+      },{
+        item: EItems.poison,
+        goto: 348
+      },
+    ]
+  },
   371: {
     choices: [
       {
@@ -3673,6 +3855,17 @@ export const pageData: IPages = {
       }, {
         goto: 351,
       }
+    ]
+  },
+  373: {
+    choices: [
+      {
+        goto: 333
+      },{
+        goto: 321
+      },{
+        goto: 349
+      },
     ]
   },
   374: {
@@ -3695,6 +3888,15 @@ export const pageData: IPages = {
       {
         goto: 65
       }
+    ]
+  },
+  376: {
+    choices: [
+      {
+        goto: 283
+      }, {
+        goto: 275
+      },
     ]
   },
   377: {
@@ -3720,6 +3922,7 @@ export const pageData: IPages = {
       }
     ]
   },
+  379: {},
   380: {
     choices: [
       {
@@ -3731,11 +3934,36 @@ export const pageData: IPages = {
       }
     ]
   },
+  381: {
+    choices: [
+      {
+        ability: EAbilities.climb,
+        goto: 174
+      },{
+        ability: EAbilities.climb,
+        goto: 2
+      },{
+        attribute: EAttributes.innerForce,
+        goto: 369
+      },{
+        goto: 393
+      },
+    ]
+  },
   382: {
     choices: [
       {
         goto: 372
       }
+    ]
+  },
+  383: {
+    choices: [
+      {
+        goto: 358
+      }, {
+        goto: 373
+      },
     ]
   },
   384: {
@@ -3752,6 +3980,23 @@ export const pageData: IPages = {
         goto: 343,
       }, {
         goto: 327,
+      }
+    ]
+  },
+  386: {},
+  387: {
+    choices: [
+      {
+        goto: 129
+      },{
+        goto: 275
+      },
+    ]
+  },
+  388: {
+    choices: [
+      {
+        goto: 398
       }
     ]
   },
@@ -3786,6 +4031,28 @@ export const pageData: IPages = {
       }
     ]
   },
+  391: {},
+  392: {
+    choices: [
+      {
+        item: EItems.fireLizardEssence,
+        goto: 52
+      },{
+        goto: 91
+      },
+    ]
+  },
+  393: {
+    choices: [
+      {
+        ability: EAbilities.immunity,
+        goto: 388
+      },{
+        goto: 3930
+      },
+    ]
+  },
+  3930: {},
   394: {
     choices: [
       {
@@ -3828,6 +4095,57 @@ export const pageData: IPages = {
       }
     ]
   },
+  397: {
+    choices: [
+      {
+        goto: 386
+      },{
+        goto: 130
+      },
+    ]
+  },
+  398: {
+    choices: [
+      {
+        goto: 383
+      },{
+        ability: EAbilities.climb,
+        goto: 392
+      },
+    ]
+  },
+  3980: {
+    choices: [
+      {
+        goto: 383
+      }
+    ]
+  },
+  399: {
+    choices: [
+      {
+        goto: 331
+      },{
+        item: EItems.shuriken,
+        goto: 269
+      },{        
+        goto: 247
+      },{
+        ability: EAbilities.poisonArrows,
+        goto: 230
+      },
+    ]
+  },
+  400: {
+    choices: [
+      {
+        ability: EAbilities.immunity,
+        goto: 246
+      },{        
+        goto: 391
+      }
+    ]
+  },
   401: {
     opponent: EOpponents.yaemon,
     choices: [
@@ -3836,6 +4154,16 @@ export const pageData: IPages = {
       }, {
         goto: 228
       }
+    ]
+  },
+  402: {
+    choices: [
+      {
+        goto: 383
+      },{
+        ability: EAbilities.climb,
+        goto: 392
+      },
     ]
   },
   403: {
@@ -3855,6 +4183,17 @@ export const pageData: IPages = {
       }
     ]
   },
+  405: {
+    choices: [
+      {
+        goto: 353,
+      }, {
+        goto: 374,
+      }, {
+        goto: 286,
+      }
+    ]
+  },
   406: {
     choices: [
       {
@@ -3869,6 +4208,21 @@ export const pageData: IPages = {
       }
     ]
   },
+  407: {
+    sideEffects: {
+      attributes: {
+        hp: -8
+      }
+    },
+    choices: [
+      {
+        ability: EAbilities.playDead,
+        goto: 376
+      },{
+        goto: 103
+      },
+    ]
+  },
   408: {
     choices: [
       {
@@ -3876,6 +4230,13 @@ export const pageData: IPages = {
       }, {
         goto: 273
       }
+    ]
+  },
+  409: {
+    choices: [
+      {
+        goto: 289
+      },
     ]
   },
   410: {
@@ -3891,6 +4252,16 @@ export const pageData: IPages = {
         goto: 167
       }, {
         goto: 159
+      },
+    ]
+  },
+  411: {
+    opponent: EOpponents.yaemon,
+    choices: [
+      {
+        goto: 68
+      },{
+        goto: 155
       },
     ]
   },
@@ -3921,12 +4292,36 @@ export const pageData: IPages = {
     ]
   },
   41201: {},
+  413: {
+    choices: [
+      {
+        ability: EAbilities.acrobat,
+        goto: 29
+      },{
+        goto: 379
+      },
+    ]
+  },
   414: {
     choices: [
       {
         goto: 342
       }, {
         goto: 375
+      }
+    ]
+  },
+  415: {
+    choices: [
+      {
+        goto: 3980
+      },
+    ]
+  },
+  416: {
+    choices: [
+      {
+        goto: 289
       }
     ]
   },
@@ -3938,6 +4333,26 @@ export const pageData: IPages = {
       }, {
         goto: 327,
       }
+    ]
+  },
+  418: {
+    choices: [
+      {
+        goto: 138
+      }, {
+        goto: 402
+      }, {
+        goto: 166
+      },
+    ]
+  },
+  419: {
+    choices: [
+      {
+        goto: 283
+      },{
+        goto: 275
+      },
     ]
   },
   420: {

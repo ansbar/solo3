@@ -30,7 +30,8 @@ export const languageGeneral: ILanguageGeneral = {
     firstOfTwoMonks: "Den förste av Den Ledes präster",
     secondOfTwoMonks: "Den andre av Den Ledes präster",
     torturer: "Torteraren",
-    captain: "Kaptenen"
+    captain: "Kaptenen",
+    olderGod: "Äldre gud"
   },
   gameHelp: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -62,7 +63,8 @@ export const languageGeneral: ILanguageGeneral = {
     magicShuriken: "förtrollad kaststjärna",
     fireLizardEssence: "eldödle-essens",
     herbs: "örter (8 kroppspoäng)",
-    amulet: "Amulett"
+    amulet: "Amulett",
+    poison: "Intets blod"
   },
   defense: {
     punch: "Försvar mot slag",
@@ -930,7 +932,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   119: {
-    mainText: "Flammor slår upp över dess massiva kropp när Elementarvarelsen försöker gripa tag i dig. Du sparkar med all din styrka i hopp om att göra någon verkan på den glödande kolossen. Om du lyckas träffa den, måste du dra ett från dina KROPPSPOANG, eftersom ﬂammorna bränner din fot.",
+    mainText: "Flammor slår upp över dess massiva kropp när Elementarvarelsen försöker gripa tag i dig. Du sparkar med all din styrka i hopp om att göra någon verkan på den glödande kolossen. Om du lyckas träffa den, måste du dra ett från dina KROPPSPOÄNG, eftersom ﬂammorna bränner din fot.",
     stillAlive: "Om Efretin fortfarande står framför dig försöker den slå dig till marken med båda sina väldiga nävar. Ditt Försvar mot dessa hammarslag är 7.",
     choices: [
       "Du kan använda järnnäven",
@@ -2148,9 +2150,10 @@ export const languagePages: ILanguagePages = {
     ]
   },
   289: {
-    mainText: "",
+    mainText: "Det finns ingen vid den norra porten som kan se dig lämna den underliga staden Fiendil, men du bestämmer dig för att lägga så många mil som möjligt mellan dig och dess underliga invånare.",
     choices: [
-      "Gå vidare",
+      "Har du på dig en Opalring?",
+      "Om du inte har det"
     ]
   },
   290: {
@@ -2160,13 +2163,15 @@ export const languagePages: ILanguagePages = {
     ]
   },
   291: {
-    mainText: "",
+    mainText: "Fyrfatet fräser till när det träffas av vattnet som skvätter över kammaren när du hoppar upp bakom Torteraren. Han sveper till i blindo med det glödgade järnet runt och bakom sig och lyckas träffa dig med det.\nDu förlorar 2 KROPPSPOÄNG när det äter sig in i ditt kött. Om du fortfarande lever hoppar du bakåt från järnet när han släpper det och drar yxan från bältet. Han grinar mordiskt mot dig.",
     choices: [
-      "Gå vidare",
+      "Om du tvättar grinet från hans ansikte med en Tigersprångets spark",
+      "eller Tigertassens slag",
+      "eller ett Tigertandskast"
     ]
   },
   292: {
-    mainText: "",
+    mainText: "Stjäman flyger in i blixten och virvlar iväg med ett vinande ljud.\nBlixten ändrar kurs och exploderar med en smäll utan att göra någon skada. Du cirklar runt Runvävare och letar efter en öppning.",
     choices: [
       "Gå vidare",
     ]
@@ -2209,13 +2214,13 @@ export const languagePages: ILanguagePages = {
     ]
   },
   299: {
-    mainText: "",
+    mainText: "Leksaksmakaren skriker förtvivlat bakom dig när du snabbt går förbi.\nDu håller dig undan från munkarna och tillbringar en del tid med att gå på de lugna gatoma i den här staden som nästan tycks avstängd från resten av Människoländerna. Du får inte veta något, ingen tycks våga säga mer än några lustigheter till dig. Du beslutar dig förtvivlat för att bege dig norrut igen. Du vet inte om Yaemon fortfarande är framför dig, men du kan inte riskera att låta honom nå Förändringens pelare före dig.",
     choices: [
       "Gå vidare",
     ]
   },
   300: {
-    mainText: "",
+    mainText: "Skjulets tak läcker och det luktar fuktigt överallt, men den gamla kvinnan som bor här med sin efterblivne son ställer inga frågor och ger dig lite varm välling. Du tackar henne och lämnar två guldstycken under en kruka i skafferiet där hon kommer att hitta dem senare.\nSedan slår du dig ned för att vänta. När skymningen har fallit hörs ett flaxande utanför fönstret som är täckt av spindelväv. Du öppnar det och Deidras vita duva ﬂyger in. Den släpper ett papper från näbben i ditt knä, innan den ﬂaxar i väg över stadsmuren. Meddelandet lyder:\nSkynda dig till Fruktans borg. Ditt byte har lämnat den Ledes kloster i staden och tänker stanna i Borgen tills de ska bege sig över snövidderna till Förändringens pelare.\nDu frågar kvinnan om vägen, men hon blir vettskrämd när du nämner borgen och bönfaller dig att inte gå dit. \"Jag måste,\" säger du och till sist säger hon åt dig att gå mot nordväst över Hedlandet mot Vättetandsbergen. Du går håller dig till stadens utkant och ger dig ut på landsbygden vid en skylt som berättar om en krog som kallas Hydrans Huvuden.",
     choices: [
       "Gå vidare",
     ]
@@ -2245,6 +2250,12 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  305: {
+    mainText: "Honoric och Manse Dödsmagikern ligger båda döda, men ditt uppdrag är inte slutfört ännu. Det återstår fortfarande att hämnas din andliga fader och döda Yaemon, Flammans Stormästare i Röda Syrsans orden. Om du misslyckas kommer han att uttala det maktens ord vid Förändringens pelare som kommer att binda Kwon i Inferno.\nDu går ned på Stora Kärntornets tak.",
+    choices: [
+      "Gå vidare",
+    ]
+  },
   306: {
     mainText: "Yaemon går fram och måttar en Tigersprångets spark mot ditt ansikte, men du stiger åt sidan och vänder dig bort från den. Yaemons spark visslar förbi din rygg när du driver upp sidan av din fot i Yaemons mage och sedan vidare upp mot huvudet på honom. Han reagerar snabbt och blockerar din första spark med underarmen, men den andra överraskar honom och träffar i ansiktet. Huvudet slås bakåt och han vacklar till, tillfälligt omtöcknad. Dra ifrån 6 av hans KROPPSPOÄNG. Fördubbla det om du använde Inre styrka.",
     stillAlive: "Om han fortfarande lever återhämtar han sig, och du kan följa upp ditt anfall.",
@@ -2272,6 +2283,13 @@ export const languagePages: ILanguagePages = {
       "eller ett kast"
     ]
   },
+  309: {
+    mainText: "Du har dödat en odödlig och befriat Orb från ett av de monster som härjade i världen innan människan kom från stjämorna. Du andas djupt men tyst och tar dig förbi den fallna kroppen fram till kanten av den becksvarta, underjordiska floden som förser vallgraven med vatten. Den enda vägen vidare är att dyka ned i det iskalla vattnet. Du glider ned i vattnet, ned i det kalla djupet och märker att du har sten över huvudet innan du kommer till ytan. Du simmar med kraftfulla tag genom undervattenstunneln i en minut, innan ett skimrande ljus över dig talar om för dig att du kan gå upp till ytan. När du gör det fylls dina öron av skriket från en man. En ung pojke som är kedjad vid väggen stirrar på dig, men säger ingenting. Du har kommit upp i tortyrkammaren under Fruktans borg. En vippstol hänger över dig och den sömnlöse Torteraren arbetar fortfarande. Han sätter ett glödgat järn mot köttet på en man som hänger i kedjor från taket.\nTorteraren har en stor yxa i bältet och hans breda, muskulösa rygg dryper av svett i hettan från ett fyrfat fyllt med glödande kol. Han bär läderarmband med grova nitar och en bödels svarta huva.",
+    choices: [
+      "Om du kastar en Shuriken mot honom innan du dyker tillbaka under ytan",
+      "Om du kastar dig upp ur vattnet och anfaller honom"
+    ]
+  },
   310: {
     mainText: "Din knutna näve klyver hörbart luften när du slår mot Människoätarens kropp.",
     choices: [
@@ -2283,6 +2301,15 @@ export const languagePages: ILanguagePages = {
   },
   311: {
     mainText: "Den lilla pilen flyger förbi hans öra och magikern spärrar upp ögonen av förvåning. När du bereder dig att sparka magikern den här gången pekar han med fingret mot dig och uttalar ord som verkar tappa dig på din styrka. Du stapplar kraftlöst fram när Vätten hoppar ned från sitt slottstom. Magikern går bakåt och tittar på när Vätten närmar sig dig och viftar med sin treudd. Du är för svag för att springa och han kör in treuddens spetsar i din mage innan han lyfter dig på den och drar ut dig i vallgraven. Vattnet kokar när de Flytande munnarna kommer för att äta, och på några minuter har ditt kött slitits från benen."
+  },
+  312: {
+    mainText: "Du springer fram som för att slå, men hoppar i stället upp i luften i sista ögonblicket och försöker få dina fötter runt hans huvud, innan du vrider till och kastar honom till marken.",
+    choices: [
+      "Du kan försöka använda Tigertassens slag",
+      "eller en Kluven blixtspark"
+    ],
+    successfulThrow: "Om du lyckas, vrider du till och kastar honom virvlande till golvet, och landar sedan själv på fötterna.",
+    unsuccessfulThrow: "Om du misslyckas med att kasta honom försöker han sparka dig i ryggen när du mjukt landar på fötterna. Du har 6 i Försvar mot hans spark."
   },
   313: {
     mainText: "Det är många dagars marsch över snövidderna. Du vet inte exakt var staden ligger och förbannar den ödsliga tomheten, för det finns ingen ledtråd till vart du ska gå. Till sist får du syn på de vita kupolerna och ishusen i staden Nordansnö på kvällen till den natt då månen blir röd, en natt utan slut. Du är för sent ute. Det eviga mörkret har kommit och Kwon har fjättrats i lnferno. Din lnre kraft försvinner och och det finns ingenting du kan göra för att förhindra att ondskan tilltar i styrka. Du har misslyckats."
@@ -2326,6 +2353,9 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Du har 8 i försvar mot monstrets trädstam. Den är omöjlig att blockera eftersom den är så stor och tung, men det är relativt lätt att hoppa undan från den eftersom du är så liten och snabb när du försöker hoppa, skutta och hjula undan den."
   },
+  317: {
+    mainText: "Dörren glider lätt upp på de oljade gångjärnen och du smyger tyst in i rummet. Du känner skuggan av fruktan som strålar ut från Honorics svärd Sorcerak, som plötsligt uttalar hans namn. Han vaknar till din häpnad omedelbart, rullar ned från sängen på den bortre sidan och tar sitt svärd. Du hoppar över sängen, men han är beredd och ropar högt när den vilda striden börjar. Han grymtar till av smärta när du kör in din fot i hans sida, men han är hård och otroligt skicklig med svärdet. Han skär rakt igenom din jämärm och din vänsterhand bryts och blir obrukbar, men du svarar med ett väldigt slag som slår honom tillbaka. Du ser fruktan i Honorics ansikte när han inser hur dödligt farlig du är, men han anfaller med förnyat raseri. Utan förvarning fälls du av ett slag bakifrån, och när du tittar upp ser du Yaemons orörliga ansikte. Honorics klinga genomborrar ditt hjärta och du dör.",
+  },
   318: {
     mainText: "Barbaren har hetsat upp sig till ett bärsärkarraseri och klyver luften med mäktiga svärdshugg, obekymrad om smärta och enbart törstande efter ditt blod. Draksvansen tar honom med överraskning, när du försöker slå undan benen under honom. Han har bara 4 i försvar när hans svärd klyver luften över dig.",
     choices: [
@@ -2344,11 +2374,42 @@ export const languagePages: ILanguagePages = {
       "eller en spark"
     ],
   },
+  320: {
+    mainText: "Du går över det Stora Kärntornets tak tills du står nedanför tornet med Domsvärdets ﬂagga. Sedan klättrar du upp, tyst som en mus. Trappan är upplyst av ﬂera tacklor i bronshållare på väggen och längst upp ﬁnns en tung ekdörr. Ovanför dörren finns en smal öppning, precis stor nog för att du ska kunna kräla genom den och upp på vinden.",
+    choices: [
+      "Oljar du försiktigt dörrens gångjäm innan du öppnar den",
+      "Om du hellre undersöker vinden för att se om du kan spionera på personen i rummet nedanför"
+    ]
+  },
+  321: {
+    mainText: "När du går fram för att slå till sänker besten sitt huvud för att storma fram mot dig och vrålar vildsint. Du måste möta den odödlige jätten ansikte mot ansikte.",
+    choices: [
+      "Om du överlever kan du använda Bevingade hästens spark",
+      "eller Draksvanskastet",
+      "eller Järnnäven igen"
+    ],
+    stillAlive: "Om varelsen från det glömda förﬂutna överlever, försöker han sprätta upp din buk med en släng från huvudet när den tillfälligt går ned på alla fyra. Du har 6 i Försvar mot det."
+  },
+  322: {
+    mainText: "Du höjer händerna utan förvarning och försöker slå ihop dem på vardera sidan om motståndarens huvud.",
+    choices: [
+      "Om du fortfarande lever kan du använda Tigertandskastet",
+      "eller en Kluven blixtspark",
+      "eller slå igen. "
+    ],
+    stillAlive: "Om han fortfarande lever svarar han på ditt dubbla Tigertassens slag så snabbt att du inte hinner blockera, när han duckar ned och gör ett Kobraslag upp mot ditt solar plexus. Du har 6 i försvar mot hans slag."
+  },
   323: {
     mainText: "Du tar upp några fiskfjäll ur en ficka och lägger dem över ögongloberna. Du kan se ganska bra genom dem, men de gör att du ser blind ut. Du sätter dig ned för att tigga i närheten av ingången till klostret och hör tillräckligt för att övertygas om att munkarna som dyrkar den Lede är genomonda. Men det är en kvinna i en svart kappa täckt med ett mönster av grön spindelväv som drar till sig din uppmärksamhet. Hon går mot klostret tillsammans med två munkar klädda i rött, och de tycks gräla om någonting. Hon förhandlar om ett pris för en besvärjelse som de vill att hon ska kasta i ”Spindelvävshallen ”. Hon påpekar att om den är deras enda försvar mot spioner i korridoren som förbinder refektoriet med sovcellerna, är besvärjelsen Nullaqs nät värd mer än trehundra guldmynt. Du tar upp din huva med dess magra skörd av kopparmynt och traskar långsamt bort för att ligga lågt tills mörkret faller. Du bestämmer dig för att utnyttja din vetskap om att Spindelvävshallen bara har en fälla, spindelväven från häxan som du såg tidigare.",
     choices: [
       "Har du färdigheten Klättra? Om du har det",
       "Om du inte har det, eller föredrar att inte klättra"
+    ]
+  },
+  324: {
+    mainText: "När du slår till den siste munken med vad du antar är ett dödande slag, ger fruktan honom styrka att blockera slaget i sista stund och han kastar sig in under oxkärran till andra sidan. Han haltar iväg till ett närbeläget hus och du bestämmer dig för att lämna staden genom norra stadsporten innan han hinner hämta förstärkningar.",
+    choices: [
+      "Gå vidare",
     ]
   },
   325: {
@@ -2370,6 +2431,13 @@ export const languagePages: ILanguagePages = {
   327: {
     mainText: "Du slår till gång på gång men Shaggothen tycks oberörd. Den virar sina tentakler runt dig och börjar sjunka tillbaka ned i träsket. Du dras ned med den och dina lungor fylls av slem. Den kommer att lägga sin avkomma i din kropp och när de växer blir du mat åt dem."
   },
+  328: {
+    mainText: "Du hoppar upp, svingar dig in i hålet som leder upp på vinden och klämmer dig igenom till brädoma ovanför. Du känner dig för efter lösa brädor och kravlar försiktigt fram till en spricka i innertaket. Honoric sover och hans arroganta anletsdrag verkar mindre grymma än när han är vaken. Han har munnen öppen och snarkar lätt. Hans väldiga svärd ligger utdraget ur skidan bredvid honom. Du kan inte se några fällor i rummet.",
+    choices: [
+      "Om du vill hälla din enda dos av lntets blod nedför en vaxad tråd i Hononcs mun",
+      "Om du föredrar att gå tillbaka nedför trappan och gå in genom dörren efter att ha oljat gångjärnen"
+    ]
+  },
   329: {
     mainText: "Du formar ett ”O” med tungan och lägger försiktigt en av giftpilarna på den med en skicklig rörelse. Du andas in och spottar ut. Pilen har fastnat i munken innan han har förstått vad du gör. Giftet verkar. Han viker sig dubbel i krampryckningar på den leriga vägen och dör. Du ödslar ingen tid, utan tar av honom hans röda kläder och drar dem över din egen Skuggkrigardräkt. Du går med lugn säkerhet in i sovsalarna i klostret och tar dig till Spindelvävshallen.",
     choices: [
@@ -2385,6 +2453,9 @@ export const languagePages: ILanguagePages = {
       "eller en spark"
     ]
   },
+  331: {
+    mainText: "När vinden visslar runt tornen på Stora Kärntornet hörs plötsligt ett plågat ylande. För ett ögonblick reser sig håren på din nacke av skräck, tills du inser att det bara är vinden som viner i en skottglugg i ett av tornen. Kaptenen rycker till och du väljer det här ögonblicket för att smyga fram bakom honom när han rör sig mot takkanten. Du använder Bevingade hästens spark för att slänga honom över bröstvämet och han faller långt innan han inser vad som har hänt. När han gör det skriker han av skräck och ropar \"Inkräktare\", innan han slår i stenläggningen nedanför med en krasch. När du drar dig tillbaka från kanten och går mot ett av tornen lyses hela taket upp. När du tittar upp ser du Manse Dödsmagikern. Han har ett förvridet leende på sina läppar när han kastar en besvärjelse som gör att du skakar hjälplöst.\nHonoric kommer ut ur dörren från sitt torn och du är hjälplös när Marskalken över Domsvärdslegionen hugger av dig huvudet vid axlarna.",
+  },
   332: {
     mainText: "Du snurrar runt och kör upp utsidan av foten mot de blå ådrorna på Människoätarens strupe, samtidigt som den försöker slå undan dig med klubban.",
     choices: [
@@ -2394,12 +2465,30 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om Människoätaren fortfarande lever försöker den slå in ditt huvud med den tunga klubban. Du har 7 i försvar mot det klumpiga slaget."
   },
+  333: {
+    mainText: "Odjuret försöker ta dig i en krossande omfamning, men du gör en volt mot den, under de famlande händerna och rullar upp på fötter, samtidigt som du utdelar en Bevingade hästens spark.",
+    choices: [
+      "Om du överlever kan du använda Järnnäven",
+      "eller Draksvanskastet",
+      "eller sparka den igen"
+    ],
+    stillAlive: "Om monstret fortfarande lever försöker det gripa tag i dig och spetsa dig på sitt väldiga horn. Du har 7 i Försvar mot det när du försöker hoppa bakåt utom räckhåll."
+  },
   334: {
     mainText: "Till din bestörtning väljer månen det här ögonblicket att komma fram från bakom ett moln och munken får syn på din skugga. \"Vem är du?\" frågar han spänt.",
     choices: [
       "Ska du gå fram till honom och anfalla",
       "eller använda en Shuriken"
     ]
+  },
+  335: {
+    mainText: "Utan en darrning i musklerna som visar vad du tänker göra innan du rör dig, tar du ett steg till höger och gör två snabba sparkar åt sidan i följd, först mot sidan av hans vänstra knä och sedan upp mot vänster sida av hans huvud. Du tar honom med överraskning.",
+    choices: [
+      "Om du fortfarande lever kan du använda Tigertandskastet",
+      "eller Tigertassens slag",
+      "eller sparka till igen"
+    ],
+    stillAlive: "Om munken fortfarande lever låtsas han slå till, och måttar sedan en spark med hälen mot din hals. Du har 7 i Försvar mot hans spark."
   },
   336: {
     mainText: "Den Tvåhövdade Jätten slår i marken så att klippan spräcks. Hans läppar är täckta av saliv blandat med blod. Du fortsätter framåt och i dimman ser du grottan som den bodde i. Du undersöker den noga och hittar ett urval av ben som har knäckts för att komma åt märgen, och en liten säck full med kopparstycken. Jättens skatt är utan värde för dig. Den är för tung för att bära med sig. Men du hittar en svart läderhandske, sydd med fin silvertråd. Den är magisk till sin natur, en Slaghandske, och du tar på dig den. Lägg +1 till din Slagmodifikation när du använder Järnnäven, Tigertassen eller Kobraslaget. \nNär du fortsätter genom kullarna lättar dimman och du beger dig in i den vilda ödemarken mot staden Fiendil.",
@@ -2419,6 +2508,13 @@ export const languagePages: ILanguagePages = {
       "Använder du Tigersprångets spark",
       "eller Virvelkastet",
       "eller Tigertassens slag"
+    ]
+  },
+  339: {
+    mainText: "Du går in i tornet och glider ljudlöst uppåt. Trappan är upplyst av ﬂera facklor i bronshållare på väggen. Du är på din vakt mot fällor och rör dig tyst som en katt på fågeljakt. Längst upp i tornet, bortom det enda fönstret, finns en tung ekdörr. Ovanför dörren finns en smal öppning, precis stor nog för att du ska kunna ta dig igenom den och som leder till den fuktiga vinden.",
+    choices: [
+      "Ska du försiktigt olja dörrens gångjärn innan du öppnar den",
+      "eller ska du undersöka vinden först för att se om du kan spionera på mannen i rummet nedanför"
     ]
   },
   340: {
@@ -2468,11 +2564,23 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Du misslyckas med att slänga Människoätaren i däcket och den försöker krossa dig med spikklubban. Du har 7 i Försvar mot den fallande klubban när du försöker rulla bakåt och upp på händerna, för att sedan hoppa upp på fötter. Du har inte tid att blockera det kraftiga slaget."
   },
+  346: {
+    mainText: "När du har petat med en ståltråd ett litet slag glider låset tillbaka och du går in i Kärntornets hall. Du stänger snabbt porten när du hör fotsteg närma sig inifrån. Utan ett ögonblicks tvekan går du över till väggens bortre hörn, hoppar upp och kilar fast dig mellan taket och de två väggarna. Du hänger där i ungefär tjugo minuter medan Förvaltaren och en vakt som har dykt upp under dig planerar en räd mot vinkällaren. Till sist försvinner de. Du hoppar ned på golvet och gnider liv i dina domnade lemmar, innan du går uppför spiraltrappan i motsatta änden av hallen. Halwägs upp lägger du märke till ett nät av fina trådar som sträcker sig över trappan och är knutna till ståltrådar som försvinner in genom hål i den inre väggen. Du går ned på händerna och \"går\" uppför trappan, samtidigt som du känner efter de nästan osynliga trådarna och spetsar öronen efter minsta ljud. Snart är du förbi dem.",
+    choices: [
+      "Gå vidare",
+    ]
+  },
   347: {
     mainText: "Din Shuriken virvlar mot honom och glänser i månskenet. Han försöker kasta sig åt sidan, men den träffar honom i armen i stället för i strupen som du hade tänkt dig. Han ropar på hjälp och faller bakåt, med handen om armen. Du kan inte få tillbaka din Shuriken. Stryk den från Speltabellen. Du bestämmer dig för att du skulle riskera hela ditt uppdrag om du stannade, så du försvinner snabbt på bakgatorna och håller dig undan i ett utbränt bageri under natten. Du inser att munken kan ha känt igen dig som en Skuggkrigare och bestämmer dig för att lämna Domedag, fast besluten att inte låta Yaemon nå fram till Förändringens pelare före dig. Du förklär dig till tiggare och lämnar staden följande morgon.",
     choices: [
       "Gå vidare"
     ]
+  },
+  348: {
+    mainText: "Du går över Stora Kärntornets tak och går in i tornet som ståtar med Röda Syrsans banér. Du glider tyst uppför den mörka trappan och känner dig noga för efter fällor. Det ﬁnns inga, och snart kan du lägga örat mot dörren in till rummet längst upp i trappan. Du hör ingenting inifrån rummet och oljar ekdörrens gångjärn innan du försiktigt öppnar den. Yaemon, Flammans Stormästare av Röda Syrsans orden, sitter med korslagda ben på golvet i rummet och mediterar. Han bär stridsmunkens röda dräkt och ett svart bomullsbälte. Han ropar till av förvåning när han reser sig upp. Sedan blir hans ansikte bistert och orörligt igen. Han bugar för dig. ”Välkommen, Skuggkrigare. Du är Hämnaren. Jag dödade din andlige far, ” säger han. Du bugar dig också och går till anfall. Yaemon visar sig vara utomordentligt skicklig på att slåss. Han sparkar, slår och blockerar med bländande snabbhet och styrka, men ditt kontrollerade hat eggar dig till än större styrka och snabbhet. Yaemon är hårt pressad tills du hör fotsteg i trappan nedanför. Hononic har svarat på Yaemons rop och han rusar in bakom dig och viftar med sitt rykande svärd, Sorcerak. Du motstår skräcken som det Magiska svärdet utstrålar, men du kan inte stå emot dem bägge två, för de är två av de främsta krigare som Orb någonsin har skådat.\nTill sist slår Yaemons näve in i din tinning, samtidigt som Sorcerak hugger av din hals och ditt huvud rullar runt i rummet som en boll. Du har misslyckats. Nu kan ingenting stoppa dessa män. Ondskan härskar i världen.",
+  },
+  349: {
+    mainText: "Du glider in under dess fötter, men du kan inte rubba dess väldiga ben. Den faller i stället ihop över dig, så att luften går ur dig och din bröstkorg krossas. Plöstligt stöter odjuret, som har ett utmärkt luktsinne, till och spetsar dig på sitt horn med de kraftiga armarna. Du vrider dig fortfarande svagt när den börjar äta upp dig. ",
   },
   350: {
     mainText: "När han ﬂyger mot dig hoppar du baklänges upp i handstående och sedan bakåt på fötter igen ﬂera gånger, tills du är utom räckvidd för Yaemons anfall. När han kommer ned byter du riktning och hoppar snabbt mot honom. Du stannar upp alldeles framför honom precis när han smidigt landar på fötterna. Du har möjlighet att anfalla.",
@@ -2504,12 +2612,32 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om de fortfarande lever anfaller de dig. Du har 6 i Försvar mot deras båda anfall och 8 om bara en är i livet."
   },
+  354: {
+    mainText: "Vakten tvekar och säger, \"Vänta här medan jag hämtar de nödvändiga papperen. Du behöver ett passerkort\" Han gör tecken till en annan soldat att ta över och går in under fällgallret till borggården. När du stirrar på hans försvinnande rygg inser du att Mortavalon ligger hundratals kilometer söderut, en lång väg att vandra sedan det senaste uppträdandet. Man du kan kanske säga att du är på väg hem till Nordansnö.",
+    choices: [
+      "Väntar du på att vakten ska komma tillbaka",
+      "eller går du din väg, om han skulle förbereda en fälla"
+    ]
+  },
+  355: {
+    mainText: "Vakterna ser in i den ﬂammande elden som förblindar dem för allt annat runt dem. En av dem muttrar, \"Bara ett vedträ som tog eld,\" när du ljudlöst smyger förbi dem och nedför trappan till lnre borggården nedanför. En vakt går runt på Inre borggården, men du väntar tills han är utom synhåll på andra sidan Stora Kärntornet, och glider som en skugga genom gräset till en liten port som leder in i själva Tornet.",
+    choices: [
+      "Om du har färdigheten Dyrka upp lås kan du försöka öppna den stängda porten",
+      "Om du inte har färdigheten, eller inte vill använda den"
+    ]
+  },
+  356: {
+    mainText: "356 missing in book",    
+  },
   357: {
     mainText: "Pojken skriker till när han dör och männen slår med piskan över oxen och kör därifrån, med Kobramannen släpande efter. Det ﬁnns en grotta under ett klipputsprång alldeles över dig på bergssidan. ”Den vägen till Mortavalon,” ropar en av männen och pekar mot grottan.",
     choices: [
       "Om du fortsätter längs vägen",
       "Om du undersöker grottan"
     ]
+  },
+  358: {
+    mainText: "Monstret hukar sig när du klättrar uppför grottväggen och fäster dina Kattklor i sprickor i grottaket. Den är kedjad vid väggen med en tung kedja som är lång nog att räcka till din sida av grottan. Plötsligt kastar sig odjuret, som har ett utmärkt luktsinne, mot dig, sliter ned dig från taket och spetsar dig på sitt hom med de kraftiga annama. Du vrider dig fortfarande svagt när den börjar äta upp dig.",
   },
   359: {
     mainText: "Du går fram mot honom och utdelar utan förvarning en Flygande hästens spark mot hans strupe.",
@@ -2525,6 +2653,16 @@ export const languagePages: ILanguagePages = {
       "Du kan hoppa över till Kaparnas skepp och anfalla piratkaptenen"
     ]
   },
+  361: {
+    mainText: "Det är helt mörkt inne i tornet, men när du tittar upp mot dörren längst upp ser du ett rött öga som hänger fritt i tomma intet. Det glöder, och ögonvitan är fruktansvärt blodsprängd. När du tittar på det blinkar det och försvinner plötsligt.",
+    choices: [
+      "Om du lyssnar vid dörren till rummet",
+      "Om du går över det Stora Kärntornets tak till tornet med Svarta virvelströmmens ﬂagga"
+    ]
+  },
+  362: {
+    mainText: "Det finns ingenting du kan göra när träsket sluter sig om dig. lnte ens Trollet som jagade dig vågar göra något för att rädda sin middag.",
+  },
   363: {
     mainText: "När du griper tag i hans hand pirrar det till och du får en stöt som lamslår din kropp. Du förlorar 7 KROPPSPOÄNG. Om du fortfarande lever övervinner du smärtan som skulle ha förlamat de ﬂesta - din träning har ofta inneburit värre saker- och använder Järnnävens slag för att slå honom i magen. Sedan svänger du runt och använder Bevingade hästens spark. Du slår in foten i ansiktet på honom och sparkar ut honom i vallgraven. Vattnet kokar när de Flytande munnarna kastar sig mot sitt byte. lnom en minut har de slitit köttet från benen på honom. Du klättrar upp mot Vätten i tornet. Odjuret gör sig till inför publiken, säker på att vinna i dag också. Han slår sig för bröstet, som är dubbelt så brett som ditt, och svingar treudden med en hand. Tornet är grovt murat med många fästen för händerna, och du rör dig runt det så att Vätten inte vet exakt var du beﬁnner dig. Sedan griper du tag i en utskjutande sten med händerna och svingar dig upp i tornet bakom honom. Han svänger runt och du anfaller honom blixtsnabbt.",
     choices: [
@@ -2532,6 +2670,9 @@ export const languagePages: ILanguagePages = {
       "eller Virvelkastet",
       "eller Tigertassens slag"
     ]
+  },
+  364: {
+    mainText: "Du hör ingenting inifrån rummet och du oljar ekdörrens gångjärn innan du försiktigt skjuter upp den. Yaemon, Flammans Stormästare av Röda Syrsans orden, sitter med korslagda ben på golvet där inne och mediterar. Han är klädd i krigarmunkens röda dräkt med ett svart bomullsbälte. Ansiktet är bistert och orörligt när han ställer sig upp och bugar för dig.\n\"Välkommen, Skuggkrigarre, du är Hämnaren och jag dödade din andlige far,\" säger han. Du bugar för honom och anfaller. Yaemon visar sig vara mycket skicklig på att slåss. Han sparkar, slår och blockerar med förblindande snabbhet och styrka, men ditt kontrollerade hat eggar dig till än större handlingskraft. Yaemon är hårt ansatt tills du hör fotsteg i trappan nedanför. Det röda ögat var en besvärjelse kastad av Manse Dödsmagikern. Han såg dig genom det svävande ögat och kallade på vaktema, som kommer inrusande i rummet bakom dig. Du vänder dig om för att blockera ett svärdshugg, men Yaemon kastar dig till marken och en av soldaterna naglar fast dig vid golvplankoma med svärdet. Du har misslyckats med ditt uppdrag.",
   },
   365: {
     mainText: "Kaststjärnan missar och fastnar i kojans trävägg, när energiklotet träffar dig och exploderar. Du förlorar 6 KROPPSPOÄNG när explosionen bränner dig och kastar dig bakåt några steg. Om du fortfarande lever morrar du av vrede när du cirklar runt Runvävare.",
@@ -2567,6 +2708,19 @@ export const languagePages: ILanguagePages = {
       "Gå vidare"
     ]
   },
+  369: {
+    mainText: "Du lägger hälen mot portlåset och luften går ur dig när du låter din INRE KRAFT välla fram. Låset går av med en smäll och porten glider upp. Du går in i Kärntornet och stänger snabbt porten när du hör steg närma sig inifrån. Utan ett ögonblicks tvekan går du över till det bortre hörnet av väggen, hoppar upp och kilar fast dig mellan taket och väggarna. Du hänger där i tjugo minuter medan Förvaltaren och vakten som har dykt upp under dig planerar en räd mot vinkällaren.\nTill sist försvinner de. Du hoppar ned på golvet och gnuggar liv i dina domnade lemmar, innan du går uppför spiraltrappan som går upp från andra sidan hallen. Halwägs upp lägger du med din skarpa blick lägger märke till ett nät av tunna trådar som sträcker sig över trappan och sitter fast i ståltrådar som försvinner genom hål i den inre väggen. Du går ned på händer och \"går\" uppför trappan, samtidigt som du känner efter de nästan osynliga trådarna och spetsar öronen efter minsta ljud. Strax är du förbi dem.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  370: {
+    mainText: "Har du använt det dödligaste av gifter, lntets blod?",
+    choices: [
+      "Om du har gjort det",
+      "Om du inte har gjort det"
+    ]
+  },
   371: {
     mainText: "Du fortsätter att slåss och fäller två eller fler av de svartmuskiga Sjörövarna. Men besättningen övermannas snabbt, några dårar ger sig till och med. Du är omringad, men ingen kan ta sig förbi de blixtsnabba slagen från dina händer och fötter. Plötsligt tittar en av dem upp över dig och ﬂinar. Du vänder blicken uppåt och ser riggen falla ned mot dig. En av piraterna har klättrat upp i masten och huggit ned riggen. Du kan nätt och jämnt röra dig under den och en svärm av piratkroppar fäller dig, kämpande, till marken. Du bärs ned. Dina Skuggkrigarverktyg tas ifrån dig och du binds fast vid en av Aquamarins åror.",
     choices: [
@@ -2578,6 +2732,14 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du vill ta hans hand, antingen för att kasta honom i vallgraven eller för att sluta fred med honom",
       "Om du hellre vill anfalla honom på något annat sätt"
+    ]
+  },
+  373: {
+    mainText: "Det väldiga monstret lufsar mot dig och du kan se att det liknar en väldig, hårlös apa. Det har en kraftig kätting runt fotleden, så att den bara kan nå grottans öppning. Det hängande skinnet avslöjar väldiga svarta muskler, fyllda av kraft.",
+    choices: [
+      "Du kan använda Bevingade hästens spark",
+      "eller Järnnäven",
+      "eller Draksvanskastet"
     ]
   },
   374: {
@@ -2592,6 +2754,13 @@ export const languagePages: ILanguagePages = {
     mainText: "Du lyckas hålla dig fast vid stenarna utanpå Spindelvävshallen när munken kastar ned änterhaken på stenläggningen nedanför. Du buktalar så att munken hör vad han tror är ett stönande från gårdsplanen nedanför. Han skrockar och lutar sig ut från fönstret för att titta ned, men han ser ingenting i mörkret. Han drar tillbaka huvudet och du tar dig långsamt uppför väggen mot fönstret, skjuter ifrån med fötterna, svänger ned och in genom fönstret och landar tyst bakom honom när han går bort från det. Han tycks märka att du är där och vänder på huvudet när du kastar din strypsnara om halsen på honom. Han dör utan ett ljud. Hallen är svagt upplyst av två ﬂämtande ljus, men dina skarpa ögon kan se den glittrande spindelväven som går kors och tvärs över golvet. Du sträcker dig upp från fönsterbrädet, kör in Kattklorna i murbruket i taket och tar dig långsamt över till dörren. Du befinner dig på en balkong över refektoriet och matsalen. När du kryper ihop bakom balkongen råkar du få höra det du behövde veta, av munkar som sitter och dricker vin till sent in på natten. Det verkar som om Yaemon har gett sig av mot Mortavalon tillsammans med Honoric, Marskalken över Domsvärdslegionen, för tio dagar sedan. Innan du ger dig av får du syn på en bokrulle som beskriver de sparkar, slag och kast som används i Syrsans väg, den stridsteknik som den Ledes munkar använder. Du kan höja din Kastmodifikation med 1, eftersom du lär dig några användbara tekniker. Du lägger också märke till att de inte känner till den Kluvna blixtsparken. Du lyckas ta dig ut genom ett fönster från balkongen och klättrar ned till gårdsplanen, där du hämtar din änterhake. Sedan gömmer du dig i ett nedbränt bageri resten av natten. På morgonen lämnar du Domedag, fast besluten att hinna ikapp Yaemon och Honoric.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  376: {
+    mainText: "Du ligger orörlig på gräset när de stiger av och undersöker din kropp. Du slutar andas nästan helt och hållet och koncentrerar dig på att få blodet att sluta flyta ut mot huden. Din hjärtverksamhet går ned till minsta möjliga. När de rör vid dig verkar det som om du redan börjar bli stel och när din panna börjar kännas kall efter ett slag, rider de i väg och lämnar dig. När de stiger i sadeln bestämmer de sig för att återvända till sitt tempel, helgat åt Nemesis, Ondskans högsta princip.\n\"Manse kommer att bli nöjd,\" säger en av dem.\n\"Ja, och de underliga munkarna av Syrsans orden,\" säger en annan. När de har lämnat dig fortsätter du försiktigt. Du undrar hur ryktet om dig kan ha färdats så snabbt före dig och varför Nemesis prästerskap skulle vara i förbund med munkarna som dyrkar den Lede. Efter ett slag kommer du in i det bergslandskap som omger Mortavalon. Du påminner dig att du har hört talas om en trollkarl som dyrkar Nemesis, Manse Dödsmagikern, betraktad som en av de mäktigaste varelserna på Orb. Dina funderingar avbryts när du får syn på en grotta i bergssidan ovanför dig.",
+    choices: [
+      "Om du fortsätter utefter vägen mot Mortavalon",
+      "Om du går in i grottan"
     ]
   },
   377: {
@@ -2611,6 +2780,9 @@ export const languagePages: ILanguagePages = {
     ],
     stillAlive: "Om han fortfarande lever svingar han sitt svärd i en väldig båge från vänster till höger, i ett försök att sprätta upp ditt bröst. Du har 8 i Försvar mot hans vilda hugg, när du försöker hoppa bakåt"
   },
+  379: {
+    mainText: "Du hoppar bakåt, men snubblar nedför trappoma och den nu stora, gröna juvelen faller ned över dig. Du upptäcker att du befinner dig inne i den och den rullar nedför trappan med dig, ut över det Stora kärntornets tak. Genom den gröna glasväggen ser du Yaemon dyka upp när Manse följer efter dig ut på Tornets tak. Juvelen börjar dra ihop sig och du krymper med den tills du är liten som en myra. Manse Dödsmagikern ler när han plockar upp juvelen från golvet, och du hör honom säga till Yaemon att han ska låta fatta in dig i en ring. Du kommer att leva länge, en liten vansinnig på Dödsmagikerns hand.",
+  },
   380: {
     mainText: "Pilen når fram till dig när du befinner dig mitt i luften mellan riggen och däcket, men du slår upp med handen och plockar den ur luften några centimetrar framför ditt bröst och kastar den åt sidan. Människoätaren är rasande och höjer sin spikklubba för att krossa dig.",
     choices: [
@@ -2619,10 +2791,26 @@ export const languagePages: ILanguagePages = {
       "eller glida över däcket och använda Draksvanskastet"
     ]
   },
+  381: {
+    mainText: "",
+    choices: [
+      "Om du har färdigheten Klättra kan du klättra upp på sidan av Kärntornet till taket",
+      "eller klättra upp på Kärntornet och ta dig in genom ett av de lägre fönstren",
+      "Om du inte har den färdigheten, eller inte vill använda den, kan du, om du har någon INRE KRAFT kvar, försöka tvinga upp låset",
+      "Om det inte går kan du inte ta dig in i Kärntornet från lnre borggården. Då kan du bara pröva gallret i vallgraven. Du lyckas lätt klättra tillbaka upp i det förfallna tornet."
+    ]
+  },
   382: {
     mainText: "Ditt otroliga hopp räcker för att ta dig till ön och du landar mjukt på fötterna. Folkmassan jublar. Du ser dig omkring. Svartalven syns inte till någonstans. Hon har försvunnit i träsket. Riddaren ligger uppﬂäkt på sanden, men mannen i blå och gyllene klädnad flyter över vallgraven på ett litet isﬂak.",
     choices: [
       "Gå vidare"
+    ]
+  },
+  383: {
+    mainText: "När du makar dig framåt öppnar sig en grotta runt dig och du kan svagt se konturerna av något som liknar en Äldre Gud i ljuset av en ensam, rykande fackla. Den har ett väldigt, krökt horn i pannan och som nästan skrapar mot det fem meter höga taket. Dess konturer är egendomligt oregelbundna och stanken av förruttnelse antyder att den tjocka huden faller av i stora, döda sjok. Om det verkligen är en av de Äldre Gudarna vet du att den är otroligt stark, även om den har försvagats av att leva i den här fuktiga och slemmiga grottan. Den halvätna kroppen av den olycklige som kastades till monstret när du anlände till Fruktans borg ligger framför dig, med en skräckslagen grimas i ansiktet.",
+    choices: [
+      "Om du har färdigheten Klättra kan du försöka kräla över taket i mörkret, bort från facklan",
+      "Annars går du fram, redo att slåss"
     ]
   },
   384: {
@@ -2636,6 +2824,22 @@ export const languagePages: ILanguagePages = {
     choices: [
       "Om du har någon INRE KRAFT kvar",
       "Om du inte har det"
+    ]
+  },
+  386: {
+    mainText: "Du hör ingenting inifrån rummet och du oljar ekdörrens gångjärn innan du försiktigt skjuter upp den. Yaemon, Flammans Stormästare av Röda Syrsans orden, sitter med korslagda ben på golvet där inne och mediterar. Han bär kngarmunkens röda dräkt med ett svart bomullsbälte. Hans ansikte är bistert och orörligt när han ställer sig upp och bugar mot dig. \"Välkommen, Skuggkrigare. Du är Hämnaren och jag dödade din andlige far, \" säger han. Du bugar för honom och går till anfall. Yaemon visar sig vara en ypperlig slagskämpe. Han sparkar, slår och blockerar med förblindande snabbhet och styrka, men ditt kontrollerade hat eggar dig till än större styrka och snabbhet.\nYaemon är hårt trängd tills du hör steg i trappan nedanför. Det röda ögat var en besvärjelse kastad av Manse Dödsmagikern. Han såg dig genom det svävande ögat och nu kommer han in i rummet bakom dig. Du vänder dig om för att måtta en spark mot honom, men han släpper ned en grön juvel på golvet mellan er. Han uttalar ett uråldrigt maktens ord och juvelen utvidgar sig tills du befinner dig inne i den.\nDu kan inte ta dig ut och juvelen börjar krympa samman igen. Du krymper med den tills du är stor som en myra. Manse Dödsmagikern ler när han plockar upp ädelstenen från golvet och du hör honom säga till Yaemon att han ska låta fatta in dig i en ring. Du kommer att leva länge, en liten vansinnig på Dödsmagikerns hand.",
+  },
+  387: {
+    mainText: "Ryttaren i ringbrynja stelnar till när du slår mot hans hals, och han faller av hästen. Du balanserar på händerna och tar dig fram till sadeln och tar tyglarna när hästen börjar skena. Du är en skicklig ryttare och lyckas vända det vettskrämda djuret mot bergsområdet som omger Mortavalon. De andra dundrar efter, och är fortfarande bakom dig när du kommer in i bergsområdet. De börjar uttala en ondsint besvärjelse och du övermannas av någon sorts tröghet.",
+    choices: [
+      "Om du sporrar på hästen ytterligare",
+      "Om du hoppar av hästen och springer in i en grotta som du ser i bergssidan ovanför dig"
+    ]
+  },
+  388: {
+    mainText: "Giftet har ingen verkan och du lyckas ta dig ned genom metallgallret där du såg mannen släppas ned när du kom till Fruktans borg.",
+    choices: [
+      "Gå vidare"
     ]
   },
   389: {
@@ -2653,6 +2857,26 @@ export const languagePages: ILanguagePages = {
       "Tigersprångets spark",
       "Kwons slaga, om du kan den"
     ]
+  },
+  391: {
+    mainText: "Kobrans gift är dödligt och du dör inom tio minuter, med din kropp över Dödsmagikerns. Du har misslyckats med att hämnas din andlige faders död och Yaemon kommer att uttala det maktens ord vid Förändringens pelare som kommer att binda din gud, Kwon, i Infemo.",
+  },
+  392: {
+    mainText: "Du närmar dig slottet på den punkt där de närmaste tornen står trettio meter ifrån varandra. Du kan höra vakterna patrullera vid bröstvärnet, över ljudet från de kväkande oxgrodorna. Du glider ljudlöst ned i den kalla vallgraven och regnet faller runt omkring dig. Oxgrodorna är ovanligt högljudda och du inser att det skulle märkas om de tystnade plötsligt.",
+    choices: [
+      "Om du har någon Eldödle-essens",
+      "Om du inte har det"
+    ]
+  },
+  393: {
+    mainText: "När du smyger dig förbi vakterna, som fortfarande värmer sig vid elden under segelduksskyddet, utlöser du en fälla och en giftnål sticker upp i fotsulan på dig.",
+    choices: [
+      "Om du har Immunitet mot gift",
+      "Om du inte har det"
+    ]
+  },
+  3930: {
+    mainText: "Du faller hjälplös till golvet med musklerna knutna i krampryckningar. En av vaktema sticker svärdet igenom dig så att han kan säga sig ha varit vaksam nog att döda dig. Du har misslyckats med ditt uppdrag.",
   },
   394: {
     mainText: "Kobramannen ligger utbredd på sanden, död. Folkmassan vrålar entusiastiskt när du tar pålen från sanddynen i närheten. Du tar tag i ena änden, håller den framför dig, springer till kanten av öknen, sätter ned änden av pålen i sanden och seglar över den breda vallgraven. Du ser att den är full av Flytande munnar, rovgiriga fiskar som bara består av en mun och en töjbar buk. Du landar på muren som är den lägsta delen av slottet. Mannen i blått och guld ﬂyter över vallgraven på ett litet isﬂak som har brutits loss från kanten av issjön.",
@@ -2675,11 +2899,54 @@ export const languagePages: ILanguagePages = {
       "eller glida över däcket och använda Draksvanskastet"
     ]
   },
+  397: {
+    mainText: "Det är alldeles mörkt inne i tornet, men när du tittar upp mot dörren längst upp ser du ett rött öga som hänger fritt i tomma intet. Det glöder och ögonvitan är fruktansvärt blodsprängd. När du tittar blinkar det och försvinner plötsligt.",
+    choices: [
+      "Om du lyssnar vid dörren till rummet",
+      "Om du går över det Stora Kärntornets tak till tornet med Svarta virvelströmmens flagga"
+    ]
+  },
+  398: {
+    mainText: "Du hoppar ned i den breda, steniga tunneln under dig, och hoppas att du ska hinna slutföra ditt uppdrag innan vakterna märker att gallret inte ligger på sin plats. Du sjunker ned till anklama i slem och pipande kloakråttor rör vid dina fotlederi mörkret. Du trevar dig långsamt fram och stannar upp helt när du känner att det finns någonting framför dig. Det har upptäckt dig och ett öronbedövande vrål ekar i grottan som är dess hem.",
+    choices: [
+      "Om du fortsätter längs tunneln mot det",
+      "Om du har färdigheten Klättra kan du försöka lämna tunneln och klättra uppför slottsmuren"
+    ]
+  },
+  3980: {
+    mainText: "Du hoppar ned i den breda, steniga tunneln under dig, och hoppas att du ska hinna slutföra ditt uppdrag innan vakterna märker att gallret inte ligger på sin plats. Du sjunker ned till anklama i slem och pipande kloakråttor rör vid dina fotlederi mörkret. Du trevar dig långsamt fram och stannar upp helt när du känner att det finns någonting framför dig. Det har upptäckt dig och ett öronbedövande vrål ekar i grottan som är dess hem.",
+    choices: [
+      "Du fortsätter längs tunneln mot det",
+    ]
+  },
+  399: {
+    mainText: "När du går uppför trappan ser du den öppna dörren till Bankettsalen och kryper förbi det drömmande hushållets låsta dörrar. Till sist känner du den fuktiga vinden omsluta dig igen när du kikar upp förbi översta trappsteget mot Kärntornets platta tak. De tre tornen, som är förvånansvärt stora nu när du är så nära, ståtar fortfarande med ﬂaggorna som är svagt upplysta av elden från ett fyrfat med kol.\nGardeskaptenen står med ryggen mot fyrfatet, klädd i svart rustning.\nDå och då patrullerar han längs bröstvärnet från det ena tornet till det andra, innan han går tillbaka för att värma sig vid fyrfatet. Han har tagit av sig hjälmen och står vid kolglöden.",
+    choices: [
+      "Om du väntar tills han ställer sig vid det låga bröstvärnet och försöker kasta honom över kanten",
+      "Om du använder en Shuriken och siktar mot huvudet",
+      "Om du smyger fram bakom honom och använder strypsnaran",
+      "Om du har färdigheten Giftpilar, kan du använda en sådan"
+    ]
+  },
+  400: {
+    mainText: "Du använder Jämnäven och slår in i Manses huvud så hårt att det nästan ﬂyger av axlarna. När du hör hans nacke knäckas känner du kobrans huggtänder i din hals. Giftet sprider sig i dina vener.",
+    choices: [
+      "Om du har lmmunitet mot gift",
+      "Om du inte har det"
+    ]
+  },
   401: {
     mainText: "Yaemon är för snabb för att du ska kunna lyckas med Tigertandskastet.",
     choices: [
       "Du kan försöka med Virvelkastet",
       "eller Draksvanskastet"
+    ]
+  },
+  402: {
+    mainText: "Du lyfter på gallret vid vallgravens kant och sänker dig ned i den breda, steniga tunneln nedanför. Du satsar på att du ska hinna slutföra ditt uppdrag innan vaktema märker att gallret inte ligger på sin plats.\nDu sjunker ned till fotknölarna i slem och pipande kloakråttor rör vid dina fotleder i mörkret. Du trevar dig långsamt fram och stannar tvärt när du känner att det finns någonting framför dig. Det har upptäckt dig och ett öronbedövande vrål ekar i grottan som är dess hem.",
+    choices: [
+      "Om du fortsätter längs tunneln mot det",
+      "Om du har färdigheten Klättra kan du försöka lämna tunneln och klättra uppför slottsmuren"
     ]
   },
   403: {
@@ -2695,6 +2962,14 @@ export const languagePages: ILanguagePages = {
       "Om du inte har det"
     ]
   },
+  405: {
+    mainText: "Oxkärran rullar fram under dig när du gör en volt över den och landar mjukt på fötterna. Innan du hinner röra dig dyker två munkar upp från dörröppningar på vardera sidan om dig. De bär symbolen Avatars kors, inverterat och omringat av en orm. Du känner igen den Ledes märke.\n\"Det måste vara Kwondyrkaren,\" säger en. \"Bara en munk kan ha klarat sig undan kärran.\" De går till anfall och ni intar stridsställning.\nFörst cirklar ni tyst runt varandra ett ögonblick.",
+    choices: [
+      "Använder du Tigertassens slag",
+      "eller Bevingade hästens spark",
+      "eller Tigertandskastet"
+    ]
+  },
   406: {
     mainText: "Blixten går förbi dig och slår in i väggen bakom, så att kojans brädor börjar glöda. Du går till anfall innan Olvar hinner fyra av en till.",
     choices: [
@@ -2704,6 +2979,13 @@ export const languagePages: ILanguagePages = {
       "eller om du har färdigheten Giftpilar, kan du använda en sådan"
     ]
   },
+  407: {
+    mainText: "Du är inte tillräckligt snabb och den tunga stridsklubban träffar dig i ansiktet innan ditt slag träffar. Du förlorar 8 KROPPSPOÄNG. Om du fortfarande lever är smärtan olidlig. Du faller av hästen och landar i en hög på marken.",
+    choices: [
+      "Om du har förmågan att minska ämnesomsättningen och Spela död",
+      "Om du inte kan eller vill, drar du dig upp på fötter och stapplar mot ﬂoden"
+    ]
+  },
   408: {
     mainText: "Du går förbi slavmarknaden där en kapten från Domsvärdslegionen bjuder utan att mötas av något motstånd, på män för att ro skeppen i Yttre befästningens förbund, Domedags flotta. De flesta av stadsborna tycks ta en stor omväg förbi platsen och du skyndar förbi. Du kommer till stadens största byggnad och stannar upp för att stirra fascinerat. Du gissar att det måsta vara templet till Vasch-Ro. Det är en väldig katedral byggd av basaltblock, med ett väldigt, fyrkantigt och befäst tom, slätt och outsmyckat, som höjer sig sjuttio meter över byggnaderna omkring. Bakom det ligger Honorics residens, mer en fästning än ett palats. Du fortsätter mot en krog med en skylt med soldater med ekrade hjul på sköldarna, som hukar sig framför ett svart svärd som hänger i luften. Den ligger i en gatukrok och bakom den till höger skymtar du ett kloster byggt i mörk sten med klarröda fönsterluckor. Det kan bara vara templet till den Lede, din gud Kwons förvridne bror. Yaemon kanske finns därinne.",
     choices: [
@@ -2711,11 +2993,24 @@ export const languagePages: ILanguagePages = {
       "Du kan försöka smyga dig in i klostret"
     ]
   },
+  409: {
+    mainText: "Du tittar ned på den knäböjande munken och säger: ”Jag ska skona dig om du talar om för mig var Yaemon, Flammans Stormästare, finns någonstans. ”\nMunken har tydligen förlorat allt mod och du tror honom när han säger: \"Han gav sig av mot staden Druath Glennan för tre dagar sedan. En stor krigare färdades med honom och jag råkar veta att de var på väg för att möta en tredje, en mäktig trollkarl tror jag.\" Du låter munken gå och han ger sig av med sänkt huvud.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
   410: {
     mainText: "Du för handen från vänster till höger i ett vildsint försök att slå till honom över halsen. Olyckligtvis är han för snabb för dig och han fångar din handled och ger dig skickligt en kort spark i magen. Du förlorar 2 KROPPSPOÄNG. Om du fortfarande lever sätter han fotsulan mot din mage och faller bakåt, så att du dras med. Sedan rätar han ut benet så att du ﬂyger över honom.",
     choices: [
       "Om du har färdigheten Akrobatik",
       "Om du inte har det",
+    ]
+  },
+  411: {
+    mainText: "När hans fot närmar sig ditt huvud kör du upp din högra handﬂata mot hans fotled och tvingar upp hans ben högre så att han ﬂyger över ditt huvud. När du vänder dig om gör han en kullerbytta bakåt och landar tryggt på föttema. Han vänder sig mot dig och anfaller igen.",
+    choices: [
+      "Du har inte tid att sparka, men du kan försöka kasta honom",
+      "eller slå"
     ]
   },
   412: {
@@ -2736,6 +3031,13 @@ export const languagePages: ILanguagePages = {
   41201: {
     mainText: "Du har inte har utvecklat lmmunitet mot gift under din lärotid och upptäcker plötsligt att det blir svårt att andas. Du faller bakåt mot sanden och dör medan vrålet från blodet i dina öron blandas med vrålet från folkmassan. Ditt äventyr är slut.",
   },
+  413: {
+    mainText: "När du hoppar uppför de sista trappstegen går han bakåt och hans purpurfärgade läppar öppnas till ett brett grin när han släpper ned en liten, grön juvel på golvet. Den växer snabbt och hotar att sluka dig.",
+    choices: [
+      "Om du är Akrobat",
+      "Om du inte är det"
+    ]
+  },
   414: {
     mainText: "Du stirrar upp mot natthimlen tills du kan se i mörkret som en uggla. Sedan klämmer du dig igenom den smalaste av öppningarna mellan de två husen och beger dig mot Spindelvävshallen, som egentligen är en stor, välvd bro, tio meter upp och helt sluten. Den förbinder sovsalarna på första våningen med balkongen i refektoriet där munkarna äter. Du står under fönstret mitt på valvbågen och sätter fast Kattklorna på händer och fötter. Sedan tar du fram den lilla änterhaken och repet från en av dräktens innerﬁckor. Du kastar in den ﬁltklädda kroken genom det öppna fönstret och spänner repet innan du klättrar uppför det med en hand i taget, som en apa. Du är alldeles under fönstret när du ser två händer på kroken över dig.",
     choices: [
@@ -2743,11 +3045,38 @@ export const languagePages: ILanguagePages = {
       "Om du försöker sätta fast Klorna i broväggen och klättra upp till sidan av fönstret"
     ]
   },
+  415: {
+    mainText: "Båda vakterna förblindas av blixten, men de ropar på hjälp. Du ser magiska ljus tändas runt slottet som lyktgubbar och bestämmer dig för att klättra tillbaka nedför tornet, ta dig över vallgraven igen och ta dig in i slottet genom gallret som leder till den underjordiska tunneln.",
+    choices: [
+      "Gå vidare"
+    ]
+  },
+  416: {
+    mainText: "Hjulets nav träffar dig och kastar dig mot väggen. Du förlorar 4 KROPPSPOÄNG. Om du fortfarande lever går du vidare och lägger märke till några munkar som bär symbolen av ett Avatarkors, reverserat och omslingrat av en orm. Du känner igen den som den Ledes symbol. De struntar i dig och följer efter vagnen som tycks vara under kontroll nu.",
+    choices: [
+      "Gå vidare",
+    ]
+  },
   417: {
     mainText: "Ditt sista steg ledde dig från stigen och rakt ut i träsket. Du börjar obevekligt sjunka och slår i gyttjan som bubblar runt dig. Du lugnar ned dig och slutar röra dig, så att du sjunker långsammare.",
     choices: [
       "Om du har någon INRE KRAFT kvar",
       "Om du inte har det"
+    ]
+  },
+  418: {
+    mainText: "När du har ritat upp en karta över slottet ur minnet gömmer du dig i ett hål i marken där du kan studera potthuset, och du väntar på att mörkret ska falla. Månen är vit och full och natten stilla. Det blåser inte ens tillräckligt för att banéren på de tre tornen ska veckla ut sig.",
+    choices: [
+      "Om du väljer att klättra uppför det övergivna tornet",
+      "Om du väljer att lyfta på gallret utanför vallgraven och hoppa ned i tunneln nedanför",
+      "Om du föredrar att vänta för att se om vädret blir sämre i morgon natt"
+    ]
+  },
+  419: {
+    mainText: "Du plaskar runt i vattnet och låtsas att du inte kan simma. När de är inom räckhåll blåser du en giftpil genom andningsröret mot en av Prästernas ansikten. Den slår in i kinden på honom och han plaskar runt i vattnet och dör i krampryckningar. Besvärjelsen som gjorde dig så slö är bruten. Du simmar över till andra stranden och försvinner in i sävsnåren. De kan inte hålla din snabbfotade hastighet och du tar dig tillbaka över floden och upp i bergsområdet som omger Mortavalon.\nDu kommer tillbaka upp på vägen, rundar en krök och får syn på en grotta, täckt av ett klipputsprång, i bergssidan ovanför dig.",
+    choices: [
+      "Om du går vidare rakt mot Mortavalon",
+      "Om du går in i grottan"
     ]
   },
   420: {

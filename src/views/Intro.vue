@@ -21,7 +21,8 @@
       Copyright Mark Smith & Jamie Thomson 1985<br>
       Illustreringar av Bob Harvey<br>
       Översatt av Gunilla Jonsson 1986<br>
-      Svensk copyright Äventyrsspel 1986
+      Svensk copyright Äventyrsspel 1986<br>
+      Scan & PDF Gothmog
     </div>
     
     <div class="text">
@@ -31,7 +32,7 @@
     </div>
 
     <div class="text red">
-      Ungefär 75% av innehållet är portat för tillfället så det går (oftast) inte att spela klart äventyret.
+      Allt innehåll är portat men det finns fortfarande en hel del buggar så det finns en risk att äventyret inte kan spelas klart.
       Om du hittar buggar, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    

@@ -9,6 +9,7 @@ export const usePlayerStore = defineStore("player", {
     items: {
       shuriken: 5,
       flashPowder: 1,
+      poison: 1,
       gold: 0,
       opalring: 0,
       healingPotion: 0,
@@ -16,7 +17,7 @@ export const usePlayerStore = defineStore("player", {
       magicShuriken: 0,
       fireLizardEssence: 0,
       herbs: 0,
-      amulet: 0
+      amulet: 0,
     },
     modifiers: {
       punch: 0,
