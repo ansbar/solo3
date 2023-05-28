@@ -1,20 +1,20 @@
 <script lang="ts" setup>
-  import Setup from "./views/Setup.vue"
-  import Intro from "./views/Intro.vue"
+  import Setup from "./views/preGame/Setup.vue"
+  import Intro from "./views/preGame/Intro.vue"
   import Page from "./views/Page.vue"
   import Dev from "./views/Dev.vue"
   import SavedInfo from "./views/SavedInfo.vue"
+  import Background from "./views/preGame/Background.vue"
   import { storeToRefs } from "pinia"  
   import { useMainStore, usePlayerStore } from "./stores"
   import { onMounted } from "vue"
   import { useStorage } from "@/utils/storage"
-  import { computed } from "vue"
-  import { EAbilities, EBattleStates } from "./assets/enums"
+  import { EAbilities } from "./assets/enums"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const { getStoreFromStorage } = useStorage()  
-  const { currentPageId, dev, battlestate } = storeToRefs(useMainStore())
+  const { dev, mainPage } = storeToRefs(useMainStore())
 
   const checkStorage = () => {
     // Get saved local storage data if it exists and setup.    
@@ -47,19 +47,16 @@
   onMounted(() => {
     init()   
   })
-
-  const showIntro = computed(() => battlestate.value === EBattleStates.intro)
-  const showSetup = computed(() => currentPageId.value === 0 && battlestate.value !== EBattleStates.intro)
-  const showPage = computed(() => currentPageId.value > 0)
 </script>
 
 
 <template>
   <Dev v-if="dev" />
   <div class="wrapper app">    
-    <Intro v-if="showIntro" />
-    <Setup v-if="showSetup" />
-    <Page v-if="showPage" />
+    <Intro v-if="mainPage === 'intro'" />
+    <Background v-if="mainPage === 'background'" />
+    <Setup v-if="mainPage === 'setup'" />
+    <Page v-if="mainPage === 'started'" />
   </div>
   <SavedInfo />
 </template>

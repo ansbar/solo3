@@ -19,7 +19,11 @@
   // Returns true if player has the requested ability
   const hasAbility = (ability: EAbilities) => playerStore.abilities.includes(ability)
   const isAllAbilitiesChosen = computed(() => playerAbilities.value.length >= mainStore.numberOfAbilities)
-  const startGame = () => mainStore.setCurrentPageId(1)
+  
+  const startGame = () => {
+    mainStore.setCurrentPageId(1)
+    mainStore.mainPage = "started"
+  }
 
   watch(difficultyChoice, (value) => {
     mainStore.setDifficulty(value as EDifficulty)

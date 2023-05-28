@@ -56,7 +56,6 @@ export enum EItems {
 }
 
 export enum EBattleStates {
-  intro = "intro",
   none = "none",
   pending = "pending",
   chooseOpponent = "chooseOpponent",
@@ -106,4 +105,17 @@ export enum EDifficulty {
 
 export enum ECondition {
   hasNotVisitedSwordOfDoomTower = "hasNotVisitedSwordOfDoomTower"
+}
+
+export enum EPages {
+  intro = "intro",
+  background = "background",
+  setup = "setup",
+  started = "started",
+}
+
+export enum EModals {
+  none = "none",
+  rules = "rules",
+  map = "map",
 }

@@ -5,12 +5,14 @@
    */
   
   import { computed } from "vue"
-  import { EItems } from "@/assets/enums"
-  import { usePlayerStore } from "@/stores"
+  import { EItems, EModals, EPages } from "@/assets/enums"
+  import { usePlayerStore, useMainStore } from "@/stores"
   import { languageGeneral } from "@/assets/languages/swedish"
   import { useTexts } from "@/utils/texts"
+  import mapModal from "./modals/mapModal.vue"
 
   const playerStore = usePlayerStore()
+  const mainStore = useMainStore()
   const { choicesTexts } = useTexts()
 
   interface Item {
@@ -91,7 +93,13 @@
         </li>
       </ul>
     </div>
+    <div class="full-col">
+      <a href="javascript:void(0);" @click="mainStore.currentModal = EModals.map">
+        Karta över Orb
+      </a>
+    </div>
   </section>
+  <mapModal />
 </template>
 
 <style lang="scss" scoped>

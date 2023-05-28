@@ -1,4 +1,4 @@
-import { languagePages, languageGeneral } from "@/assets/languages/swedish"
+import { languagePages, languageGeneral, languageTexts } from "@/assets/languages/swedish"
 import { useMainStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
@@ -17,7 +17,7 @@ export function useTexts() {
     return languagePages[currentPageId.value].choices
   })
 
-  // Static texts
+  // General texts
   const abilityTexts = computed(() => {
     return languageGeneral.abilities
   })
@@ -51,6 +51,7 @@ export function useTexts() {
   const difficultyTexts = computed(() => {
     return languageGeneral.difficulty
   })
+
 
   return { 
     difficultyTexts,

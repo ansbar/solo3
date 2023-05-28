@@ -11,7 +11,8 @@ export function useGeneric() {
     storage.removeStoreFromStorage("main")
     storage.removeStoreFromStorage("player")
     mainStore.currentPageId = 0
-    mainStore.battlestate = EBattleStates.intro
+    mainStore.mainPage = "setup"
+    mainStore.battlestate = EBattleStates.none
   }
 
   const gotoPage = (pageId: number) => {
@@ -23,7 +24,15 @@ export function useGeneric() {
     }
   }
 
-  const getImageUrl = () => new URL(`/src/assets/images/${mainStore.currentPageId}.png`, import.meta.url).href
+  const getImageUrl = (image?: string) => {
+    if (!image) image =  mainStore.currentPageId.toString() // page id as image name default
+
+    let url = new URL(`/src/assets/images/${image}.png`, import.meta.url).href
+    // Check ig png files exists otherwise try with jpg
+    if (url.substring(url.length - 9) === "undefined") url = new URL(`/src/assets/images/${image}.jpg`, import.meta.url).href
+    
+    return url    
+  }
 
   return { doStartOver, gotoPage, getImageUrl }
 }

@@ -1,8 +1,9 @@
 import { defineStore } from "pinia"
-import { EBattleStates, EDifficulty } from "@/assets/enums"
+import { EBattleStates, EDifficulty, EPages, EModals } from "@/assets/enums"
 import { usePlayerStore } from "./playerStore"
 
 interface Main {
+  mainPage: EPages
   battlestate: EBattleStates
   currentPageId: number
   dev: boolean  
@@ -13,12 +14,14 @@ interface Main {
   savedData: boolean
   difficulty: EDifficulty
   numberOfAbilities: number
+  currentModal: EModals
 }
 
 export const useMainStore = defineStore("main", {
   state: (): Main => (
     { 
-      battlestate: EBattleStates.intro,
+      mainPage: EPages.intro,
+      battlestate: EBattleStates.none,
       battleRoundCounter: 1,
       currentPageId: 0,
       dev: true,
@@ -27,10 +30,14 @@ export const useMainStore = defineStore("main", {
       history: [],
       savedData: false,
       difficulty: EDifficulty.veryHard,
-      numberOfAbilities: 3
+      numberOfAbilities: 3,
+      currentModal: EModals.none
     }
   ),
   actions: {
+    closeModal () {
+      this.currentModal = EModals.none
+    },
     setDifficulty (payload: EDifficulty) {
       const playerStore = usePlayerStore()
       playerStore.abilities = []

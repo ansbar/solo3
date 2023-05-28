@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { EBattleStates } from "@/assets/enums"
+  import { EPages } from "@/assets/enums"
   import { useMainStore } from "@/stores"
   import { useGeneric } from "@/utils/generic"
 
@@ -12,7 +12,7 @@
     <h1>Tigerns väg - soloäventyr</h1>
     
     <h2 class="red">
-      Beta 0.6.2
+      Beta 0.7.0
     </h2>
     <img
       :src="getImageUrl()"
@@ -51,7 +51,7 @@
     </section>
   </div>
 
-  <button @click="mainStore.setBattlestate(EBattleStates.none)">
-    Starta din karaktär
+  <button @click="mainStore.mainPage = EPages.background">
+    Bakgrund
   </button>
 </template>
