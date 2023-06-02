@@ -433,6 +433,11 @@ export const pageData: IPages = {
     ]
   },
   44: {
+    sideEffects: {
+      items: {
+        opalring: -1
+      }
+    },
     choices: [
       {
         ability: EAbilities.escapeArtist,
@@ -1355,7 +1360,13 @@ export const pageData: IPages = {
       }
     ]
   },
+ 
   129: {
+    sideEffects: {
+      items: {
+        opalring: -1
+      }
+    },
     choices: [
       {
         goto: 21,

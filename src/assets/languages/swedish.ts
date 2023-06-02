@@ -399,7 +399,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   44: {
-    mainText: "När du försöker springa mot prästerna tar deras besvärjelse effekt och dina ben och armar blir som till bly. Din kropp darrar när du med en stor viljeansträngning tvingar dig ytterligare några steg framåt, men de har inga problem att slå ned dig och binda dig ordentligt. Om du haren Ring tar de den ifrån dig. Stryk den från Speltabellen.",
+    mainText: "När du försöker springa mot prästerna tar deras besvärjelse effekt och dina ben och armar blir som till bly. Din kropp darrar när du med en stor viljeansträngning tvingar dig ytterligare några steg framåt, men de har inga problem att slå ned dig och binda dig ordentligt. Om du har en Ring tar de den ifrån dig. Stryk den från Speltabellen.",
     choices: [
       "Om du har färdigheten Utbrytningskonst",
       "Om du inte har den"
