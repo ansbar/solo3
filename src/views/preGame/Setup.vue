@@ -1,7 +1,7 @@
 <script setup lang="ts">
   import { computed, ref, watch, onMounted } from "vue"
   import { useMainStore, usePlayerStore } from "@/stores"
-  import { EAbilities, EDifficulty } from "@/assets/enums"
+  import { EAbilities, EDifficulty, EPages } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
 
   const playerStore = usePlayerStore()
@@ -22,7 +22,7 @@
   
   const startGame = () => {
     mainStore.setCurrentPageId(1)
-    mainStore.mainPage = "started"
+    mainStore.mainPage = EPages.started
   }
 
   watch(difficultyChoice, (value) => {

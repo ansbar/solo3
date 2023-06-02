@@ -123,7 +123,7 @@
     <h4>Spindelfisk</h4>
     Saltad och inlagd används den här mycket giftiga fisken som en källa till det dödliga gift som används tillsammans med färdigheten Giftpilar. Det är också ett användbart sätt att avlägsna vakthundar.
     <h4>Intets blod</h4>
-    Du bär också med dig en dos av det kraftigaste gift som är känt på Orb. Giftet är extremt svårt och farligt att få tag i, för det tas från gadden på den skorpion som är son till Guden lntet, lntighetens mun.
+    Du bär också med dig en dos av det kraftigaste gift som är känt på Orb. Giftet är extremt svårt och farligt att få tag i, för det tas från gadden på den skorpion som är son till Guden Intet, lntighetens mun.
     <br>
     Med de här färdighetema och vapnen till ditt förfogande är du nu en Skuggkrigare, redo att ta det första steget på Tigerns väg.
   </Modal>

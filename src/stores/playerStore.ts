@@ -32,7 +32,7 @@ export const usePlayerStore = defineStore("player", {
       innerForceMax: 5
     },
     conditions: {
-      hasNotVisitedSwordOfDoomTower: true,
+      hasNotKilledHonoric: false
     },
     temporary: {
       useInnerForce: null,

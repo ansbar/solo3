@@ -53,7 +53,7 @@ export interface IPageSidesideEffects {
     kwonsFlail?: boolean
   }
   conditions?: {
-    hasNotVisitedSwordOfDoomTower: boolean
+    hasNotKilledHonoric: boolean
   }
 }
 

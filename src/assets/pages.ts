@@ -916,6 +916,7 @@ export const pageData: IPages = {
     ]
   },
   83: {
+    image: true,
     sideEffects: {
       attributes: {
         hp: -4
@@ -999,7 +1000,11 @@ export const pageData: IPages = {
       }
     ]
   },
+  
   91: {
+    specialCondition: {
+      type: "fate",
+    },
     choices: [
       {
         goto: 74,
@@ -1077,6 +1082,7 @@ export const pageData: IPages = {
   },
   100: {},
   101: {
+    image: true,
     choices: [
       {
         goto: 89
@@ -1360,6 +1366,7 @@ export const pageData: IPages = {
     ]
   },
   130: {
+    image: true,
     choices: [
       {
         goto: 102,
@@ -1676,6 +1683,11 @@ export const pageData: IPages = {
     ]
   },
   158: {
+    sideEffects: {
+      conditions: {
+        hasNotKilledHonoric: false
+      }
+    },
     choices: [
       {
         goto: 305,
@@ -2200,6 +2212,7 @@ export const pageData: IPages = {
     ]
   },
   213: {
+    image: true,
     choices: [
       {
         goto: 149,
@@ -2407,6 +2420,12 @@ export const pageData: IPages = {
     ]
   },
   229: {
+    image: true,
+    sideEffects: {
+      conditions: {
+        hasNotKilledHonoric: false
+      }
+    },
     choices: [
       {
         goto: 154,
@@ -2604,7 +2623,7 @@ export const pageData: IPages = {
   246: {
     choices: [
       {
-        condition: ECondition.hasNotVisitedSwordOfDoomTower,
+        condition: ECondition.hasNotKilledHonoric,
         goto: 339,
       },{
         goto: 370,
@@ -2818,6 +2837,7 @@ export const pageData: IPages = {
     ]
   },
   265: {
+    image: true,
     choices: [
       {
         goto: 229
@@ -3776,6 +3796,14 @@ export const pageData: IPages = {
     ]
   },
   366: {
+    sideEffects: {
+      attributes: {
+        hp: 3
+      },
+      items: {
+        gold: 5
+      }
+    },
     choices: [
       {
         goto: 219,
@@ -3833,10 +3861,10 @@ export const pageData: IPages = {
   },
   370: {
     choices: [
-      {        
+      {    
+        condition: ECondition.hasNotKilledHonoric, 
         goto: 305
       },{
-        item: EItems.poison,
         goto: 348
       },
     ]
@@ -3849,6 +3877,7 @@ export const pageData: IPages = {
     ]
   },
   372: {
+    image: true,
     choices: [
       {
         goto: 363,
@@ -4122,6 +4151,7 @@ export const pageData: IPages = {
     ]
   },
   399: {
+    image: true,
     choices: [
       {
         goto: 331
@@ -4336,6 +4366,7 @@ export const pageData: IPages = {
     ]
   },
   418: {
+    image: true,
     choices: [
       {
         goto: 138

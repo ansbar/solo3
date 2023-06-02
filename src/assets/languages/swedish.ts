@@ -227,7 +227,7 @@ export const languagePages: ILanguagePages = {
   18: {
     mainText: "Han rosslar svagt när ståltråden skär av hans luftstrupe och du sänker försiktigt ned kroppen på golvet innan du ordnar änterhaken och glider ned på gräset på Inre Borggården som omger Stora Kärntornet.",
     choices: [
-      "Om du klättrar upp på Kämtornets tak",
+      "Om du klättrar upp på Kärntornets tak",
       "Om du klättar uppför Kärntomet till den första fönsterraden och tar dig in där"
     ]
   },
@@ -950,7 +950,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   120: {
-    mainText: "Du höjer dig ljudlöst ur vallgraven och klättrar lätt till toppen av det förfallna tornet, piskad av vinden och regnet. När du kikar över bröstvärnet ser du två vakter som står vid en eld som har tänts under en stor tjärad segelduk. Elden brinner en bit från trappan som leder till den lnre borggården som omger Stora Kämtornet. Du duckar bakom bröstvärnet igen och hänger där när molnen splittras så att månen skiner igenom. Fem minuter senare är månen dold igen och du kryper ljudlöst över bröstvärnet upp på tornets tak.",
+    mainText: "Du höjer dig ljudlöst ur vallgraven och klättrar lätt till toppen av det förfallna tornet, piskad av vinden och regnet. När du kikar över bröstvärnet ser du två vakter som står vid en eld som har tänts under en stor tjärad segelduk. Elden brinner en bit från trappan som leder till den lnre borggården som omger Stora Kärntornet. Du duckar bakom bröstvärnet igen och hänger där när molnen splittras så att månen skiner igenom. Fem minuter senare är månen dold igen och du kryper ljudlöst över bröstvärnet upp på tornets tak.",
     choices: [
       "Kastar du en Shuriken på en av vakterna och springer fram för att använda strypsnaran på den andra?",
       "Om du kastar en liten sten i elden",
@@ -1217,7 +1217,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   158: {
-    mainText: "Du rullar upp ett stycke vaxad tråd tills den hänger alldeles ovanför munnen på Marskalken över Domsvärdslegionen. Du öppnar ﬂaskan som innehåller blod från lntet, lntighetens mun, det kraftigaste kända giftet. Det ångar när de svarta dropparna rinner nedför tråden och droppar ned i Honorics öppna mun. Han stelnar till och du vet att han är hjälplös och dör av kvävning när bröstkorgen paralyseras. Du har mördat Domsvärdslegionens Marskalk, en av de mäktigaste männen på Orb.",
+    mainText: "Du rullar upp ett stycke vaxad tråd tills den hänger alldeles ovanför munnen på Marskalken över Domsvärdslegionen. Du öppnar ﬂaskan som innehåller blod från Intet, lntighetens mun, det kraftigaste kända giftet. Det ångar när de svarta dropparna rinner nedför tråden och droppar ned i Honorics öppna mun. Han stelnar till och du vet att han är hjälplös och dör av kvävning när bröstkorgen paralyseras. Du har mördat Domsvärdslegionens Marskalk, en av de mäktigaste männen på Orb.",
     choices: [
       "Gå vidare"
     ]
@@ -1709,7 +1709,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   229: {
-    mainText: "Du vecklar ut den vaxade tråden tills den hänger alldeles över munnen på Domsvärdslegionens Marskalk. Du öppnar flaskan som innehåller blod från lntet, lntighetens mun, det kraftigaste gift som är känt.\nDet ryker när de svarta dropparna rinner nedför tråden och droppar ned i Honorics öppna mun. Han blir stel och du vet att han är hjälplös och dör av kvävning när bröstkorgen paralyseras. Du har mördat Marskalken, en av de mäktigaste männen på Orb.",
+    mainText: "Du vecklar ut den vaxade tråden tills den hänger alldeles över munnen på Domsvärdslegionens Marskalk. Du öppnar flaskan som innehåller blod från Intet, Intighetens mun, det kraftigaste gift som är känt.\nDet ryker när de svarta dropparna rinner nedför tråden och droppar ned i Honorics öppna mun. Han blir stel och du vet att han är hjälplös och dör av kvävning när bröstkorgen paralyseras. Du har mördat Marskalken, en av de mäktigaste männen på Orb.",
     choices: [
       "Om du går ned i kammaren och tar det rykande svärdet, Sorcerak",
       "Om du bestämmer dig för att gå utan det, kan du gå över Kärntornets tak till tornet med Svarta Virvelströmmens ﬂagga",
@@ -1999,7 +1999,7 @@ export const languagePages: ILanguagePages = {
   265: {
     mainText: "Du hoppar upp och hänger dig i hålet som leder upp på vinden, sedan klämmer du dig igenom och upp på brädoma ovanför. Du känner efter lösa brädor och kravlar försiktigt fram till en spricka i innertaket.\nEtt ensamt ljus som brinner i kammaren nedanför ger tillräcklig belysning för att du ska kunna se. Honoric sover. Hans arroganta drag verkar mindre grymma än när han är vaken, och han har munnen öppen och snarkar lätt. Hans väldiga svärd ligger utdraget ur skidan bredvid honom. Du kan inte se några fällor i kammaren.",
     choices: [
-      "Om du vill hälla din enda dos av lntets blod på en vaxad tråd ned i Honorics mun.",
+      "Om du vill hälla din enda dos av Intets blod på en vaxad tråd ned i Honorics mun.",
       "Om du föredrar att gå tillbaka nedför trappan och gå in genom dörren efter att ha oljat gångjärnen",
     ],
   },
@@ -2443,7 +2443,7 @@ export const languagePages: ILanguagePages = {
   328: {
     mainText: "Du hoppar upp, svingar dig in i hålet som leder upp på vinden och klämmer dig igenom till brädoma ovanför. Du känner dig för efter lösa brädor och kravlar försiktigt fram till en spricka i innertaket. Honoric sover och hans arroganta anletsdrag verkar mindre grymma än när han är vaken. Han har munnen öppen och snarkar lätt. Hans väldiga svärd ligger utdraget ur skidan bredvid honom. Du kan inte se några fällor i rummet.",
     choices: [
-      "Om du vill hälla din enda dos av lntets blod nedför en vaxad tråd i Hononcs mun",
+      "Om du vill hälla din enda dos av Intets blod nedför en vaxad tråd i Hononcs mun",
       "Om du föredrar att gå tillbaka nedför trappan och gå in genom dörren efter att ha oljat gångjärnen"
     ]
   },
@@ -2724,7 +2724,7 @@ export const languagePages: ILanguagePages = {
     ]
   },
   370: {
-    mainText: "Har du använt det dödligaste av gifter, lntets blod?",
+    mainText: "Har du använt det dödligaste av gifter, Intets blod?",
     choices: [
       "Om du har gjort det",
       "Om du inte har gjort det"

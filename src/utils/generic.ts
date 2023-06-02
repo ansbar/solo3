@@ -1,5 +1,5 @@
 import { useMainStore } from "../stores/mainStore"
-import { EBattleStates } from "../assets/enums"
+import { EBattleStates, EPages } from "../assets/enums"
 import { useStorage } from "./storage"
 
 export function useGeneric() {
@@ -11,7 +11,7 @@ export function useGeneric() {
     storage.removeStoreFromStorage("main")
     storage.removeStoreFromStorage("player")
     mainStore.currentPageId = 0
-    mainStore.mainPage = "setup"
+    mainStore.mainPage = EPages.setup
     mainStore.battlestate = EBattleStates.none
   }
 

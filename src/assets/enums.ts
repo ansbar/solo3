@@ -104,7 +104,7 @@ export enum EDifficulty {
 }
 
 export enum ECondition {
-  hasNotVisitedSwordOfDoomTower = "hasNotVisitedSwordOfDoomTower"
+  hasNotKilledHonoric = "hasNotKilledHonoric",
 }
 
 export enum EPages {

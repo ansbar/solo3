@@ -44,5 +44,5 @@ interface Player_temporary {
 }
 
 interface Player_conditions {
-  hasNotVisitedSwordOfDoomTower: boolean
+  hasNotKilledHonoric: boolean
 }

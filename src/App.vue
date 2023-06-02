@@ -9,7 +9,7 @@
   import { useMainStore, usePlayerStore } from "./stores"
   import { onMounted } from "vue"
   import { useStorage } from "@/utils/storage"
-  import { EAbilities } from "./assets/enums"
+  import { EAbilities, EPages } from "./assets/enums"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
@@ -33,14 +33,7 @@
     checkStorage()    
 
     if (dev.value) {
-      playerStore.addPlayerAbility(EAbilities.escapeArtist)
-      playerStore.addPlayerAbility(EAbilities.acrobat)
-      playerStore.addPlayerAbility(EAbilities.immunity)
-      playerStore.addPlayerAbility(EAbilities.climb)
-      playerStore.addPlayerAbility(EAbilities.deflectArrows)
-      playerStore.addPlayerAbility(EAbilities.lockPicker)
-      playerStore.addPlayerAbility(EAbilities.playDead)
-      playerStore.addPlayerAbility(EAbilities.poisonArrows)
+      mainStore.mainPage = EPages.setup
     }
   }
   

@@ -47,7 +47,8 @@ export const usePageStore = defineStore("page", {
 
       if (this.sideEffects?.conditions) {
         const c = this.sideEffects.conditions     
-        if (c.hasNotVisitedSwordOfDoomTower) playerStore.toggleCondition({ condition: ECondition.hasNotVisitedSwordOfDoomTower, state: false})      
+        console.log(c)
+        if (c.hasNotKilledHonoric) playerStore.toggleCondition({ condition: ECondition.hasNotKilledHonoric, state: false})      
       }
       
       if (this.sideEffects?.items) {        
