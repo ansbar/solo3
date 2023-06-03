@@ -707,6 +707,12 @@ const opponents: IOpponents = {
         damage: [""],
         defense: [0],
       },  
+      54: {
+        playerAttackType: EAttackType.none,
+        playerDefense: [0],
+        damage: [""],
+        defense: [0],
+      },  
       69: {
         playerAttackType: EAttackType.none,
         playerDefense: [0],
@@ -772,10 +778,11 @@ const opponents: IOpponents = {
         defense: [0],
       },
       278: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: EAttackType.instant,
+        playerDamage: "2",
         playerDefense: [0],
         damage: [""],
-        defense: [0],
+        defense: [0]
       },   
       301: {
         playerAttackType: EAttackType.none,

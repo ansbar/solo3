@@ -48,6 +48,11 @@ export const pageData: IPages = {
     ]
   },
   5: {
+    sideEffects: {
+      attributes: {
+        hp: -2,
+      },
+    },
     choices: [
       {
         goto: 14
@@ -2358,6 +2363,11 @@ export const pageData: IPages = {
     ]
   },  
   223: {
+    sideEffects: {
+      attributes: {
+        hp: 2,
+      },
+    },
     image: true,
     choices: [
       {
@@ -2431,7 +2441,6 @@ export const pageData: IPages = {
     ]
   },
   229: {
-    image: true,
     sideEffects: {
       conditions: {
         hasNotKilledHonoric: false
@@ -2980,6 +2989,11 @@ export const pageData: IPages = {
     ]
   },
   278: {
+    sideEffects: {
+      attributes: {
+        hp: -8
+      }
+    },
     opponent: EOpponents.yaemon,
     choices: [
       {
