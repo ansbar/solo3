@@ -32,7 +32,8 @@ export const usePlayerStore = defineStore("player", {
       innerForceMax: 5
     },
     conditions: {
-      hasNotKilledHonoric: false
+      hasNotKilledHonoric: true,
+      hasKilledHonoric: false
     },
     temporary: {
       useInnerForce: null,

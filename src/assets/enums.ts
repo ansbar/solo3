@@ -105,6 +105,7 @@ export enum EDifficulty {
 
 export enum ECondition {
   hasNotKilledHonoric = "hasNotKilledHonoric",
+  hasKilledHonoric = "hasKilledHonoric"
 }
 
 export enum EPages {

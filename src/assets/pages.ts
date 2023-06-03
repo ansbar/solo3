@@ -1573,7 +1573,7 @@ export const pageData: IPages = {
   148: {
     choices: [
       {
-        goto: 129
+        goto: 361
       },
     ]
   },
@@ -2632,6 +2632,11 @@ export const pageData: IPages = {
     ]
   },
   246: {
+    sideEffects: {
+      attributes: {
+        hp: -4
+      }
+    },
     choices: [
       {
         condition: ECondition.hasNotKilledHonoric,
@@ -3873,9 +3878,10 @@ export const pageData: IPages = {
   370: {
     choices: [
       {    
-        condition: ECondition.hasNotKilledHonoric, 
+        condition: ECondition.hasKilledHonoric, 
         goto: 305
       },{
+        condition: ECondition.hasNotKilledHonoric, 
         goto: 348
       },
     ]

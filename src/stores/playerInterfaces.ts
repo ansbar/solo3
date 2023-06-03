@@ -45,4 +45,5 @@ interface Player_temporary {
 
 interface Player_conditions {
   hasNotKilledHonoric: boolean
+  hasKilledHonoric: boolean
 }

@@ -47,8 +47,10 @@ export const usePageStore = defineStore("page", {
 
       if (this.sideEffects?.conditions) {
         const c = this.sideEffects.conditions     
-        console.log(c)
-        if (c.hasNotKilledHonoric) playerStore.toggleCondition({ condition: ECondition.hasNotKilledHonoric, state: false})      
+        if (c.hasNotKilledHonoric !== null) {
+          playerStore.toggleCondition({ condition: ECondition.hasNotKilledHonoric, state: c.hasNotKilledHonoric as boolean}) 
+          playerStore.toggleCondition({ condition: ECondition.hasKilledHonoric, state: !c.hasNotKilledHonoric})   
+        }         
       }
       
       if (this.sideEffects?.items) {        

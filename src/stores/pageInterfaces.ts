@@ -53,7 +53,8 @@ export interface IPageSidesideEffects {
     kwonsFlail?: boolean
   }
   conditions?: {
-    hasNotKilledHonoric: boolean
+    hasNotKilledHonoric?: boolean
+    hasKilledHonoric?: boolean
   }
 }
 

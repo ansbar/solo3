@@ -18,9 +18,7 @@
 
   // Returns true if player  has the requested ability
   const hasAbility = (ability: EAbilities | EAddedAbilities) => {
-    if (playerStore.abilities.includes(ability))
-      return true
-    return false
+    return playerStore.abilities.includes(ability)
   }
 
   // Change page
@@ -35,13 +33,15 @@
 
   // Checks if there is a condition for displaying the choice. Either an ability or an item
   const fulfillsChoiceCondition = (choice: IChoice) => {
+    console.log(choice)
     if (choice.ability) {
       return hasAbility(choice.ability)
     } else if (choice.item) {
       return playerStore.items[choice.item] >= (choice.amount || 1)
     } else if (choice.attribute) {
       return playerStore.attributes[choice.attribute] >= (choice.amount || 1)
-    }  else if (choice.condition) {
+    } else if (choice.condition) {
+      console.log(choice.condition, playerStore.conditions[choice.condition])
       return playerStore.conditions[choice.condition]
     } 
     return true
@@ -139,7 +139,7 @@
       <span
         v-else
         class="non-active-link"
-        title="Du saknar denna förmåga eller föremål"
+        title="Detta val är inte möjligt"
       >
         {{ choicesTexts[index] }} 
         <span v-if="choice.ability">({{ abilityTexts[choice.ability] }})</span>

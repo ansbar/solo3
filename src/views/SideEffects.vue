@@ -1,13 +1,18 @@
 <script lang="ts" setup>
   import { usePageStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
+  import { computed } from "vue"
+
+  const hasActiveSideEffect = computed(() => {
+    return !pageStore.sideEffects?.conditions || (pageStore.sideEffects.items || pageStore.sideEffects.abilities || pageStore.sideEffects.attributes || pageStore.sideEffects.modifiers || pageStore.sideEffects.temporary)
+  })
 
   const pageStore = usePageStore()
   const { itemTexts, temporaryTexts, attributeTexts, modifierTexts, abilityTexts } = useTexts()
 </script>
 
 <template>
-  <section class="card side-effects">
+  <section v-if="hasActiveSideEffect" class="card side-effects">
     <div>
       <div
         v-if="pageStore.sideEffects?.items"
