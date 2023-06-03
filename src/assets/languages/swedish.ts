@@ -2030,6 +2030,8 @@ export const languagePages: ILanguagePages = {
     mainText: "Du hoppar upp på det Stora Kärntornets platta tak och slungar en kaststjärna som visslar iväg mot Kaptenens huvud. Gör ett anfallsslag.",
     choices: [
       "Gå vidare",
+      "Gå vidare",
+      "Gå vidare",
     ]
   },
   270: {

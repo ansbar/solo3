@@ -18,6 +18,7 @@ export interface IPage {
     attack?: string
     defense?: number
     opponent?: EOpponents
+    rolls?: Array<number[]>
   }, 
 }
 
@@ -92,5 +93,6 @@ export interface IChoice {
   attribute?: EAttributes
   abilityNegation?: boolean
   condition?: ECondition
+  roll?: number[]
 }
 

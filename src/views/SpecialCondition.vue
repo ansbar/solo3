@@ -15,10 +15,10 @@
 
   const isSuccess = ref()
   const resultText = ref("")
+  const condition = pageStore.specialCondition
+  let roll = ref()
 
   const doRoll = () => {
-    const condition = pageStore.specialCondition
-
     // Use fate defaults if no attack
     let attack = condition?.attack || "2T6"
     let defense = condition?.defense || 6 // Faith rolls need to be seven or above
@@ -30,10 +30,11 @@
       modifier = playerStore.modifiers[condition?.modifier as EPlayerModifiers]
     }
 
-    const roll = dice.doRoll("Attackslag", attack, modifier)
-    isSuccess.value = condition?.type === "block" ? roll < defense : roll > defense
+    roll.value = dice.doRoll("Slag", attack, modifier)
 
-    resultText.value = `Du slår ${attack} och resultatet blir ${roll}.`
+    isSuccess.value = condition?.type === "block" ? roll.value < defense : roll.value > defense
+
+    resultText.value = `Du slår ${attack} och resultatet blir ${roll.value}.`
     if (condition?.type === "fate") {
       resultText.value += " Ett ödesslag behöver vara över 7.\n"
       resultText.value += `<b>Ödet ${isSuccess.value ? "ler mot dig!" : "vänder dig ryggen."}</b>`
@@ -41,15 +42,15 @@
       const opponentName = opponentTexts.value[condition?.opponent as EOpponents]
       resultText.value += ` Du har ${condition?.defense} i försvar.\n`
       resultText.value += `<b>${opponentName} träffar ${isSuccess.value ? "inte" : ""} dig.</b>`
-    }else {
+    } else if (condition?.type !== "roll") {
       const opponentName = opponentTexts.value[condition?.opponent as EOpponents]
       resultText.value += ` ${opponentName} har ${condition?.defense} i försvar.\n`
       resultText.value += `<b>Du lyckas${isSuccess.value ? "!" : " inte."}</b>`
     }
   }
 
-  const gotoPage = (success: boolean) => {
-    mainStore.currentPageId = pageStore.choices?.[success ? 0 : 1].goto as number
+  const gotoPage = (i: number) => {
+    mainStore.currentPageId = pageStore.choices?.[i].goto as number
   }
 </script>
 
@@ -73,24 +74,36 @@
       />
     </div>
 
-    <ul>
+    <ul v-if="condition?.type !== 'roll'">
       <li>
         <!-- First choice in page spec is for a successful roll -->
         <a
           v-if="isSuccess"
           href="#"
-          @click="gotoPage(true)"
+          @click="gotoPage(0)"
         >
           {{ choicesTexts?.[0] }}
         </a>
         <a
           v-else
           href="#"
-          @click="gotoPage(false)"
+          @click="gotoPage(1)"
         >
           {{ choicesTexts?.[1] }}
         </a>
       </li>
+    </ul>
+    <ul v-else>
+      <template v-for="(r, i) in condition.rolls" :key="i">
+        <li v-if="roll >= r[0] && roll <= r[1]">        
+          <a         
+            href="#"
+            @click="gotoPage(i)"
+          >
+            {{ choicesTexts?.[i] }}
+          </a>        
+        </li>
+      </template>      
     </ul>
   </section>
 </template>

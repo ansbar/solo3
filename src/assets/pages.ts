@@ -2891,13 +2891,18 @@ export const pageData: IPages = {
     ]
   },
   269: {
+    specialCondition: {
+      type: "roll",
+      attack: "2T6",
+      rolls: [[9,12],[5,8],[2,4]]
+    },
     choices: [
       {
-        goto: 189
+        goto: 189,    
       },{
-        goto: 199
+        goto: 218,
       },{
-        goto: 218
+        goto: 199,
       },
     ]
   },

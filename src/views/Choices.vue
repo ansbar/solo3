@@ -33,7 +33,6 @@
 
   // Checks if there is a condition for displaying the choice. Either an ability or an item
   const fulfillsChoiceCondition = (choice: IChoice) => {
-    console.log(choice)
     if (choice.ability) {
       return hasAbility(choice.ability)
     } else if (choice.item) {
@@ -41,7 +40,6 @@
     } else if (choice.attribute) {
       return playerStore.attributes[choice.attribute] >= (choice.amount || 1)
     } else if (choice.condition) {
-      console.log(choice.condition, playerStore.conditions[choice.condition])
       return playerStore.conditions[choice.condition]
     } 
     return true
