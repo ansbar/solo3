@@ -13,7 +13,7 @@
   const opponentStore = useOpponentStore()
   const pageStore = usePageStore()
   const mainStore = useMainStore()
-  const { choicesTexts, abilityTexts, itemTexts, difficultyTexts } = useTexts()
+  const { choicesTexts, abilityTexts, itemTexts } = useTexts()
   const generic = useGeneric()
 
   // Returns true if player  has the requested ability
@@ -62,25 +62,7 @@
     if (mainStore.difficulty !== EDifficulty.medium || !pageData[page]) 
       return false
     return !pageData[page].choices?.length
-  } 
-
-  const endText = computed(() => {
-    let text = "Du har klarat av äventyret HÄMNAREN på svårighetsgrad <b>"
-    text += difficultyTexts.value[mainStore.difficulty] + "</b>.<br/>"
-
-    switch (mainStore.difficulty) {
-    case EDifficulty.medium:
-      text += "Bra gjort! Försök igen på en högre svårighetsgrad för ett mer utmanade äventyr!"
-      break
-    case EDifficulty.hard:
-      text += "Bra gjort!! Försök igen på den högsta svårighetsgraden för ett mer utmanade äventyr!"
-      break    
-    case EDifficulty.veryHard:
-      text += "Djupt imponerande! Hur många försök krävdes det för att klara äventyret? Bara att invänta nästa bok, FÖRGÖRAREN!"
-      break
-    }
-    return text
-  })
+  }   
 </script>
 
 <template>
@@ -102,7 +84,10 @@
     class="choices"
   >
     <li v-if="pageStore.endPage">
-      <span v-html="endText" />
+      <a
+        href="#"
+        @click="generic.doStartOver()"
+      >Vill du börja om?</a>
     </li>
     <li v-else-if="!pageStore.choices?.length || playerStore.attributes.hp === 0">
       <a

@@ -1,10 +1,11 @@
 <script lang="ts" setup>
   import { computed } from "vue"
-  import { useOpponentStore, useMainStore } from "@/stores"
+  import { useOpponentStore, useMainStore, usePageStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
-  import { EBattleStates } from "@/assets/enums"
+  import { EBattleStates, EDifficulty } from "@/assets/enums"
 
-  const { mainText, miscTexts } = useTexts()
+  const { mainText, miscTexts, difficultyTexts } = useTexts()
+  const pageStore = usePageStore()
   const mainStore = useMainStore()
   const opponentStore = useOpponentStore()
 
@@ -16,11 +17,32 @@
 
     return opponentStore.enableInnerForce ? miscTexts.value.hiddenMainText : mainText.value 
   })
+
+  const endText = computed(() => {
+    let text = "Du har klarat av äventyret HÄMNAREN på svårighetsgrad <b>"
+    text += difficultyTexts.value[mainStore.difficulty] + "</b>.<br/><br/>"
+
+    switch (mainStore.difficulty) {
+    case EDifficulty.medium:
+      text += "Bra gjort, försök igen på en högre svårighetsgrad för ett mer utmanade äventyr!"
+      break
+    case EDifficulty.hard:
+      text += "Bra gjort! Försök igen på den högsta svårighetsgraden för ett mer utmanade äventyr!"
+      break    
+    case EDifficulty.veryHard:
+      text += "Djupt imponerande! Hur många försök krävdes det för att klara äventyret? Bara att invänta nästa bok, FÖRGÖRAREN!"
+      break
+    }
+    return text
+  })
  </script>
 
 <template>
   <div class="main-text">
     {{ text }}
+  </div>
+  <div v-if="pageStore.endPage" class="card">
+    <span v-html="endText" />
   </div>
 </template>
 

@@ -24,7 +24,7 @@ export const useMainStore = defineStore("main", {
       battlestate: EBattleStates.none,
       battleRoundCounter: 1,
       currentPageId: 0,
-      dev: true,
+      dev: false,
       currentOpponent: 0,
       thrownOpponent: undefined,
       history: [],
