@@ -3227,6 +3227,9 @@ export const pageData: IPages = {
       items: {
         herbs: 1
       },
+      modifiers: {
+        fate: 1
+      }
     },
     choices: [
       {
