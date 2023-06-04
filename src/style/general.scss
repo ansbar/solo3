@@ -62,6 +62,7 @@ h4 {
     @media screen and (max-width: 600px) {
       width: 43%;
       padding-right: 1rem;
+      border-right: none;
     }
   }
   
@@ -74,7 +75,7 @@ h4 {
     }
 
     @media screen and (max-width: 600px) {
-      padding-left: 1rem;
+      padding-left: 0rem;
     }
   }
 
