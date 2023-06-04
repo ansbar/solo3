@@ -3134,6 +3134,11 @@ export const pageData: IPages = {
     ]
   },
   294: {
+    sideEffects: {
+      items: {
+        gold: -2
+      }
+    },
     choices: [
       {
         goto: 337,
@@ -3182,6 +3187,11 @@ export const pageData: IPages = {
     ]
   },
   300: {
+    sideEffects: {
+      items: {
+        gold: -2
+      }
+    },
     choices: [
       {
         goto: 179
@@ -4124,6 +4134,11 @@ export const pageData: IPages = {
     ]
   },
   395: {
+    sideEffects: {
+      attributes: {
+        innerForce: -1,
+      },
+    },
     specialCondition: {
       type: "attack",
       modifier: "kick",
@@ -4383,6 +4398,11 @@ export const pageData: IPages = {
     ]
   },
   416: {
+    sideEffects: {
+      attributes: {
+        hp: -4
+      }
+    },
     choices: [
       {
         goto: 289

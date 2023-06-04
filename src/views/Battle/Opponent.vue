@@ -15,7 +15,10 @@
 
 <template>
   <div class="card">
-    <div class="first-col">
+    <div 
+      class="first-col"
+      :class="attributes.hp === 0 ? 'dead' : ''"
+    >
       <h3>Hämnaren (du)</h3>
       <ul>
         <li>Kroppspoäng: {{ attributes.hp }}/{{ attributes.hpMax }}</li>

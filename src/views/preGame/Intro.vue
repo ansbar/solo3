@@ -32,8 +32,7 @@
     </div>
 
     <div class="text red">
-      Allt innehåll är portat men det finns fortfarande en hel del buggar så det finns en risk att äventyret inte kan spelas klart.
-      Om du hittar buggar, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
+      Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    
     <section class="card">
