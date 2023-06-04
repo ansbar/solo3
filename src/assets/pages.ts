@@ -1868,6 +1868,7 @@ export const pageData: IPages = {
     ]
   },
   174: {
+    image: true,
     choices: [
       {
         goto: 331,
@@ -2459,8 +2460,12 @@ export const pageData: IPages = {
   230: {
     choices: [
       {
-        goto: 65,
-      }
+        goto: 320,
+      },{
+        goto: 148,
+      },{
+        goto: 130,
+      },
     ]
   },  
   231: {
@@ -3896,6 +3901,11 @@ export const pageData: IPages = {
     ]
   },
   369: {
+    sideEffects: {
+      attributes: {
+        innerForce: -1
+      },
+    },
     choices: [
       {
         goto: 399
