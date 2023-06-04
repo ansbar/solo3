@@ -47,6 +47,8 @@ export interface IOpponentPage {
     onlyOnHit?: boolean // Only when a successful player attack lands
     damage: string
   },
+  // If opponent causes damage on player when "still alive", i e after player attack, used with with playerAttackType instant. Like page 278
+  stillAliveDamage?: string
   // The opponents normal defense value from this specific attack of yours
   defense: number[]  
   // In some battles your first attack takes the opponent of guard and you have a bonus

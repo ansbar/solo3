@@ -12,7 +12,7 @@ export interface ILanguagePage {
   mainText: string
   choices?: string[]
   successfulThrowChoices?: string[]
-  stillAlive?: string
+  stillAlive?: string // If opponent is still alive after attack phase
   successfulThrow?: string
   unsuccessfulThrow?: string
   successfulOpponentThrow?: string

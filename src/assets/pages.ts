@@ -2989,11 +2989,6 @@ export const pageData: IPages = {
     ]
   },
   278: {
-    sideEffects: {
-      attributes: {
-        hp: -8
-      }
-    },
     opponent: EOpponents.yaemon,
     choices: [
       {

@@ -44,6 +44,7 @@ interface StoreOpponent {
   miss?: number
   directWin?: number,
   directDamageOnPlayer?: DirectDamageOnPlayer,
+  stillAliveDamage?: string
   enableAlly: boolean,
   allyAttack?: AllyAttack,
   firstAttackBonus?: number,
@@ -65,6 +66,7 @@ export const useOpponentStore = defineStore("opponent", {
     missDamage: undefined,
     directDamageOnPlayer: {} as DirectDamageOnPlayer,
     enableAlly: false,
+    stillAliveDamage: undefined,
     firstAttackBonus: undefined,    
     allyAttack: {} as AllyAttack,
     opponents: [],
@@ -112,6 +114,7 @@ export const useOpponentStore = defineStore("opponent", {
         blockable: payload.blockable,
         directDamageOnPlayer: payload.directDamageOnPlayer,
         directWin: payload.directWinGoto,
+        stillAliveDamage: payload.stillAliveDamage,
         allyAttack: payload.allyAttack,
         firstAttackBonus: payload.firstAttackBonus,
       })

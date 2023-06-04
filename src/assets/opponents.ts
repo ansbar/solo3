@@ -782,7 +782,8 @@ const opponents: IOpponents = {
         playerDamage: "2",
         playerDefense: [0],
         damage: [""],
-        defense: [0]
+        defense: [0],
+        stillAliveDamage: "8"
       },   
       301: {
         playerAttackType: EAttackType.none,

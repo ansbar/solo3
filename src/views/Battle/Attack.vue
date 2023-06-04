@@ -27,13 +27,19 @@
   const rollTextAlly = ref("")
   const damageTextAlly = ref("")  
   const attackChance = ref("2T6")  
+  const stillAliveDamage = ref("")
   
 
   onMounted(() => {    
-    if(opponentStore.playerAttackType === EAttackType.instant)
+    if(opponentStore.playerAttackType === EAttackType.instant) {
       // If the attack is instant no roll has to be made and only the damage part is needed
       battle.dealDamage(damageText, currentOpponent)
-    else if (opponentStore.playerAttackType === EAttackType.defense)
+
+      // If opponent causes damage on player when "still alive", after player attack. Like page 278
+      if (currentOpponent.value.hp > 0 && opponentStore.stillAliveDamage) {
+        stillAliveDamage.value = battle.takeDamage(stillAliveDamage, opponentStore.stillAliveDamage)
+      }
+    } else if (opponentStore.playerAttackType === EAttackType.defense)
       // If battle starts with the defense phase, attack phase is skipped of various reasons
       battle.changeState("defend")
     else {
@@ -210,10 +216,20 @@
       </template>
 
       
-      <!-- If instant attack and not a combined special condition (thise buttons will override) -->
-      <button v-else-if="opponentStore.playerAttackType === 'instant' && !pageStore.specialCondition" @click="battle.changeState('pending')">
-        Gå vidare
-      </button>
+      <!-- If instant attack and not a combined special condition (these buttons will override) -->
+      <template v-else-if="opponentStore.playerAttackType === 'instant' && !pageStore.specialCondition">
+        <p v-html="stillAliveDamage" />
+        <a 
+          v-if="playerStore.attributes.hp === 0"
+          class="red"
+          @click="generic.doStartOver()"
+        >
+          Du har misslyckats. Börja om?
+        </a>     
+        <button v-else @click="battle.changeState('pending')">
+          Gå vidare
+        </button>
+      </template>
     </template>
 
 
