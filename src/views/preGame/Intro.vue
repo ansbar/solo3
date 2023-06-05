@@ -12,7 +12,7 @@
     <h1>Tigerns väg - soloäventyr</h1>
     
     <h2 class="red">
-      Beta 0.7.5
+      Beta 0.7.6
     </h2>
     <img
       :src="getImageUrl()"
