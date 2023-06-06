@@ -2,7 +2,6 @@
   import { computed } from "vue"
   import { useOpponentStore, useMainStore, usePageStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
-  import { EBattleStates, EDifficulty } from "@/assets/enums"
 
   const { mainText, miscTexts, difficultyTexts } = useTexts()
   const pageStore = usePageStore()
@@ -13,7 +12,7 @@
     // In some scenarios we need to hide the mainText until a choce has been made.
     // For example in page 340 the player hase to choose to use InnerForce before reading text.
     // This only affets the innerForce phase
-    if (mainStore.battlestate !== EBattleStates.innerForce) return mainText.value
+    if (mainStore.battlestate !== "innerForce") return mainText.value
 
     return opponentStore.enableInnerForce ? miscTexts.value.hiddenMainText : mainText.value 
   })
@@ -23,13 +22,13 @@
     text += difficultyTexts.value[mainStore.difficulty] + "</b>.<br/><br/>"
 
     switch (mainStore.difficulty) {
-    case EDifficulty.medium:
+    case "medium":
       text += "Bra gjort, försök igen på en högre svårighetsgrad för ett mer utmanade äventyr!"
       break
-    case EDifficulty.hard:
+    case "hard":
       text += "Bra gjort! Försök igen på den högsta svårighetsgraden för ett mer utmanade äventyr!"
       break    
-    case EDifficulty.veryHard:
+    case "veryHard":
       text += "Djupt imponerande! Hur många försök krävdes det för att klara äventyret? Bara att invänta nästa bok, FÖRGÖRAREN!"
       break
     }

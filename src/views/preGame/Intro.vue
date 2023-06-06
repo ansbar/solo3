@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-  import { EPages } from "@/assets/enums"
   import { useMainStore } from "@/stores"
   import { useGeneric } from "@/utils/generic"
 
@@ -11,9 +10,6 @@
   <div>
     <h1>Tigerns väg - soloäventyr</h1>
     
-    <h2 class="red">
-      Beta 0.7.6
-    </h2>
     <img
       :src="getImageUrl()"
     >
@@ -31,7 +27,10 @@
       Det kommer krävas många försök innan du kommer nära att slutföra äventyret.
     </div>
 
-    <div class="text red">
+    <h3 class="red">
+      Beta 0.8.0
+    </h3>
+    <div class="text">
       Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    
@@ -50,7 +49,7 @@
     </section>
   </div>
 
-  <button @click="mainStore.mainPage = EPages.background">
+  <button @click="mainStore.mainPage = 'background'">
     Bakgrund
   </button>
 </template>

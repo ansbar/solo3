@@ -1,4 +1,4 @@
-import { TAbilities, TDefenseType } from "../types"
+import { TAbilities, TAddedAbilities, TDefenseTypes, TOpponents } from "../types"
 
 export interface IndexSignature {
   [key: string]: string
@@ -23,10 +23,10 @@ export interface ILanguagePage {
 export interface ILanguageGeneral {
   gameHelp: ILanguageHelp
   difficultyHelp: IDifficulty
-  abilities: TAbilities
-  defense: TDefenseType
+  abilities: Record<TAbilities | TAddedAbilities, string>
+  defense: Record<TDefenseTypes, string>
   misc: ILanguageMisc
-  opponents: ILanguageOpponents
+  opponents: Record<TOpponents, string>
   modifiers: ILanguageModifiers
   attributes: ILanguageAttributes
   items: ILanguageItems

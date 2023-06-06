@@ -2,7 +2,6 @@
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
   import { useMainStore, useOpponentStore, usePageStore } from "@/stores"
-  import { EAttackType, EBattleStates } from "@/assets/enums"
   import { useStorage } from "@/utils/storage"
   import { pageData } from "@/assets/pages"
   import Opponent from "./Battle/Opponent.vue"
@@ -15,6 +14,7 @@
   import SpecialCondition from "./SpecialCondition.vue"
   import History from "./History.vue"
   import NonBattleInfo from "./NonBattleInfo.vue"
+  import { TBattlePhases } from "@/assets/types"
 
   const mainStore = useMainStore()
   const pageStore = usePageStore()
@@ -37,19 +37,19 @@
       // Set opponent page data every page switch
       opponentStore.setOpponentPageData(opponent[pageStore.opponent].pages[currentPageId.value])
 
-      if (opponentStore.playerAttackType === EAttackType.none) {
+      if (opponentStore.playerAttackType === "none") {
         // Skip whole attack phase, this is just a pending mode to keep opponents data intact until the battle starts again
-        mainStore.battlestate = EBattleStates.pending
-      } else if (opponentStore.playerAttackType === EAttackType.defense) {
+        mainStore.battlestate = "pending"
+      } else if (opponentStore.playerAttackType === "defense") {
         // Skip attack if player wont be able to attack
         mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} startad`)
-        mainStore.battlestate = EBattleStates.defend
+        mainStore.battlestate = "defend"
       } else {
-        mainStore.setBattlestate(EBattleStates.chooseOpponent)
+        mainStore.setBattlestate("chooseOpponent")
       }      
     } else if (pageStore.autoEndBattle) {
       // If the battle was ended through a page choice
-      mainStore.setBattlestate(EBattleStates.none)
+      mainStore.setBattlestate("none")
     }
 
     // Scroll to top
@@ -83,11 +83,11 @@
     if (!mainStore.dev) initStorage()        
   })
 
-  watch(battlestate, (state: EBattleStates) => {
+  watch(battlestate, (state: TBattlePhases) => {
     // Handle history
-    if (state === EBattleStates.innerForce) {
+    if (state === "innerForce") {
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} startad`)
-    } else if (state === EBattleStates.pending) {
+    } else if (state === "pending") {
       mainStore.addToHistory(`Runda ${mainStore.battleRoundCounter} avslutad`)  
       mainStore.addToCounter(true)
       // To know which attacks has been used during a battle
@@ -98,7 +98,7 @@
 
   const showChoices = computed(() => {
     // Hide choices when in an battle or when there are special conditions
-    return (battlestate.value === EBattleStates.none || battlestate.value === EBattleStates.pending) 
+    return (battlestate.value === "none" || battlestate.value === "pending") 
       && !pageStore.specialCondition
   })
   const showHistory = computed(() => pageStore.opponent || pageStore.specialCondition)

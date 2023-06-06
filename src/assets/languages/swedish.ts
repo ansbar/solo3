@@ -8,7 +8,6 @@ export const languageGeneral: ILanguageGeneral = {
     hiddenMainText: "Du måste bestämma nu om du ska använda INRE KRAFT."
   },
   opponents: {
-    none: "",
     gorobei: "Gorobei",
     humanEater: "Människoätaren",
     piratecaptain: "Piratkaptenen",
@@ -31,7 +30,8 @@ export const languageGeneral: ILanguageGeneral = {
     secondOfTwoMonks: "Den andre av Den Ledes präster",
     torturer: "Torteraren",
     captain: "Kaptenen",
-    olderGod: "Äldre gud"
+    olderGod: "Äldre gud",
+    efreti: "Efreti"
   },
   gameHelp: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",

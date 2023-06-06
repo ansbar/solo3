@@ -1,5 +1,4 @@
 import { IOpponents } from "@/assets/interfaces/opponents"
-import { EAttackType, EAbilities, EBattleStates, EOpponents } from "@/assets/enums"
 
 const opponents: IOpponents = {
   gorobei: {
@@ -12,14 +11,14 @@ const opponents: IOpponents = {
     loss: 95,
     pages: {
       17: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         blockable: true,
         damage: ["1T6"],
         defense: [6],
       },
       35: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [7],
         blockable: true,
         damage: ["1T6"],
@@ -36,28 +35,28 @@ const opponents: IOpponents = {
     win: 360,
     pages: {
       257: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "1T6",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },
       310: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [8],
         damage: ["2T6"],
         defense: [4],
         blockable: false,
       },
       332: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         damage: ["2T6"],
         blockable: false,
         defense: [5],
       },
       345: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [7],
         damage: ["2T6"],
         blockable: false,
@@ -77,21 +76,21 @@ const opponents: IOpponents = {
     win: 58,
     pages: {
       67: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         damage: ["1T6+2"],
         blockable: false,
         defense: [6],
       },
       77: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [8],
         damage: ["1T6+2"],
         defense: [6],
         blockable: false,
       },
       87: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         directWinGoto: 34,
         playerDefense: [7],
         damage: ["1T6"],
@@ -108,7 +107,7 @@ const opponents: IOpponents = {
     win: 268,
     pages: {
       237: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
@@ -116,14 +115,14 @@ const opponents: IOpponents = {
         directWinGoto: 296,
       },
       248: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+3", "1T6+1", "1T6+1"],
         defense: [4, 4, 4],
       },
       256: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+3", "1T6+1", "1T6+1"],
@@ -140,14 +139,14 @@ const opponents: IOpponents = {
     win: 336,
     pages: {
       325: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [8],
         damage: ["2T6+1"],
         defense: [3],
         blockable: false,
       },
       316: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [8],
         damage: ["2T6+1"],
         defense: [4],
@@ -164,28 +163,28 @@ const opponents: IOpponents = {
     win: 111,
     pages: {
       184: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [5],
         damage: ["1T6+3"],
         blockable: true,
         defense: [6],
       },
       146: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [6],
         damage: ["1T6+3"],
         defense: [5],
         blockable: true,
       },
       160: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [6],
         damage: ["1T6+3"],
         defense: [5],
         blockable: true,
       },
       202: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [7],
         attackModification: 3,
         playerAttackValue: 3,
@@ -200,27 +199,27 @@ const opponents: IOpponents = {
     attributes: {
       name: ["Kobramannen"],
       hp: [10],
-      missAbility: EAbilities.immunity
+      missAbility: "immunity"
     },
     win: 394,
     miss: 412,
     pages: {
       25: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [],
         damage: [],
         blockable: false,
         defense: [7],
       },
       42: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [],
         damage: ["1T6"],
         defense: [7],
         blockable: false,
       },
       13: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [],
         attackModification: 2,
         damage: [],
@@ -238,21 +237,21 @@ const opponents: IOpponents = {
     win: 272,
     pages: {
       281: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [8],
         damage: ["1T6+3"],
         blockable: true,
         defense: [6],
       },
       293: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [8],
         damage: ["1T6+2"],
         defense: [5],
         blockable: false,
       },
       267: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         missDamage: -2,
         playerDefense: [7],
         attackModification: 2,
@@ -271,53 +270,53 @@ const opponents: IOpponents = {
     win: 47,
     pages: {
       127: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },
       142: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },
       152: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
         enableAlly: true
       },
       165: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
         enableAlly: true
       },
       106: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "4",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },
       1060: {
-        playerAttackType: EAttackType.defense,
+        playerAttackType: "defense",
         playerDefense: [8],
         damage: ["1T6+1"],
         defense: []
       },
       187: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "5",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },   
       23: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [8],
         playerDamage: "1T6+1",
         damage: ["1T6+1"],
@@ -326,11 +325,11 @@ const opponents: IOpponents = {
         allyAttack: {
           damage: "1T6+1",
           defense: 8,
-          ally: EOpponents.runeweaver
+          ally: "runeweaver"
         }
       },
       92: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDamage: "1T6-1",
         playerDefense: [8],
         damage: ["1T6+2"],
@@ -339,11 +338,11 @@ const opponents: IOpponents = {
         allyAttack: {
           damage: "1T6+1",
           defense: 8,
-          ally: EOpponents.runeweaver
+          ally: "runeweaver"
         }
       },
       39: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         attackModification: 2,
         playerDefense: [6],
         damage: ["1T6+2"],
@@ -352,7 +351,7 @@ const opponents: IOpponents = {
         allyAttack: {
           damage: "1T6+1",
           defense: 8,
-          ally: EOpponents.runeweaver
+          ally: "runeweaver"
         }
       },
     }
@@ -367,27 +366,27 @@ const opponents: IOpponents = {
     win: 344,
     pages: {
       8: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "4",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },
       800: {
-        playerAttackType: EAttackType.defense,
+        playerAttackType: "defense",
         playerDefense: [8],
         damage: ["1T6+1"],
         defense: []
       },
       117: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "5",
         playerDefense: [0],
         damage: [""],
         defense: [0]
       },      
       302: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [8],
         playerDamage: "1T6+1",
         damage: ["1T6+1"],
@@ -395,7 +394,7 @@ const opponents: IOpponents = {
         defense: [7],        
       },
       377: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDamage: "1T6-1",
         playerDefense: [8],
         damage: ["1T6+2"],
@@ -403,7 +402,7 @@ const opponents: IOpponents = {
         blockable: true,
       },
       318: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         attackModification: 2,
         playerDefense: [6],
         damage: ["1T6+2"],
@@ -421,28 +420,28 @@ const opponents: IOpponents = {
     win: 55,
     pages: {
       63: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [4, 5, 5],
       },
       630: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [2, 2, 2],
       },
       82: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
         defense: [5, 7, 6],
       },
       71: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [9, 8, 7],
         blockable: true,
         damage: ["1T6+1", "1T6+1", "1T6+1"],
@@ -459,10 +458,10 @@ const opponents: IOpponents = {
     win: 197,
     pages: {
       119: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         directDamageOnPlayer: {
-          state: EBattleStates.attack,
+          state: "attack",
           onlyOnHit: true,
           damage: "1"
         },
@@ -471,10 +470,10 @@ const opponents: IOpponents = {
         defense: [5],
       },
       131: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [7],
         directDamageOnPlayer: {
-          state: EBattleStates.attack,
+          state: "attack",
           onlyOnHit: true,
           damage: "1"
         },
@@ -483,10 +482,10 @@ const opponents: IOpponents = {
         blockable: false,
       },
       109: {
-        playerAttackType: EAttackType.defense,
+        playerAttackType: "defense",
         playerDefense: [6],
         directDamageOnPlayer: {
-          state: EBattleStates.defend,          
+          state: "defend",          
           damage: "4"
         },
         damage: ["2T6+1"],
@@ -494,7 +493,7 @@ const opponents: IOpponents = {
         defense: [],
       },
       170: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "2",
         playerDefense: [0],
         damage: [""],
@@ -511,21 +510,21 @@ const opponents: IOpponents = {
     win: 279,
     pages: {
       168: {
-        playerAttackType: EAttackType.defense,
+        playerAttackType: "defense",
         playerDefense: [6],
         damage: ["1T6+2"],
         defense: [5],
         blockable: false,
       },
       335: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         damage: ["1T6+1"],
         blockable: false,
         defense: [6],
       },
       312: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         attackModification: 1,
         playerDefense: [6],
         damage: ["1T6+1"],
@@ -533,7 +532,7 @@ const opponents: IOpponents = {
         defense: [6],
       },
       322: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [6],
         damage: ["1T6+1"],
         defense: [6],
@@ -550,7 +549,7 @@ const opponents: IOpponents = {
     win: 258,
     pages: {
       244: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [6],
         damage: ["1T6"],
         defense: [6],
@@ -558,14 +557,14 @@ const opponents: IOpponents = {
         blockable: false,
       },
       264: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [8],
         damage: ["1T6"],
         blockable: true,
         defense: [7],
       },
       236: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         attackModification: 1,
         playerDefense: [7],
         damage: ["1T6+2"],
@@ -584,21 +583,21 @@ const opponents: IOpponents = {
     win: 224,
     pages: {
       238: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [7],
         damage: ["1T6"],
         defense: [6],
         blockable: true,
       },
       249: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         damage: ["1T6+1"],
         blockable: true,
         defense: [5],
       },
       259: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [7],
         missDamage: -2,
         damage: ["1T6+1"],
@@ -616,21 +615,21 @@ const opponents: IOpponents = {
     win: 233,
     pages: {
       263: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [6],
         damage: ["1T6+1"],
         defense: [5],
         blockable: true,
       },
       250: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         damage: ["1T6+1"],
         blockable: true,
         defense: [6],
       },
       241: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [7],
         damage: ["1T6+2"],
         blockable: false,
@@ -647,21 +646,21 @@ const opponents: IOpponents = {
     win: 324,
     pages: {
       286: {
-        playerAttackType: EAttackType.throw,
+        playerAttackType: "throw",
         playerDefense: [7, 5],
         blockable: true,
         damage: ["1T6+1", "1T6+1"],
         defense: [5, 5],
       },
       353: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [8, 6],
         blockable: true,
         damage: ["1T6+1", "1T6+1"],
         defense: [7, 7],
       },
       374: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [8, 6],
         blockable: true,
         damage: ["1T6+3", "1T6+1", "1T6+1"],
@@ -678,14 +677,14 @@ const opponents: IOpponents = {
     win: 309,
     pages: {
       321: {
-        playerAttackType: EAttackType.punch,
+        playerAttackType: "punch",
         playerDefense: [6],
         damage: ["2T6+2"],
         defense: [5],
         blockable: false,
       },
       333: {
-        playerAttackType: EAttackType.kick,
+        playerAttackType: "kick",
         playerDefense: [7],
         damage: ["2T6+2"],
         blockable: false,
@@ -702,55 +701,55 @@ const opponents: IOpponents = {
     win: 420,
     pages: {
       24: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },  
       54: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },  
       69: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       690: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       84: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       150: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       1500: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       167: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },  
       228: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         enableInnerForce: true,
         playerDamage: "2",
         playerDefense: [0],
@@ -758,7 +757,7 @@ const opponents: IOpponents = {
         defense: [0]
       },     
       240: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         enableInnerForce: true,
         playerDamage: "8",
         playerDefense: [0],
@@ -766,19 +765,19 @@ const opponents: IOpponents = {
         defense: [0]
       },     
       245: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },  
       266: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },
       278: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         playerDamage: "2",
         playerDefense: [0],
         damage: [""],
@@ -786,13 +785,13 @@ const opponents: IOpponents = {
         stillAliveDamage: "8"
       },   
       301: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },    
       306: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         enableInnerForce: true,
         playerDamage: "6",
         playerDefense: [0],
@@ -800,13 +799,13 @@ const opponents: IOpponents = {
         defense: [0]
       },    
       308: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       319: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         enableInnerForce: true,
         playerDamage: "6",
         playerDefense: [0],
@@ -814,7 +813,7 @@ const opponents: IOpponents = {
         defense: [0]
       },     
       340: {
-        playerAttackType: EAttackType.instant,
+        playerAttackType: "instant",
         enableInnerForce: true,
         playerDamage: "4",
         playerDefense: [0],
@@ -822,55 +821,55 @@ const opponents: IOpponents = {
         defense: [0]
       },     
       330: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       350: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       367: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       3670: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },  
       378: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       390: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       401: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },   
       410: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],
       },  
       411: {
-        playerAttackType: EAttackType.none,
+        playerAttackType: "none",
         playerDefense: [0],
         damage: [""],
         defense: [0],

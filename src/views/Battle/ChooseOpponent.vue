@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { onMounted } from "vue"
   import { useMainStore, useOpponentStore } from "@/stores"
-  import { EBattleStates } from "../../assets/enums"
   import { useOpponents } from "@/utils/opponents"
 
   const mainStore = useMainStore()
@@ -13,19 +12,19 @@
      * Also skip choice if player did a succesful throw (the next attack should be the same opponent)
      * Otherwise carry on to next phase */
     if (opponentStore.opponents.length === 1) {
-      mainStore.battlestate = EBattleStates.innerForce
+      mainStore.battlestate = "innerForce"
     } else if (opponent.opponentsAlive.value === 1) {
       mainStore.setCurrentOpponent(opponent.firstOpponentAlive(0) as number)
-      mainStore.setBattlestate(EBattleStates.innerForce)
+      mainStore.setBattlestate("innerForce")
     } else if (mainStore.thrownOpponent !== undefined) {
       mainStore.setCurrentOpponent(mainStore.thrownOpponent)
-      mainStore.battlestate = EBattleStates.innerForce      
+      mainStore.battlestate = "innerForce"
     }
   })
 
   const chooseOpponent = (index: number) => {
     mainStore.setCurrentOpponent(index)
-    mainStore.setBattlestate(EBattleStates.innerForce)
+    mainStore.setBattlestate("innerForce")
   }
 </script>
 

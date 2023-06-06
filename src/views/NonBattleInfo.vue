@@ -5,33 +5,33 @@
    */
   
   import { computed } from "vue"
-  import { EItems, EModals, EPages } from "@/assets/enums"
   import { usePlayerStore, useMainStore } from "@/stores"
   import { languageGeneral } from "@/assets/languages/swedish"
   import { useTexts } from "@/utils/texts"
   import mapModal from "./modals/mapModal.vue"
+  import { TItems } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
   const { choicesTexts } = useTexts()
 
   interface Item {
-    key: EItems,
+    key: TItems,
     value: number
   }
 
   const nonBattleItems = {
     healingPotion: {
-      key: EItems.healingPotion,
+      key: "healingPotion",
       value: 10,
     },
     herbs: {
-      key: EItems.herbs,
+      key: "herbs",
       value: 8
     }
   } satisfies { [key: string]: Item }
 
-  const itemsVisibleEvenAsEmpty = [ EItems.flashPowder, EItems.gold ]
+  const itemsVisibleEvenAsEmpty = [ "flashPowder", "gold" ]
 
   const playerNonBattleItems = computed(() => {
     const list: Item[] = []
@@ -94,7 +94,7 @@
       </ul>
     </div>
     <div class="full-col">
-      <a href="javascript:void(0);" @click="mainStore.currentModal = EModals.map">
+      <a href="javascript:void(0);" @click="mainStore.currentModal = 'map'">
         Karta över Orb
       </a>
     </div>

@@ -1,7 +1,7 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAddedAbilities, ECondition, EItems } from "@/assets/enums"
 import { type Player } from "./playerInterfaces"
 import { useMainStore } from "./mainStore"
+import { TAbilities, TAddedAbilities, TCondition, TItems } from "@/assets/types"
 
 export const usePlayerStore = defineStore("player", {
   state: (): Player => ({
@@ -46,18 +46,18 @@ export const usePlayerStore = defineStore("player", {
       this.$reset() 
     },
     // Abilities
-    addPlayerAbility (payload: EAbilities | EAddedAbilities) {
+    addPlayerAbility (payload: TAbilities | TAddedAbilities) {
       this.abilities.push(payload)
     },
     removePlayerAbility (payload: number) {
       this.abilities.splice(payload, 1)
     },
     // Conditions
-    toggleCondition (payload: { condition: ECondition, state: boolean}) {
+    toggleCondition (payload: { condition: TCondition, state: boolean}) {
       this.conditions[payload.condition] = payload.state
     },
     // Items
-    setPlayerItem (payload: {item: EItems, amount: number }){
+    setPlayerItem (payload: {item: TItems, amount: number }){
       this.items[payload.item] += payload.amount 
     },
     // Attributes

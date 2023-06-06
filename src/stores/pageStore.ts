@@ -1,7 +1,7 @@
 import { defineStore } from "pinia"
 import { IPage } from "./pageInterfaces"
 import { usePlayerStore } from "./playerStore"
-import { EAddedAbilities, ECondition, EItems } from "@/assets/enums"
+import { TItems } from "@/assets/types"
 
 export const usePageStore = defineStore("page", {
   state: (): IPage => (
@@ -48,8 +48,8 @@ export const usePageStore = defineStore("page", {
       if (this.sideEffects?.conditions) {
         const c = this.sideEffects.conditions     
         if (c.hasNotKilledHonoric !== null) {
-          playerStore.toggleCondition({ condition: ECondition.hasNotKilledHonoric, state: c.hasNotKilledHonoric as boolean}) 
-          playerStore.toggleCondition({ condition: ECondition.hasKilledHonoric, state: !c.hasNotKilledHonoric})   
+          playerStore.toggleCondition({ condition: "hasNotKilledHonoric", state: c.hasNotKilledHonoric as boolean}) 
+          playerStore.toggleCondition({ condition: "hasKilledHonoric", state: !c.hasNotKilledHonoric})   
         }         
       }
       
@@ -58,7 +58,7 @@ export const usePageStore = defineStore("page", {
         
         for (const key in items) {
           if (Object.hasOwn(items, key)) {
-            playerStore.setPlayerItem({ item: key as EItems, amount: items[key] || 0 })
+            playerStore.setPlayerItem({ item: key as TItems, amount: items[key as TItems] || 0 })
           }
         }
       }      
@@ -72,9 +72,9 @@ export const usePageStore = defineStore("page", {
       if (this.sideEffects?.abilities) {
         const abilities = this.sideEffects.abilities        
         if (abilities.kwonsFlail) {
-          playerStore.addPlayerAbility(EAddedAbilities.kwonsFlail)
+          playerStore.addPlayerAbility("kwonsFlail")
         } else {
-          const index = playerStore.abilities.indexOf(EAddedAbilities.kwonsFlail)
+          const index = playerStore.abilities.indexOf("kwonsFlail")
           if (index != -1) playerStore.removePlayerAbility(index)
         }
       }      

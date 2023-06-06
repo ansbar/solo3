@@ -9,7 +9,6 @@
   import { useMainStore, usePlayerStore } from "./stores"
   import { onMounted } from "vue"
   import { useStorage } from "@/utils/storage"
-  import { EPages } from "./assets/enums"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
@@ -33,7 +32,7 @@
  
   onMounted(() => {
     setupStorage()   
-    if (dev.value) mainStore.mainPage = EPages.setup
+    if (dev.value) mainStore.mainPage = "setup"
   })
 </script>
 
@@ -41,10 +40,10 @@
 <template>
   <Dev v-if="dev" />
   <div class="wrapper app">    
-    <Intro v-if="mainPage === EPages.intro" />
-    <Background v-if="mainPage === EPages.background" />
-    <Setup v-if="mainPage === EPages.setup" />
-    <Page v-if="mainPage === EPages.started" />
+    <Intro v-if="mainPage === 'intro'" />
+    <Background v-if="mainPage === 'background'" />
+    <Setup v-if="mainPage === 'setup'" />
+    <Page v-if="mainPage === 'started'" />
   </div>
   <SavedInfo />
 </template>

@@ -1,6 +1,5 @@
 <script lang="ts" setup>
   import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
-  import { EBattleStates } from "@/assets/enums"
   import { computed, onMounted } from "vue"
   import { useTexts } from "@/utils/texts"
 
@@ -33,7 +32,7 @@
       mainStore.addToHistory(`- Använde inre kraft (${playerStore.attributes.innerForce} kvar)`)
     }
     playerStore.setTemporaryInnerForce(useInnerForce)
-    mainStore.setBattlestate(EBattleStates.attack)
+    mainStore.setBattlestate("attack")
   }
 </script>
 

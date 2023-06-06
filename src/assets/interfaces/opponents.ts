@@ -1,4 +1,4 @@
-import { EAbilities, EAttackType, EBattleStates, EOpponents } from "../enums"
+import { TAbilities, TAttackType, TBattlePhases, TOpponents } from "../types"
 
 export type IOpponents = Record<string, IOpponent>
 
@@ -12,7 +12,7 @@ export interface IOpponent {
     hp: number[]
     counter?: number
     counterGoto?: number
-    missAbility?: EAbilities
+    missAbility?: TAbilities
   }
   pages: {
     [index: number]: IOpponentPage
@@ -20,7 +20,7 @@ export interface IOpponent {
 }
 
 export interface IOpponentPage {
-  playerAttackType: EAttackType
+  playerAttackType: TAttackType
   // Only applicable combined with playerAttackType instant, like page 340
   enableInnerForce?: boolean 
   playerAttackValue?: number
@@ -43,7 +43,7 @@ export interface IOpponentPage {
   damage: string[] // 1T6+1
   // Direct damage to the player
   directDamageOnPlayer?: {
-    state: EBattleStates,
+    state: TBattlePhases,
     onlyOnHit?: boolean // Only when a successful player attack lands
     damage: string
   },
@@ -60,6 +60,6 @@ export interface IOpponentPage {
   allyAttack?: {
     damage: string,
     defense: number,
-    ally: EOpponents
+    ally: TOpponents
   }
 }

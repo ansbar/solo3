@@ -1,11 +1,10 @@
 <script lang="ts" setup>
-  import { EModals } from "@/assets/enums"
   import Modal from "@/utils/modal.vue"
 </script>
 
 
 <template>
-  <Modal :active-modal="EModals.rules">
+  <Modal active-modal="rules">
     <h1>Regler & info</h1>
     <h3>Angreppsmetoder inom Tigerns väg</h3>
     <h4>Kluven blixtspark</h4>

@@ -2,9 +2,9 @@
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { ref } from "vue"
   import { useDice } from "@/utils/dice"
-  import { EPlayerModifiers } from "@/assets/enums"
-  import { EOpponents } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
+  import { TCondition, TOpponents, TPlayerModifiers } from "@/assets/types"
+  import { satisfies } from "semver"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
@@ -24,10 +24,11 @@
     let defense = condition?.defense || 6 // Faith rolls need to be seven or above
     let modifier = 0
 
+    // FIXME
     if (condition?.type === "fate") {
-      modifier = playerStore.modifiers["fate" as EPlayerModifiers]
+      modifier = playerStore.modifiers["fate"]
     } else {
-      modifier = playerStore.modifiers[condition?.modifier as EPlayerModifiers]
+      modifier = playerStore.modifiers[condition?.modifier as TPlayerModifiers]
     }
 
     roll.value = dice.doRoll("Slag", attack, modifier)
@@ -39,11 +40,11 @@
       resultText.value += " Ett ödesslag behöver vara över 7.\n"
       resultText.value += `<b>Ödet ${isSuccess.value ? "ler mot dig!" : "vänder dig ryggen."}</b>`
     } else if (condition?.type === "block") {
-      const opponentName = opponentTexts.value[condition?.opponent as EOpponents]
+      const opponentName = opponentTexts.value[condition?.opponent as TOpponents]
       resultText.value += ` Du har ${condition?.defense} i försvar.\n`
       resultText.value += `<b>${opponentName} träffar ${isSuccess.value ? "inte" : ""} dig.</b>`
     } else if (condition?.type !== "roll") {
-      const opponentName = opponentTexts.value[condition?.opponent as EOpponents]
+      const opponentName = opponentTexts.value[condition?.opponent as TOpponents]
       resultText.value += ` ${opponentName} har ${condition?.defense} i försvar.\n`
       resultText.value += `<b>Du lyckas${isSuccess.value ? "!" : " inte."}</b>`
     }

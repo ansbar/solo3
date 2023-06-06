@@ -1,8 +1,8 @@
 <script setup lang="ts">
   import { computed, ref, watch, onMounted } from "vue"
   import { useMainStore, usePlayerStore } from "@/stores"
-  import { EAbilities, EDifficulty, EPages } from "@/assets/enums"
   import { useTexts } from "@/utils/texts"
+  import { Abilities, Difficulty, TAbilities, TDifficulty } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
@@ -12,27 +12,27 @@
   const difficultyChoice = ref("veryHard")
 
   // Abilities not already chosen by player
-  const availableAbilities = computed((): EAbilities[] => {
-    return Object.values(EAbilities).filter(a => !hasAbility(a))
+  const availableAbilities = computed((): TAbilities[] => {
+    return Object.values(Abilities).filter(a => !hasAbility(a))
   })
 
   // Returns true if player has the requested ability
-  const hasAbility = (ability: EAbilities) => playerStore.abilities.includes(ability)
+  const hasAbility = (ability: TAbilities) => playerStore.abilities.includes(ability)
   const isAllAbilitiesChosen = computed(() => playerAbilities.value.length >= mainStore.numberOfAbilities)
   
   const startGame = () => {
     mainStore.setCurrentPageId(1)
-    mainStore.mainPage = EPages.started
+    mainStore.mainPage = "started"
   }
 
   watch(difficultyChoice, (value) => {
-    mainStore.setDifficulty(value as EDifficulty)
+    mainStore.setDifficulty(value as TDifficulty)
   })  
 
   onMounted(() => {
     //Reset all player values
     playerStore.initPlayer()
-    mainStore.setDifficulty(EDifficulty.veryHard)
+    mainStore.setDifficulty("veryHard")
   })
 </script>
 
@@ -44,7 +44,7 @@
       <div>
         <select v-model="difficultyChoice">
           <option
-            v-for="(difficulty, index) in EDifficulty"
+            v-for="(difficulty, index) in Difficulty"
             :key="difficulty"
             :value="index"
           >

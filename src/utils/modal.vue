@@ -1,12 +1,12 @@
 <script lang="ts" setup>
+  import { TModals } from "@/assets/types"
   import { useMainStore } from "@/stores"
-  import { EModals } from "@/assets/enums"
   import { PropType, onMounted, watch } from "vue"
 
   defineProps({
     activeModal: {
-      type: String as PropType<EModals>,
-      default: EModals.none
+      type: String as PropType<TModals>,
+      default: "none"
     }
   })
 
@@ -19,7 +19,7 @@
   const mainStore = useMainStore()
 
   watch(() => mainStore.currentModal, (_currentModal) => {
-    if (_currentModal === EModals.none) document.documentElement.style.overflow = "auto"
+    if (_currentModal === "none") document.documentElement.style.overflow = "auto"
     else document.documentElement.style.overflow = "hidden"
   })
 </script>

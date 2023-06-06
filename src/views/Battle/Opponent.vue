@@ -1,9 +1,9 @@
 <script lang="ts" setup>
   import {  usePlayerStore, useOpponentStore } from "@/stores"
   import { storeToRefs } from "pinia"
-  import { EAttackType, EDefenseType } from "@/assets/enums"
   import { useOpponents } from "@/utils/opponents"
   import { useTexts } from "@/utils/texts"
+  import { TDefenseTypes } from "@/assets/types"
 
   const opponentStore = useOpponentStore()
   const { defenseTexts } = useTexts()
@@ -22,7 +22,7 @@
       <h3>Hämnaren (du)</h3>
       <ul>
         <li>Kroppspoäng: {{ attributes.hp }}/{{ attributes.hpMax }}</li>
-        <li v-if="playerAttackType !== EAttackType.instant">
+        <li v-if="playerAttackType !== 'instant'">
           Ditt försvar: {{ playerDefense }}
         </li>
         
@@ -43,8 +43,8 @@
         <h3>{{ o.name }}</h3>
         <ul>
           <li>Kroppspoäng: {{ o.hp }}/{{ o.hpMax }}</li>
-          <li v-if="playerAttackType !== EAttackType.instant && o.defense">
-            {{ defenseTexts[playerAttackType as unknown as EDefenseType] }}: {{ opponentDefense(o.defense) }}
+          <li v-if="playerAttackType !== 'instant' && o.defense">
+            {{ defenseTexts[playerAttackType as TDefenseTypes] }}: {{ opponentDefense(o.defense) }}
           </li>
         
           <li v-if="o.damage">

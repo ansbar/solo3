@@ -5,7 +5,6 @@
   import { useGeneric } from "@/utils/generic"
   import { ref, onMounted, computed } from "vue"
   import { useOpponents } from "@/utils/opponents"
-  import { EAttackType, EBattleStates } from "@/assets/enums"
   import { languageGeneral } from "@/assets/languages/swedish"
   import { useMainStore, usePlayerStore, useOpponentStore, usePageStore } from "@/stores"
 
@@ -31,7 +30,7 @@
   
 
   onMounted(() => {    
-    if(opponentStore.playerAttackType === EAttackType.instant) {
+    if(opponentStore.playerAttackType === "instant") {
       // If the attack is instant no roll has to be made and only the damage part is needed
       battle.dealDamage(damageText, currentOpponent)
 
@@ -39,7 +38,7 @@
       if (currentOpponent.value.hp > 0 && opponentStore.stillAliveDamage) {
         stillAliveDamage.value = battle.takeDamage(stillAliveDamage, opponentStore.stillAliveDamage)
       }
-    } else if (opponentStore.playerAttackType === EAttackType.defense)
+    } else if (opponentStore.playerAttackType === "defense")
       // If battle starts with the defense phase, attack phase is skipped of various reasons
       battle.changeState("defend")
     else {
@@ -71,7 +70,7 @@
     isHit.value = (attackRoll > opponentDefense())  
 
     const hitText = computed(() => {      
-      if (opponentStore.playerAttackType === EAttackType.throw)       
+      if (opponentStore.playerAttackType === "throw")       
         return isHit.value ? "Du lyckas med att kasta" : "Du misslyckas med att kasta"
       else
         return isHit.value ? "Du träffar" : "Du missar"
@@ -94,7 +93,7 @@
         }          
       
       // No damage if direct win or throw
-      } else if(opponentStore.playerAttackType !== EAttackType.throw && !opponentStore.directWin){
+      } else if(opponentStore.playerAttackType !== "throw" && !opponentStore.directWin){
         battle.dealDamage(damageText, currentOpponent)
 
       } else if (!opponentStore.directWin) {        
@@ -114,11 +113,11 @@
 
   const handleWin = (pageId: number) => {
     mainStore.currentPageId = pageId
-    mainStore.battlestate = EBattleStates.none
+    mainStore.battlestate = "none"
   }
 
   const handleSpecialMiss = () => {
-    mainStore.battlestate = EBattleStates.pending
+    mainStore.battlestate = "pending"
     mainStore.setCurrentPageId(opponentStore.miss as number)
   }
 

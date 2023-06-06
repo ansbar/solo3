@@ -1,4 +1,4 @@
-import { EAbilities, EItems, EOpponents, EAttackType, EAttributes, EAddedAbilities, ECondition } from "@/assets/enums"
+import { TAbilities, TAddedAbilities, TAttackType, TAttributes, TCondition, TItems, TOpponents } from "@/assets/types"
 
 export interface IPages {
   [key: number]: IPage
@@ -11,13 +11,13 @@ export interface IPage {
   image?: boolean
   choices?: Array<IChoice>
   successfulThrowChoices?: Array<IChoice>
-  opponent?: EOpponents
+  opponent?: TOpponents
   specialCondition?: {
     type: string
     modifier?: string
     attack?: string
     defense?: number
-    opponent?: EOpponents
+    opponent?: TOpponents
     rolls?: Array<number[]>
   }, 
 }
@@ -67,14 +67,13 @@ export interface IPageChoiceSpec {
 }
 
 export interface IPageBattle {
-  opponent?: EOpponents
+  opponent?: TOpponents
   attackModifier?: number
   win?: number
   loss?: number
   miss?: number
-  id: EOpponents
   blockable: boolean
-  attackType: EAttackType 
+  attackType: TAttackType 
   attacks : IAttacks[]
 }
 
@@ -87,12 +86,12 @@ export interface IAttacks {
 
 export interface IChoice {
   goto: number
-  ability?: EAbilities | EAddedAbilities
-  item?: EItems
+  ability?: TAbilities | TAddedAbilities
+  item?: TItems
   amount?: number
-  attribute?: EAttributes
+  attribute?: TAttributes
   abilityNegation?: boolean
-  condition?: ECondition
+  condition?: TCondition
   roll?: number[]
 }
 

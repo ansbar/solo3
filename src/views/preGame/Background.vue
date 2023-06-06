@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { useMainStore } from "@/stores"
   import { languageTexts } from "@/assets/languages/swedish"
-  import { EPages } from "@/assets/enums"
 
   const mainStore = useMainStore()
 </script>
@@ -33,7 +32,7 @@
     </div>
   </div>
   <p>
-    <button @click="mainStore.mainPage = EPages.setup">
+    <button @click="mainStore.mainPage = 'setup'">
       Skapa din karaktär
     </button>
   </p>

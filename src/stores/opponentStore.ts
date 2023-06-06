@@ -1,9 +1,9 @@
 import { defineStore } from "pinia"
-import { EAbilities, EAttackType, EBattleStates, EOpponents } from "@/assets/enums"
 import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponents"
+import { TAbilities, TAttackType, TBattlePhases, TOpponents } from "@/assets/types"
 
 interface DirectDamageOnPlayer {
-  state: EBattleStates,
+  state: TBattlePhases,
   onlyOnHit?: boolean,
   damage: string
 }
@@ -11,7 +11,7 @@ interface DirectDamageOnPlayer {
 interface AllyAttack {  
   damage: string,
   defense: number,
-  ally: EOpponents
+  ally: TOpponents
 }
 
 export interface Opponent {
@@ -32,8 +32,8 @@ interface StoreOpponent {
   counterGoto?: number,
   // Some pages have different values depending on if the attack has already been used. Like page 236.
   attacksUsed: number[]
-  missAbility?: EAbilities
-  playerAttackType: EAttackType
+  missAbility?: TAbilities
+  playerAttackType: TAttackType
   enableInnerForce?: boolean
   playerAttackValue?: number,
   playerDamage?: string
@@ -58,7 +58,7 @@ export const useOpponentStore = defineStore("opponent", {
     counterGoto: undefined,
     attacksUsed: [],
     missAbility: undefined,
-    playerAttackType: EAttackType.none,
+    playerAttackType: "none",
     enableInnerForce: undefined,
     playerAttackValue: undefined,
     playerDamage: undefined,

@@ -1,5 +1,4 @@
 import { useMainStore } from "../stores/mainStore"
-import { EBattleStates, EPages } from "../assets/enums"
 import { useStorage } from "./storage"
 
 export function useGeneric() {
@@ -11,16 +10,16 @@ export function useGeneric() {
     storage.removeStoreFromStorage("main")
     storage.removeStoreFromStorage("player")
     mainStore.currentPageId = 0
-    mainStore.mainPage = EPages.setup
-    mainStore.battlestate = EBattleStates.none
+    mainStore.mainPage = "setup"
+    mainStore.battlestate = "none"
   }
 
   const gotoPage = (pageId: number) => {
     if (mainStore.currentPageId === pageId) {
-      mainStore.setBattlestate(EBattleStates.chooseOpponent)
+      mainStore.setBattlestate("chooseOpponent")
     } else {
       mainStore.setCurrentPageId(pageId)
-      mainStore.battlestate = EBattleStates.pending
+      mainStore.battlestate = "pending"
     }
   }
 

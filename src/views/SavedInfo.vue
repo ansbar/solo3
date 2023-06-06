@@ -4,7 +4,6 @@
   import { storeToRefs } from "pinia"
   import { ref } from "vue"
   import RulesModal from "./modals/rulesModal.vue"
-  import { EModals } from "@/assets/enums"
 
   const { removeStoreFromStorage } = useStorage()
   const mainStore = useMainStore()
@@ -26,7 +25,7 @@
       <a v-if="savedData" href="javascript:void(0);" @click="confirmReset()">Ditt data är sparat.</a>
       <span v-else>Ditt spel är INTE sparat</span>
 
-      <a href="javascript:void(0);" @click="currentModal = EModals.rules">Regler</a>
+      <a href="javascript:void(0);" @click="currentModal = 'rules'">Regler</a>
 
       <a :href="mailTo">Kontakt</a>
     </div>

@@ -2,12 +2,12 @@
   import { computed } from "vue"
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
-  import { EAbilities, EAddedAbilities, EBattleStates, EDifficulty } from "@/assets/enums"
   import opponent from "@/assets/opponents"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   import { IChoice } from "@/stores/pageInterfaces"
   import { pageData } from "@/assets/pages"
+  import { TAbilities, TAddedAbilities } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
@@ -17,7 +17,7 @@
   const generic = useGeneric()
 
   // Returns true if player  has the requested ability
-  const hasAbility = (ability: EAbilities | EAddedAbilities) => {
+  const hasAbility = (ability: TAbilities | TAddedAbilities) => {
     return playerStore.abilities.includes(ability)
   }
 
@@ -25,7 +25,7 @@
   const gotoStory = (pageId: number) => {
     if (mainStore.currentPageId === pageId) {
       opponentStore.setOpponentPageData(opponent[pageStore.opponent!].pages[mainStore.currentPageId])
-      mainStore.setBattlestate(EBattleStates.chooseOpponent)
+      mainStore.setBattlestate("chooseOpponent")
     } else {
       mainStore.setCurrentPageId(pageId)
     }
@@ -59,7 +59,7 @@
   }
 
   const leadsToDeath = (page: number) => {
-    if (mainStore.difficulty !== EDifficulty.medium || !pageData[page]) 
+    if (mainStore.difficulty !== "medium" || !pageData[page]) 
       return false
     return !pageData[page].choices?.length
   }   

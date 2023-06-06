@@ -1,8 +1,8 @@
 import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores/"
-import { EAttackType, EBattleStates } from "@/assets/enums"
 import { useDice } from "@/utils/dice"
 import { Ref } from "vue"
 import { Opponent } from "@/stores/opponentStore"
+import { TBattlePhases } from "@/assets/types"
 
 
 export function useBattle() {
@@ -13,8 +13,8 @@ export function useBattle() {
   
 
   // Just a shorter version of changing battle state
-  const changeState = (battleState: string) => {
-    mainStore.setBattlestate(battleState as EBattleStates)
+  const changeState = (battleState: TBattlePhases) => {
+    mainStore.setBattlestate(battleState)
   }
 
 
@@ -106,9 +106,9 @@ export function useBattle() {
     // And then the temporary modifier, like block.
     let totalModifier = 0
     let permanentModifier = 0
-    if (opponentStore.playerAttackType === EAttackType.kick 
-      || opponentStore.playerAttackType === EAttackType.punch 
-      || opponentStore.playerAttackType === EAttackType.throw) {
+    if (opponentStore.playerAttackType === "kick" 
+      || opponentStore.playerAttackType === "punch"
+      || opponentStore.playerAttackType === "throw") {
       permanentModifier = playerStore.modifiers[opponentStore.playerAttackType]
     }     
     totalModifier = permanentModifier + playerStore.temporary.attackModifier

@@ -1,4 +1,3 @@
-import { EAbilities, EAddedAbilities, EAttributes, ECondition, EItems, EOpponents } from "./enums"
 import { IPages } from "@/stores/pageInterfaces"
 
 export const pageData: IPages = {
@@ -13,7 +12,7 @@ export const pageData: IPages = {
         goto: 61,
       }, {
         goto: 80,
-        ability: EAbilities.acrobat
+        ability: "acrobat"
       }
     ]
   },
@@ -39,7 +38,7 @@ export const pageData: IPages = {
   4: {
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 419
       },
       {
@@ -71,7 +70,7 @@ export const pageData: IPages = {
   7: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 392
       }, {
         goto: 402
@@ -79,7 +78,7 @@ export const pageData: IPages = {
     ]
   },
   8: {
-    opponent: EOpponents.olvar,
+    opponent: "olvar",
     choices: [
       {
         goto: 800
@@ -87,7 +86,7 @@ export const pageData: IPages = {
     ]
   },
   800: {
-    opponent: EOpponents.olvar,
+    opponent: "olvar",
     choices: [
       {
         goto: 377
@@ -126,7 +125,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.escapeArtist,
+        ability: "escapeArtist",
         goto: 21
       },
       {
@@ -135,7 +134,7 @@ export const pageData: IPages = {
     ]
   },
   13: {
-    opponent: EOpponents.cobraman,
+    opponent: "cobraman",
     choices: [
       {
         goto: 42,
@@ -167,14 +166,14 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 75,
-        ability: EAbilities.climb
+        ability: "climb"
       }, {
         goto: 86,
       }
     ]
   },
   17: {
-    opponent: EOpponents.gorobei,
+    opponent: "gorobei",
     choices: [
       {
         goto: 35
@@ -197,7 +196,7 @@ export const pageData: IPages = {
   19: {
     choices: [
       {
-        ability: EAbilities.escapeArtist,
+        ability: "escapeArtist",
         goto: 126,
       }, {
         goto: 115,
@@ -228,7 +227,7 @@ export const pageData: IPages = {
     ]
   },
   23: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 92,
@@ -240,7 +239,7 @@ export const pageData: IPages = {
     ]
   },
   24: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     sideEffects: {
       attributes: {
         hp: -10
@@ -255,7 +254,7 @@ export const pageData: IPages = {
     ]
   },
   25: {
-    opponent: EOpponents.cobraman,
+    opponent: "cobraman",
     choices: [
       {
         goto: 42,
@@ -317,7 +316,7 @@ export const pageData: IPages = {
         goto: 14,        
       },{
         goto: 5,
-        ability: EAbilities.playDead
+        ability: "playDead"
       }
     ]
   },
@@ -351,7 +350,7 @@ export const pageData: IPages = {
     ]
   },
   35: {
-    opponent: EOpponents.gorobei,
+    opponent: "gorobei",
     choices: [
       {
         goto: 17
@@ -379,7 +378,7 @@ export const pageData: IPages = {
       modifier: "punch",
       attack: "2T6",
       defense: 4,
-      opponent: EOpponents.guard
+      opponent: "guard",
     },
     choices: [
       {
@@ -390,7 +389,7 @@ export const pageData: IPages = {
     ]
   },
   39: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 92,
@@ -402,7 +401,7 @@ export const pageData: IPages = {
   40: {
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 69,
       },{
         goto: 89,
@@ -419,7 +418,7 @@ export const pageData: IPages = {
     ]
   },
   42: {
-    opponent: EOpponents.cobraman,
+    opponent: "cobraman",
     choices: [
         {
             goto: 25,
@@ -445,7 +444,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.escapeArtist,
+        ability: "escapeArtist",
         goto: 21,
       },
       {
@@ -516,7 +515,7 @@ export const pageData: IPages = {
       modifier: "shuriken",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.yaemon
+      opponent: "yaemon",
     },
     sideEffects: {
       items: {
@@ -546,7 +545,7 @@ export const pageData: IPages = {
     ]
   },
   54: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     sideEffects: {
       attributes: {
         hp: -8
@@ -554,7 +553,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 181,
       },{
         goto: 540,
@@ -562,12 +561,12 @@ export const pageData: IPages = {
     ]
   },
   540: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     specialCondition: {
       type: "block",
       attack: "2T6",
       defense: 7,
-      opponent: EOpponents.yaemon
+      opponent: "yaemon",
     },
     choices: [
       {
@@ -653,7 +652,7 @@ export const pageData: IPages = {
     ]
   },
   63: {
-    opponent: EOpponents.priests,
+    opponent: "priests",
     successfulThrowChoices: [
       {
         goto: 630
@@ -668,7 +667,7 @@ export const pageData: IPages = {
     ]
   },
   630: {
-    opponent: EOpponents.priests,
+    opponent: "priests",
     choices: [
       {
         goto: 82,
@@ -709,7 +708,7 @@ export const pageData: IPages = {
     ]
   },
   67: {
-    opponent: EOpponents.piratecaptain,
+    opponent: "piratecaptain",
     choices: [
       {
         goto: 87
@@ -733,7 +732,7 @@ export const pageData: IPages = {
   69: {
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 350,
       },{
         goto: 690,
@@ -745,7 +744,7 @@ export const pageData: IPages = {
       type: "block",
       attack: "2T6",
       defense: 7,
-      opponent: EOpponents.yaemon
+      opponent: "yaemon",
     },
     choices: [
       {
@@ -770,7 +769,7 @@ export const pageData: IPages = {
     ]
   },
   71: {
-    opponent: EOpponents.priests,
+    opponent: "priests",
     choices: [
       {
         goto: 63,
@@ -788,7 +787,7 @@ export const pageData: IPages = {
       type: "shuriken",
       attack: "2T6",
       defense: 7,
-      opponent: EOpponents.manse
+      opponent: "manse",
     },
     sideEffects: {
       items: {
@@ -806,10 +805,10 @@ export const pageData: IPages = {
   73: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 57
       }, {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 33
       }, {
         goto: 64
@@ -819,7 +818,7 @@ export const pageData: IPages = {
   74: {
     choices: [
       {
-        ability: EAbilities.escapeArtist,
+        ability: "escapeArtist",
         goto: 277,
       },
       {
@@ -858,7 +857,7 @@ export const pageData: IPages = {
     ]
   },
   77: {
-    opponent: EOpponents.piratecaptain,
+    opponent: "piratecaptain",
     choices: [
       {
         goto: 87
@@ -872,7 +871,7 @@ export const pageData: IPages = {
   78: {
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 288,
       },
       {
@@ -885,7 +884,7 @@ export const pageData: IPages = {
       type: "shuriken",
       attack: "2T6",
       defense: 7,
-      opponent: EOpponents.runeweaver
+      opponent: "runeweaver",
     },
     choices: [
       {
@@ -914,7 +913,7 @@ export const pageData: IPages = {
   },
   81: {},
   82: {
-    opponent: EOpponents.priests,
+    opponent: "priests",
     choices: [
       {
         goto: 71,
@@ -946,7 +945,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 350,
       },{
         goto: 690,
@@ -967,7 +966,7 @@ export const pageData: IPages = {
       },{
         goto: 318,
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 8,
       },
     ]
@@ -982,7 +981,7 @@ export const pageData: IPages = {
     ]
   },
   87: {
-    opponent: EOpponents.piratecaptain,
+    opponent: "piratecaptain",
     choices: [
       {
         goto: 77
@@ -1024,7 +1023,7 @@ export const pageData: IPages = {
     ]
   },
   92: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 23,
@@ -1082,7 +1081,7 @@ export const pageData: IPages = {
   99: {
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 88,
       },
       {
@@ -1097,10 +1096,10 @@ export const pageData: IPages = {
       {
         goto: 89
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 69
       },{
-        item: EItems.shuriken,
+        item: "shuriken",
         amount: 3,
         goto: 51
       },
@@ -1109,12 +1108,12 @@ export const pageData: IPages = {
   102: {
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 90
       },{        
         goto: 413
       },{
-        item: EItems.shuriken,
+        item: "shuriken",
         amount: 1,
         goto: 72
       },
@@ -1150,7 +1149,7 @@ export const pageData: IPages = {
     ]
   },
   106: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 1060
@@ -1158,7 +1157,7 @@ export const pageData: IPages = {
     ]
   },
   1060: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 92
@@ -1182,7 +1181,7 @@ export const pageData: IPages = {
   },
   108: {},
   109: {
-    opponent: EOpponents.efreti,
+    opponent: "efreti",
     choices: [
       {
         goto: 131
@@ -1249,7 +1248,7 @@ export const pageData: IPages = {
     ]
   },
   117: {
-    opponent: EOpponents.olvar,
+    opponent: "olvar",
     sideEffects: {
       items: {
         flashPowder: -1
@@ -1263,7 +1262,7 @@ export const pageData: IPages = {
       },{
         goto: 318
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 8
       },
     ]
@@ -1274,7 +1273,7 @@ export const pageData: IPages = {
     ]
   },
   119: {
-    opponent: EOpponents.efreti,
+    opponent: "efreti",
     choices: [
       {
         goto: 131
@@ -1291,7 +1290,7 @@ export const pageData: IPages = {
     choices: [
       { goto: 11 },
       { goto: 355 },
-      { goto: 415, item: EItems.flashPowder, amount: 1 }]
+      { goto: 415, item: "flashPowder", amount: 1 }]
   },
   121: {
     choices: [
@@ -1326,7 +1325,7 @@ export const pageData: IPages = {
   125: {
     choices: [
       {
-        ability: EAbilities.deflectArrows,
+        ability: "deflectArrows",
         goto: 201,
       }, {
         goto: 136,
@@ -1336,7 +1335,7 @@ export const pageData: IPages = {
   126: {
     choices: [
       {
-        ability: EAbilities.lockPicker,
+        ability: "lockPicker",
         goto: 153,
       }, {
         goto: 137,
@@ -1344,7 +1343,7 @@ export const pageData: IPages = {
     ]
   },
   127: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 92
@@ -1353,7 +1352,7 @@ export const pageData: IPages = {
       },{
         goto: 39
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 106
       },
     ]
@@ -1375,7 +1374,7 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 21,
-        ability: EAbilities.escapeArtist        
+        ability: "escapeArtist"        
       },{
         goto: 37,
       }
@@ -1386,14 +1385,14 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 102,
-        item: EItems.amulet
+        item: "amulet"
       },{
         goto: 140,
       }
     ]
   },
   131: {
-    opponent: EOpponents.efreti,
+    opponent: "efreti",
     choices: [
       {
         goto: 119
@@ -1457,7 +1456,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 144,
       }, {
         goto: 285,
@@ -1478,7 +1477,7 @@ export const pageData: IPages = {
       modifier: "shuriken",
       attack: "2T6",
       defense: 5,
-      opponent: EOpponents.piratecaptain
+      opponent: "piratecaptain",
     },
     choices: [
       {
@@ -1512,7 +1511,7 @@ export const pageData: IPages = {
     ]
   },
   142: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     sideEffects: {
       attributes: {
         hp: -8
@@ -1529,7 +1528,7 @@ export const pageData: IPages = {
         goto: 39
       },
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 106
       },
     ]
@@ -1557,7 +1556,7 @@ export const pageData: IPages = {
         hp: -6
       }
     },
-    opponent: EOpponents.snowGiant,
+    opponent: "snowGiant",
     choices: [
       {
         goto: 1840,
@@ -1594,7 +1593,7 @@ export const pageData: IPages = {
     ]
   },
   150: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     sideEffects: {
       attributes: {
         hp: -11
@@ -1609,12 +1608,12 @@ export const pageData: IPages = {
     ]
   },
   1500: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     specialCondition: {
       type: "block",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.yaemon
+      opponent: "yaemon",
     },
     choices: [
       {
@@ -1632,7 +1631,7 @@ export const pageData: IPages = {
     ]
   },
   152: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     sideEffects: {
       attributes: {
         hp: -8,
@@ -1646,7 +1645,7 @@ export const pageData: IPages = {
       },{
         goto: 39,
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 106,
       },
     ]
@@ -1681,7 +1680,7 @@ export const pageData: IPages = {
   156: {
     choices: [
       {
-        item: EItems.fireLizardEssence,
+        item: "fireLizardEssence",
         goto: 147,
       },{
         goto: 132,
@@ -1691,7 +1690,7 @@ export const pageData: IPages = {
   157: {
     choices: [
       {
-        ability: EAbilities.playDead,
+        ability: "playDead",
         goto: 376,
       },{
         goto: 103,
@@ -1712,7 +1711,7 @@ export const pageData: IPages = {
   },
   159: {},
   160: {
-    opponent: EOpponents.snowGiant,
+    opponent: "snowGiant",
     choices: [
       {
         goto: 1840,
@@ -1765,7 +1764,7 @@ export const pageData: IPages = {
     ]
   },
   165: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     choices: [
       {
         goto: 92,
@@ -1781,7 +1780,7 @@ export const pageData: IPages = {
   166: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 392,
       },{
         goto: 156,
@@ -1802,7 +1801,7 @@ export const pageData: IPages = {
     ]
   },
   168: {
-    opponent: EOpponents.firstOfTwoMonks,
+    opponent: "firstOfTwoMonks",
     choices: [
       {
         goto: 322,
@@ -1821,7 +1820,7 @@ export const pageData: IPages = {
     ]
   },
   170: {
-    opponent: EOpponents.efreti,
+    opponent: "efreti",
     choices: [
       {
         goto: 149,
@@ -1833,7 +1832,7 @@ export const pageData: IPages = {
       type: "block",
       attack: "2T6",
       defense: 8,
-      opponent: EOpponents.priests
+      opponent: "priests",
     },
     choices: [
       {
@@ -1877,7 +1876,7 @@ export const pageData: IPages = {
       },{
         goto: 247,
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 230,
       }
     ]
@@ -1956,7 +1955,7 @@ export const pageData: IPages = {
     ]
   },
   184: {
-    opponent: EOpponents.snowGiant,
+    opponent: "snowGiant",
     choices: [
       {
         goto: 202,
@@ -2000,12 +1999,12 @@ export const pageData: IPages = {
     ]
   },
   187: {
-    opponent: EOpponents.olvarAndRuneWeaver,
+    opponent: "olvarAndRuneWeaver",
     specialCondition: {
       type: "block",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.olvarAndRuneWeaver
+      opponent: "olvarAndRuneWeaver",
     },
     choices: [
       {
@@ -2069,7 +2068,7 @@ export const pageData: IPages = {
   194: {
     choices: [
       {
-        ability: EAbilities.immunity,
+        ability: "immunity",
         goto: 214,
       }, {
         goto: 206,
@@ -2082,7 +2081,7 @@ export const pageData: IPages = {
       modifier: "punch",
       attack: "2T6",
       defense: 5,
-      opponent: EOpponents.priests
+      opponent: "priests",
     },
     choices: [
       {
@@ -2133,7 +2132,7 @@ export const pageData: IPages = {
     ]
   },  
   202: {
-    opponent: EOpponents.snowGiant,
+    opponent: "snowGiant",
     choices: [
       {
         goto: 1840
@@ -2156,7 +2155,7 @@ export const pageData: IPages = {
       type: "block",
       attack: "2T6",
       defense: 5,
-      opponent: EOpponents.olvar
+      opponent: "olvar",
     },
     choices: [
       {
@@ -2183,7 +2182,7 @@ export const pageData: IPages = {
   207: {
     choices: [
       {
-        ability: EAbilities.deflectArrows,
+        ability: "deflectArrows",
         goto: 188,
       },{
         goto: 198,
@@ -2205,7 +2204,7 @@ export const pageData: IPages = {
   210: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 193,
       }, {
         goto: 133,
@@ -2236,10 +2235,10 @@ export const pageData: IPages = {
       },{
         goto: 180,
       },{
-        item: EItems.magicShuriken,
+        item: "magicShuriken",
         goto: 161,
       },{
-        item: EItems.shuriken,
+        item: "shuriken",
         goto: 170,
       },
     ]
@@ -2271,7 +2270,7 @@ export const pageData: IPages = {
       type: "block",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.olvar
+      opponent: "olvar",
     },
     choices: [
       {
@@ -2293,7 +2292,7 @@ export const pageData: IPages = {
       {
         goto: 331,
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 230,
       },{
         goto: 247,
@@ -2308,7 +2307,7 @@ export const pageData: IPages = {
       modifier: "shuriken",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.captain
+      opponent: "captain",
     },
     choices: [
       {
@@ -2372,7 +2371,7 @@ export const pageData: IPages = {
     image: true,
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 195,
       },{
         goto: 171,
@@ -2408,7 +2407,7 @@ export const pageData: IPages = {
       type: "block",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.olvar
+      opponent: "olvar",
     },
     choices: [
       {
@@ -2428,7 +2427,7 @@ export const pageData: IPages = {
     ]
   },
   228: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 245,
@@ -2471,7 +2470,7 @@ export const pageData: IPages = {
   231: {
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 192,
       }, {
         goto: 211,
@@ -2528,7 +2527,7 @@ export const pageData: IPages = {
     ]
   },
   236: {
-    opponent: EOpponents.secondOfTwoMonks,
+    opponent: "secondOfTwoMonks",
     choices: [
       {
         goto: 264,
@@ -2538,7 +2537,7 @@ export const pageData: IPages = {
     ]
   },  
   237: {
-    opponent: EOpponents.soldiers,
+    opponent: "soldiers",
     choices: [
       {
         goto: 256
@@ -2548,7 +2547,7 @@ export const pageData: IPages = {
     ]
   },
   238: {
-    opponent: EOpponents.torturer,
+    opponent: "torturer",
     choices: [
       {
         goto: 249,
@@ -2564,7 +2563,7 @@ export const pageData: IPages = {
       type: "block",
       attack: "2T6",
       defense: 5,
-      opponent: EOpponents.olvar
+      opponent: "olvar",
     },
     choices: [
       {
@@ -2575,7 +2574,7 @@ export const pageData: IPages = {
     ]
   },
   240: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 54
@@ -2591,7 +2590,7 @@ export const pageData: IPages = {
     ]
   },
   241: {
-    opponent: EOpponents.runeweaver,
+    opponent: "runeweaver",
     choices: [
       {
         goto: 263
@@ -2617,7 +2616,7 @@ export const pageData: IPages = {
     ]
   },
   244: {
-    opponent: EOpponents.secondOfTwoMonks,
+    opponent: "secondOfTwoMonks",
     choices: [
       {
         goto: 264,
@@ -2634,7 +2633,7 @@ export const pageData: IPages = {
         hp: -10
       }
     },
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 266
@@ -2653,7 +2652,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        condition: ECondition.hasNotKilledHonoric,
+        condition: "hasNotKilledHonoric",
         goto: 339,
       },{
         goto: 370,
@@ -2665,7 +2664,7 @@ export const pageData: IPages = {
       type: "attack",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.captain
+      opponent: "captain",
     },
     choices: [
       {
@@ -2676,7 +2675,7 @@ export const pageData: IPages = {
     ]
   },  
   248: {
-    opponent: EOpponents.soldiers,
+    opponent: "soldiers",
     choices: [
       {
         goto: 237
@@ -2688,7 +2687,7 @@ export const pageData: IPages = {
     ]
   },
   249: {
-    opponent: EOpponents.torturer,
+    opponent: "torturer",
     choices: [
       {
         goto: 249,
@@ -2700,7 +2699,7 @@ export const pageData: IPages = {
     ]
   },  
   250: {
-    opponent: EOpponents.runeweaver,
+    opponent: "runeweaver",
     choices: [
       {
         goto: 263
@@ -2764,7 +2763,7 @@ export const pageData: IPages = {
     ]
   },
   256: {
-    opponent: EOpponents.soldiers,
+    opponent: "soldiers",
     choices: [
       {
         goto: 237
@@ -2776,7 +2775,7 @@ export const pageData: IPages = {
     ]
   },
   257: {
-    opponent: EOpponents.humanEater,
+    opponent: "humanEater",
     sideEffects: {
       items: {
         shuriken: -1
@@ -2784,7 +2783,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.deflectArrows,
+        ability: "deflectArrows",
         goto: 380,
       }, {
         goto: 396,
@@ -2801,7 +2800,7 @@ export const pageData: IPages = {
     ]
   },
   259: {
-    opponent: EOpponents.torturer,
+    opponent: "torturer",
     choices: [
       {
         goto: 249,
@@ -2839,11 +2838,11 @@ export const pageData: IPages = {
     choices: [
       { goto: 226 }, 
       { goto: 204 }, 
-      { goto: 117, item: EItems.flashPowder, amount: 1 }
+      { goto: 117, item: "flashPowder", amount: 1 }
     ]
   },
   263: {
-    opponent: EOpponents.runeweaver,
+    opponent: "runeweaver",
     choices: [
       {
         goto: 250
@@ -2855,7 +2854,7 @@ export const pageData: IPages = {
     ]
   },
   264: {
-    opponent: EOpponents.secondOfTwoMonks,
+    opponent: "secondOfTwoMonks",
     choices: [
       {
         goto: 244
@@ -2888,7 +2887,7 @@ export const pageData: IPages = {
     ]
   },
   267: {
-    opponent: EOpponents.goblin,
+    opponent: "goblin",
     choices: [
       {
         goto: 293
@@ -2923,7 +2922,7 @@ export const pageData: IPages = {
   270: {
     choices: [
       {
-        ability: EAbilities.lockPicker,
+        ability: "lockPicker",
         goto: 215
       },{
         goto: 207
@@ -2994,12 +2993,12 @@ export const pageData: IPages = {
     ]
   },
   278: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 84
       },{
-        ability: EAddedAbilities.kwonsFlail,
+        ability: "kwonsFlail",
         goto: 240
       },{
         goto: 266
@@ -3033,7 +3032,7 @@ export const pageData: IPages = {
     ]
   },
   281: {
-    opponent: EOpponents.goblin,
+    opponent: "goblin",
     choices: [
       {
         goto: 293
@@ -3069,7 +3068,7 @@ export const pageData: IPages = {
   },
   285: {},
   286: {
-    opponent: EOpponents.monks,
+    opponent: "monks",
     choices: [
       {
         goto: 353
@@ -3089,7 +3088,7 @@ export const pageData: IPages = {
   289: {
     choices: [
       {
-        item: EItems.opalring,
+        item: "opalring",
         goto: 203
       },{
         goto: 213
@@ -3127,7 +3126,7 @@ export const pageData: IPages = {
     ]
   },
   293: {
-    opponent: EOpponents.goblin,
+    opponent: "goblin",
     choices: [
       {
         goto: 281
@@ -3209,12 +3208,12 @@ export const pageData: IPages = {
         hp: -8
       }
     },
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     specialCondition: {
       type: "block",
       attack: "2T6",
       defense: 7,
-      opponent: EOpponents.yaemon
+      opponent: "yaemon",
     },
     choices: [
       {
@@ -3225,7 +3224,7 @@ export const pageData: IPages = {
     ]
   },
   302: {
-    opponent: EOpponents.olvar,
+    opponent: "olvar",
     choices: [
       {
         goto: 377
@@ -3260,7 +3259,7 @@ export const pageData: IPages = {
     ]
   },
   306: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 150
@@ -3269,7 +3268,7 @@ export const pageData: IPages = {
       }, {
         goto: 84
       }, {
-        ability: EAddedAbilities.kwonsFlail,
+        ability: "kwonsFlail",
         goto: 240
       }, {
         goto: 266
@@ -3288,7 +3287,7 @@ export const pageData: IPages = {
     ]
   },
   308: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 266
@@ -3309,7 +3308,7 @@ export const pageData: IPages = {
     ]
   },
   310: {
-    opponent: EOpponents.humanEater,
+    opponent: "humanEater",
     choices: [
       {
         goto: 332
@@ -3322,7 +3321,7 @@ export const pageData: IPages = {
   },
   311: {},
   312: {
-    opponent: EOpponents.firstOfTwoMonks,
+    opponent: "firstOfTwoMonks",
     choices: [
       {
         goto: 322
@@ -3335,7 +3334,7 @@ export const pageData: IPages = {
   314: {
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 329
       }, {
         goto: 334
@@ -3348,7 +3347,7 @@ export const pageData: IPages = {
       modifier: "kick",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.cobraman
+      opponent: "cobraman",
     },
     choices: [
       {
@@ -3361,7 +3360,7 @@ export const pageData: IPages = {
   3150: {
     choices: [
       {
-        ability: EAbilities.immunity,
+        ability: "immunity",
         goto: 31502
       }, {
         goto: 31501
@@ -3377,7 +3376,7 @@ export const pageData: IPages = {
     ]
   },  
   316: {
-    opponent: EOpponents.giant,
+    opponent: "giant",
     choices: [
       {
         goto: 325
@@ -3390,7 +3389,7 @@ export const pageData: IPages = {
   },
   317: {},
   318: {
-    opponent: EOpponents.olvar,
+    opponent: "olvar",
     choices: [
       {
         goto: 302
@@ -3400,7 +3399,7 @@ export const pageData: IPages = {
     ]
   },
   319: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 245
@@ -3423,7 +3422,7 @@ export const pageData: IPages = {
     ]
   },
   321: {
-    opponent: EOpponents.olderGod,
+    opponent: "olderGod",
     choices: [
       {
         goto: 333
@@ -3435,7 +3434,7 @@ export const pageData: IPages = {
     ]
   },
   322: {
-    opponent: EOpponents.firstOfTwoMonks,
+    opponent: "firstOfTwoMonks",
     choices: [
       {
         goto: 312
@@ -3449,7 +3448,7 @@ export const pageData: IPages = {
   323: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 414
       }, {
         goto: 314
@@ -3464,7 +3463,7 @@ export const pageData: IPages = {
     ]
   },
   325: {
-    opponent: EOpponents.giant,
+    opponent: "giant",
     choices: [
       {
         goto: 316
@@ -3481,7 +3480,7 @@ export const pageData: IPages = {
       modifier: "punch",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.magician
+      opponent: "magician",
     },
     choices: [
       {
@@ -3509,7 +3508,7 @@ export const pageData: IPages = {
     ]
   },
   330: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     sideEffects: {
       attributes: {
         hp: -4
@@ -3529,7 +3528,7 @@ export const pageData: IPages = {
   },
   331: {},
   332: {
-    opponent: EOpponents.humanEater,
+    opponent: "humanEater",
     choices: [
       {
         goto: 310
@@ -3541,7 +3540,7 @@ export const pageData: IPages = {
     ]
   },
   333: {
-    opponent: EOpponents.olderGod,
+    opponent: "olderGod",
     choices: [
       {
         goto: 321
@@ -3562,7 +3561,7 @@ export const pageData: IPages = {
     ]
   },
   335: {
-    opponent: EOpponents.firstOfTwoMonks,
+    opponent: "firstOfTwoMonks",
     choices: [
       {
         goto: 312
@@ -3617,7 +3616,7 @@ export const pageData: IPages = {
     ]
   },
   340: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 301
@@ -3658,7 +3657,7 @@ export const pageData: IPages = {
     choices: [
       {
         goto: 298,
-        ability: EAbilities.acrobat
+        ability: "acrobat"
       }, {
         goto: 287,
       }
@@ -3681,7 +3680,7 @@ export const pageData: IPages = {
     ]
   },
   345: {
-    opponent: EOpponents.humanEater,
+    opponent: "humanEater",
     choices: [
       {
         goto: 332
@@ -3712,7 +3711,7 @@ export const pageData: IPages = {
   348: {},
   349: {},
   350: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 266,
@@ -3726,7 +3725,7 @@ export const pageData: IPages = {
   351: {
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 389,
       }, {
         goto: 326,
@@ -3746,7 +3745,7 @@ export const pageData: IPages = {
     ]
   },
   353: {
-    opponent: EOpponents.monks,
+    opponent: "monks",
     choices: [
       {
         goto: 374
@@ -3767,7 +3766,7 @@ export const pageData: IPages = {
   355: {
     choices: [
       {
-        ability: EAbilities.lockPicker,
+        ability: "lockPicker",
         goto: 346
       },{
         goto: 381
@@ -3788,7 +3787,7 @@ export const pageData: IPages = {
   359: {
     choices: [
       {
-        attribute: EAttributes.innerForce,
+        attribute: "innerForce",
         goto: 395,
       }, {
         goto: 403,
@@ -3863,7 +3862,7 @@ export const pageData: IPages = {
     ]
   },
   367: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 181,
@@ -3873,12 +3872,12 @@ export const pageData: IPages = {
     ]
   },
   3670: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     specialCondition: {
       type: "block",
       attack: "2T6",
       defense: 7,
-      opponent: EOpponents.yaemon
+      opponent: "yaemon",
     },
     choices: [
       {
@@ -3915,10 +3914,10 @@ export const pageData: IPages = {
   370: {
     choices: [
       {    
-        condition: ECondition.hasKilledHonoric, 
+        condition: "hasKilledHonoric", 
         goto: 305
       },{
-        condition: ECondition.hasNotKilledHonoric, 
+        condition: "hasNotKilledHonoric", 
         goto: 348
       },
     ]
@@ -3952,7 +3951,7 @@ export const pageData: IPages = {
     ]
   },
   374: {
-    opponent: EOpponents.monks,
+    opponent: "monks",
     choices: [
       {
         goto: 374
@@ -3983,7 +3982,7 @@ export const pageData: IPages = {
     ]
   },
   377: {
-    opponent: EOpponents.olvar,
+    opponent: "olvar",
     choices: [
       {
         goto: 377
@@ -3995,10 +3994,10 @@ export const pageData: IPages = {
     ]
   },
   378: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 69
       }, {
         goto: 89
@@ -4020,13 +4019,13 @@ export const pageData: IPages = {
   381: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 174
       },{
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 2
       },{
-        attribute: EAttributes.innerForce,
+        attribute: "innerForce",
         goto: 369
       },{
         goto: 393
@@ -4059,7 +4058,7 @@ export const pageData: IPages = {
   385: {
     choices: [
       {
-        attribute: EAttributes.innerForce,
+        attribute: "innerForce",
         goto: 343,
       }, {
         goto: 327,
@@ -4089,7 +4088,7 @@ export const pageData: IPages = {
       modifier: "poisonArrow",
       attack: "2T6",
       defense: 4,
-      opponent: EOpponents.magician
+      opponent: "magician",
     },
     choices: [
       {
@@ -4100,7 +4099,7 @@ export const pageData: IPages = {
     ]
   },
   390: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 84,
@@ -4109,7 +4108,7 @@ export const pageData: IPages = {
       }, {
         goto: 278,
       }, {
-        ability: EAddedAbilities.kwonsFlail,
+        ability: "kwonsFlail",
         goto: 240,
       }
     ]
@@ -4118,7 +4117,7 @@ export const pageData: IPages = {
   392: {
     choices: [
       {
-        item: EItems.fireLizardEssence,
+        item: "fireLizardEssence",
         goto: 52
       },{
         goto: 91
@@ -4128,7 +4127,7 @@ export const pageData: IPages = {
   393: {
     choices: [
       {
-        ability: EAbilities.immunity,
+        ability: "immunity",
         goto: 388
       },{
         goto: 3930
@@ -4154,7 +4153,7 @@ export const pageData: IPages = {
       modifier: "kick",
       attack: "2T6",
       defense: 6,
-      opponent: EOpponents.monk
+      opponent: "monk",
     },
     choices: [
       {
@@ -4197,7 +4196,7 @@ export const pageData: IPages = {
       {
         goto: 383
       },{
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 392
       },
     ]
@@ -4215,12 +4214,12 @@ export const pageData: IPages = {
       {
         goto: 331
       },{
-        item: EItems.shuriken,
+        item: "shuriken",
         goto: 269
       },{        
         goto: 247
       },{
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 230
       },
     ]
@@ -4228,7 +4227,7 @@ export const pageData: IPages = {
   400: {
     choices: [
       {
-        ability: EAbilities.immunity,
+        ability: "immunity",
         goto: 246
       },{        
         goto: 391
@@ -4236,7 +4235,7 @@ export const pageData: IPages = {
     ]
   },
   401: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 367
@@ -4250,7 +4249,7 @@ export const pageData: IPages = {
       {
         goto: 383
       },{
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 392
       },
     ]
@@ -4265,7 +4264,7 @@ export const pageData: IPages = {
   404: {
     choices: [
       {
-        ability: EAbilities.climb,
+        ability: "climb",
         goto: 385,
       }, {
         goto: 362,
@@ -4292,7 +4291,7 @@ export const pageData: IPages = {
       }, {
         goto: 318
       }, {
-        ability: EAbilities.poisonArrows,
+        ability: "poisonArrows",
         goto: 8
       }
     ]
@@ -4305,7 +4304,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.playDead,
+        ability: "playDead",
         goto: 376
       },{
         goto: 103
@@ -4329,7 +4328,7 @@ export const pageData: IPages = {
     ]
   },
   410: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     sideEffects: {
       attributes: {
         hp: -2
@@ -4337,7 +4336,7 @@ export const pageData: IPages = {
     },
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 167
       }, {
         goto: 159
@@ -4345,7 +4344,7 @@ export const pageData: IPages = {
     ]
   },
   411: {
-    opponent: EOpponents.yaemon,
+    opponent: "yaemon",
     choices: [
       {
         goto: 68
@@ -4357,7 +4356,7 @@ export const pageData: IPages = {
   412: {
     choices: [
       {
-        ability: EAbilities.immunity,
+        ability: "immunity",
         goto: 4120,
       }, {
         goto: 41201,
@@ -4384,7 +4383,7 @@ export const pageData: IPages = {
   413: {
     choices: [
       {
-        ability: EAbilities.acrobat,
+        ability: "acrobat",
         goto: 29
       },{
         goto: 379
@@ -4422,7 +4421,7 @@ export const pageData: IPages = {
   417: {
     choices: [
       {
-        attribute: EAttributes.innerForce,
+        attribute: "innerForce",
         goto: 343,
       }, {
         goto: 327,

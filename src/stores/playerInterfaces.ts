@@ -1,33 +1,12 @@
-import { EAbilities, EAddedAbilities } from "@/assets/enums"
+import { TAbilities, TAddedAbilities, TCondition, TItems, TPlayerModifiers } from "@/assets/types"
 
 export interface Player {
-  abilities: Array<EAbilities | EAddedAbilities>
-  items: Player_items
-  modifiers: Player_modifiers
+  abilities: Array<TAbilities | TAddedAbilities>
+  items: Record<TItems, number>
+  modifiers: Record<TPlayerModifiers, number>
   attributes: Player_attributes
-  conditions: Player_conditions
+  conditions: Record<TCondition, boolean>
   temporary: Player_temporary
-}
-
-interface Player_items {
-  gold: number
-  shuriken: number
-  flashPowder: number
-  opalring: number
-  healingPotion: number  
-  glove: number
-  magicShuriken: number
-  fireLizardEssence: number
-  herbs: number
-  amulet: number
-  poison: number
-}
-
-interface Player_modifiers {
-  punch: number
-  kick: number
-  throw: number
-  fate: number
 }
 
 interface Player_attributes {
@@ -41,9 +20,4 @@ interface Player_temporary {
   useInnerForce: boolean | null
   attackModifier: number 
   damageModifier: number
-}
-
-interface Player_conditions {
-  hasNotKilledHonoric: boolean
-  hasKilledHonoric: boolean
 }

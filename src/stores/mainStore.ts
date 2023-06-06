@@ -1,10 +1,12 @@
 import { defineStore } from "pinia"
-import { EBattleStates, EDifficulty, EPages, EModals } from "@/assets/enums"
 import { usePlayerStore } from "./playerStore"
+import { TBattlePhases, TBooks, TDifficulty, TLanguages, TModals, TPages } from "@/assets/types"
 
 interface Main {
-  mainPage: EPages
-  battlestate: EBattleStates
+  language: TLanguages
+  book: TBooks
+  mainPage: TPages
+  battlestate: TBattlePhases
   currentPageId: number
   dev: boolean  
   battleRoundCounter: number
@@ -12,16 +14,18 @@ interface Main {
   currentOpponent: number
   history: string[]
   savedData: boolean
-  difficulty: EDifficulty
+  difficulty: TDifficulty
   numberOfAbilities: number
-  currentModal: EModals
+  currentModal: TModals
 }
 
 export const useMainStore = defineStore("main", {
   state: (): Main => (
     { 
-      mainPage: EPages.intro,
-      battlestate: EBattleStates.none,
+      language: "swedish",
+      book: "avenger",
+      mainPage: "intro",
+      battlestate: "none",
       battleRoundCounter: 1,
       currentPageId: 0,
       dev: true,
@@ -29,16 +33,16 @@ export const useMainStore = defineStore("main", {
       thrownOpponent: undefined,
       history: [],
       savedData: false,
-      difficulty: EDifficulty.veryHard,
+      difficulty: "veryHard",
       numberOfAbilities: 3,
-      currentModal: EModals.none
+      currentModal: "none"
     }
   ),
   actions: {
     closeModal () {
-      this.currentModal = EModals.none
+      this.currentModal = "none"
     },
-    setDifficulty (payload: EDifficulty) {
+    setDifficulty (payload: TDifficulty) {
       const playerStore = usePlayerStore()
       playerStore.abilities = []
 
@@ -80,8 +84,8 @@ export const useMainStore = defineStore("main", {
     setCurrentPageId (payload: number) {
       this.currentPageId = payload
     },
-    setBattlestate (payload: EBattleStates) {
-      if (this.battlestate === EBattleStates.none && payload === EBattleStates.innerForce) 
+    setBattlestate (payload: TBattlePhases) {
+      if (this.battlestate === "none" && payload === "innerForce") 
         this.addToHistory("Striden börjar")
       this.battlestate = payload
     },

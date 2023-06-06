@@ -1,4 +1,4 @@
-import { languagePages, languageGeneral, languageTexts } from "@/assets/languages/swedish"
+import { languagePages, languageGeneral } from "@/assets/languages/swedish"
 import { useMainStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"

@@ -6,7 +6,6 @@
 
   import ChooseOpponent from "./ChooseOpponent.vue"
   import { storeToRefs } from "pinia"
-  import { EAttackType, EBattleStates } from "../../assets/enums"
 
   const opponentStore = useOpponentStore()
   const { battlestate } = storeToRefs(useMainStore())
@@ -14,14 +13,14 @@
 
 <template>
   <div
-    v-if="opponentStore.playerAttackType !== EAttackType.none"
+    v-if="opponentStore.playerAttackType !== 'none'"
     class="battle"
-    :class="battlestate === EBattleStates.pending ? 'hide' : ''"
+    :class="battlestate === 'pending' ? 'hide' : ''"
   >
-    <ChooseOpponent v-if="battlestate === EBattleStates.chooseOpponent" />
-    <InnerForce v-if="battlestate === EBattleStates.innerForce" />
-    <Attack v-if="battlestate === EBattleStates.attack" />
-    <Defend v-if="battlestate === EBattleStates.defend" />
+    <ChooseOpponent v-if="battlestate === 'chooseOpponent'" />
+    <InnerForce v-if="battlestate === 'innerForce'" />
+    <Attack v-if="battlestate === 'attack'" />
+    <Defend v-if="battlestate === 'defend'" />
   </div>
 </template>
 

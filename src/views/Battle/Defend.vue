@@ -4,7 +4,6 @@
   import { useTexts } from "@/utils/texts"
   import { useMainStore, usePlayerStore, useOpponentStore } from "@/stores"
   import { useOpponents } from "@/utils/opponents"
-  import { EBattleStates } from "@/assets/enums"
   import { useGeneric } from "@/utils/generic"
   import { useBattle } from "./helpers"
 
@@ -32,7 +31,7 @@
     currentAttackingOpponent.value = firstOpponentAlive(0) as number
 
     // In the rare case damage is applied when player attacks but attack phase is skipped (like page 109)
-    if (opponentStore.directDamageOnPlayer?.state === EBattleStates.defend && !opponentStore.directDamageOnPlayer.onlyOnHit){
+    if (opponentStore.directDamageOnPlayer?.state === "defend" && !opponentStore.directDamageOnPlayer.onlyOnHit){
       directDamageText.value = battle.takeDamage(directDamageText, opponentStore.directDamageOnPlayer.damage)
 
       // If player should die during direct damage we skip the normal defence phase 
@@ -116,7 +115,7 @@
   // If player loses a battle but is still alive
   const doLoss = () => {
     mainStore.currentPageId = opponentStore.loss as number
-    mainStore.battlestate = EBattleStates.none
+    mainStore.battlestate = "none"
   }
 </script>
 
