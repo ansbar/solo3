@@ -7,18 +7,14 @@
 </script>
 
 <template>
-  <div>
-    <h1>Tigerns väg - soloäventyr</h1>
-    
+  <div>   
     <img
-      :src="getImageUrl()"
+      :src="getImageUrl('cover')"
     >
+    <h1>Tigerns väg del 1 - Hämnaren</h1>
     <div class="text small">
-      Copyright Mark Smith & Jamie Thomson 1985<br>
-      Illustreringar av Bob Harvey<br>
       Översatt av Gunilla Jonsson 1986<br>
       Svensk copyright Äventyrsspel 1986<br>
-      Scan & PDF Gothmog
     </div>
     
     <div class="text">
@@ -27,11 +23,8 @@
       Det kommer krävas många försök innan du kommer nära att slutföra äventyret.
     </div>
 
-    <h3 class="red">
-      Beta 0.8.0
-    </h3>
-    <div class="text">
-      Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
+    <div class="text small">
+      <b>Betaversion 0.9.0</b> Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    
     <section class="card">

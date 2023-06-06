@@ -2,18 +2,18 @@
   import { computed } from "vue"
   import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
-  import opponent from "@/assets/opponents"
+  import opponent from "@/assets/books/avenger/opponents.js"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   import { IChoice } from "@/stores/pageInterfaces"
-  import { pageData } from "@/assets/pages"
+  import { pageData } from "@/assets/books/avenger/pages.js"
   import { TAbilities, TAddedAbilities } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const pageStore = usePageStore()
   const mainStore = useMainStore()
-  const { choicesTexts, abilityTexts, itemTexts } = useTexts()
+  const { choicesTexts, abilityTexts, itemTexts } = await useTexts()
   const generic = useGeneric()
 
   // Returns true if player  has the requested ability

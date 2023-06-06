@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+  import Start from "./views/preGame/Start.vue"
   import Setup from "./views/preGame/Setup.vue"
   import Intro from "./views/preGame/Intro.vue"
   import Page from "./views/Page.vue"
@@ -40,10 +41,11 @@
 <template>
   <Dev v-if="dev" />
   <div class="wrapper app">    
-    <Intro v-if="mainPage === 'intro'" />
-    <Background v-if="mainPage === 'background'" />
-    <Setup v-if="mainPage === 'setup'" />
-    <Page v-if="mainPage === 'started'" />
+    <Suspense><Start v-if="mainPage === 'start'" /></Suspense>
+    <Suspense><Intro v-if="mainPage === 'intro'" /></Suspense>
+    <Suspense><Background v-if="mainPage === 'background'" /></Suspense>
+    <Suspense><Setup v-if="mainPage === 'setup'" /></Suspense>
+    <Suspense><Page v-if="mainPage === 'started'" /></Suspense>
   </div>
   <SavedInfo />
 </template>

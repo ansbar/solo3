@@ -6,7 +6,7 @@
   import { TDefenseTypes } from "@/assets/types"
 
   const opponentStore = useOpponentStore()
-  const { defenseTexts } = useTexts()
+  const { defenseTexts } = await useTexts()
   const { playerDefense, opponentDefense } = useOpponents()
 
   const { playerAttackType, playerDamage } = storeToRefs(useOpponentStore())

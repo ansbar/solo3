@@ -6,7 +6,7 @@
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
-  const { abilityTexts, difficultyTexts, difficultyHelpTexts } = useTexts()
+  const { abilityTexts, difficultyTexts, difficultyHelpTexts } = await useTexts()
 
   const playerAbilities = computed(() => playerStore.abilities)
   const difficultyChoice = ref("veryHard")
@@ -44,9 +44,9 @@
       <div>
         <select v-model="difficultyChoice">
           <option
-            v-for="(difficulty, index) in Difficulty"
+            v-for="difficulty in Difficulty"
             :key="difficulty"
-            :value="index"
+            :value="difficulty"
           >
             {{ difficultyTexts[difficulty] }}
           </option>

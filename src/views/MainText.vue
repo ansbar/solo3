@@ -3,7 +3,7 @@
   import { useOpponentStore, useMainStore, usePageStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
 
-  const { mainText, miscTexts, difficultyTexts } = useTexts()
+  const { mainText, miscTexts, difficultyTexts } = await useTexts()
   const pageStore = usePageStore()
   const mainStore = useMainStore()
   const opponentStore = useOpponentStore()

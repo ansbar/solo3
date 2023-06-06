@@ -11,7 +11,7 @@
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
   const { playerDefense, playerThrowDefense, firstOpponentAlive } = useOpponents()
-  const { pageTexts } = useTexts()  
+  const { pageTexts } = await useTexts()  
   const generic = useGeneric()
   const battle = useBattle()
   const dice = useDice()

@@ -1,7 +1,6 @@
 <script lang="ts" setup>
   import { useMainStore } from "@/stores"
   import { storeToRefs } from "pinia"  
-  import { languagePages } from "@/assets/languages/swedish"
 
   const { currentPageId } = storeToRefs(useMainStore())
 </script>
@@ -12,11 +11,11 @@
     <div class="wrapper">  
       <select v-model="currentPageId">
         <option
-          v-for="(page, index) in languagePages"
-          :key="page.mainText"
-          :value="index"
+          v-for="(i) in 420"
+          :key="i"
+          :value="i"
         >
-          Gå till {{ index }}
+          Gå till {{ i }}
         </option>
       </select>
     </div>

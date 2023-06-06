@@ -3,13 +3,12 @@
   import { ref } from "vue"
   import { useDice } from "@/utils/dice"
   import { useTexts } from "@/utils/texts"
-  import { TCondition, TOpponents, TPlayerModifiers } from "@/assets/types"
-  import { satisfies } from "semver"
+  import { TOpponents, TPlayerModifiers } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
   const pageStore = usePageStore()
-  const { opponentTexts, choicesTexts } = useTexts()
+  const { opponentTexts, choicesTexts } = await useTexts()
   
   const dice = useDice()
 

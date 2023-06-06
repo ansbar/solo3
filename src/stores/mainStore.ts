@@ -24,11 +24,11 @@ export const useMainStore = defineStore("main", {
     { 
       language: "swedish",
       book: "avenger",
-      mainPage: "intro",
+      mainPage: "start",
       battlestate: "none",
       battleRoundCounter: 1,
       currentPageId: 0,
-      dev: true,
+      dev: false,
       currentOpponent: 0,
       thrownOpponent: undefined,
       history: [],

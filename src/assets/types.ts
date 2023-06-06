@@ -20,7 +20,7 @@ export type TAbilities = typeof Abilities[number]
 export type TAddedAbilities = "kwonsFlail"
 
 // Different 
-export const Pages = ["intro", "background", "setup", "started"] as const
+export const Pages = ["start", "intro", "background", "setup", "started"] as const
 export type TPages = typeof Pages[number]
 
 // Different modal pages

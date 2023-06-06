@@ -6,7 +6,7 @@
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore()
-  const { gameHelpTexts } = useTexts()
+  const { gameHelpTexts } = await useTexts()
 
   const showInnerForce = computed(() => {
     /* Cant use inner strength if:

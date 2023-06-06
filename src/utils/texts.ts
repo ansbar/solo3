@@ -1,10 +1,12 @@
-import { languagePages, languageGeneral } from "@/assets/languages/swedish"
+//import { languagePages, languageGeneral, languageIntro } from "@/assets/books/avenger/swedish"
 import { useMainStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
 
-export function useTexts() {
-  const { currentPageId } = storeToRefs(useMainStore())
+export async function useTexts() {
+  const { currentPageId, language, book } = storeToRefs(useMainStore())
+  const { languagePages, languageGeneral, languageIntro } = await import(`../assets/books/${book.value}/${language.value}.ts`)
+
 
   // Temporary page texts
   const pageTexts = computed(() => {
@@ -15,6 +17,11 @@ export function useTexts() {
   })
   const choicesTexts = computed(() => {
     return languagePages[currentPageId.value].choices
+  })
+
+  // Intro texts
+  const backgroundTexts = computed(() => {
+    return languageIntro.background
   })
 
   // General texts
@@ -67,6 +74,7 @@ export function useTexts() {
     opponentTexts, 
     miscTexts, 
     gameHelpTexts,
-    difficultyHelpTexts
+    difficultyHelpTexts,
+    backgroundTexts
   }
 }

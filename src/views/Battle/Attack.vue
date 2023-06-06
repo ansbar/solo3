@@ -5,7 +5,6 @@
   import { useGeneric } from "@/utils/generic"
   import { ref, onMounted, computed } from "vue"
   import { useOpponents } from "@/utils/opponents"
-  import { languageGeneral } from "@/assets/languages/swedish"
   import { useMainStore, usePlayerStore, useOpponentStore, usePageStore } from "@/stores"
 
   // Composables
@@ -16,7 +15,7 @@
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
   const opponentStore = useOpponentStore() 
-  const { pageTexts } = useTexts()
+  const { pageTexts, opponentTexts } = await useTexts()
   const { opponentsAlive, opponentDefense, currentOpponent } = useOpponents() 
   
   // Local vars
@@ -55,7 +54,7 @@
     const _isHit = (_attackRoll > opponentStore.allyAttack!.defense)
     const _hitText = _isHit ? "träffar!" : "missar."
 
-    rollTextAlly.value = `${languageGeneral.opponents[opponentStore.allyAttack!.ally]} slår ${attackChance.value} och resultatet blir ${_attackRoll}.`
+    rollTextAlly.value = `${opponentTexts.value[opponentStore.allyAttack!.ally]} slår ${attackChance.value} och resultatet blir ${_attackRoll}.`
     rollTextAlly.value += ` ${currentOpponent.value.name} har ${currentOpponent.value.defense} i försvar.\n`
     rollTextAlly.value += `<b>Attacken ${_hitText}</b>`
 

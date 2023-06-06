@@ -6,14 +6,13 @@
   
   import { computed } from "vue"
   import { usePlayerStore, useMainStore } from "@/stores"
-  import { languageGeneral } from "@/assets/languages/swedish"
   import { useTexts } from "@/utils/texts"
   import mapModal from "./modals/mapModal.vue"
   import { TItems } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
-  const { choicesTexts } = useTexts()
+  const { choicesTexts, abilityTexts, itemTexts } = await useTexts()
 
   interface Item {
     key: TItems,
@@ -57,7 +56,7 @@
       <h4>Färdigheter</h4>
       <ul>
         <li v-for="ability in playerStore.abilities" :key="ability" class="firstCapital">
-          {{ languageGeneral.abilities[ability] }}<br>
+          {{ abilityTexts[ability] }}<br>
         </li>
       </ul>     
     </div>
@@ -65,7 +64,7 @@
       <h4>Föremål</h4>
       <template v-for="amount, item in playerStore.items" :key="item">
         <div v-if="(itemsVisibleEvenAsEmpty[item as any] || playerStore.items[item])" class="firstCapital">
-          {{ languageGeneral.items[item] }}: {{ amount }}<br>
+          {{ itemTexts[item] }}: {{ amount }}<br>
         </div>
       </template>      
     </div>
@@ -81,14 +80,14 @@
             href="#"
             @click="useItem(item)"
           >
-            Använd {{ languageGeneral.items[item.key] }}
+            Använd {{ itemTexts[item.key] }}
           </a>
           <span
             v-else
             class="non-active-link"
             title="Du har redan fulla kroppspoäng"
           >
-            Använd {{ languageGeneral.items[item.key] }}
+            Använd {{ itemTexts[item.key] }}
           </span>
         </li>
       </ul>

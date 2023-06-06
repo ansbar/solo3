@@ -23,13 +23,26 @@ export function useGeneric() {
     }
   }
 
-  const getImageUrl = (image?: string) => {
+  const getImageUrl = (image?: string, generic = false) => {
+    const folder = generic ? "" : `books/${mainStore.book}/`
+    let url
+
     if (!image) image =  mainStore.currentPageId.toString() // page id as image name default
 
-    let url = new URL(`/src/assets/images/${image}.png`, import.meta.url).href
-    // Check ig png files exists otherwise try with jpg
-    if (url.substring(url.length - 9) === "undefined") url = new URL(`/src/assets/images/${image}.jpg`, import.meta.url).href
-    
+    if (folder) {
+      url = new URL(`/src/assets/books/${mainStore.book}/images/${image}.png`, import.meta.url).href
+    } else {
+      url = new URL(`/src/assets/images/${image}.png`, import.meta.url).href
+    }    
+
+    // Check if png files exists otherwise try with jpg
+    if (url.substring(url.length - 9) === "undefined") {
+      if (folder) {
+        url = new URL(`/src/assets/books/${mainStore.book}/images/${image}.jpg`, import.meta.url).href
+      } else {
+        url = new URL(`/src/assets/images/${image}.jpg`, import.meta.url).href
+      }  
+    }
     return url    
   }
 

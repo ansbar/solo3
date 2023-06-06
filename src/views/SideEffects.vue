@@ -8,7 +8,7 @@
   })
 
   const pageStore = usePageStore()
-  const { itemTexts, temporaryTexts, attributeTexts, modifierTexts, abilityTexts } = useTexts()
+  const { itemTexts, temporaryTexts, attributeTexts, modifierTexts, abilityTexts } = await useTexts()
 </script>
 
 <template>

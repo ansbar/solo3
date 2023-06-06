@@ -1,7 +1,8 @@
 <script lang="ts" setup>
   import { useMainStore } from "@/stores"
-  import { languageTexts } from "@/assets/languages/swedish"
+  import { useTexts } from "@/utils/texts"
 
+  const { backgroundTexts } = await useTexts()
   const mainStore = useMainStore()
 </script>
 
@@ -10,25 +11,25 @@
     <h1>Bakgrund</h1>    
 
     <div class="text">
-      {{ languageTexts.background1 }}
+      {{ backgroundTexts.b1 }}
     </div>
     <div class="text">
-      {{ languageTexts.background2 }}
+      {{ backgroundTexts.b2 }}
     </div>
     <div class="text">
-      {{ languageTexts.background3 }}
+      {{ backgroundTexts.b3 }}
     </div>
     <div class="text">
-      {{ languageTexts.background4 }}
+      {{ backgroundTexts.b4 }}
     </div>
     
     <h3>NINJA NO CHIGIRI</h3>
     <div class="text italic">
-      {{ languageTexts.background5 }}
+      {{ backgroundTexts.b5 }}
     </div>
     
     <div class="text">
-      {{ languageTexts.background6 }}
+      {{ backgroundTexts.b6 }}
     </div>
   </div>
   <p>
