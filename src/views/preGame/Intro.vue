@@ -16,8 +16,11 @@
     >
     <h1>{{ introTexts.title }}</h1>
     <div class="text small">
+      Copyright Mark Smith & Jamie Thomson 1985<br>
+      Illustreringar av Bob Harvey<br>
       Översatt av Gunilla Jonsson 1986<br>
       Svensk copyright Äventyrsspel 1986<br>
+      Scan & PDF Gothmog
     </div>
     
     <div class="text">
