@@ -7,7 +7,7 @@
   const mainStore = useMainStore()
   const { savedData  } = storeToRefs(useMainStore())
 
-  const confirmRestart = (total = true) => {
+  const confirmRestart = (total = false) => {
     if (confirm("Eventuell sparad speldata försvinner om du går vidare")) {
       removeStoreFromStorage("main")
       removeStoreFromStorage("player")

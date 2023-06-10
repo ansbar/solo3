@@ -69,6 +69,7 @@
       removeStoreFromStorage("player")
       mainStore.setSavedData(false)
     }    
+    setStoreToStorage("persistant")
   }  
 
   onMounted(() => {

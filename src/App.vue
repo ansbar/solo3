@@ -8,12 +8,13 @@
   import BottomBar from "./views/BottomBar.vue"
   import Background from "./views/preGame/Background.vue"
   import { storeToRefs } from "pinia"  
-  import { useMainStore, usePlayerStore } from "./stores"
+  import { useMainStore, usePlayerStore, usePersistantStore } from "./stores"
   import { onMounted } from "vue"
   import { useStorage } from "@/utils/storage"
 
   const mainStore = useMainStore()
   const playerStore = usePlayerStore()
+  const persistantStore = usePersistantStore()
   const { getStoreFromStorage } = useStorage()  
   const { dev, mainPage } = storeToRefs(useMainStore())
 
@@ -21,6 +22,10 @@
     // Get saved local storage data if it exists and setup.    
     const mainStorageData = getStoreFromStorage("main")
     const playerStorageData = getStoreFromStorage("player")
+    const persistantStorageData = getStoreFromStorage("persistant")
+
+    if (persistantStorageData)
+      persistantStore.$state = persistantStorageData
 
     if (mainStorageData) {
       mainStore.$state = mainStorageData

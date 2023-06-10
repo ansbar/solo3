@@ -5,7 +5,7 @@
 
 // GENERIC TYPES
 // Languages 
-export const Languages = ["swedish"] as const
+export const Languages = ["swedish", "none"] as const
 export type TLanguages = typeof Languages[number]
 
 // Books

@@ -1,4 +1,5 @@
 export { useMainStore } from "./mainStore"
+export { usePersistantStore } from "./persistantStore"
 export { usePlayerStore } from "./playerStore"
 export { useOpponentStore } from "./opponentStore"
 export { usePageStore } from "./pageStore"

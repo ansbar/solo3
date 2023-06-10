@@ -1,12 +1,13 @@
 <script lang="ts" setup>
-  import { useMainStore } from "@/stores"
+  import { usePersistantStore, useMainStore } from "@/stores"
   import { useGeneric } from "@/utils/generic"
   import { storeToRefs } from "pinia"  
 
-  const { language } = storeToRefs(useMainStore())
+  const { language } = storeToRefs(usePersistantStore())
+  const { mainPage } = storeToRefs(useMainStore())
   const { getImageUrl } = useGeneric()
 
-  const mainStore = useMainStore()
+  const persistantStore = usePersistantStore()
 
   const books = {
     "avenger": ["swedish"],
@@ -24,24 +25,26 @@
     <h1>The Way of the Tiger</h1>
     <h3>Online solo adventure</h3>
     <br>
-    <h4>Choose book</h4>     
-
     <div class="books">
       <img
         v-for="(key, book) in books"
         :key="book"
         class="cover"
-        :class="{ selected: mainStore.book === book }"
+        :class="{ selected: persistantStore.book === book }"
         :src="getImageUrl(book, true)"
-        @click="mainStore.book = book"
+        @click="persistantStore.book = book"
       >
     </div>
 
-    <section v-if="mainStore.book">
-      <h4>And language</h4>
+    <section v-if="persistantStore.book">
       <select v-model="language">
         <option
-          v-for="lang in books[mainStore.book]"
+          value="none" selected disabled
+        >
+          Choose language
+        </option>
+        <option
+          v-for="lang in books[persistantStore.book]"
           :key="lang"
           :value="lang"
         >
@@ -51,7 +54,7 @@
     </section>
 
     <br>
-    <button v-if="mainStore.book && mainStore.language" @click="mainStore.mainPage = 'intro'">
+    <button v-if="persistantStore.book && persistantStore.language !== 'none'" @click="mainPage = 'intro'">
       Start
     </button>
   </div>

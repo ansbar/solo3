@@ -27,7 +27,7 @@
     </div>
 
     <div class="text small">
-      <b>Betaversion 0.9.1</b><br>Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
+      <b>Betaversion 0.9.2</b><br>Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    
     <section class="card">

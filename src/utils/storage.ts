@@ -1,10 +1,10 @@
-import { usePlayerStore } from "@/stores"
-import { useMainStore } from "@/stores"
+import { usePlayerStore, useMainStore, usePersistantStore } from "@/stores"
 
 export function useStorage() {
+  const persistantStore = usePersistantStore()
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
-  type Stores = "main" | "player" 
+  type Stores = "main" | "player" | "persistant"
 
   const getStoreFromStorage = (name: Stores) => {
     const storeData = localStorage.getItem("solo-" + name)
@@ -24,6 +24,8 @@ export function useStorage() {
       store = playerStore.$state
     else if (name === "main")
       store = mainStore.$state
+    else if (name === "persistant")
+      store = persistantStore.$state
 
     try {
       const stringifiedStorage = JSON.stringify(store)

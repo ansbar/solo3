@@ -1,10 +1,11 @@
 import { Texts } from "@/assets/books/avenger/swedish"
-import { useMainStore } from "@/stores"
+import { useMainStore, usePersistantStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
 
 export async function useTexts() {
-  const { currentPageId, language, book } = storeToRefs(useMainStore())
+  const { language, book } = storeToRefs(usePersistantStore())
+  const { currentPageId } = storeToRefs(useMainStore())
   const { languagePages, languageGeneral, languageIntro } = await import(`../assets/books/${book?.value}/${language?.value}.ts`) as Texts
 
   // Temporary page texts

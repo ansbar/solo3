@@ -1,10 +1,8 @@
 import { defineStore } from "pinia"
 import { usePlayerStore } from "./playerStore"
-import { TBattlePhases, TBooks, TDifficulty, TLanguages, TModals, TPages } from "@/assets/types"
+import { TBattlePhases, TDifficulty, TModals, TPages } from "@/assets/types"
 
 interface Main {
-  language?: TLanguages
-  book?: TBooks
   mainPage: TPages
   battlestate: TBattlePhases
   currentPageId: number
@@ -22,8 +20,6 @@ interface Main {
 export const useMainStore = defineStore("main", {
   state: (): Main => (
     { 
-      language: undefined,
-      book: undefined,
       mainPage: "start",
       battlestate: "none",
       battleRoundCounter: 1,
