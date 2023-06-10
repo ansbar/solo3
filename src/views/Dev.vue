@@ -11,13 +11,13 @@
     <div class="wrapper">  
       <select v-model="currentPageId">
         <option
-          v-for="(i) in 420"
+          v-for="i in 420"
           :key="i"
           :value="i"
         >
           Gå till {{ i }}
         </option>
-      </select>
+      </select>      
     </div>
   </section>
 </template>

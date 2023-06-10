@@ -4,11 +4,11 @@
  * https://jaketrent.com/post/loop-typescript-union-type/ */
 
 // GENERIC TYPES
-// Languages available
+// Languages 
 export const Languages = ["swedish"] as const
 export type TLanguages = typeof Languages[number]
 
-// Books available
+// Books
 export const Books = ["avenger"] as const
 export type TBooks = typeof Books[number]
 

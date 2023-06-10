@@ -4,7 +4,8 @@
   import Intro from "./views/preGame/Intro.vue"
   import Page from "./views/Page.vue"
   import Dev from "./views/Dev.vue"
-  import SavedInfo from "./views/SavedInfo.vue"
+  import TopBar from "./views/TopBar.vue"
+  import BottomBar from "./views/BottomBar.vue"
   import Background from "./views/preGame/Background.vue"
   import { storeToRefs } from "pinia"  
   import { useMainStore, usePlayerStore } from "./stores"
@@ -40,6 +41,7 @@
 
 <template>
   <Dev v-if="dev" />
+  <TopBar />
   <div class="wrapper app">    
     <Suspense><Start v-if="mainPage === 'start'" /></Suspense>
     <Suspense><Intro v-if="mainPage === 'intro'" /></Suspense>
@@ -47,7 +49,7 @@
     <Suspense><Setup v-if="mainPage === 'setup'" /></Suspense>
     <Suspense><Page v-if="mainPage === 'started'" /></Suspense>
   </div>
-  <SavedInfo />
+  <BottomBar />
 </template>
 
 

@@ -7,7 +7,7 @@
   import { computed } from "vue"
   import { usePlayerStore, useMainStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
-  import mapModal from "./modals/mapModal.vue"
+  import mapModal from "../modals/mapModal.vue"
   import { TItems } from "@/assets/types"
 
   const playerStore = usePlayerStore()

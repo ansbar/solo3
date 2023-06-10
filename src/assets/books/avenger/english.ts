@@ -100,6 +100,9 @@ export const languageIntro = {
     b4: "Vid unga år hängde du i dina händer i timmar i sträck från trädgrenar för att stärka armarna. Du sprang ﬂera mil och din lättfotade snabbhet var stor nog att hålla ett tio meter långt band uppe över marken. Du gick på lina, smidig som en apa. Nu simmar du som en fisk och hoppar som en tiger. Du kan röra dig som en lätt vind och glida genom den mörkaste natt som en skugga. lnnan han dog lärde Naijishi dig Skuggkrigarens fördrag.",
     b5: "Jag ska försvinna in i natten, andra min kropp till trä eller sten, sjunka ned i jorden och gå genom väggar och stängda dörrar Jag ska bli dödad många gånger och ändå inte dö, ändra mitt ansikte och bli osynlig, gå bland människama utan att ses.",
     b6: "Det var sedan din fasterfar Naijishi hade dött sam du började leva efter fördragets ord. En man kom till ön, Yaeman, Flammans Stormästare. Han använde lånade trollkonster för att lura munkarna att tro att han var en kwondyrkare från Storkontinenten. Han var verkligen en munk, men han dyrkade Kwons andre bror, den Lede, som hjälper de starka att förtrycka de svaga och onda män att härska över dårar. Yaeman dödade Naijishi - ingen kunde mäta sig med honom i strid utan vapen, och han stal Kettsuinrullarna från Templet. Ännu en gång kände du saknadens smärta, för du hade älskat Naijishi som en far. Du svor en ed till Kwon att en gång hämnas hans död. Du har slipat på dina färdigheter genom att hjälpa de förtrampade i Mångfaldens land, men nu är tiden inne för dig att visa vad du kan inför dina munkbröder i Klipptemplet.",
+  },
+  intro: {
+    title: "The Way of the Tiger part 1 - Avenger"
   }
 }
 

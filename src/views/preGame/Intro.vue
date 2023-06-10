@@ -1,9 +1,12 @@
 <script lang="ts" setup>
   import { useMainStore } from "@/stores"
   import { useGeneric } from "@/utils/generic"
-
+  import { useTexts } from "@/utils/texts"
+  
   const { getImageUrl } = useGeneric()
   const mainStore = useMainStore()
+
+  const { introTexts } = await useTexts()
 </script>
 
 <template>
@@ -11,7 +14,7 @@
     <img
       :src="getImageUrl('cover')"
     >
-    <h1>Tigerns väg del 1 - Hämnaren</h1>
+    <h1>{{ introTexts.title }}</h1>
     <div class="text small">
       Översatt av Gunilla Jonsson 1986<br>
       Svensk copyright Äventyrsspel 1986<br>
@@ -24,7 +27,7 @@
     </div>
 
     <div class="text small">
-      <b>Betaversion 0.9.0</b> Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
+      <b>Betaversion 0.9.1</b><br>Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)
     </div>    
    
     <section class="card">
@@ -36,7 +39,7 @@
           <li>sidan inte har några sidoeffekter (som att få kroppspoäng)</li>
           <li>inga tärningsslag sker (som Ödesslag) </li>
         </ul>
-        Längst ner på sidan står det ifall spelet är sparat eller inte. <br>        
+        högst upp på sidan står det ifall spelet är sparat eller inte. <br>        
         Ditt spel sparas automatiskt i webbläsarens minne.
       </div>
     </section>

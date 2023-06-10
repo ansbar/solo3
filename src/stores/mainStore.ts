@@ -3,8 +3,8 @@ import { usePlayerStore } from "./playerStore"
 import { TBattlePhases, TBooks, TDifficulty, TLanguages, TModals, TPages } from "@/assets/types"
 
 interface Main {
-  language: TLanguages
-  book: TBooks
+  language?: TLanguages
+  book?: TBooks
   mainPage: TPages
   battlestate: TBattlePhases
   currentPageId: number
@@ -22,8 +22,8 @@ interface Main {
 export const useMainStore = defineStore("main", {
   state: (): Main => (
     { 
-      language: "swedish",
-      book: "avenger",
+      language: undefined,
+      book: undefined,
       mainPage: "start",
       battlestate: "none",
       battleRoundCounter: 1,
