@@ -1,7 +1,8 @@
-import { useMainStore } from "../stores/mainStore"
+import { useMainStore, usePersistantStore } from "../stores/"
 import { useStorage } from "./storage"
 
 export function useGeneric() {
+  const persistantStore = usePersistantStore()
   const mainStore = useMainStore()  
   const storage = useStorage()
 
@@ -24,13 +25,13 @@ export function useGeneric() {
   }
 
   const getImageUrl = (image?: string, generic = false) => {
-    const folder = generic ? "" : `books/${mainStore.book}/`
+    const folder = generic ? "" : `books/${persistantStore.book}/`
     let url
 
     if (!image) image =  mainStore.currentPageId.toString() // page id as image name default
 
     if (folder) {
-      url = new URL(`/src/assets/books/${mainStore.book}/images/${image}.png`, import.meta.url).href
+      url = new URL(`/src/assets/books/${persistantStore.book}/images/${image}.png`, import.meta.url).href
     } else {
       url = new URL(`/src/assets/images/${image}.png`, import.meta.url).href
     }    
@@ -38,7 +39,7 @@ export function useGeneric() {
     // Check if png files exists otherwise try with jpg
     if (url.substring(url.length - 9) === "undefined") {
       if (folder) {
-        url = new URL(`/src/assets/books/${mainStore.book}/images/${image}.jpg`, import.meta.url).href
+        url = new URL(`/src/assets/books/${persistantStore.book}/images/${image}.jpg`, import.meta.url).href
       } else {
         url = new URL(`/src/assets/images/${image}.jpg`, import.meta.url).href
       }  
