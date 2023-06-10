@@ -7,6 +7,7 @@ export interface IOpponent {
   win: number,
   loss?: number
   miss?: number
+  noInnerForce? : boolean
   attributes: {
     name: string[]
     hp: number[]

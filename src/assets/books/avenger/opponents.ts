@@ -9,6 +9,7 @@ const opponents: IOpponents = {
     },
     win: 110,
     loss: 95,
+    noInnerForce: true,
     pages: {
       17: {
         playerAttackType: "kick",

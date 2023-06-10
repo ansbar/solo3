@@ -48,6 +48,7 @@ interface StoreOpponent {
   enableAlly: boolean,
   allyAttack?: AllyAttack,
   firstAttackBonus?: number,
+  noInnerForce?: boolean,
   opponents: Opponent[]
 }
 
@@ -69,6 +70,7 @@ export const useOpponentStore = defineStore("opponent", {
     stillAliveDamage: undefined,
     firstAttackBonus: undefined,    
     allyAttack: {} as AllyAttack,
+    noInnerForce: false,
     opponents: [],
     win: 0,
     loss: 0,
@@ -86,6 +88,7 @@ export const useOpponentStore = defineStore("opponent", {
         counter: payload.attributes.counter,
         counterGoto: payload.attributes.counterGoto,
         missAbility: payload.attributes.missAbility,
+        noInnerForce: payload.noInnerForce,
         win: payload.win,
         loss: payload.loss,
         miss: payload.miss

@@ -12,8 +12,10 @@
     /* Cant use inner strength if:
       * - out of inner strength (<1)
       * - if attack type is a throw (can use inner force in the following attack instead)
-      * - if attack type is instant and enableInnerForce is false */
+      * - if attack type is instant and enableInnerForce is false 
+      * - if forbinner in battle like in the Gorobei battle */
     return playerStore.attributes.innerForce > 0 
+      && !opponentStore.noInnerForce
       && opponentStore.playerAttackType !== "throw"
       && (opponentStore.playerAttackType !== "instant" || opponentStore.enableInnerForce)
   })
