@@ -74,9 +74,6 @@
 
   onMounted(() => {
     initPage(currentPageId.value)
-
-    // if (battlestate.value === EBattleStates.intro)
-    //   mainStore.setBattlestate(EBattleStates.none)
   })
 
   watch(currentPageId, (pageId) => {
