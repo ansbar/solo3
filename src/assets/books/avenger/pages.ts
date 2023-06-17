@@ -618,11 +618,6 @@ export const pageData: IPages = {
     ]
   },
   59: {
-    sideEffects: {
-      items: {
-        gold: 5
-      }
-    },
     choices: [
       {
         goto: 41,
@@ -2318,11 +2313,6 @@ export const pageData: IPages = {
     ]
   },
   219: {
-    sideEffects: {
-      items: {
-        gold: 5
-      }
-    },
     choices: [
       {
         goto: 205,
