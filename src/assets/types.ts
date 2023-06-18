@@ -9,7 +9,7 @@ export const Languages = ["swedish", "none"] as const
 export type TLanguages = typeof Languages[number]
 
 // Books
-export const Books = ["avenger"] as const
+export const Books = ["avenger", "assassin"] as const
 export type TBooks = typeof Books[number]
 
 // Player abilities available from start
@@ -54,14 +54,3 @@ export type TAttributes = typeof Attributes[number]
 
 export const Difficulty = ["veryHard", "hard", "medium"] as const
 export type TDifficulty = typeof Difficulty[number]
-
-
-// BOOK 1 AVENGER
-export const Opponents = ["gorobei", "humanEater", "soldiers", "piratecaptain", "magician", "monk", "firstOfTwoMonks", "secondOfTwoMonks", "monks", "cobraman", "snowGiant", "goblin", "giant", "olvar", "olvarAndRuneWeaver", "guard", "priests", "yaemon", "manse", "runeweaver", "efreti", "torturer", "captain", "olderGod"] as const
-export type TOpponents = typeof Opponents[number]
-
-export const Items = ["healingPotion", "flashPowder", "opalring", "shuriken", "gold", "glove", "magicShuriken", "fireLizardEssence", "herbs", "amulet", "poison"] as const
-export type TItems = typeof Items[number]
-
-export const Condition = ["hasNotKilledHonoric", "hasKilledHonoric"] as const
-export type TCondition = typeof Condition[number]

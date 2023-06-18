@@ -1,6 +1,6 @@
-import { IPages } from "@/stores/pageInterfaces"
+import { _IPages } from "./interfaces"
 
-export const pageData: IPages = {
+export const pageData: _IPages = {
   1: {
     image: true,
     choices: [

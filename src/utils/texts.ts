@@ -2,11 +2,13 @@ import { Texts } from "@/assets/books/avenger/swedish"
 import { useMainStore, usePersistantStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
+import { languageGeneral } from "../assets/books/genericTexts"
 
 export async function useTexts() {
-  const { language, book } = storeToRefs(usePersistantStore())
   const { currentPageId } = storeToRefs(useMainStore())
-  const { languagePages, languageGeneral, languageIntro } = await import(`../assets/books/${book?.value}/${language?.value}.ts`) as Texts
+  // Async import book specific texts with correct language and book 
+  const { language, book } = storeToRefs(usePersistantStore())
+  const { languagePages, languageIntro, languageOpponents } = await import(`../assets/books/${book?.value}/${language?.value}.ts`) as Texts
 
   // Temporary page texts
   const pageTexts = computed(() => {
@@ -47,7 +49,7 @@ export async function useTexts() {
     return languageGeneral.defense
   })
   const opponentTexts = computed(() => {
-    return languageGeneral.opponents
+    return languageOpponents.opponents
   })
   const miscTexts = computed(() => {
     return languageGeneral.misc

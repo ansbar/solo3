@@ -1,6 +1,6 @@
 import { defineStore } from "pinia"
-import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponents"
-import { TAbilities, TAttackType, TBattlePhases, TOpponents } from "@/assets/types"
+import { IOpponent, IOpponentPage } from "@/assets/interfaces/opponentInterfaces"
+import { TAbilities, TAttackType, TBattlePhases } from "@/assets/types"
 
 interface DirectDamageOnPlayer {
   state: TBattlePhases,
@@ -11,7 +11,7 @@ interface DirectDamageOnPlayer {
 interface AllyAttack {  
   damage: string,
   defense: number,
-  ally: TOpponents
+  ally: string
 }
 
 export interface Opponent {

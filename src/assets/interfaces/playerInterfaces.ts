@@ -1,11 +1,11 @@
-import { TAbilities, TAddedAbilities, TCondition, TItems, TPlayerModifiers } from "@/assets/types"
+import { TAbilities, TAddedAbilities, TPlayerModifiers } from "@/assets/types"
 
 export interface Player {
   abilities: Array<TAbilities | TAddedAbilities>
-  items: Record<TItems, number>
+  items: Record<string, number>
   modifiers: Record<TPlayerModifiers, number>
   attributes: Player_attributes
-  conditions: Record<TCondition, boolean>
+  conditions: Record<string, boolean>
   temporary: Player_temporary
 }
 

@@ -1,4 +1,4 @@
-import { TAbilities, TAttackType, TBattlePhases, TOpponents } from "../types"
+import { TAbilities, TAttackType, TBattlePhases } from "../types"
 
 export type IOpponents = Record<string, IOpponent>
 
@@ -61,6 +61,6 @@ export interface IOpponentPage {
   allyAttack?: {
     damage: string,
     defense: number,
-    ally: TOpponents
+    ally: string
   }
 }

@@ -8,14 +8,13 @@
   import { usePlayerStore, useMainStore } from "@/stores"
   import { useTexts } from "@/utils/texts"
   import mapModal from "../modals/mapModal.vue"
-  import { TItems } from "@/assets/types"
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
   const { choicesTexts, abilityTexts, itemTexts } = await useTexts()
 
   interface Item {
-    key: TItems,
+    key: string,
     value: number
   }
 

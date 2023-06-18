@@ -1,4 +1,4 @@
-import { TAbilities, TAddedAbilities, TDefenseTypes, TOpponents } from "../types"
+import { TAbilities, TAddedAbilities, TDefenseTypes } from "../types"
 
 export interface IndexSignature {
   [key: string]: string
@@ -26,7 +26,6 @@ export interface ILanguageGeneral {
   abilities: Record<TAbilities | TAddedAbilities, string>
   defense: Record<TDefenseTypes, string>
   misc: ILanguageMisc
-  opponents: Record<TOpponents, string>
   modifiers: ILanguageModifiers
   attributes: ILanguageAttributes
   items: ILanguageItems
@@ -60,29 +59,9 @@ export interface IDifficulty {
 }
 
 export interface ILanguageMisc {
-  playerName: string
   damage: string
   defense: string
   hiddenMainText: string
-  [key: string]: string
-}
-
-export interface ILanguageOpponents {
-  none: string
-  gorobei: string
-  humanEater: string
-  soldiers: string
-  piratecaptain: string
-  magician: string
-  monk: string
-  cobraman: string
-  snowGiant: string
-  goblin: string
-  giant: string
-  olvar: string
-  olvarAndRuneWeaver: string
-  guard: string
-  yaemon: string
   [key: string]: string
 }
 

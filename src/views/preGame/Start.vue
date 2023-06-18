@@ -11,7 +11,7 @@
 
   const books = {
     "avenger": ["swedish"],
-    //"destroyer": ["english", "swedish"]
+    "assassin": ["swedish"]
   }
 
 </script>

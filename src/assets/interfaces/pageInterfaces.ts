@@ -1,9 +1,10 @@
-import { TAbilities, TAddedAbilities, TAttackType, TAttributes, TCondition, TItems, TOpponents } from "@/assets/types"
+import { TAbilities, TAddedAbilities, TAttackType, TAttributes } from "@/assets/types"
 
 export interface IPages {
   [key: number]: IPage
 }
-export interface IPage {
+
+export interface IPageBase {
   endPage?: boolean // Last page in the book
   autoEndBattle?: boolean
   battle?: IPageBattle
@@ -11,15 +12,21 @@ export interface IPage {
   image?: boolean
   choices?: Array<IChoice>
   successfulThrowChoices?: Array<IChoice>
-  opponent?: TOpponents
-  specialCondition?: {
-    type: string
-    modifier?: string
-    attack?: string
-    defense?: number
-    opponent?: TOpponents
-    rolls?: Array<number[]>
-  }, 
+  specialCondition?: IPageSpecialConditions
+}
+export interface IPage extends IPageBase {
+  opponent?: string
+}
+
+export interface IPageSpecialConditionsBase {
+  type: string
+  modifier?: string
+  attack?: string
+  defense?: number
+  rolls?: Array<number[]>
+}
+export interface IPageSpecialConditions extends IPageSpecialConditionsBase {
+  opponent?: string
 }
 
 export interface IPageSidesideEffects {
@@ -66,8 +73,7 @@ export interface IPageChoiceSpec {
   name: string  
 }
 
-export interface IPageBattle {
-  opponent?: TOpponents
+export interface IPageBattleBase {
   attackModifier?: number
   win?: number
   loss?: number
@@ -75,6 +81,9 @@ export interface IPageBattle {
   blockable: boolean
   attackType: TAttackType 
   attacks : IAttacks[]
+}
+export interface IPageBattle extends IPageBattleBase {
+  opponent?: string
 }
 
 export interface IAttacks {
@@ -84,14 +93,16 @@ export interface IAttacks {
   player_defense?: number          
 }
 
-export interface IChoice {
+export interface IChoiceBase {
   goto: number
   ability?: TAbilities | TAddedAbilities
-  item?: TItems
   amount?: number
   attribute?: TAttributes
   abilityNegation?: boolean
-  condition?: TCondition
   roll?: number[]
+}
+export interface IChoice extends IChoiceBase {
+  item?: string
+  condition?: string
 }
 

@@ -5,7 +5,7 @@
   import opponent from "@/assets/books/avenger/opponents.js"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
-  import { IChoice } from "@/stores/pageInterfaces"
+  import { IChoice } from "@/assets/interfaces/pageInterfaces.js"
   import { pageData } from "@/assets/books/avenger/pages.js"
   import { TAbilities, TAddedAbilities } from "@/assets/types"
 

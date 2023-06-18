@@ -1,7 +1,6 @@
 import { defineStore } from "pinia"
-import { IPage } from "./pageInterfaces"
+import { IPage } from "../assets/interfaces/pageInterfaces"
 import { usePlayerStore } from "./playerStore"
-import { TItems } from "@/assets/types"
 
 export const usePageStore = defineStore("page", {
   state: (): IPage => (
@@ -58,7 +57,7 @@ export const usePageStore = defineStore("page", {
         
         for (const key in items) {
           if (Object.hasOwn(items, key)) {
-            playerStore.setPlayerItem({ item: key as TItems, amount: items[key as TItems] || 0 })
+            playerStore.setPlayerItem({ item: key, amount: items[key] || 0 })
           }
         }
       }      

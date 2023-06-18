@@ -1,97 +1,33 @@
-import { ILanguageGeneral, ILanguageIntro, ILanguagePages } from "../languageInterfaces"
+import { ILanguageIntro, ILanguagePages } from "../../interfaces/languageInterfaces"
+import { ILanguageOpponents } from "./interfaces"
 
-export interface Texts { languagePages: ILanguagePages, languageGeneral: ILanguageGeneral, languageIntro: ILanguageIntro }
+export interface Texts { languagePages: ILanguagePages, languageOpponents: ILanguageOpponents, languageIntro: ILanguageIntro }
 
-export const languageGeneral: ILanguageGeneral = {
-  misc: {
-    playerName: "Hämnaren",
-    damage: "Skada",
-    defense: "Försvar",
-    hiddenMainText: "Du måste bestämma nu om du ska använda INRE KRAFT."
-  },
-  opponents: {
-    gorobei: "Gorobei",
-    humanEater: "Människoätaren",
-    piratecaptain: "Piratkaptenen",
-    soldiers: "Soldater",
-    magician: "Magikern",
-    monk: "Munken",
-    monks: "Munkarna",
-    goblin: "Vätten",
-    cobraman: "Kobramannen",
-    snowGiant: "Snöjätten",
-    giant: "Den tvåhövdade jätten",
-    guard: "Vakten",
-    olvar: "Olvar Barbaren",
-    olvarAndRuneWeaver: "Olvar Barbaren",
-    priests: "Präster",
-    yaemon: "Yaemon",
-    manse: "Manse Dödsmagikern",
-    runeweaver: "Runvävaren",
-    firstOfTwoMonks: "Den förste av Den Ledes präster",
-    secondOfTwoMonks: "Den andre av Den Ledes präster",
-    torturer: "Torteraren",
-    captain: "Kaptenen",
-    olderGod: "Äldre gud",
-    efreti: "Efreti"
-  },
-  gameHelp: {
-    block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
-    innerForce: "Om din attack träffar kommer skadan dubbleras. Du kan dock bara använda din inre kraft ett begränsat antal gånger. Observera att kraften är förbrukad även om du missar. Använd den med förnuft."
-  },
-  difficultyHelp: {
-    medium: "<h4>Medium</h4><ul><li>5 färdigheter</li><li>2 i slag/spark/block/ödes-modifikationer</li><li>7 inre kraft</li><li>7 shuriken</li><li>Varning vid val som leder till döden</li></ul>",
-    hard: "<h4>Svårt</h4><ul><li>4 färdigheter</li><li>1 i slag/spark/block/ödes-modifikationer</li><li>6 inre kraft</li><li>6 shuriken</li></ul>",
-    veryHard: "<h4>Väldigt svårt (enligt boken)</h4><ul><li>3 färdigheter</li><li>0 i slag/spark/kast/ödes-modifikationer</li><li>5 inre kraft</li><li>5 shuriken</li></ul>"
-  },
-  abilities: {
-    deflectArrows: "Slå av pilar",
-    acrobat: "Akrobatik",
-    immunity: "Immunitet mot gift",
-    playDead: "Spela död",
-    escapeArtist: "Utbrytningskonst",
-    poisonArrows: "Giftpilar",
-    lockPicker: "Dyrka upp lås, upptäcka och oskadligöra fällor",
-    climb: "Klättra",
-    kwonsFlail: "Kwons slaga",
-  },
-  items: {
-    healingPotion: "helande dryck (10 kroppspoäng)",
-    flashPowder: "blixtpulver",
-    opalring: "opalring",
-    shuriken: "kaststjärnor",
-    gold: "guldstycken",
-    glove: "magisk slaghandske",
-    magicShuriken: "förtrollad kaststjärna",
-    fireLizardEssence: "eldödle-essens",
-    herbs: "örter (8 kroppspoäng)",
-    amulet: "Amulett",
-    poison: "Intets blod"
-  },
-  defense: {
-    punch: "Försvar mot slag",
-    kick: "Försvar mot spark",
-    throw: "Försvar mot kast"
-  },
-  modifiers: {
-    punch: "slagmodifikation",
-    kick: "sparkmodifikation",
-    throw: "kastmodifikation",
-    fate: "ödesmodifikation",  
-  },
-  attributes: {
-    innerForce: "inre kraft",
-    hp: "kroppspoäng",
-  },
-  temporary: {
-    attack: "attack",
-    damage: "damage"
-  },
-  difficulty: {
-    medium: "Medium",
-    hard: "Svårt",
-    veryHard: "Väldigt svårt"
-  },
+export const languageOpponents: ILanguageOpponents = {
+  gorobei: "Gorobei",
+  humanEater: "Människoätaren",
+  piratecaptain: "Piratkaptenen",
+  soldiers: "Soldater",
+  magician: "Magikern",
+  monk: "Munken",
+  monks: "Munkarna",
+  goblin: "Vätten",
+  cobraman: "Kobramannen",
+  snowGiant: "Snöjätten",
+  giant: "Den tvåhövdade jätten",
+  guard: "Vakten",
+  olvar: "Olvar Barbaren",
+  olvarAndRuneWeaver: "Olvar Barbaren",
+  priests: "Präster",
+  yaemon: "Yaemon",
+  manse: "Manse Dödsmagikern",
+  runeweaver: "Runvävaren",
+  firstOfTwoMonks: "Den förste av Den Ledes präster",
+  secondOfTwoMonks: "Den andre av Den Ledes präster",
+  torturer: "Torteraren",
+  captain: "Kaptenen",
+  olderGod: "Äldre gud",
+  efreti: "Efreti" 
 }
 
 export const languageIntro: ILanguageIntro = {
@@ -523,7 +459,7 @@ export const languagePages: ILanguagePages = {
     mainText: "Kaststjärnan hänger i luften framför honom i det magiska kraftfältet som glöder när det absorberar stöten. När du störtar fram för att angripa är han färdig med sin besvärjelse och det väller upp eld inom dig. Det sipprar ut rök genom din mun och näsa när dina lungor och andra inre organ fattar eld. Dödsmagikern har kastat besvärjelsen lnre eld på dig, en besvärjelse som bara de mäktigaste av de onda trollkarlarna känner till, och du kremeras inifrån.",
   },
   61: {
-    mainText: "Du höjer foten som för att sparka Gorobei i bröstet, men snurrar 1 stället in bredvid honom och greppar hans arm för att kasta honom över höften. Du förstår snart att du har begått ett misstag, när ditt grepp glider över oljan som täcker honom och han använder sin skicklighet som brottare för att gripa tag i dig och låsa din arm bakom ryggen, samtidigt som han griper dig om strupen. Han är fruktansvärt stark. Du försöker göra en bakåtvolt över honom och bryta greppet men han är beredd på det och trycker ned dig mot golvet innan han ger dig ett kraftigt slag.",
+    mainText: "Du höjer foten som för att sparka Gorobei i bröstet, men snurrar istället in bredvid honom och greppar hans arm för att kasta honom över höften. Du förstår snart att du har begått ett misstag, när ditt grepp glider över oljan som täcker honom och han använder sin skicklighet som brottare för att gripa tag i dig och låsa din arm bakom ryggen, samtidigt som han griper dig om strupen. Han är fruktansvärt stark. Du försöker göra en bakåtvolt över honom och bryta greppet men han är beredd på det och trycker ned dig mot golvet innan han ger dig ett kraftigt slag.",
     choices: [
       "Gå vidare"
     ]

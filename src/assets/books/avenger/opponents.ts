@@ -1,4 +1,4 @@
-import { IOpponents } from "@/assets/interfaces/opponents"
+import { IOpponents } from "@/assets/interfaces/opponentInterfaces"
 
 const opponents: IOpponents = {
   gorobei: {
