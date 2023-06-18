@@ -1,10 +1,11 @@
 <script lang="ts" setup>
-  import { useMainStore } from "@/stores"
+  import { useMainStore, usePersistantStore } from "@/stores"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   
   const { getImageUrl } = useGeneric()
   const mainStore = useMainStore()
+  const persistantStore = usePersistantStore()
   const versionNumber = "1.0.0"
 
   const { introTexts, headingTexts } = await useTexts()
@@ -28,7 +29,7 @@
       {{ introTexts.booksInfo }}
     </div>
 
-    <div class="text small">
+    <div class="text small" :class="{ red: persistantStore.book === 'assassin' }">
       <b>Version {{ versionNumber }}</b><br>
       {{ introTexts.versionInfo }}
     </div>
