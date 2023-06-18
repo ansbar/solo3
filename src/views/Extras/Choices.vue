@@ -1,20 +1,24 @@
 <script lang="ts" setup>
   import { computed } from "vue"
-  import { useMainStore, usePlayerStore, usePageStore } from "@/stores"
+  import { useMainStore, usePlayerStore, usePageStore, usePersistantStore } from "@/stores"
   import { useOpponentStore } from "@/stores/opponentStore"
-  import opponent from "@/assets/books/avenger/opponents.js"
   import { useGeneric } from "@/utils/generic"
   import { useTexts } from "@/utils/texts"
   import { IChoice } from "@/assets/interfaces/pageInterfaces.js"
-  import { pageData } from "@/assets/books/avenger/pages.js"
   import { TAbilities, TAddedAbilities } from "@/assets/types"
+  import { storeToRefs } from "pinia"
 
-  const playerStore = usePlayerStore()
-  const opponentStore = useOpponentStore()
+
   const pageStore = usePageStore()
   const mainStore = useMainStore()
+  const playerStore = usePlayerStore()
+  const opponentStore = useOpponentStore()
+  const { book } = storeToRefs(usePersistantStore())
   const { choicesTexts, abilityTexts, itemTexts } = await useTexts()
   const generic = useGeneric()
+
+  const { pageData } = await import(`../../assets/books/${book?.value}/pages.ts`)
+  const { opponent } = await import(`../../assets/books/${book?.value}/opponents.ts`)
 
   // Returns true if player  has the requested ability
   const hasAbility = (ability: TAbilities | TAddedAbilities) => {

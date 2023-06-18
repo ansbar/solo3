@@ -1,9 +1,8 @@
 <script lang="ts" setup>
   import { onMounted, watch, computed } from "vue"
   import { storeToRefs } from "pinia"
-  import { useMainStore, useOpponentStore, usePageStore } from "@/stores"
+  import { useMainStore, useOpponentStore, usePageStore, usePersistantStore } from "@/stores"
   import { useStorage } from "@/utils/storage"
-  import { pageData } from "@/assets/books/avenger/pages"
   import Opponent from "./Battle/Opponent.vue"
   import opponent from "@/assets/books/avenger/opponents"
   import MainText from "./Extras/MainText.vue"
@@ -16,11 +15,15 @@
   import NonBattleInfo from "./Extras/NonBattleInfo.vue"
   import { TBattlePhases } from "@/assets/types"
 
+
   const mainStore = useMainStore()
   const pageStore = usePageStore()
   const opponentStore = useOpponentStore()
+  const { book } = storeToRefs(usePersistantStore())
   const { setStoreToStorage, removeStoreFromStorage } = useStorage()
   const { currentPageId, battlestate } = storeToRefs(useMainStore())
+
+  const { pageData } = await import(`../assets/books/${book?.value}/pages.ts`)
 
   // When a page change happends
   const initPage = (pageId: number) => {

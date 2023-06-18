@@ -1,15 +1,17 @@
-import { Texts } from "@/assets/books/avenger/swedish"
 import { useMainStore, usePersistantStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
-import { languageGeneral, languagePreGameGeneric } from "../assets/texts/swedish"
+import { ILanguagePages, ILanguagePreGame, IndexSignature } from "@/assets/interfaces/languageInterfaces"
+
+interface Texts { languagePages: ILanguagePages, languageOpponents: IndexSignature, languagePreGame: ILanguagePreGame }
 
 export async function useTexts() {
   const { currentPageId } = storeToRefs(useMainStore())
-  // Async import book specific texts with correct language and book 
+  // Async import specific texts with correct language and book 
   const { language, book } = storeToRefs(usePersistantStore())
+  const { languageGeneral, languagePreGameGeneric } = await import(`../assets/texts/${language?.value}.ts`)
   const { languagePages, languagePreGame, languageOpponents } = await import(`../assets/books/${book?.value}/${language?.value}.ts`) as Texts
-
+  
   // Temporary page texts
   const pageTexts = computed(() => {
     return languagePages[currentPageId.value]

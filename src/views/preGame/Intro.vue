@@ -6,7 +6,7 @@
   const { getImageUrl } = useGeneric()
   const mainStore = useMainStore()
   const persistantStore = usePersistantStore()
-  const versionNumber = "1.0.0"
+  const versionNumber = "1.0.1"
 
   const { introTexts, headingTexts } = await useTexts()
 </script>
