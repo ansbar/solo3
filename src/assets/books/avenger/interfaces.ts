@@ -1,7 +1,7 @@
 import { IPageBase, IChoiceBase, IPageBattleBase, IPageSpecialConditionsBase } from "@/assets/interfaces/pageInterfaces"
 
 export interface ILanguageOpponents {
-  [key: string]: any // Fix me, should be string but gives Element implicitly has an 'any' type because index expression is not of type 'number'.ts(7015) error in other pages
+  [key: string]: string 
 }
 
 // Extending generic interfaces with book specific ones

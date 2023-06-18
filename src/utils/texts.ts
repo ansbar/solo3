@@ -1,9 +1,11 @@
 import { useMainStore, usePersistantStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
-import { ILanguagePages, ILanguagePreGame, IndexSignature } from "@/assets/interfaces/languageInterfaces"
+import { ILanguagePages, ILanguagePreGame } from "@/assets/interfaces/languageInterfaces"
 
-interface Texts { languagePages: ILanguagePages, languageOpponents: IndexSignature, languagePreGame: ILanguagePreGame }
+
+interface Texts { languagePages: ILanguagePages, languageOpponents: {[key: string]: any}, languagePreGame: ILanguagePreGame }
+// Fix me, should be string but gives Element implicitly has an 'any' type because index expression is not of type 'number'.ts(7015) error in other pages
 
 export async function useTexts() {
   const { currentPageId } = storeToRefs(useMainStore())
