@@ -1,11 +1,12 @@
 <script lang="ts" setup>
-  import { useMainStore } from "@/stores"
+  import { useMainStore, usePersistantStore } from "@/stores"
   import { storeToRefs } from "pinia"
   import { ref } from "vue"
   import RulesModal from "./modals/rulesModal.vue"
 
   const { currentPageId, currentModal } = storeToRefs(useMainStore())
-  const mailTo = ref(`mailto:ansbar@gmail.com?subject=Soloäventyr&body=Gällande sida ${currentPageId.value}`)
+  const { book } = storeToRefs(usePersistantStore())
+  const mailTo = ref(`mailto:ansbar@gmail.com?subject=Soloäventyr&body=Gällande sida ${currentPageId.value} i boken ${book?.value}.`)
 </script>
 
 <template>

@@ -51,7 +51,7 @@ export interface ILanguagePreGame {
     localCopyRight?: string
     scan?: string
     booksInfo?: string
-    version?: string
+    versionInfo?: string
     saveInfo?: string
   },
   setup?: {

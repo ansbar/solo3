@@ -5,6 +5,7 @@
   
   const { getImageUrl } = useGeneric()
   const mainStore = useMainStore()
+  const versionNumber = "1.0.0"
 
   const { introTexts, headingTexts } = await useTexts()
 </script>
@@ -27,8 +28,10 @@
       {{ introTexts.booksInfo }}
     </div>
 
-    <div class="text small" v-html="introTexts.version" />    
-   
+    <div class="text small">
+      <b>Version {{ versionNumber }}</b><br>
+      {{ introTexts.versionInfo }}
+    </div>
     <section class="card">
       <div v-html="introTexts.saveInfo" />
     </section>

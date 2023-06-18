@@ -2,7 +2,7 @@ import { Texts } from "@/assets/books/avenger/swedish"
 import { useMainStore, usePersistantStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
-import { languageGeneral, languagePreGameGeneric } from "../assets/books/genericTexts"
+import { languageGeneral, languagePreGameGeneric } from "../assets/texts/swedish"
 
 export async function useTexts() {
   const { currentPageId } = storeToRefs(useMainStore())

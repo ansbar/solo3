@@ -38,7 +38,7 @@ export const languagePreGame: ILanguagePreGame = {
     translatedBy: "Översatt av Gunilla Jonsson 1986",
     localCopyRight: "Svensk copyright Äventyrsspel 1986",
     scan: "Scan & PDF Gothmog",
-    version: "<b>Betaversion 0.10.1</b><br>Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)"
+    versionInfo: "Allt innehåll är portat men det finns sannolikt en del buggar kvar. Om du hittar några, har feedback om något eller vill hjälpa till med översättning till andra språk så finns kontaktuppgifter i botten =)"
   }
 }
 
