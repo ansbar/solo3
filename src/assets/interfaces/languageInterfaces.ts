@@ -26,6 +26,7 @@ export interface ILanguageGeneral {
   abilities: Record<TAbilities | TAddedAbilities, string>
   defense: Record<TDefenseTypes, string>
   misc: ILanguageMisc
+  headings: ILanguageHeadings
   modifiers: ILanguageModifiers
   attributes: ILanguageAttributes
   items: ILanguageItems
@@ -33,8 +34,8 @@ export interface ILanguageGeneral {
   difficulty: IDifficulty
 }
 
-export interface ILanguageIntro {
-  background: {
+export interface ILanguagePreGame {
+  background?: {
     b1: string
     b2: string
     b3: string,
@@ -43,8 +44,26 @@ export interface ILanguageIntro {
     b6: string,
   }
   intro: {
-    title: string
-  }  
+    title?: string
+    copyright?: string
+    illustratedBy?: string
+    translatedBy?: string
+    localCopyRight?: string
+    scan?: string
+    booksInfo?: string
+    version?: string
+    saveInfo?: string
+  },
+  setup?: {
+    setDifficulty: string
+    skills: string
+    available: string
+    choose: string
+    chosen: string
+    removeSkill: string
+    remove: string
+    startAdventure: string
+  }
 }
 
 export interface ILanguageHelp {
@@ -63,6 +82,11 @@ export interface ILanguageMisc {
   defense: string
   hiddenMainText: string
   [key: string]: string
+}
+
+export interface ILanguageHeadings {
+  background: string
+  createCharacter: string
 }
 
 export interface ILanguageItems {

@@ -2,13 +2,13 @@ import { Texts } from "@/assets/books/avenger/swedish"
 import { useMainStore, usePersistantStore } from "@/stores"
 import { storeToRefs } from "pinia"
 import { computed } from "vue"
-import { languageGeneral } from "../assets/books/genericTexts"
+import { languageGeneral, languagePreGameGeneric } from "../assets/books/genericTexts"
 
 export async function useTexts() {
   const { currentPageId } = storeToRefs(useMainStore())
   // Async import book specific texts with correct language and book 
   const { language, book } = storeToRefs(usePersistantStore())
-  const { languagePages, languageIntro, languageOpponents } = await import(`../assets/books/${book?.value}/${language?.value}.ts`) as Texts
+  const { languagePages, languagePreGame, languageOpponents } = await import(`../assets/books/${book?.value}/${language?.value}.ts`) as Texts
 
   // Temporary page texts
   const pageTexts = computed(() => {
@@ -23,10 +23,13 @@ export async function useTexts() {
 
   // Intro texts
   const backgroundTexts = computed(() => {
-    return languageIntro.background
+    return languagePreGameGeneric.background
   })
   const introTexts = computed(() => {
-    return languageIntro.intro
+    return { ...languagePreGameGeneric.intro, ...languagePreGame.intro }
+  })
+  const setupTexts = computed(() => {
+    return { ...languagePreGameGeneric.setup, ...languagePreGame.setup }
   })
 
   // General texts
@@ -54,6 +57,9 @@ export async function useTexts() {
   const miscTexts = computed(() => {
     return languageGeneral.misc
   })
+  const headingTexts = computed(() => {
+    return languageGeneral.headings
+  })
   const gameHelpTexts = computed(() => {
     return languageGeneral.gameHelp
   })
@@ -65,5 +71,5 @@ export async function useTexts() {
   })
 
 
-  return { difficultyTexts,pageTexts,mainText,choicesTexts,abilityTexts,attributeTexts,modifierTexts,itemTexts,temporaryTexts,defenseTexts,opponentTexts,miscTexts,gameHelpTexts,difficultyHelpTexts,backgroundTexts,introTexts }
+  return { setupTexts, difficultyTexts,pageTexts,mainText,choicesTexts,abilityTexts,headingTexts,attributeTexts,modifierTexts,itemTexts,temporaryTexts,defenseTexts,opponentTexts,miscTexts,gameHelpTexts,difficultyHelpTexts,backgroundTexts,introTexts }
 }

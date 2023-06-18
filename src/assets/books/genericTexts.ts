@@ -1,12 +1,16 @@
-import { ILanguageGeneral, ILanguageIntro, ILanguagePages } from "../interfaces/languageInterfaces"
+import { ILanguageGeneral, ILanguagePreGame, ILanguagePages } from "../interfaces/languageInterfaces"
 
-export interface Texts { languagePages: ILanguagePages, languageGeneral: ILanguageGeneral, languageIntro: ILanguageIntro }
+export interface Texts { languagePages: ILanguagePages, languageGeneral: ILanguageGeneral, languageIntro: ILanguagePreGame }
 
 export const languageGeneral: ILanguageGeneral = {
   misc: {
     damage: "Skada",
     defense: "Försvar",
     hiddenMainText: "Du måste bestämma nu om du ska använda INRE KRAFT."
+  },
+  headings: {
+    background: "Bakgrund",
+    createCharacter: "Skapa din karaktär"
   },
   gameHelp: {
     block: "Chansen att lyckas blockera slaget är ungefär 60% och innebär att du inte tar någon skada. Nästa attack du gör kommer få en slagmodifikation på minus 2 vilket gör det något svårare att träffa.",
@@ -67,7 +71,7 @@ export const languageGeneral: ILanguageGeneral = {
   },
 }
 
-export const languageIntro: ILanguageIntro = {
+export const languagePreGameGeneric: ILanguagePreGame = {
   background: {
     b1: "l den magiska världen Orb, utslängd i det hav som Människoländernas folk kallar det Ändlösa, ligger den mystiska Stilla Drömmarnas Ö. Många år har gått sedan du som spädbarn för första gången såg dess gyllene stränder och gröna risfält. En tjänarinna förde dig dit under en mödosam färd över det vida havet från länder som du inte har sett sedan dess. Din trogna tjänarinna lade dig, ett föräldralöst barn, på trappan till Klipptemplet och bad för att munkarna skulle ta hand om dig, för hon var svag och döende av en fruktansvärd förbannelse.",
     b2: "Munkarna har bott på ön i flera hundra år och hängivet dyrkat sin gud, Kwon, Han som Säger Maktens Heliga Ord, Den Obeväpnade Stridens Obestridde Herre. De lever enkom för att hjälpa andra att stå emot den ondska som hemsöker världen. När de såg att du var ensam och behövde omsorg tog de dig till sig och du blev en av Klipptemplets noviser. lngen nämnde det underliga födelsemärke, format som en krona, som du har på låret, fastän du minns att den gamla tjänarinnan påstod att det hade en mystisk betydelse. När du har frågat om det har munkarna bett dig att meditera och vara tålmodig. Den äldste och mäktigaste av dem alla, Naijishi, Gryningens Stormästare, blev din fosterfar. Han gav dig ledning och träning i Kwons lugna godhet, i kunskap om människorna och deras sätt, och i att meditera så att ditt sinne lämnar kroppen och rider på vinden på jakt efter sanningen.",
@@ -77,6 +81,17 @@ export const languageIntro: ILanguageIntro = {
     b6: "Det var sedan din fasterfar Naijishi hade dött som du började leva efter fördragets ord. En man kom till ön, Yaeman, Flammans Stormästare. Han använde lånade trollkonster för att lura munkarna att tro att han var en kwondyrkare från Storkontinenten. Han var verkligen en munk, men han dyrkade Kwons andre bror, den Lede, som hjälper de starka att förtrycka de svaga och onda män att härska över dårar. Yaeman dödade Naijishi - ingen kunde mäta sig med honom i strid utan vapen, och han stal Kettsuinrullarna från Templet. Ännu en gång kände du saknadens smärta, för du hade älskat Naijishi som en far. Du svor en ed till Kwon att en gång hämnas hans död. Du har slipat på dina färdigheter genom att hjälpa de förtrampade i Mångfaldens land, men nu är tiden inne för dig att visa vad du kan inför dina munkbröder i Klipptemplet.",
   },
   intro: {
-    title: "Tigerns väg del 1 - Hämnaren"
+    booksInfo: "Detta är en portad version av böckerna i serien Tigers väg från 1985. \nReglerna fungerar enligt originalet och upplevelsen är därför utmanande. \nDet kommer krävas många försök innan du kommer nära att slutföra äventyret.",
+    saveInfo: "<h4>Spara</h4>Om du vill ta en paus i spelet så är det möjligt under följande förutsättningar:<ul><li>du är utanför strid</li><li>sidan inte har några sidoeffekter (som att få kroppspoäng)</li><li>inga tärningsslag sker (som Ödesslag)</li></ul>högst upp på sidan står det ifall spelet är sparat eller inte. <br>Ditt spel sparas automatiskt i webbläsarens minne.",
+  },
+  setup: {
+    setDifficulty: "Välj svårighetsgrad",
+    skills: "färdigheter",
+    available: "Tillgängliga",
+    choose: "Välj",
+    chosen: "Valda",
+    removeSkill: "Ta bort en färdighet för att välja denna",
+    remove: "Ta bort",
+    startAdventure: "Starta äventyret!"
   }
 }

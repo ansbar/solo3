@@ -6,7 +6,7 @@
 
   const playerStore = usePlayerStore()
   const mainStore = useMainStore()
-  const { abilityTexts, difficultyTexts, difficultyHelpTexts } = await useTexts()
+  const { abilityTexts, difficultyTexts, difficultyHelpTexts, headingTexts, setupTexts } = await useTexts()
 
   const playerAbilities = computed(() => playerStore.abilities)
   const difficultyChoice = ref("veryHard")
@@ -38,8 +38,8 @@
 
 <template>
   <div>
-    <h1>Skapa din karaktär</h1>    
-    <h2>Välj svårighetsgrad</h2>
+    <h1>{{ headingTexts.createCharacter }}</h1>    
+    <h2>{{ setupTexts.setDifficulty }}</h2>
     <div class="card">
       <div>
         <select v-model="difficultyChoice">
@@ -59,10 +59,10 @@
       </div>
     </div>
 
-    <h2>Välj {{ mainStore.numberOfAbilities }} färdigheter</h2>
+    <h2>{{ setupTexts.choose }} {{ mainStore.numberOfAbilities }} {{ setupTexts.skills }}</h2>
     <div class="card">
       <div class="first-col">
-        <h3>Tillgängliga</h3>
+        <h3>{{ setupTexts.available }}</h3>
         <ul>
           <li
             v-for="(ability, index) in availableAbilities"
@@ -71,13 +71,13 @@
             <a
               v-if="!isAllAbilitiesChosen"
               href="#"
-              title="Välj"
+              :title="setupTexts.choose"
               :text="abilityTexts[ability]"
               @click="playerStore.addPlayerAbility(ability)"
             />
             <span
               v-else
-              title="Ta bort en färdighet för att välja denna"
+              :title="setupTexts.removeSkill"
               class="non-active-link"
               v-text="abilityTexts[ability]"
             />
@@ -86,7 +86,7 @@
       </div>
       <div class="second-col">
         <h3 v-if="playerAbilities.length">
-          Valda
+          {{ setupTexts.chosen }}
         </h3>
         <ul>
           <li
@@ -95,7 +95,7 @@
           >
             <a
               href="#"
-              title="Ta bort"
+              :title="setupTexts.remove"
               :text="abilityTexts[ability]"
               @click="playerStore.removePlayerAbility(index)"
             />
@@ -109,7 +109,7 @@
         <button
           :disabled="!isAllAbilitiesChosen"
           @click="startGame"
-          v-text="'Starta äventyret!'"
+          v-text="setupTexts.startAdventure"
         />
       </div>
     </div>
